@@ -21,7 +21,7 @@ Xem các bài viết khác tại [Machine Learning Course Structure](https://cod
     *   [3.2. Learning Rate](#32-learning-rate)
 *   [4\. Features và Polynomial Regression](#4-features-và-polynomial-regression)
 
-# 1\. Mutiple Features
+# 1\. Multiple Features
 
 Linear Regression với `multiple features` còn được biết đến với cái tên `multivariate linear regression`.
 

@@ -1,5 +1,5 @@
 ---
-title: 14-12-2013 – Beginning with Imagine Cup 2014
+title: '[20131214] – Beginning with Imagine Cup 2014'
 tags: []
 id: '290'
 categories:

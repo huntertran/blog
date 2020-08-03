@@ -1,5 +1,5 @@
 ---
-title: '[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code'
+title: '[20130904] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code'
 tags:
   - account
   - dev center
@@ -11,8 +11,10 @@ categories:
 date: 2013-09-04 10:46:27
 ---
 
-Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái Lưu ý: yêu cầu phải có thẻ visa Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $ 99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.
+Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái Lưu ý: yêu cầu phải có thẻ visa Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.
+
 <!-- more -->
+
 Bước 1: Vào địa chỉ sau:
 
 [https://www.dreamspark.com/Student/Windows-Store-Access.aspx](https://www.dreamspark.com/Student/Windows-Store-Access.aspx)
