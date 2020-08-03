@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[asp.net mvc] Error Message - chung mà riêng | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[asp.net mvc] Error Message - chung mà riêng</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/">2018-01-14</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C#</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bạn có đang dùng Entity Framework với ASP.NET MVC, cùng với đó là client-validation?</p>
+<p>Đối với mỗi ```DataAnnotation`` attribute, bạn lại có 1 câu thông báo lỗi khác nhau, và bạn nhét tất cả chúng vào Resource?</p>
+<p>Có một số cách giúp bạn khắc phục một vài nhược điểm trên ;)</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-generic-customized-error-message">1. Generic Customized Error Message</a></p>
+</li>
+<li><p><a href="#2-error-message-localization">2. Error Message Localization</a></p>
+<ul>
+<li><a href="#21-n%E1%BA%BFu-b%E1%BA%A1n-c%C3%B3-resharper">2.1. Nếu bạn có Resharper</a></li>
+<li><a href="#22-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-d%C3%B9ng-h%C3%A0ng-mi%E1%BB%85n-ph%C3%AD">2.2. Nếu bạn muốn dùng hàng miễn phí</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Generic-Customized-Error-Message"><a href="#1-Generic-Customized-Error-Message" class="headerlink" title="1. Generic Customized Error Message"></a>1. Generic Customized Error Message</h1><p>Generic tức là chung chung. Dùng chung 1 câu thông báo cho nhiều property cùng loại, chỉ thay đổi các yếu tố cần thiết</p>
+<p>[code lang=text] Ví dụ: * Tên phải chứa ít hơn 15 ký tự * Địa chỉ phải chứa ít hơn 150 ký tự [/code]</p>
+<p>Trong ví dụ trên, phần <code>tên</code>, <code>địa chỉ</code>, <code>15</code>, <code>150</code> là những tham số ta phải thay đổi cho câu thông báo. Vậy làm bằng cách nào?</p>
+<p>Mò vào source code của từng loại DataAnnotation, chúng ta sẽ thấy 1 số điều thú vị</p>
+<blockquote>
+<p>Source code cho DataAnnotation <a target="_blank" rel="noopener" href="https://github.com/Microsoft/referencesource/tree/master/System.ComponentModel.DataAnnotations/DataAnnotations">https://github.com/Microsoft/referencesource/tree/master/System.ComponentModel.DataAnnotations/DataAnnotations</a></p>
+</blockquote>
+<p>Tất cả các Attribute đều override lại method FormatErrorMessage. Mò vào từng implementation của các attribute, ta sẽ biết thứ tự các biến tham số của error message.</p>
+<p>Attribute</p>
+<p>Source code</p>
+<p>Giải thích</p>
+<p>StringLength</p>
+<p><code>return String.Format(CultureInfo.CurrentCulture, errorMessage, name, this.MaximumLength, this.MinimumLength);</code></p>
+<p>{0} = name, {1} = MaximumLength, {2} = MinimumLength</p>
+<p>Compare</p>
+<p><code>return String.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, OtherPropertyDisplayName ?? OtherProperty);</code></p>
+<p>{0} = name, {1} = OtherPropertyDisplayName / OtherProperty</p>
+<p>MinLength</p>
+<p><code>return string.Format(CultureInfo.CurrentCulture, ErrorMessageString, name, Length);</code></p>
+<p>{0} = name, {1} = Length</p>
+<p>Như vậy, thay vì ta phải viết thẳng từng câu error message, ta chỉ cần dùng string.Format với thứ tự chính xác của các tham số</p>
+<p>Ví dụ với trường hợp StringLength</p>
+<p>[code lang=csharp] [StringLength(70, ErrorMessage = “{0} phải chứa ít hơn {1} ký tự”)] public string Name { get; set; } [/code]</p>
+<h1 id="2-Error-Message-Localization"><a href="#2-Error-Message-Localization" class="headerlink" title="2. Error Message Localization"></a>2. Error Message Localization</h1><p>Thực ra thì chiêu sau đây không những giúp bạn localize string của Error Message, mà bất kỳ đoạn string nào bạn muốn</p>
+<blockquote>
+<p>Bạn phải tạo một file Resource trong project (.resx) để sử dụng Thông tin thêm ở đây: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization">https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization</a></p>
+</blockquote>
+<h2 id="2-1-Neu-ban-co-Resharper"><a href="#2-1-Neu-ban-co-Resharper" class="headerlink" title="2.1. Nếu bạn có Resharper"></a>2.1. Nếu bạn có Resharper</h2><p>Resharper là một sản phẩm hỗ trợ dev kha khá của JetBrains</p>
+<p>Đặt con trỏ tại một string bất kỳ -&gt; Resharper -&gt; Refactor -&gt; Move…</p>
+<p><img src="https://farm5.staticflickr.com/4750/39647359142_98791bd35d_o.png" alt="resharper move to resource"></p>
+<p>Resharper tính phí bản quyền</p>
+<h2 id="2-2-Neu-ban-muon-dung-hang-mien-phi"><a href="#2-2-Neu-ban-muon-dung-hang-mien-phi" class="headerlink" title="2.2. Nếu bạn muốn dùng hàng miễn phí"></a>2.2. Nếu bạn muốn dùng hàng miễn phí</h2><p>Visual Studio có một extension rất hay là <a target="_blank" rel="noopener" href="https://github.com/tom-englert/ResXResourceManager">RestXManager</a>. Chức năng của nó thì tương tự như Resharper, thậm chí còn nhỉnh hơn một tí</p>
+<blockquote>
+<ul>
+<li>Open source</li>
+<li>Active Development</li>
+<li>Hỗ trợ dịch text</li>
+</ul>
+</blockquote>
+<p>Bạn có thể tìm và tải trực tiếp trong Visual Studio: <code>Tools &amp;gt; Extensions and Updates &amp;gt; Online &amp;gt; search &quot;ResXManager&quot;</code></p>
+<p><img src="https://farm5.staticflickr.com/4616/38972346614_45410a6157_o.png" alt="ResXManager"></p>
+<p>hoặc</p>
+<p>tại link sau: <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager">https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager</a></p>
+<p>Sau đó, tương tự như Resharper, đặt con trỏ tại một string bất kỳ &gt; Chuột phải &gt; Move to Resource</p>
+<p><img src="https://farm5.staticflickr.com/4704/38783776745_f94606e40c_o.png" alt="Move to Resource"></p>
+<p>Còn một số chiêu khác với những loại DataAnnotation khác nữa bạn nhé</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/">https://huntertran.github.io/blog/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/resource/">resource</a><a href="/blog/tags/error-message/">error message</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Generic-Customized-Error-Message"><span class="toc-number">1.</span> <span class="toc-text">1. Generic Customized Error Message</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Error-Message-Localization"><span class="toc-number">2.</span> <span class="toc-text">2. Error Message Localization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Neu-ban-co-Resharper"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Nếu bạn có Resharper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Neu-ban-muon-dung-hang-mien-phi"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. Nếu bạn muốn dùng hàng miễn phí</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/">&lt; [asp.net] - Query trên các computed property không hỗ trợ LINQ</a><a class="next" href="/blog/2018/01/12/asp-net-core-2-0-custom-tag-helper/">[ASP.NET Core 2.0] Custom Tag Helper &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

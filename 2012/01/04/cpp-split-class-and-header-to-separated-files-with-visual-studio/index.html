@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[C++] Split class and header to separated files with Visual Studio | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[C++] Split class and header to separated files with Visual Studio</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">2012-01-03</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C++</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể tách các thành phần trong code ra thành những file riêng?</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-kh%C3%B4ng-n%C3%AAn">1. Không nên</a></li>
+<li><a href="#2-n%C3%AAn">2. Nên</a></li>
+<li><a href="#3-v%C3%AD-d%E1%BB%A5">3. Ví dụ</a></li>
+<li><a href="#4-t%C3%A1ch-class-th%C3%A0nh-file-ri%C3%AAng">4. Tách class thành file riêng</a></li>
+<li><a href="#5-v%E1%BB%81-vi%E1%BB%87c-s%E1%BB%AD-d%E1%BB%A5ng-namespace">5. Về việc sử dụng Namespace</a></li>
+</ul>
+<p>Nếu bạn chưa có nền tảng về lập trình hướng đối tượng bằng C++, hãy quay lại blog này sớm nhất có thể ngay khi bạn đủ khả năng nhé.</p>
+<h1 id="1-Khong-nen"><a href="#1-Khong-nen" class="headerlink" title="1. Không nên"></a>1. Không nên</h1><p>Việc tạo class trong file riêng bắt buộc bạn phải dùng câu lệnh include một thư viện nhiều lần. Trong file riêng và trong chương trình chính</p>
+<pre><code class="c">#include &quot;stdafx.h&quot;
+#include &quot;iostream&quot;
+using namespace std;</code></pre>
+<h1 id="2-Nen"><a href="#2-Nen" class="headerlink" title="2. Nên"></a>2. Nên</h1><p>Không cần phải làm như vậy. Việc include một thư viện trùng lặp sẽ phát sinh lỗi.</p>
+<p>Thay vào đó, trong file header của class, hãy thêm câu lệnh sau:</p>
+<pre><code class="c">#ifndef TÊNCLASS_H
+#define TÊNCLASS_H
+
+các thư viện cần thiết
+
+các dòng lệnh
+
+#endif</code></pre>
+<p>Sau đó, trong hàm main, bạn include thêm file <code>header.h</code> vừa tạo</p>
+<h1 id="3-Vi-du"><a href="#3-Vi-du" class="headerlink" title="3. Ví dụ"></a>3. Ví dụ</h1><p>Để giúp các bạn hình dung rõ hơn, bạn có thể xem một số screen shot</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png" alt="04-11-2011 7-41-49 PM" title="04-11-2011 7-41-49 PM"></a></p>
+<p>Khai báo tên class trong <code>PhoneNumber.h</code></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174418pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174418pm.png" alt="04-11-2011 7-44-18 PM" title="04-11-2011 7-44-18 PM"></a></p>
+<p>Sau đó, trong file định nghĩa các hàm thành viên của PhoneNumber, ta include thêm file <code>PhoneNumber.h</code></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174544pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174544pm.png" alt="04-11-2011 7-45-44 PM" title="04-11-2011 7-45-44 PM"></a></p>
+<p>Sau cùng là Include nó vào hàm Main. Chương trình sẽ chạy trơn tru</p>
+<p>Một cách khác mới hơn, đơn giản hơn (nhưng cũng đòi hỏi trình biên dịch là <a target="_blank" rel="noopener" href="http://www.microsoft.com/visualstudio" title="Microsoft Visual Studio">Visual Studio 2005</a> trở lên)</p>
+<pre><code class="c">#pragma once</code></pre>
+<p>Thêm dòng này vào đầu của file .h. Nó sẽ thông báo cho trình biên dịch chỉ include các thư viện 1 lần duy nhất.</p>
+<h1 id="4-Tach-class-thanh-file-rieng"><a href="#4-Tach-class-thanh-file-rieng" class="headerlink" title="4. Tách class thành file riêng"></a>4. Tách class thành file riêng</h1><p>Để minh họa, tôi sẽ tạo một class MyInt đơn giản, dùng để biểu diễn số nguyên</p>
+<p>Đầu tiên, khởi động Visual Studio</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105758am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105758am.png" alt="04-01-2012 10-57-58 AM" title="04-01-2012 10-57-58 AM"></a></p>
+<p>Chọn loại Project mong muốn, đặt tên cho nó và nhấn OK</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105917am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105917am.png" alt="04-01-2012 10-59-17 AM" title="04-01-2012 10-59-17 AM"></a></p>
+<p>Bấm Finish ở Wizard tạo Project</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110433am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110433am.png" alt="04-01-2012 11-04-33 AM" title="04-01-2012 11-04-33 AM"></a></p>
+<p>Sau đó, Visual Studio (VS)</p>
+<p>sẽ tạo một project mới cho bạn, với tên bạn đặt và header đã được biên dịch sẵn là stdadx.h</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110805am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110805am.png" alt="04-01-2012 11-08-05 AM" title="04-01-2012 11-08-05 AM"></a></p>
+<p>Để thêm mới một class bằng cách thông thường, click phải vào Header Files, chọn Add &gt; New Item…</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111110am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111110am.png" alt="04-01-2012 11-11-10 AM" title="04-01-2012 11-11-10 AM"></a></p>
+<p>Chọn Header File</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111204am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111204am.png" alt="04-01-2012 11-12-04 AM" title="04-01-2012 11-12-04 AM"></a></p>
+<p>Đặt tên cho nó và nhấn Add</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111253am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111253am.png" alt="04-01-2012 11-12-53 AM" title="04-01-2012 11-12-53 AM"></a></p>
+<p>Một file mới hoàn toàn có tên <code>MyInt.h</code> được tạo ra. Đây là file dành cho việc khai báo class MyInt. Bạn cũng có thể định nghĩa class trong file này, nhưng việc đó không được khuyến cáo</p>
+<pre><code class="c">// MyInt class declaration
+
+#prama once
+
+#include &quot;stdafx.h&quot;
+
+class MyInt
+&amp;#123;
+private:
+    int data;
+
+public:
+    MyInt();
+    MyInt(int);
+&amp;#125;;</code></pre>
+<p>Như bạn có thể thấy, chúng ta sử dụng kỹ thuật <code>#pragma once</code> để tránh include quá nhiều thư viện Tương tự, hãy Add một file MyInt.cpp mới trong thư mục Source Files</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111801am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111801am.png" alt="04-01-2012 11-18-01 AM" title="04-01-2012 11-18-01 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111817am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111817am.png" alt="04-01-2012 11-18-17 AM" title="04-01-2012 11-18-17 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111838am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111838am.png" alt="04-01-2012 11-18-38 AM" title="04-01-2012 11-18-38 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111908am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111908am.png" alt="04-01-2012 11-19-08 AM" title="04-01-2012 11-19-08 AM"></a></p>
+<p>Sau đó, hãy định nghĩa các thuộc tính và hàm của lớp <code>MyInt</code> trong file <code>MyInt.cpp</code></p>
+<pre><code class="c">// MyInt class definition
+
+#include &quot;stdafx.h&quot;
+#include &quot;iostream&quot;
+using std::cin;
+
+#include &quot;MyInt.h&quot;
+
+MyInt::MyInt()
+    : data(0)
+&amp;#123;
+&amp;#125;
+
+MyInt::MyInt(int re)
+    : data(re)
+&amp;#123;
+&amp;#125;</code></pre>
+<p>Ở dòng 7, vì class <code>MyInt</code> được khai báo ở file header <code>MyInt.h</code>, nên bạn phải include nó vào để sử dụng.</p>
+<p>Thế là xong. Có một cách khác để tạo class trong file riêng bằng Wizard của VS. Trong thư mục Header Files, click phải, chọn Add &gt; Class…</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112720am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112720am.png" alt="04-01-2012 11-27-20 AM" title="04-01-2012 11-27-20 AM"></a></p>
+<p>Chọn CPP class rồi bấm Add</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112847am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112847am.png" alt="04-01-2012 11-28-47 AM" title="04-01-2012 11-28-47 AM"></a></p>
+<p>Trong Wizard mới hiện ra, bạn chỉ cần gõ tên class, tên file header và file source sẽ được tạo tự độn</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112946am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112946am.png" alt="04-01-2012 11-29-46 AM" title="04-01-2012 11-29-46 AM"></a></p>
+<p>Bấm Finish, ngay lập tức, 2 file mới sẽ được tạo, có sẵn code và được phân phối và thư mục tương ứn</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113311am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113311am.png" alt="04-01-2012 11-33-11 AM" title="04-01-2012 11-33-11 AM"></a></p>
+<p>Code tạo sẵn trong file header MyInt2.h</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113208am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113208am.png" alt="04-01-2012 11-32-08 AM" title="04-01-2012 11-32-08 AM"></a></p>
+<p>Code tạo sẵn trong file source MyInt2.cpp</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113512am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113512am.png" alt="04-01-2012 11-35-12 AM" title="04-01-2012 11-35-12 AM"></a></p>
+<p>Như vậy, tất cả công việc ta làm bằng tay đều được VS làm tự động, nhưng nó sinh ra một số code dư thừa. Nhiều lập trình viên không thích điều này, họ vẫn thích tự tạo class file cho mình hơn.</p>
+<h1 id="5-Ve-viec-su-dung-Namespace"><a href="#5-Ve-viec-su-dung-Namespace" class="headerlink" title="5. Về việc sử dụng Namespace"></a>5. Về việc sử dụng Namespace</h1><p>Như đã nói ở trên, lập trình hướng đối tượng với VC++ 2010, sinh viên thường <code>#include</code> rất nhiều thư viện dư thừa, rồi sau đó <code>using namespace std;</code> Điều đó không cần thiết. Trong namespace <code>std</code>, tức <code>STANDARD</code>, có rất nhiều hàm xây dựng sẵn mà bạn không cần dùng. Dùng hàm nào, bạn khai báo hàm đó. Ví dụ như hình trên, tôi dùng hàm <code>cout</code>, <code>cin</code>, <code>endl</code> nên chỉ khai báo 3 hàm đó thôi.</p>
+<pre><code class="c">#include &quot;stdafx.h&quot;
+#include &quot;iostream&quot;
+using std::cout;
+using std::cin;
+using std::endl;</code></pre>
+<p>3 hàm này nằm trong thư viện iostream Một số thư viện thường dùng:</p>
+<ul>
+<li><code>stdafx.h</code> – tiêu chuẩn cho VC++ 2010</li>
+<li><code>iostream</code> – chứa các hàm <code>cout</code>, <code>cin</code>, <code>endl</code></li>
+<li><code>string</code> – chứa các hàm xử lý chuỗi</li>
+<li><code>iomanip</code> – chứa hàm định khoảng cho output (<code>setw</code>, <code>serfill</code>)</li>
+<li><code>conio.h</code> – chứa hàm <code>getch()</code>. Hàm này thường được dùng để dừng màn hình. Nhưng không nên sử dụng nó.</li>
+</ul>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">https://huntertran.github.io/blog//2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/class/">class</a><a href="/blog/tags/Header-computing/">Header (computing)</a><a href="/blog/tags/Separate-class/">Separate class</a><a href="/blog/tags/Source/">Source</a><a href="/blog/tags/Visual-Studio/">Visual Studio</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Khong-nen"><span class="toc-number">1.</span> <span class="toc-text">1. Không nên</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Nen"><span class="toc-number">2.</span> <span class="toc-text">2. Nên</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Vi-du"><span class="toc-number">3.</span> <span class="toc-text">3. Ví dụ</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Tach-class-thanh-file-rieng"><span class="toc-number">4.</span> <span class="toc-text">4. Tách class thành file riêng</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Ve-viec-su-dung-Namespace"><span class="toc-number">5.</span> <span class="toc-text">5. Về việc sử dụng Namespace</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2012/01/14/ic03/">&lt; [IC03] Tạo tài khoản Imagine Cup 2012</a><a class="next" href="/blog/2011/12/31/dang-ky-imagine-cup-2012/">Đăng ký Imagine Cup 2012 &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

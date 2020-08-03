@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Machine Learning - 2.3 - Exercise | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Machine Learning - 2.3 - Exercise</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/10/18/machine-learning-2-3-exercise/">2018-10-18</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Machine-Learning/">Machine Learning</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi bài tập trong tuần 2 của khóa học Machine Learning của giáo sư Andrew Ng.</p>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a>.</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-c%C3%A0i-%C4%91%E1%BA%B7t-octave">1. Cài đặt Octave</a></li>
+<li><a href="#2-warmup">2. Warmup</a></li>
+<li><a href="#3-cost-function-j">3. Cost Function J</a></li>
+<li><a href="#4-gradient-descent">4. Gradient Descent</a></li>
+<li><a href="#5-normal-equation">5. Normal Equation</a></li>
+</ul>
+<h1 id="1-Cai-dat-Octave"><a href="#1-Cai-dat-Octave" class="headerlink" title="1. Cài đặt Octave"></a>1. Cài đặt Octave</h1><p>Còn gì dễ hơn: <a target="_blank" rel="noopener" href="https://www.gnu.org/software/octave/download.html">Download Octave</a></p>
+<p>Chọn phiên bản 64-bit nha: octave-4.4.1-w64-installer.exe (~ 238 MB)</p>
+<h1 id="2-Warmup"><a href="#2-Warmup" class="headerlink" title="2. Warmup"></a>2. Warmup</h1><p>Yêu cầu: Trả về 5x5 identity matrix</p>
+<pre><code>A = eye(5);</code></pre>
+<h1 id="3-Cost-Function-J"><a href="#3-Cost-Function-J" class="headerlink" title="3. Cost Function J"></a>3. Cost Function J</h1><p>Công thức:</p>
+<p>$latex J(\theta) = \frac{1}{2m}\sum\limits_{i=1}^m(h_0(x^{(i)})-y^{(i)})^2$</p>
+<p>Vectorize:</p>
+<p>Ta có:</p>
+<p>$latex h_0(x^{(i)}) =\theta_0X_0 + \theta_1X_1+…+\theta_nX_n$</p>
+<p>Nếu coi $latex \theta$ là vector $latex n\times1$, X là matrix $latex m\times n$, thì phép tính trên còn đơn giản như sau:</p>
+<p>$latex h_0(x^{(i)})=\begin{bmatrix}x_0^{(1)} &amp; x_1^{(1)} \\x_0^{(2)} &amp; x_1^{(2)} \\ … &amp; … \\ x_0^{(m)} &amp; x_1^{(m)} \end{bmatrix}\times\begin{bmatrix}\theta_0 \\ \theta_1 \\ … \\ \theta_m \end{bmatrix}=X\times\theta$</p>
+<p>Vậy cost function biến đổi lại thành:</p>
+<p>$latex J(\theta) = \frac{1}{2m}\sum\limits_{i=1}^m(X\times\theta-y)^2$</p>
+<p>Code:</p>
+<pre><code>J = (1/(2*m))*sum((X*theta - y).^2)</code></pre>
+<h1 id="4-Gradient-Descent"><a href="#4-Gradient-Descent" class="headerlink" title="4. Gradient Descent"></a>4. Gradient Descent</h1><p>Thuật toán Gradient Descent có 2 bước:</p>
+<ol>
+<li>Tính bộ giá trị $latex \theta$</li>
+<li>Thay vào cost function để kiểm tra hội tụ</li>
+</ol>
+<p>Để cho đơn giản, ta sẽ giả định rằng chỉ có 2 feature là $latex x_0 = 1$ và $latex x_1$ (n = 2)</p>
+<p>Công thức:</p>
+<p>$latex \theta_j = \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
+<p>Ta tách công thức trên thành 2 phần:</p>
+<p>$latex \theta_j = \theta_j - gradient$</p>
+<p>với</p>
+<p>$latex gradient = \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
+<p>với:</p>
+<ul>
+<li>X = $latex \begin{bmatrix}x_0^{(1)} &amp; x_1^{(1)} \\x_0^{(2)} &amp; x_1^{(2)} \\ … &amp; … \\ x_0^{(m)} &amp; x_1^{(m)} \end{bmatrix}$</li>
+<li>$latex \theta = \begin{bmatrix}\theta_0 \\ \theta_1 \end{bmatrix}$</li>
+<li>y = $latex \begin{bmatrix}y_1 \\ y_2 \\ … \\ y_m \end{bmatrix}$</li>
+</ul>
+<p>Tương tự như cost function, ta có:</p>
+<p>$latex (X\times\theta - y)=\begin{bmatrix} \theta_0x_0^{(1)}+\theta_1x_1^{(1)}-y_1 \\ \theta_0x_0^{(2)}+\theta_1x_1^{(2)}-y_2 \\ … \\ \theta_0x_0^{(m)}+\theta_1x_1^{(m)}-y_m \end{bmatrix}=\begin{bmatrix} a_1 \\ a_2 \\ … \\ a_m \end{bmatrix}= a$</p>
+<p>với a là vector m x 1</p>
+<p><strong>Nhân với $latex x_j^{(i)}$ và tính tổng</strong></p>
+<p>Đối với mỗi tham số của vector a, ta nhân nó với x tương ứng, rồi cộng tất cả các kết quả lại.</p>
+<p>Để vừa nhân, vừa tính tổng và trả về một vector chứa kết quả là các giá trị của gradient, ta sẽ phải biến đổi matrix X một chút.</p>
+<p>$latex X^T = \begin{bmatrix}x_0^{(1)} &amp; x_0^{(2)} &amp; … &amp; x_0^{(m)}\\ x_1^{(1)} &amp; x_1^{(2)} &amp; … &amp; x_1^{(m)}\end{bmatrix}$</p>
+<p>Khi nhân matrix này với vector a, ta sẽ có kết quả như mong muốn.</p>
+<p>$latex X^T\times a = \begin{bmatrix}x_0^{(1)} &amp; x_0^{(2)} &amp; … &amp; x_0^{(m)}\\ x_1^{(1)} &amp; x_1^{(2)} &amp; … &amp; x_1^{(m)}\end{bmatrix} \times \begin{bmatrix} a_1 \\ a_2 \\ … \\ a_m \end{bmatrix}=\begin{bmatrix} a_1x_0^{(1)} + a_2x_0^{(2)} + … + a_mx_0^{(m)} \\ a_1x_1^{(1)} + a_2x_1^{(2)} + … + a_mx_1^{(m)} \end{bmatrix}$</p>
+<p>Code:</p>
+<pre><code>file gradientDescent.m
+
+function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
+%GRADIENTDESCENT Performs gradient descent to learn theta
+%   theta = GRADIENTDESCENT(X, y, theta, alpha, num_iters) updates theta by
+%   taking num_iters gradient steps with learning rate alpha
+
+% Initialize some useful values
+m = length(y); % number of training examples
+J_history = zeros(num_iters, 1);
+
+for iter = 1:num_iters
+gradient = (alpha/m) * X&#39; * (X*theta - y);
+theta = theta - gradient;
+
+% Save the cost J in every iteration
+J_history(iter) = computeCost(X, y, theta);
+end
+end</code></pre>
+<blockquote>
+<p>Code này có thể dùng chung cho gradient descent với nhiều feature</p>
+</blockquote>
+<h1 id="5-Normal-Equation"><a href="#5-Normal-Equation" class="headerlink" title="5. Normal Equation"></a>5. Normal Equation</h1><p>Cái này thì khá dễ, nên mình không giải thích mà sẽ đưa code luôn nhé</p>
+<pre><code>file normalEqn.m
+
+function [theta] = normalEqn(X, y)
+%NORMALEQN Computes the closed-form solution to linear regression
+%   NORMALEQN(X,y) computes the closed-form solution to linear
+%   regression using the normal equations.
+
+theta = zeros(size(X, 2), 1);
+
+theta = pinv(X&#39;*X)*X&#39;*y;
+end</code></pre>
+<p>Bắt đầu tuần 3 nào :D</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/10/18/machine-learning-2-3-exercise/">https://huntertran.github.io/blog/2018/10/18/machine-learning-2-3-exercise/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Cai-dat-Octave"><span class="toc-number">1.</span> <span class="toc-text">1. Cài đặt Octave</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Warmup"><span class="toc-number">2.</span> <span class="toc-text">2. Warmup</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Cost-Function-J"><span class="toc-number">3.</span> <span class="toc-text">3. Cost Function J</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Gradient-Descent"><span class="toc-number">4.</span> <span class="toc-text">4. Gradient Descent</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Normal-Equation"><span class="toc-number">5.</span> <span class="toc-text">5. Normal Equation</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2019/04/02/latex-on-windows-step-by-step-installation/">&lt; [Research] - LaTex on Windows - Step by step installation</a><a class="next" href="/blog/2018/10/09/machine-learning-2-2-normal-equation/">Machine Learning - 2.2 - Normal Equation &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

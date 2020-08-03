@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Wordpress - Install Wordpress to Docker containers from Windows | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Wordpress - Install Wordpress to Docker containers from Windows</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">2017-08-02</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Others/">Others</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes</p>
+<a id="more"></a>
+<p><strong>Contents</strong></p>
+<ul>
+<li><p><a href="#1-install-apache">1. Install Apache</a></p>
+</li>
+<li><p><a href="#2-install-mysql">2. Install MySQL</a></p>
+<ul>
+<li><a href="#21-install-mysql-server">2.1. Install mysql-server</a></li>
+</ul>
+</li>
+<li><p><a href="#3-install-php">3. Install PHP</a></p>
+</li>
+<li><p><a href="#4-setup-wordpress">4. Setup Wordpress</a></p>
+<ul>
+<li><a href="#41-create-mysql-database-and-user">4.1. Create MySQL database and user</a></li>
+<li><a href="#42-install-wordpress">4.2. Install wordpress</a></li>
+<li><a href="#43-config">4.3. Config</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Install-Apache"><a href="#1-Install-Apache" class="headerlink" title="1. Install Apache"></a>1. Install Apache</h1><p>Login to Docker container with SuperPutty / Putty</p>
+<p>[code lang=text] apt-get update [/code]</p>
+<p>[code lang=text] apt-get install apache2 [/code]</p>
+<p>(type y to confirm installation)</p>
+<p>[code lang=text] apache2ctl configtest [/code]</p>
+<p>If output is</p>
+<p>[code lang=text] AH00558: apache2: Could not reliably determine the server’s fully qualified domain name, using 127.0.1.1. Set the ‘ServerName’ directive globally to suppress this message Syntax OK [/code]</p>
+<p>Meaning: apache cannot get the reliably server domain name</p>
+<p>IT JUST A WARNING</p>
+<p>To fix: edit <code>apache2.conf</code></p>
+<blockquote>
+<p>Recommended: Map network drive to easily config or copy file to container <a target="_blank" rel="noopener" href="https://github.com/dokan-dev/dokany/releases">Download</a> + install Dolkan <a target="_blank" rel="noopener" href="https://github.com/Foreveryone-cz/win-sshfs/releases">Download</a> + install win-sshfs follow the step to map <img src="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></p>
+</blockquote>
+<p>open <code>/etc/apache2/apache2.conf</code> in your favorite editor</p>
+<p>add this line at the end of the file</p>
+<p>[code lang=text] ServerName localhost [/code]</p>
+<p>type <code>apache2ctl configtest</code> again to see warning is disappeared</p>
+<h1 id="2-Install-MySQL"><a href="#2-Install-MySQL" class="headerlink" title="2. Install MySQL"></a>2. Install MySQL</h1><h2 id="2-1-Install-mysql-server"><a href="#2-1-Install-mysql-server" class="headerlink" title="2.1. Install mysql-server"></a>2.1. Install mysql-server</h2><p>[code lang=text] apt-get install mysql-server [/code]</p>
+<p>In the installation process, type password for root user</p>
+<h1 id="3-Install-PHP"><a href="#3-Install-PHP" class="headerlink" title="3. Install PHP"></a>3. Install PHP</h1><p>[code lang=text] apt-get install php libapache2-mod-php php-mcrypt php-mysql [/code]</p>
+<p>Config apache priority for index.php instead of index.html</p>
+<p>Because dir.conf presented as folder, so we have to edit with linux nano</p>
+<p>[code lang=text] nano /etc/apache2/mods-enabled/dir.conf [/code]</p>
+<p>It should look like this</p>
+<p><img src="http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
+<p>Type <code>Ctrl + X</code> to exit nano, type y to save</p>
+<p>Restart Apache2 server</p>
+<p>[code lang=text] service apache2 restart [/code]</p>
+<p>To test PHP server (REMOVE the file after test because it will show your server info)</p>
+<p>Create new file <code>info.php</code> in <code>/var/www/html/</code></p>
+<p>Insert some PHP code</p>
+<p>[code lang=php] <?php phpinfo(); ?> [/code]</p>
+<p>Then you can access <a target="_blank" rel="noopener" href="http://your_domain_name/info">http://your_domain_name/info</a></p>
+<p><img src="http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
+<h1 id="4-Setup-Wordpress"><a href="#4-Setup-Wordpress" class="headerlink" title="4. Setup Wordpress"></a>4. Setup Wordpress</h1><h2 id="4-1-Create-MySQL-database-and-user"><a href="#4-1-Create-MySQL-database-and-user" class="headerlink" title="4.1. Create MySQL database and user"></a>4.1. Create MySQL database and user</h2><p>Start MySQL server</p>
+<p>[code lang=text] /etc/init.d/mysql start [/code]</p>
+<p>Login into mysql</p>
+<p>[code lang=text] mysql -u root -p [/code]</p>
+<p>Enter your password</p>
+<p>Your console windows will now start with <code>mysql&amp;gt;</code></p>
+<p>Type in to create database for wordpress (database name can be customize)</p>
+<p>[code lang=sql] CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci; [/code]</p>
+<p>SQL query must end with semicolon(;)</p>
+<p>Create a separate account to manage wordpress database</p>
+<p>[code lang=sql] GRANT ALL ON wordpress.* TO ‘admin’@’localhost’ IDENTIFIED BY ‘admin’; [/code]</p>
+<p>Flush the current Privileges, so MySQL will know about the recent changes</p>
+<p>[code lang=sql] FLUSH PRIVILEGES; [/code]</p>
+<p>Exit MySQL</p>
+<p>[code lang=sql] EXIT; [/code]</p>
+<p>Adjust Apache configuration to allow for .htaccess override and rewrites</p>
+<p>Open apache configuration file to edit</p>
+<p>[code lang=text] /etc/apache2/apache2.conf [/code]</p>
+<p>You can use Ubuntu nano editor, or if you’ve mapped the network drive before (step 4), open the file like any other file on windows</p>
+<p>Nano</p>
+<p>[code lang=text] nano /etc/apache2/apache2.conf [/code]</p>
+<p>Network Drive</p>
+<p><img src="http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
+<p>Search for this part and change</p>
+<p>[code lang=text] . . .</p>
+<p>&lt;Directory /var/www/html/&gt; AllowOverride All </Directory></p>
+<p>. . . [/code]</p>
+<p>Save and close the file</p>
+<p>Enable rewrite module</p>
+<p>[code lang=text] a2enmod rewrite [/code]</p>
+<p>Enable changes</p>
+<p>[code lang=text] apache2ctl configtest [/code]</p>
+<p>Restart apache2 service</p>
+<p>[code lang=text] service apache2 restart [/code]</p>
+<h2 id="4-2-Install-wordpress"><a href="#4-2-Install-wordpress" class="headerlink" title="4.2. Install wordpress"></a>4.2. Install wordpress</h2><p>Download wordpress at: <a target="_blank" rel="noopener" href="https://wordpress.org/">https://wordpress.org/</a></p>
+<p>Extract to a folder</p>
+<p>Copy the content of folder “wordpress” to folder “/var/www/html” on container</p>
+<p>Permission and .htaccess Show hidden files and folder on WinSCP</p>
+<p>[code lang=text] Open WinSCP &gt; Option &gt; References… [/code]</p>
+<p><img src="http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
+<p>Create .htaccess file</p>
+<p>Right click on an empty space &gt; New File &gt; enter .htaccess</p>
+<p><img src="http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
+<p>Set Read / Write permission for .htaccess</p>
+<p>Right click on .htaccess &gt; Properties</p>
+<p><img src="http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
+<p>Set permission recursively for all 3 folders</p>
+<p><img src="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
+<h2 id="4-3-Config"><a href="#4-3-Config" class="headerlink" title="4.3. Config"></a>4.3. Config</h2><p>Open <code>wp-config.php</code> and fill in these info</p>
+<p>[code lang=php] // ** MySQL settings - You can get this info from your web host ** // /** The name of the database for WordPress */ define(‘DB_NAME’, ‘wordpress’);</p>
+<p>/** MySQL database username */ define(‘DB_USER’, ‘admin’);</p>
+<p>/** MySQL database password */ define(‘DB_PASSWORD’, ‘admin’);</p>
+<p>/** MySQL hostname */ define(‘DB_HOST’, ‘localhost’);</p>
+<p>/** Database Charset to use in creating database tables. */ define(‘DB_CHARSET’, ‘utf8’);</p>
+<p>/** The Database Collate type. Don’t change this if in doubt. */ define(‘DB_COLLATE’, ‘’); [/code]</p>
+<p>Open link and copy the code show up then replace them</p>
+<p><img src="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
+<p>Add this line (to enable wordpress can modify files and folder directly</p>
+<p>[code lang=php] define(‘FS_METHOD’, ‘direct’); [/code]</p>
+<p>It’s done, open your <code>domain:port</code> to config wordpress using web interface</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/apache/">apache</a><a href="/blog/tags/container/">container</a><a href="/blog/tags/docker/">docker</a><a href="/blog/tags/php/">php</a><a href="/blog/tags/ubuntu/">ubuntu</a><a href="/blog/tags/wordpress/">wordpress</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Install-Apache"><span class="toc-number">1.</span> <span class="toc-text">1. Install Apache</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Install-MySQL"><span class="toc-number">2.</span> <span class="toc-text">2. Install MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Install-mysql-server"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Install mysql-server</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Install-PHP"><span class="toc-number">3.</span> <span class="toc-text">3. Install PHP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Setup-Wordpress"><span class="toc-number">4.</span> <span class="toc-text">4. Setup Wordpress</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Create-MySQL-database-and-user"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. Create MySQL database and user</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Install-wordpress"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. Install wordpress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Config"><span class="toc-number">4.3.</span> <span class="toc-text">4.3. Config</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2017/08/29/aspnet-identity-1-introduction/">&lt; [ASP.NET Identity] - 1 - Introduction</a><a class="next" href="/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">[ASPNET] Editor for với List và thêm mới item dùng AJAX &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

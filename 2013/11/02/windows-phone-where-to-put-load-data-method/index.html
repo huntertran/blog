@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Windows Phone] Where to put load data method? | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Windows Phone] Where to put load data method?</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/11/02/windows-phone-where-to-put-load-data-method/">2013-11-02</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và hiển thị chúng lên giao diện.</p>
+<p><img src="https://farm8.staticflickr.com/7339/10619092335_673c78c2fc_o.png"></p>
+<p>Vậy cách nào là tối ưu để load data?</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#c%C3%A1ch-1-thisloaded-event-handler">Cách 1: this.Loaded event handler</a></p>
+<ul>
+<li><a href="#ho%E1%BA%A1t-%C4%91%E1%BB%99ng">Hoạt động</a></li>
+<li><a href="#c%C3%A1ch-d%C3%B9ng">Cách dùng</a></li>
+<li><a href="#%C6%B0u-%C4%91i%E1%BB%83m">Ưu điểm</a></li>
+<li><a href="#nh%C6%B0%E1%BB%A3c-%C4%91i%E1%BB%83m">Nhược điểm</a></li>
+<li><a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
+</ul>
+</li>
+<li><p><a href="#c%C3%A1ch-2-onnavigatedto">Cách 2: OnNavigatedTo</a></p>
+<ul>
+<li><a href="#ho%E1%BA%A1t-%C4%91%E1%BB%99ng-1">Hoạt động</a></li>
+<li><a href="#c%C3%A1ch-d%C3%B9ng-1">Cách dùng</a></li>
+<li><a href="#%C6%B0u-%C4%91i%E1%BB%83m-1">Ưu điểm</a></li>
+<li><a href="#nh%C6%B0%E1%BB%A3c-%C4%91i%E1%BB%83m-1">Nhược điểm</a></li>
+<li><a href="#k%E1%BA%BFt-lu%E1%BA%ADn-1">Kết luận</a></li>
+</ul>
+</li>
+<li><p><a href="#t%C3%B3m-l%E1%BA%A1i">Tóm lại</a></p>
+</li>
+</ul>
+<p>Khi tạo mới một page trong Windows Phone, bạn có 1 số phương thức được khởi tạo sẵn</p>
+<p><img src="https://farm8.staticflickr.com/7314/10619173056_305079cfe7_o.png"></p>
+<p>Đây là phương thức khởi tạo (Contructor) Phương thức khởi tạo có chức năng chính là…construct, hay xây dựng, thi công nên trang mà mình mong muốn. Một sai lầm cơ bản là mọi người thường load dữ liệu ngay dưới phương thức này.</p>
+<p><img src="https://farm8.staticflickr.com/7430/10619462526_9716012411_o.png"></p>
+<p>Giả sử như data của bạn nhiều, LoadData chạy khá lâu. Lúc đó thì page của bạn sẽ chỉ xuất hiện khi toàn bộ Contructor đã chạy xong. Tức là từ page cũ, bấm sang page này, sẽ có một khoảng thời gian ứng dụng bị “đơ”, đó chính là thời gian cần thiết để chạy phương thức khởi tạo page.</p>
+<p>Windows Phone ko hoạt động theo kiểu HTML, một khi tất cả đã sẵn sàng trong RAM, nó mới vẽ page đó ra trên màn hình, trong khi HTML là có cái jì là nó vẽ cái đó :3</p>
+<p>Rất nhiều người sử dụng cách này, vì trong một số đoạn video và hầu hết các tài liệu chính thức trên MSDN, MS hướng dẫn bạn theo cách này ==’</p>
+<h1 id="Cach-1-this-Loaded-event-handler"><a href="#Cach-1-this-Loaded-event-handler" class="headerlink" title="Cách 1: this.Loaded event handler"></a>Cách 1: this.Loaded event handler</h1><h2 id="Hoat-dong"><a href="#Hoat-dong" class="headerlink" title="Hoạt động"></a>Hoạt động</h2><p>Loaded event sẽ được gọi ngay khi vẽ xong giao diện của page lên màn hình (sau khi khởi tạo xong) và khi có một sự thay đổi về giao diện (thêm bớt các element)</p>
+<h2 id="Cach-dung"><a href="#Cach-dung" class="headerlink" title="Cách dùng"></a>Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png"></p>
+<p>Dùng như hình trên</p>
+<h2 id="Uu-diem"><a href="#Uu-diem" class="headerlink" title="Ưu điểm"></a>Ưu điểm</h2><p>Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng.</p>
+<p>Phương pháp này làm được việc đó Việc khởi tạo page vô cùng nhanh chóng, ứng dụng của bạn sẽ không bị đơ, đảm bảo tương tác với người dùng</p>
+<h2 id="Nhuoc-diem"><a href="#Nhuoc-diem" class="headerlink" title="Nhược điểm"></a>Nhược điểm</h2><p>Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại.</p>
+<p>Như vậy, ta không thể đảm bảo được rằng trong suốt quá trình tương tác trên page, phương thức này chỉ được gọi 1 lần.</p>
+<p>Gọi nhiều lần hàm load sẽ dẫn tới những kết cục không mong muốn, chưa kể đến sự hao phí tài nguyên và năng lượng Giả sử nếu bạn cần thời gian rất lâu để load dữ liệu, mà dữ liệu của bạn chưa được binding trước khi load xong, thì sẽ có 1 hiện tượng là page đã vẽ xong, nhưng nội dung thì vẫn trống trơn. Dù vẫn phản hồi tốt, người dùng sẽ tưởng app lỗi và rate thấp :3</p>
+<h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Nếu page của bạn, bạn chắc chắn không có sự thêm bớt về giao diện, có thể dùng phương thức này. Một lưu ý nhỏ là hãy binding dữ liệu trước khi tiến hành load dữ liệu lên. Binding lên một Collection không có phần tử hoàn toàn không sao cả. (không phải collection null nhé)</p>
+<blockquote>
+<p>Nếu dùng phương thức này mà gặp một số lỗi lạ về dữ liệu, hãy nghĩ tới trường hợp event được gọi nhiều lần</p>
+</blockquote>
+<h1 id="Cach-2-OnNavigatedTo"><a href="#Cach-2-OnNavigatedTo" class="headerlink" title="Cách 2: OnNavigatedTo"></a>Cách 2: OnNavigatedTo</h1><h2 id="Hoat-dong-1"><a href="#Hoat-dong-1" class="headerlink" title="Hoạt động"></a>Hoạt động</h2><p>OnNavigatedTo được gọi khi một page trở thành page active trong frame. Như vậy có nghĩa là nó sẽ được gọi trước khi event loaded xảy ra. Thứ tự: Contructor =&gt; OnNavigatedTo =&gt; Loaded</p>
+<h2 id="Cach-dung-1"><a href="#Cach-dung-1" class="headerlink" title="Cách dùng"></a>Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3668/10620480973_e2599e3065_o.png"></p>
+<h2 id="Uu-diem-1"><a href="#Uu-diem-1" class="headerlink" title="Ưu điểm"></a>Ưu điểm</h2><p>OnNavigatedTo có một số tham số liên quan tới việc chuyển page. Bạn có thể dùng các tham số này để xác định các thành phần sẽ hiển thị lên page như thế nào</p>
+<h2 id="Nhuoc-diem-1"><a href="#Nhuoc-diem-1" class="headerlink" title="Nhược điểm"></a>Nhược điểm</h2><p>Page cũ sẽ bị đơ trước khi chuyển</p>
+<h2 id="Ket-luan-1"><a href="#Ket-luan-1" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Chỉ dùng phương thức này khi thời gian đơ là không đáng kể. Nếu bạn load 2 dòng dữ liệu thì okie, còn nếu 20000 dòng thì nên dùng Loaded</p>
+<h1 id="Tom-lai"><a href="#Tom-lai" class="headerlink" title="Tóm lại"></a>Tóm lại</h1><p>Tùy và lượng dữ liệu, cũng như thời gian mà bạn sử dụng linh hoạt 1 trong 2 phương pháp</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2013/11/02/windows-phone-where-to-put-load-data-method/">https://huntertran.github.io/blog/2013/11/02/windows-phone-where-to-put-load-data-method/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/data/">data</a><a href="/blog/tags/loaded/">loaded</a><a href="/blog/tags/onnavigatedto/">onnavigatedto</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cach-1-this-Loaded-event-handler"><span class="toc-number">1.</span> <span class="toc-text">Cách 1: this.Loaded event handler</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hoat-dong"><span class="toc-number">1.1.</span> <span class="toc-text">Hoạt động</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cach-dung"><span class="toc-number">1.2.</span> <span class="toc-text">Cách dùng</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Uu-diem"><span class="toc-number">1.3.</span> <span class="toc-text">Ưu điểm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nhuoc-diem"><span class="toc-number">1.4.</span> <span class="toc-text">Nhược điểm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ket-luan"><span class="toc-number">1.5.</span> <span class="toc-text">Kết luận</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cach-2-OnNavigatedTo"><span class="toc-number">2.</span> <span class="toc-text">Cách 2: OnNavigatedTo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hoat-dong-1"><span class="toc-number">2.1.</span> <span class="toc-text">Hoạt động</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cach-dung-1"><span class="toc-number">2.2.</span> <span class="toc-text">Cách dùng</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Uu-diem-1"><span class="toc-number">2.3.</span> <span class="toc-text">Ưu điểm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nhuoc-diem-1"><span class="toc-number">2.4.</span> <span class="toc-text">Nhược điểm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ket-luan-1"><span class="toc-number">2.5.</span> <span class="toc-text">Kết luận</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tom-lai"><span class="toc-number">3.</span> <span class="toc-text">Tóm lại</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2013/11/03/xach-laptop-len-va-san-lumia/">&lt; Xách Laptop lên và....săn lumia</a><a class="next" href="/blog/2013/10/12/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/">[Windows Phone] - TextBlock Tips and Tricks – Part 2 – TextBox too &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

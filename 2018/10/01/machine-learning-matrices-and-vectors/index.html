@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Machine Learning - 1.4 - Matrices and Vectors | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Machine Learning - 1.4 - Matrices and Vectors</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/10/01/machine-learning-matrices-and-vectors/">2018-10-01</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Machine-Learning/">Machine Learning</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng.</p>
+<p>Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.</p>
+<a id="more"></a>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><a href="#1-c%C3%A1c-k%C3%BD-hi%E1%BB%87u">1. Các ký hiệu</a><ul>
+<li><a href="#11-matrix">1.1. Matrix</a></li>
+<li><a href="#12-vector">1.2. Vector</a></li>
+<li><a href="#13-k%C3%BD-hi%E1%BB%87u">1.3. Ký hiệu</a></li>
+</ul>
+</li>
+<li><a href="#2-ph%E1%BA%A7n-m%E1%BB%81m">2. Phần mềm</a></li>
+<li><a href="#3-c%C3%A1c-ph%C3%A9p-t%C3%ADnh">3. Các phép tính</a><ul>
+<li><a href="#31-ph%C3%A9p-c%E1%BB%99ng-v%C3%A0-ph%C3%A9p-nh%C3%A2n-matrix-s%E1%BB%91-th%E1%BB%B1c">3.1. Phép cộng và phép nhân matrix số thực</a></li>
+<li><a href="#32-nh%C3%A2n-matrix-v%E1%BB%9Bi-vector">3.2. Nhân matrix với vector</a></li>
+<li><a href="#33-nh%C3%A2n-2-matrix-v%E1%BB%9Bi-nhau">3.3. Nhân 2 matrix với nhau</a></li>
+<li><a href="#34-c%C3%A1c-t%C3%ADnh-ch%E1%BA%A5t-c%E1%BB%A7a-ph%C3%A9p-nh%C3%A2n-matrix">3.4. Các tính chất của phép nhân matrix</a></li>
+<li><a href="#35-identity-matrix">3.5. Identity Matrix</a></li>
+</ul>
+</li>
+<li><a href="#4-inverse-ngh%E1%BB%8Bch-%C4%91%E1%BA%A3o-v%C3%A0-transpose-chuy%E1%BB%83n-v%E1%BB%8B">4. Inverse (nghịch đảo) và Transpose (chuyển vị)</a><ul>
+<li><a href="#41-inverse-ngh%E1%BB%8Bch-%C4%91%E1%BA%A3o">4.1. Inverse (nghịch đảo)</a></li>
+<li><a href="#42-transpose-chuy%E1%BB%83n-v%E1%BB%8B">4.2. Transpose (chuyển vị)</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Cac-ky-hieu"><a href="#1-Cac-ky-hieu" class="headerlink" title="1. Các ký hiệu"></a>1. Các ký hiệu</h1><h2 id="1-1-Matrix"><a href="#1-1-Matrix" class="headerlink" title="1.1. Matrix"></a>1.1. Matrix</h2><p>Matrix là một mảng 2 chiều (có thể mở rộng ra n chiều).</p>
+<p>$latex \begin{bmatrix}a &amp; b &amp; c \\d &amp; e &amp; f \\g &amp; h &amp; i \\j &amp; k &amp; l \end{bmatrix}$</p>
+<p>Matrix bên trên có 4 dòng và 3 cột, ký hiệu là $latex R^{4x3}$.</p>
+<h2 id="1-2-Vector"><a href="#1-2-Vector" class="headerlink" title="1.2. Vector"></a>1.2. Vector</h2><p>Vector là một matrix chỉ có 1 cột và nhiều dòng.</p>
+<p>$latex \begin{bmatrix} w \\ x \\ y \\ z \end{bmatrix}$</p>
+<p>Vector trên là một matrix 4x1.</p>
+<h2 id="1-3-Ky-hieu"><a href="#1-3-Ky-hieu" class="headerlink" title="1.3. Ký hiệu"></a>1.3. Ký hiệu</h2><ul>
+<li>$latex A_{ij}$ là phần tử ở dòng i và cột j của matrix.</li>
+<li>Vector A với ‘n’ dòng sẽ là một Vector có n chiều.</li>
+<li>$latex v_{i}$ là phần tử ở dòng i của vector.</li>
+</ul>
+<blockquote>
+<p>Bình thường, vector và matrix sẽ dùng index bắt đầu từ 1. Trong đa số các ngôn ngữ lập trình, mảng thường bắt đầu từ phần tử 0.</p>
+</blockquote>
+<ul>
+<li>Matrix thường được ký hiệu bằng chữ cái in hoa, vector thường được ký hiệu bằng chữ cái in thường.</li>
+<li><code>Scalar</code> nghĩa là một vật thể là một giá trị, không phải vector hay matrix.</li>
+<li>$latex \mathbb{R}$ được ký hiệu cho tập các số thực.</li>
+<li>$latex \mathbb{R}^n$ được ký hiệu cho tập các vector số thực n chiều.</li>
+</ul>
+<h1 id="2-Phan-mem"><a href="#2-Phan-mem" class="headerlink" title="2. Phần mềm"></a>2. Phần mềm</h1><p>Để thử nghiệm nhanh chóng các giả thuyết - thuật toán liên quan tới toán học trong Machine Learning, ta có thể dùng một phần mềm mang tên <a target="_blank" rel="noopener" href="https://www.gnu.org/software/octave/download.html">Octave</a></p>
+<p>Bạn có thể chạy đoạn code dưới đây trong Octave hoặc Matlab</p>
+<p>[code lang=matlab] % The ; denotes we are going back to a new row. A = [1, 2, 3; 4, 5, 6; 7, 8, 9; 10, 11, 12]</p>
+<p>% Initialize a vector v = [1;2;3]</p>
+<p>% Get the dimension of the matrix A where m = rows and n = columns [m,n] = size(A)</p>
+<p>% You could also store it this way dim_A = size(A)</p>
+<p>% Get the dimension of the vector v dim_v = size(v)</p>
+<p>% Now let’s index into the 2nd row 3rd column of matrix A A_23 = A(2,3) [/code]</p>
+<h1 id="3-Cac-phep-tinh"><a href="#3-Cac-phep-tinh" class="headerlink" title="3. Các phép tính"></a>3. Các phép tính</h1><h2 id="3-1-Phep-cong-va-phep-nhan-matrix-so-thuc"><a href="#3-1-Phep-cong-va-phep-nhan-matrix-so-thuc" class="headerlink" title="3.1. Phép cộng và phép nhân matrix số thực"></a>3.1. Phép cộng và phép nhân matrix số thực</h2><p>Đối với phép cộng và nhân, chỉ cần đơn giản cộng và nhân với mỗi phần tử của matrix.</p>
+<p>$latex \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} +\begin{bmatrix} w &amp; x \\ y &amp; z \\ \end{bmatrix} =\begin{bmatrix} a+w &amp; b+x \\ c+y &amp; d+z \\ \end{bmatrix}$</p>
+<p>Tương tự đối với phép nhân và chia:</p>
+<p>$latex \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} * x =\begin{bmatrix} a*x &amp; b*x \\ c*x &amp; d*x \\ \end{bmatrix}$</p>
+<p>$latex \begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} / x =\begin{bmatrix} a /x &amp; b/x \\ c /x &amp; d /x \\ \end{bmatrix}$</p>
+<h2 id="3-2-Nhan-matrix-voi-vector"><a href="#3-2-Nhan-matrix-voi-vector" class="headerlink" title="3.2. Nhân matrix với vector"></a>3.2. Nhân matrix với vector</h2><p>Để nhân một matrix với một vector, nhân mỗi phần tử rồi cộng kết quả:</p>
+<p>$latex \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{bmatrix} *\begin{bmatrix} x \\ y \\ \end{bmatrix} =\begin{bmatrix} a*x + b*y \\ c*x + d*y \\ e*x + f*y\end{bmatrix}$</p>
+<blockquote>
+<p>Một matrix <code>m x n</code> nhân với một vector <code>n x 1</code> sẽ ra kết quả là một vector <code>m x 1</code>.</p>
+</blockquote>
+<p>Kiến thức về matrix này có thể áp dụng vào hàm hypothesis của linear regression:</p>
+<p>Ta có bộ input các giá trị của x như sau:</p>
+<p>[code lang=text] x1 = 21 x2 = 30 x3 = 25 x4 = 22 [/code]</p>
+<p>hàm hypothesis:</p>
+<p>$latex h_{0} = -40 + 0.25x$</p>
+<p>Để tính nhanh các giá trị dự đoán của y, ta có thể tạo ra matrix x và vector hypothesis, và tạo thành phép tính như sau:</p>
+<p>$latex \begin{bmatrix} 1 &amp; 21 \\ 1 &amp; 30 \\ 1 &amp; 25 \\ 1 &amp; 22 \end{bmatrix} * \begin{bmatrix} -40 \\ 0.25 \end{bmatrix}$</p>
+<p>Phép tính này có thể dễ dàng tính toán bằng Octave</p>
+<p>[code lang=matlab] A = [1,21;1,30;1,25;1,22] B = [-40;0.25]</p>
+<p>mul_AB = A * B [/code]</p>
+<p>Kết quả:</p>
+<p>[code lang=matlab] A = 1 21 1 30 1 25 1 22</p>
+<p>B = -40.00000 0.25000</p>
+<p>mul_AB = -34.750 -32.500 -33.750 -34.500 [/code]</p>
+<h2 id="3-3-Nhan-2-matrix-voi-nhau"><a href="#3-3-Nhan-2-matrix-voi-nhau" class="headerlink" title="3.3. Nhân 2 matrix với nhau"></a>3.3. Nhân 2 matrix với nhau</h2><p>Tương tự như việc nhân 1 matrix với 1 vector, bạn chỉ cần tách phép nhân 2 matrix thành nhiều phép nhân matrix với vector.</p>
+<p>$latex \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{bmatrix} *\begin{bmatrix} w &amp; x \\ y &amp; z \\ \end{bmatrix} =\begin{bmatrix} a*w + b*y &amp; a*x + b*z \\ c*w + d*y &amp; c*x + d*z \\ e*w + f*y &amp; e*x + f*z\end{bmatrix}$</p>
+<blockquote>
+<p>Một matrix <code>m x n</code> khi nhân với một matrix <code>n x o</code> sẽ cho ra kết quả là một matrix <code>m x o</code>.</p>
+</blockquote>
+<h2 id="3-4-Cac-tinh-chat-cua-phep-nhan-matrix"><a href="#3-4-Cac-tinh-chat-cua-phep-nhan-matrix" class="headerlink" title="3.4. Các tính chất của phép nhân matrix"></a>3.4. Các tính chất của phép nhân matrix</h2><p>Phép nhân 2 số thực có một số tính chất không thể áp dụng với phép nhân 2 matrix.</p>
+<p>Gọi $latex A$ và $latex B$ là 2 matrix, ta có:</p>
+<ul>
+<li>$latex A \times B \neq B \times A$</li>
+<li>$latex A \times B \times C = A \times (B \times C) = (A \times B) \times C$</li>
+</ul>
+<h2 id="3-5-Identity-Matrix"><a href="#3-5-Identity-Matrix" class="headerlink" title="3.5. Identity Matrix"></a>3.5. Identity Matrix</h2><p>Một matrix bất kỳ khi nhân với một Identity matrix phù hợp sẽ có kết quả là chính nó.</p>
+<p>Ký hiệu: $latex I$ hoặc $latex I_{n \times n}$</p>
+<p>Ví dụ:</p>
+<p>$latex I_{1 \times 1} = \begin{bmatrix} 1 \end{bmatrix}$</p>
+<p>$latex I_{2 \times 2} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}$</p>
+<p>$latex I_{3 \times 3} = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$</p>
+<blockquote>
+<p>Lưu ý: $latex A \times I = I \times A$</p>
+</blockquote>
+<h1 id="4-Inverse-nghich-dao-va-Transpose-chuyen-vi"><a href="#4-Inverse-nghich-dao-va-Transpose-chuyen-vi" class="headerlink" title="4. Inverse (nghịch đảo) và Transpose (chuyển vị)"></a>4. Inverse (nghịch đảo) và Transpose (chuyển vị)</h1><h2 id="4-1-Inverse-nghich-dao"><a href="#4-1-Inverse-nghich-dao" class="headerlink" title="4.1. Inverse (nghịch đảo)"></a>4.1. Inverse (nghịch đảo)</h2><blockquote>
+<p><strong>Một ví dụ với số thực</strong></p>
+<p>3 là một số thực. Ta có: $latex 3 \times (3^{-1}) = 1$</p>
+<p>Tổng quát: $latex a \times (a^{-1}) = 1$</p>
+</blockquote>
+<p>Ta có matrix A:</p>
+<p>$latex A \times A^{-1} = A^{-1} \times A = I$</p>
+<blockquote>
+<p>Matrix gồm toàn các phần tử 0 không có nghịch đảo</p>
+</blockquote>
+<h2 id="4-2-Transpose-chuyen-vi"><a href="#4-2-Transpose-chuyen-vi" class="headerlink" title="4.2. Transpose (chuyển vị)"></a>4.2. Transpose (chuyển vị)</h2><p>Gọi B là matrix chuyển vị của A, ta có:</p>
+<p>$latex A = \begin{bmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{bmatrix}$</p>
+<p>$latex A^T = \begin{bmatrix} a &amp; c &amp; e \\ b &amp; d &amp; f \end{bmatrix}$</p>
+<p>Hay nói cách khác:</p>
+<p>$latex A_{ij} = A^T_{ji}$</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/10/01/machine-learning-matrices-and-vectors/">https://huntertran.github.io/blog/2018/10/01/machine-learning-matrices-and-vectors/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/matrice/">matrice</a><a href="/blog/tags/matrix/">matrix</a><a href="/blog/tags/vector/">vector</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Cac-ky-hieu"><span class="toc-number">1.</span> <span class="toc-text">1. Các ký hiệu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Matrix"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Vector"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Vector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Ky-hieu"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Ký hiệu</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Phan-mem"><span class="toc-number">2.</span> <span class="toc-text">2. Phần mềm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Cac-phep-tinh"><span class="toc-number">3.</span> <span class="toc-text">3. Các phép tính</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Phep-cong-va-phep-nhan-matrix-so-thuc"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Phép cộng và phép nhân matrix số thực</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Nhan-matrix-voi-vector"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Nhân matrix với vector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Nhan-2-matrix-voi-nhau"><span class="toc-number">3.3.</span> <span class="toc-text">3.3. Nhân 2 matrix với nhau</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Cac-tinh-chat-cua-phep-nhan-matrix"><span class="toc-number">3.4.</span> <span class="toc-text">3.4. Các tính chất của phép nhân matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Identity-Matrix"><span class="toc-number">3.5.</span> <span class="toc-text">3.5. Identity Matrix</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Inverse-nghich-dao-va-Transpose-chuyen-vi"><span class="toc-number">4.</span> <span class="toc-text">4. Inverse (nghịch đảo) và Transpose (chuyển vị)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Inverse-nghich-dao"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. Inverse (nghịch đảo)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Transpose-chuyen-vi"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. Transpose (chuyển vị)</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/10/03/machine-learning-2-1-multiple-features/">&lt; Machine Learning - 2.1 - Multiple Features</a><a class="next" href="/blog/2018/09/27/machine-learning-parameter-learning/">Machine Learning - 1.3 - Parameter Learning &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

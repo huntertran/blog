@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">2014-03-31</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C#</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p><img src="http://farm4.staticflickr.com/3780/13527961224_118ccd2b50_o.png"></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML</a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML</a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how to customize it</a></p>
+<p>Vậy là bạn đã biết cách bố cục giao diện với XAML, cấu trúc một ứng dụng. Bây giờ, ta sẽ đi tiếp vào phần các bước cơ bản để tạo một ứng dụng mới</p>
+<p>Khoan đã, trong 2 part kia, bạn đã tạo kha khá “New Project” rồi phải ko. Bây giờ, bạn sẽ biết tới nó một cách bài bản</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-h%C3%ACnh-th%C3%A0nh-%C3%BD-t%C6%B0%E1%BB%9Fng"><strong>1 Hình thành ý tưởng</strong></a></p>
+<ul>
+<li><a href="#11-tinh-g%E1%BB%8Dt-%C3%BD-t%C6%B0%E1%BB%9Fng-c%E1%BB%A7a-b%E1%BA%A1n"><strong>1.1 Tinh gọt ý tưởng của bạn</strong></a></li>
+<li><a href="#12-stick-to-the-plan"><strong>1.2 Stick to the plan</strong></a></li>
+</ul>
+</li>
+<li><p><a href="#2-t%E1%BA%A1o-project"><strong>2 Tạo project</strong></a></p>
+<ul>
+<li><a href="#21-c%C3%A0i-%C4%91%E1%BA%B7t-c%C3%A1c-g%C3%B3i-nuget-c%E1%BA%A7n-thi%E1%BA%BFt"><strong>2.1 Cài đặt các gói Nuget cần thiết</strong></a></li>
+<li><a href="#22-t%E1%BA%A1o-c%C3%A1c-folder-ch%C3%ADnh"><strong>2.2 Tạo các folder chính</strong></a></li>
+<li><a href="#23-c%E1%BA%A7n-m%E1%BB%99t-file-cho-viewmodel-hay-staticdata"><strong>2.3 Cần một file cho ViewModel, hay StaticData</strong></a></li>
+</ul>
+</li>
+<li><p><a href="#3-c%C3%A1c-page-c%C6%A1-b%E1%BA%A3n-ph%E1%BA%A3i-c%C3%B3"><strong>3 Các Page cơ bản phải có</strong></a></p>
+<ul>
+<li><a href="#31-about"><strong>3.1 About</strong></a></li>
+<li><a href="#32-setting"><strong>3.2 Setting</strong></a></li>
+</ul>
+</li>
+<li><p><a href="#4-chu%E1%BA%A9n-b%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u"><strong>4 Chuẩn bị dữ liệu</strong></a></p>
+<ul>
+<li><a href="#41-t%E1%BA%A1o-model"><strong>4.1 Tạo Model</strong></a></li>
+<li><a href="#42-load-data-%E1%BB%9F-%C4%91%C3%A2u-trong-code-behind"><strong>4.2 Load Data ở đâu trong code behind?</strong></a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Hinh-thanh-y-tuong"><a href="#1-Hinh-thanh-y-tuong" class="headerlink" title="1 Hình thành ý tưởng"></a><strong>1 Hình thành ý tưởng</strong></h1><p>Ý tưởng sẽ định hình cho ứng dụng của bạn. Không bao giờ bắt tay vào viết ứng dụng mới khi bạn chưa hề biết ứng dụng của bạn sẽ làm gì</p>
+<p>Bí ý tưởng, hãy lên google play store, Apple App Store để học hỏi từ những ứng dụng hay ho trên đó, nhưng đừng sao chép chúng, hãy tận dụng ý tưởng của họ, cải tiến nó, làm nó tốt hơn, bằng cách dưới đây</p>
+<h2 id="1-1-Tinh-got-y-tuong-cua-ban"><a href="#1-1-Tinh-got-y-tuong-cua-ban" class="headerlink" title="1.1 Tinh gọt ý tưởng của bạn"></a><strong>1.1 Tinh gọt ý tưởng của bạn</strong></h2><p>Khi đã có ý tưởng rồi, việc tiếp theo bạn làm là sẽ đánh giá ý tưởng đó.</p>
+<p>Nghe có vẻ khá buồn cười, nhưng tôi khuyên bạn viết ra giấy câu sau đây:</p>
+<blockquote>
+<p><em><strong>“[Tên ứng dụng] is the best app of its kind in [chức năng chính], [điểm nổi bật]“</strong></em></p>
+</blockquote>
+<p>Ví dụ nhé: <em><strong>“Karaoke Online Free is the best app of its kind in singing karaoke on windows phone, it helps people singing at most 2 taps”</strong></em></p>
+<p>Tên ứng dụng: <strong>Karaoke Online Free</strong> (search trên store, bạn sẽ thấy ứng dụng này có hơn 4000 review, trung bình 4.3 sao)</p>
+<p>Chức năng chính: <strong>hát karaoke trên điện thoại windows phone</strong></p>
+<p>Điểm nổi bật: <strong>sử dụng vô cùng đơn giản, chỉ cần 2 chạm là đã có thể hát</strong></p>
+<h2 id="1-2-Stick-to-the-plan"><a href="#1-2-Stick-to-the-plan" class="headerlink" title="1.2 Stick to the plan"></a><strong>1.2 Stick to the plan</strong></h2><p>Bạn đã có một câu “review” đầy quyền lực mới tạo ra bên trên rồi, hãy bám chặt lấy nó. Giả sử khi làm xong, bạn cần tới 3 chạm, hoặc 4 chạm mới có thể hát được, thì ứng dụng của bạn vẫn chưa hoàn chỉnh.</p>
+<p>Điều tệ hại nhất là “tính năng chính” mà ứng dụng bạn cung cấp lại không hoàn hảo. Kế hoạch là hát karaoke trên điện thoại, sau cùng bạn chỉ làm được việc tra cứu bài hát hoặc lời nhạc, thì đây là một ý tưởng fail hoàn toàn, vì ứng dụng bạn viết ra không dành cho mục đích đó.</p>
+<h1 id="2-Tao-project"><a href="#2-Tao-project" class="headerlink" title="2 Tạo project"></a><strong>2 Tạo project</strong></h1><p>Tạo một Project mới, quá đơn giản rồi phải không?</p>
+<h2 id="2-1-Cai-dat-cac-goi-Nuget-can-thiet"><a href="#2-1-Cai-dat-cac-goi-Nuget-can-thiet" class="headerlink" title="2.1 Cài đặt các gói Nuget cần thiết"></a><strong>2.1 Cài đặt các gói Nuget cần thiết</strong></h2><p>Ứng dụng của bạn sẽ cần 1 số thư viện ngoài, và các thư viện này có thể cài đặt qua Nuget: <a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2013/11/11/visual-studio-nuget-the-magician/">[Visual Studio] NUGET the Magician</a></p>
+<p>Giới thiệu một số gói Nuget hay ho:</p>
+<ul>
+<li>HTMLAgilityPack: thao tác với chuỗi HTML</li>
+<li>JSON.NET: thao tác với dữ liệu json</li>
+<li>Windows Phone Toolkit: bộ toolkit các control và tiện ích cộng thêm cho ứng dụng</li>
+</ul>
+<h2 id="2-2-Tao-cac-folder-chinh"><a href="#2-2-Tao-cac-folder-chinh" class="headerlink" title="2.2 Tạo các folder chính"></a><strong>2.2 Tạo các folder chính</strong></h2><p>Đặt tất các các page bạn sẽ tạo trong một folder tên là PageGroups. Điều này giúp bản quản lý code dễ dàng hơn, dễ dàng chỉnh sửa hơn, và bạn sẽ luôn biết một đoạn code nằm ở đâu. Nếu ứng dụng phức tạp hơn, mỗi một mục nội dung, hãy tạo cho nó một folder trong PageGroups, ví dụ như “LoginGroup”, “SettingGroup”</p>
+<p>Đặt tất cả các đoạn code dùng chung trong một thư mục tên là Utilities. Đoạn code dùng chung có thể là một method chuyển đổi đơn vị, một method lấy dữ liệu từ API, chúng có thể gọi từ bất kỳ page nào trong ứng dụng (tất nhiên là những method này “Static”)</p>
+<p>Tạo một folder cho Data hoặc Database. Bạn sẽ không muốn để Database ngay bên ngoài Project đâu</p>
+<p>Tạo một Folder cho các Data Model, một folder cho CustomControl</p>
+<blockquote>
+<p>Chốt: Tạo folder cho tất cả những thứ bạn thấy có thể gom nhóm lại với nhau. Nên nhớ, trong folder có thể tạo thêm folder khác. Hãy quản lý chúng thật chặt chẽ</p>
+</blockquote>
+<h2 id="2-3-Can-mot-file-cho-ViewModel-hay-StaticData"><a href="#2-3-Can-mot-file-cho-ViewModel-hay-StaticData" class="headerlink" title="2.3 Cần một file cho ViewModel, hay StaticData"></a><strong>2.3 Cần một file cho ViewModel, hay StaticData</strong></h2><p>Nếu bạn đã biết về MVC, hay MVVM, thì bạn sẽ biết rằng trong các ví dụ, họ thường tạo các class ViewModel ngay trong App.xaml.cs</p>
+<p>Vậy thì tại sao ta không tạo hẳn một file chỉ để chứa những class này?</p>
+<p>Tạo một file mới tên là “ViewModelInstances” để chứa các ViewModel, và khai báo các ViewModel như cũ</p>
+<p>Bạn cũng sẽ cần một file gọi là StaticData, để lưu những dữ liệu trung gian, tồn tại suốt thời gian chạy app</p>
+<h1 id="3-Cac-Page-co-ban-phai-co"><a href="#3-Cac-Page-co-ban-phai-co" class="headerlink" title="3 Các Page cơ bản phải có"></a><strong>3 Các Page cơ bản phải có</strong></h1><h2 id="3-1-About"><a href="#3-1-About" class="headerlink" title="3.1 About"></a><strong>3.1 About</strong></h2><p>About nói về bạn và ứng dụng của bạn. About page chỉ mất khoản 5 phút để làm, nhưng bạn sẽ có một ứng dụng ấn tượng</p>
+<p>Thậm chí, about còn có thể đóng các vai trò sau:</p>
+<ul>
+<li>Nhắc người dùng Rate và Review ứng dụng của bạn</li>
+<li>Cho phép người dùng gửi thư góp ý, hoặc UserVoice</li>
+<li>Thể hiện các change log</li>
+<li>Quảng cáo cho các ứng dụng khác của bạn</li>
+</ul>
+<h2 id="3-2-Setting"><a href="#3-2-Setting" class="headerlink" title="3.2 Setting"></a><strong>3.2 Setting</strong></h2><p>Setting là page mà người dùng có thể tinh chỉnh một số thiết lập trong ứng dụng của bạn. Page này giúp người dùng có cảm giác như “Điều khiển” được ứng dụng theo cách họ muốn</p>
+<p>Nếu ứng dụng của bạn ko có gì để setting cả, thì page này cũng không cần thiết. Nhưng hãy cân nhắc kỹ, các ứng dụng viết vội vàng thường kém chất lượng và không có các tùy chọn</p>
+<h1 id="4-Chuan-bi-du-lieu"><a href="#4-Chuan-bi-du-lieu" class="headerlink" title="4 Chuẩn bị dữ liệu"></a><strong>4 Chuẩn bị dữ liệu</strong></h1><h2 id="4-1-Tao-Model"><a href="#4-1-Tao-Model" class="headerlink" title="4.1 Tạo Model"></a><strong>4.1 Tạo Model</strong></h2><p>Model là cấu trúc dữ liệu của bạn. Thường thì công việc này, bạn phải tạo bằng tay.</p>
+<p>Tuy nhiên, nếu bạn nhận dữ liệu dạng Json, thì có một các vui hơn để tự động hóa việc này: <a target="_blank" rel="noopener" href="https://jsonutils.com/">JsonUtils</a></p>
+<p><img src="https://farm5.staticflickr.com/4590/25062147588_bdc3372aa0_o.png"></p>
+<blockquote>
+<ol>
+<li>Chọn ngôn ngữ là C#</li>
+<li>Sử dụng Pascal Case cho tên các thuộc tính</li>
+<li>Dùng Property là JsonProperty</li>
+<li>Paste đoạn data json của bạn vào đây</li>
+<li>Nhấn Submit</li>
+</ol>
+</blockquote>
+<p>Còn nữa, nếu bạn sử dụng cơ chế Binding, bạn sẽ muốn khai báo kế thừa từ Interface INotifyPropertyChanged</p>
+<p>Và bộ công cụ Resharper sẽ giúp ích cho bạn</p>
+<p>Đọc thêm về Resharper ở đây: <a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Windows Phone – Silverlight] Layout with XAML – Basic for Absolute Beginner – Part 2</a>, phần 2.1</p>
+<h2 id="4-2-Load-Data-o-dau-trong-code-behind"><a href="#4-2-Load-Data-o-dau-trong-code-behind" class="headerlink" title="4.2 Load Data ở đâu trong code behind?"></a><strong>4.2 Load Data ở đâu trong code behind?</strong></h2><p>Load data là việc bắt buộc phải làm. Nhưng load data ở đâu? Nếu đặt nhầm chỗ, ứng dụng của bạn sẽ chậm phản hồi tới người dùng, và sẽ bị bad review</p>
+<p>Và có hẳn một bài blog viết về nó: <a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2013/11/02/windows-phone-where-to-put-load-data-method/">[Windows Phone] Where to put load data method?</a></p>
+<p>Thế là xong rồi, hãy dùng kiến thức bạn có trong bài Layout with XAML để bắt đầu thiết kế và tạo nên ứng dụng Windows Phone thực sự đầu tiên của bạn</p>
+<p>Chúc vui ;)</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">https://huntertran.github.io/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/windows-phone/">windows phone</a><a href="/blog/tags/windows-store/">windows store</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Hinh-thanh-y-tuong"><span class="toc-number">1.</span> <span class="toc-text">1 Hình thành ý tưởng</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Tinh-got-y-tuong-cua-ban"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Tinh gọt ý tưởng của bạn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Stick-to-the-plan"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Stick to the plan</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Tao-project"><span class="toc-number">2.</span> <span class="toc-text">2 Tạo project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Cai-dat-cac-goi-Nuget-can-thiet"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Cài đặt các gói Nuget cần thiết</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Tao-cac-folder-chinh"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Tạo các folder chính</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Can-mot-file-cho-ViewModel-hay-StaticData"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Cần một file cho ViewModel, hay StaticData</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Cac-Page-co-ban-phai-co"><span class="toc-number">3.</span> <span class="toc-text">3 Các Page cơ bản phải có</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-About"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 About</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Setting"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Setting</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Chuan-bi-du-lieu"><span class="toc-number">4.</span> <span class="toc-text">4 Chuẩn bị dữ liệu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Tao-Model"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Tạo Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Load-Data-o-dau-trong-code-behind"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Load Data ở đâu trong code behind?</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">&lt; [Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a><a class="next" href="/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

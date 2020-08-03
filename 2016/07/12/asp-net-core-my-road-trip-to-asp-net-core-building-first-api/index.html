@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/">2016-07-12</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe</p>
+<a id="more"></a>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>Nếu bạn chưa biết API là gì</p>
+<p>API là viết tắt của cụm từ Application Programming Interface, là một dạng giao diện cho phép bạn tương tác với một dữ liệu nào đó.</p>
+<p>Ví dụ như Uber chả hạn, bật app Uber lên, bạn sẽ thấy có vài xe Uber đang đậu quanh bạn. Làm sao Uber biết chuyện này? Bằng cách gửi tọa độ GPS của bạn lên server, và server sẽ trả về vị trí các xe đang rảnh xung quanh bạn. App Uber sẽ gắn nó lên trên bản đồ.</p>
+<p>Đây sẽ là các API mà chúng ta sẽ build</p>
+<p><strong>API</strong></p>
+<p><strong>Description</strong></p>
+<p><strong>Request body</strong></p>
+<p><strong>Response body</strong></p>
+<p><strong>GET /api/todo</strong></p>
+<p>Get all to-do items</p>
+<p>None</p>
+<p>Array of to-do items</p>
+<p><strong>GET /api/todo/{id}</strong></p>
+<p>Get an item by ID</p>
+<p>None</p>
+<p>To-do item</p>
+<p><strong>POST /api/todo</strong></p>
+<p>Add a new item</p>
+<p>To-do item</p>
+<p>To-do item</p>
+<p><strong>PUT /api/todo/{id}</strong></p>
+<p>Update an existing item</p>
+<p>To-do item</p>
+<p>None</p>
+<p><strong>DELETE /api/todo/{id}</strong></p>
+<p>Delete an item.</p>
+<p>None</p>
+<p>None</p>
+<p>Sơ đồ</p>
+<p><img src="https://docs.asp.net/en/latest/_images/architecture.png"></p>
+<p>Chú thích</p>
+<p>Client: app / web sẽ sử dụng API. Tạm thời chúng ta chưa quan tâm tới nó</p>
+<p>Model: là kiểu dữ liệu của bạn. Trong ví dụ này, Model là To-do item</p>
+<p>Controller: là thứ sẽ nhận HTTP Request, và tạo ra HTTP Responses. Ví dụ này sẽ chỉ có 1 controller duy nhất</p>
+<p>Ví dụ này cũng không sử dụng Database, mà sẽ lưu trực tiếp trên bộ nhớ. Một API hoàn chỉnh sẽ có Database đi kèm nó</p>
+<h1 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h1><p>Đễ dễ dàng debug, test API do mình tạo ra, bạn có thể sử dụng một số phần mềm</p>
+<h2 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h2><p>Tải và cài đặt tại đây: <a target="_blank" rel="noopener" href="https://www.telerik.com/download/fiddler">https://www.telerik.com/download/fiddler</a></p>
+<h2 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h2><p>Google Chrome thì khá tốt trong chuyện test tiếc các kiểu</p>
+<h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="Khoi-tao-Project"><a href="#Khoi-tao-Project" class="headerlink" title="Khởi tạo Project"></a>Khởi tạo Project</h2><p>Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi &gt; OK</p>
+<p><img src="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png"></p>
+<p>Chọn template là Web API &gt; OK</p>
+<p><img src="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png"></p>
+<h2 id="Them-model"><a href="#Them-model" class="headerlink" title="Thêm model"></a>Thêm model</h2><p>Model là một object đại diện cho dữ liệu của bạn trong ứng dụng. Trong ví dụ này thì model duy nhất chỉ là một to-do item thôi.</p>
+<p>Tips: bạn nên đặt toàn bộ model trong một folder riêng, tương tự với view và controller (đã có sẵn folder cho controller)</p>
+<p>Chuột phải vào Project &gt; Add &gt; New Folder</p>
+<p><img src="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png"></p>
+<p>Tiếp tục chuột phải vào Folder Models &gt; Add &gt; Class, đặt tên class là TodoItem &gt; Ok</p>
+<p><img src="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png"></p>
+<p>Thêm 3 Property vô</p>
+<p>[code language=”csharp”] public string Key { get; set; } public string Name { get; set; } public bool IsComplete { get; set; } [/code]</p>
+<h2 id="Them-Repository"><a href="#Them-Repository" class="headerlink" title="Thêm Repository"></a>Thêm Repository</h2><p>Repository, tiếng Việt là một chỗ lưu trữ cái gì đó, là một kỹ thuật mới tinh beng của ASP.NET core. Theo như tài liệu của họ, thì Repository dùng để đóng gói data, và chứa logic cho việc truy cập dữ liệu và chuyển nó qua cho Entity Model.</p>
+<p>Mặc dù app của chúng ta ko có database, nhưng mà cũng hay nếu như bạn hiểu cái đám code này hoạt động dư lào</p>
+<p>Để bắt đầu, chúng ta sẽ tạo một repository interface có tên ITodoRepository, dùng cách thêm class như trên, nhưng chọn template là Interface nhóe</p>
+<p>[code language=”csharp”] namespace todoapi.Models { public interface ITodoRepository { void Add(TodoItem item); IEnumerable<TodoItem> GetAll(); TodoItem Find(string key); TodoItem Remove(string key); void Update(TodoItem item); } } [/code]</p>
+<p>Cái interface này định nghĩa các phương thức CRUD (Create - Read – Update – Delete)</p>
+<p>Tiếp theo, ta thêm class TodoRepository, triển khai các phương thức trong Interface mới tạo bên trên</p>
+<p>[code language=”csharp”] public class TodoRepository : ITodoRepository { private static ConcurrentDictionary&lt;string, TodoItem&gt; _todos = new ConcurrentDictionary&lt;string, TodoItem&gt;(); public TodoRepository() { Add(new TodoItem { Name = “Item1” }); }</p>
+<p>public void Add(TodoItem item) { item.Key = Guid.NewGuid().ToString(); _todos[item.Key] = item; }</p>
+<p>public IEnumerable<TodoItem> GetAll() { return _todos.Values; }</p>
+<p>public TodoItem Find(string key) { TodoItem item; _todos.TryGetValue(key, out item); return item; }</p>
+<p>public TodoItem Remove(string key) { TodoItem item; _todos.TryGetValue(key, out item); _todos.TryRemove(key, out item); return item; }</p>
+<p>public void Update(TodoItem item) { _todos[item.Key] = item; } } [/code]</p>
+<p>Xong xuôi thì build nó phát để coi có lỗi gì hok</p>
+<p><img src="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png"></p>
+<p>Build xong nó lên dư lày là okie</p>
+<p><img src="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png"></p>
+<h2 id="Register-cai-Repository"><a href="#Register-cai-Repository" class="headerlink" title="Register cái Repository"></a>Register cái Repository</h2><p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a target="_blank" rel="noopener" href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
+<p>Cách này giúp bạn dễ dàng viết Unit Test hơn. Test sẽ thu hẹp lại xuống logic của controller, chứ không test cái truy xuất dữ liệu.</p>
+<p>Để chọt (inject) nó vô controller, ta cần đăng ký nó. Mở file Startup.cs, thêm dòng sau vô đầu</p>
+<p>[code language=”csharp”] using todoapi.Models; [/code]</p>
+<p>Trong phương thức configureServices, thêm đoạn code sau vô cuối</p>
+<p>[code language=”csharp”] //Add our repository type</p>
+<p>services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;(); [/code]</p>
+<h2 id="Them-controller"><a href="#Them-controller" class="headerlink" title="Thêm controller"></a>Thêm controller</h2><p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
+<p>Chọn Web API Controller Class, đặt tên TodoController</p>
+<p><img src="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png"></p>
+<p>Xóa hết code trong class đi, thay bằng cái lày</p>
+<p>[code language=”csharp”] public class TodoController : Controller { public ITodoRepository TodoItems { get; set; }</p>
+<p>public TodoController(ITodoRepository todoItems) { TodoItems = todoItems; } } [/code]</p>
+<p>Như vậy là bạn đã khai báo một cái controller chả có gì bên trong cả. Trong các phần tiếp theo, chúng ta sẽ thêm các method để triển khai API nhóe.</p>
+<h2 id="Getting-to-do-items"><a href="#Getting-to-do-items" class="headerlink" title="Getting to-do items"></a>Getting to-do items</h2><p>Thêm method sau vào TodoController</p>
+<p>[code language=”csharp”] public IEnumerable<TodoItem> GetAll() { return TodoItems.GetAll(); }</p>
+<p>[HttpGet(“{id}”, Name = “GetToDo”)] public IActionResult GetById(string id) { var item = TodoItems.Find(id); if (item == null) { return NotFound(); } return new ObjectResult(item); } [/code]</p>
+<p>Phương thức này có 2 cái get</p>
+<ul>
+<li>GET /api/todo</li>
+<li>GET /api/todo/{id}</li>
+</ul>
+<p>Sau đây là một ví dụ cho HTTP Response khi gọi phương thức GetAll</p>
+<blockquote>
+<p>HTTP/1.1 200 OK Content-Type: application/json; charset=utf-8 Server: Microsoft-IIS/10.0 Date: Thu, 18 Jun 2015 20:51:10 GMT Content-Length: 82</p>
+<p>[{“Key”:”4f67d7c5-a2a9-4aae-b030-16003dd829ae”,”Name”:”Item1”,”IsComplete”:false}]</p>
+</blockquote>
+<p>Sau này chúng ta sẽ dùng Fiddler để test các phương thức này nhóe</p>
+<h1 id="Routing-va-URL-Paths"><a href="#Routing-va-URL-Paths" class="headerlink" title="Routing và URL Paths"></a>Routing và URL Paths</h1><p>Trong cái phương thức trên, bạn sẽ thấy có [HttpGet]. Cái này gọi là Attribute, và Attribute này dùng để chỉ định phương thức cho method bên dưới là Get. Đường dẫn Url thì được xây dựng như sau</p>
+<ul>
+<li>Lấy cái string trong Controller’s Route: [Route(“api/[controller]“)]</li>
+<li>Bỏ cái [controller] ra, thay bằng tên của cái controller (tất nhiên là trừ đi chữ “Controller” nhóe). Ví dụ TodoController thì sẽ thay cái chữ Todo vô thôi</li>
+<li>Nếu mà HttpGet có template string, thì thêm cái string đó vô path. Cái ví dụ trên thì ko có</li>
+</ul>
+<p>Trong cái phương thức GetId bên trên, “{id}” là một giá trị giữ chỗ. Khi request lên, client sẽ xài cái Id của TodoItem thế vô đó.</p>
+<h1 id="Return-values"><a href="#Return-values" class="headerlink" title="Return values"></a>Return values</h1><p>Phương thức GetAll trả về một kiểu dữ liệu là CLR Object. MVC tự động đổi nó thành JSON và viết JSON ra cái body của cái Reponse message. Reponse code sẽ là 200. Nếu có unhandled exception, reponse code sẽ là 5xx</p>
+<ul>
+<li>Nếu không có item nào có Id như răng, trả về reponse code 404. Cái này được định nghĩa bằng phương thức NotFound()</li>
+</ul>
+<h1 id="Trien-them-cac-phuong-thuc-CRUD-khac"><a href="#Trien-them-cac-phuong-thuc-CRUD-khac" class="headerlink" title="Triển thêm các phương thức CRUD khác"></a>Triển thêm các phương thức CRUD khác</h1><h2 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h2><p>[code language=”csharp”] [HttpPost] public IActionResult Create([FromBody] TodoItem item) { if (item == null) { return BadRequest(); } TodoItems.Add(item); return CreatedAtRoute(“GetTodo”, new {id = item.Key}, item); } [/code]</p>
+<p>Phương thức Post</p>
+<p>[FromBody] cho phép MVC biết là cái TodoItem đó lấy từ body của request message</p>
+<p>Return CreatedAtRoute: sẽ trả về địa chỉ của cái item đấy luôn</p>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>[code language=”csharp”] [HttpPut(“{id}”)] public IActionResult Update(string id, [FromBody] TodoItem item) { if (item == null || item.Key != id) { return BadRequest(); }</p>
+<p>var todo = TodoItems.Find(id); if (todo == null) { return NotFound(); } TodoItems.Update(item); return new NoContentResult(); } [/code]</p>
+<p>Update cũng giống giống Create, nhưng mà xài HttpPut. Response chuẩn là 204 (No Content)</p>
+<p>Theo như tài liệu của HTTP, thì Put request đòi hỏi client phải gửi toàn bộ nội dung của item cần update, chứ không phải vài thông tin rời rạc. Để update chỉ 1 thông tin nào đó, dùng HttpPatch</p>
+<h2 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h2><p>[code language=”csharp”] [HttpDelete(“{id}”)] public void Delete(string id) { TodoItems.Remove(id); } [/code]</p>
+<p>Void trả về response là 204 (No Content). Tức là client sẽ nhận được 204 kể cả khi Item đã bị delete hay item ko tồn tại</p>
+<p>Vậy là xong rồi, chờ bài post tiếp theo nhóe bạn</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/">https://huntertran.github.io/blog/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Overview"><span class="toc-number">1.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tools"><span class="toc-number">2.</span> <span class="toc-text">Tools</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fiddler"><span class="toc-number">2.1.</span> <span class="toc-text">Fiddler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Google-Chrome"><span class="toc-number">2.2.</span> <span class="toc-text">Google Chrome</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Start"><span class="toc-number">3.</span> <span class="toc-text">Start</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Khoi-tao-Project"><span class="toc-number">3.1.</span> <span class="toc-text">Khởi tạo Project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Them-model"><span class="toc-number">3.2.</span> <span class="toc-text">Thêm model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Them-Repository"><span class="toc-number">3.3.</span> <span class="toc-text">Thêm Repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Register-cai-Repository"><span class="toc-number">3.4.</span> <span class="toc-text">Register cái Repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Them-controller"><span class="toc-number">3.5.</span> <span class="toc-text">Thêm controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Getting-to-do-items"><span class="toc-number">3.6.</span> <span class="toc-text">Getting to-do items</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Routing-va-URL-Paths"><span class="toc-number">4.</span> <span class="toc-text">Routing và URL Paths</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Return-values"><span class="toc-number">5.</span> <span class="toc-text">Return values</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Trien-them-cac-phuong-thuc-CRUD-khac"><span class="toc-number">6.</span> <span class="toc-text">Triển thêm các phương thức CRUD khác</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Create"><span class="toc-number">6.1.</span> <span class="toc-text">Create</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Update"><span class="toc-number">6.2.</span> <span class="toc-text">Update</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Delete"><span class="toc-number">6.3.</span> <span class="toc-text">Delete</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/">&lt; [ASP.NET Tips and Tricks] Using Prompt Attribute as Placeholder for MVC5</a><a class="next" href="/blog/2016/07/11/c-string-performance-tips-and-tricks/">C# string performance – Tips and Tricks &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

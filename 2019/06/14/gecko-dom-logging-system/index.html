@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Research] - Gecko Dom Logging system | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Research] - Gecko Dom Logging system</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2019/06/14/gecko-dom-logging-system/">2019-06-14</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C++</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>The purpose of this documentation is to record all the findings and my progress while exploring Firefox source code, in order to log how many time a DOM API is called when visit a single website, or multiple common website.</p>
+<p>This require a deep modification in Firefox’s implementation of DOM API.</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-setup-and-initialization">1. Setup and initialization</a></li>
+<li><a href="#2-source-code-structure">2. Source code structure</a><ul>
+<li><a href="#21-built-in-extensions">2.1. Built-in extensions</a></li>
+<li><a href="#22-javascript-engine-spidermonkey">2.2. JavaScript Engine (SpiderMonkey)</a></li>
+</ul>
+</li>
+<li><a href="#3-understanding-dom">3. Understanding DOM</a><ul>
+<li><a href="#31-dom-levels">3.1. DOM Levels</a><ul>
+<li><a href="#311-dom-level-1">3.1.1. DOM Level 1</a></li>
+<li><a href="#312-dom-level-2">3.1.2. DOM Level 2</a></li>
+<li><a href="#313-dom-level-3">3.1.3. DOM Level 3</a></li>
+</ul>
+</li>
+<li><a href="#32-shadow-dom-and-virtual-dom">3.2. Shadow DOM and Virtual DOM</a><ul>
+<li><a href="#321-shadow-dom">3.2.1. Shadow DOM</a></li>
+<li><a href="#322-virtual-dom">3.2.2. Virtual DOM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-modifying-firefoxs-dom-method-implementation">4. Modifying Firefox’s DOM method implementation</a><ul>
+<li><a href="#41-logging-framework">4.1. Logging Framework</a></li>
+<li><a href="#42-analyze">4.2. Analyze</a></li>
+</ul>
+</li>
+<li><a href="#5-development">5. Development</a><ul>
+<li><a href="#51-design-solution">5.1. Design solution</a></li>
+<li><a href="#52-firefox-integration">5.2. Firefox integration</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Setup-and-Initialization"><a href="#1-Setup-and-Initialization" class="headerlink" title="1. Setup and Initialization"></a>1. Setup and Initialization</h1><p>In short, to get the latest version of Firefox source code, one could follow the official instruction on <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Building Firefox for Windows</a></p>
+<blockquote>
+<p>One small modification in which will decrease the time needed to build the source code: You will not need the “Game development with C++” while installing/modifying Visual Studio 2019</p>
+</blockquote>
+<h1 id="2-Source-code-structure"><a href="#2-Source-code-structure" class="headerlink" title="2. Source code structure"></a>2. Source code structure</h1><p>Mozilla use Gecko to render web content.</p>
+<blockquote>
+<p>More than that, Gecko is also used to render the firefox user interface.</p>
+<p>On Windows, Gecko use Microsoft COM, on other platforms, Gecko use XPCOM to render user interface.</p>
+</blockquote>
+<p>The whole source code is mentioned as Gecko, and mirrored in <a target="_blank" rel="noopener" href="https://github.com/mozilla/gecko-dev">Mozilla’s Github Repository</a></p>
+<h2 id="2-1-Built-in-extensions"><a href="#2-1-Built-in-extensions" class="headerlink" title="2.1. Built-in extensions"></a>2.1. Built-in extensions</h2><p>Firefox contains 2 built-in extension: PDF.js and Shumway.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/mozilla/pdf.js">PDF.js</a>: To open and read PDF files inside firefox, without opening another software</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mozilla/shumway">Shumway</a>: provide a way to render swf (Shock Wave Flash) file, which is quite popular in older websites to display animations, game, effects. These files has been replaced with HTML5, and considered as a security vulnerable in modern websites.</li>
+</ul>
+<h2 id="2-2-JavaScript-Engine-SpiderMonkey"><a href="#2-2-JavaScript-Engine-SpiderMonkey" class="headerlink" title="2.2. JavaScript Engine (SpiderMonkey)"></a>2.2. JavaScript Engine (SpiderMonkey)</h2><p>Located in <code>js\src</code>, the Firefox’s JavaScript Engine is called SpiderMonkey, and is in active development at <a target="_blank" rel="noopener" href="https://hg.mozilla.org/mozilla-central/file/tip/js/src">mozilla-central/file/tip/js/src</a></p>
+<blockquote>
+<p>Beside the interpreter, SpiderMonkey contains a compiler , a garbage collector and a Just-in-time compiler.</p>
+</blockquote>
+<h1 id="3-Understanding-DOM"><a href="#3-Understanding-DOM" class="headerlink" title="3. Understanding DOM"></a>3. Understanding DOM</h1><p>DOM stands for Document Object Model. To understand what DOM is, first we need to understand the basic of a website</p>
+<p>Websites are a combination of HTML, CSS and Javascript. HTML is a structured documents, and can be mapped by using a tree structure, starting with <code>html</code> tag as root.</p>
+<blockquote>
+<p>The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document’s structure, style, or content. Nodes can also have event handlers attached to them; once an event is triggered, the event handlers get executed.</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model - Mozilla Developer Docs</a></p>
+</blockquote>
+<h2 id="3-1-DOM-Levels"><a href="#3-1-DOM-Levels" class="headerlink" title="3.1. DOM Levels"></a>3.1. DOM Levels</h2><p>Document Object Model API is implemented in level. The lower the level, the more basic and simple functions it defined. Currently there are 3 levels, which are mostly implemented by all modern browsers (Partly implemented for Level 3)</p>
+<h3 id="3-1-1-DOM-Level-1"><a href="#3-1-1-DOM-Level-1" class="headerlink" title="3.1.1. DOM Level 1"></a>3.1.1. DOM Level 1</h3><p>Provide interface to represent any structured document, as well as accessing and manipulating nodes.</p>
+<p>In level 1, DOM also define extended interfaces that counted as part of the specification, but not necessary for a HTML-only implementation of DOM specification.</p>
+<blockquote>
+<p>The <code>getElementsByTagName</code> method is defined in level DOM 1 specification.</p>
+</blockquote>
+<h3 id="3-1-2-DOM-Level-2"><a href="#3-1-2-DOM-Level-2" class="headerlink" title="3.1.2. DOM Level 2"></a>3.1.2. DOM Level 2</h3><p>Provide 6 separated specifications:</p>
+<ul>
+<li>Core: Extend the functionalities of Level 1.</li>
+<li>Views: Allows programs and scripts to dynamically access and update the content of a representation of a document.</li>
+<li>Events: Define basic of event system, including the concept of event flow, listening, bubbling, cancellation.</li>
+<li>Styles: Access and update stylesheet.</li>
+<li>Traversal and Range: Allow programs and scripts to dynamically walk-through and identify a range of contents in a document, as well as creation, insertion, modification and deletion of a range of contents.</li>
+<li>HTML: Extend the interfaces defined in Level 1, using the Core level 2 possibilities.</li>
+</ul>
+<p>Most of the famous JavaScripts functions are defined in level 2</p>
+<ul>
+<li><code>getElementById</code> in <strong>Core</strong></li>
+<li><code>addEventListener</code> and <code>handleEvent</code> in <strong>Events</strong></li>
+<li><code>getComputedStyle</code> in <strong>Styles</strong></li>
+<li><code>NodeIterator</code> and <code>TreeWalker</code> in <strong>Traversal and Range</strong></li>
+<li><code>contentDocument</code> property in <strong>HTML</strong></li>
+</ul>
+<h3 id="3-1-3-DOM-Level-3"><a href="#3-1-3-DOM-Level-3" class="headerlink" title="3.1.3. DOM Level 3"></a>3.1.3. DOM Level 3</h3><p>Unlike level 1 and 2, only a few methods and properties in DOM level 3 are supported. Level 3 provide advanced functionalities to manipulate DOM and XML. Firefox divide DOM Level 3 in 5 separated part, with different level of support</p>
+<ul>
+<li>Core: Only a few methods and properties are supported.</li>
+<li>Load and Save: dynamically load XML documents into DOM or serialize DOM to XML docs. None supported</li>
+<li>Validation: Update content and ensure validity. Firefox not support this interface</li>
+<li>Events: Keyboard events and how to handle them. Partly supported.</li>
+<li>XPath: Simple functionalities to access DOM tree using XPath.</li>
+</ul>
+<h2 id="3-2-Shadow-DOM-and-Virtual-DOM"><a href="#3-2-Shadow-DOM-and-Virtual-DOM" class="headerlink" title="3.2. Shadow DOM and Virtual DOM"></a>3.2. Shadow DOM and Virtual DOM</h2><h3 id="3-2-1-Shadow-DOM"><a href="#3-2-1-Shadow-DOM" class="headerlink" title="3.2.1. Shadow DOM"></a>3.2.1. Shadow DOM</h3><p>Shadow DOM is an complete dom tree hidden inside an dom node. All the markups, structures, styles or behaviors are separated from actual/normal dom. The reason for this concept is to develop low level web components that will have default user interface/behaviors across websites (e.g <code>&lt;video&gt;&lt;/video&gt;</code> tag with default control buttons provided by browsers)</p>
+<h3 id="3-2-2-Virtual-DOM"><a href="#3-2-2-Virtual-DOM" class="headerlink" title="3.2.2. Virtual DOM"></a>3.2.2. Virtual DOM</h3><p>In short, Virtual DOM is an abstraction of DOM. It represent for a small subset of DOM, and update the actual DOM accordingly. Virtual DOM is implemented not by browsers, but by high level javascript libraries (eg React, asm-dom, etc)</p>
+<p>Virtual DOM libraries compare changed nodes with actual node in DOM tree. If there are differences, it will update the actual DOM. By optimizing the comparison algorithm, it can perform extremely fast since it does not need to search the whole DOM tree for nodes and properties.</p>
+<h1 id="4-Modifying-Firefox’s-DOM-method-implementation"><a href="#4-Modifying-Firefox’s-DOM-method-implementation" class="headerlink" title="4. Modifying Firefox’s DOM method implementation"></a>4. Modifying Firefox’s DOM method implementation</h1><h2 id="4-1-Logging-Framework"><a href="#4-1-Logging-Framework" class="headerlink" title="4.1. Logging Framework"></a>4.1. Logging Framework</h2><p>Firefox provide a “simple” logging service, located at <code>dom\accessible\Logging.h</code> (header file). This is recommended way to log anything to Firefox’s browser console.</p>
+<p>To use it, you need to do the following:</p>
+<p>#include “mozilla/Logging.h”<br>static mozilla::LazyLogModule sFooLog(“foo”);</p>
+<p>LazyLogModule will be initialized safely, even if the current class is already initialize an instance of LazyLogModule.</p>
+<p>Later, using these method appropriately to log:</p>
+<p>from <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer/_guide/Gecko/_Logging">https://developer.mozilla.org/en-US/docs/Mozilla/Developer\_guide/Gecko\_Logging</a></p>
+<p>Name</p>
+<p>Description</p>
+<p>MOZ_LOG(module, level, message)</p>
+<p>Outputs the given message if the module has the given log level enabled.<br>+ module - The log module to use.<br>+ level - The log level of the message.<br>+ message - A printf-style message to output. Must be enclosed in parentheses.</p>
+<p>MOZ_LOG_TEST(module, level)</p>
+<p>Checks if the module has the given level enabled.<br>+ module - The log module to use.<br>+ level - The output level of the message.</p>
+<h2 id="4-2-Analyze"><a href="#4-2-Analyze" class="headerlink" title="4.2. Analyze"></a>4.2. Analyze</h2><p>The requirement for my project is simple: To know how many time a dom method is called (for a specific website, and average for a set of common website)</p>
+<p>In fact, I cannot use Firefox own logging framework, because of these problems:</p>
+<ol>
+<li>Gecko source code is full of old logs and developer notes.</li>
+<li>Each log must provide a log level, which is not applicable for my project.</li>
+<li>Cannot count the logged text without writing another piece of tool.</li>
+</ol>
+<p>Example of old logs and developer notes from <code>mozilla-central\dom\base\nsINode.cpp</code>, <a target="_blank" rel="noopener" href="https://dxr.mozilla.org/mozilla-central/rev/4a63f0a3a1f26e2a377ffbd477ba050e16577445/dom/base/nsINode.cpp#2585">line 2585 to line 2609</a></p>
+<p>Element* nsINode::GetElementById(const nsAString&amp; aId) {<br>  MOZ_ASSERT(!IsShadowRoot(), “Should use the faster version”);<br>  MOZ_ASSERT(IsElement() || IsDocumentFragment(),<br>             “Bogus this object for GetElementById call”);<br>  if (IsInUncomposedDoc()) {<br>    MOZ_ASSERT(IsElement(), “Huh? A fragment in a document?”);<br>    return FindMatchingElementWithId(aId, *AsElement(), *OwnerDoc());<br>  }</p>
+<p>  if (ShadowRoot* containingShadow = AsContent()-&gt;GetContainingShadow()) {<br>    MOZ_ASSERT(IsElement(), “Huh? A fragment in a ShadowRoot?”);<br>    return FindMatchingElementWithId(aId, *AsElement(), *containingShadow);<br>  }</p>
+<p>  for (nsIContent* kid = GetFirstChild(); kid; kid = kid-&gt;GetNextNode(this)) {<br>    if (!kid-&gt;IsElement()) {<br>      continue;<br>    }<br>    nsAtom* id = kid-&gt;AsElement()-&gt;GetID();<br>    if (id &amp;&amp; id-&gt;Equals(aId)) {<br>      return kid-&gt;AsElement();<br>    }<br>  }<br>  return nullptr;<br>}</p>
+<h1 id="5-Development"><a href="#5-Development" class="headerlink" title="5. Development"></a>5. Development</h1><h2 id="5-1-Design-solution"><a href="#5-1-Design-solution" class="headerlink" title="5.1. Design solution"></a>5.1. Design solution</h2><p>My solution is simple. Log into an array, then count for each time a function name is repeated.</p>
+<p>First, I created a class to hold each record</p>
+<p>class DomLogNode<br>{<br>public:<br>    DomLogNode();</p>
+<pre><code>void setNode(string name, int count);
+int increaseCount();
+bool compareName(string nameToCompare);
+int getCount();
+string getName();</code></pre>
+<p>private:<br>    string functionName;<br>    int count;<br>};</p>
+<p>Then, I created another class to hold the list of record. This class is static</p>
+<p>static class DomLog<br>{<br>public:<br>    void recordLog(string functionName);<br>    void pushNewName(string functionName, int initialCount = 1);<br>    void getDomLogs();<br>    void exportFile(string path);</p>
+<p>private:<br>    vector<DomLogNode> domLogs;<br>} domLog;</p>
+<p>Method <code>exportFile(string path)</code> write the list to a csv file, using simple c++ file library.</p>
+<p><strong>Get the caller method name</strong><br>In cpp, to get the current method name, we can use the static variable <code>__func__</code> as stated here: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/cpp/cpp/func">https://docs.microsoft.com/en-us/cpp/cpp/func</a></p>
+<blockquote>
+<p>You can get the whole source code at my Github <a target="_blank" rel="noopener" href="https://github.com/huntertran/gecko-dom-log.git">repository</a></p>
+</blockquote>
+<h2 id="5-2-Firefox-integration"><a href="#5-2-Firefox-integration" class="headerlink" title="5.2. Firefox integration"></a>5.2. Firefox integration</h2><p>Unfortunately, the Firefox source code system (using mercurial source control) is buggy lately. It close the connection way before the clone process finished.</p>
+<p>Firefox implement DOM API all over the source code. For example, the API <code>getElementById</code> is implemented in 3 different places:</p>
+<ul>
+<li><code>dom\base\AnonymousContent.h</code> with corresponding implementation</li>
+<li><code>dom\base\DocumentOrShadowRoot.h</code> with corresponding implementation</li>
+<li><code>dom\base\nsINode.h</code> with corresponding implementation</li>
+</ul>
+<p>The method inside <code>nsdINode</code> have a comment</p>
+<p>// Document and ShadowRoot override this with its own (faster) version.<br>// This should really only be called for elements and document fragments.</p>
+<p>This mean, to correctly record how many time the GetElementById is called, we have to modify the code of all 3 methods.</p>
+<p>domLog.recordLog(__func__);</p>
+<p>This quickly getting out of hand, since there are hundreds of DOM API we need to log, and I am still looking for another solution.</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2019/06/14/gecko-dom-logging-system/">https://huntertran.github.io/blog/2019/06/14/gecko-dom-logging-system/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/firefox/">firefox</a><a href="/blog/tags/DOM-API/">DOM API</a><a href="/blog/tags/Log/">Log</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Setup-and-Initialization"><span class="toc-number">1.</span> <span class="toc-text">1. Setup and Initialization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Source-code-structure"><span class="toc-number">2.</span> <span class="toc-text">2. Source code structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Built-in-extensions"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Built-in extensions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-JavaScript-Engine-SpiderMonkey"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. JavaScript Engine (SpiderMonkey)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Understanding-DOM"><span class="toc-number">3.</span> <span class="toc-text">3. Understanding DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-DOM-Levels"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. DOM Levels</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-DOM-Level-1"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1. DOM Level 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-DOM-Level-2"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2. DOM Level 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-DOM-Level-3"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.1.3. DOM Level 3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Shadow-DOM-and-Virtual-DOM"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Shadow DOM and Virtual DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Shadow-DOM"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1. Shadow DOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Virtual-DOM"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2. Virtual DOM</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Modifying-Firefox%E2%80%99s-DOM-method-implementation"><span class="toc-number">4.</span> <span class="toc-text">4. Modifying Firefox’s DOM method implementation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Logging-Framework"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. Logging Framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Analyze"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. Analyze</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Development"><span class="toc-number">5.</span> <span class="toc-text">5. Development</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Design-solution"><span class="toc-number">5.1.</span> <span class="toc-text">5.1. Design solution</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Firefox-integration"><span class="toc-number">5.2.</span> <span class="toc-text">5.2. Firefox integration</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2019/06/14/machine-learning-3-2-logistic-regression-model/">&lt; [Machine Learning] - 3.2 - Logistic Regression Model</a><a class="next" href="/blog/2019/05/15/machine-learning-title-block/">Machine Learning Title block &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

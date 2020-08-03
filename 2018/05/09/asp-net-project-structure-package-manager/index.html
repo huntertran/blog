@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[ASP.NET] - Project Structure &amp; Package Manager | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[ASP.NET] - Project Structure &amp; Package Manager</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/05/09/asp-net-project-structure-package-manager/">2018-05-09</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
+<p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
+<ul>
+<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
+<ul>
+<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
+<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
+<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
+<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
+</ul>
+</li>
+<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
+</li>
+</ul>
+</li>
+<li><p><a href="#2-package-manager">2. Package Manager</a></p>
+<ul>
+<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
+</li>
+<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
+<ul>
+<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
+<li><a href="#222-sources">2.2.2. Sources</a></li>
+<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Project-amp-Solution"><a href="#1-Project-amp-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
+<p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
+<p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
+<h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
+<h3 id="1-1-1-Dung-lai"><a href="#1-1-1-Dung-lai" class="headerlink" title="1.1.1. Dùng lại"></a>1.1.1. Dùng lại</h3><p>Khi một số code có chức năng riêng biệt nào đó được bạn tách ra thành 1 project riêng, thì nó sẽ rất dễ dàng để dùng lại nó vào những dự án khác.</p>
+<p>Giả sử bạn có 1 số helpers và class giúp việc kết nối tới database rất nhanh chóng và gọn lẹ. Khi nó ở 1 project riêng, bạn có thể dễ dàng up nó lên git, rồi các project khác cứ thế mà clone về xài thôi. Khi bạn update project trên git đó, toàn bộ các clone của nó sẽ đều được update theo.</p>
+<h3 id="1-1-2-Phan-phoi"><a href="#1-1-2-Phan-phoi" class="headerlink" title="1.1.2. Phân phối"></a>1.1.2. Phân phối</h3><p>Cũng ví dụ trên, project của bạn đã nằm ở mức library, tức là một thư viện rồi. Bạn có thể dụ bạn bè mình xài nó, phát triển thêm, đóng góp cho nó, pack nó lại thành nuget package, blah blah blah và blah blah blah</p>
+<h3 id="1-1-3-Trien-khai"><a href="#1-1-3-Trien-khai" class="headerlink" title="1.1.3. Triển khai"></a>1.1.3. Triển khai</h3><p>1 công ty nọ thấy lib version 1.0 của bạn quá hay, họ quyết định tải zìa và xài trong dự án cực khủng của họ. 10 năm sau, bạn cập nhật cái lib của mình lên version 2.0, dùng lại toàn bộ các method và hàm sẵn có, chẳng qua là thay đổi thuật toán cho nó chạy nhanh lên thôi. Công ty chỉ cần bỏ ra 1 chi phí tối thiểu để clone cái lib của bạn về, build và replace cái lib đang chạy trên production của họ. Thế là xong. Không cần phải build lại cả project, không cần phải deploy lại.</p>
+<h3 id="1-1-4-You-name-it"><a href="#1-1-4-You-name-it" class="headerlink" title="1.1.4. You name it"></a>1.1.4. You name it</h3><p>Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát hiện ra càng nhiều lợi ích khác của việc chia tách này.</p>
+<h2 id="1-2-Phan-chia-projects"><a href="#1-2-Phan-chia-projects" class="headerlink" title="1.2. Phân chia projects"></a>1.2. Phân chia projects</h2><p>Ở mô hình MVC, cả Model-View-ViewModel đều gắn liền với nhau, nên chúng ta không tách</p>
+<blockquote>
+<p>Tuy nhiên, có một số công ty tách cái Model ra một project riêng. Điều này giúp bạn dễ quản lý code hơn. Đôi khi cũng tách luôn cái Controller thành 1 project</p>
+</blockquote>
+<p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
+<ul>
+<li>Unit Test -&gt; <strong>Tách</strong></li>
+<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
+<li>Encryption / Decryption -&gt; <strong>Tách</strong></li>
+<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
+</ul>
+<h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
+<h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
+<p>Nó sẽ triệt tiêu luôn cái vấn đề tương thích platform với lib (lib build cho x64 chỉ chạy được trên x64 và tương tự cho x86)</p>
+<h2 id="2-2-For-front-end-Yarn"><a href="#2-2-For-front-end-Yarn" class="headerlink" title="2.2. For front-end - Yarn"></a>2.2. For front-end - Yarn</h2><blockquote>
+<p>Bower đã bị ngừng hỗ trợ</p>
+</blockquote>
+<p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
+<p><strong>đúng rồi, NHƯNG</strong></p>
+<ul>
+<li>nguồn không thống nhất</li>
+<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
+<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
+</ul>
+<p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
+<p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
+<h3 id="2-2-1-Tinh-phu-thuoc"><a href="#2-2-1-Tinh-phu-thuoc" class="headerlink" title="2.2.1. Tính phụ thuộc"></a>2.2.1. Tính phụ thuộc</h3><p><code>JQuery</code> là một lib rất phổ biến, và ty tỷ lib khác được xây dựng mà cần tới nó. Nhưng JQuery có cũng kha khá phiên bản khác nhau, và các lib khác nhau lại dùng các version khác nhau của JQuery.</p>
+<p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
+<h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
+<h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
+<p><img src="https://farm1.staticflickr.com/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
+<p>Thế nhé bạn ;)</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/05/09/asp-net-project-structure-package-manager/">https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/project/">project</a><a href="/blog/tags/structure/">structure</a><a href="/blog/tags/architech/">architech</a><a href="/blog/tags/manager/">manager</a><a href="/blog/tags/package/">package</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Project-amp-Solution"><span class="toc-number">1.</span> <span class="toc-text">1. Project &amp; Solution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Ly-do"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Lý do</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-Dung-lai"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1. Dùng lại</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-Phan-phoi"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2. Phân phối</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-Trien-khai"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3. Triển khai</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-You-name-it"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.1.4. You name it</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Phan-chia-projects"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Phân chia projects</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Package-Manager"><span class="toc-number">2.</span> <span class="toc-text">2. Package Manager</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-For-backend-NUGET"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. For backend - NUGET</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-For-front-end-Yarn"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. For front-end - Yarn</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Tinh-phu-thuoc"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1. Tính phụ thuộc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Sources"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2. Sources</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Tai-tao"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3. Tái tạo</span></a></li></ol></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/06/12/aspnet-core-2-middleware/">&lt; [ASPNET Core 2] – Middleware</a><a class="next" href="/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[ASPNET Core 2] – Middleware | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[ASPNET Core 2] – Middleware</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/06/12/aspnet-core-2-middleware/">2018-06-12</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>For English version: <a target="_blank" rel="noopener" href="https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/">[ASPNET Core 2] – Middleware</a></p>
+<p>Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET</p>
+<p>Dễ ẹt, <code>dotnet new mvc</code>, rồi sửa <code>Views/Home/Index.cshtml</code> cho nó trả về 1 dòng</p>
+<p>[code lang=html] <p>hello world</p> [/code]</p>
+<p>Thế là xong, phải ko? Có cách khác :D</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-middleware-l%C3%A0-gi%E1%BB%81">1. Middleware là giề</a></li>
+<li><a href="#2-c%C3%A1c-lo%E1%BA%A1i-middleware">2. Các loại middleware</a></li>
+<li><a href="#3-default-middleware">3. Default middleware</a></li>
+<li><a href="#4-vi%E1%BA%BFt-m%E1%BB%99t-middleware">4. Viết một middleware</a><ul>
+<li><a href="#41-d%C3%B9ng-delegate">4.1. Dùng delegate</a></li>
+<li><a href="#42-x%C3%A0i-class-ri%C3%AAng">4.2. Xài class riêng</a></li>
+<li><a href="#ghi-ch%C3%BA-khi-x%C3%A0i-dependency-injection">ghi chú khi xài Dependency Injection</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Middleware-la-gie"><a href="#1-Middleware-la-gie" class="headerlink" title="1. Middleware là giề"></a>1. Middleware là giề</h1><p>Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses <img src="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png" alt="middleware"></p>
+<blockquote>
+<p>middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là [code lang=text] short-circuit [/code]</p>
+</blockquote>
+<h1 id="2-Cac-loai-middleware"><a href="#2-Cac-loai-middleware" class="headerlink" title="2. Các loại middleware"></a>2. Các loại middleware</h1><p>Có 3 loại middleware, phân loại bằng cách bạn implement nó như nào</p>
+<p>Loại</p>
+<p>Có thể short-circuit</p>
+<p>Dùng để</p>
+<p>Use</p>
+<p>Có</p>
+<p>Short-circuit một request<br>Logic để tạo response</p>
+<p>Run</p>
+<p>Không</p>
+<p>Kết thúc pipeline</p>
+<p>Map<br>MapWhen</p>
+<p>Không</p>
+<p>Phân nhánh pipeline dựa trên request path<br>MapWhen phân nhánh dựa trên điều kiện<br>Hỗ trợ Nesting (multi-level branching)</p>
+<blockquote>
+<h2 id="So-sanh-voi-do-co-ASP-NET-MVC5"><a href="#So-sanh-voi-do-co-ASP-NET-MVC5" class="headerlink" title="So sánh với đồ cổ ASP.NET MVC5"></a>So sánh với đồ cổ ASP.NET MVC5</h2><p>ASP.NET MVC5</p>
+<p>ASP.NET Core 2</p>
+<p>Khái niệm</p>
+<p>HTTP Handlers<br>HTTP Modules</p>
+<p>middleware</p>
+<p>Lựa chọn?</p>
+<p>HTTP Handlers =&gt; Dựa trên filename extension<br>HTTP Modules =&gt; Móc vào life cycle bằng cách dùng events</p>
+<p>Định nghĩa theo 1 thứ tự đặc biệt và các từ khóa<br>Run =&gt; kết thúc pipeline<br>Use =&gt; short-circuit và xử lý logic<br>Map =&gt; phân nhánh dựa trên path</p>
+<p>Dễ xài ko?</p>
+<p>Đòi hỏi hiểu sâu về ASP.NET life-cycle<br>Khó xài vì nhiều modules có thể móc vào cùng 1 event</p>
+<p>Yêu cầu 1 thứ tự nhất định<br>Chỉ có 1 dòng pipeline, dễ hiểu/xài/debug</p>
+</blockquote>
+<h1 id="3-Default-middleware"><a href="#3-Default-middleware" class="headerlink" title="3. Default middleware"></a>3. Default middleware</h1><p>Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số middleware cho bạn</p>
+<ol>
+<li>Exception Handler: handle exception từ các middleware ở dưới</li>
+<li>Static Files: trả về files trong wwwroots</li>
+<li>Mvc: Hướng request tới các action trong controller</li>
+</ol>
+<p>source code nè [code lang=csharp] public static void Configure(IApplicationBuilder app, IHostingEnvironment env) { if (env.IsDevelopment()) { app.UseDeveloperExceptionPage(); } else { app.UseExceptionHandler(“/Error/500”); } app.UseStaticFiles(); app.UseAuthentication(); app.UseSession(); if (!env.IsDevelopment()) { app.UseMiddleware<ErrorHandlingMiddleware>(); } app.UseMvc(routes =&gt; { routes.MapRoute( name: “default”, template: “{controller=Home}/{action=Index}/{id?}”); }); } [/code] <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.1&tabs=aspnetcore2x#built-in-middleware">Đây</a> danh sách các built-in middlewares</p>
+<h1 id="4-Viet-mot-middleware"><a href="#4-Viet-mot-middleware" class="headerlink" title="4. Viết một middleware"></a>4. Viết một middleware</h1><h2 id="4-1-Dung-delegate"><a href="#4-1-Dung-delegate" class="headerlink" title="4.1. Dùng delegate"></a>4.1. Dùng delegate</h2><p>thêm code vào <code>Startup.cs</code>, method <code>Configure</code> [code lang=csharp] app.Use((context, next) =&gt; { var cultureQuery = context.Request.Query[“culture”]; if (!string.IsNullOrWhiteSpace(cultureQuery)) { var culture = new CultureInfo(cultureQuery); CultureInfo.CurrentCulture = culture; CultureInfo.CurrentUICulture = culture; } // Call the next delegate/middleware in the pipeline return next(); }); [/code]</p>
+<h2 id="4-2-Xai-class-rieng"><a href="#4-2-Xai-class-rieng" class="headerlink" title="4.2. Xài class riêng"></a>4.2. Xài class riêng</h2><p>phức tạp hơn, nhưng bù lại linh hoạt hơn đầu tiên, code cho middleware [code lang=csharp] public class RequestCultureMiddleware { private readonly RequestDelegate _next; public RequestCultureMiddleware(RequestDelegate next) { _next =next; } public Task InvokeAsync(HttpContext context) { var cultureQuery = context.Request.Query[“culture”]; if (!string.IsNullOrWhiteSpace(cultureQuery)) { var culture = new CultureInfo(cultureQuery); CultureInfo.CurrentCulture = culture; CultureInfo.CurrentUICulture = culture; } // Call the next delegate/middleware in the pipeline return this._next(context); } } [/code] sau đó, code cho extension để xài được middleware đó trong method <code>Configure</code> [code lang=csharp] // Expose through IApplicationBuilder public static class RequestCultureMiddlewareExtensions { public static IApplicationBuilder UseRequestCulture(this IApplicationBuilder builder) { return builder.UseMiddleware<RequestCultureMiddleware>(); } } [/code] cuối cùng, xài trong <code>Configure</code> method [code lang=csharp] // Use in Startup.cs =&gt; Configure method public void Configure(IApplicationBuilder app) { app.UseRequestCulture(); app.Run(async (context) =&gt; { await context.Response.WriteAsync($”Hello{CultureInfo.CurrentCulture.DisplayName}”); }); } [/code]</p>
+<h2 id="ghi-chu-khi-xai-Dependency-Injection"><a href="#ghi-chu-khi-xai-Dependency-Injection" class="headerlink" title="ghi chú khi xài Dependency Injection"></a>ghi chú khi xài Dependency Injection</h2><blockquote>
+<p><code>Scoped lifetime service</code> phải được inject vào Invoke hoặc InvokeAsync method Inject cái <code>scoped lifetime service</code> thông qua constructor sẽ ép cái service đó thành singleton</p>
+</blockquote>
+<p>có 3 loại lifetime cho một service trong asp.net, là <code>transient</code>, <code>scoped</code> và <code>singleton</code></p>
+<ul>
+<li><p><strong>Transient</strong> lifetime services được tạo ra mỗi lần nó được gọi. Loại này phù hợp cho các service lightweight, stateless.</p>
+</li>
+<li><p><strong>Scoped</strong> lifetime services được tạo cho mỗi request.</p>
+</li>
+<li><p><strong>Singleton</strong> lifetime services được tạo cho lần requested đầu tiên (hoặc khi ConfigureServices khởi chạy nếu bạn có tạo 1 instance của service trong đó) rồi các request sau đó sẽ xài lại instance này.</p>
+</li>
+</ul>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/06/12/aspnet-core-2-middleware/">https://huntertran.github.io/blog/2018/06/12/aspnet-core-2-middleware/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Middleware-la-gie"><span class="toc-number">1.</span> <span class="toc-text">1. Middleware là giề</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Cac-loai-middleware"><span class="toc-number">2.</span> <span class="toc-text">2. Các loại middleware</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#So-sanh-voi-do-co-ASP-NET-MVC5"><span class="toc-number">2.1.</span> <span class="toc-text">So sánh với đồ cổ ASP.NET MVC5</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Default-middleware"><span class="toc-number">3.</span> <span class="toc-text">3. Default middleware</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Viet-mot-middleware"><span class="toc-number">4.</span> <span class="toc-text">4. Viết một middleware</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Dung-delegate"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. Dùng delegate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Xai-class-rieng"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. Xài class riêng</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ghi-chu-khi-xai-Dependency-Injection"><span class="toc-number">4.3.</span> <span class="toc-text">ghi chú khi xài Dependency Injection</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">&lt; [Design Pattern] - Dependency Injection trong ASP.NET Core</a><a class="next" href="/blog/2018/05/09/asp-net-project-structure-package-manager/">[ASP.NET] - Project Structure &amp; Package Manager &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

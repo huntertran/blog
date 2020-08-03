@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Machine Learning - 2.1 - Multiple Features | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Machine Learning - 2.1 - Multiple Features</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/10/03/machine-learning-2-1-multiple-features/">2018-10-03</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Machine-Learning/">Machine Learning</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành <code>multiple input features</code>, và những best practices để thực hiện linear regression.</p>
+<a id="more"></a>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><p><a href="#1-mutiple-features">1. Mutiple Features</a></p>
+<ul>
+<li><a href="#11-k%C3%BD-hi%E1%BB%87u">1.1. Ký hiệu</a></li>
+<li><a href="#12-hypothesis">1.2. Hypothesis</a></li>
+<li><a href="#13-trick">1.3. Trick</a></li>
+</ul>
+</li>
+<li><p><a href="#2-gradient-descent-cho-multiple-variables">2. Gradient Descent cho Multiple Variables</a></p>
+</li>
+<li><p><a href="#3-gradient-descent-in-practice">3. Gradient Descent in Practice</a></p>
+<ul>
+<li><a href="#31-feature-scaling-v%C3%A0-mean-normalization">3.1. Feature Scaling và Mean Normalization</a></li>
+<li><a href="#32-learning-rate">3.2. Learning Rate</a></li>
+</ul>
+</li>
+<li><p><a href="#4-features-v%C3%A0-polynomial-regression">4. Features và Polynomial Regression</a></p>
+</li>
+</ul>
+<h1 id="1-Mutiple-Features"><a href="#1-Mutiple-Features" class="headerlink" title="1. Mutiple Features"></a>1. Mutiple Features</h1><p>Linear Regression với <code>multiple features</code> còn được biết đến với cái tên <code>multivariate linear regression</code>.</p>
+<h2 id="1-1-Ky-hieu"><a href="#1-1-Ky-hieu" class="headerlink" title="1.1. Ký hiệu"></a>1.1. Ký hiệu</h2><ul>
+<li>$latex x^{(i)}_j$ = giá trị của feature <code>j</code> trong training example thứ <code>i</code>.</li>
+<li>$latex x^{(i)}$ = input (feature) thứ <code>i</code> của training example.</li>
+<li>m = số training example</li>
+<li>n = số features</li>
+</ul>
+<h2 id="1-2-Hypothesis"><a href="#1-2-Hypothesis" class="headerlink" title="1.2. Hypothesis"></a>1.2. Hypothesis</h2><p>Như vậy, hàm hypothesis của chúng ta được viết lại như sau:</p>
+<p>$latex h_0(x) = \theta_0x_0 + \theta_1x_1 + … + \theta_nx_n$</p>
+<p>với $latex x_0 = 1$.</p>
+<h2 id="1-3-Trick"><a href="#1-3-Trick" class="headerlink" title="1.3. Trick"></a>1.3. Trick</h2><p>Áp dụng các kiến thức về phép nhân matrix đã học ở bài trước, ta có như sau</p>
+<p>$latex h_0(x) = \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; … &amp; \theta_n \end{bmatrix} \begin{bmatrix} x_0 \\ x_1 \\ … \\ x_n \end{bmatrix} = \theta^Tx$</p>
+<p>Trên đây là công thức của hàm hypothesis được rút gọn thành phép nhân matrix với vector.</p>
+<h1 id="2-Gradient-Descent-cho-Multiple-Variables"><a href="#2-Gradient-Descent-cho-Multiple-Variables" class="headerlink" title="2. Gradient Descent cho Multiple Variables"></a>2. Gradient Descent cho Multiple Variables</h1><p>Công thức cho thuật toán Gradient Descent thì y hệt như cũ. Ta chỉ lặp lại nó cho <code>n</code> features mà thôi.</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)} \\ \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \\ \theta_2 := \theta_2 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} \\ …$</p>
+<p>hoặc diễn giải theo một cách khác:</p>
+<p>$latex \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
+<p>với j:= 0…n</p>
+<blockquote>
+<p>Đối với $latex \theta_0$, $latex x^i_0 = 1$</p>
+</blockquote>
+<h1 id="3-Gradient-Descent-in-Practice"><a href="#3-Gradient-Descent-in-Practice" class="headerlink" title="3. Gradient Descent in Practice"></a>3. Gradient Descent in Practice</h1><h2 id="3-1-Feature-Scaling-va-Mean-Normalization"><a href="#3-1-Feature-Scaling-va-Mean-Normalization" class="headerlink" title="3.1. Feature Scaling và Mean Normalization"></a>3.1. Feature Scaling và Mean Normalization</h2><p>Khi các features có giá trị giao động trong các khoảng cách xa nhau, thì thuật toán Gradient Descent thường tốn nhiều thơi gian để tìm ra kết quả.</p>
+<p>Ví dụ ta có 2 feature là <code>diện tích nhà</code> và <code>số phòng ngủ</code>:</p>
+<p>[code lang=text] 200 &lt; Diện tích nhà &lt; 2000 1 &lt; Số phòng ngủ &lt; 5 [/code]</p>
+<p>Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.</p>
+<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"> <em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
+<p>Ta có thể tăng tốc gradient descent bằng cách <code>biến đổi</code> các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.</p>
+<p>Nhìn chung, ta sẽ biến đổi sao cho:</p>
+<p>$latex -1 \leq x_{(i)} \leq 1$</p>
+<p>hoặc</p>
+<p>$latex -0.5 \leq x_{(i)} \leq 0.5$</p>
+<p>Trên đây chỉ là ví dụ, mục tiêu là làm cho vùng giá trị của các feature càng gần nhau càng tốt.</p>
+<p>2 kỹ thuật để làm chuyện này là <code>Feature Scaling</code> và <code>Mean Normalization</code>.</p>
+<blockquote>
+<p>Feature Scaling là chia input với khoảng giá trị (max - min). Mean Normalization là input - giá trị trung bình của input.</p>
+</blockquote>
+<p>$latex x_i := \frac{x_i - \mu_i}{\delta_i}$</p>
+<p>với:</p>
+<ul>
+<li>$latex \mu_i$: trung bình của feature i</li>
+<li>$latex \delta_i$: Max - min hoặc độ lệch chuẩn</li>
+</ul>
+<blockquote>
+<p>Max - min sẽ cho ra kết quả rất khác với độ lệch chuẩn.</p>
+</blockquote>
+<h2 id="3-2-Learning-Rate"><a href="#3-2-Learning-Rate" class="headerlink" title="3.2. Learning Rate"></a>3.2. Learning Rate</h2><p>Để xác định tham số $latex \alpha$, ta có thể áp dụng 1 số kỹ thuật:</p>
+<ul>
+<li>Vẽ đồ thị với trục x = số bước lặp của gradient descent, trục y = giá trị của $latex J(\theta)$. Nếu $latex J(\theta)$ tăng, thì bạn phải giảm giá trị $latex \alpha$ xuống và làm lại từ đầu.</li>
+<li>Automatic convergence test: Xác định điểm hội tụ khi giá trị $latex J(\theta)$ không vượt quá E trong một lần lặp, với E là một giá trị rất nhỏ nào đó. Tuy nhiên trong thực tế, thường rất khó xác định giá trị E này.</li>
+</ul>
+<p>Người ta đã chứng minh được rằng, nếu learning rate $latex \alpha$ đủ nhỏ, thì giá trị $latex J(\theta)$ sẽ giảm sau mỗi lần lặp.</p>
+<p>Túm lại: * Nếu $latex \alpha$ quá nhỏ: gradient descent chạy lâu. * Nếu $latex \alpha$ quá lớn: $latex J(\theta)$ có thể sẽ không giảm sau mỗi lần lặp -&gt; không hội tụ.</p>
+<h1 id="4-Features-va-Polynomial-Regression"><a href="#4-Features-va-Polynomial-Regression" class="headerlink" title="4. Features và Polynomial Regression"></a>4. Features và Polynomial Regression</h1><p>Ta có thể cải thiện features và dạng của hàm hypothesis bằng nhiều cách.</p>
+<p>Một trong số những cách đó là <strong>kết hợp</strong> các feature lại với nhau. Ví dụ như khi ta có 2 feature là <code>dài</code> và <code>rộng</code>, ta có thể kết hợp chúng thành <code>diện tích = dài * rộng</code>.</p>
+<p>Ngoài ra, không phải lúc nào ta cũng có thể sử dụng được hàm hypothesis là một đường thẳng, nhất là khi nó không “vừa” với bộ data. Lúc này, có thể biến đổi nó một chút, hoặc bẻ cong nó bằng cách nâng lũy thừa, hoặc lấy căn của các features (hoặc bất cứ dạng nào khác đều được).</p>
+<p>Ví dụ:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1$</p>
+<p>Ta có thể thêm 1 feature mới bằng cách lũy thừa x lên:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1 + \theta_2x_1^2$</p>
+<p>hoặc lấy căn của nó:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1 + \theta_2\sqrt{x_1}$</p>
+<blockquote>
+<p>Một điều quan trọng là khi bạn biến đổi các feature như thế này, vùng giá trị của nó sẽ trở nên cách biệt so với feature gốc. Lúc này, bạn sẽ phải áp dụng những cách tối ưu như <code>Feature Scaling</code> và <code>Mean Normalization</code> đã nói ở trên để tối ưu thuật toán Gradient Descent.</p>
+</blockquote>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/10/03/machine-learning-2-1-multiple-features/">https://huntertran.github.io/blog/2018/10/03/machine-learning-2-1-multiple-features/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mutiple-Features"><span class="toc-number">1.</span> <span class="toc-text">1. Mutiple Features</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Ky-hieu"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Ký hiệu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Hypothesis"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Hypothesis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Trick"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Trick</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Gradient-Descent-cho-Multiple-Variables"><span class="toc-number">2.</span> <span class="toc-text">2. Gradient Descent cho Multiple Variables</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Gradient-Descent-in-Practice"><span class="toc-number">3.</span> <span class="toc-text">3. Gradient Descent in Practice</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Feature-Scaling-va-Mean-Normalization"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Feature Scaling và Mean Normalization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Learning-Rate"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Learning Rate</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Features-va-Polynomial-Regression"><span class="toc-number">4.</span> <span class="toc-text">4. Features và Polynomial Regression</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/10/09/machine-learning-2-2-normal-equation/">&lt; Machine Learning - 2.2 - Normal Equation</a><a class="next" href="/blog/2018/10/01/machine-learning-matrices-and-vectors/">Machine Learning - 1.4 - Matrices and Vectors &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Machine Learning - 1.2 - Model and Cost Function | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Machine Learning - 1.2 - Model and Cost Function</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/09/22/ml-model-and-cost-function/">2018-09-22</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Machine-Learning/">Machine Learning</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bài thứ 2 trong chuỗi bài viết tự học Machine Learning Trong bài này, ta sẽ tìm hiểu về cost function, một function nhằm dự đoán giá trị output với một bộ các giá trị input/output cho trước.</p>
+<a id="more"></a>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><a href="#1-c%C3%A1c-k%C3%BD-hi%E1%BB%87u">1. Các ký hiệu</a></li>
+<li><a href="#2-cost-function">2. Cost Function</a><ul>
+<li><a href="#21-to%C3%A1n-h%E1%BB%8Dc">2.1. Toán học</a><ul>
+<li><a href="#211-x%C3%A1c-xu%E1%BA%A5t-v%C3%A0-th%E1%BB%91ng-k%C3%AA-probability-and-statistic">2.1.1. Xác xuất và thống kê (Probability and Statistic)</a></li>
+<li><a href="#212-ph%C6%B0%C6%A1ng-sai-variance">2.1.2. Phương sai (Variance)</a></li>
+</ul>
+</li>
+<li><a href="#22-%C4%91%E1%BA%A1o-h%C3%A0m-derivative">2.2. Đạo hàm (Derivative)</a><ul>
+<li><a href="#221-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-to%C3%A1n-h%E1%BB%8Dc">2.2.1. Một ví dụ toán học</a></li>
+<li><a href="#222-l%E1%BB%9Bn-nh%E1%BA%A5t-hay-nh%E1%BB%8F-nh%E1%BA%A5t">2.2.2. Lớn nhất hay nhỏ nhất</a></li>
+</ul>
+</li>
+<li><a href="#23-c%C3%B4ng-th%E1%BB%A9c">2.3. Công thức</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Cac-ky-hieu"><a href="#1-Cac-ky-hieu" class="headerlink" title="1. Các ký hiệu"></a>1. Các ký hiệu</h1><p>Chúng ta sẽ thống nhất 1 cách sử dụng các ký hiệu để biểu thị các thuộc tính của một bài toán.</p>
+<blockquote>
+<p>x(i) sẽ là giá trị đầu vào, cũng được gọi là <strong><em><code>input feature</code></em></strong>.</p>
+<p>y(i) sẽ là đầu ra mà ta cố dự đoán.</p>
+<p>Một cặp (x(i), y(i)) được gọi là một <code>training example</code>.</p>
+<p>Số lượng <code>training example</code> được gọi là <code>m</code>. Như vậy, i=1,2,3,…,m</p>
+</blockquote>
+<p>Lưu ý rằng <code>(i)</code> chỉ là index của giá trị, không phải số lũy thừa</p>
+<blockquote>
+<p>Ta dùng ký tự <code>X</code>, <code>Y</code> để biểu thị vùng không gian của input và output</p>
+<p>Ví dụ: <code>X = Y = ℝ</code></p>
+</blockquote>
+<p>Khi đưa ra một bộ dữ liệu training (<code>training set</code>), mục tiêu của chúng ta là tạo ra được 1 function <code>h</code> sao cho <code>h(x)</code> có thể dự đoán gần đúng nhất giá trị của <code>y</code>.</p>
+<blockquote>
+<p><code>h</code> là viết tắt cho từ <em>Hypothesis</em>, lý do cho tên gọi này chỉ đơn thuần là vì xưa kia, người ta đặt tên cho nó như vậy, và nó chết tên luôn.</p>
+</blockquote>
+<p>Như vậy, process của chúng ta sẽ như sau:</p>
+<p><img src="https://farm2.staticflickr.com/1844/43995414074_2c530b4cb8_o.png" alt="process"></p>
+<p>Khi y là một giá trị liên tục, ví dụ như giá nhà, giá cổ phiếu, thì đây là một <code>regression problem</code>.</p>
+<p>Khi y chỉ là một số lượng nhỏ các giá trị nhất định (true/false - yes/no), thì đây là một <code>classification problem</code>.</p>
+<h1 id="2-Cost-Function"><a href="#2-Cost-Function" class="headerlink" title="2. Cost Function"></a>2. Cost Function</h1><p>Chúng ta “tính toán” sự chính xác của hàm hypothesis bằng cách sử dụng 1 hàm số. Hàm số đó gọi là <em><code>cost function</code></em>.</p>
+<blockquote>
+<p>Trước khi đưa ra bất kỳ một công thức hay hàm số nào, hãy cùng tôi đào bới trong mớ kiến thức hỗn độn mà tôi chắc rằng sẽ giúp bạn hiểu ra nội dung cốt lõi của <code>Cost Function</code>.</p>
+</blockquote>
+<h2 id="2-1-Toan-hoc"><a href="#2-1-Toan-hoc" class="headerlink" title="2.1. Toán học"></a>2.1. Toán học</h2><h3 id="2-1-1-Xac-xuat-va-thong-ke-Probability-and-Statistic"><a href="#2-1-1-Xac-xuat-va-thong-ke-Probability-and-Statistic" class="headerlink" title="2.1.1. Xác xuất và thống kê (Probability and Statistic)"></a>2.1.1. Xác xuất và thống kê (Probability and Statistic)</h3><p>Trong xác xuất thống kê, có một khái niệm gọi là <code>Gaussian Distributed</code>.</p>
+<blockquote>
+<p>Đúng rồi, bạn không nhìn nhầm đâu. <code>Gaussian</code> cũng là một tính năng nổi tiếng của…Photoshop, khi mà nó làm <em>nhiễu</em> đi vùng được chọn. Tính năng đó gọi là <code>Gaussian Blur</code>.</p>
+</blockquote>
+<p>Trong lý thuyết xác xuất, <code>phân phối chuẩn</code>, hay còn gọi là <code>phân phối Gauss</code>, <code>phân phối Gaussian</code>, <code>phân phối Laplace-Gauss</code>, là một dạng phân phối xác xuất liên tục (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Continuous_probability_distribution">Continuous probability distribution</a>).</p>
+<p>Sở dĩ tôi nhắc tới phân phối chuẩn là bởi vì theo <em>định lý giới hạn trung tâm (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central limit theorem</a>)</em>, ở dạng tổng quát nhất của phân phối chuẩn, phân phối của tổng rất nhiều biến ngẫu nhiên độc lập sẽ có phân phối xấp xỉ chuẩn.</p>
+<p>Tức là, số lượng <code>training example</code> càng nhiều thì mỗi một <code>training example</code> sẽ có giá trị càng gần với hàm <code>hypothesis</code> của chúng ta.</p>
+<p>Tóm lại, ta sẽ chọn tham số sao cho khoảng cách từ đồ thị của hàm <code>hypothesis</code> tới <code>y</code> của các <code>training example</code> là ngắn nhất.</p>
+<h3 id="2-1-2-Phuong-sai-Variance"><a href="#2-1-2-Phuong-sai-Variance" class="headerlink" title="2.1.2. Phương sai (Variance)"></a>2.1.2. Phương sai (Variance)</h3><blockquote>
+<p>Trong lý thuyết xác suất và thống kê, phương sai của một biến ngẫu nhiên là một độ đo sự phân tán thống kê của biến đó, nó hàm ý các giá trị của biến đó thường ở cách giá trị kỳ vọng bao xa.</p>
+</blockquote>
+<p>Theo định nghĩa này của phương sai, đồ thị biểu diễn các giá trị kỳ vọng chính là đồ thị hàm hypothesis của chúng ta đó. Phương sai chính là giá trị mà ta muốn nó càng nhỏ càng tốt</p>
+<blockquote>
+<p>Phương sai của một biến ngẫu nhiên là bình phương của độ lệch chuẩn.</p>
+</blockquote>
+<p>Như đã nói ở phần trước, khi mà tập giá trị đầu vào <code>training example</code> của chúng ta đủ lớn, thì ta có thể xem mỗi training example là một biến ngẫu nhiên có phân phối chuẩn.</p>
+<p>Vậy ta có:</p>
+<p>Tập hợp kỳ vọng = hypothesis</p>
+<p>$latex h_\theta(x)=\theta_0+\theta_1x$</p>
+<p>Độ lệch chuẩn:</p>
+<p>$latex h_\theta(x^{(i)})-y^{(i)}$</p>
+<p>Phương sai = (độ lệch chuẩn)2</p>
+<p>Vậy phương sai của tập hợp các training example sẽ là:</p>
+<p>$latex \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2$</p>
+<p>Nhiệm vụ của ta là tìm ra giá trị nhỏ nhất của công thức trên.</p>
+<h2 id="2-2-Dao-ham-Derivative"><a href="#2-2-Dao-ham-Derivative" class="headerlink" title="2.2. Đạo hàm (Derivative)"></a>2.2. Đạo hàm (Derivative)</h2><p>Để tìm giá trị lớn nhất / nhỏ nhất của một hàm số, ta có thể sử dụng đạo hàm.</p>
+<h3 id="2-2-1-Mot-vi-du-toan-hoc"><a href="#2-2-1-Mot-vi-du-toan-hoc" class="headerlink" title="2.2.1. Một ví dụ toán học"></a>2.2.1. Một ví dụ toán học</h3><p>Một trái banh được ném lên trời. Độ cao của trái banh so với mặt đất tại bất kỳ thời điểm <em>t</em> nào được tính bởi công thức:</p>
+<p>h = 3 + 14t -5t2</p>
+<p>Vậy độ cao lớn nhất của trái banh là bao nhiêu?</p>
+<p>Ứng dụng đạo hàm, ta giải bài toán này như sau:</p>
+<p>$latex \frac{\text{d}}{\text{d}t}h=0+14-5(2t)=14-10t$</p>
+<p>Hàm số trên biểu thị <em>mức độ thay đổi</em> của độ cao h tại thời điểm t. Như vậy, tại độ cao lớn nhất, _mức độ thay đổi độ cao h = 0 (vì trái banh không tiếp tục bay cao lên nữa mà bắt đầu rơi xuống).</p>
+<p><img src="https://farm2.staticflickr.com/1972/43929799745_140b61938a_o.png" alt="hypolic function"></p>
+<p>Vậy ta có:</p>
+<p>[code lang=text] 14-10t = 0</p>
+<p>=&gt; t = 1.4 [/code]</p>
+<p>Vậy độ cao lớn nhất là</p>
+<p>[code lang=text] h = 3 + 14x1.4 - 10x1.4x1.4 = 12.8 [/code]</p>
+<h3 id="2-2-2-Lon-nhat-hay-nho-nhat"><a href="#2-2-2-Lon-nhat-hay-nho-nhat" class="headerlink" title="2.2.2. Lớn nhất hay nhỏ nhất"></a>2.2.2. Lớn nhất hay nhỏ nhất</h3><p>Làm sao ta biết được một hàm số sẽ có giá trị lớn nhất hay nhỏ nhất? Nếu dựa vào đồ thị thì quả là một cách tốn nhiều thời gian và công sức.</p>
+<p>Tại đây, ta tiếp tục sử dụng đạo hàm (một lần nữa):</p>
+<p>[code lang=text] f’(t) = 14 - 10t với t = 1.4 thì f’(t) = 0</p>
+<p>=&gt; f’’(t) = -10 với t = 1.4 thì f’’(t) = -10 [/code]</p>
+<p>Đây gọi là <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Derivative_test#Second_derivative_test_(single_variable)">Second Derivative Test</a>, phát biểu như sau:</p>
+<blockquote>
+<p>Khi một hàm số có mức độ thay đổi = 0 tại điểm x, thì giá trị hàm đạo hàm lần 2 của hàm số đó tại x nếu:</p>
+<p>Nhỏ hơn 0: đó là giá trị lớn nhất.</p>
+<p>Lớn hơn 0: đó là giá trị nhỏ nhất.</p>
+<p>Bằng 0: chưa thể tìm được giá trị lớn nhất/nhỏ nhất của hàm số.</p>
+</blockquote>
+<h2 id="2-3-Cong-thuc"><a href="#2-3-Cong-thuc" class="headerlink" title="2.3. Công thức"></a>2.3. Công thức</h2><p>Áp dụng cả 2 phần đạo hàm và toán bên trên, ta sẽ có:</p>
+<p>$latex \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2$</p>
+<p>với</p>
+<p>$latex h_\theta(x^{(i)}) = \theta_{0} + \theta_{1}x^{(i)}$</p>
+<blockquote>
+<p>Lý do của số 2 dưới mẫu số là để triệt tiêu khi ta làm đạo hàm. Nhìn chung, nó không ảnh hưởng tới kết quả, vì mục tiêu là tìm giá trị nhỏ nhất của hàm số trên.</p>
+</blockquote>
+<p>Vậy ta sẽ tìm giá trị của $latex \theta_{0}$ và $latex \theta_{1}$ để hàm số trên nhỏ nhất.</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/09/22/ml-model-and-cost-function/">https://huntertran.github.io/blog/2018/09/22/ml-model-and-cost-function/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/blog/tags/cost-function/">cost function</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Cac-ky-hieu"><span class="toc-number">1.</span> <span class="toc-text">1. Các ký hiệu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Cost-Function"><span class="toc-number">2.</span> <span class="toc-text">2. Cost Function</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Toan-hoc"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Toán học</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Xac-xuat-va-thong-ke-Probability-and-Statistic"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1. Xác xuất và thống kê (Probability and Statistic)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Phuong-sai-Variance"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2. Phương sai (Variance)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Dao-ham-Derivative"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. Đạo hàm (Derivative)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Mot-vi-du-toan-hoc"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1. Một ví dụ toán học</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Lon-nhat-hay-nho-nhat"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2. Lớn nhất hay nhỏ nhất</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Cong-thuc"><span class="toc-number">2.3.</span> <span class="toc-text">2.3. Công thức</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/09/27/machine-learning-parameter-learning/">&lt; Machine Learning - 1.3 - Parameter Learning</a><a class="next" href="/blog/2018/09/14/machine-learning-introduction/">Machine Learning - 1.1 - Introduction &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

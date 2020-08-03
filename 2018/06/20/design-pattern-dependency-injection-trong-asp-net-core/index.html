@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Design Pattern] - Dependency Injection trong ASP.NET Core | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Design Pattern] - Dependency Injection trong ASP.NET Core</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">2018-06-20</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Design-Pattern/">Design Pattern</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Dependency Injection là một kỹ thuật vô cùng thông dụng để <em>nới lỏng</em> các objects và class phụ thuộc vào chúng. Nghe khó hiểu quá phải ko các bạn?</p>
+<p>Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn tổng quan (hy vọng là khách quan) về DI</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-v%E1%BA%A5n-%C4%91%E1%BB%81">1. Vấn đề</a></li>
+<li><a href="#2-l%E1%BB%A3i-%C3%ADch">2. Lợi ích</a></li>
+<li><a href="#3-back-to-code">3. Back to code</a><ul>
+<li><a href="#31-interface">3.1. Interface</a></li>
+<li><a href="#32-implementation">3.2. Implementation</a></li>
+</ul>
+</li>
+<li><a href="#4-register">4. Register</a><ul>
+<li><a href="#41-lifetime">4.1. Lifetime</a></li>
+<li><a href="#42-contructor-injection">4.2. Contructor Injection</a></li>
+<li><a href="#43-action-injection">4.3. Action Injection</a></li>
+<li><a href="#44-service-trong-service">4.4. Service trong Service</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Van-de"><a href="#1-Van-de" class="headerlink" title="1. Vấn đề"></a>1. Vấn đề</h1><p>[code lang=text] Hãy tưởng tượng bạn muốn uống coca, nhà ko còn chai coca nào Bạn phải ra Circle K, đi lòng vòng trong cửa hàng để kiếm 1 chai coca, trả tiền, đi về [/code]</p>
+<ul>
+<li><p>Bạn có thể quên ko trả tiền</p>
+</li>
+<li><p>Bạn có thể ko tìm thấy Circle K nào gần cả</p>
+</li>
+<li><p>Bạn có thể ko tìm thấy chai coca nào trong circle k cả</p>
+</li>
+<li><p>Bạn có thể lấy nhầm 1 chai xá xị chương dương thay vì coca</p>
+</li>
+</ul>
+<p>Với Dependency Injection, mọi việc sẽ khác đi [code lang=text] Bạn đưa tiền cho 1 thằng nhóc có nhiệm vụ chuyên đi mua nước ngọt cho khu xóm 5 phút sau, nó xuất hiện với chai coca của bạn [/code] Một người khác trong cùng khu xóm cũng có nhu cần gần giống bạn, nhưng họ muốn uống pepsi Thay vì cũng phải đi ra cửa hàng và tự mua pepsi và gặp các vấn đề như bạn gặp, họ cũng gọi thằng nhóc đó lại, và 5 phút sau, chai pepsi ướp lạnh ở trong tay họ. Thằng nhóc đó chính là 1 <strong><em>Service</em></strong>, và bạn phụ thuộc vô thằng nhóc đó để có nước ngọt uống</p>
+<h1 id="2-Loi-ich"><a href="#2-Loi-ich" class="headerlink" title="2. Lợi ích"></a>2. Lợi ích</h1><p>Quay trở lại với ví dụ trên, lợi ích của bạn khi dùng <strong><em>Service</em></strong> mua nước ngọt của thằng nhóc là gì?</p>
+<ul>
+<li>Bạn ko cần quan tâm thằng nhóc đó nó làm gì để có nước ngọt cho bạn</li>
+<li>Bạn có thể yêu cầu nhiều loại nước ngọt khác nhau mà ko cần biết hình dạng hay chỗ bán</li>
+</ul>
+<h1 id="3-Back-to-code"><a href="#3-Back-to-code" class="headerlink" title="3. Back to code"></a>3. Back to code</h1><p>Quay trở lại với code, bạn sẽ implement DI như thế nào?</p>
+<h2 id="3-1-Interface"><a href="#3-1-Interface" class="headerlink" title="3.1. Interface"></a>3.1. Interface</h2><p>[code lang=csharp] public interface IDrinkBuyer { void BuyDrink(string name); } [/code] Khi thằng nhóc mua nước ngọt ở bên trên đã già, nó sẽ muốn truyền lại nhiệm vụ mua nước ngọt cho 1 thằng nhóc khác, và cứ thể. Mọi thằng nhóc mua nước ngọt trong xóm đều sẽ có 1 phương thức cơ bản là <code>BuyDrink</code> chấp nhận 1 param là tên của loại nước cần mua Bạn đóng vai trò là <code>WebApplication</code>, sẽ gọi phương thức này để có nước ngọt uống</p>
+<h2 id="3-2-Implementation"><a href="#3-2-Implementation" class="headerlink" title="3.2. Implementation"></a>3.2. Implementation</h2><p>Người quản lý của mấy thằng nhóc mua nước ngọt này sẽ phân nhiệm vụ cho từng thằng nhóc 1</p>
+<ul>
+<li>Nhóc A mua ở Circle K</li>
+<li>Nhóc B mua ở Vinmart</li>
+</ul>
+<p>Và họ sẽ implement như sau [code lang=csharp] public class CircleKDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to circle k // Find the -name- drink // Buy it and deliver } } public class VinmartDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to Vinmart // Find the -name- drink // Buy it and deliver } } [/code] Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống</p>
+<h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn <img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"> bằng cách thêm vào dòng code sau [code lang=csharp] services.AddScoped(); [/code] bạn đã khai báo cho tất cả các class có dùng phương thức BuyDrink sẽ mua nước ngọt ở CircleK</p>
+<h2 id="4-1-Lifetime"><a href="#4-1-Lifetime" class="headerlink" title="4.1. Lifetime"></a>4.1. Lifetime</h2><p><code>AddScoped</code> dùng để chỉ định <em>thời gian sống</em> của service này, có 3 loại:</p>
+<ul>
+<li>Transient: mỗi lần gọi tới nó sẽ là 1 biến thể mới hoàn toàn. Cái này chỉ phù hợp cho các loại service siu nhẹ nhàng và ko có lưu trữ trạng thái</li>
+<li>Scoped: Trong cùng 1 request, nó sẽ chỉ được tạo 1 lần duy nhất</li>
+<li>Singleton: Nó sẽ được tạo lần đầu tiên khi được gọi, và sẽ sống quài cho tới khi app bạn chết</li>
+</ul>
+<h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó <img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
+<h2 id="4-3-Action-Injection"><a href="#4-3-Action-Injection" class="headerlink" title="4.3. Action Injection"></a>4.3. Action Injection</h2><p>Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác [code lang=csharp] public IActionResult About([FromServices] IDrinkBuyer drinkBuyer) { drinkBuyer.BuyDrink(“coca”); return View(); } [/code]</p>
+<h2 id="4-4-Service-trong-Service"><a href="#4-4-Service-trong-Service" class="headerlink" title="4.4. Service trong Service"></a>4.4. Service trong Service</h2><p>Nested services, service con, vân vân và mây mây Đôi khi bạn cần phải có 1 service con để service cha chạy được, thì inject như nào Rất đơn giản, cũng dùng contructor injection thôi Giả sử Service DrinkBuyer cần có service Trasport để chạy [code lang=csharp] public interface ITransport { void Transport(); } public class BikeTransport : ITransport { public void Transport() { // transport by bike } } public class CarTransport : ITransport { public void Transport() { // transport by car } } [/code] đầu tiên đăng ký nó trong <code>Startup.cs</code> [code lang=csharp] services.AddScoped(); [/code] sau đó bạn inject nó vào DrinkBuyer như sau [code lang=csharp] public class CircleKDrinkBuyer : IDrinkBuyer { private readonly ITransport _transport; public CircleKDrinkBuyer(ITransport transport) { _transport = transport; } public void BuyDrink(string name) { // Go to circle k // Find the -name- drink // Buy it // Deliver _transport.Transport(); } } [/code] thế nà xong :D</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">https://huntertran.github.io/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/ASP-NET/">ASP.NET</a><a href="/blog/tags/dependency-injection/">dependency injection</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Van-de"><span class="toc-number">1.</span> <span class="toc-text">1. Vấn đề</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Loi-ich"><span class="toc-number">2.</span> <span class="toc-text">2. Lợi ích</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Back-to-code"><span class="toc-number">3.</span> <span class="toc-text">3. Back to code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Interface"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Interface</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Implementation"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Register"><span class="toc-number">4.</span> <span class="toc-text">4. Register</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Lifetime"><span class="toc-number">4.1.</span> <span class="toc-text">4.1. Lifetime</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Contructor-Injection"><span class="toc-number">4.2.</span> <span class="toc-text">4.2. Contructor Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Action-Injection"><span class="toc-number">4.3.</span> <span class="toc-text">4.3. Action Injection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Service-trong-Service"><span class="toc-number">4.4.</span> <span class="toc-text">4.4. Service trong Service</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/07/10/repository-va-unit-of-work-pattern/">&lt; Repository và Unit of Work Pattern</a><a class="next" href="/blog/2018/06/12/aspnet-core-2-middleware/">[ASPNET Core 2] – Middleware &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

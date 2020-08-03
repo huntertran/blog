@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Repository và Unit of Work Pattern | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Repository và Unit of Work Pattern</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/07/10/repository-va-unit-of-work-pattern/">2018-07-10</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C#</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/Design-Pattern/">Design Pattern</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer.</p>
+<p>Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan tới nhau đều được thực hiện trên cùng một DbContext</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-dbcontext-c%E1%BB%A7a-entity-framework-core">1. DbContext của Entity Framework Core</a></p>
+<ul>
+<li><a href="#11-dbcontext-tracking">1.1. DbContext Tracking</a></li>
+</ul>
+</li>
+<li><p><a href="#2-repository">2. Repository</a></p>
+<ul>
+<li><a href="#21-l%C3%BD-do">2.1. Lý do</a></li>
+<li><a href="#22-implement">2.2. Implement</a></li>
+<li><a href="#23-performance-hit">2.3. Performance Hit</a></li>
+</ul>
+</li>
+<li><p><a href="#3-generic-repository">3. Generic Repository</a></p>
+</li>
+<li><p><a href="#4-t%E1%BA%A1o-class-unit-of-work">4. Tạo class Unit of Work</a></p>
+</li>
+<li><p><a href="#5-t%E1%BB%95ng-k%E1%BA%BFt">5. Tổng kết</a></p>
+</li>
+</ul>
+<h1 id="1-DbContext-cua-Entity-Framework-Core"><a href="#1-DbContext-cua-Entity-Framework-Core" class="headerlink" title="1. DbContext của Entity Framework Core"></a>1. DbContext của Entity Framework Core</h1><p>“Trước giờ xài mà có để ý <code>DbContext</code> là gì đâu” -&gt; đây chắc là tình trạng chung của kha khá công nghệ liên quan tới .NET, khi mà mọi thứ đã được xây dựng sẵn, và bạn chỉ có nhiệm vụ … xài</p>
+<blockquote>
+<p><code>DbContext</code> là một thực thể đại diện cho một phiên làm việc với database, dùng để query và lưu dữ liệu của bạn</p>
+</blockquote>
+<p>Vì nó chỉ đại diện cho 1 phiên làm việc, trong ASP.NET, mỗi khi có 1 request mới từ browser, 1 <code>DbContext</code> mới sẽ được tạo ra, và sẽ bị dispose khi return response cho browser</p>
+<p>Thông thường, bạn sẽ kế thừa lại từ <code>DbContext</code>, nhét thêm các <code>DbSet</code> vào, từ đó mới query các kiểu được</p>
+<blockquote>
+<p>Bạn có thể tham khảo thêm về cách thiết lập <code>DbContext</code> ở <a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">đây</a>, mục 3.2</p>
+</blockquote>
+<h2 id="1-1-DbContext-Tracking"><a href="#1-1-DbContext-Tracking" class="headerlink" title="1.1. DbContext Tracking"></a>1.1. DbContext Tracking</h2><p>Để đảm bảo tính toàn vẹn dữ liệu, DbContext dùng 1 cơ chế gọi là <code>tracking</code>.</p>
+<p>Khi bạn thay đổi 1 record (thêm, xóa, sửa), thì thay đổi đó ko được đưa xuống database ngay, mà sẽ còn vương vấn lại. DbContext sẽ theo dõi sự thay đổi này.</p>
+<p>Cho tới khi bạn đã thực hiện tất cả các thay đổi cần thiết, rồi gọi <code>yourDbContext.SaveChanges()</code>, thì lúc này, những thay đổi được track sẽ được <em>ship</em> xuống database.</p>
+<p>Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application</p>
+<h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p>Có cái sơ đồ hay ho sau <img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
+<p>Bạn có thể đọc thêm về các services được inject tại bài viết <a target="_blank" rel="noopener" href="https://coding4food.net/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">Dependency Injection trong ASP.NET Core</a></p>
+<p>Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)</p>
+<h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><ul>
+<li><p>Tách việc xử lý logic và việc truy cập database</p>
+<ul>
+<li>Dễ trace bug</li>
+<li>Dễ unit test</li>
+<li>Dễ thay đổi logic hoặc database</li>
+</ul>
+</li>
+<li><p>Gom chung nhìu tác vụ cơ bản về 1 chỗ</p>
+<ul>
+<li>Ko phải viết đi viết lại 1 tác vụ nhiều lần</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-Implement"><a href="#2-2-Implement" class="headerlink" title="2.2. Implement"></a>2.2. Implement</h2><p>Cụ tỉ, Repository sẽ có các nhiệm vụ: Liệt kê danh sách các record - Lấy 1 record - Thêm - Xóa - Sửa 1 record</p>
+<p>Bài toán: quản lý học sinh</p>
+<p>Tạo interface</p>
+<p>[code lang=csharp] using System; using System.Collections.Generic; using ContosoUniversity.Models;</p>
+<p>namespace ContosoUniversity.DAL { public interface IStudentRepository : IDisposable { IEnumerable<Student> GetStudents(); Student GetStudentByID(int studentId); void InsertStudent(Student student); void DeleteStudent(int studentID); void UpdateStudent(Student student); void Save(); } } [/code]</p>
+<p>Đoạn code trên khai báo một bộ CRUD (Create - Read - Update - Delete) kinh điển</p>
+<p>Tạo class implement</p>
+<p>[code lang=csharp] using System; using System.Collections.Generic; using System.Linq; using System.Data; using ContosoUniversity.Models;</p>
+<p>namespace ContosoUniversity.DAL { public class StudentRepository : IStudentRepository, IDisposable { // SchoolContext kế thừa từ DbContext, và có thêm DbSet<Student> private SchoolContext context;</p>
+<p>public StudentRepository(SchoolContext context) { this.context = context; }</p>
+<p>public IEnumerable<Student> GetStudents() { return context.Students.ToList(); }</p>
+<p>public Student GetStudentByID(int id) { return context.Students.Find(id); }</p>
+<p>public void InsertStudent(Student student) { context.Students.Add(student); }</p>
+<p>public void DeleteStudent(int studentID) { Student student = context.Students.Find(studentID); context.Students.Remove(student); }</p>
+<p>public void UpdateStudent(Student student) { context.Entry(student).State = EntityState.Modified; }</p>
+<p>public void Save() { context.SaveChanges(); }</p>
+<p>private bool disposed = false;</p>
+<p>protected virtual void Dispose(bool disposing) { if (!this.disposed) { if (disposing) { context.Dispose(); } } this.disposed = true; }</p>
+<p>public void Dispose() { Dispose(true); GC.SuppressFinalize(this); } } } [/code]</p>
+<p>Inject repository này vào Controller hoặc Service (nhớ khai báo nó trong <code>Startup.cs</code> trước nhóe)</p>
+<p>[code lang=csharp] public class StudentController { private readonly IStudentRepository _studentRepository;</p>
+<p>public StudentController(IStudentRepository studentRepository) { _studentRepository = studentRepository } } [/code]</p>
+<h2 id="2-3-Performance-Hit"><a href="#2-3-Performance-Hit" class="headerlink" title="2.3. Performance Hit"></a>2.3. Performance Hit</h2><p>Entity Framework khi query một record hoặc 1 bộ record nào đó trong database, nó sẽ trả về dạng <code>IQueryable</code>. Chỉ khi nào bạn gọi <code>.ToList();</code>, thì câu lệnh SQL mới được sinh ra và gửi tới database.</p>
+<p>Trong StudentRepository ở trên, nếu bạn muốn filter 1 list các student có tên là “ABC”, thì sẽ phải code trong controller như sau</p>
+<p>[code lang=csharp] public IActionResult GetStudents(string name) { // SQL đã được sinh ra, toàn bộ student trong db đã được trả về và lưu trong memory var allStudents = _studentRepository.GetStudents();</p>
+<p>// filter này chỉ thực hiện việc filter trên memory var filteredStudents = allStudents.Where(x =&gt; x.Name.Contains(name));</p>
+<p>return View(filteredStudents); } [/code]</p>
+<p>Đây là 1 code rất tệ khi mà student có hàng triệu record, trong khi bạn chỉ cần 1 số ít các record mà thôi.</p>
+<p>Ở phần sau, bạn sẽ biết cách fix cho vấn đề này, đồng thời implement 1 generic repository cho các tác vụ CRUD cơ bản</p>
+<h1 id="3-Generic-Repository"><a href="#3-Generic-Repository" class="headerlink" title="3. Generic Repository"></a>3. Generic Repository</h1><p>Về cơ bản, ta sẽ dùng kiểu khai báo generic class của C# để implement generic repository</p>
+<p>[code lang=csharp] using System; using System.Collections.Generic; using System.Linq; using System.Data; using System.Data.Entity; using ContosoUniversity.Models; using System.Linq.Expressions;</p>
+<p>namespace ContosoUniversity.DAL { public class GenericRepository<TEntity> where TEntity : class { // SchoolContext được kế thừa từ DbContext internal SchoolContext context;</p>
+<p>// Generic repository này sẽ hoạt động dựa trên entity được truyền vào khi đăng ký trong Startup.cs internal DbSet<TEntity> dbSet;</p>
+<p>public GenericRepository(SchoolContext context) { this.context = context; this.dbSet = context.Set<TEntity>(); }</p>
+<p>// Expression&lt;Func&lt;TEntity, bool&gt;&gt; filter: cho phép bạn truyền vào một filter expression dạng LINQ public virtual IEnumerable<TEntity> Get( Expression&lt;Func&lt;TEntity, bool&gt;&gt; filter = null, Func&lt;IQueryable<TEntity>, IOrderedQueryable<TEntity>&gt; orderBy = null, string includeProperties = “”) { IQueryable<TEntity> query = dbSet;</p>
+<p>// Query là 1 dạng IQueryable, chỉ được thực thi khi cần giá trị list if (filter != null) { query = query.Where(filter); }</p>
+<p>// Tiếp theo, nó sẽ kèm theo các property cần thiết khi người dùng chỉ định foreach (var includeProperty in includeProperties.Split (new char[] { ‘,’ }, StringSplitOptions.RemoveEmptyEntries)) { query = query.Include(includeProperty); }</p>
+<p>// Sau cùng, nó thực thi bằng cách translate thành câu lệnh SQL và gọi xuống database if (orderBy != null) { return orderBy(query).ToList(); } else { return query.ToList(); } }</p>
+<p>// trong asp.net, Id cho 1 object có thể là GUID hoặc int public virtual TEntity GetByID(object id) { return dbSet.Find(id); }</p>
+<p>public virtual void Insert(TEntity entity) { dbSet.Add(entity); }</p>
+<p>// trong asp.net, Id cho 1 object có thể là GUID hoặc int public virtual void Delete(object id) { TEntity entityToDelete = dbSet.Find(id); Delete(entityToDelete); }</p>
+<p>public virtual void Delete(TEntity entityToDelete) { if (context.Entry(entityToDelete).State == EntityState.Detached) { dbSet.Attach(entityToDelete); } dbSet.Remove(entityToDelete); }</p>
+<p>public virtual void Update(TEntity entityToUpdate) { dbSet.Attach(entityToUpdate); context.Entry(entityToUpdate).State = EntityState.Modified; } } } [/code]</p>
+<h1 id="4-Tao-class-Unit-of-Work"><a href="#4-Tao-class-Unit-of-Work" class="headerlink" title="4. Tạo class Unit of Work"></a>4. Tạo class Unit of Work</h1><p>Unit of Work chỉ có 1 nhiệm vụ duy nhất, đảm bảo tất cả các repository của bạn đều dùng chung một <code>DbContext</code>. Bằng cách này, khi thực hiện xong tất cả các tác vụ thay đổi database, bạn chỉ cần gọi <code>DbContext.SaveChanges()</code> 1 lần duy nhất, và các thay đổi đó sẽ được lưu lại trong database</p>
+<p>[code lang=csharp] using System; using ContosoUniversity.Models;</p>
+<p>namespace ContosoUniversity.DAL { public class UnitOfWork : IDisposable { private SchoolContext context = new SchoolContext(); private GenericRepository<Department> departmentRepository; private GenericRepository<Course> courseRepository;</p>
+<p>// Kiểm tra xem repository đã được khởi tạo chưa public GenericRepository<Department> DepartmentRepository { get { if (this.departmentRepository == null) { this.departmentRepository = new GenericRepository<Department>(context); } return departmentRepository; } }</p>
+<p>// Kiểm tra xem repository đã được khởi tạo chưa public GenericRepository<Course> CourseRepository { get { if (this.courseRepository == null) { this.courseRepository = new GenericRepository<Course>(context); } return courseRepository; } }</p>
+<p>public void Save() { context.SaveChanges(); }</p>
+<p>private bool disposed = false;</p>
+<p>protected virtual void Dispose(bool disposing) { if (!this.disposed) { if (disposing) { context.Dispose(); } } this.disposed = true; }</p>
+<p>public void Dispose() { Dispose(true); GC.SuppressFinalize(this); } } } [/code]</p>
+<p>Bước tiếp theo là thay đổi code của controller để sử dụng class UnitOfWork vừa mới khởi tạo</p>
+<p>[code lang=csharp] <br />// Lấy data var courses = unitOfWork.CourseRepository.Get(includeProperties: “Department”);</p>
+<p>// Lấy và order data var departmentsQuery = unitOfWork.DepartmentRepository.Get(orderBy: q =&gt; q.OrderBy(d =&gt; d.Name));</p>
+<p>// Insert var course = new Course(); course.Name = “Test”; … unitOfWork.CourseRepository.Insert(course); unitOfWork.Save();</p>
+<p>// Hủy unitOfWork.Dispose(); [/code]</p>
+<h1 id="5-Tong-ket"><a href="#5-Tong-ket" class="headerlink" title="5. Tổng kết"></a>5. Tổng kết</h1><p>Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface <code>IQueryable</code>. Chúc vui :D</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/07/10/repository-va-unit-of-work-pattern/">https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/repository/">repository</a><a href="/blog/tags/unit-of-work/">unit of work</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-DbContext-cua-Entity-Framework-Core"><span class="toc-number">1.</span> <span class="toc-text">1. DbContext của Entity Framework Core</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-DbContext-Tracking"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. DbContext Tracking</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Repository"><span class="toc-number">2.</span> <span class="toc-text">2. Repository</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Ly-do"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Lý do</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Implement"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. Implement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Performance-Hit"><span class="toc-number">2.3.</span> <span class="toc-text">2.3. Performance Hit</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Generic-Repository"><span class="toc-number">3.</span> <span class="toc-text">3. Generic Repository</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Tao-class-Unit-of-Work"><span class="toc-number">4.</span> <span class="toc-text">4. Tạo class Unit of Work</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Tong-ket"><span class="toc-number">5.</span> <span class="toc-text">5. Tổng kết</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/09/14/machine-learning-introduction/">&lt; Machine Learning - 1.1 - Introduction</a><a class="next" href="/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">[Design Pattern] - Dependency Injection trong ASP.NET Core &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

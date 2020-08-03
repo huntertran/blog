@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Machine Learning] - 3.2 - Logistic Regression Model | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Machine Learning] - 3.2 - Logistic Regression Model</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2019/06/14/machine-learning-3-2-logistic-regression-model/">2019-06-14</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Others/">Others</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng</p>
+<a id="more"></a>
+<ul>
+<li><a href="#1-cost-function-for-logistic-regression">1. Cost Function for Logistic Regression</a><ul>
+<li><a href="#11-c%C3%B4ng-th%E1%BB%A9c">1.1. Công thức</a></li>
+<li><a href="#12-%C4%91%E1%BB%93-th%E1%BB%8B">1.2. Đồ thị</a></li>
+<li><a href="#13-k%E1%BA%BFt-lu%E1%BA%ADn">1.3. Kết luận</a></li>
+</ul>
+</li>
+<li><a href="#2-%C4%91%C6%A1n-gi%E1%BA%A3n-h%C3%B3a-cost-function-v%C3%A0-%C3%A1p-d%E1%BB%A5ng-gradient-descent">2. Đơn giản hóa Cost Function và áp dụng Gradient Descent</a><ul>
+<li><a href="#21-bi%E1%BA%BFn-%C4%91%E1%BB%95i">2.1. Biến đổi</a></li>
+<li><a href="#22-gradient-descent">2.2. Gradient Descent</a></li>
+</ul>
+</li>
+<li><a href="#3-advanced-optimization">3. Advanced Optimization</a></li>
+</ul>
+<h1 id="1-Cost-Function-for-Logistic-Regression"><a href="#1-Cost-Function-for-Logistic-Regression" class="headerlink" title="1. Cost Function for Logistic Regression"></a><strong>1. Cost Function for Logistic Regression</strong></h1><p>Đối với linear regression, ta có thể dùng cost function như sau</p>
+<p>$latex \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2$</p>
+<p>Tuy nhiên, nếu áp dụng cùng công thức này với Logistic Regression, ta sẽ có 1 đồ thị vô cùng “gập ghềnh”, với rất nhiều điểm local optimal. Điều này trở thành một trở ngại vô cùng lớn với thuật toán gradient descent.</p>
+<h2 id="1-1-Cong-thuc"><a href="#1-1-Cong-thuc" class="headerlink" title="1.1. Công thức"></a>1.1. Công thức</h2><p>Nói cách khác, nó sẽ không phải là một “convex function”</p>
+<p>Thay vào đó, cost function cho Logistic Regression sẽ giống như sau</p>
+<p>$latex  J(\theta) = \dfrac{1}{m} \sum_{i=1}^m \mathrm{Cost}(h_\theta(x^{(i)}),y^{(i)})$<br>$latex   \mathrm{Cost}(h_\theta(x),y) = -\log(h_\theta(x)) \quad \quad \quad \text{if y = 1}$<br>$latex   \mathrm{Cost}(h_\theta(x),y) = -\log(1-h_\theta(x)) \quad \quad \text{if y = 0}$</p>
+<h2 id="1-2-Do-thi"><a href="#1-2-Do-thi" class="headerlink" title="1.2. Đồ thị"></a>1.2. Đồ thị</h2><p>Khi y = 1, ta có đồ thị sau cho $J(\theta)$ và $h_\theta(x)$:</p>
+<p><img src="https://i.imgur.com/w6Ia2IS.png" alt="if y = 1 plot"></p>
+<p>Tương tự, ta có đồ thị sau khi y = 0, ta có đồ thị sau</p>
+<p><img src="https://i.imgur.com/g9c2Fmn.png" alt="if y = 0 plot"></p>
+<h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Dựa vào đồ thị, ta có thể rút ra kết luận sau</p>
+<p>$latex \mathrm{Cost}(h_\theta(x),y) = 0 \text{ if } h_\theta(x) = y$<br>$latex \mathrm{Cost}(h_\theta(x),y) \rightarrow \infty \text{ if } y = 0 \; \mathrm{and} \; h_\theta(x) \rightarrow 1$<br>$latex \mathrm{Cost}(h_\theta(x),y) \rightarrow \infty \text{ if } y = 1 \; \mathrm{and} \; h_\theta(x) \rightarrow 0$</p>
+<p>Như vậy, khi cost = 0, thì hàm hypothesis = y (cho cả trường hợp y = 0 hoặc y = 1)</p>
+<p>Ngược lại</p>
+<ul>
+<li>nếu y = 0, và hypothesis tiến dần tới 1, thì cost sẽ tiến dần tới vô cực</li>
+<li>nếu y = 1, và hypothesis tiến dần tới 0, thì cost sẽ tiến dần tới vô cực</li>
+</ul>
+<h1 id="2-Don-gian-hoa-Cost-Function-va-ap-dung-Gradient-Descent"><a href="#2-Don-gian-hoa-Cost-Function-va-ap-dung-Gradient-Descent" class="headerlink" title="2. Đơn giản hóa Cost Function và áp dụng Gradient Descent"></a>2. Đơn giản hóa Cost Function và áp dụng Gradient Descent</h1><h2 id="2-1-Bien-doi"><a href="#2-1-Bien-doi" class="headerlink" title="2.1. Biến đổi"></a>2.1. Biến đổi</h2><p>Với biểu thức ở trên, chỉ cần biến đổi một chút, ta có thể thu gọn nó vào thành 1 biểu thức như sau:</p>
+<p>$latex \mathrm{Cost}(h_\theta(x),y) = - y \; \log(h_\theta(x)) - (1 - y) \log(1 - h_\theta(x))$</p>
+<p>y chỉ có 2 giá trị hoặc = 1 hoặc = 0. Lần lượt thay 2 giá trị này vào biểu thức trên, ta sẽ thấy 1 trong 2 biểu thức con bị triệt tiêu.</p>
+<p>Với data của bộ training sets, ta có thể viết đầy đủ biểu thức của cost function như sau:</p>
+<p>$latex J(\theta) = -\frac{1}{m} \sum_{i=1}^{m}[y^{(i)}log(h_\theta(x^{(i)})) + (1-y^{(i)})log(1-h_\theta(x^{(i)}))]$</p>
+<p>Sau đó, ta có thể “vector hóa” biểu thức này</p>
+<p>$latex h = g(X\theta) \ J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right)$</p>
+<h2 id="2-2-Gradient-Descent"><a href="#2-2-Gradient-Descent" class="headerlink" title="2.2. Gradient Descent"></a>2.2. Gradient Descent</h2><p>Nhắc lại một chút, dạng tổng quát của Gradient Descent như sao:</p>
+<p>$latex Repeat \; \lbrace \ \; \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) \ \rbrace$</p>
+<p>Dùng đạo hàm, ta có thể tính được:</p>
+<p>$latex Repeat \; \lbrace \ \; \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \ \rbrace$</p>
+<p>áp bộ giá trị của training set vào, và chuyển thành toán tuyến tính (vectorise), ta có phép tính sau</p>
+<p>$latex \theta:=\theta-\frac{\alpha}{m}X^T(g(X\theta)-\vec{y})$</p>
+<h1 id="3-Advanced-Optimization"><a href="#3-Advanced-Optimization" class="headerlink" title="3. Advanced Optimization"></a>3. Advanced Optimization</h1><p>Bên cạnh thuật toán Gradient Descent dùng để tính toán giá trị tối ưu của $latex \theta$, chúng ta còn có nhiều thuật toán phức tạp hơn, nhưng cũng nhanh hơn nhiều:</p>
+<ul>
+<li>Conjugate gradient</li>
+<li>BFGS</li>
+<li>l-BFGS</li>
+</ul>
+<p>Các thuật toán này đều đã được xây dựng và tối ưu hóa trong các thư viện số học của nhiều ngôn ngữ lập trình.</p>
+<p>Đầu tiên, chúng ta sẽ cần công thức để tính toán 2 biểu thức</p>
+<p>$latex J(\theta) \ \dfrac{\partial}{\partial \theta_j}J(\theta)$</p>
+<p>Tùy thuộc vào ngôn ngữ lập trình sẽ có các cú pháp khác nhau. Đối với Matlab, ta có thể viết 1 function duy nhất trả về cả 2 giá trị trên:</p>
+<p>function [jVal, gradient] = costFunction(theta)<br>  jVal = […code to compute J(theta)…];<br>  gradient = […code to compute derivative of J(theta)…];<br>end</p>
+<p>Sau đó, ta dùng function <code>optimset()</code> để tạo ra 1 object chứa các option cân thiết. Dùng object này đưa vào function <code>fminunc()</code> của Octave. Kết quả tính toán sẽ là 1 vector chứa các giá trị tối ưu của $latex \theta$</p>
+<p>options = optimset(‘GradObj’, ‘on’, ‘MaxIter’, 100);<br>initialTheta = zeros(2,1);<br>   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2019/06/14/machine-learning-3-2-logistic-regression-model/">https://huntertran.github.io/blog/2019/06/14/machine-learning-3-2-logistic-regression-model/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Cost-Function-for-Logistic-Regression"><span class="toc-number">1.</span> <span class="toc-text">1. Cost Function for Logistic Regression</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Cong-thuc"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Công thức</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Do-thi"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Đồ thị</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ket-luan"><span class="toc-number">1.3.</span> <span class="toc-text">Kết luận</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Don-gian-hoa-Cost-Function-va-ap-dung-Gradient-Descent"><span class="toc-number">2.</span> <span class="toc-text">2. Đơn giản hóa Cost Function và áp dụng Gradient Descent</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Bien-doi"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Biến đổi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Gradient-Descent"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. Gradient Descent</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Advanced-Optimization"><span class="toc-number">3.</span> <span class="toc-text">3. Advanced Optimization</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2019/06/16/fighting-with-unauthorized-copies-of-your-content/">&lt; [Life] - Fighting with unauthorized copies of your content</a><a class="next" href="/blog/2019/06/14/gecko-dom-logging-system/">[Research] - Gecko Dom Logging system &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

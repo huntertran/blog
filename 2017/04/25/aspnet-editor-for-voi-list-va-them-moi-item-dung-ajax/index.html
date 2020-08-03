@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[ASPNET] Editor for với List và thêm mới item dùng AJAX | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[ASPNET] Editor for với List và thêm mới item dùng AJAX</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">2017-04-25</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Tưởng tượng bạn có list các item trong ViewModel</p>
+<p>Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao?</p>
+<p>Đọc xong bài này, bạn sẽ biết cách làm nhóe</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#editorfor-control">EditorFor Control</a></p>
+</li>
+<li><p><a href="#class">Class</a></p>
+<ul>
+<li><a href="#c-code">C# code</a></li>
+<li><a href="#javascript-code">JavaScript Code</a></li>
+</ul>
+</li>
+<li><p><a href="#c%C3%A1ch-x%C3%A0i">Cách xài</a></p>
+<ul>
+<li><a href="#chu%E1%BA%A9n-b%E1%BB%8B-model">Chuẩn bị model</a></li>
+<li><a href="#razor-code">Razor code</a></li>
+</ul>
+</li>
+<li><p><a href="#k%E1%BA%BFt-qu%E1%BA%A3">Kết quả</a></p>
+</li>
+<li><p><a href="#c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng">Cách hoạt động</a></p>
+<ul>
+<li><a href="#c%C3%A1c-b%C6%B0%E1%BB%9Bc">Các bước</a></li>
+<li><a href="#t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index">Tại sao lại cần Index</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="EditorFor-Control"><a href="#EditorFor-Control" class="headerlink" title="EditorFor Control"></a>EditorFor Control</h1><p>Trong <a target="_blank" rel="noopener" href="https://coding4food.net/2017/04/20/asp-net-mo-rong-editorfor/">bài kỳ trước</a>, bạn đã biết cách xài EditorFor và EditorForModel control.</p>
+<p>Một điểm hạn chế của 2 thằng này là chúng không tạo ra input cho các class tùy biến của bạn</p>
+<p>Còn 1 list các item thì lại càng không có.</p>
+<p>Hiển thị một list thì dễ, một vòng lặp for (hoặc foreach) là xong</p>
+<p>Nhưng một “Editor” cho cả một list thì ko được support, nên bạn phải tự tạo thôi</p>
+<p>Từ một bài viết thú vị từ Matt Lunn <a target="_blank" rel="noopener" href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
+<h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><h2 id="C-code"><a href="#C-code" class="headerlink" title="C# code"></a>C# code</h2><p>[code lang=csharp] namespace Yournamespace.Utilities { using System; using System.Collections.Generic; using System.Linq; using System.Linq.Expressions; using System.Text; using System.Web.Mvc; using System.Web.Mvc.Html;</p>
+<p>public static class HtmlHelperExtensions { /// <summary> /// Generate appropriate control for a list of data /// </summary> /// <typeparam name="TModel">The Model contain the list</typeparam> /// <typeparam name="TValue">The Model of list of items</typeparam> /// <param name="html"></param> /// <param name="propertyExpression">Which property</param> /// <param name="indexResolverExpression">Select the property to be the index</param> /// <param name="isIncludeNewItem">Set to true to include a default new item</param> /// <param name="includeIndexField">Set to true to include Index in values sent to server</param> /// <returns>HTML codes of editorfor a list of items</returns> public static MvcHtmlString EditorForMany&lt;TModel, TValue&gt;( this HtmlHelper<TModel> html, Expression&lt;Func&lt;TModel, IEnumerable<TValue>&gt;&gt; propertyExpression, Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression = null, bool isIncludeNewItem = false, bool includeIndexField = true) where TModel : class where TValue : new() { var items = propertyExpression.Compile()(html.ViewData.Model); var htmlBuilder = new StringBuilder(); var htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression); var htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName); var indexResolver = GetIndexResolver(indexResolverExpression); items = AddDefaultNewItem(isIncludeNewItem, items);</p>
+<p>foreach (var item in items) { var dummy = new { Item = item };</p>
+<p>var guid = indexResolver(item);</p>
+<p>var memberExp = Expression.MakeMemberAccess( Expression.Constant(dummy), dummy.GetType().GetProperty(“Item”));</p>
+<p>var singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);</p>
+<p>guid = string.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid); BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp); }</p>
+<p>return new MvcHtmlString(htmlBuilder.ToString()); }</p>
+<p>private static void BuildHtmlString&lt;TModel, TValue&gt;( HtmlHelper<TModel> html, Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression, bool includeIndexField, StringBuilder htmlBuilder, string htmlFieldName, string htmlFieldNameWithPrefix, string guid, Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp) where TModel : class where TValue : new() { htmlBuilder.Append(@”<div>“);</p>
+<p>if (includeIndexField) { htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression)); }</p>
+<p>htmlBuilder.Append(html.EditorFor(singleItemExp, null, $”{htmlFieldName}[{guid}]“));</p>
+<p>htmlBuilder.Append(@”</div>“); }</p>
+<p>private static IEnumerable<TValue> AddDefaultNewItem<TValue>(bool isIncludeNewItem, IEnumerable<TValue> items) where TValue : new() { if (isIncludeNewItem) { items = items.Concat(new[] { new TValue() }); }</p>
+<p>return items; }</p>
+<p>private static Func&lt;TValue, string&gt; GetIndexResolver<TValue>(Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression) where TValue : new() { Func&lt;TValue, string&gt; indexResolver; if (indexResolverExpression == null) { indexResolver = x =&gt; null; } else { indexResolver = indexResolverExpression.Compile(); }</p>
+<p>return indexResolver; }</p>
+<p>public static MvcHtmlString EditorForManyIndexField<TModel>( this HtmlHelper<TModel> html, Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression = null) { var htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix; var first = htmlPrefix.LastIndexOf(‘[‘); var last = htmlPrefix.IndexOf(‘]‘, first + 1);</p>
+<p>if (first == -1 || last == -1) { throw new InvalidOperationException(“EditorForManyIndexField called when not in a EditorForMany context”); }</p>
+<p>var htmlFieldNameWithPrefix = htmlPrefix.Substring(0, first); var guid = htmlPrefix.Substring(first + 1, last - first - 1);</p>
+<p>return _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression); }</p>
+<p>private static MvcHtmlString _EditorForManyIndexField<TModel>( string htmlFieldNameWithPrefix, string guid, Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression) { var htmlBuilder = new StringBuilder(); htmlBuilder.AppendFormat( @”&lt;input type=””hidden”” name=””{0}.Index”” value=””{1}”” /&gt;”, htmlFieldNameWithPrefix, guid);</p>
+<p>if (indexResolverExpression != null) { htmlBuilder.AppendFormat( @”&lt;input type=””hidden”” name=””{0}[{1}].{2}”” value=””{1}”” /&gt;”, htmlFieldNameWithPrefix, guid, ExpressionHelper.GetExpressionText(indexResolverExpression)); }</p>
+<p>return new MvcHtmlString(htmlBuilder.ToString()); } } } [/code]</p>
+<h2 id="JavaScript-Code"><a href="#JavaScript-Code" class="headerlink" title="JavaScript Code"></a>JavaScript Code</h2><p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
+<p>[code lang=javascript] function GenerateGuid() { function s4() { return Math.floor((1 + Math.random()) * 0x10000) .toString(16) .substring(1); }</p>
+<p>return s4() + s4() + “-“ + s4() + “-“ + s4() + “-“ + s4() + “-“ + s4() + s4() + s4(); }</p>
+<p>function AssignAddMoreButton() { $(“.add-more-button”).click(function (event) { event.preventDefault(); debugger; var id = “#” + $(this).data(“class”); var clone = $(id).children().last().clone(); var guid = clone.children().first().val(); var regex = new RegExp(guid, “g”); var newHtml = clone.html(function (i, oldHtml) { return oldHtml.replace(regex, GenerateGuid()); }); $(id).append(newHtml); }); } [/code]</p>
+<h1 id="Cach-xai"><a href="#Cach-xai" class="headerlink" title="Cách xài"></a>Cách xài</h1><h2 id="Chuan-bi-model"><a href="#Chuan-bi-model" class="headerlink" title="Chuẩn bị model"></a>Chuẩn bị model</h2><p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
+<p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
+<p>[code lang=csharp] public class Model { // Your normal, already existed properties</p>
+<p>// set to false if you don’t want to generate a HTML input tag // for it when using with editorfor control [ScaffoldColumn(false)] public string Index { get; set; } } [/code]</p>
+<h2 id="Razor-code"><a href="#Razor-code" class="headerlink" title="Razor code"></a>Razor code</h2><p>[code lang=csharp] @using(Html.BeginForm(“ActionName”,”ControllerName”,FormMethod.Post, new {@class=”CssClassName”})) { // the last parameter “true” is to generate a default item @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, true) }</p>
+<p>// include the javascript code file above AssignAddMoreButton();</p>
+<p>[/code]</p>
+<p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
+<h1 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả"></a>Kết quả</h1><p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) <img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
+<h1 id="Cach-hoat-dong"><a href="#Cach-hoat-dong" class="headerlink" title="Cách hoạt động"></a>Cách hoạt động</h1><p>HtmlHelperExtensions chính là chỗ mà điều kỳ diệu xảy ra. Keyword Extensions sẽ “đăng ký” nó thành một extension của HtmlHelper</p>
+<h2 id="Cac-buoc"><a href="#Cac-buoc" class="headerlink" title="Các bước"></a>Các bước</h2><p>Về cơ bản, nó sẽ làm những bước sau</p>
+<ol>
+<li>Lấy danh sách Items</li>
+<li>Lấy Index property (nếu bạn có khai báo index)</li>
+<li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
+<li>Dựng code HTML</li>
+</ol>
+<p>[code lang=html] <div class="form-group"> // List of your html input tag generated by editorfor and extended templates </div> [/code]</p>
+<h2 id="Tai-sao-lai-can-Index"><a href="#Tai-sao-lai-can-Index" class="headerlink" title="Tại sao lại cần Index"></a>Tại sao lại cần Index</h2><p>Có 2 cách để send một list data tới controller</p>
+<ul>
+<li><p>dùng một mảng có đánh số</p>
+<ul>
+<li>xóa 1 item sẽ làm lộn xộn cả list, controller chỉ nhận mảng liên tục</li>
+<li>thêm mới 1 item thì cần phải biết index cuối cùng là bao nhiêu</li>
+</ul>
+</li>
+</ul>
+<p>[code lang=html] <input type="text" name="YourList\[0\].Data"/> <input type="text" name="YourList\[1\].Data"/> [/code]</p>
+<ul>
+<li><p>dùng mảng có index dạng string</p>
+<ul>
+<li>yêu cầu thêm một tag input ẩn để chứa index</li>
+<li>dễ thêm, xóa, sửa item</li>
+</ul>
+</li>
+</ul>
+<p>[code lang=html] <input type="hidden" name="YourList.Index" value="radomGuid1"/> <input type="text" name="YourList\[randomGuid1\].Data"/></p>
+<p><input type="hidden" name="YourList.Index" value="anotherGuid2"/> <input type="text" name="YourList\[anotherGuid2\].Data"/> [/code]</p>
+<p>Như bạn cũng thấy, giá trị của hidden input tag có thể là bất cứ gì, miễn là giá trị trong ngoặc vuông giống với nó.</p>
+<p>Bước 1 bước xa hơn, đoạn code javascript bên trên sẽ tạo ra index dạng GUID, cho nên bạn sẽ không phải lo về vấn đề trùng lặp index. Tuy nhiên, nó ko phải là GUID thiệt, vì để generate GUID thiệt sẽ hơi phức tạp, và làm cho app nặng lên, giống như xài tên lửa đi giết ruồi, cho nên để cho đơn giản, đoạn code đó chỉ sinh ra “fake” GUID, nhưng theo cách code thì khó mà trùng được</p>
+<p>Theo bạn, bạn có cách nào cải tiến đoạn code bên trên không?</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/editorfor/">editorfor</a><a href="/blog/tags/ajax/">ajax</a><a href="/blog/tags/editorformany/">editorformany</a><a href="/blog/tags/list/">list</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EditorFor-Control"><span class="toc-number">1.</span> <span class="toc-text">EditorFor Control</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-number">2.</span> <span class="toc-text">Class</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-code"><span class="toc-number">2.1.</span> <span class="toc-text">C# code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-Code"><span class="toc-number">2.2.</span> <span class="toc-text">JavaScript Code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cach-xai"><span class="toc-number">3.</span> <span class="toc-text">Cách xài</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Chuan-bi-model"><span class="toc-number">3.1.</span> <span class="toc-text">Chuẩn bị model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Razor-code"><span class="toc-number">3.2.</span> <span class="toc-text">Razor code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ket-qua"><span class="toc-number">4.</span> <span class="toc-text">Kết quả</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cach-hoat-dong"><span class="toc-number">5.</span> <span class="toc-text">Cách hoạt động</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cac-buoc"><span class="toc-number">5.1.</span> <span class="toc-text">Các bước</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tai-sao-lai-can-Index"><span class="toc-number">5.2.</span> <span class="toc-text">Tại sao lại cần Index</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">&lt; Wordpress - Install Wordpress to Docker containers from Windows</a><a class="next" href="/blog/2017/04/20/asp-net-mo-rong-editorfor/">[ASP.NET] Mở rộng EditorFor &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

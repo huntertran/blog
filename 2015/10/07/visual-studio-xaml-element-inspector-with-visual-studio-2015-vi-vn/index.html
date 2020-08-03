@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [vi-vn] | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Visual Studio] XAML Element Inspector with Visual Studio 2015 [vi-vn]</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/">2015-10-07</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/uncategorized/">uncategorized</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là “Live Visual Tree” và “Live Property Explorer”. Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy [insert hình há mỏ kinh ngạc]</p>
+<a id="more"></a>
+<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
+<p>Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy một cục toolbar nhỏ gọi là “Live Visual Tree”. Nhấn zô nó để mở ra</p>
+<p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
+<p>Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"> Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
+<p>Click một phát, và Live Visual Tree sẽ nhảy tới vị trí chính xác của element đó</p>
+<p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
+<p>Bạn cũng có thể click vào các elements khác trong Live Visual Tree, và cái khung chấm đỏ sẽ nhảy tới element trên app đang chạy của bạn. Bằng cách này, bạn có thể hiểu chính xác những element nào được vẽ trên app của bạn.</p>
+<p>Bạn cũng có thể search một element bằng tên hoặc loại của nó</p>
+<p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
+<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy “Live Property Explorer”, click vô nó để mở ra, rùi click cái ghim để đó dính zô đó</p>
+<p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
+<p>Ủa mà sao có ít propery hơn bình thường nhỉ. Đừng lo, mở rộng cái group “Default” ra và bạn sẽ thấy mấy property còn lại”</p>
+<p>Một điều hay của Live Property Explorer là bạn có thể thay đổi các giá trị trong các property, và xem sự thay đổi đó ngay lập tức trên app đang chạy của bạn.</p>
+<p>Mình sẽ thử đổi Height thành 100, và xem chuyện gì sẽ xảy ra trong app</p>
+<p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
+<p>Giờ tới cái app</p>
+<p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
+<p>Quá kinh khủng phải ko? Bạn có thể thay đổi hầu như mọi thứ, ngoại trừ một số property bị khóa (màu xám xịt) trong Live Property Explorer</p>
+<p>Quá đã. Thế là bây giờ bạn đã biết sử dụng Live Visual Tree để dò code XAML của bạn được render như thế nào trên app, và dùng Live Property Explorer để thay đổi giá trị của các Property, và xem sự thay đổi đó ngay lập tức, ngay trên app đang chạy mà không cần phải build lại.</p>
+<p>Hẹn gặp lại bạn trong những bài post tiếp theo về những tính năng cực khủng của Visual Studio 2015 nhé</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/">https://huntertran.github.io/blog/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/Visual-Studio/">Visual Studio</a><a href="/blog/tags/live-visual-tree/">live visual tree</a><a href="/blog/tags/on-the-fly/">on the fly</a><a href="/blog/tags/property/">property</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Live-Visual-Tree"><span class="toc-number">1.</span> <span class="toc-text">Live Visual Tree</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Live-Property-Explorer"><span class="toc-number">2.</span> <span class="toc-text">Live Property Explorer</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">&lt; [Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a><a class="next" href="/blog/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/">[Visual Studio] Visual Studio have Super Power with help of Extensions &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

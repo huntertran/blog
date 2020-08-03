@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Computer Tips] [Part 1] Be an Advanced User of Web Browser</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">2015-07-13</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Computer-Tips/">Computer Tips</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Giữa một ma trận mê cung các trình duyệt, nào là edge rồi cờ rôm, cáo lửa với chả đít nhôm, bạn sẽ xài cái gì đây?</p>
+<p>Lại nghe, chrome ăn ram như uống nước, firefox chậm như con rùa bò, chỉ hận sao không thể tăng ram, gắn SSD.</p>
+<p>Còn nghe, Add-on như thuốc tăng lực, User-script như lá đu đủ, xài thế nào đây?</p>
+<p>Bài viết này sẽ hướng dẫn các bạn cách thiết lập cho các trình duyệt phổ biến để chúng chạy trơn tru mượt mà mà không chói lóa.</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-thi%E1%BA%BFt-l%E1%BA%ADp-cho-m%C3%A1y-t%C3%ADnh">1. Thiết lập cho máy tính</a></p>
+<ul>
+<li><p><a href="#11-quay-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">1.1 Quay về thiết lập mặc định</a></p>
+</li>
+<li><p><a href="#12-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-tr%C3%ACnh-duy%E1%BB%87t-kh%C3%B4ng-ch%C3%ADnh-th%E1%BB%91ng">1.2 Gỡ bỏ các trình duyệt không chính thống</a></p>
+</li>
+<li><p><a href="#13-c%C3%A0i-%C4%91%E1%BA%B7t-m%E1%BB%99t-tr%C3%ACnh-duy%E1%BB%87t-web-ch%C3%ADnh-ch%E1%BB%A7">1.3 Cài đặt một trình duyệt Web chính chủ</a></p>
+<ul>
+<li><a href="#131-mozilla-firefox">1.3.1 Mozilla Firefox</a></li>
+<li><a href="#132-google-chrome">1.3.2 Google Chrome</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#2-t%E1%BB%91i-%C6%B0u-h%C3%B3a-tr%C3%ACnh-duy%E1%BB%87t-web">2. Tối ưu hóa trình duyệt web</a></p>
+<ul>
+<li><p><a href="#21-mozilla-firefox">2.1 Mozilla Firefox</a></p>
+<ul>
+<li><p><a href="#211-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.1.1 Về thiết lập mặc định</a></p>
+</li>
+<li><p><a href="#212-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on--plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</a></p>
+</li>
+<li><p><a href="#213-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.1.3 Cài các Add-on hữu ích</a></p>
+<ul>
+<li><a href="#2131-color-that-site">2.1.3.1 Color that site</a></li>
+<li><a href="#2132-grease-monkey">2.1.3.2 Grease Monkey</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#22-google-chrome">2.2 Google Chrome</a></p>
+<ul>
+<li><a href="#221-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.2.1 Thiết lập mặc định</a></li>
+<li><a href="#222-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on-v%C3%A0-plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</a></li>
+<li><a href="#223-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.2.3 Cài các add-on hữu ích</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Thiet-lap-cho-may-tinh"><a href="#1-Thiet-lap-cho-may-tinh" class="headerlink" title="1. Thiết lập cho máy tính"></a>1. Thiết lập cho máy tính</h1><h2 id="1-1-Quay-ve-thiet-lap-mac-dinh"><a href="#1-1-Quay-ve-thiet-lap-mac-dinh" class="headerlink" title="1.1 Quay về thiết lập mặc định"></a>1.1 Quay về thiết lập mặc định</h2><p>Trong quá trình sử dụng máy tính, có nhiều phần mềm yêu cầu cài đặt, và kèm theo nó là các khuyến mãi như các thanh công cụ, các phần mềm rác, vân vân.</p>
+<p>Việc đầu tiên các bạn cần phải làm là gỡ bỏ các thanh công cụ này</p>
+<p>Vào Start, gõ Control Panel và mở Control Panel lên</p>
+<p><img src="https://farm1.staticflickr.com/371/19468724630_4b7f3c366f_o.png"></p>
+<p>Chọn Uninstall a program <img src="https://farm4.staticflickr.com/3675/19649655092_cc74a4cb11_o.png"></p>
+<p>Tiếp theo là tìm và gỡ bỏ tất cả các phần mềm có chữ “Toolbar” trong đó. Trust me.</p>
+<h2 id="1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong"><a href="#1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong" class="headerlink" title="1.2 Gỡ bỏ các trình duyệt không chính thống"></a>1.2 Gỡ bỏ các trình duyệt không chính thống</h2><p>Một trình duyệt không chính thống là một trình duyệt dựa trên bộ mã nguồn của trình duyệt nào đó, và được quảng cáo là có các tính năng hay hơn, xịn hơn, tốt hơn so với bản gốc.</p>
+<p>Tin tui đi, các trình duyệt này hoàn toàn sẽ bị đè bẹp bởi bản gốc nếu bạn tiếp tục đọc tiếp bài blog này</p>
+<p>Các trình duyệt không chính thống là (ý kiến chủ quan):</p>
+<ul>
+<li>Cờ rôm cộng / Cờ rôm</li>
+<li>Comodo Dragon – Đi kèm khi cài Comodo Internet Security</li>
+<li>Rockmelt</li>
+<li>Waterfox</li>
+<li>Pale Moon</li>
+<li>Vân vân và vân vân</li>
+</ul>
+<h2 id="1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu"><a href="#1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu" class="headerlink" title="1.3 Cài đặt một trình duyệt Web chính chủ"></a>1.3 Cài đặt một trình duyệt Web chính chủ</h2><p>Đối với các bạn đam mê tốc độ cao, ngốn ít ram, mì ăn liền, mình khuyến cáo không nên cài gì cả, mà hãy dùng Edge.</p>
+<p>Nếu bạn vẫn đang dùng Windows 7, thì bạn có thể xài Internet Explorer</p>
+<p>Tuy nhiên, cần phải Update Internet Explorer lên bản mới tại đây: <a target="_blank" rel="noopener" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">http://windows.microsoft.com/en-us/internet-explorer/download-ie</a></p>
+<p>Nhưng hãy tiếp tục đọc tiếp, nhiều thứ hay ho đang chờ các bạn</p>
+<h3 id="1-3-1-Mozilla-Firefox"><a href="#1-3-1-Mozilla-Firefox" class="headerlink" title="1.3.1 Mozilla Firefox"></a>1.3.1 Mozilla Firefox</h3><p>Firefox là một trình duyệt mở (open source), do cộng đồng phát triển, và quản lý bởi Mozilla Foundation.</p>
+<p>Đây là trình duyệt “trong trắng” nhất hiện nay, nó không chứa các công cụ theo dõi hành vi người dùng, không hỗ trợ và ủng hộ quảng cáo, không tiết lộ thông tin bảo mật và password của người dùng (do nó dùng các thuật toán mã hóa 3DES, được đánh giá là an toàn cho tới năm 2020 (khi đó với các tiến bộ khoa học kỹ thuật, sức mạnh của máy tính tăng lên, thì việc bẻ khóa thuật toán này, hoặc tấn công theo kiểu dò từng mã một sẽ mất ít thời gian hơn)</p>
+<p>Firefox có các phiên bản khác nhau dành cho những đối tượng khác nhau, nhìn chung, bạn sẽ cần phiên bản chính của nó, download tại đây: <a target="_blank" rel="noopener" href="https://www.mozilla.org/en-US/firefox/new/">https://www.mozilla.org/en-US/firefox/new/</a></p>
+<h3 id="1-3-2-Google-Chrome"><a href="#1-3-2-Google-Chrome" class="headerlink" title="1.3.2 Google Chrome"></a>1.3.2 Google Chrome</h3><p>Google Chrome được xây dựng bởi Google, dựa trên Chromium, cũng được phát triển bởi Google (đúng rồi, Google phát triển cả 2 cái).</p>
+<p>Điểm khác nhau là Chromium thì mã nguồn mở, bất kỳ ai cũng có thể vào đọc mã nguồn của nó, do đó, Google sẽ không thể “làm điều xằng bậy” trong đấy được, nếu không muốn bị tẩy chay.</p>
+<p>Còn Google Chrome thì mã nguồn đóng, và kèm theo rất nhiều tính năng mà Chromium không có, và được quảng cáo là tốt hơn nhiều.</p>
+<p>Chromium không có phiên bản chính thức, cũng chả có phiên bản ổn định chạy được lâu dài (Stable Build), vì dụng ý của Google là bạn không nên xài nó =]]. Trên trang chủ của Chromium có đường link dẫn tới Google Chrome =]], cho ta thấy mưu đồ thâm sâu của Google</p>
+<p><img src="https://farm1.staticflickr.com/515/19631148726_b21869a385_o.png"></p>
+<p>Còn Google Chrome, do được Google phát triển, nên sẽ được cài cắm nhiều khuyến mãi mà bạn sẽ không hề ngờ tới, ví dụ như phân tích hành vi người dùng, theo dõi vị trí, theo dõi âm thanh, vân vân và vân vân. Người yêu của bạn cũng không hiểu bạn bằng Google đâu.</p>
+<p>Nếu bạn thấy những điều trên là chấp nhận được, thì đây là link tải Google Chrome: <a target="_blank" rel="noopener" href="https://www.google.com/chrome/browser/desktop/index.html">https://www.google.com/chrome/browser/desktop/index.html</a></p>
+<p>Và tất nhiên, nếu bạn đã cài sẵn một trong 2 cái trên, thì hãy đọc tiếp</p>
+<h1 id="2-Toi-uu-hoa-trinh-duyet-web"><a href="#2-Toi-uu-hoa-trinh-duyet-web" class="headerlink" title="2. Tối ưu hóa trình duyệt web"></a>2. Tối ưu hóa trình duyệt web</h1><h2 id="2-1-Mozilla-Firefox"><a href="#2-1-Mozilla-Firefox" class="headerlink" title="2.1 Mozilla Firefox"></a>2.1 Mozilla Firefox</h2><h3 id="2-1-1-Ve-thiet-lap-mac-dinh"><a href="#2-1-1-Ve-thiet-lap-mac-dinh" class="headerlink" title="2.1.1 Về thiết lập mặc định"></a>2.1.1 Về thiết lập mặc định</h3><p>Mở firefox lên, vào option</p>
+<p><img src="https://farm4.staticflickr.com/3687/19470981219_b07b393f3d_o.png"></p>
+<p>Nếu như thế nào đó mà bạn bị mất cái nút mở ra menu này, trong trình duyệt firefox, nhấn Alt, sẽ thấy xuất hiện menu bar cũ, vào Tool &gt; Option</p>
+<p>Tại đây, bạn sẽ thấy chỗ chỉnh trang web mặc định mở ra khi bạn mới mở Firefox. Chỉnh nó về Default hoặc như trong hình <img src="https://farm1.staticflickr.com/298/19469617048_3c2728ba6f_o.png"></p>
+<p>Ở mục content, bạn có thể bật tùy chọn Block Popup <img src="https://farm1.staticflickr.com/396/19662150581_09c85d0245_o.png"></p>
+<p>Ở mục Privacy &gt; chọn “Tell site I do not want to be tracked”, cái này sẽ chặn một số website có lương tâm không theo dõi hành vi của bạn trên trang web đó <img src="https://farm1.staticflickr.com/544/19469724790_9a3c03752b_o.png"></p>
+<p>Bật cả 3 tùy chọn sau ở mục Security <img src="https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png"></p>
+<p>Sau cùng, chọt vô Advanced &gt; Network &gt; Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không <img src="https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png"></p>
+<p>Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã “sạch” <img src="https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png"></p>
+<h3 id="2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van"><a href="#2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van" class="headerlink" title="2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn"></a>2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</h3><p>Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox &gt; Addon <img src="https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png"></p>
+<p>Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại những cái mà bạn biết rõ, hoặc nó có trong danh sách này:</p>
+<ul>
+<li>IDM CC</li>
+<li>Noscript</li>
+<li>uBlock origin</li>
+<li>Lastpass</li>
+</ul>
+<p>Đối với plug-in, vì là các phần mềm bên thứ 3 cài cắm vô, nên bạn không thể gỡ nó ra khỏi firefox, tuy nhiên, bạn có lựa chọn không bao giờ kích hoạt các plug-in này</p>
+<p>Chuyển sang thẻ plug-in, chọn never active đối với các plug-in khả nghi.</p>
+<p>Lưu ý có một số plug-in cần thiết để Firefox chạy <img src="https://farm1.staticflickr.com/324/19658104815_7b2d4573e6_o.png"></p>
+<h3 id="2-1-3-Cai-cac-Add-on-huu-ich"><a href="#2-1-3-Cai-cac-Add-on-huu-ich" class="headerlink" title="2.1.3 Cài các Add-on hữu ích"></a>2.1.3 Cài các Add-on hữu ích</h3><p>Danh sách dưới đây là kinh nghiệm của mình, cài hay không là tùy bạn</p>
+<h4 id="2-1-3-1-Color-that-site"><a href="#2-1-3-1-Color-that-site" class="headerlink" title="2.1.3.1 Color that site"></a>2.1.3.1 Color that site</h4><p>Link tải: <a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-us/firefox/addon/color-that-site/">https://addons.mozilla.org/en-us/firefox/addon/color-that-site/</a></p>
+<p>Là một add-on khá hay, cho phép bạn đổi màu hoàn toàn một trang web.</p>
+<p>Các web site hiện nay đa phần xài cái nền trắng bóc, rất hai mắt và tốn điện. Nhìn lâu vào nó, bạn sẽ chỉ muốn đập máy, và bạn ước chi có cách nào đó đổi tất cả màu trắng thành màu đen, và màu chữ đen thành trắng.</p>
+<p>Color that site ra đời, cho phép bạn thay đổi màu toàn bộ các thành phần trên 1 website, trừ hình ảnh ra.</p>
+<p>Cách dùng: Sau khi cài đặt xong, bạn sẽ thấy một nút nho nhỏ màu mè tùm lum nằm bên cạnh nút menu. Mở trang web bạn muốn thay đổi màu và nhấn vô nó.</p>
+<p>Mình sẽ lấy tuoitre.vn làm ví dụ <img src="https://farm1.staticflickr.com/395/19471796349_7634f4684e_o.png"></p>
+<p>Bên cạnh trái sẽ xuất hiện một thanh nhỏ. Bấm Go! <img src="https://farm4.staticflickr.com/3725/19470911848_582c1be356_o.png"></p>
+<p>Bạn sẽ thấy một thanh chạy chạy, chờ nó chạy xong, sẽ hiện ra bảng tùy chỉnh. Bạn mở mục Foreground colors, chọn Invert Colors <img src="https://farm1.staticflickr.com/512/19633625356_5b369ba1c4_o.png"></p>
+<p>Sau đó tiếp tục mở Background colors, và chọn tiếp Invert Colors. Rồi chuyển sang thẻ Settings chọn domain để áp dụng thay đổi cho toàn bộ domain của tuổi trẻ rồi nhấn nút Save <img src="https://farm1.staticflickr.com/327/19659877085_498f2d9d47_o.png"></p>
+<p>Vậy là xong, bạn có thể chiêm ngưỡng thành quả. Tuoitre.vn giờ đã dễ chịu hơn cho mắt, nhưng chữ vẫn rất rõ ràng dễ đọc. <img src="https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png"></p>
+<h4 id="2-1-3-2-Grease-Monkey"><a href="#2-1-3-2-Grease-Monkey" class="headerlink" title="2.1.3.2 Grease Monkey"></a>2.1.3.2 Grease Monkey</h4><p>Link: <a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/">https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/</a></p>
+<p>Grease Monkey là một add-on cho phép bạn chạy thêm các đoạn JavaScript của riêng mình trên một website nhất định nào đó.</p>
+<p>Vậy tại sao mình phải làm vậy?</p>
+<p>Một ví dụ đơn giản, khi xem một tấm hình trên flickr, ví dụ như tấm này: <a target="_blank" rel="noopener" href="https://flic.kr/p/oABXSB">https://flic.kr/p/oABXSB</a></p>
+<p>Bạn muốn Download nó, nhưng để download một tấm hình trên flickr, bạn phải trải qua rất nhiều bước trước khi có link download. Với Grease Monkey, chỉ cần 1 click là đã download được ngay.</p>
+<p>Một vấn đề nữa, bạn không phải lập trình viên, làm sao viết được những đoạn script đó cho Grease Monkey? Câu trả lời là đã có người viết những đoạn Script đó cho bạn. Một số trang Script tiu bỉu:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en">https://greasyfork.org/en</a></li>
+<li><a target="_blank" rel="noopener" href="https://openuserjs.org/">https://openuserjs.org/</a></li>
+</ul>
+<p><strong>Một vài đoạn Script tiu bỉu:</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/1190-flickr-original-link">https://greasyfork.org/en/scripts/1190-flickr-original-link</a> - Cho phép bạn download hình trên flickr chỉ với 1 click</li>
+<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/568-direct-google">https://greasyfork.org/en/scripts/568-direct-google</a> - Bỏ qua chế độ redirect khi search trên google, giúp bạn mở kết quả tìm kiếm nhanh hơn, đồng thời hiện link “Cached” của kết quả đó</li>
+<li>Còn rất nhìu đoạn script khác chờ bạn khám phá</li>
+</ul>
+<p>Một số add-on nâng cao hơn sẽ có ở phần 2 của chủ đề này nhé</p>
+<h2 id="2-2-Google-Chrome"><a href="#2-2-Google-Chrome" class="headerlink" title="2.2 Google Chrome"></a>2.2 Google Chrome</h2><h3 id="2-2-1-Thiet-lap-mac-dinh"><a href="#2-2-1-Thiet-lap-mac-dinh" class="headerlink" title="2.2.1 Thiết lập mặc định"></a>2.2.1 Thiết lập mặc định</h3><p>Bạn mở GG Chrome, chọt vào nút Menu &gt; Settings <img src="https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png"></p>
+<p>Ôi thôi, cái setting dài quá dài. Kéo xuống dưới cùng, chọn Show Advanced Settings…, rồi tiếp tục kéo xuống dưới cùng, sẽ có nút Reset settings. Bấm vào đó để reset lại (Lưu ý làm cái này thì GG Chrome của bạn sẽ như mới)</p>
+<h3 id="2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><a href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van" class="headerlink" title="2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn"></a>2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</h3><p>Cũng trong trang setting, bạn chọn mục Add-on. Ở mỗi đầu add-on sẽ có biểu tượng thùng rác. Bấm vô đó để Remove một add-on tương ứng. Chừa lại các add-on sau:</p>
+<ul>
+<li>Google Docs</li>
+<li>Google Sheets</li>
+<li>Google Slides</li>
+<li>IDM Integration Module</li>
+</ul>
+<h3 id="2-2-3-Cai-cac-add-on-huu-ich"><a href="#2-2-3-Cai-cac-add-on-huu-ich" class="headerlink" title="2.2.3 Cài các add-on hữu ích"></a>2.2.3 Cài các add-on hữu ích</h3><p>Số lượng add-on bên Google Chrome thực sự không nhiều và phong phú như bên Firefox, tuy nhiên cũng có một số Add-on tương đương</p>
+<ul>
+<li>Grease Monkey =&gt; TamperMonkey: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog">https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog</a></li>
+<li>Color that site =&gt; Stylish: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe">https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe</a></li>
+</ul>
+<p>Phần 2 của bài viết ở đây: <a target="_blank" rel="noopener" href="https://coding4food.net/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/">Phần 2</a></p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">https://huntertran.github.io/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/chrome/">chrome</a><a href="/blog/tags/firefox/">firefox</a><a href="/blog/tags/web-browser/">web browser</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Thiet-lap-cho-may-tinh"><span class="toc-number">1.</span> <span class="toc-text">1. Thiết lập cho máy tính</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Quay-ve-thiet-lap-mac-dinh"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Quay về thiết lập mặc định</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Gỡ bỏ các trình duyệt không chính thống</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Cài đặt một trình duyệt Web chính chủ</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Mozilla-Firefox"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Mozilla Firefox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-Google-Chrome"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Google Chrome</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Toi-uu-hoa-trinh-duyet-web"><span class="toc-number">2.</span> <span class="toc-text">2. Tối ưu hóa trình duyệt web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Mozilla-Firefox"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Mozilla Firefox</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Ve-thiet-lap-mac-dinh"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 Về thiết lập mặc định</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Go-bo-cac-Add-on-%E2%80%93-Plug-in-vo-van"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-Cai-cac-Add-on-huu-ich"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.1.3 Cài các Add-on hữu ích</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-1-Color-that-site"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">2.1.3.1 Color that site</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-2-Grease-Monkey"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">2.1.3.2 Grease Monkey</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Google-Chrome"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Google Chrome</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Thiet-lap-mac-dinh"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 Thiết lập mặc định</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Cai-cac-add-on-huu-ich"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 Cài các add-on hữu ích</span></a></li></ol></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/">&lt; [Computer Tips] [Part 2] Be an Advanced user with Web Browser</a><a class="next" href="/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/">[Windows 10] SplitView Control (the sidebar on many apps) &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[Visual Studio] NUGET the Magician | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[Visual Studio] NUGET the Magician</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/11/11/visual-studio-nuget-the-magician/">2013-11-11</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C#</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Khi sử dụng Visual Studio để lập trình, chắc hẳn sẽ có lúc bạn cần thêm các thư viện từ bên ngoài. Cách cũ là lên Google search (Bing search), rồi tìm thư viện, tải về và add thủ công vào Project. Từ bây giờ, bạn không cần phải làm như thế nữa.</p>
+<p><img src="https://farm1.staticflickr.com/819/40232598394_27c397f3e4_o.png" alt="nuget"></p>
+<p>Nuget là một công cụ giúp bạn thêm các thư viện ngoài vào Project của mình. Sử dụng Nuget rất đơn giản và dễ dàng</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-chu%E1%BA%A9n-b%E1%BB%8B">1. Chuẩn bị</a></p>
+</li>
+<li><p><a href="#2-c%E1%BA%ADp-nh%E1%BA%ADt-nuget-package">2. Cập nhật Nuget Package</a></p>
+</li>
+<li><p><a href="#3-s%E1%BB%AD-d%E1%BB%A5ng">3. Sử dụng</a></p>
+<ul>
+<li><a href="#31-c%C3%A0i-%C4%91%E1%BA%B7t-1-g%C3%B3i-nuget">3.1. Cài đặt 1 gói Nuget</a></li>
+</ul>
+</li>
+<li><p><a href="#4-gi%E1%BB%9Bi-thi%E1%BB%87u-m%E1%BB%99t-s%E1%BB%91-g%C3%B3i-nuget-hay">4. Giới thiệu một số gói Nuget hay</a></p>
+</li>
+</ul>
+<h1 id="1-Chuan-bi"><a href="#1-Chuan-bi" class="headerlink" title="1. Chuẩn bị"></a>1. Chuẩn bị</h1><p>Đổi DNS của bạn thành Google DNS</p>
+<p>Không hiểu vì lý do gì mà khi để DNS mặc định, mình không thể truy cập Nuget</p>
+<p><img src="https://farm6.staticflickr.com/5509/10797602224_31099726fb_o.png"></p>
+<p><img src="https://farm3.staticflickr.com/2875/10797506925_685b5619ac_o.png"></p>
+<p><img src="https://farm3.staticflickr.com/2890/10797641014_1c326253d2_o.png"></p>
+<h1 id="2-Cap-nhat-Nuget-Package"><a href="#2-Cap-nhat-Nuget-Package" class="headerlink" title="2. Cập nhật Nuget Package"></a>2. Cập nhật Nuget Package</h1><p>Mở Visual Studio lên, chọn Tool &gt; Extension and Update</p>
+<p>Chọn Mục Update và update tất cả mọi thứ mà bạn có thể. Nếu bạn chưa update lần nào thì rất có thể bạn sẽ có mục Nuget Package trong các gói update</p>
+<p><img src="https://farm8.staticflickr.com/7415/10797728624_43f2fd7efb_o.png"></p>
+<h1 id="3-Su-dung"><a href="#3-Su-dung" class="headerlink" title="3. Sử dụng"></a>3. Sử dụng</h1><p>Mở một Project bất kỳ, ở đây mình sẽ chọn Windows Phone, Project mẫu là RSS Reader</p>
+<p>Bật Solution Explorer, nhấn chuột phải vào References &gt; Manage Nuget Package</p>
+<p><img src="https://farm6.staticflickr.com/5539/10799289075_a237ff0703_o.png"></p>
+<p>Chọn mục Online</p>
+<p><img src="https://farm6.staticflickr.com/5525/10799278546_20f8a4db7f_o.png"></p>
+<p>Từ đây, bạn có thể thấy rất nhiều package hay ho cho ứng dụng của bạn</p>
+<p>Nếu ứng dụng của bạn dùng Json, bạn có thể cài đặt Json.NET</p>
+<p>Ở cột bên phải là các thông tin liên quan tới gói Nuget đang được chọn. Nhiều gói Nuget có cả thông tin về cách sử dụng.</p>
+<p>Bạn có thể lên <a target="_blank" rel="noopener" href="https://www.nuget.org/" title="https://www.nuget.org">https://www.nuget.org</a> để tìm hiểu thêm hoặc tìm kiếm các gói nuget phù hợp nhanh hơn</p>
+<h2 id="3-1-Cai-dat-1-goi-Nuget"><a href="#3-1-Cai-dat-1-goi-Nuget" class="headerlink" title="3.1. Cài đặt 1 gói Nuget"></a>3.1. Cài đặt 1 gói Nuget</h2><p>Gõ cái bạn muốn tìm vào ô Search</p>
+<p><img src="https://farm3.staticflickr.com/2855/10799595293_319514afd3_o.png"></p>
+<p>Chọn gói Nuget thích hợp ở bên trái, nhấn Install</p>
+<p><img src="https://farm3.staticflickr.com/2818/10799522506_b6433bafaa_o.png"></p>
+<p>Chờ nó cài đặt một tí. Bạn sẽ luôn có gói Nuget mới nhất phù hợp với project của bạn. Nếu Project của bạn không phù hợp, Nuget Package Manager sẽ tự động gỡ nó ra khỏi Project</p>
+<p><img src="https://farm8.staticflickr.com/7386/10799395825_24406f0f1f_o.png"></p>
+<p>Vậy là xong, bạn đã có thể bắt đầu sử dụng ngay gói Nuget đó</p>
+<h1 id="4-Gioi-thieu-mot-so-goi-Nuget-hay"><a href="#4-Gioi-thieu-mot-so-goi-Nuget-hay" class="headerlink" title="4. Giới thiệu một số gói Nuget hay"></a>4. Giới thiệu một số gói Nuget hay</h1><ul>
+<li><strong>Json.NET</strong>: Dùng để thao tác với dữ liệu Json</li>
+<li><strong>HtmlAgilityPack</strong>: Dùng để thao tác với dữ liệu HTML</li>
+</ul>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2013/11/11/visual-studio-nuget-the-magician/">https://huntertran.github.io/blog/2013/11/11/visual-studio-nuget-the-magician/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/windows-phone/">windows phone</a><a href="/blog/tags/nuget/">nuget</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Chuan-bi"><span class="toc-number">1.</span> <span class="toc-text">1. Chuẩn bị</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Cap-nhat-Nuget-Package"><span class="toc-number">2.</span> <span class="toc-text">2. Cập nhật Nuget Package</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Su-dung"><span class="toc-number">3.</span> <span class="toc-text">3. Sử dụng</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Cai-dat-1-goi-Nuget"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Cài đặt 1 gói Nuget</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Gioi-thieu-mot-so-goi-Nuget-hay"><span class="toc-number">4.</span> <span class="toc-text">4. Giới thiệu một số gói Nuget hay</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">&lt; [Basic for Absolute Beginner] - [Part 1] - Layout with XAML</a><a class="next" href="/blog/2013/11/03/xach-laptop-len-va-san-lumia/">Xách Laptop lên và....săn lumia &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

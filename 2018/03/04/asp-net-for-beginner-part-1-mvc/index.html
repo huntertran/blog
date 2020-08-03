@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>[ASP.NET for Beginner] - Part 1 - MVC | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">[ASP.NET for Beginner] - Part 1 - MVC</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/">2018-03-04</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/ASP-NET/">ASP.NET</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng?</p>
+<p>Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.</p>
+<a id="more"></a>
+<blockquote>
+<p>Xem các bài viết trong series</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/">Phần 1: Mô hình MVC</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">Phần 2: Connect Database và Model Binding</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">Phần 3: Front end framework nào</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
+</ul>
+</blockquote>
+<ul>
+<li><p><a href="#1-mvc-l%C3%A0-g%C3%AC">1. MVC là gì?</a></p>
+<ul>
+<li><a href="#11-model">1.1. Model</a></li>
+<li><a href="#12-view">1.2. View</a></li>
+<li><a href="#13-controller">1.3. Controller</a></li>
+</ul>
+</li>
+<li><p><a href="#2-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n">2. Một ví dụ đơn giản</a></p>
+<ul>
+<li><p><a href="#21-b%C3%A0i-to%C3%A1n">2.1. Bài toán</a></p>
+</li>
+<li><p><a href="#22-ph%C3%A2n-t%C3%ADch">2.2. Phân tích</a></p>
+</li>
+<li><p><a href="#23-tri%E1%BB%83n-khai">2.3. Triển khai</a></p>
+<ul>
+<li><a href="#231-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch">2.3.1. Tính năng xem danh sách</a></li>
+<li><a href="#232-t%C3%ADnh-n%C4%83ng-th%C3%AAm">2.3.2. Tính năng thêm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="#3-t%E1%BB%B1-t%E1%BA%A1o-project">3. Tự tạo project</a></p>
+<ul>
+<li><a href="#31-ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt">3.1. Phần mềm cần thiết</a></li>
+<li><a href="#32-tri%E1%BB%83n">3.2. Triển</a></li>
+<li><a href="#33-aspnet-convention">3.3. ASP.NET Convention</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-MVC-la-gi"><a href="#1-MVC-la-gi" class="headerlink" title="1. MVC là gì?"></a>1. MVC là gì?</h1><p>MVC là một kiến trúc phần mềm dùng để phát triển kha khá ứng dụng bạn đang dùng trên thị trường. Mô hình MVC bóc tách 3 tầng của ứng dụng thành 3 thành phần khác nhau, giúp việc phát triển dễ dàng hơn.</p>
+<p>MVC là viết tắt của Model-View-Controller</p>
+<blockquote>
+<p>3 thành phần này phải đi kèm với nhau, nhưng đối với người mới học, sẽ rất khó để hình dung ra chúng liên kết như thế nào. Học bất kỳ thành phần nào trước đều khó khăn khi không hiểu 2 thành phần kia. Vì vậy mình khuyên các bạn chỉ cần hình dung mỗi thành phần ra trong đầu, chứ đừng bắt tay ngay vào việc tìm hiểu liên kết giữa chúng.</p>
+</blockquote>
+<h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
+<p>[code lang=csharp] // A basic model public class User { public string Name { get; set; } public int Age { get; set; } public string Address { get; set; } } [/code]</p>
+<h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có/không) là những thứ thường thấy trên View.</p>
+<p>Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau</p>
+<p>[code lang=html] @model User <div> @Model.Name @Model.Age @Model.Address </div> [/code]</p>
+<h2 id="1-3-Controller"><a href="#1-3-Controller" class="headerlink" title="1.3. Controller"></a>1.3. Controller</h2><p>Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân</p>
+<h1 id="2-Mot-vi-du-don-gian"><a href="#2-Mot-vi-du-don-gian" class="headerlink" title="2. Một ví dụ đơn giản"></a>2. Một ví dụ đơn giản</h1><p>Vì ví dụ này được đưa ra để bạn hiểu mô hình MVC, nên bạn ko cần phải làm theo. Chỉ cần đọc tiếp thôi</p>
+<h2 id="2-1-Bai-toan"><a href="#2-1-Bai-toan" class="headerlink" title="2.1. Bài toán"></a>2.1. Bài toán</h2><p>Thế giới di động cần 1 cái website có thể hiện thị danh sách các điện thoại, thêm/xóa/sửa một điện thoại nào đó (bỏ qua tất cả các yêu cầu về bảo mật, đăng nhập, giao diện)</p>
+<h2 id="2-2-Phan-tich"><a href="#2-2-Phan-tich" class="headerlink" title="2.2. Phân tích"></a>2.2. Phân tích</h2><p>Đọc vào thấy ngay, ta cần một model cho điện thoại, 4 view cho 4 cái tính năng là <code>xem danh sách</code>, <code>thêm</code>, <code>xóa</code>, <code>sửa</code>. Vì cả 4 view này đều thao tác trên cái model <code>điện thoại</code>, nên ta chỉ cần 1 controller mà thôi</p>
+<h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><strong>Model</strong></p>
+<p>[code lang=csharp] public class MobilePhone { // To identify which phones // Dùng để xác định cái điện thoại nào public int Id { get; set; }</p>
+<p>public string Name { get; set; } } [/code]</p>
+<p><strong>Controller</strong></p>
+<p>[code lang=csharp] public class MobilePhoneController { public void List() { // Get all phones from database var allPhones = database.MobilePhones;</p>
+<p>// Return the View that render a list of phones return View(allPhones) } } [/code]</p>
+<p><strong>View</strong></p>
+<p>[code lang=html] @model List<MobilePhone> <div> <table> <!--Table headers--> <th> <td>Id</td> <td>Name</td> </th> <!--Table body--> <tbody> @foreach(var phone in Model) { <tr> <td>@phone.Id</td> <td>@phone.Name</td> </tr> } </tbody> </table> </div> [/code]</p>
+<p>ASP.NET tự động hiểu class <code>MobilePhoneController</code> sẽ có đường dẫn là <code>/MobilePhone</code></p>
+<p>Khi người dùng trỏ tới URL sau:</p>
+<p>[code lang=text] yourdomain/MobilePhone/List [/code]</p>
+<p>thì bằng một cách thần kỳ nào đó, asp.net đã gọi method <code>List</code> trong controller này, và chạy những đoạn code trong đó, trả về một cái bảng danh sách các điện thoại hiển thị lên cho người dùng</p>
+<h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
+<p><strong>Controller</strong></p>
+<p>[code lang=csharp] public class MobilePhoneController { public void List() { // Get all phones from database // Lấy tất cả điện thoại từ database var allPhones = database.MobilePhones;</p>
+<p>// Return the View that render a list of phones // Trả về view chứa thông tin tất cả điện thoại return View(allPhones) }</p>
+<p>// Render the Add form // Hiển thị cái form Add public void Add() { return View(); }</p>
+<p>// Recieved the new phone input by user // Nhận data được nhập vào từ người dùng [HttpPost] public void Add(MobilePhone newPhone) { var existedPhone = database.MobilePhones.Find(newPhone.Id)</p>
+<p>if(existedPhone != null) { // Phone is existed, return the Add View // Điện thoại với Id này đã tồn tại, trả về cái view Add return View(newPhone); }</p>
+<p>// Add new data to database database.MobilePhones.Add(newPhone);</p>
+<p>// Save the changes database.SaveChanges(); } } [/code]</p>
+<blockquote>
+<p>Tại sao lại có 2 method Add? Ở method đầu tiên, ASP.NET sẽ trả về cái form rỗng cho người dùng tự nhập vào giá trị. Method thứ 2 có chứa parameter là newPhone. Method có trách nhiệm nhận thông tin được post lên từ phía người dùng. ASP.NET đủ thông minh để có thể tự hiểu nó là object kiểu MobilePhone, và nó gọi là <code>Model Binding</code>. Ta sẽ tìm hiểu về chủ đề này sau.</p>
+</blockquote>
+<p><strong>View</strong></p>
+<p>[code lang=html] thêm file Add.cshtml [/code]</p>
+<p>Đối với ASP.NET Core</p>
+<p>[code lang=html] @model MobilePhone</p>
+<form asp-action="Add" asp-controller="MobilePhone"> <label>Id</label> <input asp-for="Id"/> <label>Name</label> <input asp-for="Name"/> </form> \[/code\]
+
+<p>Đối với ASP.NET MVC cũ</p>
+<p>[code lang=html] @model MobilePhone</p>
+<p>@using(Html.BeginForm(“Add”,”MobilePhone”,Method.Post)) { <label>Id</label> @Html.TextBoxFor(x =&gt; x.Id) <label>Name</label> @Html.TextBoxFor(x =&gt; x.Name) } [/code]</p>
+<h1 id="3-Tu-tao-project"><a href="#3-Tu-tao-project" class="headerlink" title="3. Tự tạo project"></a>3. Tự tạo project</h1><p>Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một</p>
+<p>ASP.NET có kha khá phiên bản, <code>MVC1</code>, <code>MVC2</code>, <code>MVC3</code>, <code>MVC4</code>, và gần đây nhất là <code>MVC5</code> và <code>MVC Core</code>. Từ version 5 trở xuống là cách phát triển cũ, chỉ chạy được trên môi trường Windows, từ phiên bản <code>MVC Core</code> trở lên là cách phát triển mới, có thể chạy được trên <code>Linux</code>, <code>Windows</code> hoặc <code>MacOS</code>. Nếu đang học, thì mình khuyến khích nên học luôn từ <code>MVC Core</code> trở lên luôn cho nó hot</p>
+<h2 id="3-1-Phan-mem-can-thiet"><a href="#3-1-Phan-mem-can-thiet" class="headerlink" title="3.1. Phần mềm cần thiết"></a>3.1. Phần mềm cần thiết</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/net/core">.NET Core SDK 2.0</a> trở lên</li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li>VS Code <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension</a></li>
+</ul>
+<h2 id="3-2-Trien"><a href="#3-2-Trien" class="headerlink" title="3.2. Triển"></a>3.2. Triển</h2><p>Mở VSCode lên, nhấn Ctrl + ` để hiện Terminal, hoặc làm như hình</p>
+<p><img src="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png" alt="show termial"></p>
+<p>dùng các lệnh <code>cd</code> để trỏ tới thư mục mong muốn tạo project của bạn</p>
+<p>hoặc</p>
+<p><img src="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
+<p>gõ</p>
+<p>[code lang=text] dotnet new mvc [/code]</p>
+<p>Bấm F5 &gt; Chọn .NET Core</p>
+<p>Nếu bạn được hỏi “Required assets to build and debug are missing from blah blah blah”, thì bấm Yes nhé</p>
+<p><img src="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png" alt="yes to build"></p>
+<p>Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET Core rồi nhé. Bạn có thể mở class HomeController để hiểu rõ hơn về mô hình MVC mình vừa nói ở trên.</p>
+<h2 id="3-3-ASP-NET-Convention"><a href="#3-3-ASP-NET-Convention" class="headerlink" title="3.3. ASP.NET Convention"></a>3.3. ASP.NET Convention</h2><p>ở trên mình có nhắc tới MobilePhoneController, thì đường dẫn của nó sẽ là /MobilePhone, hay ở project bạn mới tạo, HomeController sẽ có đường dẫn là /Home .ASP.NET tự hiểu controller của bạn, và sẽ có đường dẫn tương ứng.</p>
+<p>Mặc định, các method <code>Index</code> trong controller của bạn sẽ là method được gọi khi URL ko có bất kỳ cái gì đằng sau. Ví dụ như HomeController ở trên, nếu bạn chỉ nhập <a target="_blank" rel="noopener" href="https://localhost:5000/Home/">https://localhost:5000/Home/</a> thì method <code>Index</code> sẽ được gọi, View <code>Index.cshtml</code> sẽ được hiển thị.</p>
+<p>Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở <a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/">phần tiếp theo</a> mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng <em>chuẩn</em> nhé</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/">https://huntertran.github.io/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/beginner/">beginner</a><a href="/blog/tags/mvc/">mvc</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-MVC-la-gi"><span class="toc-number">1.</span> <span class="toc-text">1. MVC là gì?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Model"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-View"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Controller"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Controller</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Mot-vi-du-don-gian"><span class="toc-number">2.</span> <span class="toc-text">2. Một ví dụ đơn giản</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Bai-toan"><span class="toc-number">2.1.</span> <span class="toc-text">2.1. Bài toán</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Phan-tich"><span class="toc-number">2.2.</span> <span class="toc-text">2.2. Phân tích</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Trien-khai"><span class="toc-number">2.3.</span> <span class="toc-text">2.3. Triển khai</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-Tinh-nang-xem-danh-sach"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1. Tính năng xem danh sách</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Tinh-nang-them"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2. Tính năng thêm</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Tu-tao-project"><span class="toc-number">3.</span> <span class="toc-text">3. Tự tạo project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Phan-mem-can-thiet"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Phần mềm cần thiết</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Trien"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Triển</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-ASP-NET-Convention"><span class="toc-number">3.3.</span> <span class="toc-text">3.3. ASP.NET Convention</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">&lt; [ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding</a><a class="next" href="/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/">[ASP.NET Core] - Razor Page - Let's think straight &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Java for Beginner - 3 - Java from C# cheats sheet | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Java for Beginner - 3 - Java from C# cheats sheet</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2019/07/13/java-for-beginner-3-java-from-c-cheats-sheet/">2019-07-13</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Java/">Java</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Doing C# long enough, you get yourself familiar with C# concepts and syntax. That’s fine, but sometime when you need “the same” concepts in Java, it’s quite difficult. This cheat sheet here to tackle that problem.</p>
+<a id="more"></a>
+
+<p>You can view other posts in the series here:</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/">Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2019/07/12/java-for-beginner-2-hello-world-in-java/">Hello World</a></li>
+<li>Cheats sheet (this post)</li>
+</ol>
+<p>Table of Content</p>
+<ul>
+<li><a href="#1-classes">1. Classes</a><ul>
+<li><a href="#11-some-keywords">1.1. Some keywords</a></li>
+<li><a href="#12-generic-class">1.2. Generic Class</a></li>
+<li><a href="#13-interface-implement">1.3. Interface Implement</a></li>
+</ul>
+</li>
+<li><a href="#2-variables">2. Variables</a></li>
+<li><a href="#3-methods">3. Methods</a><ul>
+<li><a href="#31-extension-method">3.1. Extension Method</a></li>
+<li><a href="#32-safely-use-resource">3.2. Safely use resource</a></li>
+<li><a href="#33-class-properties">3.3. Class Properties</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Classes"><a href="#1-Classes" class="headerlink" title="1. Classes"></a>1. Classes</h1><h2 id="1-1-Some-keywords"><a href="#1-1-Some-keywords" class="headerlink" title="1.1. Some keywords"></a>1.1. Some keywords</h2><p>C#</p>
+<p>Java</p>
+<p>Explanation for Java</p>
+<p>: (to extend the class)</p>
+<p>extends</p>
+<p>Java use the keyword <code>extends</code> to extend a class</p>
+<p>base</p>
+<p>super</p>
+<p>To access the base class methods</p>
+<p>namespace</p>
+<p>package</p>
+<p>Java class belongs to a package, which is the name of the folder contains the .java file</p>
+<p>internal</p>
+<p>Java use the concept of package. More complicated convertion is <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/40437191/4506315">here</a></p>
+<p>using</p>
+<p>import</p>
+<p><strong>Java Example</strong></p>
+<p>// File Animal.java, inside folder animals<br>package main.java.animals;</p>
+<p>import RandomPackage.*;<br>import RandomPackage.RandomSubPackage.*;</p>
+<p>public class Animal {<br>    … other methods and properties …<br>    public Double getWeight() {<br>        return weight;<br>    }<br>    … other methods and properties …<br>}</p>
+<p>// File Pig.java, inside folder animals<br>package main.java.animals;</p>
+<p>public class Pig extends Animal {<br>    … other methods and properties …</p>
+<pre><code>// override the getWeight method
+public Double getWeight() &#123;
+    // do your override stuffs
+    return super.getWeight();
+&#125;
+... other methods and properties ...</code></pre>
+<p>}</p>
+<h2 id="1-2-Generic-Class"><a href="#1-2-Generic-Class" class="headerlink" title="1.2. Generic Class"></a>1.2. Generic Class</h2><p>Generic class with constraint</p>
+<p><strong>C# Example</strong></p>
+<p>public class GenericClass<T> where T: SomeBase<br>{<br>}</p>
+<p><strong>Java Example</strong></p>
+<p>public class GenericClass<T extends SomeBase><br>{<br>}</p>
+<h2 id="1-3-Interface-Implement"><a href="#1-3-Interface-Implement" class="headerlink" title="1.3. Interface Implement"></a>1.3. Interface Implement</h2><p><strong>Java Example</strong></p>
+<p>public class Pig implements IAnimal {<br>    public void Run() {<br>        …your code to make the pig run…<br>    }<br>}</p>
+<h1 id="2-Variables"><a href="#2-Variables" class="headerlink" title="2. Variables"></a>2. Variables</h1><p>C#</p>
+<p>Java</p>
+<p>Explanation for Java</p>
+<p>string</p>
+<p>java.lang.String</p>
+<p><code>string</code> in both is a immutable class (cannot change instance of object after create)</p>
+<p>object</p>
+<p>java.lang.Object</p>
+<p>decimal</p>
+<p>java.math.BigDecimal</p>
+<p><strong>Java Example</strong></p>
+<p>String hello = “Hello World!”;<br>System.out.print(hello);</p>
+<h1 id="3-Methods"><a href="#3-Methods" class="headerlink" title="3. Methods"></a>3. Methods</h1><h2 id="3-1-Extension-Method"><a href="#3-1-Extension-Method" class="headerlink" title="3.1. Extension Method"></a>3.1. Extension Method</h2><p>In C#, you can write extension to an object, there is no equivalent to this in Java.</p>
+<p><strong>C#</strong></p>
+<p>public static class StringExtension<br>{<br>    public static string GetFirstThreeLetters(this string targetString)<br>    {<br>        // your code here to do the job<br>        // for example:<br>        // string result = targetString.SubString(0,3);<br>        return result;<br>    }<br>}</p>
+<p>public class TestClass<br>{<br>    public void TestMethod()<br>    {<br>        string randomString = “This is so random”;<br>        Console.WriteLine(randomString.GetFirstThreeLetters);<br>    }<br>}</p>
+<p>// Console Output<br>// Thi</p>
+<p>But in Java, you need to have the full static class</p>
+<p>public final class StringUtils {<br>    public static String GetFirstThreeLetters(String stringToGet) {<br>        // your code here to do the job<br>        // for example:<br>        // String result = stringToGet.substring(0,3);<br>        return result;<br>    }<br>}</p>
+<p>public class TestClass<br>{<br>    private void TestMethod()<br>    {<br>        String randomString = “This is so random”;<br>        StringUtils.GetFirstThreeLetters(randomString);<br>    }<br>}</p>
+<p>// Console Output<br>// Thi</p>
+<h2 id="3-2-Safely-use-resource"><a href="#3-2-Safely-use-resource" class="headerlink" title="3.2. Safely use resource"></a>3.2. Safely use resource</h2><p>In C#, you can use a resource safely with the keyword <code>using</code></p>
+<p><strong>C# Example</strong></p>
+<p>using(MyResource myResource = new MyResource())<br>{<br>    myResource.DoSomething();<br>}</p>
+<p>In Java, you will use a different keyword: <code>try</code></p>
+<p><strong>Java Example</strong></p>
+<p>try(MyResource myResource = new MyResource()) {<br>    myResource.DoSomething();<br>}</p>
+<h2 id="3-3-Class-Properties"><a href="#3-3-Class-Properties" class="headerlink" title="3.3. Class Properties"></a>3.3. Class Properties</h2><p>It is very convenient for C# developers to create and use <code>property</code> with auto-property, property with private backing fields.</p>
+<p><strong>C# Example</strong></p>
+<p>public class Animal<br>{<br>    // Auto-property<br>    public int Height { get; set; }</p>
+<pre><code>// Property with private backing field
+
+// &#123;rivate field
+private int \_weight;
+
+// Exposed with public property
+public int Weight
+&#123;
+    get
+    &#123;
+        return \_weight;
+    &#125;
+    set
+    &#123;
+        // do some check to validate the value
+        if(value &gt; 0)
+        &#123;
+            \_weight = value;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<p>}</p>
+<p>// using in other class<br>public void RandomMethod()<br>{<br>    Animal pig = new Animal();<br>    pig.Weight = 500;</p>
+<pre><code>Console.WriteLine(&quot;Pig weight: &quot; + pig.Weight);</code></pre>
+<p>}</p>
+<p>There is no equivalent to this in Java, you need to create 2 normal methods for get and set value of a private field</p>
+<p><strong>Java Example</strong></p>
+<p>public class Animal {<br>    private int _weight;</p>
+<pre><code>public void setWeight(int weight) &#123;
+    if(weight &gt; 0) &#123;
+        \_weight = weight;
+    &#125;
+&#125;
+
+public int getWeight() &#123;
+    return \_weight;
+&#125;</code></pre>
+<p>}</p>
+<p>// using in other class<br>public void RandomMethod() {<br>    Animal pig = new Animal();<br>    pig.setWeight(500);</p>
+<pre><code>System.out.print(&quot;Pig weight: &quot; + pig.getWeight());</code></pre>
+<p>}</p>
+<p>Other different is just one google search result away ;) See you next post</p>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2019/07/13/java-for-beginner-3-java-from-c-cheats-sheet/">https://huntertran.github.io/blog/2019/07/13/java-for-beginner-3-java-from-c-cheats-sheet/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/java-for-beginner/">java for beginner</a><a href="/blog/tags/cheats-sheet/">cheats sheet</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Classes"><span class="toc-number">1.</span> <span class="toc-text">1. Classes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Some-keywords"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Some keywords</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Generic-Class"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Generic Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Interface-Implement"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Interface Implement</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Variables"><span class="toc-number">2.</span> <span class="toc-text">2. Variables</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Methods"><span class="toc-number">3.</span> <span class="toc-text">3. Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Extension-Method"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. Extension Method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Safely-use-resource"><span class="toc-number">3.2.</span> <span class="toc-text">3.2. Safely use resource</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Class-Properties"><span class="toc-number">3.3.</span> <span class="toc-text">3.3. Class Properties</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/">&lt; [vuejs] - Publish your vue component to npmjs using vue-cli 3</a><a class="next" href="/blog/2019/07/12/java-for-beginner-2-hello-world-in-java/">Java for Beginner - 2 - Hello World in Java &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>

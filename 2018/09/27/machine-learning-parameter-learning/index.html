@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Machine Learning - 1.3 - Parameter Learning | Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">Machine Learning - 1.3 - Parameter Learning</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2018/09/27/machine-learning-parameter-learning/">2018-09-27</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Machine-Learning/">Machine Learning</a></span><span class="p-view" id="busuanzi_container_page_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></span></div></div><div class="p-content"><p>Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.</p>
+<p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis.</p>
+<a id="more"></a>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><a href="#1-gradient-descent">1. Gradient Descent</a><ul>
+<li><a href="#11-bi%E1%BB%83u-di%E1%BB%85n-%C4%91%E1%BB%93-th%E1%BB%8B">1.1. Biểu diễn đồ thị</a></li>
+<li><a href="#12-m%C3%B4-t%E1%BA%A3-thu%E1%BA%ADt-to%C3%A1n">1.2. Mô tả thuật toán</a></li>
+<li><a href="#13-x%C3%A2y-d%E1%BB%B1ng">1.3. Xây dựng</a></li>
+</ul>
+</li>
+<li><a href="#2-gradient-descent-cho-linear-regression">2. Gradient Descent cho Linear Regression</a></li>
+</ul>
+<h1 id="1-Gradient-Descent"><a href="#1-Gradient-Descent" class="headerlink" title="1. Gradient Descent"></a>1. Gradient Descent</h1><p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis, và đó là nhiệm vụ của <code>Gradient Descent</code>.</p>
+<p>Để đơn giản, trong phần này, ta sẽ xét các hàm hypothesis có 2 tham số là $latex \theta_{0}$ và $latex \theta_{1}$. Đối với các trường hợp có nhiều hơn 2 tham số, cách thực hiện là tương tự.</p>
+<h2 id="1-1-Bieu-dien-do-thi"><a href="#1-1-Bieu-dien-do-thi" class="headerlink" title="1.1. Biểu diễn đồ thị"></a>1.1. Biểu diễn đồ thị</h2><p>Gọi $latex J(\theta_{0},\theta_{1})$ là kết quả của cost function. Ta biểu diễn các tham số lên một đồ thị có 3 trục x, y và z như sau:</p>
+<ul>
+<li>$latex \theta_{0}$ là trục x.</li>
+<li>$latex \theta_{1}$ là trục y.</li>
+<li>$latex J(\theta_{0},\theta_{1})$ là trục z.</li>
+</ul>
+<p><img src="https://farm2.staticflickr.com/1899/44863403391_91a4cf87aa_o.png" alt="gradient descent graph"></p>
+<p>Các mũi tên đỏ chỉ những điểm thấp nhất của đồ thị này, đó là các điểm mà ta tìm kiếm (nhằm mục đích tối thiểu giá trị của cost function).</p>
+<h2 id="1-2-Mo-ta-thuat-toan"><a href="#1-2-Mo-ta-thuat-toan" class="headerlink" title="1.2. Mô tả thuật toán"></a>1.2. Mô tả thuật toán</h2><p>Chọn 1 điểm bất kỳ, sau đó di chuyển từng bước nhỏ về vùng trũng nhất của đồ thị.</p>
+<p>Cách làm là lấy đạo hàm của cost function. Đối với một hàm số, đạo hàm của nó chính là đường tiếp tuyến của nó. Độ dốc của đường tiếp tuyến tại một điểm chính là giá trị của hàm đạo hàm tại điểm đó. Độ dốc này cho ta biết hướng đi để chọn điểm tiếp theo.</p>
+<p>Độ dài của mỗi step được xác định bởi tham số $latex \alpha$, gọi là <code>learning rate</code>.</p>
+<p>Điểm ban đầu được chọn khác nhau sẽ cho ra các kết quả rất khác nhau. Hình bên trên có 2 điểm ban đầu khác nhau, và sẽ cho ra 2 điểm thấp nhất là 2 mũi tên đỏ.</p>
+<p>Như vậy, thuật toán Gradient Descent sẽ là:</p>
+<p>lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial\theta_{j}}J(\theta_{0},\theta_{1})$</p>
+<p>với:</p>
+<p>$latex j=0,1,2,…,m$, đại diện cho index</p>
+<p>Với mỗi lần lặp, cả $latex \theta_{0}$ và $latex \theta_{1}$ phải được tính đồng thời.</p>
+<h2 id="1-3-Xay-dung"><a href="#1-3-Xay-dung" class="headerlink" title="1.3. Xây dựng"></a>1.3. Xây dựng</h2><p>Để cho đơn giản, ta sẽ dùng hàm số chỉ có 1 biến $latex \theta_{1}$ và từng bước xây dựng công thức cho <code>Gradient Descent</code>.</p>
+<p>Vậy công thức của ta còn:</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_{1} := \theta_{1} - \alpha \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$</p>
+<p>với</p>
+<ul>
+<li>$latex \alpha$ là learning rate</li>
+<li>$latex \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$ là độ dốc của đường tiếp tuyến (slope) tại $latex \theta_{1}$</li>
+</ul>
+<p><img src="https://i.imgur.com/G01t68o.png" alt="plot"></p>
+<p>Nhìn vào đồ thị trên, khi slope nằm bên trái của điểm hội tụ, thì giá trị $latex \theta_{1}$ tăng, và ngược lại khi nó nằm bên phải của điểm hội tụ.</p>
+<blockquote>
+<p>Tham số $latex \alpha$ nên được điều chỉnh hợp lý sao cho thuật toán gradient descent hội tụ trong 1 khoảng thời gian phù hợp.</p>
+<p>Khi $latex \alpha$ quá nhỏ, thời gian tìm đến điểm hội tụ sẽ lâu. Khi quá lớn, thuật toán rất có thể sẽ không tìm thấy điểm hội tụ.</p>
+</blockquote>
+<p>Với một tham số $latex \alpha$ hợp lý, càng về gần điểm hội tụ, độ dốc của tiếp tuyến sẽ càng nhỏ, do đó, thuật toán gradient descent sẽ có bước đi nhỏ hơn, và sẽ bằng 0 khi tới điểm hội tụ.</p>
+<p>Trong trường hợp điểm xuất phát chính là điểm hội tụ, thì thuật toán gradient descent sẽ cho ra $latex \theta_{1}$ không đổi với $latex \alpha$ bất kỳ, vì đạo hàm của nó là 0.</p>
+<h1 id="2-Gradient-Descent-cho-Linear-Regression"><a href="#2-Gradient-Descent-cho-Linear-Regression" class="headerlink" title="2. Gradient Descent cho Linear Regression"></a>2. Gradient Descent cho Linear Regression</h1><p>Khi áp dụng thuật toán Gradient Descent vào hàm số Hypothesis của ta trong các bài viết trước, ta có thể tìm được 2 tham số $latex \theta_{0}$ và $latex \theta_{1}$:</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i})$</p>
+<p>$latex \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right)$</p>
+<p>với:</p>
+<ul>
+<li>m là tổng số training example.</li>
+<li>$latex \theta_0$ tham số sẽ thay đổi đồng thời với $latex theta_1$ và $latex x_{i}$.</li>
+<li>$latex y_{i}$ là các giá trị được cho bởi bộ training example.</li>
+</ul>
+<p>Như vậy, số 2 dưới mẫu trong công thức của bài kỳ trước đã bị triệt tiêu vì đạo hàm</p>
+<blockquote>
+<p>Gradient Descent trong bài toán này thường được gọi là <code>Batch Gradient Descent</code>, vì nó tính tổng của tất cả các giá trị</p>
+<p>Hàm hypothesis của bài toán Linear Regression có hình dạng như một cái tô, và chỉ có 1 điểm hội tụ duy nhất.</p>
+</blockquote>
+</div><div class="p-copyright"><blockquote><div class="p-copyright-author"><span class="p-copyright-key">Author：</span><span class="p-copytight-value"><a href="mailto:litreily@163.com">Tuan Tran</a></span></div><div class="p-copyright-link"><span class="p-copyright-key">Link to this article：</span><span class="p-copytight-value"><a href="/blog/2018/09/27/machine-learning-parameter-learning/">https://huntertran.github.io/blog/2018/09/27/machine-learning-parameter-learning/</a></span></div><div class="p-copyright-note"><span class="p-copyright-key">Copyright：</span><span class="p-copytight-value">All rights reserved with<a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/"> CC BY-NC 4.0 </a>agreement. Include the source <a href="https://huntertran.github.io/blog">Tuan Tran's blog</a>！</span></div></blockquote></div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/gradient-descent/">gradient descent</a><a href="/blog/tags/hypothesis/">hypothesis</a></span></div><aside id="toc"><div class="toc-title">Table of Contents</div><nav><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Gradient-Descent"><span class="toc-number">1.</span> <span class="toc-text">1. Gradient Descent</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Bieu-dien-do-thi"><span class="toc-number">1.1.</span> <span class="toc-text">1.1. Biểu diễn đồ thị</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Mo-ta-thuat-toan"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Mô tả thuật toán</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Xay-dung"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Xây dựng</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Gradient-Descent-cho-Linear-Regression"><span class="toc-number">2.</span> <span class="toc-text">2. Gradient Descent cho Linear Regression</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/blog/2018/10/01/machine-learning-matrices-and-vectors/">&lt; Machine Learning - 1.4 - Matrices and Vectors</a><a class="next" href="/blog/2018/09/22/ml-model-and-cost-function/">Machine Learning - 1.2 - Model and Cost Function &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'',
+  appKey:'',
+  lang: 'en',
+  placeholder:'ヾﾉ≧∀≦)o Come on, say something...',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>
