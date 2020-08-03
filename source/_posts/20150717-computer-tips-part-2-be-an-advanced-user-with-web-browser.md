@@ -10,7 +10,17 @@ categories:
 date: 2015-07-17 03:07:53
 ---
 
-Part 1 ở đây: [Phần 1](https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/) Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: "Còn gì hay ho nữa không" Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình. Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng. Có một số add-on chỉ có Firefox mới có, và ngược lại
+Part 1 ở đây: [Phần 1](https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/)
+
+Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: "Còn gì hay ho nữa không"
+
+Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.
+
+Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa
+
+Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng.
+
+Có một số add-on chỉ có Firefox mới có, và ngược lại
 <!-- more -->
 *   [Các addon nâng cao](#các-addon-nâng-cao)
     *   [NoScript – Firefox only](#noscript--firefox-only)

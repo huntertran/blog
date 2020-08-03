@@ -5,6 +5,7 @@ import datetime
 
 blog_path = './source/_posts/'
 
+
 def is_file_name_start_with_date(filename):
     year = filename[0:4]
     month = filename[4:6]
@@ -13,6 +14,7 @@ def is_file_name_start_with_date(filename):
         return True
     else:
         return False
+
 
 def rename_file(filename):
     is_renaming = False
@@ -41,6 +43,13 @@ def rename_file(filename):
                 break
     if is_renaming:
         rename(blog_path + filename, blog_path + date_string + "-" + filename)
+
+
+def add_links(filename):
+    with open(blog_path + filename, 'r', encoding="utf8") as file:
+        lines = file.readlines()
+        
+
 
 onlyfiles = [f for f in listdir(blog_path) if isfile(join(blog_path, f))]
 

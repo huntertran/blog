@@ -12,7 +12,13 @@ categories:
 date: 2013-09-11 22:54:45
 ---
 
-Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control. Image Control có một số thuộc tính về hiển thị như Stretch, Fill, Uniform, UniformToFill. Uniform To Fill sẽ mở rộng tấm hình ra cho vừa kích thước của control, và thực tế là nó cắt mất một góc trái trên của tấm hình, cho ta có cảm giác như tấm hình được canh giữa ![perfect](http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png) Làm sao đạt được tấm hình “Tuyệt vời”
+Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control.
+
+Image Control có một số thuộc tính về hiển thị như Stretch, Fill, Uniform, UniformToFill. Uniform To Fill sẽ mở rộng tấm hình ra cho vừa kích thước của control, và thực tế là nó cắt mất một góc trái trên của tấm hình, cho ta có cảm giác như tấm hình được canh giữa
+
+![perfect](http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png)
+
+Làm sao đạt được tấm hình “Tuyệt vời”
 <!-- more -->
 # Stretch Property
 
@@ -25,4 +31,12 @@ Image Control có 4 trạng thái của Stretch Property (Hình minh họa)
 
 # Giải pháp
 
-Thêm một Border bọc ngoài Image Control \[code lang=xml\] <border Width="200" Height="200"> <Image Source="/your\_source" Stretch="UniformToFill"> </border> \[/code\] Ngay khi thêm border, bạn sẽ thấy nó hiển thị một kết quả như khi không có border. Cũng như ko =.= Tuy nhiên, Image control sẽ bị giới hạn bởi Border bọc bên ngoài nó có kích thước nhất định. Bây giờ, bạn có thể canh chỉnh bằng thuộc tính HorizontalAlignment và VerticalAlignment để chỉnh vị trí của ImageControl. Áp dụng "Center" cho cả hai, bạn sẽ có tấm hình "Tuyệt vời"
+Thêm một Border bọc ngoài Image Control
+
+\[code lang=xml\] <border Width="200" Height="200"> <Image Source="/your\_source" Stretch="UniformToFill"> </border> \[/code\]
+
+Ngay khi thêm border, bạn sẽ thấy nó hiển thị một kết quả như khi không có border. Cũng như ko =.=
+
+Tuy nhiên, Image control sẽ bị giới hạn bởi Border bọc bên ngoài nó có kích thước nhất định.
+
+Bây giờ, bạn có thể canh chỉnh bằng thuộc tính HorizontalAlignment và VerticalAlignment để chỉnh vị trí của ImageControl. Áp dụng "Center" cho cả hai, bạn sẽ có tấm hình "Tuyệt vời"

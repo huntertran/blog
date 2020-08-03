@@ -8,7 +8,11 @@ categories:
 date: 2014-11-14 09:46:24
 ---
 
-[![2_5F00_77B60B43](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg)](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg) Bạn có một con chuột thật tuyệt vời. Microsoft Mouse, Bluetooth, bluetrack technology, thoải mái, tiên dụng, nhưng……lâu lâu nó bị đứng và ngắt kết nối với máy tính. Làm thế nào để sửa vấn đề này?
+[![2_5F00_77B60B43](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg)](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg)
+
+Bạn có một con chuột thật tuyệt vời. Microsoft Mouse, Bluetooth, bluetrack technology, thoải mái, tiên dụng, nhưng……lâu lâu nó bị đứng và ngắt kết nối với máy tính.
+
+Làm thế nào để sửa vấn đề này?
 <!-- more -->
 # Nguyên nhân
 

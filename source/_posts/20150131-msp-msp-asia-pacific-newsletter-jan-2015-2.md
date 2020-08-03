@@ -11,7 +11,19 @@ date: 2015-01-31 08:11:49
 
 Vol.2 Dec-Jan 2014-2015
 
-**Contents:** **1.MAIN TOPIC** Japan, New Zealand, Philippines, Thailand, Vietnam **2.Super MSP** Vishesh Oberoi (New Zealand), Supatporn Posoknistakul(Thailand) **3.Highlights & Upcoming Events** Japan, New Zealand, Philippines, Singapore, Thailand, Vietnam
+**Contents:**
+
+**1.MAIN TOPIC**
+
+Japan, New Zealand, Philippines, Thailand, Vietnam
+
+**2.Super MSP**
+
+Vishesh Oberoi (New Zealand), Supatporn Posoknistakul(Thailand)
+
+**3.Highlights & Upcoming Events**
+
+Japan, New Zealand, Philippines, Singapore, Thailand, Vietnam
 <!-- more -->
 # 1\. MAIN TOPIC
 
@@ -197,4 +209,8 @@ Thank you for reading!
 
 If you have news and updates from your country, we'll be happy to share it with everyone!
 
-This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries. If there is any business, please email to **Shun.Okubo@studentpartner.com**. Microsoft Student Partners https://www.microsoftstudentpartners.com
+This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.
+
+If there is any business, please email to **Shun.Okubo@studentpartner.com**.
+
+Microsoft Student Partners https://www.microsoftstudentpartners.com

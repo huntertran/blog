@@ -12,7 +12,11 @@ categories:
 date: 2017-12-10 04:44:25
 ---
 
-Nếu cảm thấy Visual Studio Community quá nặng nề, nhưng bạn vẫn muốn dev website bằng asp.net, và target .net framework, vậy tại sao bạn không sử dụng VSCode nhỉ? Trớ trêu thay, OmniSharp chưa hỗ trợ .net core 2 trên vscode, nhưng bài viết này sẽ hướng dẫn bạn cách để vượt qua giới hạn đó Lưu ý là cách này chỉ hoạt động trên windows nhé
+Nếu cảm thấy Visual Studio Community quá nặng nề, nhưng bạn vẫn muốn dev website bằng asp.net, và target .net framework, vậy tại sao bạn không sử dụng VSCode nhỉ?
+
+Trớ trêu thay, OmniSharp chưa hỗ trợ .net core 2 trên vscode, nhưng bài viết này sẽ hướng dẫn bạn cách để vượt qua giới hạn đó
+
+Lưu ý là cách này chỉ hoạt động trên windows nhé
 <!-- more -->
 *   [1\. Chuẩn bị](#1-chuẩn-bị)
 *   [2\. Các bước cài đặt](#2-các-bước-cài-đặt)

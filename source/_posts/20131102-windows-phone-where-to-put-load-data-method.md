@@ -11,15 +11,21 @@ categories:
 date: 2013-11-02 00:28:37
 ---
 
-Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và hiển thị chúng lên giao diện. ![](https://farm8.staticflickr.com/7339/10619092335_673c78c2fc_o.png) Vậy cách nào là tối ưu để load data?
+Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và hiển thị chúng lên giao diện.
+
+![](https://farm8.staticflickr.com/7339/10619092335_673c78c2fc_o.png)
+
+Vậy cách nào là tối ưu để load data?
 <!-- more -->
 *   [Cách 1: this.Loaded event handler](#cách-1-thisloaded-event-handler)
+    
     *   [Hoạt động](#hoạt-động)
     *   [Cách dùng](#cách-dùng)
     *   [Ưu điểm](#ưu-điểm)
     *   [Nhược điểm](#nhược-điểm)
     *   [Kết luận](#kết-luận)
 *   [Cách 2: OnNavigatedTo](#cách-2-onnavigatedto)
+    
     *   [Hoạt động](#hoạt-động-1)
     *   [Cách dùng](#cách-dùng-1)
     *   [Ưu điểm](#ưu-điểm-1)
@@ -27,7 +33,19 @@ Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và h
     *   [Kết luận](#kết-luận-1)
 *   [Tóm lại](#tóm-lại)
 
-Khi tạo mới một page trong Windows Phone, bạn có 1 số phương thức được khởi tạo sẵn ![](https://farm8.staticflickr.com/7314/10619173056_305079cfe7_o.png) Đây là phương thức khởi tạo (Contructor) Phương thức khởi tạo có chức năng chính là…construct, hay xây dựng, thi công nên trang mà mình mong muốn. Một sai lầm cơ bản là mọi người thường load dữ liệu ngay dưới phương thức này. ![](https://farm8.staticflickr.com/7430/10619462526_9716012411_o.png) Giả sử như data của bạn nhiều, LoadData chạy khá lâu. Lúc đó thì page của bạn sẽ chỉ xuất hiện khi toàn bộ Contructor đã chạy xong. Tức là từ page cũ, bấm sang page này, sẽ có một khoảng thời gian ứng dụng bị "đơ", đó chính là thời gian cần thiết để chạy phương thức khởi tạo page. Windows Phone ko hoạt động theo kiểu HTML, một khi tất cả đã sẵn sàng trong RAM, nó mới vẽ page đó ra trên màn hình, trong khi HTML là có cái jì là nó vẽ cái đó :3 Rất nhiều người sử dụng cách này, vì trong một số đoạn video và hầu hết các tài liệu chính thức trên MSDN, MS hướng dẫn bạn theo cách này =='
+Khi tạo mới một page trong Windows Phone, bạn có 1 số phương thức được khởi tạo sẵn
+
+![](https://farm8.staticflickr.com/7314/10619173056_305079cfe7_o.png)
+
+Đây là phương thức khởi tạo (Contructor) Phương thức khởi tạo có chức năng chính là…construct, hay xây dựng, thi công nên trang mà mình mong muốn. Một sai lầm cơ bản là mọi người thường load dữ liệu ngay dưới phương thức này.
+
+![](https://farm8.staticflickr.com/7430/10619462526_9716012411_o.png)
+
+Giả sử như data của bạn nhiều, LoadData chạy khá lâu. Lúc đó thì page của bạn sẽ chỉ xuất hiện khi toàn bộ Contructor đã chạy xong. Tức là từ page cũ, bấm sang page này, sẽ có một khoảng thời gian ứng dụng bị "đơ", đó chính là thời gian cần thiết để chạy phương thức khởi tạo page.
+
+Windows Phone ko hoạt động theo kiểu HTML, một khi tất cả đã sẵn sàng trong RAM, nó mới vẽ page đó ra trên màn hình, trong khi HTML là có cái jì là nó vẽ cái đó :3
+
+Rất nhiều người sử dụng cách này, vì trong một số đoạn video và hầu hết các tài liệu chính thức trên MSDN, MS hướng dẫn bạn theo cách này =='
 
 # Cách 1: this.Loaded event handler
 
@@ -37,15 +55,23 @@ Loaded event sẽ được gọi ngay khi vẽ xong giao diện của page lên 
 
 ## Cách dùng
 
-![](https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png) Dùng như hình trên
+![](https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png)
+
+Dùng như hình trên
 
 ## Ưu điểm
 
-Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng. Phương pháp này làm được việc đó Việc khởi tạo page vô cùng nhanh chóng, ứng dụng của bạn sẽ không bị đơ, đảm bảo tương tác với người dùng
+Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng.
+
+Phương pháp này làm được việc đó Việc khởi tạo page vô cùng nhanh chóng, ứng dụng của bạn sẽ không bị đơ, đảm bảo tương tác với người dùng
 
 ## Nhược điểm
 
-Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại. Như vậy, ta không thể đảm bảo được rằng trong suốt quá trình tương tác trên page, phương thức này chỉ được gọi 1 lần. Gọi nhiều lần hàm load sẽ dẫn tới những kết cục không mong muốn, chưa kể đến sự hao phí tài nguyên và năng lượng Giả sử nếu bạn cần thời gian rất lâu để load dữ liệu, mà dữ liệu của bạn chưa được binding trước khi load xong, thì sẽ có 1 hiện tượng là page đã vẽ xong, nhưng nội dung thì vẫn trống trơn. Dù vẫn phản hồi tốt, người dùng sẽ tưởng app lỗi và rate thấp :3
+Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại.
+
+Như vậy, ta không thể đảm bảo được rằng trong suốt quá trình tương tác trên page, phương thức này chỉ được gọi 1 lần.
+
+Gọi nhiều lần hàm load sẽ dẫn tới những kết cục không mong muốn, chưa kể đến sự hao phí tài nguyên và năng lượng Giả sử nếu bạn cần thời gian rất lâu để load dữ liệu, mà dữ liệu của bạn chưa được binding trước khi load xong, thì sẽ có 1 hiện tượng là page đã vẽ xong, nhưng nội dung thì vẫn trống trơn. Dù vẫn phản hồi tốt, người dùng sẽ tưởng app lỗi và rate thấp :3
 
 ## Kết luận
 

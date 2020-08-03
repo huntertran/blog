@@ -13,13 +13,21 @@ categories:
 date: 2013-09-22 00:35:38
 ---
 
-Nhiều tính năng của Windows Phone đòi hỏi ta phải có 1 cái máy thiệt để test (NFC, Pinch Zoom). Hoặc là sau cùng, ta cũng cần 1 cái máy thiệt để xem ứng dụng hoạt động như thế nào. Cắm điện thoại vào cổng USB, chọn Device trong Visual Studio. Nhấn chạy. Nhưng: ![bug](http://www.f5debug.net/image.axd?picture=image_620.png)
+Nhiều tính năng của Windows Phone đòi hỏi ta phải có 1 cái máy thiệt để test (NFC, Pinch Zoom). Hoặc là sau cùng, ta cũng cần 1 cái máy thiệt để xem ứng dụng hoạt động như thế nào.
+
+Cắm điện thoại vào cổng USB, chọn Device trong Visual Studio. Nhấn chạy. Nhưng:
+
+![bug](http://www.f5debug.net/image.axd?picture=image_620.png)
 <!-- more -->
 *   [1\. Nguyên nhân](#1-nguyên-nhân)
 *   [2\. Triệu chứng](#2-triệu-chứng)
 *   [3\. Khắc phục](#3-khắc-phục)
 
-Rõ ràng đã kết nối. Check lại trong Device Manager nào: ![lumia](http://farm4.staticflickr.com/3711/9867408893_b658aee6fb_o.png) Bình thường. Vậy nguyên nhân do đâu?
+Rõ ràng đã kết nối. Check lại trong Device Manager nào:
+
+![lumia](http://farm4.staticflickr.com/3711/9867408893_b658aee6fb_o.png)
+
+Bình thường. Vậy nguyên nhân do đâu?
 
 # 1\. Nguyên nhân
 

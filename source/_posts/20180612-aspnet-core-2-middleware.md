@@ -8,7 +8,15 @@ categories:
 date: 2018-06-12 00:18:39
 ---
 
-For English version: [\[ASPNET Core 2\] – Middleware](https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/) Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, `dotnet new mvc`, rồi sửa `Views/Home/Index.cshtml` cho nó trả về 1 dòng \[code lang=html\] <p>hello world</p> \[/code\] Thế là xong, phải ko? Có cách khác :D
+For English version: [\[ASPNET Core 2\] – Middleware](https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/)
+
+Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET
+
+Dễ ẹt, `dotnet new mvc`, rồi sửa `Views/Home/Index.cshtml` cho nó trả về 1 dòng
+
+\[code lang=html\] <p>hello world</p> \[/code\]
+
+Thế là xong, phải ko? Có cách khác :D
 <!-- more -->
 *   [1\. Middleware là giề](#1-middleware-là-giề)
 *   [2\. Các loại middleware](#2-các-loại-middleware)

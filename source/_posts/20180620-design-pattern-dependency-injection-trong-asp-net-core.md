@@ -9,7 +9,9 @@ categories:
 date: 2018-06-20 08:30:55
 ---
 
-Dependency Injection là một kỹ thuật vô cùng thông dụng để _nới lỏng_ các objects và class phụ thuộc vào chúng. Nghe khó hiểu quá phải ko các bạn? Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn tổng quan (hy vọng là khách quan) về DI
+Dependency Injection là một kỹ thuật vô cùng thông dụng để _nới lỏng_ các objects và class phụ thuộc vào chúng. Nghe khó hiểu quá phải ko các bạn?
+
+Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn tổng quan (hy vọng là khách quan) về DI
 <!-- more -->
 *   [1\. Vấn đề](#1-vấn-đề)
 *   [2\. Lợi ích](#2-lợi-ích)

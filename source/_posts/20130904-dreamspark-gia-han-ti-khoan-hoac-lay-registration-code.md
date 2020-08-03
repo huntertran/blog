@@ -1,5 +1,5 @@
 ---
-title: '[20130904] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code'
+title: '[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code'
 tags:
   - account
   - dev center
@@ -11,10 +11,12 @@ categories:
 date: 2013-09-04 10:46:27
 ---
 
-Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái Lưu ý: yêu cầu phải có thẻ visa Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.
+Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái
 
+Lưu ý: yêu cầu phải có thẻ visa
+
+Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $ 99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.
 <!-- more -->
-
 Bước 1: Vào địa chỉ sau:
 
 [https://www.dreamspark.com/Student/Windows-Store-Access.aspx](https://www.dreamspark.com/Student/Windows-Store-Access.aspx)
@@ -53,11 +55,15 @@ Check mail
 
 Làm theo hướng dẫn trong mail
 
-[![04-09-2013 3-33-39 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333339pm.png "04-09-2013 3-33-39 PM")](http://www.flickr.com/photos/28322228@N04/9673593868/) [![04-09-2013 3-34-00 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333400pm.png "04-09-2013 3-34-00 PM")](http://www.flickr.com/photos/28322228@N04/9670372137/)
+[![04-09-2013 3-33-39 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333339pm.png "04-09-2013 3-33-39 PM")](http://www.flickr.com/photos/28322228@N04/9673593868/)
+
+[![04-09-2013 3-34-00 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333400pm.png "04-09-2013 3-34-00 PM")](http://www.flickr.com/photos/28322228@N04/9670372137/)
 
 Status đã trở thành Verified. Bạn nhấn Get Code Now
 
-[![04-09-2013 3-35-28 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333528pm.png "04-09-2013 3-35-28 PM")](http://www.flickr.com/photos/28322228@N04/9673600080/) [![04-09-2013 3-35-56 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333556pm.png "04-09-2013 3-35-56 PM")](http://www.flickr.com/photos/28322228@N04/9673604352/)
+[![04-09-2013 3-35-28 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333528pm.png "04-09-2013 3-35-28 PM")](http://www.flickr.com/photos/28322228@N04/9673600080/)
+
+[![04-09-2013 3-35-56 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333556pm.png "04-09-2013 3-35-56 PM")](http://www.flickr.com/photos/28322228@N04/9673604352/)
 
 Nhập code bạn có vào ô Registration Code, nhấn Update total
 
@@ -65,4 +71,8 @@ Nhập code bạn có vào ô Registration Code, nhấn Update total
 
 Xong. Đã thành miễn phí nhé
 
-[![04-09-2013 3-37-26 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333726pm.png "04-09-2013 3-37-26 PM")](http://www.flickr.com/photos/28322228@N04/9670383941/) [![04-09-2013 3-38-40 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333840pm.png "04-09-2013 3-38-40 PM")](http://www.flickr.com/photos/28322228@N04/9670386771/) [![04-09-2013 3-39-58 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333958pm.png "04-09-2013 3-39-58 PM")](http://www.flickr.com/photos/28322228@N04/9670388069/)
+[![04-09-2013 3-37-26 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333726pm.png "04-09-2013 3-37-26 PM")](http://www.flickr.com/photos/28322228@N04/9670383941/)
+
+[![04-09-2013 3-38-40 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333840pm.png "04-09-2013 3-38-40 PM")](http://www.flickr.com/photos/28322228@N04/9670386771/)
+
+[![04-09-2013 3-39-58 PM](http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333958pm.png "04-09-2013 3-39-58 PM")](http://www.flickr.com/photos/28322228@N04/9670388069/)

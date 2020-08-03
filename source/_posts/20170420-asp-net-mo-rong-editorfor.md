@@ -18,9 +18,11 @@ Chắc là bạn đã quá quen với **_EditorFor_** control, nhưng nó chỉ 
 Mục lục
 
 *   [1\. Sử dụng EditorFor và EditorForModel](#1-sử-dụng-editorfor-và-editorformodel)
+    
     *   [Model (hoặc ViewModel)](#model-hoặc-viewmodel)
     *   [View](#view)
 *   [2\. Mở rộng EditorFor](#2-mở-rộng-editorfor)
+    
     *   [2.1 Tạo EditorTemplates](#21-tạo-editortemplates)
 
 Có thể nói EditorFor và EditorForModel là những control hữu ích nhất khi mà nó có thể render cái bụp toàn bộ thẻ input cần thiết dựa trên một model của bạn.
@@ -31,18 +33,56 @@ Tại sao chả thấy ai nói gì về Editor: Từ hồi MVC2, Editor control 
 
 ## Model (hoặc ViewModel)
 
-Để render 1 cái form, bạn cần phải biết data nó nhận vô là gì. Để hiển thị những data này, bạn cần phải tạo một class với các Properties Model \[code lang=csharp\] public class Lesson { // ScaffoldColumn mark that EditorFor should render it or not \[ScaffoldColumn(false)\] public int Id { get; set; } // To display as label \[Display(Name = "Lesson Name")\] public string Name { get; set; } \[Display(Name = "CD Number")\] public int CDNumber { get; set; } \[Display(Name = "CD Track")\] public int CDTrack { get; set; } } \[/code\] ViewModel \[code lang=csharp\] public class LessonViewModel { public Lesson LessonItem { get; set; } } \[/code\]
+Để render 1 cái form, bạn cần phải biết data nó nhận vô là gì. Để hiển thị những data này, bạn cần phải tạo một class với các Properties
+
+Model
+
+\[code lang=csharp\] public class Lesson { // ScaffoldColumn mark that EditorFor should render it or not \[ScaffoldColumn(false)\] public int Id { get; set; }
+
+// To display as label \[Display(Name = "Lesson Name")\] public string Name { get; set; }
+
+\[Display(Name = "CD Number")\] public int CDNumber { get; set; }
+
+\[Display(Name = "CD Track")\] public int CDTrack { get; set; } } \[/code\]
+
+ViewModel
+
+\[code lang=csharp\] public class LessonViewModel { public Lesson LessonItem { get; set; } } \[/code\]
 
 ## View
 
 *   EditorFor control phải nằm bên trong form tag
 *   Razor support bạn render cái form tag đó tự động luôn
 
-\[code lang=csharp\] @model LessonViewModel @using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorFor(x => x.LessonItem) } \[/code\] Nếu bạn không có ViewModel, nhưng muốn render trực tiếp từ Lesson model \[code lang=csharp\] @model Lesson @using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorForModel() } \[/code\]
+\[code lang=csharp\] @model LessonViewModel
+
+@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorFor(x => x.LessonItem) } \[/code\]
+
+Nếu bạn không có ViewModel, nhưng muốn render trực tiếp từ Lesson model
+
+\[code lang=csharp\] @model Lesson
+
+@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorForModel() } \[/code\]
 
 # 2\. Mở rộng EditorFor
 
-Tạo một class mới để giữ data \[code lang=csharp\] public class TextBoxWithCheck { \[Display(Name = "Fancy Text")\] public string MyText { get; set;} public bool IsTrue { get; set; } } \[/code\] Thêm cái class mới này vô Lesson model \[code lang=csharp\] public TextBoxWithCheck FancyBox { get; set; } \[/code\] Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy ![textbox with checkbox](https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png) Rõ ràng là chả có cái default control nào có thể làm được trò này, mà EditorFor cũng không biết chọn cái gì để render cái property "FancyBox" của kiểu "TextBoxWithCheck". Vì thế, bạn sẽ **_dạy_** nó cách render nhóe.
+Tạo một class mới để giữ data
+
+\[code lang=csharp\] public class TextBoxWithCheck { \[Display(Name = "Fancy Text")\] public string MyText { get; set;}
+
+public bool IsTrue { get; set; } } \[/code\]
+
+Thêm cái class mới này vô Lesson model
+
+\[code lang=csharp\] public TextBoxWithCheck FancyBox { get; set; } \[/code\]
+
+Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy
+
+![textbox with checkbox](https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png)
+
+Rõ ràng là chả có cái default control nào có thể làm được trò này, mà EditorFor cũng không biết chọn cái gì để render cái property "FancyBox" của kiểu "TextBoxWithCheck".
+
+Vì thế, bạn sẽ **_dạy_** nó cách render nhóe.
 
 ## 2.1 Tạo EditorTemplates
 
@@ -52,4 +92,10 @@ Tạo một class mới để giữ data \[code lang=csharp\] public class TextB
 
 *   Thêm View mới vào folder đó, đặt tên là "TextBoxWithCheck.cshtml" (phải trùng tên với cái custom class)
 
-\[code lang=html\] @model TextBoxWithCheck @Html.LabelFor(x => x.MyText) <div class="input-group"> @Html.TextAreaFor(x => x.Answer, new {@class="form-control"}) <span class="input-group-addon"> @Html.CheckBoxFor(x => x.IsTrue) </span> </div> \[/code\] Thế là xong. Giờ EditorFor đã biết render tất cả instance của TextBoxWithCheck. Cũng dễ mà phải không?
+\[code lang=html\] @model TextBoxWithCheck
+
+@Html.LabelFor(x => x.MyText) <div class="input-group"> @Html.TextAreaFor(x => x.Answer, new {@class="form-control"}) <span class="input-group-addon"> @Html.CheckBoxFor(x => x.IsTrue) </span> </div> \[/code\]
+
+Thế là xong. Giờ EditorFor đã biết render tất cả instance của TextBoxWithCheck.
+
+Cũng dễ mà phải không?

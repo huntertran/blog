@@ -12,7 +12,13 @@ categories:
 date: 2014-05-02 09:55:19
 ---
 
-Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa những đoạn code mới thêm vào, nhưng lỗi vẫn còn, và hình như bạn còn thiếu gì đó? Tưởng tượng tiếp, Team của bạn đang làm một dự án nào đó, nhưng mỗi thành viên lại ở một chỗ khác nhau, và các bạn không có cách gì gặp nhau được. Làm thế nào để làm việc cùng nhau trên một dự án? Tất cả câu hỏi đó, và nhiều câu hỏi khác, được trả lời bằng một tính năng gọi là “Team Foundation Server” của Visual Studio ![](https://i2.wp.com/farm6.staticflickr.com/5032/14076910292_20d9511445_o.png)
+Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa những đoạn code mới thêm vào, nhưng lỗi vẫn còn, và hình như bạn còn thiếu gì đó?
+
+Tưởng tượng tiếp, Team của bạn đang làm một dự án nào đó, nhưng mỗi thành viên lại ở một chỗ khác nhau, và các bạn không có cách gì gặp nhau được. Làm thế nào để làm việc cùng nhau trên một dự án?
+
+Tất cả câu hỏi đó, và nhiều câu hỏi khác, được trả lời bằng một tính năng gọi là “Team Foundation Server” của Visual Studio
+
+![](https://i2.wp.com/farm6.staticflickr.com/5032/14076910292_20d9511445_o.png)
 <!-- more -->
 *   [Khái niệm](#khái-niệm)
 *   [Đăng ký tài khoản](#đăng-ký-tài-khoản)

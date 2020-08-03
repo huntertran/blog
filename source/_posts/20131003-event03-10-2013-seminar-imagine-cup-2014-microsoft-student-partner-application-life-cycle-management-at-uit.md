@@ -16,7 +16,9 @@ Sáng nay, tại phòng A106, trường Đại học Công nghệ thông tin –
 <!-- more -->
 # 1\. Mở đầu
 
-Bắt đầu sự kiện, ITIClub đã cho các bạn xem một số đoạn Video đầy thú vị về Microsoft và chương trình MSP, cũng như cuộc thi Imagine Cup các năm Chương trình Microsoft Student Partner
+Bắt đầu sự kiện, ITIClub đã cho các bạn xem một số đoạn Video đầy thú vị về Microsoft và chương trình MSP, cũng như cuộc thi Imagine Cup các năm
+
+Chương trình Microsoft Student Partner
 
 \[youtube=http://www.youtube.com/watch?v=fYhn7-vWbuI&w=448&h=252&hd=1\]
 
@@ -28,7 +30,9 @@ Cuộc thi Imagine Cup 2012 – Úc
 
 Imagine Cup 2012 Kick off
 
-Cuộc thi Imagine Cup 2013 – Nga Vì giới hạn của Wordpress, bạn vui lòng bấm vào link sau để xem: [Imagine Cup 2013 - Kick off Video](http://www.youtube.com/watch?v=-WEwQsTbxC0)
+Cuộc thi Imagine Cup 2013 – Nga
+
+Vì giới hạn của Wordpress, bạn vui lòng bấm vào link sau để xem: [Imagine Cup 2013 - Kick off Video](http://www.youtube.com/watch?v=-WEwQsTbxC0)
 
 # 2\. Bắt đầu
 
@@ -39,6 +43,7 @@ Anh Nguyễn Thiên Ca – Microsoft Developer Evengelist – bắt đầu giớ
 *   Giải thưởng lại tăng ![Flirt male](http://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-flirtmale.png)
 *   Nếu ý tưởng tốt, bạn có thể sẽ được tài trợ một khoản tiền để lập một Start Up
 *   Có 4 lĩnh vực bạn có thể tham gia
+    
     *   Game – Viết Game
     *   Innovation – Sáng tạo
     *   World Citizenship – Phần nào đó giải quyết hoặc cải thiện các vấn đề của thế giới (8 mục tiêu thiên niên kỷ của Liên Hợp Quốc + các vấn đề khác trong cuộc sống)
@@ -48,7 +53,17 @@ Nghe thú vị nhỉ, và tôi đã có sẵn một ý tưởng để có thể 
 
 # 3\. Application Life-Cycle Management
 
-Phần tiếp theo, anh Huỳnh Bảo Toàn – Microsoft Developer Evengelist – bắt đầu bằng một hình ảnh khá thú vị ![tree](https://farm4.staticflickr.com/3727/10067683046_8ee06cf21d_o.gif) và đây chính xác là những gì xảy ra trong đời thực, và làm sao để tránh nó? Và thế là, Application Life-Cycle Management ra đời (môn ở trường các bạn học chính là “Quản lý dự án Công nghệ thông tin”, nhưng theo tôi thấy thì không được hữu ích lắm, và nội dung cũng không liên quan nhiều) tiếp theo đó, anh Toàn đã giới thiệu về mô hình thác nước truyền thống, rồi tới Agile, Scrum và sự hỗ trợ của Microsoft đối với các mô hình này bằng Team Foundation Service. Từng chức vụ trong một dự án phát triển phần mềm được anh giới thiệu khá kỹ lưỡng và chi tiết. Anh cũng chia sẻ một số kinh nghiệm làm việc của mình cho các bạn.
+Phần tiếp theo, anh Huỳnh Bảo Toàn – Microsoft Developer Evengelist – bắt đầu bằng một hình ảnh khá thú vị
+
+![tree](https://farm4.staticflickr.com/3727/10067683046_8ee06cf21d_o.gif)
+
+và đây chính xác là những gì xảy ra trong đời thực, và làm sao để tránh nó?
+
+Và thế là, Application Life-Cycle Management ra đời (môn ở trường các bạn học chính là “Quản lý dự án Công nghệ thông tin”, nhưng theo tôi thấy thì không được hữu ích lắm, và nội dung cũng không liên quan nhiều)
+
+tiếp theo đó, anh Toàn đã giới thiệu về mô hình thác nước truyền thống, rồi tới Agile, Scrum và sự hỗ trợ của Microsoft đối với các mô hình này bằng Team Foundation Service.
+
+Từng chức vụ trong một dự án phát triển phần mềm được anh giới thiệu khá kỹ lưỡng và chi tiết. Anh cũng chia sẻ một số kinh nghiệm làm việc của mình cho các bạn.
 
 > Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool ![smile](https://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-partysmile.png)
 
