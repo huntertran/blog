@@ -17,13 +17,13 @@ Bạn có đang dùng Entity Framework với ASP.NET MVC, cùng với đó là c
 
 Có một số cách giúp bạn khắc phục một vài nhược điểm trên ;)
 <!-- more -->
-*   [1\. Generic Customized Error Message](#1-generic-customized-error-message)
-*   [2\. Error Message Localization](#2-error-message-localization)
+*   [1. Generic Customized Error Message](#1-generic-customized-error-message)
+*   [2. Error Message Localization](#2-error-message-localization)
     
     *   [2.1. Nếu bạn có Resharper](#21-nếu-bạn-có-resharper)
     *   [2.2. Nếu bạn muốn dùng hàng miễn phí](#22-nếu-bạn-muốn-dùng-hàng-miễn-phí)
 
-# 1\. Generic Customized Error Message
+# 1. Generic Customized Error Message
 
 Generic tức là chung chung. Dùng chung 1 câu thông báo cho nhiều property cùng loại, chỉ thay đổi các yếu tố cần thiết
 
@@ -67,7 +67,7 @@ Ví dụ với trường hợp StringLength
 
 \[code lang=csharp\] \[StringLength(70, ErrorMessage = "{0} phải chứa ít hơn {1} ký tự")\] public string Name { get; set; } \[/code\]
 
-# 2\. Error Message Localization
+# 2. Error Message Localization
 
 Thực ra thì chiêu sau đây không những giúp bạn localize string của Error Message, mà bất kỳ đoạn string nào bạn muốn
 

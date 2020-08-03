@@ -16,22 +16,22 @@ Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép to
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Các ký hiệu](#1-các-ký-hiệu)
+*   [1. Các ký hiệu](#1-các-ký-hiệu)
     *   [1.1. Matrix](#11-matrix)
     *   [1.2. Vector](#12-vector)
     *   [1.3. Ký hiệu](#13-ký-hiệu)
-*   [2\. Phần mềm](#2-phần-mềm)
-*   [3\. Các phép tính](#3-các-phép-tính)
+*   [2. Phần mềm](#2-phần-mềm)
+*   [3. Các phép tính](#3-các-phép-tính)
     *   [3.1. Phép cộng và phép nhân matrix số thực](#31-phép-cộng-và-phép-nhân-matrix-số-thực)
     *   [3.2. Nhân matrix với vector](#32-nhân-matrix-với-vector)
     *   [3.3. Nhân 2 matrix với nhau](#33-nhân-2-matrix-với-nhau)
     *   [3.4. Các tính chất của phép nhân matrix](#34-các-tính-chất-của-phép-nhân-matrix)
     *   [3.5. Identity Matrix](#35-identity-matrix)
-*   [4\. Inverse (nghịch đảo) và Transpose (chuyển vị)](#4-inverse-nghịch-đảo-và-transpose-chuyển-vị)
+*   [4. Inverse (nghịch đảo) và Transpose (chuyển vị)](#4-inverse-nghịch-đảo-và-transpose-chuyển-vị)
     *   [4.1. Inverse (nghịch đảo)](#41-inverse-nghịch-đảo)
     *   [4.2. Transpose (chuyển vị)](#42-transpose-chuyển-vị)
 
-# 1\. Các ký hiệu
+# 1. Các ký hiệu
 
 ## 1.1. Matrix
 
@@ -62,7 +62,7 @@ Vector trên là một matrix 4x1.
 *   $latex \\mathbb{R}$ được ký hiệu cho tập các số thực.
 *   $latex \\mathbb{R}^n$ được ký hiệu cho tập các vector số thực n chiều.
 
-# 2\. Phần mềm
+# 2. Phần mềm
 
 Để thử nghiệm nhanh chóng các giả thuyết - thuật toán liên quan tới toán học trong Machine Learning, ta có thể dùng một phần mềm mang tên [Octave](https://www.gnu.org/software/octave/download.html)
 
@@ -80,7 +80,7 @@ Bạn có thể chạy đoạn code dưới đây trong Octave hoặc Matlab
 
 % Now let's index into the 2nd row 3rd column of matrix A A\_23 = A(2,3) \[/code\]
 
-# 3\. Các phép tính
+# 3. Các phép tính
 
 ## 3.1. Phép cộng và phép nhân matrix số thực
 
@@ -163,7 +163,7 @@ $latex I\_{3 \\times 3} = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 &
 
 > Lưu ý: $latex A \\times I = I \\times A$
 
-# 4\. Inverse (nghịch đảo) và Transpose (chuyển vị)
+# 4. Inverse (nghịch đảo) và Transpose (chuyển vị)
 
 ## 4.1. Inverse (nghịch đảo)
 

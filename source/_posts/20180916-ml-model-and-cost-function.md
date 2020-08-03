@@ -12,8 +12,8 @@ Bài thứ 2 trong chuỗi bài viết tự học Machine Learning Trong bài n�
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Các ký hiệu](#1-các-ký-hiệu)
-*   [2\. Cost Function](#2-cost-function)
+*   [1. Các ký hiệu](#1-các-ký-hiệu)
+*   [2. Cost Function](#2-cost-function)
     *   [2.1. Toán học](#21-toán-học)
         *   [2.1.1. Xác xuất và thống kê (Probability and Statistic)](#211-xác-xuất-và-thống-kê-probability-and-statistic)
         *   [2.1.2. Phương sai (Variance)](#212-phương-sai-variance)
@@ -22,7 +22,7 @@ Xem các bài viết khác tại [Machine Learning Course Structure](https://cod
         *   [2.2.2. Lớn nhất hay nhỏ nhất](#222-lớn-nhất-hay-nhỏ-nhất)
     *   [2.3. Công thức](#23-công-thức)
 
-# 1\. Các ký hiệu
+# 1. Các ký hiệu
 
 Chúng ta sẽ thống nhất 1 cách sử dụng các ký hiệu để biểu thị các thuộc tính của một bài toán.
 
@@ -52,7 +52,7 @@ Khi y là một giá trị liên tục, ví dụ như giá nhà, giá cổ phi�
 
 Khi y chỉ là một số lượng nhỏ các giá trị nhất định (true/false - yes/no), thì đây là một `classification problem`.
 
-# 2\. Cost Function
+# 2. Cost Function
 
 Chúng ta "tính toán" sự chính xác của hàm hypothesis bằng cách sử dụng 1 hàm số. Hàm số đó gọi là _`cost function`_.
 

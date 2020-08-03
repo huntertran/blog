@@ -18,21 +18,21 @@ Dễ ẹt, `dotnet new mvc`, rồi sửa `Views/Home/Index.cshtml` cho nó trả
 
 Thế là xong, phải ko? Có cách khác :D
 <!-- more -->
-*   [1\. Middleware là giề](#1-middleware-là-giề)
-*   [2\. Các loại middleware](#2-các-loại-middleware)
-*   [3\. Default middleware](#3-default-middleware)
-*   [4\. Viết một middleware](#4-viết-một-middleware)
+*   [1. Middleware là giề](#1-middleware-là-giề)
+*   [2. Các loại middleware](#2-các-loại-middleware)
+*   [3. Default middleware](#3-default-middleware)
+*   [4. Viết một middleware](#4-viết-một-middleware)
     *   [4.1. Dùng delegate](#41-dùng-delegate)
     *   [4.2. Xài class riêng](#42-xài-class-riêng)
     *   [ghi chú khi xài Dependency Injection](#ghi-chú-khi-xài-dependency-injection)
 
-# 1\. Middleware là giề
+# 1. Middleware là giề
 
 Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses ![middleware](https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png)
 
 > middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là \[code lang=text\] short-circuit \[/code\]
 
-# 2\. Các loại middleware
+# 2. Các loại middleware
 
 Có 3 loại middleware, phân loại bằng cách bạn implement nó như nào
 
@@ -95,7 +95,7 @@ Hỗ trợ Nesting (multi-level branching)
 > Yêu cầu 1 thứ tự nhất định  
 > Chỉ có 1 dòng pipeline, dễ hiểu/xài/debug
 
-# 3\. Default middleware
+# 3. Default middleware
 
 Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số middleware cho bạn
 
@@ -105,7 +105,7 @@ Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số mi
 
 source code nè \[code lang=csharp\] public static void Configure(IApplicationBuilder app, IHostingEnvironment env) { if (env.IsDevelopment()) { app.UseDeveloperExceptionPage(); } else { app.UseExceptionHandler("/Error/500"); } app.UseStaticFiles(); app.UseAuthentication(); app.UseSession(); if (!env.IsDevelopment()) { app.UseMiddleware<ErrorHandlingMiddleware>(); } app.UseMvc(routes => { routes.MapRoute( name: "default", template: "{controller=Home}/{action=Index}/{id?}"); }); } \[/code\] [Đây](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.1&tabs=aspnetcore2x#built-in-middleware) danh sách các built-in middlewares
 
-# 4\. Viết một middleware
+# 4. Viết một middleware
 
 ## 4.1. Dùng delegate
 

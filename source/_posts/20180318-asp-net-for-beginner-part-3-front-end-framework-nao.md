@@ -22,7 +22,7 @@ Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end ph�
 > *   [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
 > *   [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
-*   [1\. CSS](#1-css)
+*   [1. CSS](#1-css)
     
     *   [1.1. CSS Framework](#11-css-framework)
         
@@ -33,11 +33,11 @@ Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end ph�
         
         *   [1.2.1. \[SCSS\](https://sass-lang.com/)](#121-scsshttpssass-langcom)
         *   [1.2.2. \[LESS\](http://lesscss.org/)](#122-lesshttplesscssorg)
-*   [2\. Javascript](#2-javascript)
+*   [2. Javascript](#2-javascript)
     
     *   [2.1. jQuery](#21-jquery)
     *   [2.2. Xu hướng](#22-xu-hướng)
-*   [3\. HTML](#3-html)
+*   [3. HTML](#3-html)
 *   [Cái nào là tốt nhất?](#cái-nào-là-tốt-nhất)
 
 Một ứng dụng web được chia thành 2 thành phần chính là Front-end và Back-end. Về phía back end, có hàng ty tỷ ngôn ngữ và công nghệ có thể làm nên chúng. ASP.NET là một trong các công nghệ đó. Và tất cả các công nghệ / ngôn ngữ này đều phục vụ một mục đích tối thượng: Tạo ra front end
@@ -52,7 +52,7 @@ Trong một diễn biến khác, Front end chỉ có 1, được cấu thành t�
 
 Để làm cho cuộc đời bớt đau khổ, các developer trên khắp thế giới đã cùng nhau phát triển thêm những framework, những ngôn ngữ hỗ trợ thêm cho bộ 3 này
 
-# 1\. CSS
+# 1. CSS
 
 ## 1.1. CSS Framework
 
@@ -107,7 +107,7 @@ Less giống như một phiên bản khác của Scss vậy, với cú pháp cũ
 
 > Bạn chỉ nên chọn 1, hoặc SCSS, hoặc LESS
 
-# 2\. Javascript
+# 2. Javascript
 
 Ngôn ngữ HTML, vốn dĩ chỉ là các đoạn text có thêm markup và link, chỉ có thể cho phép bạn đọc text và nhấn link để nhảy sang 1 trang khác mà thôi.
 
@@ -133,7 +133,7 @@ vì jQuery khá nặng, việc xử lý jQuery cũng đòi hỏi một phần t�
 
 Nhưng từ giờ tới lúc jQuery biến mất vẫn còn xa lắm. Máy tính và điện thoại thì ngày càng mạnh mẽ hơn. jQuery hầu như đã được tải sẵn trên bất cứ trình duyệt nào bạn tìm thấy
 
-# 3\. HTML
+# 3. HTML
 
 HTML5, như đã nói ở trên, là version mới nhất của HTML, và tất cả các trình duyệt phổ biến hỗ trợ.
 

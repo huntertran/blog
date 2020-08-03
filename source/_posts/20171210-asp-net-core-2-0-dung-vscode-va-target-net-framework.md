@@ -18,14 +18,14 @@ Trớ trêu thay, OmniSharp chưa hỗ trợ .net core 2 trên vscode, nhưng b�
 
 Lưu ý là cách này chỉ hoạt động trên windows nhé
 <!-- more -->
-*   [1\. Chuẩn bị](#1-chuẩn-bị)
-*   [2\. Các bước cài đặt](#2-các-bước-cài-đặt)
+*   [1. Chuẩn bị](#1-chuẩn-bị)
+*   [2. Các bước cài đặt](#2-các-bước-cài-đặt)
     *   [2.1. Create project](#21-create-project)
     *   [2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)](#22-chỉnh-sửa-project-để-target-net-framework-471-or-461)
     *   [2.3. Compile, Run và Debug](#23-compile-run-và-debug)
     *   [2.4. Run and Debug](#24-run-and-debug)
 
-# 1\. Chuẩn bị
+# 1. Chuẩn bị
 
 *   VSCode :v : [https://code.visualstudio.com/](https://code.visualstudio.com/)
 *   C# for Visual Studio Code (powered by OmniSharp) extension
@@ -35,7 +35,7 @@ Lưu ý là cách này chỉ hoạt động trên windows nhé
 
 > ![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png) NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense \[code lang=bash\] dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01 \[/code\]
 
-# 2\. Các bước cài đặt
+# 2. Các bước cài đặt
 
 ## 2.1. Create project
 

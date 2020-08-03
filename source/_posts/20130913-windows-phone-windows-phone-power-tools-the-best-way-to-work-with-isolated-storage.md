@@ -19,8 +19,8 @@ Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này t
 <!-- more -->
 Có một cách, và theo mình, cách này là hay nhất, vô cùng trực quan, sinh động và thao tác dễ dàng. Bạn không cần phải gõ bất kỳ dòng lệnh nào để chạy nó so với Isolated Storage Explorer Tool
 
-*   [1\. Cài đặt](#1-cài-đặt)
-*   [2\. Sử dụng](#2-sử-dụng)
+*   [1. Cài đặt](#1-cài-đặt)
+*   [2. Sử dụng](#2-sử-dụng)
     
     *   [2.1. Install | Update](#21-install--update)
     *   [2.2. Dev Apps](#22-dev-apps)
@@ -33,13 +33,13 @@ Có một cách, và theo mình, cách này là hay nhất, vô cùng trực qua
     *   [2.9. Nút Delete](#29-nút-delete)
     *   [2.10. Profile (Beta)](#210-profile-beta)
     *   [2.11. Giải pháp](#211-giải-pháp)
-*   [3\. Kết luận](#3-kết-luận)
+*   [3. Kết luận](#3-kết-luận)
 
-# 1\. Cài đặt
+# 1. Cài đặt
 
 Tải và cài tại: [Windows Phone Power Tools on CodePlex](http://wptools.codeplex.com/)
 
-# 2\. Sử dụng
+# 2. Sử dụng
 
 Mở một project Windows Phone bất kỳ, Run with Emulator (hoặc Device)
 
@@ -118,6 +118,6 @@ Trong quá trình thử nghiệm, Power Tool bị lỗi và ko thể khởi đ�
 
 Gỡ bỏ > Cài đặt lại > Tắt Emulator / Ngắt kết nối thiết bị > Chạy lại Emulator / Kết nối lại
 
-# 3\. Kết luận
+# 3. Kết luận
 
 Power Tools, theo tôi là công cụ tốt nhất để thao tác với Isolated Storage, nhưng công cụ Profile của nó có một số lỗi khó chịu. Ngoài lỗi này ra, tất cả đều tuyệt vời

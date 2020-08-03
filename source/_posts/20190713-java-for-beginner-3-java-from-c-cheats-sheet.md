@@ -19,17 +19,17 @@ You can view other posts in the series here:
 
 Table of Content
 
-*   [1\. Classes](#1-classes)
+*   [1. Classes](#1-classes)
     *   [1.1. Some keywords](#11-some-keywords)
     *   [1.2. Generic Class](#12-generic-class)
     *   [1.3. Interface Implement](#13-interface-implement)
-*   [2\. Variables](#2-variables)
-*   [3\. Methods](#3-methods)
+*   [2. Variables](#2-variables)
+*   [3. Methods](#3-methods)
     *   [3.1. Extension Method](#31-extension-method)
     *   [3.2. Safely use resource](#32-safely-use-resource)
     *   [3.3. Class Properties](#33-class-properties)
 
-# 1\. Classes
+# 1. Classes
 
 ## 1.1. Some keywords
 
@@ -121,7 +121,7 @@ public class Pig implements IAnimal {
     }
 }
 
-# 2\. Variables
+# 2. Variables
 
 C#
 
@@ -148,7 +148,7 @@ java.math.BigDecimal
 String hello = "Hello World!";
 System.out.print(hello);
 
-# 3\. Methods
+# 3. Methods
 
 ## 3.1. Extension Method
 

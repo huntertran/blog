@@ -17,18 +17,18 @@ In this tutorial, I will guide your through on how to install wordpress on a con
 <!-- more -->
 **Contents**
 
-*   [1\. Install Apache](#1-install-apache)
-*   [2\. Install MySQL](#2-install-mysql)
+*   [1. Install Apache](#1-install-apache)
+*   [2. Install MySQL](#2-install-mysql)
     
     *   [2.1. Install mysql-server](#21-install-mysql-server)
-*   [3\. Install PHP](#3-install-php)
-*   [4\. Setup Wordpress](#4-setup-wordpress)
+*   [3. Install PHP](#3-install-php)
+*   [4. Setup Wordpress](#4-setup-wordpress)
     
     *   [4.1. Create MySQL database and user](#41-create-mysql-database-and-user)
     *   [4.2. Install wordpress](#42-install-wordpress)
     *   [4.3. Config](#43-config)
 
-# 1\. Install Apache
+# 1. Install Apache
 
 Login to Docker container with SuperPutty / Putty
 
@@ -60,7 +60,7 @@ add this line at the end of the file
 
 type `apache2ctl configtest` again to see warning is disappeared
 
-# 2\. Install MySQL
+# 2. Install MySQL
 
 ## 2.1. Install mysql-server
 
@@ -68,7 +68,7 @@ type `apache2ctl configtest` again to see warning is disappeared
 
 In the installation process, type password for root user
 
-# 3\. Install PHP
+# 3. Install PHP
 
 \[code lang=text\] apt-get install php libapache2-mod-php php-mcrypt php-mysql \[/code\]
 
@@ -100,7 +100,7 @@ Then you can access [http://your\_domain\_name/info](http://your_domain_name/inf
 
 ![phpinfo](http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png)
 
-# 4\. Setup Wordpress
+# 4. Setup Wordpress
 
 ## 4.1. Create MySQL database and user
 

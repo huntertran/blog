@@ -9,12 +9,12 @@ date: 2019-05-14 05:43:52
 
 Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.
 <!-- more -->
-*   [1\. Classification and Representation](#1-classification-and-representation)
+*   [1. Classification and Representation](#1-classification-and-representation)
     *   [1.1. Sigmoid Function or Logistic Function](#11-sigmoid-function-or-logistic-function)
     *   [1.2. Decision Boundary](#12-decision-boundary)
-*   [2\. Ví dụ](#2-v%C3%AD-d%E1%BB%A5)
+*   [2. Ví dụ](#2-v%C3%AD-d%E1%BB%A5)
 
-# **1\. Classification and Representation**
+# **1. Classification and Representation**
 
 ## **1.1. Sigmoid Function or Logistic Function**
 
@@ -68,7 +68,7 @@ $latex \\theta^T x < 0 \\Rightarrow y = 0$
 
 **Decision Boundary** chính là đường phân chia vùng y = 0 và vùng y = 1, được tạo ra bởi hàm hypothesis của chúng ta
 
-# **2\. Ví dụ**
+# **2. Ví dụ**
 
 Ta có ví dụ sau:
 

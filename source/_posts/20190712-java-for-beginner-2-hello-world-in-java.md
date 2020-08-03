@@ -11,15 +11,15 @@ date: 2019-07-12 12:40:13
 
 After getting yourself familiar with names and terms in Java in [part 1](https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/), now it's time for you to create your first program in Java.
 
-*   [1\. Setup](#1-setup)
+*   [1. Setup](#1-setup)
     *   [1.1. Required Tools](#11-required-tools)
     *   [1.2. Set environment variables](#12-set-environment-variables)
-*   [2\. Start coding](#2-start-coding)
+*   [2. Start coding](#2-start-coding)
     *   [2.1. Hello World in Java](#21-hello-world-in-java)
     *   [2.2. Run and Debug](#22-run-and-debug)
-*   [3\. Java Build Tools](#3-java-build-tools)
+*   [3. Java Build Tools](#3-java-build-tools)
 
-# 1\. Setup
+# 1. Setup
 
 For a beginner, tools and supports from those tools is quite vital. Someone will said that you should _learn_ new language by using a basic text editor like Notepad. In my opinion, don't do it. Use a IDE, or at least VSCode with supporting extensions, and re-type any code that you read, don't copy and paste them.
 
@@ -44,7 +44,7 @@ JAVA\_HOME
 
 C:\\Program Files\\Java\\jdk1.8.0\_161
 
-# 2\. Start coding
+# 2. Start coding
 
 ## 2.1. Hello World in Java
 
@@ -111,7 +111,7 @@ Then press F5 again
 
 ![debug](https://i.imgur.com/hJHvv44.png)
 
-# 3\. Java Build Tools
+# 3. Java Build Tools
 
 To build a java file, you need a build tool. In the tutorial above, VSCode has already done that for you. The most widely used build tool for Java right now is Gradle and Maven. Both can be use in VSCode terminal window and integrated in VSCode task (in fact, what doesn't?)
 

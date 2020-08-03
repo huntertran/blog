@@ -15,14 +15,14 @@ date: 2013-09-07 04:59:02
 
 Mọi thứ có trong project folder, ta đều phải lựa chọn: Resource hay Content? Bài viết này sẽ nói về sự khác biệt giữa 2 thể loại này, cũng như lợi/hại của từng loại
 <!-- more -->
-*   [1\. Khác nhau](#1-khác-nhau)
-*   [2\. Truy xuất](#2-truy-xuất)
+*   [1. Khác nhau](#1-khác-nhau)
+*   [2. Truy xuất](#2-truy-xuất)
     
     *   [2.1. Hình ảnh thuộc tính Content](#21-hình-ảnh-thuộc-tính-content)
     *   [2.2. Hình ảnh thuộc tính Resource](#22-hình-ảnh-thuộc-tính-resource)
-*   [3\. Chọn cái nào](#3-chọn-cái-nào)
+*   [3. Chọn cái nào](#3-chọn-cái-nào)
 
-# 1\. Khác nhau
+# 1. Khác nhau
 
 khác biệt chính là Resource được kèm vào trong file dll, trong khi đó, Content lại trở thành một file riêng, đi kèm với file dll.
 
@@ -30,7 +30,7 @@ Bạn tự hỏi, vậy Isolated Storage là gì. Đừng nhầm lẫn, Isolated
 
 Hãy làm một bài test nhỏ. Tạo một project Silverlight (Windows Phone cho dễ :3 ), thêm vào vài cái hình. Rồi chọn resource cho một số hình, và content cho các hình còn lại. Build file XAP. Đổi tên file XAP thành ZIP, giải nén nó ra. Bạn sẽ thấy, những file có thuộc tính content thì nằm ngay bên ngoài. Những file Resource thì đã được nhúng kèm trong dll, nên chúng ta ko thấy nữa.
 
-# 2\. Truy xuất
+# 2. Truy xuất
 
 Truy xuất tới các file resource và content khác nhau một tí
 
@@ -58,7 +58,7 @@ C#:
 
 \[code lang=csharp\] Uri uri = new Uri("/TestProjet;component/images/yourImage.png", UriKind.Relative); this.Image.Source = new BitmapImage(uri); \[/code\]
 
-# 3\. Chọn cái nào
+# 3. Chọn cái nào
 
 Hiểu rồi, giờ bạn sẽ chọn cái nào cho các file thêm vào project?
 

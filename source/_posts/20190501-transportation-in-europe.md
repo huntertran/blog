@@ -13,23 +13,23 @@ date: 2019-05-01 05:59:14
 
 Nếu bạn có dư dả thời gian và nguồn kinh phí eo hẹp, thì cách tốt nhất để dạo vòng quanh các nước EU chính là các phương tiện công cộng.
 <!-- more -->
-*   [1\. Airplane](#1-airplane)
+*   [1. Airplane](#1-airplane)
     *   [1.1. Canh vé](#11-canh-vé)
     *   [1.2. Bảo hiểm thanh toán](#12-bảo-hiểm-thanh-toán)
     *   [1.3. Delay](#13-delay)
-*   [2\. Train và Bus](#2-train-và-bus)
+*   [2. Train và Bus](#2-train-và-bus)
     *   [2.1. Tìm đường](#21-tìm-đường)
     *   [2.2. Đọc kết quả](#22-đọc-kết-quả)
         *   [2.2.1. Sophia - Antibes, France](#221-sophia---antibes-france)
         *   [2.2.2. Nice, France](#222-nice-france)
         *   [2.2.3. Salzburg, Austria](#223-salzburg-austria)
         *   [2.2.4. Paris, France](#224-paris-france)
-*   [3\. Xài google map](#3-xài-google-map)
+*   [3. Xài google map](#3-xài-google-map)
     *   [3.1. Double check](#31-double-check)
     *   [3.2. Đem sạc dự phòng](#32-đem-sạc-dự-phòng)
     *   [3.3. Bus route](#33-bus-route)
 
-# 1\. Airplane
+# 1. Airplane
 
 Từ VN sang thì chắc là phải đi máy bay rồi. Có hãng rẻ và có hãng mắc, nhưng cũng có hãng rẻ nhưng xịn.
 
@@ -55,7 +55,7 @@ Một ví dụ về hãng bay phá sản
 
 Bạn có thể tham khảo thêm tại [đây](https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm)
 
-# 2\. Train và Bus
+# 2. Train và Bus
 
 Đối với mỗi thành phố sẽ có hệ thống bus và metro riêng. Nhiều nơi có nhiều hệ thống cùng hoạt động đan xen (như Paris chẳng hạn). Để tìm ra phương tiện phù hợp, mình thường tìm đường bằng google map.
 
@@ -134,7 +134,7 @@ RER B tới Charle de Gaulle bị delay tại mỗi trạm rất dữ dội.
 
 Đó là các kinh nghiệm xương máu mình rút ra được sau khi bị phạt 35e vì mua vé đi không đúng zone ;(
 
-# 3\. Xài google map
+# 3. Xài google map
 
 ## 3.1. Double check
 

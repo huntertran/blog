@@ -13,23 +13,23 @@ date: 2018-03-03 05:00:24
 
 Khi bạn cần tạo thật nhanh một cái website có các page cần thiết mà không cần phải quan tâm tới các vấn đề phức tạp như mô hình, bảo mật, mở rộng, thì Razor Page chính là câu trả lời
 <!-- more -->
-*   [1\. Yêu cầu](#1-yêu-cầu)
-*   [2\. Mô hình phát triển](#2-mô-hình-phát-triển)
-*   [3\. Các vấn đề của MVC](#3-các-vấn-đề-của-mvc)
+*   [1. Yêu cầu](#1-yêu-cầu)
+*   [2. Mô hình phát triển](#2-mô-hình-phát-triển)
+*   [3. Các vấn đề của MVC](#3-các-vấn-đề-của-mvc)
     
     *   [3.1. Fat Controller](#31-fat-controller)
     *   [3.2. Chia cấp](#32-chia-cấp)
     *   [3.3. Duplicate](#33-duplicate)
-*   [4\. Razor Page Coding conventions](#4-razor-page-coding-conventions)
-*   [5\. The future is now?](#5-the-future-is-now)
+*   [4. Razor Page Coding conventions](#4-razor-page-coding-conventions)
+*   [5. The future is now?](#5-the-future-is-now)
 
-# 1\. Yêu cầu
+# 1. Yêu cầu
 
 *   [.NET Core 2.0 trở lên](https://www.microsoft.com/net/download)
 *   [Visual Studio Code](https://code.visualstudio.com/)
 *   Đọc sơ qua về [Razor Page](https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?tabs=visual-studio)
 
-# 2\. Mô hình phát triển
+# 2. Mô hình phát triển
 
 Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn bạn sẽ quen thuộc với mô hình MVC, viết tắt cho Model-View-Controller. Ở Razor Page, bạn sẽ làm quen với một mô hình hoàn toàn mới và vô cùng đơn giản (đơn giản tới mức ko có gì để học luôn)
 
@@ -43,7 +43,7 @@ Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn b�
 
 ![razor page pattern](https://farm1.staticflickr.com/822/40395935845_bdb4073f2f_o.png)
 
-# 3\. Các vấn đề của MVC
+# 3. Các vấn đề của MVC
 
 ## 3.1. Fat Controller
 
@@ -67,7 +67,7 @@ Nếu bạn muốn 1 cấp sâu hơn, ví dụ như `domain/transaction/phones/c
 
 Đối với một form bất kỳ, trong mô hình mvc luôn phải có 2 action tương ứng với 2 hành động là Get và post, và người ta thường đặt tên 2 action này giống nhau cho dễ phân biệt với các tính năng khác trong cùng một controller. Điều này đôi khi gây ra những bất tiện nhất định, và bạn bắt buộc phải khai báo attribute `[HttpGet]` và `[HttpPost]`
 
-# 4\. Razor Page Coding conventions
+# 4. Razor Page Coding conventions
 
 Tương tự như MVC, Razor Page cũng có một số coding conventions
 
@@ -116,7 +116,7 @@ Not built-in
 asp-page-handler=“TestHandler”  
 OnTestHandler()
 
-# 5\. The future is now?
+# 5. The future is now?
 
 Razor Page, theo đánh giá của mình, chỉ phù hợp với các project vừa và nhỏ, với các view đơn giản về mật logic.
 

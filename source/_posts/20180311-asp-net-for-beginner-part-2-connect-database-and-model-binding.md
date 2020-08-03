@@ -21,24 +21,24 @@ date: 2018-03-11 12:11:47
 > *   [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
 > *   [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
-*   [1\. Lựa chọn database](#1-lựa-chọn-database)
+*   [1. Lựa chọn database](#1-lựa-chọn-database)
     
     *   [1.1. SQL Server](#11-sql-server)
     *   [1.2. The others](#12-the-others)
-*   [2\. Entity Framework](#2-entity-framework)
-*   [3\. Tạo Model và Database](#3-tạo-model-và-database)
+*   [2. Entity Framework](#2-entity-framework)
+*   [3. Tạo Model và Database](#3-tạo-model-và-database)
     
     *   [3.1. Tạo model Phone](#31-tạo-model-phone)
     *   [3.2. Tạo Database Context](#32-tạo-database-context)
     *   [3.3. Cài đặt Connection String](#33-cài-đặt-connection-string)
     *   [3.4. Cài đặt kết nối](#34-cài-đặt-kết-nối)
     *   [3.5. Tạo Migration đầu tiên](#35-tạo-migration-đầu-tiên)
-*   [4\. Model Binding](#4-model-binding)
+*   [4. Model Binding](#4-model-binding)
     
     *   [4.1. Tạo Controller](#41-tạo-controller)
     *   [4.2. Các nuget cần thiết](#42-các-nuget-cần-thiết)
     *   [4.3. Scaffolding](#43-scaffolding)
-*   [5\. Model Binding](#5-model-binding)
+*   [5. Model Binding](#5-model-binding)
 
 Có thể hiểu database là trái tim của ứng dụng, còn asp.net là bộ não. Thiết kế một database cho đúng chuẩn thì đòi hỏi kha khá thời gian học + luyện tập thì nó mới lên trình được.
 
@@ -46,7 +46,7 @@ Một cách khác rất hay là bắt tay vào làm một project thực tế. N
 
 Nhìn chung, bạn sẽ có 1 project giống như sau: [MVC Basic 0.1 on Github](https://github.com/huntertran/mvcbasic/releases/tag/0.1)
 
-# 1\. Lựa chọn database
+# 1. Lựa chọn database
 
 Có hơi bị nhiều hệ quản trị cơ sở dữ liệu đang đấu đá nhau trên thị trường. Ở đây mình sẽ nói sơ qua 1 số loại phổ biến
 
@@ -58,7 +58,7 @@ Cây nhà là vườn, miễn phí cho người dùng cá nhân, hiệu suất c
 
 Nhìn chung, Microsoft có hỗ trợ kha khá các hệ cơ sở dữ liệu khác như MySQL, PostgreSQL, SQLite, nhưng nếu đã lựa chọn các hệ này, thì bạn sẽ phải tự mày mò kha khá các vấn đề mà đa phần đã được giải quyết khi dùng SQL Server
 
-# 2\. Entity Framework
+# 2. Entity Framework
 
 ASP.NET có một điểm mạnh là Entity Framework (EF). Ở phiên bản core thì nó có thêm EF Core. EF hiểu nôm na là một bộ công cụ cho phép bạn kết nối tới database, truy vấn, thêm xóa sửa vân vân mà không cần phải có kiến thức về cách viết SQL.
 
@@ -85,7 +85,7 @@ tiếp tục gõ trong terminal
 
 \[code lang=text\] dotnet restore \[/code\]
 
-# 3\. Tạo Model và Database
+# 3. Tạo Model và Database
 
 Có 2 cách để bắt đầu làm việc với database trong asp.net core là Code first và Database first.
 
@@ -162,7 +162,7 @@ thì những migration này sẽ được thực thi, và database sẽ được
 > 
 > MSSQLLocalDB là tên instance của bạn, có thể khác nếu khi cài SQL Server bạn ko chọn như default
 
-# 4\. Model Binding
+# 4. Model Binding
 
 Sau khi hoàn tất các bước trên, cơ bản web app của bạn đã có thể kết nối tới database. Nhưng để thực hiện các hành động thêm xóa sửa, thì bạn cần phải có Controller nữa
 
@@ -216,7 +216,7 @@ gõ tiếp `dotnet run` để chạy thử app
 
 bạn có thể vọc vạch các kiểu với các link mà asp.net core tạo sẵn cho bạn, create new, edit, delete, details gì đấy thì tùy
 
-# 5\. Model Binding
+# 5. Model Binding
 
 Mở file PhoneController ra, bạn sẽ thấy có sẵn code trong đấy rồi, tuy ko đẹp lắm, nhưng nhìn chung là nó chạy tốt
 

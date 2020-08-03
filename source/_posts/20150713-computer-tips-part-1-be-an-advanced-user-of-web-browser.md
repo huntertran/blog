@@ -18,7 +18,7 @@ Còn nghe, Add-on như thuốc tăng lực, User-script như lá đu đủ, xài
 
 Bài viết này sẽ hướng dẫn các bạn cách thiết lập cho các trình duyệt phổ biến để chúng chạy trơn tru mượt mà mà không chói lóa.
 <!-- more -->
-*   [1\. Thiết lập cho máy tính](#1-thiết-lập-cho-máy-tính)
+*   [1. Thiết lập cho máy tính](#1-thiết-lập-cho-máy-tính)
     
     *   [1.1 Quay về thiết lập mặc định](#11-quay-về-thiết-lập-mặc-định)
     *   [1.2 Gỡ bỏ các trình duyệt không chính thống](#12-gỡ-bỏ-các-trình-duyệt-không-chính-thống)
@@ -26,7 +26,7 @@ Bài viết này sẽ hướng dẫn các bạn cách thiết lập cho các tr�
         
         *   [1.3.1 Mozilla Firefox](#131-mozilla-firefox)
         *   [1.3.2 Google Chrome](#132-google-chrome)
-*   [2\. Tối ưu hóa trình duyệt web](#2-tối-ưu-hóa-trình-duyệt-web)
+*   [2. Tối ưu hóa trình duyệt web](#2-tối-ưu-hóa-trình-duyệt-web)
     
     *   [2.1 Mozilla Firefox](#21-mozilla-firefox)
         
@@ -42,7 +42,7 @@ Bài viết này sẽ hướng dẫn các bạn cách thiết lập cho các tr�
         *   [2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn](#222-gỡ-bỏ-các-add-on-và-plug-in-vớ-vẩn)
         *   [2.2.3 Cài các add-on hữu ích](#223-cài-các-add-on-hữu-ích)
 
-# 1\. Thiết lập cho máy tính
+# 1. Thiết lập cho máy tính
 
 ## 1.1 Quay về thiết lập mặc định
 
@@ -109,7 +109,7 @@ Nếu bạn thấy những điều trên là chấp nhận được, thì đây 
 
 Và tất nhiên, nếu bạn đã cài sẵn một trong 2 cái trên, thì hãy đọc tiếp
 
-# 2\. Tối ưu hóa trình duyệt web
+# 2. Tối ưu hóa trình duyệt web
 
 ## 2.1 Mozilla Firefox
 

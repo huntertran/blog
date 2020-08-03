@@ -13,18 +13,18 @@ Dependency Injection là một kỹ thuật vô cùng thông dụng để _nới
 
 Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn tổng quan (hy vọng là khách quan) về DI
 <!-- more -->
-*   [1\. Vấn đề](#1-vấn-đề)
-*   [2\. Lợi ích](#2-lợi-ích)
-*   [3\. Back to code](#3-back-to-code)
+*   [1. Vấn đề](#1-vấn-đề)
+*   [2. Lợi ích](#2-lợi-ích)
+*   [3. Back to code](#3-back-to-code)
     *   [3.1. Interface](#31-interface)
     *   [3.2. Implementation](#32-implementation)
-*   [4\. Register](#4-register)
+*   [4. Register](#4-register)
     *   [4.1. Lifetime](#41-lifetime)
     *   [4.2. Contructor Injection](#42-contructor-injection)
     *   [4.3. Action Injection](#43-action-injection)
     *   [4.4. Service trong Service](#44-service-trong-service)
 
-# 1\. Vấn đề
+# 1. Vấn đề
 
 \[code lang=text\] Hãy tưởng tượng bạn muốn uống coca, nhà ko còn chai coca nào Bạn phải ra Circle K, đi lòng vòng trong cửa hàng để kiếm 1 chai coca, trả tiền, đi về \[/code\]
 
@@ -39,14 +39,14 @@ Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn t�
 
 Với Dependency Injection, mọi việc sẽ khác đi \[code lang=text\] Bạn đưa tiền cho 1 thằng nhóc có nhiệm vụ chuyên đi mua nước ngọt cho khu xóm 5 phút sau, nó xuất hiện với chai coca của bạn \[/code\] Một người khác trong cùng khu xóm cũng có nhu cần gần giống bạn, nhưng họ muốn uống pepsi Thay vì cũng phải đi ra cửa hàng và tự mua pepsi và gặp các vấn đề như bạn gặp, họ cũng gọi thằng nhóc đó lại, và 5 phút sau, chai pepsi ướp lạnh ở trong tay họ. Thằng nhóc đó chính là 1 **_Service_**, và bạn phụ thuộc vô thằng nhóc đó để có nước ngọt uống
 
-# 2\. Lợi ích
+# 2. Lợi ích
 
 Quay trở lại với ví dụ trên, lợi ích của bạn khi dùng **_Service_** mua nước ngọt của thằng nhóc là gì?
 
 *   Bạn ko cần quan tâm thằng nhóc đó nó làm gì để có nước ngọt cho bạn
 *   Bạn có thể yêu cầu nhiều loại nước ngọt khác nhau mà ko cần biết hình dạng hay chỗ bán
 
-# 3\. Back to code
+# 3. Back to code
 
 Quay trở lại với code, bạn sẽ implement DI như thế nào?
 
@@ -63,7 +63,7 @@ Người quản lý của mấy thằng nhóc mua nước ngọt này sẽ phân
 
 Và họ sẽ implement như sau \[code lang=csharp\] public class CircleKDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to circle k // Find the -name- drink // Buy it and deliver } } public class VinmartDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to Vinmart // Find the -name- drink // Buy it and deliver } } \[/code\] Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống
 
-# 4\. Register
+# 4. Register
 
 Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn ![method in startup.cs](https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png) bằng cách thêm vào dòng code sau \[code lang=csharp\] services.AddScoped(); \[/code\] bạn đã khai báo cho tất cả các class có dùng phương thức BuyDrink sẽ mua nước ngọt ở CircleK
 

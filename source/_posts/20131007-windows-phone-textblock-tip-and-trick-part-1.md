@@ -18,13 +18,13 @@ Hôm nay, tôi sẽ hướng dẫn bạn một số mẹo vặt khi sử dụng 
 
 ![advanced text](https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png)
 <!-- more -->
-*   [1\. Multiple line trong cùng Textblock](#1-multiple-line-trong-cùng-textblock)
-*   [2\. Canh đều 2 bên cho Textblock](#2-canh-đều-2-bên-cho-textblock)
+*   [1. Multiple line trong cùng Textblock](#1-multiple-line-trong-cùng-textblock)
+*   [2. Canh đều 2 bên cho Textblock](#2-canh-đều-2-bên-cho-textblock)
     
     *   [2.1. Giải pháp](#21-giải-pháp)
-*   [3\. Run Control](#3-run-control)
+*   [3. Run Control](#3-run-control)
 
-# 1\. Multiple line trong cùng Textblock
+# 1. Multiple line trong cùng Textblock
 
 ![](https://farm4.staticflickr.com/3782/10136087586_2967ef0062_o.png)
 
@@ -40,7 +40,7 @@ Vậy còn trong Code C# thì sao?
 
 ![](https://farm8.staticflickr.com/7316/10136204654_88cfbb6b67_o.png)
 
-# 2\. Canh đều 2 bên cho Textblock
+# 2. Canh đều 2 bên cho Textblock
 
 chờ chút đã, canh đều 2 bên thì có gì khó. Justify là xong
 
@@ -64,7 +64,7 @@ Dùng RichTextBox như hình dưới
 
 Problem Solved
 
-# 3\. Run Control
+# 3. Run Control
 
 Trong các ví dụ trên, nhiều lần bạn gặp từ khóa “Run”. Nó là một control con nằm trong các control TextBlock và TextBox, RichTextBox.
 

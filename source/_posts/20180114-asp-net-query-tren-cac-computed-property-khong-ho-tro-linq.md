@@ -18,16 +18,16 @@ Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng
 
 Vậy giờ ta phải làm sao? May mắn là vẫn có cách
 <!-- more -->
-*   [1\. Computed Property](#1-computed-property)
-*   [2\. Simple LINQ](#2-simple-linq)
-*   [3\. Solution](#3-solution)
+*   [1. Computed Property](#1-computed-property)
+*   [2. Simple LINQ](#2-simple-linq)
+*   [3. Solution](#3-solution)
     
     *   [3.1. \[Slow performance\] Gọi ToList](#31-slow-performance-gọi-tolist)
     *   [3.2. \[DRY Principle violated\] Viết biểu thức](#32-dry-principle-violated-viết-biểu-thức)
-*   [4\. The best solution](#4-the-best-solution)
-*   [5\. Make life easier](#5-make-life-easier)
+*   [4. The best solution](#4-the-best-solution)
+*   [5. Make life easier](#5-make-life-easier)
 
-# 1\. Computed Property
+# 1. Computed Property
 
 Là một property chỉ có hàm get, và trong get đó, giá trị trả về được tính toán dựa trên các property khác
 
@@ -39,7 +39,7 @@ Là một property chỉ có hàm get, và trong get đó, giá trị trả về
 
 Theo các chuẩn thiết kế database, một column phải chứa dữ liệu mà không thể được suy ra từ các dữ liệu khác. Đoạn Attribute `[NotMapped]` phục vụ cho việc đó. EF sẽ không sinh ra code generate column `FullName` nếu bạn dùng code first, không cố gắng tìm column `FullName` trong table nếu bạn dùng database first
 
-# 2\. Simple LINQ
+# 2. Simple LINQ
 
 Để query một giá trị nào đó trong Database dùng Entity Framework, bạn có thể dùng LINQ rất đơn giản như sau
 
@@ -53,7 +53,7 @@ Nhưng cũng đoạn code đó sẽ gây lỗi nếu bạn cố gắn dùng nó 
 
 var names = dbContext.TableNameWithS.Where(x => x.FullName.Contains("test")); \[/code\]
 
-# 3\. Solution
+# 3. Solution
 
 > TL;DR: [The best solution](#4-the-best-solution)
 
@@ -75,7 +75,7 @@ Nhược điểm của cách này là bạn đã vi phạm nguyên tắc "DRY" -
 
 > The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system" _Source: [https://en.wikipedia.org/wiki/Don%27t\_repeat\_yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)_
 
-# 4\. The best solution
+# 4. The best solution
 
 [DelegateDecompiler](https://github.com/hazzik/DelegateDecompiler) - Một bộ thư viện cực khủng giúp bạn decompile biểu thức của computed property, và translate chúng thành LINQ, EF sau đó sẽ translate nó thành câu lệnh SQL.
 
@@ -101,7 +101,7 @@ Bước 3: Gọi method Decompile
 
 > Thư viện này thậm chí còn hỗ trợ async, các advanced functions của EF như `Include`, `AsNoTracking` với phần mở rộng [DelegateDecompiler.EntityFramework](https://nuget.org/packages/DelegateDecompiler.EntityFramework)
 
-# 5\. Make life easier
+# 5. Make life easier
 
 Bạn cũng có thể cấu hình cho asp tự xử lý các property có \[NotMapped\]
 

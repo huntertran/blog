@@ -25,7 +25,7 @@ Vishesh Oberoi (New Zealand), Supatporn Posoknistakul(Thailand)
 
 Japan, New Zealand, Philippines, Singapore, Thailand, Vietnam
 <!-- more -->
-# 1\. MAIN TOPIC
+# 1. MAIN TOPIC
 
 Today's Main Topic is Hour of Code!
 
@@ -65,7 +65,7 @@ The Hour of Code in Vietnam was held successfully after attracting about 200 sec
 
 ![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia4.jpg)![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia5.jpg)
 
-# 2\. Super MSP
+# 2. Super MSP
 
 ## ・New Zealand
 
@@ -79,7 +79,7 @@ The Hour of Code in Vietnam was held successfully after attracting about 200 sec
 
  **Supatporn Posoknistakul:** Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.
 
-# 3\. Highlights & Upcoming Events
+# 3. Highlights & Upcoming Events
 
 ## Japan
 

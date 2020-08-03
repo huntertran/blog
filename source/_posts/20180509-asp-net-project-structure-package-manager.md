@@ -17,7 +17,7 @@ Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thàn
 
 Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe
 <!-- more -->
-*   [1\. Project & Solution](#1-project--solution)
+*   [1. Project & Solution](#1-project--solution)
     
     *   [1.1. Lý do](#11-lý-do)
         
@@ -26,7 +26,7 @@ Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ
         *   [1.1.3. Triển khai](#113-triển-khai)
         *   [1.1.4. You name it](#114-you-name-it)
     *   [1.2. Phân chia projects](#12-phân-chia-projects)
-*   [2\. Package Manager](#2-package-manager)
+*   [2. Package Manager](#2-package-manager)
     
     *   [2.1. For backend - NUGET](#21-for-backend---nuget)
     *   [2.2. For front-end - Yarn](#22-for-front-end---yarn)
@@ -35,7 +35,7 @@ Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ
         *   [2.2.2. Sources](#222-sources)
         *   [2.2.3. Tái tạo](#223-tái-tạo)
 
-# 1\. Project & Solution
+# 1. Project & Solution
 
 Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có "kinh nghiệm" gõ lệnh tạo project.
 
@@ -78,7 +78,7 @@ Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát 
 *   Encryption / Decryption -> **Tách**
 *   Encryption _đứng riêng_ -> **KHÔNG tách**
 
-# 2\. Package Manager
+# 2. Package Manager
 
 Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)
 

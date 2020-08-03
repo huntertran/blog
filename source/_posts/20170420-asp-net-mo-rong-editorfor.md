@@ -17,17 +17,17 @@ Chắc là bạn đã quá quen với **_EditorFor_** control, nhưng nó chỉ 
 <!-- more -->
 Mục lục
 
-*   [1\. Sử dụng EditorFor và EditorForModel](#1-sử-dụng-editorfor-và-editorformodel)
+*   [1. Sử dụng EditorFor và EditorForModel](#1-sử-dụng-editorfor-và-editorformodel)
     
     *   [Model (hoặc ViewModel)](#model-hoặc-viewmodel)
     *   [View](#view)
-*   [2\. Mở rộng EditorFor](#2-mở-rộng-editorfor)
+*   [2. Mở rộng EditorFor](#2-mở-rộng-editorfor)
     
     *   [2.1 Tạo EditorTemplates](#21-tạo-editortemplates)
 
 Có thể nói EditorFor và EditorForModel là những control hữu ích nhất khi mà nó có thể render cái bụp toàn bộ thẻ input cần thiết dựa trên một model của bạn.
 
-# 1\. Sử dụng EditorFor và EditorForModel
+# 1. Sử dụng EditorFor và EditorForModel
 
 Tại sao chả thấy ai nói gì về Editor: Từ hồi MVC2, Editor control đi kèm với phiên bản đầu tiên của MVC có thể được thay thế bởi EditorFor. Từ "For" ám chỉ đây là một _strongly typed html helper_, tức là bạn có thể chọn tên property từ model mà không sợ sai
 
@@ -64,7 +64,7 @@ Nếu bạn không có ViewModel, nhưng muốn render trực tiếp từ Lesson
 
 @using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorForModel() } \[/code\]
 
-# 2\. Mở rộng EditorFor
+# 2. Mở rộng EditorFor
 
 Tạo một class mới để giữ data
 

@@ -18,7 +18,7 @@ Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nố
 > *   [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
 > *   [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
-*   [1\. CRUD](#1-crud)
+*   [1. CRUD](#1-crud)
     
     *   [1.1. DbContext](#11-dbcontext)
     *   [1.2. Create](#12-create)
@@ -29,16 +29,16 @@ Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nố
         *   [1.4.2. A more complicated](#142-a-more-complicated)
         *   [1.4.3. Track???](#143-track)
     *   [1.5. Delete](#15-delete)
-*   [2\. DbContext - Một cách code tốt hơn](#2-dbcontext---một-cách-code-tốt-hơn)
+*   [2. DbContext - Một cách code tốt hơn](#2-dbcontext---một-cách-code-tốt-hơn)
     
     *   [2.1. Nếu CRUD failed?](#21-nếu-crud-failed)
     *   [2.2. await hay không?](#22-await-hay-không)
-*   [3\. Model Validation](#3-model-validation)
+*   [3. Model Validation](#3-model-validation)
     
     *   [3.1. DataAnnotation](#31-dataannotation)
     *   [3.2. Client side validation](#32-client-side-validation)
 
-# 1\. CRUD
+# 1. CRUD
 
 CRUD viết tắt cho 4 hành động liên quan tới database là `Create`, `Read`, `Update` và `Delete`
 
@@ -138,7 +138,7 @@ Tương tự như edit, khi muốn delete 1 object, bạn cũng cần "2 chuyế
 
 \_context.Phones.Remove(phone); \_context.SaveChanges(); \[/code\]
 
-# 2\. DbContext - Một cách code tốt hơn
+# 2. DbContext - Một cách code tốt hơn
 
 ## 2.1. Nếu CRUD failed?
 
@@ -162,7 +162,7 @@ Hiểu một cách đơn giản, async - await là một cặp từ khóa giúp 
 
 > Nếu bạn chưa nắm vững kỹ thuật async-await, thì mình khuyên bạn là nên...bỏ hẳn và chỉ sử dụng các method trong các phần code bên trên trong bài viết này
 
-# 3\. Model Validation
+# 3. Model Validation
 
 Chắc hẳn bạn đã từng nghe các ràng buộc như
 

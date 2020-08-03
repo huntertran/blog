@@ -14,11 +14,11 @@ The purpose of this documentation is to record all the findings and my progress 
 
 This require a deep modification in Firefox's implementation of DOM API.
 <!-- more -->
-*   [1\. Setup and initialization](#1-setup-and-initialization)
-*   [2\. Source code structure](#2-source-code-structure)
+*   [1. Setup and initialization](#1-setup-and-initialization)
+*   [2. Source code structure](#2-source-code-structure)
     *   [2.1. Built-in extensions](#21-built-in-extensions)
     *   [2.2. JavaScript Engine (SpiderMonkey)](#22-javascript-engine-spidermonkey)
-*   [3\. Understanding DOM](#3-understanding-dom)
+*   [3. Understanding DOM](#3-understanding-dom)
     *   [3.1. DOM Levels](#31-dom-levels)
         *   [3.1.1. DOM Level 1](#311-dom-level-1)
         *   [3.1.2. DOM Level 2](#312-dom-level-2)
@@ -26,20 +26,20 @@ This require a deep modification in Firefox's implementation of DOM API.
     *   [3.2. Shadow DOM and Virtual DOM](#32-shadow-dom-and-virtual-dom)
         *   [3.2.1. Shadow DOM](#321-shadow-dom)
         *   [3.2.2. Virtual DOM](#322-virtual-dom)
-*   [4\. Modifying Firefox's DOM method implementation](#4-modifying-firefoxs-dom-method-implementation)
+*   [4. Modifying Firefox's DOM method implementation](#4-modifying-firefoxs-dom-method-implementation)
     *   [4.1. Logging Framework](#41-logging-framework)
     *   [4.2. Analyze](#42-analyze)
-*   [5\. Development](#5-development)
+*   [5. Development](#5-development)
     *   [5.1. Design solution](#51-design-solution)
     *   [5.2. Firefox integration](#52-firefox-integration)
 
-# 1\. Setup and Initialization
+# 1. Setup and Initialization
 
 In short, to get the latest version of Firefox source code, one could follow the official instruction on [Building Firefox for Windows](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites)
 
 > One small modification in which will decrease the time needed to build the source code: You will not need the "Game development with C++" while installing/modifying Visual Studio 2019
 
-# 2\. Source code structure
+# 2. Source code structure
 
 Mozilla use Gecko to render web content.
 
@@ -62,7 +62,7 @@ Located in `js\src`, the Firefox's JavaScript Engine is called SpiderMonkey, and
 
 > Beside the interpreter, SpiderMonkey contains a compiler , a garbage collector and a Just-in-time compiler.
 
-# 3\. Understanding DOM
+# 3. Understanding DOM
 
 DOM stands for Document Object Model. To understand what DOM is, first we need to understand the basic of a website
 
@@ -125,7 +125,7 @@ In short, Virtual DOM is an abstraction of DOM. It represent for a small subset 
 
 Virtual DOM libraries compare changed nodes with actual node in DOM tree. If there are differences, it will update the actual DOM. By optimizing the comparison algorithm, it can perform extremely fast since it does not need to search the whole DOM tree for nodes and properties.
 
-# 4\. Modifying Firefox's DOM method implementation
+# 4. Modifying Firefox's DOM method implementation
 
 ## 4.1. Logging Framework
 
@@ -197,7 +197,7 @@ Element\* nsINode::GetElementById(const nsAString& aId) {
   return nullptr;
 }
 
-# 5\. Development
+# 5. Development
 
 ## 5.1. Design solution
 

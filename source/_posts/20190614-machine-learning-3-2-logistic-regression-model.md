@@ -9,16 +9,16 @@ date: 2019-06-14 23:14:11
 
 Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng
 <!-- more -->
-*   [1\. Cost Function for Logistic Regression](#1-cost-function-for-logistic-regression)
+*   [1. Cost Function for Logistic Regression](#1-cost-function-for-logistic-regression)
     *   [1.1. Công thức](#11-c%C3%B4ng-th%E1%BB%A9c)
     *   [1.2. Đồ thị](#12-%C4%91%E1%BB%93-th%E1%BB%8B)
     *   [1.3. Kết luận](#13-k%E1%BA%BFt-lu%E1%BA%ADn)
-*   [2\. Đơn giản hóa Cost Function và áp dụng Gradient Descent](#2-%C4%91%C6%A1n-gi%E1%BA%A3n-h%C3%B3a-cost-function-v%C3%A0-%C3%A1p-d%E1%BB%A5ng-gradient-descent)
+*   [2. Đơn giản hóa Cost Function và áp dụng Gradient Descent](#2-%C4%91%C6%A1n-gi%E1%BA%A3n-h%C3%B3a-cost-function-v%C3%A0-%C3%A1p-d%E1%BB%A5ng-gradient-descent)
     *   [2.1. Biến đổi](#21-bi%E1%BA%BFn-%C4%91%E1%BB%95i)
     *   [2.2. Gradient Descent](#22-gradient-descent)
-*   [3\. Advanced Optimization](#3-advanced-optimization)
+*   [3. Advanced Optimization](#3-advanced-optimization)
 
-# **1\. Cost Function for Logistic Regression**
+# **1. Cost Function for Logistic Regression**
 
 Đối với linear regression, ta có thể dùng cost function như sau
 
@@ -61,7 +61,7 @@ Ngược lại
 *   nếu y = 0, và hypothesis tiến dần tới 1, thì cost sẽ tiến dần tới vô cực
 *   nếu y = 1, và hypothesis tiến dần tới 0, thì cost sẽ tiến dần tới vô cực
 
-# 2\. Đơn giản hóa Cost Function và áp dụng Gradient Descent
+# 2. Đơn giản hóa Cost Function và áp dụng Gradient Descent
 
 ## 2.1. Biến đổi
 
@@ -93,7 +93,7 @@ $latex Repeat \\; \\lbrace \\ \\; \\theta\_j := \\theta\_j - \\frac{\\alpha}{m} 
 
 $latex \\theta:=\\theta-\\frac{\\alpha}{m}X^T(g(X\\theta)-\\vec{y})$
 
-# 3\. Advanced Optimization
+# 3. Advanced Optimization
 
 Bên cạnh thuật toán Gradient Descent dùng để tính toán giá trị tối ưu của $latex \\theta$, chúng ta còn có nhiều thuật toán phức tạp hơn, nhưng cũng nhanh hơn nhiều:
 

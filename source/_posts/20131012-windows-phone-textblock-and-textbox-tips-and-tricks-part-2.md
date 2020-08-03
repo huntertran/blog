@@ -22,13 +22,13 @@ date: 2013-10-12 23:58:57
 
 Trong phần này, bạn sẽ còn có nhiều điều thú vị hơn nữa
 <!-- more -->
-*   [1\. Text quá dài và vấn đề bị mất chữ](#1-text-quá-dài-và-vấn-đề-bị-mất-chữ)
+*   [1. Text quá dài và vấn đề bị mất chữ](#1-text-quá-dài-và-vấn-đề-bị-mất-chữ)
     
     *   [1.1. Nguyên nhân](#11-nguyên-nhân)
     *   [1.2. Khắc phục](#12-khắc-phục)
-*   [2\. Selectable TextBlock](#2-selectable-textblock)
+*   [2. Selectable TextBlock](#2-selectable-textblock)
 
-# 1\. Text quá dài và vấn đề bị mất chữ
+# 1. Text quá dài và vấn đề bị mất chữ
 
 ![](https://farm3.staticflickr.com/2834/10238287965_30e435db37_o.png)
 
@@ -46,7 +46,7 @@ nhưng đối với một số máy Windows Phone có độ phân giải Full HD
 
 Cách khắc phục rất đơn giản. Chia text của bạn ra nhiều phần, và gắn chúng vào các textblock khác nhau. Bao các textblock này trong ScrollViewer. Xong!
 
-# 2\. Selectable TextBlock
+# 2. Selectable TextBlock
 
 Textblock, dĩ nhiên là không select được rồi.
 

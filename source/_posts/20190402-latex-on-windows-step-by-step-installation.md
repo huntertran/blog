@@ -9,18 +9,18 @@ date: 2019-04-02 02:21:51
 
 In this blog, I will instruct you on how to install and writing LaTex documents on Windows with ease.
 
-*   [1\. Requirement](#1-requirement)
+*   [1. Requirement](#1-requirement)
     *   [1.1 List of software](#11-list-of-software)
     *   [1.2 Installing MikTex](#12-installing-miktex)
-*   [2\. Setup on Visual Studio Code](#2-setup-on-visual-studio-code)
-*   [3\. Writing on Visual Studio Code](#3-writing-on-visual-studio-code)
-*   [4\. Collaboration](#4-collaboration)
+*   [2. Setup on Visual Studio Code](#2-setup-on-visual-studio-code)
+*   [3. Writing on Visual Studio Code](#3-writing-on-visual-studio-code)
+*   [4. Collaboration](#4-collaboration)
     *   [4.1 VSCode Live Share](#41-vscode-live-share)
     *   [4.2 Start Collaboration](#42-start-collaboration)
     *   [4.3 Join a shared collaboration session](#43-join-a-shared-collaboration-session)
     *   [4.4 Live Share Maximum collaborators](#44-live-share-maximum-collaborators)
 <!-- more -->
-# 1\. Requirement
+# 1. Requirement
 
 ## 1.1 List of software
 
@@ -48,7 +48,7 @@ Install `latexmk` package
 
 ![latexmk](https://lh3.googleusercontent.com/Wr5yvLr37Tn5pQgda46K2EfUTKFw9qwWkZ0iJFs0Fpi7AJSB_iMFWqE80T3-CqE_r_WdT2RIdho2gvxZqOPu27sinQtqjon5dS2zf_L_gFvS33haw-KRnPfipks2rqMevPaWb1UeoycVx44tAsHuLps5AefKa2PP2Mx7-mItHFd0cYKIPqyy98QpDlypjQmGnsszKzdJ2IOrl3TmIK38kn7ESKPczK4FNN1UKLWfijqySHZ6aUoVWcsM3X4T7cJiFiuD-Mxazoxh5Y8QOWLkA2705VLniHlt_0D8U0WzG-TvVLvr0O2TS5m5i1FTpY5iis55MgF1isyDDzPZ6xUQ2UX15lAv4XCDuzhJP-BiNXb3eDArLDoynxUQv3gTDY8myBwIPhWGtnMcsB2QHyQkwXuEQyftQG4KKUeiYRjmq1g3uM8FXLvT949MnggObXdDewcnI3gnnbmoSEK2FCFyue10QnJbR9Ks0LAnZDfvDvW0fL0F9HSm5yw7C4wNeZskGxBqAWn-f2sy7tX1twEOYcy9QVJcHJ2V1I-6Th_7OCn86OdPePRgopd1FCTPfetLy0pDlyrfIAxWvC2Eiycooqn0WEsmxpojP4QiZhteO-2EMKQYdMluHP-e_51Zf7OR0LRVjftUOntg5XYFWE55bsbrmyyowbI3SpYBt4b51juG_JwMkQmnyYtVTF4u_Q7SjikShzZRNbvPsDoRUTk3irKH=w802-h632-no)
 
-# 2\. Setup on Visual Studio Code
+# 2. Setup on Visual Studio Code
 
 If you are opening Visual Studio Code while installing MikTex and Perl ActiveState, please CLOSE Visual Studio Code and open it again.
 
@@ -56,7 +56,7 @@ Open Extension > search for Latex > Install LaTeX Workshop
 
 ![LaTeX Workshop](https://lh3.googleusercontent.com/vr8qIvd2Bz3tT0srcGXASblQHtvInX_cZKZtugGzLfZ71TbWWb3ddmAaHDpuSCO3Rz18KzyYuOBdX15Pgn_7p47EohvqiVCyJ8Ygur8qE9XI5cGeAk6nEMgLuyh2iVy1oIddau0iIbFLSxr6QvpJeT8HFrVD7P4ljDhKOLeBY72uyuEBBZjiqjrm5BIT21h2qZzqG0E-mytMi747yK98kwYUay3cec0uEX3ShVJIr8ffYfTAS17tQ5QdA0zpcql8Kc7yTWpsPMrN-5lCJQYlQnmH5-5AVxlugLVB956LMKXGuj22OUWHv3BpxJvTMPq0GzlvnTbRDhRLLUji-WlTU8rhHlRtbCGBb3SZjt-8aNAPLBtAoGRYWbSEpQiZILwslexygTxsMrkUmarXlfGJONKWt94c4vyFmwLlln8DdGB5ER3R8njYaH1RFxHnUBYAz2mOGuMDkY2_jAxQo1vLW0ftf1bQGEE0SddAnBUoj87n7lbULZi_q2bOJLUfgMn2JHGJq225OeD5oADbhCyJq4cMWTD9xqxS1YG6KGBH_1LWlyOyVd61aHob2UJa_Bh_YJR4fGg-LX2qB8XIHg3pl06rYLFmhSXlACOPYsyW7O3OORa0qcDKhgnzJS-LnXCndxbpOzM42R9lLCcCIkt558-TYaqKUDB0Lx8mc1IiQ4Mp49U6cbjQHbc6CMUe9z23nH3iCfdn_a0ASOuAICKCQi5Y=w699-h488-no)
 
-# 3\. Writing on Visual Studio Code
+# 3. Writing on Visual Studio Code
 
 It is recommended to create a folder for each LaTeX document (to store images, charts, data file, etc).
 
@@ -70,7 +70,7 @@ To preview the rendered PDF, you can click on small icon on the top-right corner
 
 ![preview PDF](https://lh3.googleusercontent.com/fxx75if3R_weAeIaewFsJMXOEKY0TCPuOius0tbqidi3sB-DU5hBsCY_vFNtEqr-4B0DoXGsPq649OIG_9pM6rh2X2UP8In9UQ6lH41vPrHkq3UwMMRKUcrJyO6w-XBoZvl1YeuwO4r9gzXv22JA4TdmWxbDCMi0x3l3DfCnTTaQYyhuxsBoE3iCg6-xfI2oK4rO8OH-12kHLZ0Uf08HhSolhLP01sxzwOiJs9jrUuM9UCa6CPHHF5bVOQa-llPz-ZNLZy8PZacU4orXOHQSr106PgKH-Jw10Lrd2RWBeNtoIziSyMPkG38z_g1wDhJRHBy1iC8Rs940URXh6EilLCIFEqRSAyu35_2znAqQ11MstXwkeTclgv3XGVZHbaMJkeKXneB6a0jMTUXdL6XyHrYBUUaEkNdoiV6GwimUPUICK9zAC8duUNK3y4di9s8X0ew-Ypjl396pUGh0GQudIYLkZwzvqxQNIgJ0-F2gh-8BscL9upPjpFgpVCOv1Ni6RpOY4kQLNkG1tH2hD_YqqO-NElntrxg_N_vVCY0JP7Oq-wy_GBw67EAtTugdPQYdHV1S0r8UUbPO4IgTo6tV5U9EnKaKklFjB7rx32Z5zoEGt2ATfuBS_2iDCfi40e8kJ3IL4PuL-219_25hr1abJrYeRQOaP83z2xAxoVadV-qG4Vn5pui6jFd9yuyPgXE2p7z1Q_Iq4d_S8nxzgcPIlXwU=w457-h215-no)
 
-# 4\. Collaboration
+# 4. Collaboration
 
 Okay okay, it's cool, but _**why**_ do I need to write LaTeX offline, using Visual Studio Code, instead of the awesome [Overleaf](https://www.overleaf.com)?
 

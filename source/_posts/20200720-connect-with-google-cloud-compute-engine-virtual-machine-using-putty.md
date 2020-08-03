@@ -15,12 +15,12 @@ I don't know why Google makes it so difficult to connect to it's Compute Engine 
 
 Anyway, here is how to connect.
 <!-- more -->
-*   [1\. Have your Compute Engine ready](#1-have-your-compute-engine-ready)
-*   [2\. Have your local machine ready](#2-have-your-local-machine-ready)
-*   [3\. Add key to virtual machine](#3-add-key-to-virtual-machine)
-*   [4\. Connect with WinSCP](#4-connect-with-winscp)
+*   [1. Have your Compute Engine ready](#1-have-your-compute-engine-ready)
+*   [2. Have your local machine ready](#2-have-your-local-machine-ready)
+*   [3. Add key to virtual machine](#3-add-key-to-virtual-machine)
+*   [4. Connect with WinSCP](#4-connect-with-winscp)
 
-# 1\. Have your Compute Engine ready
+# 1. Have your Compute Engine ready
 
 After created a VM instance, note the External IP. Click on the little 3 dot icon at the end of the VM and choose `View network details`
 
@@ -30,7 +30,7 @@ On the new open site, choose Firewall and make sure `tcp:22` is allowed (so we c
 
 ![tcp22](https://i.imgur.com/oGJRuPE.png)
 
-# 2\. Have your local machine ready
+# 2. Have your local machine ready
 
 You will need to generate a public-private key pair on your local machine. In this tutorial, I use puttygen installed alongside with [putty](https://chocolatey.org/packages/putty)
 
@@ -44,7 +44,7 @@ Copy the key shown in the box.
 
 ![save the key](https://i.imgur.com/Q0xhVqQ.png)
 
-# 3\. Add key to virtual machine
+# 3. Add key to virtual machine
 
 Click the ssh button on your VM instance to open the online ssh window
 
@@ -62,7 +62,7 @@ Set permission for the file and folder
 
 sudo chmod -R go= ~/.ssh
 
-# 4\. Connect with [WinSCP](https://github.com/winscp/winscp)
+# 4. Connect with [WinSCP](https://github.com/winscp/winscp)
 
 Wait, the title said Putty isn't it? Hang on, we're getting there.
 

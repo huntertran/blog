@@ -18,18 +18,18 @@ Using Vuejs, sometime you need to publish your awesome `component` with the worl
 <!-- more -->
 With the release of Vue CLI 3, build target `-lib` is supported, but no tutorials available "out there", so here is one (and hopfully not the last).
 
-*   [1\. Requirements](#1-requirements)
-*   [2\. Steps](#2-steps)
+*   [1. Requirements](#1-requirements)
+*   [2. Steps](#2-steps)
     *   [2.1. Setup your project](#21-setup-your-project)
     *   [Add config for vue.js](#add-config-for-vuejs)
     *   [2.2. Edit `package.json`](#22-edit-packagejson)
-*   [3\. Build, Test and Publish](#3-build-test-and-publish)
+*   [3. Build, Test and Publish](#3-build-test-and-publish)
     *   [3.1. Build](#31-build)
     *   [3.2. Test](#32-test)
     *   [3.3. Publish](#33-publish)
-*   [4\. Test the published package](#4-test-the-published-package)
+*   [4. Test the published package](#4-test-the-published-package)
 
-# 1\. Requirements
+# 1. Requirements
 
 *   Of course you will need an `npmjs` account. Go register one.
 *   vue-cli 3 (as the time this tutorial was written), install it globally using
@@ -43,7 +43,7 @@ npm install -g @vue/cli-service-global
 *   Your component source code
 *   A text editor of your choice (VSCode is my personal suggestion)
 
-# 2\. Steps
+# 2. Steps
 
 ## 2.1. Setup your project
 
@@ -109,7 +109,7 @@ This settings indicate which file types should be uploaded to `npmjs`
 
 > If your component use other components or packages, you need to specify them in `dependencies`, [here](https://docs.npmjs.com/creating-a-package-json-file) is more info on npmjs.com
 
-# 3\. Build, Test and Publish
+# 3. Build, Test and Publish
 
 ## 3.1. Build
 
@@ -132,6 +132,6 @@ npm publish
 
 and follow the instruction.
 
-# 4\. Test the published package
+# 4. Test the published package
 
 Finally, you can try your newly published package in a new "Hello World" vue cli project, or use the built `yourpackagename.common.js` file directly in your `<head></head>` section.

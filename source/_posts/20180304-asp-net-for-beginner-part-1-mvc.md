@@ -21,12 +21,12 @@ Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụn
 > *   [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
 > *   [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
-*   [1\. MVC là gì?](#1-mvc-là-gì)
+*   [1. MVC là gì?](#1-mvc-là-gì)
     
     *   [1.1. Model](#11-model)
     *   [1.2. View](#12-view)
     *   [1.3. Controller](#13-controller)
-*   [2\. Một ví dụ đơn giản](#2-một-ví-dụ-đơn-giản)
+*   [2. Một ví dụ đơn giản](#2-một-ví-dụ-đơn-giản)
     
     *   [2.1. Bài toán](#21-bài-toán)
     *   [2.2. Phân tích](#22-phân-tích)
@@ -34,13 +34,13 @@ Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụn
         
         *   [2.3.1. Tính năng xem danh sách](#231-tính-năng-xem-danh-sách)
         *   [2.3.2. Tính năng thêm](#232-tính-năng-thêm)
-*   [3\. Tự tạo project](#3-tự-tạo-project)
+*   [3. Tự tạo project](#3-tự-tạo-project)
     
     *   [3.1. Phần mềm cần thiết](#31-phần-mềm-cần-thiết)
     *   [3.2. Triển](#32-triển)
     *   [3.3. ASP.NET Convention](#33-aspnet-convention)
 
-# 1\. MVC là gì?
+# 1. MVC là gì?
 
 MVC là một kiến trúc phần mềm dùng để phát triển kha khá ứng dụng bạn đang dùng trên thị trường. Mô hình MVC bóc tách 3 tầng của ứng dụng thành 3 thành phần khác nhau, giúp việc phát triển dễ dàng hơn.
 
@@ -66,7 +66,7 @@ Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau
 
 Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân
 
-# 2\. Một ví dụ đơn giản
+# 2. Một ví dụ đơn giản
 
 Vì ví dụ này được đưa ra để bạn hiểu mô hình MVC, nên bạn ko cần phải làm theo. Chỉ cần đọc tiếp thôi
 
@@ -144,7 +144,7 @@ if(existedPhone != null) { // Phone is existed, return the Add View // Điện t
 
 @using(Html.BeginForm("Add","MobilePhone",Method.Post)) { <label>Id</label> @Html.TextBoxFor(x => x.Id) <label>Name</label> @Html.TextBoxFor(x => x.Name) } \[/code\]
 
-# 3\. Tự tạo project
+# 3. Tự tạo project
 
 Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một
 

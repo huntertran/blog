@@ -11,16 +11,16 @@ date: 2019-07-10 20:11:54
 Coming to Java world, from a .NET guy, is like going from a full feature-rich and comfortable car to a basic bike with a lot of space for extension and customization.  
 In this series, I will walk you through (hopefully) a small part of Java world, just enough for you to continue your exploration.
 <!-- more -->
-*   [1\. Intro](#1-intro)
+*   [1. Intro](#1-intro)
     *   [1.1. What it can do](#11-what-it-can-do)
     *   [1.2. Write one, run anywhere](#12-write-one-run-anywhere)
-*   [2\. Versions and Tools](#2-versions-and-tools)
+*   [2. Versions and Tools](#2-versions-and-tools)
     *   [2.1. Versions](#21-versions)
     *   [2.2. Tools](#22-tools)
     *   [2.3. Terms](#23-terms)
-*   [3\. Frameworks](#3-frameworks)
+*   [3. Frameworks](#3-frameworks)
 
-# 1\. Intro
+# 1. Intro
 
 ## 1.1. What it can do
 
@@ -36,7 +36,7 @@ Ideally, a Java developer can write the code one, and run it anywhere that can r
 
 > Write one, debug everywhere
 
-# 2\. Versions and Tools
+# 2. Versions and Tools
 
 ## 2.1. Versions
 
@@ -60,7 +60,7 @@ Come along with Java are a lot of tools
 *   JDK: Java Development Kits. JDK has multiple implementation because of a long and complicated relationships between big firms
 *   JFX: or JavaFX. Things get strange from here. "OpenJFX is an open source, next generation client application platform for desktop, mobile and embedded systems built on Java" they said. But to be honest, I don't understand what is the difference between the "normal" java and the "next generation" java, since both are in active development.
 
-# 3\. Frameworks
+# 3. Frameworks
 
 In Microsoft world, .NET is the framework. If you want full-feature, compatible with old system, use .NET Framework (latest 4.8). If you want cross-platform (yes, including Linux), use .NET Core. And if you wait long enough, you can use [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/), as they said "There will be just one .NET going forward, and you will be able to use it to target Windows, Linux, macOS, iOS, Android, tvOS, watchOS and WebAssembly and more."
 

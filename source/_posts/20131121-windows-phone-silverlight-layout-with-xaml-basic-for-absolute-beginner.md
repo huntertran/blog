@@ -23,7 +23,7 @@ Bài viết này sẽ giúp các bạn có một khái niệm chung về giao di
 
 Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn những điều cơ bản nhất về giao diện trong XAML
 <!-- more -->
-*   [1\. Basic Control – Nest Control](#1-basic-control--nest-control)
+*   [1. Basic Control – Nest Control](#1-basic-control--nest-control)
     
     *   [1.1. Grid.ColumnDefinition and Grid.RowDefinition](#11-gridcolumndefinition-and-gridrowdefinition)
         
@@ -31,12 +31,12 @@ Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn nhữn
         *   [1.1.2. Auto Size](#112-auto-size)
         *   [1.1.3. Star Size](#113-star-size)
     *   [1.2. Nested Grid – A "Gridception" :3](#12-nested-grid -a-gridception-3)
-*   [2\. StackPanel](#2-stackpanel)
+*   [2. StackPanel](#2-stackpanel)
     
     *   [2.1. Bản chất của StackPanel](#21-bản-chất-của-stackpanel)
     *   [2.2. Hiển thị StackPanel vượt quá màn hình](#22-hiển-thị-stackpanel-vượt-quá-màn-hình)
 
-# 1\. Basic Control – Nest Control
+# 1. Basic Control – Nest Control
 
 Trong XAML, bạn có 2 control chính dùng để "chứa" các control khác, đó là **`Grid`** và **`StackPanel`**
 
@@ -152,7 +152,7 @@ Hãy thử vui một chút, tạo thật nhiều Grid con bên trong một grid 
 
 Màu sắc chói lóa. Như vận bạn có thể thấy, trong một Grid có thể chứa thêm nhiều Grid khác nữa, và trong các Grid con lại có thể chứa thêm các Grid con. Điều này là vô hạn miễn là máy bạn đủ khả năng render ra hình ảnh. Nhưng tôi đoán chắc các bạn không cần nhiều hơn 5 lớp Grid đâu
 
-# 2\. StackPanel
+# 2. StackPanel
 
 StackPanel khá giống với Grid ở mặt chứa được nhiều control khác bên trong nó, nhưn stackpanel không thể chia dòng và cột
 

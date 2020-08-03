@@ -12,14 +12,14 @@ Bài 2 phần 2 trong khóa học Machine Learning của giáo sư Andrew Ng. Tr
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Normal Equation](#1-normal-equation)
+*   [1. Normal Equation](#1-normal-equation)
     
     *   [1.1. Công thức](#11-công-thức)
     *   [1.2. So sánh](#12-so-sánh)
     *   [1.3. Non-invertibility (không thể đảo ngược)](#13-non-invertibility-không-thể-đảo-ngược)
-*   [2\. Octave](#2-octave)
+*   [2. Octave](#2-octave)
 
-# 1\. Normal Equation
+# 1. Normal Equation
 
 Thuần túy về mặt toán học, đối với 1 hàm hypothesis, ta có thể tìm ra giá trị nhỏ nhất của nó bằng cách lấy đạo hàm, và tìm x khi đạo hàm = 0.
 

@@ -11,14 +11,14 @@ date: 2017-08-29 22:54:40
 
 Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity phình to tới mức khó tin, và là một cục xương khó nhằn cho bất kỳ ai mới học ASP.NET
 <!-- more -->
-*   [1\. Quá trình phát triển](#1-quá-trình-phát-triển)
+*   [1. Quá trình phát triển](#1-quá-trình-phát-triển)
     
     *   [1.1. Asp.net Membership](#11-aspnet-membership)
     *   [1.2. Asp.net Simple Membership](#12-aspnet-simple-membership)
     *   [1.3. ASP.NET Universal Providers](#13-aspnet-universal-providers)
     *   [1.4. Asp.net Identity](#14-aspnet-identity)
-*   [2\. Bắt đầu với ASP.NET Identity](#2-bắt-đầu-với-aspnet-identity)
-*   [3\. Break-down](#3-break-down)
+*   [2. Bắt đầu với ASP.NET Identity](#2-bắt-đầu-với-aspnet-identity)
+*   [3. Break-down](#3-break-down)
     
     *   [3.1. Database](#31-database)
         
@@ -31,7 +31,7 @@ Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ t
         *   [3.2.2. AspNetUserLogins](#322-aspnetuserlogins)
         *   [3.2.3. AspNetUserClaims](#323-aspnetuserclaims)
 
-# 1\. Quá trình phát triển
+# 1. Quá trình phát triển
 
 ## 1.1. Asp.net Membership
 
@@ -64,7 +64,7 @@ Sau quá nhiều feedback, asp.net team cho ra đời version này, khắc phụ
 
 Bắt đầu nhảy vô nhé
 
-# 2\. Bắt đầu với ASP.NET Identity
+# 2. Bắt đầu với ASP.NET Identity
 
 > Xem code ở đây: [ASP.NET Identity 2 clone on GitHub](https://github.com/cuoilennaocacban/ASP.NETIdentty2)
 
@@ -76,7 +76,7 @@ Ngay khi tạo xong, bạn có thể nhấn chạy luôn
 
 ![Run Project](https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png)
 
-# 3\. Break-down
+# 3. Break-down
 
 Bây giờ mình sẽ tìm hiểu từng phần một của Identity nhé
 

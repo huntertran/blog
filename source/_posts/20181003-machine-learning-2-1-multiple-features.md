@@ -11,19 +11,19 @@ Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Mutiple Features](#1-mutiple-features)
+*   [1. Mutiple Features](#1-mutiple-features)
     
     *   [1.1. Ký hiệu](#11-ký-hiệu)
     *   [1.2. Hypothesis](#12-hypothesis)
     *   [1.3. Trick](#13-trick)
-*   [2\. Gradient Descent cho Multiple Variables](#2-gradient-descent-cho-multiple-variables)
-*   [3\. Gradient Descent in Practice](#3-gradient-descent-in-practice)
+*   [2. Gradient Descent cho Multiple Variables](#2-gradient-descent-cho-multiple-variables)
+*   [3. Gradient Descent in Practice](#3-gradient-descent-in-practice)
     
     *   [3.1. Feature Scaling và Mean Normalization](#31-feature-scaling-và-mean-normalization)
     *   [3.2. Learning Rate](#32-learning-rate)
-*   [4\. Features và Polynomial Regression](#4-features-và-polynomial-regression)
+*   [4. Features và Polynomial Regression](#4-features-và-polynomial-regression)
 
-# 1\. Mutiple Features
+# 1. Mutiple Features
 
 Linear Regression với `multiple features` còn được biết đến với cái tên `multivariate linear regression`.
 
@@ -50,7 +50,7 @@ $latex h\_0(x) = \\begin{bmatrix} \\theta\_0 & \\theta\_1 & ... & \\theta\_n \\e
 
 Trên đây là công thức của hàm hypothesis được rút gọn thành phép nhân matrix với vector.
 
-# 2\. Gradient Descent cho Multiple Variables
+# 2. Gradient Descent cho Multiple Variables
 
 Công thức cho thuật toán Gradient Descent thì y hệt như cũ. Ta chỉ lặp lại nó cho `n` features mà thôi.
 
@@ -66,7 +66,7 @@ với j:= 0...n
 
 > Đối với $latex \\theta\_0$, $latex x^i\_0 = 1$
 
-# 3\. Gradient Descent in Practice
+# 3. Gradient Descent in Practice
 
 ## 3.1. Feature Scaling và Mean Normalization
 
@@ -116,7 +116,7 @@ Người ta đã chứng minh được rằng, nếu learning rate $latex \\alph
 
 Túm lại: \* Nếu $latex \\alpha$ quá nhỏ: gradient descent chạy lâu. \* Nếu $latex \\alpha$ quá lớn: $latex J(\\theta)$ có thể sẽ không giảm sau mỗi lần lặp -> không hội tụ.
 
-# 4\. Features và Polynomial Regression
+# 4. Features và Polynomial Regression
 
 Ta có thể cải thiện features và dạng của hàm hypothesis bằng nhiều cách.
 

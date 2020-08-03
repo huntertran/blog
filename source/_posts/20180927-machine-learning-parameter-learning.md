@@ -15,13 +15,13 @@ Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Gradient Descent](#1-gradient-descent)
+*   [1. Gradient Descent](#1-gradient-descent)
     *   [1.1. Biểu diễn đồ thị](#11-biểu-diễn-đồ-thị)
     *   [1.2. Mô tả thuật toán](#12-mô-tả-thuật-toán)
     *   [1.3. Xây dựng](#13-xây-dựng)
-*   [2\. Gradient Descent cho Linear Regression](#2-gradient-descent-cho-linear-regression)
+*   [2. Gradient Descent cho Linear Regression](#2-gradient-descent-cho-linear-regression)
 
-# 1\. Gradient Descent
+# 1. Gradient Descent
 
 Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis, và đó là nhiệm vụ của `Gradient Descent`.
 
@@ -88,7 +88,7 @@ Với một tham số $latex \\alpha$ hợp lý, càng về gần điểm hội 
 
 Trong trường hợp điểm xuất phát chính là điểm hội tụ, thì thuật toán gradient descent sẽ cho ra $latex \\theta\_{1}$ không đổi với $latex \\alpha$ bất kỳ, vì đạo hàm của nó là 0.
 
-# 2\. Gradient Descent cho Linear Regression
+# 2. Gradient Descent cho Linear Regression
 
 Khi áp dụng thuật toán Gradient Descent vào hàm số Hypothesis của ta trong các bài viết trước, ta có thể tìm được 2 tham số $latex \\theta\_{0}$ và $latex \\theta\_{1}$:
 

@@ -11,14 +11,14 @@ Bài viết mở đầu cho chuỗi tự học Machine Learning. Các khái ni�
 <!-- more -->
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
 
-*   [1\. Machine learning là gì](#1-machine-learning-là-gì)
-*   [2\. Phân loại](#2-phân-loại)
+*   [1. Machine learning là gì](#1-machine-learning-là-gì)
+*   [2. Phân loại](#2-phân-loại)
     *   [2.1. Supervised Learning](#21-supervised-learning)
         *   [2.1.1. Regression](#211-regression)
         *   [2.1.2. Classification](#212-classification)
     *   [2.2. Unsupervised Learning](#22-unsupervised-learning)
 
-# 1\. Machine learning là gì
+# 1. Machine learning là gì
 
 Có 2 định nghĩa về machine learning:
 
@@ -40,7 +40,7 @@ Có 2 định nghĩa về machine learning:
 *   **T**(ask): nhiệm vụ là chơi cờ.
 *   **P**(robability): Khả năng mà máy tính sẽ thắng trong ván tiếp theo.
 
-# 2\. Phân loại
+# 2. Phân loại
 
 Mọi chương trình Machine learning đều có thể chia thành 2 loại:
 

@@ -13,9 +13,9 @@ Sáng nay, tại phòng C301, ITIC đã có buổi giới thiệu cuộc thi Ima
 
 Tham gia buổi giới thiệu, các bạn đã được hướng dẫn đăng ký tài khoản Imagine Cup 2014, đồng thời tham gia 2 trên 3 minigame đang diễn ra trong khoảng thời gian vô cùng ngắn nhằm đạt giải thưởng là $1000 và $3000 từ ban tổ chức
 <!-- more -->
-*   [1\. Đăng ký](#1-đăng-ký)
-*   [2\. Braingame 2.0 Quiz 1](#2-braingame-20-quiz-1)
-*   [3\. Project Blueprint](#3-project-blueprint)
+*   [1. Đăng ký](#1-đăng-ký)
+*   [2. Braingame 2.0 Quiz 1](#2-braingame-20-quiz-1)
+*   [3. Project Blueprint](#3-project-blueprint)
     
     *   [3.1. Concept](#31-concept)
     *   [3.2. Target Audience](#32-target-audience)
@@ -25,7 +25,7 @@ Tham gia buổi giới thiệu, các bạn đã được hướng dẫn đăng k
     *   [3.6. Top User Stories](#36-top-user-stories)
     *   [3.7. Business Model](#37-business-model)
 
-# 1\. Đăng ký
+# 1. Đăng ký
 
 Đăng ký Imagine Cup 2014 thậm chí còn đơn giản hơn nhiều so với năm ngoái. Chỉ cần có một tài khoản Microsoft là các bạn đã có thể tham gia.
 
@@ -35,7 +35,7 @@ Lưu ý khi đăng ký, nhớ chọn quốc gia Việt Nam nhé Các bạn đã 
 
 ![](https://farm8.staticflickr.com/7347/11364442916_15e680b7e9_o.png)
 
-# 2\. Braingame 2.0 Quiz 1
+# 2. Braingame 2.0 Quiz 1
 
 Mỗi tháng, Imagine Cup sẽ tổ chức 2 cuộc thi Braingame, giải thưởng là $1000 cho mỗi cuộc thi dành cho thí sinh trả lời đúng nhất và nhanh nhất
 
@@ -67,7 +67,7 @@ Bắt đầu làm bài khi bấm vào đường Link như hình trên
 
 Sau khi làm bài xong, sẽ có một bảng hiện ra, bạn bấm vào chữ click here như hình dưới thì điểm của bạn mới được ghi nhận ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/6-return.png)
 
-# 3\. Project Blueprint
+# 3. Project Blueprint
 
 Project Blueprint là một minigame thú vị dành cho tất cả các đội tham gia Imagine Cup 2014 Trong Project Blueprint, bạn có cơ hội thể hiện ý tưởng của mình và nhận được giải thưởng lên tới $3000 của ban tổ chức. Để tham gia được minigame này, bạn làm theo các bước sau Vào Dashboard của bạn ![](https://farm4.staticflickr.com/3765/11364718153_e5f7c29580_o.png)
 

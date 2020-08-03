@@ -14,7 +14,7 @@ date: 2013-10-03 10:39:34
 
 Sáng nay, tại phòng A106, trường Đại học Công nghệ thông tin – Đại học Quốc gia Tp.HCM đã diễn ra buổi Seminar đầy tính cởi mở và thân mật giữa các Developer Evengelist của Microsoft Việt Nam và sinh viên của trường
 <!-- more -->
-# 1\. Mở đầu
+# 1. Mở đầu
 
 Bắt đầu sự kiện, ITIClub đã cho các bạn xem một số đoạn Video đầy thú vị về Microsoft và chương trình MSP, cũng như cuộc thi Imagine Cup các năm
 
@@ -34,7 +34,7 @@ Cuộc thi Imagine Cup 2013 – Nga
 
 Vì giới hạn của Wordpress, bạn vui lòng bấm vào link sau để xem: [Imagine Cup 2013 - Kick off Video](http://www.youtube.com/watch?v=-WEwQsTbxC0)
 
-# 2\. Bắt đầu
+# 2. Bắt đầu
 
 Anh Nguyễn Thiên Ca – Microsoft Developer Evengelist – bắt đầu giới thiệu về những điểm mới của cuộc thi Imagine Cup 2014
 
@@ -51,7 +51,7 @@ Anh Nguyễn Thiên Ca – Microsoft Developer Evengelist – bắt đầu giớ
 
 Nghe thú vị nhỉ, và tôi đã có sẵn một ý tưởng để có thể tham gia Pitch Video
 
-# 3\. Application Life-Cycle Management
+# 3. Application Life-Cycle Management
 
 Phần tiếp theo, anh Huỳnh Bảo Toàn – Microsoft Developer Evengelist – bắt đầu bằng một hình ảnh khá thú vị
 
@@ -67,7 +67,7 @@ Từng chức vụ trong một dự án phát triển phần mềm được anh 
 
 > Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool ![smile](https://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-partysmile.png)
 
-# 4\. Kết thúc
+# 4. Kết thúc
 
 kết thúc chương trình, anh Lương Thanh Thế nói về chương trình tuyển chọn MSP năm 2014
 

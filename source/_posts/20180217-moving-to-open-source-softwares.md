@@ -16,22 +16,22 @@ Cho tới nay, mình tự hào đã dùng toàn bộ sản phẩm có bản quy�
 <!-- more -->
 Cũng phải nói luôn là có một số phần mềm, mặc dù vẫn có thể dùng đồ free, nhưng tính năng nó mang lại không đủ, nên mình cũng đã quyết định bỏ tiền ra mua (một số) sản phẩm tính phí đó.
 
-*   [1\. Phần mềm đã mua](#1-phần-mềm-đã-mua)
+*   [1. Phần mềm đã mua](#1-phần-mềm-đã-mua)
     
     *   [1.1. Microsoft Office](#11-microsoft-office)
-*   [2\. Phần mềm có được do các chương trình hỗ trợ / hợp tác](#2-phần-mềm-có-được-do-các-chương-trình-hỗ-trợ--hợp-tác)
+*   [2. Phần mềm có được do các chương trình hỗ trợ / hợp tác](#2-phần-mềm-có-được-do-các-chương-trình-hỗ-trợ--hợp-tác)
     
     *   [2.1. Microsoft Windows](#21-microsoft-windows)
     *   [2.2. Visual Studio Enterprise](#22-visual-studio-enterprise)
-*   [3\. Phần mềm đã bỏ](#3-phần-mềm-đã-bỏ)
+*   [3. Phần mềm đã bỏ](#3-phần-mềm-đã-bỏ)
     
     *   [3.1. Internet Download Manager](#31-internet-download-manager)
     *   [3.2. Adobe Photoshop](#32-adobe-photoshop)
     *   [3.3. Sublime Text](#33-sublime-text)
     *   [3.4. SourceTree, hay Git Client nói chung](#34-sourcetree-hay-git-client-nói-chung)
-*   [4\. Các phần mềm khác](#4-các-phần-mềm-khác)
+*   [4. Các phần mềm khác](#4-các-phần-mềm-khác)
 
-# 1\. Phần mềm đã mua
+# 1. Phần mềm đã mua
 
 ## 1.1. Microsoft Office
 
@@ -41,7 +41,7 @@ Cũng phải nói luôn là có một số phần mềm, mặc dù vẫn có th�
 
 Bộ này thì khỏi nói, dù có một số giải pháp thay thế như [Libre Office](https://www.libreoffice.org/) hay [Open Office](https://www.openoffice.org/), nhưng về cơ bản, các tính năng quá mạnh mẽ của MS Office đã thuyết phục được mình bỏ tiền ra mua nó hàng năm (dạng thuê bao Home Subscription có thể chia sẻ cho 5 user)
 
-# 2\. Phần mềm có được do các chương trình hỗ trợ / hợp tác
+# 2. Phần mềm có được do các chương trình hỗ trợ / hợp tác
 
 Các chương trình này đa phần nhắm tới sinh viên. Nếu trường của bạn cung cấp địa chỉ có đuôi edu thì bạn sẽ được tham gia các chương trình này và sử dụng các bộ phần mềm bản quyền hoàn toàn miễn phí
 
@@ -67,7 +67,7 @@ Khi 'phát hiện' ra Visual Studio 2010 Express (là phiên bản miễn phí h
 
 > Funfact: MS cũng tham gia phát triển tools cho eclipse -> [source](https://blogs.msdn.microsoft.com/visualstudio/2016/03/08/microsoft-joins-the-eclipse-foundation/)
 
-# 3\. Phần mềm đã bỏ
+# 3. Phần mềm đã bỏ
 
 ## 3.1. Internet Download Manager
 
@@ -123,7 +123,7 @@ Một số bạn dev sẽ cực lực phản đổi cái git extension này, vì
 
 Tất cả đều không thể vượt qua nổi sự đơn giản (tuy xấu) và ổn định mà GitExtension cung cấp.
 
-# 4\. Các phần mềm khác
+# 4. Các phần mềm khác
 
 Mục tiêu của mình là open source, chứ không phải freeware, hay freemium.
 

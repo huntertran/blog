@@ -27,8 +27,8 @@ Tại sao tôi lại nói 2 phần này trước cả App's Structure. Các cont
 
 Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu trúc một ứng dụng trong Windows Phone nhé
 <!-- more -->
-*   [**1\. Cách thức ứng dụng hoạt động trên thiết bị**](#1-cách-thức-ứng-dụng-hoạt-động-trên-thiết-bị)
-*   [**2\. Cấu trúc của ứng dụng**](#2-cấu-trúc-của-ứng-dụng)
+*   [**1. Cách thức ứng dụng hoạt động trên thiết bị**](#1-cách-thức-ứng-dụng-hoạt-động-trên-thiết-bị)
+*   [**2. Cấu trúc của ứng dụng**](#2-cấu-trúc-của-ứng-dụng)
     
     *   [**2.1 Các thành phần**](#21-các-thành-phần)
         
@@ -41,7 +41,7 @@ Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu tr�
         *   [**2.1.7 LocalizedString.cs**](#217-localizedstringcs)
         *   [**2.1.8 MainPage.xaml và MainPage.xaml.cs**](#218-mainpagexaml-và-mainpagexamlcs)
 
-# **1\. Cách thức ứng dụng hoạt động trên thiết bị**
+# **1. Cách thức ứng dụng hoạt động trên thiết bị**
 
 Khi cài ứng dụng lên thiết bị, bạn sẽ có một mô hình như sau:
 
@@ -53,7 +53,7 @@ Nhìn hình trên, bạn sẽ thấy Ứng dụng của bạn chỉ được ph�
 
 Ngoài ra, nếu muốn truy cập vào thẻ nhớ, ứng dụng của bạn bắt buộc phải thông qua API của hệ điều hành. Hiện tại thì Windows Phone chỉ mới cho phép đọc ghi các file media (nhạc, hình, video) lên thẻ nhớ mà thôi.
 
-# **2\. Cấu trúc của ứng dụng**
+# **2. Cấu trúc của ứng dụng**
 
 Mở Visual Studio 2013 lên, bạn sẽ thấy giao diện như sau:
 

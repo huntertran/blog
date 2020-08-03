@@ -11,19 +11,19 @@ Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi b�
 
 Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/).
 <!-- more -->
-*   [1\. Cài đặt Octave](#1-cài-đặt-octave)
-*   [2\. Warmup](#2-warmup)
-*   [3\. Cost Function J](#3-cost-function-j)
-*   [4\. Gradient Descent](#4-gradient-descent)
-*   [5\. Normal Equation](#5-normal-equation)
+*   [1. Cài đặt Octave](#1-cài-đặt-octave)
+*   [2. Warmup](#2-warmup)
+*   [3. Cost Function J](#3-cost-function-j)
+*   [4. Gradient Descent](#4-gradient-descent)
+*   [5. Normal Equation](#5-normal-equation)
 
-# 1\. Cài đặt Octave
+# 1. Cài đặt Octave
 
 Còn gì dễ hơn: [Download Octave](https://www.gnu.org/software/octave/download.html)
 
 Chọn phiên bản 64-bit nha: octave-4.4.1-w64-installer.exe (~ 238 MB)
 
-# 2\. Warmup
+# 2. Warmup
 
 Yêu cầu: Trả về 5x5 identity matrix
 
@@ -31,7 +31,7 @@ Yêu cầu: Trả về 5x5 identity matrix
 A = eye(5);
 ```
 
-# 3\. Cost Function J
+# 3. Cost Function J
 
 Công thức:
 
@@ -57,7 +57,7 @@ Code:
 J = (1/(2*m))*sum((X*theta - y).^2)
 ```
 
-# 4\. Gradient Descent
+# 4. Gradient Descent
 
 Thuật toán Gradient Descent có 2 bước:
 
@@ -128,7 +128,7 @@ end
 
 > Code này có thể dùng chung cho gradient descent với nhiều feature
 
-# 5\. Normal Equation
+# 5. Normal Equation
 
 Cái này thì khá dễ, nên mình không giải thích mà sẽ đưa code luôn nhé
 

@@ -17,14 +17,14 @@ Khi sử dụng Visual Studio để lập trình, chắc hẳn sẽ có lúc b�
 
 Nuget là một công cụ giúp bạn thêm các thư viện ngoài vào Project của mình. Sử dụng Nuget rất đơn giản và dễ dàng
 <!-- more -->
-*   [1\. Chuẩn bị](#1-chuẩn-bị)
-*   [2\. Cập nhật Nuget Package](#2-cập-nhật-nuget-package)
-*   [3\. Sử dụng](#3-sử-dụng)
+*   [1. Chuẩn bị](#1-chuẩn-bị)
+*   [2. Cập nhật Nuget Package](#2-cập-nhật-nuget-package)
+*   [3. Sử dụng](#3-sử-dụng)
     
     *   [3.1. Cài đặt 1 gói Nuget](#31-cài-đặt-1-gói-nuget)
-*   [4\. Giới thiệu một số gói Nuget hay](#4-giới-thiệu-một-số-gói-nuget-hay)
+*   [4. Giới thiệu một số gói Nuget hay](#4-giới-thiệu-một-số-gói-nuget-hay)
 
-# 1\. Chuẩn bị
+# 1. Chuẩn bị
 
 Đổi DNS của bạn thành Google DNS
 
@@ -36,7 +36,7 @@ Không hiểu vì lý do gì mà khi để DNS mặc định, mình không thể
 
 ![](https://farm3.staticflickr.com/2890/10797641014_1c326253d2_o.png)
 
-# 2\. Cập nhật Nuget Package
+# 2. Cập nhật Nuget Package
 
 Mở Visual Studio lên, chọn Tool > Extension and Update
 
@@ -44,7 +44,7 @@ Chọn Mục Update và update tất cả mọi thứ mà bạn có thể. Nếu
 
 ![](https://farm8.staticflickr.com/7415/10797728624_43f2fd7efb_o.png)
 
-# 3\. Sử dụng
+# 3. Sử dụng
 
 Mở một Project bất kỳ, ở đây mình sẽ chọn Windows Phone, Project mẫu là RSS Reader
 
@@ -80,7 +80,7 @@ Chờ nó cài đặt một tí. Bạn sẽ luôn có gói Nuget mới nhất ph
 
 Vậy là xong, bạn đã có thể bắt đầu sử dụng ngay gói Nuget đó
 
-# 4\. Giới thiệu một số gói Nuget hay
+# 4. Giới thiệu một số gói Nuget hay
 
 *   **Json.NET**: Dùng để thao tác với dữ liệu Json
 *   **HtmlAgilityPack**: Dùng để thao tác với dữ liệu HTML

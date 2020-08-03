@@ -16,19 +16,19 @@ Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data
 
 Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan tới nhau đều được thực hiện trên cùng một DbContext
 <!-- more -->
-*   [1\. DbContext của Entity Framework Core](#1-dbcontext-của-entity-framework-core)
+*   [1. DbContext của Entity Framework Core](#1-dbcontext-của-entity-framework-core)
     
     *   [1.1. DbContext Tracking](#11-dbcontext-tracking)
-*   [2\. Repository](#2-repository)
+*   [2. Repository](#2-repository)
     
     *   [2.1. Lý do](#21-lý-do)
     *   [2.2. Implement](#22-implement)
     *   [2.3. Performance Hit](#23-performance-hit)
-*   [3\. Generic Repository](#3-generic-repository)
-*   [4\. Tạo class Unit of Work](#4-tạo-class-unit-of-work)
-*   [5\. Tổng kết](#5-tổng-kết)
+*   [3. Generic Repository](#3-generic-repository)
+*   [4. Tạo class Unit of Work](#4-tạo-class-unit-of-work)
+*   [5. Tổng kết](#5-tổng-kết)
 
-# 1\. DbContext của Entity Framework Core
+# 1. DbContext của Entity Framework Core
 
 "Trước giờ xài mà có để ý `DbContext` là gì đâu" -> đây chắc là tình trạng chung của kha khá công nghệ liên quan tới .NET, khi mà mọi thứ đã được xây dựng sẵn, và bạn chỉ có nhiệm vụ ... xài
 
@@ -50,7 +50,7 @@ Cho tới khi bạn đã thực hiện tất cả các thay đổi cần thiết
 
 Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application
 
-# 2\. Repository
+# 2. Repository
 
 Có cái sơ đồ hay ho sau ![repository diagram](https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png)
 
@@ -131,7 +131,7 @@ return View(filteredStudents); } \[/code\]
 
 Ở phần sau, bạn sẽ biết cách fix cho vấn đề này, đồng thời implement 1 generic repository cho các tác vụ CRUD cơ bản
 
-# 3\. Generic Repository
+# 3. Generic Repository
 
 Về cơ bản, ta sẽ dùng kiểu khai báo generic class của C# để implement generic repository
 
@@ -161,7 +161,7 @@ public virtual void Delete(TEntity entityToDelete) { if (context.Entry(entityToD
 
 public virtual void Update(TEntity entityToUpdate) { dbSet.Attach(entityToUpdate); context.Entry(entityToUpdate).State = EntityState.Modified; } } } \[/code\]
 
-# 4\. Tạo class Unit of Work
+# 4. Tạo class Unit of Work
 
 Unit of Work chỉ có 1 nhiệm vụ duy nhất, đảm bảo tất cả các repository của bạn đều dùng chung một `DbContext`. Bằng cách này, khi thực hiện xong tất cả các tác vụ thay đổi database, bạn chỉ cần gọi `DbContext.SaveChanges()` 1 lần duy nhất, và các thay đổi đó sẽ được lưu lại trong database
 
@@ -191,6 +191,6 @@ Bước tiếp theo là thay đổi code của controller để sử dụng clas
 
 // Hủy unitOfWork.Dispose(); \[/code\]
 
-# 5\. Tổng kết
+# 5. Tổng kết
 
 Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface `IQueryable`. Chúc vui :D
