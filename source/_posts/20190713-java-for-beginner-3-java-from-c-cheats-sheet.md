@@ -11,6 +11,8 @@ date: 2019-07-13 21:15:56
 
 Doing C# long enough, you get yourself familiar with C# concepts and syntax. That's fine, but sometime when you need "the same" concepts in Java, it's quite difficult. This cheat sheet here to tackle that problem.
 
+<!-- more -->
+
 You can view other posts in the series here:
 
 1.  [Introduction](https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/)

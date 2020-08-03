@@ -12,6 +12,8 @@ date: 2019-10-19 16:10:18
 
 Removing clones in code maybe is the most difficult type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#
 
+<!-- more -->
+
 # Type of clones
 
 There are 4 type of clones:

@@ -11,6 +11,8 @@ date: 2016-07-11 00:38:34
 
 Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương trình viết bằng C#. Chỉ cần search một phát, sẽ ra hàng tá kết quả khác nhau, với các lời khuyên khác nhau, đi kèm với các đoạn code bench mark khác nhau, vô cùng rối ren khiến ta bối rối.
 
+<!-- more -->
+
 *   [Tại sao vậy?](#tại-sao-vậy)
 *   [Các vấn đề](#các-vấn-đề)
     *   [Sai lầm 1: Cộng chuỗi](#sai-lầm-1-cộng-chuỗi)

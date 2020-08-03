@@ -11,6 +11,8 @@ date: 2019-07-12 12:40:13
 
 After getting yourself familiar with names and terms in Java in [part 1](https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/), now it's time for you to create your first program in Java.
 
+<!-- more -->
+
 *   [1. Setup](#1-setup)
     *   [1.1. Required Tools](#11-required-tools)
     *   [1.2. Set environment variables](#12-set-environment-variables)

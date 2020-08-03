@@ -13,6 +13,8 @@ date: 2020-07-30 00:31:02
 
 Microsoft acquired GitHub, and every one have unlimited private repository. This reason alone make me want to move all my project and source code to GitHub.
 
+<!-- more -->
+
 *   [1. A bit of history](#1-a-bit-of-history)
 *   [2. Required tools](#2-required-tools)
 *   [3. Migration steps](#3-migration-steps)

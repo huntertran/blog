@@ -19,6 +19,8 @@ Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 201
 
 ![](http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png)
 
+<!-- more -->
+
 # Cập nhật Visual Studio 2013 lên Updat 2 RC
 
 Ngày 13-04-2014: Link tải: [http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx](http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx)
