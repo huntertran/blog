@@ -13,10 +13,10 @@ Sau đó, đăng nhập tài khoản của mình, tại mục Compete, chọn ph
 
 Ở đây mình chọn Windows Phone Challenge Ở Việt Nam, bạn có thể chọn:
 
-*   Software Design: Thiết kế phần mềm
-*   Game Design: XBOXWINDOWS: Thiết kế game cho X Box
-*   Game Design: Phone: Thiết kế game cho Windows Phone 7
-*   Windows Phone Challenge: Thiết kế ứng dụng cho Windows Phone 7
+* Software Design: Thiết kế phần mềm
+* Game Design: XBOXWINDOWS: Thiết kế game cho X Box
+* Game Design: Phone: Thiết kế game cho Windows Phone 7
+* Windows Phone Challenge: Thiết kế ứng dụng cho Windows Phone 7
 
 Sau đó, ở trang hiện ra, bấm Sign Up để đăng ký mục thi
 
