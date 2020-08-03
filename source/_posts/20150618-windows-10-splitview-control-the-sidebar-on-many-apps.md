@@ -20,7 +20,7 @@ Cơ bản, nó sẽ có 2 phần: Pane và Content
 
 Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.
 
-![](http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView_thumb.gif?imgmax=800)
+![](http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800)
 
 Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản
 
