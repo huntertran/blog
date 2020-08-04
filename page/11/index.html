@@ -1,14 +1,1266 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>Tuan Tran's Blog</title><link rel="stylesheet" type="text/css" href="/blog/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.png"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
-</head><link rel="stylesheet" type="text/css" href="/blog/plugins/prettify/doxy.css"><script type="text/javascript" src="/blog/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Tuan Tran's Blog</a></h1></div><p class="m-desc">Share to be shared</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/blog/archives/">Archives</a></li><li><span class="dot">●</span><a href="/blog/categories/">Categories</a></li><li><span class="dot">●</span><a href="/blog/tags/">Tags</a></li><li><span class="dot">●</span><a href="/blog/about/">About</a></li><li><span class="dot">●</span><a href="/blog/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="Search for" onfocus="if(this.value=='Search for'){this.value='';}" onblur="if(this.value==''){this.value='Search for';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-postlist"><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/">[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage</a></h1><div class="p-content"><p>Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụng khác (trừ phi bạn có quyền root, chỉ dành cho Lumia 710 cooked room)</p>
-<p>Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này trực quan, sinh động và dễ dàng?</p></div><p class="p-readmore"><a href="/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/">2013-09-13</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/windows-phone/">windows phone</a><a href="/blog/tags/isolated-storage/">isolated storage</a><a href="/blog/tags/power-tools/">power tools</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/">[Windows Phone – Silverlight] Uniform to fill, centered</a></h1><div class="p-content"><p>Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Tuan Tran&#39;s Blog">
+<meta property="og:url" content="https://huntertran.github.io/blog/page/11/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Tuan Tran">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://huntertran.github.io/blog/page/11/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Tuan Tran's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/" class="post-title-link" itemprop="url">[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-09-13 23:02:24" itemprop="dateCreated datePublished" datetime="2013-09-13T23:02:24-04:00">2013-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:45:52" itemprop="dateModified" datetime="2020-08-03T10:45:52-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụng khác (trừ phi bạn có quyền root, chỉ dành cho Lumia 710 cooked room)</p>
+<p>Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này trực quan, sinh động và dễ dàng?</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/" class="post-title-link" itemprop="url">[Windows Phone – Silverlight] Uniform to fill, centered</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-09-11 22:54:45" itemprop="dateCreated datePublished" datetime="2013-09-11T22:54:45-04:00">2013-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:18:50" itemprop="dateModified" datetime="2020-08-03T10:18:50-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control.</p>
 <p>Image Control có một số thuộc tính về hiển thị như Stretch, Fill, Uniform, UniformToFill. Uniform To Fill sẽ mở rộng tấm hình ra cho vừa kích thước của control, và thực tế là nó cắt mất một góc trái trên của tấm hình, cho ta có cảm giác như tấm hình được canh giữa</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png" alt="perfect"></p>
-<p>Làm sao đạt được tấm hình “Tuyệt vời”</p></div><p class="p-readmore"><a href="/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/">2013-09-11</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/centered-image/">centered image</a><a href="/blog/tags/stretch/">stretch</a><a href="/blog/tags/uniform/">uniform</a><a href="/blog/tags/uniformtofill/">uniformtofill</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/09/07/wp-sl-khac-nhau-resource-content/">Windows Phone – Silverlight: Khác nhau giữa “resource” và “content”</a></h1><div class="p-content"><p>Mọi thứ có trong project folder, ta đều phải lựa chọn: Resource hay Content? Bài viết này sẽ nói về sự khác biệt giữa 2 thể loại này, cũng như lợi/hại của từng loại</p></div><p class="p-readmore"><a href="/blog/2013/09/07/wp-sl-khac-nhau-resource-content/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/09/07/wp-sl-khac-nhau-resource-content/">2013-09-07</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/windows-phone/">windows phone</a><a href="/blog/tags/content/">content</a><a href="/blog/tags/file/">file</a><a href="/blog/tags/project/">project</a><a href="/blog/tags/resource/">resource</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/">[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code</a></h1><div class="p-content"><p>Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái</p>
+<p>Làm sao đạt được tấm hình “Tuyệt vời”</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/09/07/wp-sl-khac-nhau-resource-content/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/09/07/wp-sl-khac-nhau-resource-content/" class="post-title-link" itemprop="url">Windows Phone – Silverlight: Khác nhau giữa “resource” và “content”</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-09-07 04:59:02" itemprop="dateCreated datePublished" datetime="2013-09-07T04:59:02-04:00">2013-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:45:50" itemprop="dateModified" datetime="2020-08-03T10:45:50-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Mọi thứ có trong project folder, ta đều phải lựa chọn: Resource hay Content? Bài viết này sẽ nói về sự khác biệt giữa 2 thể loại này, cũng như lợi/hại của từng loại</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/09/07/wp-sl-khac-nhau-resource-content/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/" class="post-title-link" itemprop="url">[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-09-04 10:46:27" itemprop="dateCreated datePublished" datetime="2013-09-04T10:46:27-04:00">2013-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:20:32" itemprop="dateModified" datetime="2020-08-03T10:20:32-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Store-App/" itemprop="url" rel="index"><span itemprop="name">Windows Store App</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái</p>
 <p>Lưu ý: yêu cầu phải có thẻ visa</p>
-<p>Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $ 99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.</p></div><p class="p-readmore"><a href="/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/">2013-09-04</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Store-App/">Windows Store App</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/account/">account</a><a href="/blog/tags/dev-center/">dev center</a><a href="/blog/tags/store/">store</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/09/02/windows-phone-7-chooser/">Windows Phone 7 Chooser</a></h1><div class="p-content"><p>Windows Phone có nhiều tài nguyên để bạn tận dụng, carmera này, danh bạ này, hình ảnh này, blah blah blah. Làm sao để sử dụng những tài nguyên này trong ứng dụng Windows Phone của bạn?</p></div><p class="p-readmore"><a href="/blog/2013/09/02/windows-phone-7-chooser/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/09/02/windows-phone-7-chooser/">2013-09-02</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/c/">c</a>&nbsp;&bull;&nbsp;<a href="/blog/categories/c/Windows-Phone/">Windows Phone</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/chooser/">chooser</a><a href="/blog/tags/windows-phone/">windows phone</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/">Microsoft Student Partner [MSP] – for life</a></h1><div class="p-content"><p>Đam mê công nghệ thông tin, từ cấp 3, tôi đã may mắn biết được chương trình Microsoft Student Partner của Microsoft dành cho sinh viên toàn cầu.</p></div><p class="p-readmore"><a href="/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/">2013-08-29</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Others/">Others</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2012/03/08/ic05/">[IC05] Đăng ký tài khoản Mentor</a></h1><div class="p-content"><p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p></div><p class="p-readmore"><a href="/blog/2012/03/08/ic05/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2012/03/08/ic05/">2012-03-08</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Imagine-Cup/">Imagine Cup</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2012/01/31/ic04/">[IC04] Đăng ký cho Team của bạn [Dành cho Nhóm trưởng]</a></h1><div class="p-content"><p>Sau khi đăng nhập, vào mục Compete &gt; Chọn phần bạn đã đăng ký thi</p></div><p class="p-readmore"><a href="/blog/2012/01/31/ic04/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2012/01/31/ic04/">2012-01-31</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Imagine-Cup/">Imagine Cup</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2012/01/14/ic03/">[IC03] Tạo tài khoản Imagine Cup 2012</a></h1><div class="p-content"><p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p></div><p class="p-readmore"><a href="/blog/2012/01/14/ic03/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2012/01/14/ic03/">2012-01-14</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/Imagine-Cup/">Imagine Cup</a></span></div></div><div class="l-post"><div class="p-desc box"><div class="p-pic"></div><h1 class="p-title"><a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">[C++] Split class and header to separated files with Visual Studio</a></h1><div class="p-content"><p>Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể tách các thành phần trong code ra thành những file riêng?</p></div><p class="p-readmore"><a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">Read more &gt;&gt;</a></p></div><div class="p-info box"><span class="p-date"><i class="fa fa-calendar"></i><a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">2012-01-03</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/blog/categories/C/">C++</a></span><span class="p-tags"><i class="fa fa-tags"></i><a href="/blog/tags/class/">class</a><a href="/blog/tags/Header-computing/">Header (computing)</a><a href="/blog/tags/Separate-class/">Separate class</a><a href="/blog/tags/Source/">Source</a><a href="/blog/tags/Visual-Studio/">Visual Studio</a></span></div></div></div><div class="l-pager l-pager-id box" id="page-nav"><a class="extend prev" rel="prev" href="/blog/page/10/">&lt;previous</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="page-number" href="/blog/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/12/">next&gt;</a></div><footer><p>Copyright © 2016 - 2020 <a href="/blog/." rel="nofollow">Tuan Tran's Blog</a> | <strong><a rel="nofollow" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></strong><br><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span></span> <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span></span> | Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/blog/plugins/prettify/prettify.js"></script><script type="text/javascript" src="/blog/js/search.js"></script><script type="text/javascript" src="/blog/js/top.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var search_path = 'search.xml';
-if (search_path.length == 0) {
-    search_path = 'search.xml';
-}
-var path = '/blog/' + search_path;
-searchFunc(path, 'local-search-input', 'local-search-result');
-</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.1" async></script></body></html>
+<p>Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $ 99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/09/02/windows-phone-7-chooser/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/09/02/windows-phone-7-chooser/" class="post-title-link" itemprop="url">Windows Phone 7 Chooser</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-09-02 12:13:41" itemprop="dateCreated datePublished" datetime="2013-09-02T12:13:41-04:00">2013-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:18:50" itemprop="dateModified" datetime="2020-08-03T10:18:50-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Windows Phone có nhiều tài nguyên để bạn tận dụng, carmera này, danh bạ này, hình ảnh này, blah blah blah. Làm sao để sử dụng những tài nguyên này trong ứng dụng Windows Phone của bạn?</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/09/02/windows-phone-7-chooser/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/" class="post-title-link" itemprop="url">Microsoft Student Partner [MSP] – for life</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2013-08-29 07:13:21" itemprop="dateCreated datePublished" datetime="2013-08-29T07:13:21-04:00">2013-08-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 10:18:50" itemprop="dateModified" datetime="2020-08-03T10:18:50-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Others/" itemprop="url" rel="index"><span itemprop="name">Others</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Đam mê công nghệ thông tin, từ cấp 3, tôi đã may mắn biết được chương trình Microsoft Student Partner của Microsoft dành cho sinh viên toàn cầu.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2012/03/08/ic05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2012/03/08/ic05/" class="post-title-link" itemprop="url">[IC05] Đăng ký tài khoản Mentor</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2012-03-08 09:15:13" itemprop="dateCreated datePublished" datetime="2012-03-08T09:15:13-05:00">2012-03-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 11:24:55" itemprop="dateModified" datetime="2020-08-03T11:24:55-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Imagine-Cup/" itemprop="url" rel="index"><span itemprop="name">Imagine Cup</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2012/03/08/ic05/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2012/01/31/ic04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2012/01/31/ic04/" class="post-title-link" itemprop="url">[IC04] Đăng ký cho Team của bạn [Dành cho Nhóm trưởng]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2012-01-31 08:18:08" itemprop="dateCreated datePublished" datetime="2012-01-31T08:18:08-05:00">2012-01-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 11:24:54" itemprop="dateModified" datetime="2020-08-03T11:24:54-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Imagine-Cup/" itemprop="url" rel="index"><span itemprop="name">Imagine Cup</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Sau khi đăng nhập, vào mục Compete &gt; Chọn phần bạn đã đăng ký thi</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2012/01/31/ic04/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2012/01/14/ic03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2012/01/14/ic03/" class="post-title-link" itemprop="url">[IC03] Tạo tài khoản Imagine Cup 2012</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2012-01-14 08:34:00" itemprop="dateCreated datePublished" datetime="2012-01-14T08:34:00-05:00">2012-01-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 11:24:53" itemprop="dateModified" datetime="2020-08-03T11:24:53-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Imagine-Cup/" itemprop="url" rel="index"><span itemprop="name">Imagine Cup</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2012/01/14/ic03/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/" class="post-title-link" itemprop="url">[C++] Split class and header to separated files with Visual Studio</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2012-01-03 23:25:00" itemprop="dateCreated datePublished" datetime="2012-01-03T23:25:00-05:00">2012-01-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-03 15:56:42" itemprop="dateModified" datetime="2020-08-03T15:56:42-04:00">2020-08-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể tách các thành phần trong code ra thành những file riêng?</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/page/10/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/blog/page/12/">12</a><a class="extend next" rel="next" href="/blog/page/12/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran/" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran&#x2F;" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/cuoilennao" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;cuoilennao" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/pjax/pjax.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+    </div>
+</body>
+</html>

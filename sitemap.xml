@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
+    
+    <lastmod>2020-08-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
+    
+    <lastmod>2020-08-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.github.io/blog/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
     
     <lastmod>2020-08-03</lastmod>
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
-    
-    <lastmod>2020-08-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.github.io/blog/2016/07/11/c-string-performance-tips-and-tricks/</loc>
     
     <lastmod>2020-08-03</lastmod>
@@ -101,13 +108,6 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
-    
-    <lastmod>2020-08-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
     
     <lastmod>2020-08-03</lastmod>
     
@@ -851,7 +851,7 @@
 
   <url>
     <loc>https://huntertran.github.io/blog</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -859,1456 +859,1456 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/class/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Header-computing/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Separate-class/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Source/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Visual-Studio/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/chooser/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/windows-phone/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/account/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/dev-center/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/store/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/content/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/file/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/project/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/resource/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/centered-image/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/stretch/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/uniform/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/uniformtofill/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/isolated-storage/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/power-tools/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/input/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/input-scope/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/scope/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/textbox/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/deploy/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/no-device/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/emulator/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/keyboard-shotcuts/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/richtextbox/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/textblock/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Application-Life-cycle/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Imagine-Cup/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/MSP/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/tags/tip/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <loc>https://huntertran.github.io/blog/tags/richtextbox/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/tags/tips/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/trick/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/tricks/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <loc>https://huntertran.github.io/blog/tags/textblock/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/data/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/loaded/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/onnavigatedto/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/tip/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/tips/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/trick/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/tricks/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/nuget/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/auto/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/column/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/columndefinition/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/grid/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/stackpanel/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/star-size/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/brain/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/game/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/layout/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/listbox/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/template/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/xaml/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/app/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/beginner/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/structure/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/windows-store/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/analytics/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/universal/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/analytics/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/source-control/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Team-foundation/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/problem/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/solve/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/retarget/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/upgrade/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/windows-8-1/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/extension/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/azure/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/virtual-machine/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/ftp/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/proxy/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/dut-cap/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/chrome/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/firefox/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/web-browser/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/add-on/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/noscript/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/ublock/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/chrome/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/firefox/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/web-browser/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/tutorial/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/C/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/hero/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/indent/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/resharper/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/live-visual-tree/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/on-the-fly/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/property/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/performance/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/perftips/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/stopwatch/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/code/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/git/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/github/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/sample/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/sourcetree/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/uwa/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/uwp/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/windows-10/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/assets/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/automatically/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/generate/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/images/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/logo/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/maker/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/advanced/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/bugs/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/exception/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/blog/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/tach/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/online/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/slack/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/TFS/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/iap/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/in-app-purchase/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/monetization/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/hidden/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/search/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/windows/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/core/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/htmlhelper/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/placeholder/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/prompt/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/code-first/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/database-first/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/encode/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/loi/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/unicode/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/route/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/browsersync/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/css/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/html/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/live-reload/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/visual-studio-code/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/custom/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/editorfor/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/extend/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/mo-rong/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/ajax/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/editorformany/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/list/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/apache/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/container/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/docker/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/php/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/ubuntu/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/wordpress/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/identity/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/net-core/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/label/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/tag-helper/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/net-framework/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/label/</loc>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/tag-helper/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/error-message/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Computed-Property/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/LINQ/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Query/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/free/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/open-source/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/software/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/attack/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/cross-site/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/forgery/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/forgery-token/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/request/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/page/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/razor/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/mvc/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/database/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/entity-framework/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/model/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/framework/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/frontend/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/jquery/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/scss/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/architech/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/manager/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/package/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/ASP-NET/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/dependency-injection/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/repository/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/unit-of-work/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/cost-function/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/gradient-descent/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/hypothesis/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/matrice/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/matrix/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/vector/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/normal-equation/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/bus/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/europe/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/train/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/travel/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/DOM-API/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Log/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/DMCA/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/original/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/violation/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/java-for-beginner/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/hello-world/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/cheats-sheet/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/component/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/vue/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/vue-cli/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/vuejs/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/clone/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/refactor/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/compute-engine/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/google-cloud/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/putty/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/devops/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2317,147 +2317,147 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Others/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/C/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Imagine-Cup/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/C/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Event/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/Windows-Phone/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/Windows-Store-App/</loc>
-    <lastmod>2020-08-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/categories/Life/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Computer-Tips/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/categories/Life/</loc>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Azure/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/Windows-10/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/Windows-Phone/Windows-Store-App/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/uncategorized/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/ASP-NET/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Design-Pattern/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Machine-Learning/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/Java/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/c/Windows-10/Windows-Store-App/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/VSCode/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/JavaScript-and-TypeScript/</loc>
-    <lastmod>2020-08-03</lastmod>
+    <lastmod>2020-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
