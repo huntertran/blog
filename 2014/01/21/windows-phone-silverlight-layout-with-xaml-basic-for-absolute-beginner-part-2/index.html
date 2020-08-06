@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner Bài 1 ở đây: [Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1  Như các bạn đã biết, n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Basic for Absolute Beginner] - [Part 2] - Layout with XAML">
+<meta property="og:url" content="https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner Bài 1 ở đây: [Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1  Như các bạn đã biết, n">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7352/11957902726_0aa577d3c4_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2858/11958105964_af2da41349_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3749/11957691795_1e3ce3c8ef_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3665/11958004856_387a1bbb07_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3717/11958010686_b3baba9d9d_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3679/11957481983_4c4a040752_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7414/11957661595_36e5271615_o.png%22">
+<meta property="og:image" content="http://farm6.staticflickr.com/5535/11958266823_83eee63384_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7418/11958284923_ed6b439987_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3769/11958468354_7b160fd49c_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7448/11958537464_42bf1c99d6_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7353/11958604664_35f1789b07_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7389/11958614374_ec6174c194_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7396/11958478293_516b79813d_o.png%22">
+<meta property="og:image" content="http://farm3.staticflickr.com/2886/11958202385_53fea80434_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7350/11958249665_5a3716b5f1_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3771/11958694544_91d3348748_o.png%22">
+<meta property="og:image" content="http://farm3.staticflickr.com/2884/11958705564_54415bb772_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7290/11958720644_183a2247f4_o.png%22">
+<meta property="og:image" content="http://farm6.staticflickr.com/5471/11959227656_5759b227f4_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3671/11958698323_1b848ffb0a_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7447/11959251496_b5da65d4fc_o.png%22">
+<meta property="og:image" content="http://farm3.staticflickr.com/2879/11958878734_06cb55d64e_o.png%22">
+<meta property="og:image" content="http://farm6.staticflickr.com/5472/11961364684_421975edb5_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3740/11961472144_46f86145ef_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3712/11961887436_8c77ca2cce_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3826/11961917396_bb27d31e3c_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7314/11961424713_95b6a4b3de_o.png%22">
+<meta property="og:image" content="http://farm6.staticflickr.com/5535/11961470493_0b1b86675f_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3666/11962019876_076607132c_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7324/11961488143_d9af248312_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7405/11961742983_933fc0557f_o.png%22">
+<meta property="og:image" content="http://farm8.staticflickr.com/7397/11961908164_dfe6879e28_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3678/11961483605_78ff2960f3_o.png%22">
+<meta property="og:image" content="http://farm4.staticflickr.com/3751/11962377686_6b9e9bdb79_o.png%22">
+<meta property="article:published_time" content="2014-01-21T03:55:07.000Z">
+<meta property="article:modified_time" content="2020-08-06T04:20:47.810Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="windows phone">
+<meta property="article:tag" content="layout">
+<meta property="article:tag" content="listbox">
+<meta property="article:tag" content="template">
+<meta property="article:tag" content="xaml">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png%22">
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>[Basic for Absolute Beginner] - [Part 2] - Layout with XAML | Tuan Tran's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Basic for Absolute Beginner] - [Part 2] - Layout with XAML
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2014-01-20 22:55:07" itemprop="dateCreated datePublished" datetime="2014-01-20T22:55:07-05:00">2014-01-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-06 00:20:47" itemprop="dateModified" datetime="2020-08-06T00:20:47-04:00">2020-08-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/" itemprop="url" rel="index"><span itemprop="name">c</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/c/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner</p>
+<p>Bài 1 ở đây: <a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/" title="[Windows Phone – Silverlight] Layout with XAML–Basic for AbsoluteBeginner - Part 1">[Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1</a></p>
+<p><img src="http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png%22"></p>
+<p>Như các bạn đã biết, ngoài Stackpanel và Grid ra, XAML còn có 1 control cơ bản khác, đó là ListBox (và GridView, ListView, nếu bạn đang lập trình cho Windows 8 hay các ứng dụng WPF)</p>
+<p>Trong phạm vi bài viết này, mình sẽ đề cập tới ListBox cùng cách thiết kế nó trên giao diện.</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-listbox-control"><strong>1 LISTBOX CONTROL</strong></a></p>
+<ul>
+<li><p><a href="#11-c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng"><strong>1.1 Các thuộc tính quan trọng</strong></a></p>
+<ul>
+<li><a href="#111-itemssource"><strong>1.1.1 ItemsSource</strong></a></li>
+<li><a href="#112-selectedindex"><strong>1.1.2 SelectedIndex</strong></a></li>
+<li><a href="#113-selecteditem"><strong>1.1.3 SelectedItem</strong></a></li>
+<li><a href="#114-dataconext--ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u"><strong>1.1.4 DataConext – ngữ cảnh dữ liệu</strong></a></li>
+</ul>
+</li>
+<li><p><a href="#12-th%E1%BB%AD-nghi%E1%BB%87m"><strong>1.2 Thử nghiệm</strong></a></p>
+</li>
+</ul>
+</li>
+<li><p><a href="#databinding--ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u"><strong>DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu</strong></a></p>
+<ul>
+<li><a href="#21-chu%E1%BA%A9n-b%E1%BB%8B"><strong>2.1 Chuẩn bị</strong></a></li>
+<li><a href="#22-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u"><strong>2.2 Kiểu dữ liệu</strong></a></li>
+<li><a href="#23-ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u"><strong>2.3 Nguồn dữ liệu</strong></a></li>
+<li><a href="#24-n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u"><strong>2.4 Nạp dữ liệu</strong></a></li>
+<li><a href="#25-binding"><strong>2.5 Binding</strong></a></li>
+<li><a href="#26-datatemplate"><strong>2.6 DataTemplate</strong></a></li>
+</ul>
+</li>
+<li><p><a href="#event-handling"><strong>Event Handling</strong></a></p>
+</li>
+</ul>
+<h1 id="1-LISTBOX-CONTROL"><a href="#1-LISTBOX-CONTROL" class="headerlink" title="1 LISTBOX CONTROL"></a><strong>1 LISTBOX CONTROL</strong></h1><p>ListBox control dùng để hiện thị một danh sách các item.</p>
+<p>Danh sách này sẽ có một giao diện nhất định, một kiểu dữ liệu nhất định tùy bạn chọn</p>
+<p>Ví dụ: “Top 30 video được xem nhiều nhất trên youtube” là một dạng dữ liệu mà ta sẽ dùng ListBox để hiển thị</p>
+<h2 id="1-1-Cac-thuoc-tinh-quan-trong"><a href="#1-1-Cac-thuoc-tinh-quan-trong" class="headerlink" title="1.1 Các thuộc tính quan trọng"></a><strong>1.1 Các thuộc tính quan trọng</strong></h2><p><img src="http://farm8.staticflickr.com/7352/11957902726_0aa577d3c4_o.png"></p>
+<h3 id="1-1-1-ItemsSource"><a href="#1-1-1-ItemsSource" class="headerlink" title="1.1.1 ItemsSource"></a><strong>1.1.1 ItemsSource</strong></h3><p>ItemsSource là nguồn dữ liệu. Listbox này sẽ hiển thị dữ liệu từ đâu?</p>
+<p>ItemsSource có thể là một List hoặc một ObservableCollection, ta sẽ nói đến nó ở phần sau</p>
+<h3 id="1-1-2-SelectedIndex"><a href="#1-1-2-SelectedIndex" class="headerlink" title="1.1.2 SelectedIndex"></a><strong>1.1.2 SelectedIndex</strong></h3><p>Cái tên đã nói lên tất cả. Đây là item đang được chọn trong listbox của bạn. Trong quá trình khởi tạo, giá trị này sẽ là -1</p>
+<p>Lưu ý rằng item bắt đầu từ số 0 trở đi. Giả sử bạn có 5 items, thì nó sẽ được đánh số từ 0 tới 4</p>
+<h3 id="1-1-3-SelectedItem"><a href="#1-1-3-SelectedItem" class="headerlink" title="1.1.3 SelectedItem"></a><strong>1.1.3 SelectedItem</strong></h3><p>Đây lại là một thuộc tính khác. Giá trị của thuộc tínhnày bằng null khi khởi tạo. Và khi người dùng chọn một item nào đó trong listbox, item đó sẽ được phản xạ sang thuộc tính này.</p>
+<p>Thuộc tính này có kiểu dữ liệu là Object, khi dùng bạn phải ép kiểu sang kiểu dữ liệu của danh sách</p>
+<h3 id="1-1-4-DataConext-–-ngu-canh-du-lieu"><a href="#1-1-4-DataConext-–-ngu-canh-du-lieu" class="headerlink" title="1.1.4 DataConext – ngữ cảnh dữ liệu"></a><strong>1.1.4 DataConext – ngữ cảnh dữ liệu</strong></h3><p>DataContext sẽ được dùng trong một số trường hợp advance binding, hiện tại thì bạn chưa cần phải quan tâm tới nó</p>
+<h2 id="1-2-Thu-nghiem"><a href="#1-2-Thu-nghiem" class="headerlink" title="1.2 Thử nghiệm"></a><strong>1.2 Thử nghiệm</strong></h2><p>Tạo một project Windows Phone</p>
+<p>Trong LayoutRootGrid, tạo một Listbox</p>
+<p><img src="http://farm3.staticflickr.com/2858/11958105964_af2da41349_o.png"></p>
+<p>Chọn thẻ Property khi đang select listbox này</p>
+<p><img src="http://farm4.staticflickr.com/3749/11957691795_1e3ce3c8ef_o.png"></p>
+<p>Trong mục Items, bạn thêm mới một số item cho listbox</p>
+<p><img src="http://farm4.staticflickr.com/3665/11958004856_387a1bbb07_o.png%22"></p>
+<p>Sau đó, chọn Listbox Item, rồi nhấn nút Add</p>
+<p><img src="http://farm4.staticflickr.com/3717/11958010686_b3baba9d9d_o.png%22"></p>
+<p>Như bạn có thể thấy, một item với index = xuất hiện cùng thuộc tính của nó</p>
+<p><img src="http://farm4.staticflickr.com/3679/11957481983_4c4a040752_o.png%22"></p>
+<p>Rồi thêm vào content như hình sau:</p>
+<p><img src="http://farm8.staticflickr.com/7414/11957661595_36e5271615_o.png%22"></p>
+<p>Nhấn nút chạy thử, và bạn sẽ thấy cách hoạt động của listbox</p>
+<p><a target="_blank" rel="noopener" href="http://youtu.be/8cu_REIkxPQ">http://youtu.be/8cu_REIkxPQ</a></p>
+<p>Bây giờ bạn đã nắm cách thức Listbox hoạt động cơ bản nhất. Ta hãy cùng “Đào sâu” vào thế giới XAML nhé</p>
+<h1 id="DataBinding-–-Phuong-phap-tuyet-voi-de-hien-thi-du-lieu"><a href="#DataBinding-–-Phuong-phap-tuyet-voi-de-hien-thi-du-lieu" class="headerlink" title="DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu"></a><strong>DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu</strong></h1><p>Listbox được dùng nhiều nhất với kỹ thuật DataBinding này (tạm dịch là gắn kết dữ liệu đi)</p>
+<p>Kỹ thuật này cho phép bạn hiển thị dữ liệu từ một nguồn nào đó lên trên listbox. Nguồn đó có thể là một List, hoặc một Observable Collection</p>
+<p>Nhiều người khi nghĩ tới DataBinding, họ sẽ nghĩ ngay tới mô hình MVVM.</p>
+<p>Khoan đã, trong vai một người mới học, hẳn bạn cũng sẽ không biết MVVM là cái gì, mặt mũi nó ra sao.</p>
+<p>Vì vậy, hãy tìm hiểu một số khái niệm và cách thức cơ bản trước đã</p>
+<h2 id="2-1-Chuan-bi"><a href="#2-1-Chuan-bi" class="headerlink" title="2.1 Chuẩn bị"></a><strong>2.1 Chuẩn bị</strong></h2><p>Để thực hiện theo bài viết này, bạn cần có các công cụ sau:</p>
+<p>Visual Studio, chắc cái này bạn có rồi</p>
+<p>ReSharper: hỗ trợ cho bạn tự động hóa các công việc nhàm chán nhưng cần thiết. Lưu ý đây là phần mềm thương mại</p>
+<p>Sau khi cài ReSharper, hãy tiếp tục bài viết nhé</p>
+<h2 id="2-2-Kieu-du-lieu"><a href="#2-2-Kieu-du-lieu" class="headerlink" title="2.2 Kiểu dữ liệu"></a><strong>2.2 Kiểu dữ liệu</strong></h2><p>Để gắn dữ liệu lên ListBox, ta cần phải có một “Nguồn dữ liệu”, và nguồn dữ liệu đó phải được tạo ra bởi một kiểu dữ liệu nào đó, vì nó là một danh sách các item</p>
+<p>Ví dụ: một danh sách các chuỗi, một danh sách các số nguyên</p>
+<p>Tuy nhiên, bạn cũng có thể tạo ra kiểu dữ liệu riêng của mình, như kiểu “Danh sách các món ăn”</p>
+<p>Vậy tạo ra kiểu dữ liệu như thế nào?</p>
+<p>Tạo một Folder mới, đặt tên là Model</p>
+<p><img src="http://farm6.staticflickr.com/5535/11958266823_83eee63384_o.png%22"></p>
+<p>Hãy tạo một file class mới trong folder đó với tên gọi DataStructure</p>
+<p><img src="http://farm8.staticflickr.com/7418/11958284923_ed6b439987_o.png%22"></p>
+<p>Một class DataStructure mới được tạo ra. Bạn có thể xóa nó đi, và bắt đầu định nghĩa cho class riêng của mình</p>
+<p><img src="http://farm4.staticflickr.com/3769/11958468354_7b160fd49c_o.png%22"></p>
+<p>Theo như hình trên, bạn có 3 thuộc tính private. Khoan đã, private không thể truy cập ngoài class, nên ta cần tạo các public property cho chúng</p>
+<p>Trước khi tạo các public property, ta nên làm một chuyện khác, đó là khai báo Interface INotifyPropertyChanged</p>
+<p>Interface này giúp cho việc binding dữ liệu lên giao diện được “liên tục”. Tức là khi có một sự thay đổi về mặt dữ liệu trong nguồn dữ liệu, sự thay đổi đó sẽ lập tức được hiển thị trên giao diện.</p>
+<p>Giả sử như bạn có 5 FoodItem, với 5 tên khác nhau. Bạn muốn thay đổi tên của item thứ 2, bạn chỉ cần truy xuất tới item 2 và thay đổi giá trị của thuộc tính foodName, trên giao diện sẽ tự động thay đổi theo mà không cần thêm một dòng code nào cả</p>
+<p>Okie, khai báo thuộc tính nào</p>
+<p><img src="http://farm8.staticflickr.com/7448/11958537464_42bf1c99d6_o.png%22"></p>
+<p>Bạn phải bắt buộc khai báo thêm 1 event và một Method trong class của mình sau khi khai báo Interface</p>
+<p>[code lang=csharp] protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) { PropertyChangedEventHandler handler = PropertyChanged;</p>
+<p>if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName)); } [/code]</p>
+<p>Nếu bạn có ReShaper, thì mọi việc đơn giản hơn nhiều</p>
+<p><img src="http://farm8.staticflickr.com/7353/11958604664_35f1789b07_o.png%22"></p>
+<p>Tiếp tục chọn Yes nhé</p>
+<p><img src="http://farm8.staticflickr.com/7389/11958614374_ec6174c194_o.png%22"></p>
+<p>Và bạn sẽ thấy kết quả</p>
+<p><img src="http://farm8.staticflickr.com/7396/11958478293_516b79813d_o.png%22"></p>
+<p>Lưu ý là ReSharper sẽ thêm một file vào Property của Project bạn đang viết</p>
+<p><img src="http://farm3.staticflickr.com/2886/11958202385_53fea80434_o.png%22"></p>
+<p>File Dropbox cho bạn nào không có ReSharper: <a target="_blank" rel="noopener" href="https://db.tt/ycsvjt1S">https://db.tt/ycsvjt1S</a></p>
+<p>Rồi, bây giờ ta sẽ tạo các Public Property</p>
+<p>Một lần nữa, ReSharper sẽ giúp ích chúng ta.</p>
+<p>Đặt con trỏ vào dưới các thuộc tính Private, chọn ReShaper &gt; Edit &gt; Generate Code…</p>
+<p><img src="http://farm8.staticflickr.com/7350/11958249665_5a3716b5f1_o.png%22"></p>
+<p>Chọn Property cho hộp thoại hiện ra</p>
+<p><img src="http://farm4.staticflickr.com/3771/11958694544_91d3348748_o.png%22"></p>
+<p>Check cả 3 thuộc tính, check luôn tùy chọn “Notify on Property Changes”</p>
+<p><img src="http://farm3.staticflickr.com/2884/11958705564_54415bb772_o.png%22"></p>
+<p>Thế là bạn có 3 thuộc tính đúng chuẩn như sau</p>
+<p><img src="http://farm8.staticflickr.com/7290/11958720644_183a2247f4_o.png%22"></p>
+<h2 id="2-3-Nguon-du-lieu"><a href="#2-3-Nguon-du-lieu" class="headerlink" title="2.3 Nguồn dữ liệu"></a><strong>2.3 Nguồn dữ liệu</strong></h2><p>Bạn đã có 1 kiểu dữ liệu, bây giờ bạn sẽ cần 1 nguồn dữ liệu</p>
+<p>Tạo một Folder mới tên Data</p>
+<p><img src="http://farm6.staticflickr.com/5471/11959227656_5759b227f4_o.png%22"></p>
+<p>Tạo một class mới tên StaticData trong Folder đó</p>
+<p><img src="http://farm4.staticflickr.com/3671/11958698323_1b848ffb0a_o.png%22"></p>
+<p>Khai báo một biến static ObservableCollection</p>
+<p><img src="http://farm8.staticflickr.com/7447/11959251496_b5da65d4fc_o.png%22"></p>
+<p>Khi có ReSharper, nó sẽ tự động thêm các Namespace cần thiết cho bạn. Ở đây, class FoodItem thuộc namespace TestAd.Model</p>
+<p>Kết quả là bạn có như sau:</p>
+<p><img src="http://farm3.staticflickr.com/2879/11958878734_06cb55d64e_o.png%22"></p>
+<h2 id="2-4-Nap-du-lieu"><a href="#2-4-Nap-du-lieu" class="headerlink" title="2.4 Nạp dữ liệu"></a><strong>2.4 Nạp dữ liệu</strong></h2><p>Bây giờ, ta sẽ nạp dữ liệu vào ObservableCollection này</p>
+<p>Mở file code behind của page có chứa listbox mà bạn đã tạo trong phần 1</p>
+<p>Khai báo như sau, bạn sẽ thấy kiểu khai báo này quen thuộc trong bài: <a target="_blank" rel="noopener" href="http://cuoilennaocacban.blogspot.com/2013/11/windows-phone-where-to-put-load-data.html">[Windows Phone] Where to put LoadData method</a></p>
+<p><img src="http://farm6.staticflickr.com/5472/11961364684_421975edb5_o.png%22"></p>
+<p>Bước 1: kiểm tra dữ liệu đã tồn tại</p>
+<p>Đặc trưng cơ bản của cách khai báo LoadData như thế này là khi ta navigate tới trang này, hoặc có sự thay đổi về elements trên giao diện, event OnLoaded sẽ được gọi lại.</p>
+<p>Vì vậy, ta chỉnh sửa event OnLoaded để ngăn ngừa việc load lại dữ liệu như sau:</p>
+<p>[code lang=csharp] private void OnLoaded(object sender, RoutedEventArgs routedEventArgs) { if (StaticData.FoodItemCollection.Count == 0) { LoadData(); } } [/code]</p>
+<p>Thêm một số code như sau vào hàm LoadData</p>
+<p>[code lang=csharp] private void LoadData() { for (int i =0;i &lt;5;i++) { FoodItem foodItem =new FoodItem();</p>
+<p>foodItem.Id = i;</p>
+<p>foodItem.FoodName =”Food Name is “ +i;</p>
+<p>foodItem.ImageLink =”FoodItem_“+i +”_imageLink”;</p>
+<p>StaticData.FoodItemCollection.Add(foodItem); } } [/code]</p>
+<p>Mục tiêu của đoạn code trên là add 5 item giả vào FoodItemCollection.</p>
+<h2 id="2-5-Binding"><a href="#2-5-Binding" class="headerlink" title="2.5 Binding"></a><strong>2.5 Binding</strong></h2><p>Vậy ta đã có dữ liệu, có nguồn dữ liệu, có luôn listbox, bây giờ ta sẽ tiến hành binding dữ liệu này vào listbox</p>
+<p>Việc này được thực hiện bởi 1 dòng code duy nhất.</p>
+<p>Đặt tên cho listbox của bạn:</p>
+<p><img src="http://farm4.staticflickr.com/3740/11961472144_46f86145ef_o.png%22"></p>
+<p>Sửa event OnLoaded lại như sau:</p>
+<p>[code lang=csharp] private void OnLoaded(object sender, RoutedEventArgs routedEventArgs) { if (StaticData.FoodItemCollection.Count == 0) { LoadData(); FoodListBox.ItemsSource = StaticData.FoodItemCollection; } } [/code]</p>
+<p>Sau đó, bấm chạy thử trên Emulator hay trên Device tùy thích</p>
+<p><img src="http://farm4.staticflickr.com/3712/11961887436_8c77ca2cce_o.png%22"></p>
+<p>Và đây chính là thành quả của các bạn</p>
+<p><img src="http://farm4.staticflickr.com/3826/11961917396_bb27d31e3c_o.png%22"></p>
+<h2 id="2-6-DataTemplate"><a href="#2-6-DataTemplate" class="headerlink" title="2.6 DataTemplate"></a><strong>2.6 DataTemplate</strong></h2><p>Vậy là dữ liệu đã được hiển thị trên giao diện, nhưng không theo cách bạn mong muốn</p>
+<p>Chính vì thế, ta sẽ tạo một DataTemplate cho Listbox, mục đích là để “định nghĩa” cách hiển thị dữ liệu</p>
+<p>Vào code XAML của bạn, bấm chọn Document Outline</p>
+<p><img src="http://farm8.staticflickr.com/7314/11961424713_95b6a4b3de_o.png%22"></p>
+<p>Document Outline là nơi thể hiện toàn bộ mọi thứ có trên giao diện của bạn dưới dạng cây</p>
+<p>Bấm chuột phải vào ListBox của bạn và chọn</p>
+<p><img src="http://farm6.staticflickr.com/5535/11961470493_0b1b86675f_o.png%22"></p>
+<p><img src="http://farm4.staticflickr.com/3666/11962019876_076607132c_o.png%22"></p>
+<p>Đặt tên cho DataTemplate của bạn rồi nhấn OK</p>
+<p><img src="http://farm8.staticflickr.com/7324/11961488143_d9af248312_o.png%22"></p>
+<p>Nếu bạn chọn Define in Application, DataTemplate này có thể được dùng ở mọi page trong project của bạn mà không cần phải khai báo lại</p>
+<p>Trong lúc thiết kế, bạn có thể thấy thiết kế của mình được hiển thị trực quan</p>
+<p><img src="http://farm8.staticflickr.com/7405/11961742983_933fc0557f_o.png%22"></p>
+<p>Nhấn chạy một lần nữa, và mọi thứ sẽ đúng như ý bạn</p>
+<p><img src="http://farm8.staticflickr.com/7397/11961908164_dfe6879e28_o.png%22"></p>
+<h1 id="Event-Handling"><a href="#Event-Handling" class="headerlink" title="Event Handling"></a><strong>Event Handling</strong></h1><p>Vậy là bạn đã có 1 listbox, bây giờ ta sẽ áp dụng một số sự kiện cho nó để thông báo cho người dùng biết họ đã chọn Listbox nào</p>
+<p>Trong Property của FoodListBox, chọn nút Event</p>
+<p><img src="http://farm4.staticflickr.com/3678/11961483605_78ff2960f3_o.png%22"></p>
+<p>Double Click vào event “Selection Changed” để khai báo event</p>
+<p>Thêm đoạn code sau vào event mới được tạo</p>
+<p>[code lang=csharp] if (FoodListBox.SelectedIndex != –1) { FoodItem foodItem = FoodListBox.SelectedItem as FoodItem; MessageBox.Show(foodItem.FoodName); } [/code]</p>
+<p>Chạy thử và chọn một item bất kỳ</p>
+<p><img src="http://farm4.staticflickr.com/3751/11962377686_6b9e9bdb79_o.png%22"></p>
+<p>Thật tuyệt vời phải không</p>
+<p>Vậy là hết rồi, hẹn gặp lại các bạn ở episode tiếp theo của Series Absolute Beginner nhé</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/blog/images/paypal.png" alt="Tuan Tran PayPal">
+        <p>PayPal</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/cuoilennao">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/windows-phone/" rel="tag"># windows phone</a>
+              <a href="/blog/tags/layout/" rel="tag"># layout</a>
+              <a href="/blog/tags/listbox/" rel="tag"># listbox</a>
+              <a href="/blog/tags/template/" rel="tag"># template</a>
+              <a href="/blog/tags/xaml/" rel="tag"># xaml</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/" rel="prev" title="[Imagine Cup 2014 – Brain game] January Quiz #1 Now Open">
+      <i class="fa fa-chevron-left"></i> [Imagine Cup 2014 – Brain game] January Quiz #1 Now Open
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/" rel="next" title="[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it">
+      [Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-LISTBOX-CONTROL"><span class="nav-text">1 LISTBOX CONTROL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Cac-thuoc-tinh-quan-trong"><span class="nav-text">1.1 Các thuộc tính quan trọng</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-ItemsSource"><span class="nav-text">1.1.1 ItemsSource</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-SelectedIndex"><span class="nav-text">1.1.2 SelectedIndex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-SelectedItem"><span class="nav-text">1.1.3 SelectedItem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-DataConext-%E2%80%93-ngu-canh-du-lieu"><span class="nav-text">1.1.4 DataConext – ngữ cảnh dữ liệu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Thu-nghiem"><span class="nav-text">1.2 Thử nghiệm</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DataBinding-%E2%80%93-Phuong-phap-tuyet-voi-de-hien-thi-du-lieu"><span class="nav-text">DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Chuan-bi"><span class="nav-text">2.1 Chuẩn bị</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Kieu-du-lieu"><span class="nav-text">2.2 Kiểu dữ liệu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Nguon-du-lieu"><span class="nav-text">2.3 Nguồn dữ liệu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Nap-du-lieu"><span class="nav-text">2.4 Nạp dữ liệu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-Binding"><span class="nav-text">2.5 Binding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-DataTemplate"><span class="nav-text">2.6 DataTemplate</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Event-Handling"><span class="nav-text">Event Handling</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran/" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran&#x2F;" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/cuoilennao" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;cuoilennao" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2012 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/pjax/pjax.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+    </div>
+</body>
+</html>

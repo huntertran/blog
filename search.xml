@@ -369,7 +369,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone – Silverlight] Uniform to fill, centered</title>
-    <url>/blog/2013/09/11/windows-phone-silverlight-uniform-to-fill-centered/</url>
+    <url>/blog/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</url>
     <content><![CDATA[<p>Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control.</p>
 <p>Image Control có một số thuộc tính về hiển thị như Stretch, Fill, Uniform, UniformToFill. Uniform To Fill sẽ mở rộng tấm hình ra cho vừa kích thước của control, và thực tế là nó cắt mất một góc trái trên của tấm hình, cho ta có cảm giác như tấm hình được canh giữa</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png" alt="perfect"></p>
@@ -401,7 +401,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage</title>
-    <url>/blog/2013/09/13/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</url>
+    <url>/blog/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</url>
     <content><![CDATA[<p>Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụng khác (trừ phi bạn có quyền root, chỉ dành cho Lumia 710 cooked room)</p>
 <p>Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này trực quan, sinh động và dễ dàng?</p>
 <a id="more"></a>
@@ -723,6 +723,53 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[Windows Phone] - TextBlock Tips and Tricks – Part 2 – TextBox too</title>
+    <url>/blog/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</url>
+    <content><![CDATA[<p>Ở phần trước, bạn đã có một số tips and tricks khá thú vị phải ko?</p>
+<blockquote>
+<p>Link phần trước: <a href="https://wp.me/p1V2Tb-43">[Windows Phone] - Textblock Tips and Tricks - Part 1</a></p>
+</blockquote>
+<p><img src="https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png"></p>
+<p>Trong phần này, bạn sẽ còn có nhiều điều thú vị hơn nữa</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#1-text-qu%C3%A1-d%C3%A0i-v%C3%A0-v%E1%BA%A5n-%C4%91%E1%BB%81-b%E1%BB%8B-m%E1%BA%A5t-ch%E1%BB%AF">1. Text quá dài và vấn đề bị mất chữ</a></p>
+<ul>
+<li><a href="#11-nguy%C3%AAn-nh%C3%A2n">1.1. Nguyên nhân</a></li>
+<li><a href="#12-kh%E1%BA%AFc-ph%E1%BB%A5c">1.2. Khắc phục</a></li>
+</ul>
+</li>
+<li><p><a href="#2-selectable-textblock">2. Selectable TextBlock</a></p>
+</li>
+</ul>
+<h1 id="1-Text-qua-dai-va-van-de-bi-mat-chu"><a href="#1-Text-qua-dai-va-van-de-bi-mat-chu" class="headerlink" title="1. Text quá dài và vấn đề bị mất chữ"></a>1. Text quá dài và vấn đề bị mất chữ</h1><p><img src="https://farm3.staticflickr.com/2834/10238287965_30e435db37_o.png"></p>
+<p>Chữ bị mất một cách vô cùng kỳ quái phải không?</p>
+<h2 id="1-1-Nguyen-nhan"><a href="#1-1-Nguyen-nhan" class="headerlink" title="1.1. Nguyên nhân"></a>1.1. Nguyên nhân</h2><p>Tất cả các control trong Windows Phone đều có 1 giới hạn kích thước mặc định: 2000 pixel</p>
+<p>2000 pixel lớn tới mức nào? màn hình laptop tiêu chuẩn là 1366 x 768. So sánh với 2000 x 2000. Vậy là hơn gấp đôi</p>
+<p>nhưng đối với một số máy Windows Phone có độ phân giải Full HD (1900 x 1080), thì chỉ cần nhân đôi chiều rộng của máy ra là ta sẽ có 1 kích thước tối đa sao? Không phải vậy. Kích thước 2k chỉ áp dụng cho app Windows Phone 7</p>
+<h2 id="1-2-Khac-phuc"><a href="#1-2-Khac-phuc" class="headerlink" title="1.2. Khắc phục"></a>1.2. Khắc phục</h2><p>Cách khắc phục rất đơn giản. Chia text của bạn ra nhiều phần, và gắn chúng vào các textblock khác nhau. Bao các textblock này trong ScrollViewer. Xong!</p>
+<h1 id="2-Selectable-TextBlock"><a href="#2-Selectable-TextBlock" class="headerlink" title="2. Selectable TextBlock"></a>2. Selectable TextBlock</h1><p>Textblock, dĩ nhiên là không select được rồi.</p>
+<p>Vậy ta sẽ chỉnh một chút cho TextBox giống với TextBlock, để lợi dụng tính “Selectable” của nó</p>
+<p>add code sau vào resource</p>
+<p>[code lang=xml] <Style x:Key="TextBoxStyle1" TargetType="TextBox"> <Setter Property="Background" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}" /> <Setter Property="BorderBrush" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="SelectionBackground" Value="{StaticResource PhoneAccentBrush}" /> <Setter Property="SelectionForeground" Value="{StaticResource PhoneTextBoxSelectionForegroundBrush}" /> <Setter Property="Template"> &lt;Setter.Value&gt; <ControlTemplate TargetType="TextBox"> <Grid Background="Transparent"> &lt;VisualStateManager.VisualStateGroups&gt; <VisualStateGroup x:Name="CommonStates"> <VisualState x:Name="ReadOnly"> <Storyboard> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EnabledBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Collapsed</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Visible</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Background"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="BorderBrush"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyContent" Storyboard.TargetProperty="Foreground"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneForegroundBrush}" /> </ObjectAnimationUsingKeyFrames> </Storyboard> </VisualState> </VisualStateGroup> &lt;/VisualStateManager.VisualStateGroups&gt; <Border x:Name="EnabledBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"> <ContentControl x:Name="ContentElement" Margin="{StaticResource PhoneTextBoxInnerMargin}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" BorderThickness="0" Padding="{TemplateBinding Padding}" /> </Border> <Border x:Name="DisabledOrReadonlyBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="Transparent" BorderBrush="{StaticResource PhoneDisabledBrush}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed"> <TextBox x:Name="DisabledOrReadonlyContent" Background="Transparent" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" Foreground="{StaticResource PhoneDisabledBrush}" IsReadOnly="True" SelectionBackground="{TemplateBinding SelectionBackground}" SelectionForeground="{TemplateBinding SelectionForeground}" Template="{StaticResource PhoneDisabledTextBoxTemplate}" Text="{TemplateBinding Text}" TextAlignment="{TemplateBinding TextAlignment}" TextWrapping="{TemplateBinding TextWrapping}" /> </Border> </Grid> </ControlTemplate> &lt;/Setter.Value&gt; </Setter> </Style> [/code]</p>
+<p>Khi dùng, chỉ cần</p>
+<p>[code lang=xml] <TextBox x:Name="testTextBox" IsReadOnly="True" Style="{StaticResource TextBoxStyle1}" Text="Hello world, afdafkj aflaskfjalk lakfaljfklak lfjlaksfjlask jfldsj lskadjfl dslfj lasjf lkasjfl" TextWrapping="Wrap" /> [/code]</p>
+<p>Thế là xong</p>
+]]></content>
+      <categories>
+        <category>c</category>
+        <category>Windows Phone</category>
+      </categories>
+      <tags>
+        <tag>textbox</tag>
+        <tag>textblock</tag>
+        <tag>tip</tag>
+        <tag>tips</tag>
+        <tag>trick</tag>
+        <tag>tricks</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Windows Phone] Where to put load data method?</title>
     <url>/blog/2013/11/02/windows-phone-where-to-put-load-data-method/</url>
     <content><![CDATA[<p>Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và hiển thị chúng lên giao diện.</p>
@@ -785,53 +832,6 @@ using std::endl;</code></pre>
         <tag>data</tag>
         <tag>loaded</tag>
         <tag>onnavigatedto</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Windows Phone] - TextBlock Tips and Tricks – Part 2 – TextBox too</title>
-    <url>/blog/2013/10/12/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</url>
-    <content><![CDATA[<p>Ở phần trước, bạn đã có một số tips and tricks khá thú vị phải ko?</p>
-<blockquote>
-<p>Link phần trước: <a href="https://wp.me/p1V2Tb-43">[Windows Phone] - Textblock Tips and Tricks - Part 1</a></p>
-</blockquote>
-<p><img src="https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png"></p>
-<p>Trong phần này, bạn sẽ còn có nhiều điều thú vị hơn nữa</p>
-<a id="more"></a>
-<ul>
-<li><p><a href="#1-text-qu%C3%A1-d%C3%A0i-v%C3%A0-v%E1%BA%A5n-%C4%91%E1%BB%81-b%E1%BB%8B-m%E1%BA%A5t-ch%E1%BB%AF">1. Text quá dài và vấn đề bị mất chữ</a></p>
-<ul>
-<li><a href="#11-nguy%C3%AAn-nh%C3%A2n">1.1. Nguyên nhân</a></li>
-<li><a href="#12-kh%E1%BA%AFc-ph%E1%BB%A5c">1.2. Khắc phục</a></li>
-</ul>
-</li>
-<li><p><a href="#2-selectable-textblock">2. Selectable TextBlock</a></p>
-</li>
-</ul>
-<h1 id="1-Text-qua-dai-va-van-de-bi-mat-chu"><a href="#1-Text-qua-dai-va-van-de-bi-mat-chu" class="headerlink" title="1. Text quá dài và vấn đề bị mất chữ"></a>1. Text quá dài và vấn đề bị mất chữ</h1><p><img src="https://farm3.staticflickr.com/2834/10238287965_30e435db37_o.png"></p>
-<p>Chữ bị mất một cách vô cùng kỳ quái phải không?</p>
-<h2 id="1-1-Nguyen-nhan"><a href="#1-1-Nguyen-nhan" class="headerlink" title="1.1. Nguyên nhân"></a>1.1. Nguyên nhân</h2><p>Tất cả các control trong Windows Phone đều có 1 giới hạn kích thước mặc định: 2000 pixel</p>
-<p>2000 pixel lớn tới mức nào? màn hình laptop tiêu chuẩn là 1366 x 768. So sánh với 2000 x 2000. Vậy là hơn gấp đôi</p>
-<p>nhưng đối với một số máy Windows Phone có độ phân giải Full HD (1900 x 1080), thì chỉ cần nhân đôi chiều rộng của máy ra là ta sẽ có 1 kích thước tối đa sao? Không phải vậy. Kích thước 2k chỉ áp dụng cho app Windows Phone 7</p>
-<h2 id="1-2-Khac-phuc"><a href="#1-2-Khac-phuc" class="headerlink" title="1.2. Khắc phục"></a>1.2. Khắc phục</h2><p>Cách khắc phục rất đơn giản. Chia text của bạn ra nhiều phần, và gắn chúng vào các textblock khác nhau. Bao các textblock này trong ScrollViewer. Xong!</p>
-<h1 id="2-Selectable-TextBlock"><a href="#2-Selectable-TextBlock" class="headerlink" title="2. Selectable TextBlock"></a>2. Selectable TextBlock</h1><p>Textblock, dĩ nhiên là không select được rồi.</p>
-<p>Vậy ta sẽ chỉnh một chút cho TextBox giống với TextBlock, để lợi dụng tính “Selectable” của nó</p>
-<p>add code sau vào resource</p>
-<p>[code lang=xml] <Style x:Key="TextBoxStyle1" TargetType="TextBox"> <Setter Property="Background" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}" /> <Setter Property="BorderBrush" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="SelectionBackground" Value="{StaticResource PhoneAccentBrush}" /> <Setter Property="SelectionForeground" Value="{StaticResource PhoneTextBoxSelectionForegroundBrush}" /> <Setter Property="Template"> &lt;Setter.Value&gt; <ControlTemplate TargetType="TextBox"> <Grid Background="Transparent"> &lt;VisualStateManager.VisualStateGroups&gt; <VisualStateGroup x:Name="CommonStates"> <VisualState x:Name="ReadOnly"> <Storyboard> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EnabledBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Collapsed</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Visible</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Background"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="BorderBrush"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyContent" Storyboard.TargetProperty="Foreground"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneForegroundBrush}" /> </ObjectAnimationUsingKeyFrames> </Storyboard> </VisualState> </VisualStateGroup> &lt;/VisualStateManager.VisualStateGroups&gt; <Border x:Name="EnabledBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"> <ContentControl x:Name="ContentElement" Margin="{StaticResource PhoneTextBoxInnerMargin}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" BorderThickness="0" Padding="{TemplateBinding Padding}" /> </Border> <Border x:Name="DisabledOrReadonlyBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="Transparent" BorderBrush="{StaticResource PhoneDisabledBrush}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed"> <TextBox x:Name="DisabledOrReadonlyContent" Background="Transparent" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" Foreground="{StaticResource PhoneDisabledBrush}" IsReadOnly="True" SelectionBackground="{TemplateBinding SelectionBackground}" SelectionForeground="{TemplateBinding SelectionForeground}" Template="{StaticResource PhoneDisabledTextBoxTemplate}" Text="{TemplateBinding Text}" TextAlignment="{TemplateBinding TextAlignment}" TextWrapping="{TemplateBinding TextWrapping}" /> </Border> </Grid> </ControlTemplate> &lt;/Setter.Value&gt; </Setter> </Style> [/code]</p>
-<p>Khi dùng, chỉ cần</p>
-<p>[code lang=xml] <TextBox x:Name="testTextBox" IsReadOnly="True" Style="{StaticResource TextBoxStyle1}" Text="Hello world, afdafkj aflaskfjalk lakfaljfklak lfjlaksfjlask jfldsj lskadjfl dslfj lasjf lkasjfl" TextWrapping="Wrap" /> [/code]</p>
-<p>Thế là xong</p>
-]]></content>
-      <categories>
-        <category>c</category>
-        <category>Windows Phone</category>
-      </categories>
-      <tags>
-        <tag>textbox</tag>
-        <tag>textblock</tag>
-        <tag>tip</tag>
-        <tag>tips</tag>
-        <tag>trick</tag>
-        <tag>tricks</tag>
       </tags>
   </entry>
   <entry>
@@ -1115,7 +1115,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Imagine Cup 2014 – Brain game] January Quiz #1 Now Open</title>
-    <url>/blog/2014/01/20/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</url>
+    <url>/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</url>
     <content><![CDATA[<p>Lần thứ 3 trong kỳ thi Imagine Cup 2014, cuộc thi Brain Game lại mở ra đón nhận thí sinh với kỹ năng search Google tuyệt hảo để trả lời các câu hỏi hóc búa.</p>
 <p>Nếu bạn đang thắc mắc Brain Game là gì, thì đúng như tên gọi của nó, Brain Game là một trò chơi nhỏ để thi tài giữa các thí sinh</p>
 <p>Bạn sẽ có 10 câu hỏi trắc nghiệm, mỗi câu hỏi có 3 phương án lựa chọn.</p>
@@ -1183,7 +1183,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] - [Part 2] - Layout with XAML</title>
-    <url>/blog/2014/01/20/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</url>
+    <url>/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</url>
     <content><![CDATA[<p>Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner</p>
 <p>Bài 1 ở đây: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/" title="[Windows Phone – Silverlight] Layout with XAML–Basic for AbsoluteBeginner - Part 1">[Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1</a></p>
 <p><img src="http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png%22"></p>
@@ -1583,6 +1583,101 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</title>
+    <url>/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
+    <content><![CDATA[<p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
+<p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
+<p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
+<p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="#tr%C3%AAn-project">Trên Project</a></p>
+<ul>
+<li><a href="#c%C3%A0i-sdk">Cài SDK</a></li>
+<li><a href="#khai-b%C3%A1o-th%C3%B4ng-tin">Khai báo thông tin</a></li>
+</ul>
+</li>
+<li><p><a href="#tr%C3%AAn-google-analytics">Trên Google Analytics</a></p>
+</li>
+<li><p><a href="#thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">Thiết lập theo dõi</a></p>
+<ul>
+<li><a href="#coding">Coding</a></li>
+</ul>
+</li>
+<li><p><a href="#xem-analytics">Xem Analytics</a></p>
+</li>
+</ul>
+<h1 id="Tren-Project"><a href="#Tren-Project" class="headerlink" title="Trên Project"></a>Trên Project</h1><h2 id="Cai-SDK"><a href="#Cai-SDK" class="headerlink" title="Cài SDK"></a>Cài SDK</h2><p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
+<p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
+<p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
+<p>[code lang=bash] Install-Package GoogleAnalyticsSDK [/code]</p>
+<p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
+<p>Chờ một chút cho nó chạy</p>
+<h2 id="Khai-bao-thong-tin"><a href="#Khai-bao-thong-tin" class="headerlink" title="Khai báo thông tin"></a>Khai báo thông tin</h2><p>Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới</p>
+<p>File analytics.xml</p>
+<p>File này chứa các thông số cần thiết để Google Analytics theo dõi ứng dụng của bạn.</p>
+<p>Trong file này có các dòng comment vô cùng đầy đủ, bạn có thể Comment out nó và tự điền các thông số mong muốn</p>
+<p><img src="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png"></p>
+<p>File analytics.xsd</p>
+<p>Là file compiled của file trên, bạn không cần quan tâm tới file này</p>
+<h1 id="Tren-Google-Analytics"><a href="#Tren-Google-Analytics" class="headerlink" title="Trên Google Analytics"></a>Trên Google Analytics</h1><p>vào link này: <a href="http://google.com/analytics">Google Analytics Account</a></p>
+<p>Nhấn nút Đăng nhập</p>
+<p><img src="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png"></p>
+<p>Chọn tab Quản trị</p>
+<p><img src="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png"></p>
+<p>Tạo thuộc tính mới</p>
+<p><img src="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png"></p>
+<p>Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi điều gì”, chọn Ứng dụng di động nhé</p>
+<p><img src="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png"></p>
+<p>Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn</p>
+<h1 id="Thiet-lap-theo-doi"><a href="#Thiet-lap-theo-doi" class="headerlink" title="Thiết lập theo dõi"></a>Thiết lập theo dõi</h1><p>Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:</p>
+<ul>
+<li>Màn hình ứng dụng: màn hình nào người dùng sử dụng nhiều</li>
+<li>Event: Nút nào được click nhiều, sự kiện nào xảy ra nhiều</li>
+<li>Exception: Lỗi nào bị bắt nhiều nhất</li>
+<li>Transaction: Thanh toán, mua đồ, In-app Purchase</li>
+<li>Social: Chia sẻ trong mạng xã hội</li>
+<li>Timing: thời gian mà ứng dụng chạy một task nào đó</li>
+</ul>
+<p>Và tất nhiên, bạn sẽ có các con số sau đây:</p>
+<ul>
+<li>Số lượng người dùng</li>
+<li>Người dùng mới cài đặt trong ngày</li>
+<li>Người dùng đang sử dụng app hiện tại (Realtime)</li>
+<li>Mức độ trung thành</li>
+<li>Tỷ lệ thoát ứng dụng</li>
+<li>Phiên bản ứng dụng (cái này phải cài đặt trong file XML)</li>
+</ul>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
+<p>[code lang=csharp] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, false);</p>
+<p>[/code]</p>
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
+<p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
+<p>[code lang=csharp] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, false);</p>
+<p>[/code]</p>
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
+<p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
+<p>[code lang=csharp] // Track Navigation RootFrame.Navigated += RootFrame_Navigated; [/code]</p>
+<p>Trong Event Handler, thêm đoạn code sau:</p>
+<p>[code lang=csharp] if (e.Content != null) { GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); } [/code]</p>
+<h1 id="Xem-Analytics"><a href="#Xem-Analytics" class="headerlink" title="Xem Analytics"></a>Xem Analytics</h1><p>Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app</p>
+<p><img src="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png"></p>
+<p>Bạn có thể khám phá thêm trong trang Google Analytics của mình.</p>
+<p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
+]]></content>
+      <categories>
+        <category>C#</category>
+        <category>c</category>
+        <category>Windows Phone</category>
+        <category>Windows Store App</category>
+      </categories>
+      <tags>
+        <tag>windows phone</tag>
+        <tag>windows store</tag>
+        <tag>analytics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Windows Store] Universal Apps across all Windows devices</title>
     <url>/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</url>
     <content><![CDATA[<p>Ở hội nghị BUILD 2014, Microsoft đã nhắc tới Universal App, ứng dụng có thể chạy được trên cả Windows và Windows Phone</p>
@@ -1710,101 +1805,6 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</title>
-    <url>/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
-    <content><![CDATA[<p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
-<p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
-<p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
-<p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
-<a id="more"></a>
-<ul>
-<li><p><a href="#tr%C3%AAn-project">Trên Project</a></p>
-<ul>
-<li><a href="#c%C3%A0i-sdk">Cài SDK</a></li>
-<li><a href="#khai-b%C3%A1o-th%C3%B4ng-tin">Khai báo thông tin</a></li>
-</ul>
-</li>
-<li><p><a href="#tr%C3%AAn-google-analytics">Trên Google Analytics</a></p>
-</li>
-<li><p><a href="#thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">Thiết lập theo dõi</a></p>
-<ul>
-<li><a href="#coding">Coding</a></li>
-</ul>
-</li>
-<li><p><a href="#xem-analytics">Xem Analytics</a></p>
-</li>
-</ul>
-<h1 id="Tren-Project"><a href="#Tren-Project" class="headerlink" title="Trên Project"></a>Trên Project</h1><h2 id="Cai-SDK"><a href="#Cai-SDK" class="headerlink" title="Cài SDK"></a>Cài SDK</h2><p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
-<p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
-<p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
-<p>[code lang=bash] Install-Package GoogleAnalyticsSDK [/code]</p>
-<p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
-<p>Chờ một chút cho nó chạy</p>
-<h2 id="Khai-bao-thong-tin"><a href="#Khai-bao-thong-tin" class="headerlink" title="Khai báo thông tin"></a>Khai báo thông tin</h2><p>Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới</p>
-<p>File analytics.xml</p>
-<p>File này chứa các thông số cần thiết để Google Analytics theo dõi ứng dụng của bạn.</p>
-<p>Trong file này có các dòng comment vô cùng đầy đủ, bạn có thể Comment out nó và tự điền các thông số mong muốn</p>
-<p><img src="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png"></p>
-<p>File analytics.xsd</p>
-<p>Là file compiled của file trên, bạn không cần quan tâm tới file này</p>
-<h1 id="Tren-Google-Analytics"><a href="#Tren-Google-Analytics" class="headerlink" title="Trên Google Analytics"></a>Trên Google Analytics</h1><p>vào link này: <a href="http://google.com/analytics">Google Analytics Account</a></p>
-<p>Nhấn nút Đăng nhập</p>
-<p><img src="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png"></p>
-<p>Chọn tab Quản trị</p>
-<p><img src="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png"></p>
-<p>Tạo thuộc tính mới</p>
-<p><img src="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png"></p>
-<p>Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi điều gì”, chọn Ứng dụng di động nhé</p>
-<p><img src="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png"></p>
-<p>Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn</p>
-<h1 id="Thiet-lap-theo-doi"><a href="#Thiet-lap-theo-doi" class="headerlink" title="Thiết lập theo dõi"></a>Thiết lập theo dõi</h1><p>Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:</p>
-<ul>
-<li>Màn hình ứng dụng: màn hình nào người dùng sử dụng nhiều</li>
-<li>Event: Nút nào được click nhiều, sự kiện nào xảy ra nhiều</li>
-<li>Exception: Lỗi nào bị bắt nhiều nhất</li>
-<li>Transaction: Thanh toán, mua đồ, In-app Purchase</li>
-<li>Social: Chia sẻ trong mạng xã hội</li>
-<li>Timing: thời gian mà ứng dụng chạy một task nào đó</li>
-</ul>
-<p>Và tất nhiên, bạn sẽ có các con số sau đây:</p>
-<ul>
-<li>Số lượng người dùng</li>
-<li>Người dùng mới cài đặt trong ngày</li>
-<li>Người dùng đang sử dụng app hiện tại (Realtime)</li>
-<li>Mức độ trung thành</li>
-<li>Tỷ lệ thoát ứng dụng</li>
-<li>Phiên bản ứng dụng (cái này phải cài đặt trong file XML)</li>
-</ul>
-<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
-<p>[code lang=csharp] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, false);</p>
-<p>[/code]</p>
-<p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
-<p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
-<p>[code lang=csharp] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, false);</p>
-<p>[/code]</p>
-<p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
-<p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
-<p>[code lang=csharp] // Track Navigation RootFrame.Navigated += RootFrame_Navigated; [/code]</p>
-<p>Trong Event Handler, thêm đoạn code sau:</p>
-<p>[code lang=csharp] if (e.Content != null) { GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); } [/code]</p>
-<h1 id="Xem-Analytics"><a href="#Xem-Analytics" class="headerlink" title="Xem Analytics"></a>Xem Analytics</h1><p>Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app</p>
-<p><img src="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png"></p>
-<p>Bạn có thể khám phá thêm trong trang Google Analytics của mình.</p>
-<p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
-]]></content>
-      <categories>
-        <category>C#</category>
-        <category>c</category>
-        <category>Windows Phone</category>
-        <category>Windows Store App</category>
-      </categories>
-      <tags>
-        <tag>windows phone</tag>
-        <tag>windows store</tag>
-        <tag>analytics</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Basic for Absolute Beginner] – [Part 6] – Source Control</title>
     <url>/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</url>
     <content><![CDATA[<p>Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa những đoạn code mới thêm vào, nhưng lỗi vẫn còn, và hình như bạn còn thiếu gì đó?</p>
@@ -1912,6 +1912,70 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>How to make yourself work when you just don’t want to?</title>
+    <url>/blog/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</url>
+    <content><![CDATA[<p>Repost from: <a href="http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/">http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/</a></p>
+<p>By</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2014/07/071414_1416_howtomakeyo1.jpg"></p>
+<p><a href="http://blogs.hbr.org/heidi-grant-halvorson/" title="Posts by Heidi Grant Halvorson">Heidi Grant Halvorson</a></p>
+<p><a href="http://www.heidigranthalvorson.com/">Heidi Grant Halvorson</a>, Ph.D. is associate director for the Motivation Science Center at the Columbia University Business School and author of <a href="http://hbr.org/product/nine-things-successful-people-do-differently/an/11065-PDF-ENG"><em>Nine Things Successful People Do Differently</em></a> and <a href="http://www.amazon.com/Focus-Different-Seeing-Success-Influence/dp/1594631026/ref=la_B004GT04DE_1_4"><em>Focus: Use Different Ways of Seeing the World to Power Influence and Success</em></a>. Dr. Halvorson is available for <a href="http://www.brightsightgroup.net/2011/01/heidi-grant-halvorson.html">speaking and training</a>. She’s on Twitter <a href="https://twitter.com/hghalvorson">@hghalvorson</a>.</p>
+<p>Heidi Grant Halvorson, tiến sỹ, là một giám đốc hợp tác của Trung tâm Khoa học Mục đích (tạm dịch) của Columbia University Business School, và là tác giả của quyển sách “9 điều mà người thành đạt làm một cách khác biệt” và “Tập trung: Sử dụng những cách nhìn khác nhau về thế giới để đạt thành công”</p>
+<p>Bài dịch</p>
+<p>Bạn đang có 1 dự án đang chạy chán ngắt – cái dự án mà deadline đang ngày càng gần hơn trên lịch. Khách hàng thì đang réo rắt gọi điện cho bạn, kiểu gọi mà chả giải quyết được vấn đề gì ngoài việc phàn nàn và làm mất thời gian quý báu của bạn. Ý khoan, chả phải là bạn đang muốn xem một bộ phim hay trên TV sao?</p>
+<p>Bạn có thể tưởng tượng bao nhiêu mặc cảm tội lỗi, stress, và căng thẳng sẽ biến mất khi bạn – bằng cách kỳ diệu nào đó – làm những việc mà bạn không muốn làm, mà thực tế là bạn nên làm những việc đó?</p>
+<p>Tin tốt (rất tốt) là bạn có thể cải thiện tình trạng này, nếu bạn sử dụng các chiến lược đúng đắn. Việc chỉ ra các chiến lược để sử dụng phụ thuộc vào lý do tại sao bạn đang trì hoãn.</p>
+<a id="more"></a>
+<p><strong>Lý do #1: Bạn né tránh làm điều gì đó vì bạn sợ sẽ làm hỏng nó.</strong></p>
+<p>Giải pháp: Áp dụng “Trọng tâm ngăn ngừa”</p>
+<p>Có 2 cách để nhìn vào bất kỳ nhiệm vụ nào. Bạn có thể làm điều gì đó nếu bạn thấy rằng bạn sẽ kết thúc nó tốt đẹp hơn so với hiện tại. Kiểu như “nếu tôi hoàn thành dự án này, tôi sẽ gây ấn tượng với sếp”, hay “Nếu tôi tập thể dục thường xuyên, thân hình tôi sẽ tuyệt vời”. Các nhà tâm lý học gọi đây là “Trọng tâm cầu tiến” – và các nghiên cứu chỉ ra rằng nếu bạn có một “trọng tâm cầu tiến”, bạn sẽ được thúc đẩy bởi các suy nghĩ đạt được thành quả, và bạn sẽ làm việc tốt nhất khi bạn cảm thấy háo hức và lạc quan. Nghe tốt đấy, phải không. Tuy nhiên nếu bạn sợ rằng bạn sẽ làm hỏng nó, bạn sẽ tạo ra sự lo lắng và nghi ngờ, làm cho bạn ít có khả năng thực hiện bất kỳ hành động nào cả.</p>
+<p>Cái bạn cần là một cách nhìn mà không bị ảnh hưởng bởi yếu tố nghi ngờ. Khi bạn có một “trọng tâm ngăn ngừa”, thay vì suy nghĩ bạn sẽ hoàn tất nó tốt đẹp hơn như thế nào, hãy suy nghĩ công việc đó là cách mà bạn sẽ bảo toàn những gì đang có – ngăn ngừa mất mát. Ví dụ đối với một trọng tâm ngăn ngừa: “Hoàn tất dự án này sẽ làm cho sếp không tức giận” hay “tập thể dục thường xuyên để ngăn ngừa cơ thể phì nộn”. Hàng thập kỷ nghiên cứu, điều mà tôi đã mô tả trong quyển Focus, chỉ ra rằng động lực ngăn ngừa được tăng cường bởi sự lo lắng về những điều có thể đi sai so với kế hoạch. Khi bạn tập trung vào ngăn ngừa mất mát, bạn nhận ra rằng cách duy nhất để thoát ra khỏi nguy hiểm là hành động ngay lập tức. Càng lo lắng nhiều bao nhiêu, thì bạn sẽ hoàn tất công việc đó nhanh bấy nhiêu.</p>
+<p>Tôi biết rằng điều này rất không thoải mái, đặc biệt là khi bạn thường có “Trọng tâm cầu tiến” (đa số mọi người đều có), nhưng đây có thể là cách duy nhất để bạn vượt qua sự lo lắng về làm hỏng mọi thứ, thay vì suy nghĩ về những hậu quả thảm khốc khi bạn không làm gì cả. Cố lên, sợ tụt quần đi. Khủng khiếp nhưng nó có ích.</p>
+<p><strong>Lý do #2: Bạn né tránh điều gì đó vì bạn không “cảm thấy” như làm việc đó.</strong></p>
+<p>Giải pháp: Cư xử như Spock, bỏ qua cảm xúc của bạn. Nó đang chặn đường đi của bạn.</p>
+<p>Giải thích một tý: Khi bạn nói “Tôi sẽ đọc sách tại thư viện”, thì não bạn sẽ tự động tưởng tượng ra cảnh mình đi tới thư viện, chọn một quyển sách, và ngồi vào một cái ghế và đọc. Điều này xảy ra nhanh tới mức bạn không hề nghĩ rằng mình đã có những suy nghĩ đó. Khi bạn không thể tưởng tượng được cảnh này, bạn sẽ thấy mình không có cảm giác làm những việc đó.</p>
+<p>Trong một quyển sách xuất sắc của mình: “Thuốc giải: Hạnh phúc cho người không thể có tư duy tích cực”, Oliver Burkeman chỉ ra rằng rất nhiều lần chúng ta nói “Tôi không thể rời khỏi giường lúc sáng sớm”, hay “Tôi không thể tập thể dục được”, thực ra ý của bạn là bạn không có cảm giác mình làm những điều đó. Sau cùng, chả có ai trói bạn trên giường buổi sáng sớm cả, cũng chả có tên côn đồ nào chặn đường đi tới phòng tập thể dục của bạn. Không có gì mang tính vật chất đang chặn đường của bạn – chẳng qua là bạn không có cảm giác làm việc đó. Tuy nhiên, mắc gì bạn phải chờ cho tới khi có “cảm giác” làm điều gì để để thực sự làm nó?</p>
+<p>Hãy nghĩ về nó một tí, vì nó rất quan trọng. Trước tới giờ, chúng ta đều tin rằng để có động lực và hiệu quả, chúng ta cần phải có cảm giác rằng chúng ta muốn hành động. Phải sẵn sàng để làm điều đó. Tôi không biết tại sao chúng ta tin vào điều đó, vì nó 100% vô nghĩa. Đúng là ở một mức độ nào đó, bạn cần phải có một cam kết với những gì bạn đang làm. Bạn cần phải có sự mong muốn dự án hoàn tất, hoặc khỏe mạnh hơn, hoặc dậy sớm hơn. Nhưng bạn chả cần phải có cảm giác làm điều đó.</p>
+<p>Trên thực thế, như Burkeman đã chỉ ra, rất nhiều họa sĩ, nhà văn, nhà sáng tạo đạt năng suất làm việc cao do họ có một thói quen hằng ngày bắt buộc họ làm việc trong một khoảng thời gian nhất định mỗi ngày, không quan trọng là họ có cảm hứng hay không. Burkeman dẫn chứng lời của họa sỹ Chuck Close: “Cảm hứng là dành cho mấy tên nghiệp dư, phần còn lại như chúng tôi chỉ đơn giản là xuất hiện và làm việc”.</p>
+<p>Vì vậy, nếu bạn đang ngồi đó, né tránh làm việc chỉ vì bạn không có cảm giác làm những việc đó, hãy nhớ rằng bạn thực sự chả cần cảm giác đó. Chả có gì ngăn cản bạn cả.</p>
+<p><strong>Lý do #3: Bạn né tránh làm việc vì nó khó, nó chán, hay nó khó chịu</strong></p>
+<p>Giải pháp: Sử dụng cách lên kế hoạch “Nếu – thì”</p>
+<p>Rất thường xuyên, chúng ta cố gắng giải quyết các vấn đề đặc biệt với một ý chí: “Lần tới, tôi sẽ làm cho bản thân mình bắt đầu làm việc này sớm hơn”. Dĩ nhiên là chúng ta có một sức mạnh ý chí để làm điều đó, chúng ta không bao giờ né tránh nó lúc mới bắt đầu cả. Nghiên cứu chỉ ra rằng chúng ta thường đánh giá quá cao khả năng tự kiểm soát của mình, và dựa vào nó quá nhiều để tránh khỏi rắc rối.</p>
+<p>Hãy cho mình một đặc ân, thừa nhận rằng sức mạnh ý chí là có hạn, và nó có thể sẽ không luôn luôn làm cho bạn làm những việc bạn thấy khó khăn, tẻ nhạt hoặc khủng khiếp. Thay vào đó, hãy sử dụng cách lên kế hoạch “Nếu – thì”</p>
+<p>Lên kế hoạch “Nếu – thì” phức tạp hơn là vạch ra các bước bạn phải làm, nó còn là quyết định xem địa điểm và thời gian bạn làm những bước đó.</p>
+<p>“Nếu tới 2:00 PM, tôi sẽ dừng việc tôi đang làm để bắt đầu viết báo cáo mà Bob yêu cầu”</p>
+<p>“Nếu sếp không đề cập tới chuyện tăng lương của tôi trong buổi họp tới, tôi sẽ nhắc lại nó trước khi buổi họp kết thúc”</p>
+<p>Bằng cách quyết định trước một cách chính xác những gì bạn dự định làm, và khi điều kiện xảy ra, bạn sẽ không phải cân nhắc có nên làm việc đó hay không, hay bạn có nên làm một việc khác với việc bạn dự định làm hay không. Khi chúng ta cân nhắc, ý chí trở nên cần thiết cho các lựa chọn khó khăn. Tuy nhiên, dùng kế hoạch “Nếu – thì” sẽ làm giảm đáng kể yêu cầu cần tới ý chí, bằng cách đảm bảo rằng bạn đã ra quyết định đúng đắn trước khi thời điểm đó xảy ra. Trên thực tế, cách lên kế hoạch “Nếu – thì” đã được thể hiện trong hơn 200 nghiên cứu rằng nó sẽ làm tăng tỷ lệ đạt mục tiêu và nâng cao năng suất lên 200% đến 300%</p>
+<p>Tôi nhận ra rằng 3 chiến lược mà tôi giới thiệu cho bạn – suy nghĩ về cách giảm thiểu hậu quả, mặc kệ cảm giác của mình, gắn kết với một kế hoạch điều kiện – không nghe vui vẻ hoặc hay ho như “Hãy đi theo niềm đam mê của bạn”, “Hãy tích cực”. Nhưng nó có lợi thế quyết định bởi thực sự đạt hiệu quả - điều mà bạn sẽ có khi bạn sử dụng chúng</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>[Windows Store] When the property window in Visual Studio not responding</title>
+    <url>/blog/2014/10/10/windows-phone-when-the-design-pallet-not-working/</url>
+    <content><![CDATA[<p>Khi làm việc với Visual Studio 2012, VS2013 trở lên, nhất là với việc thiết kế giao diện bằng ngôn ngữ XAML, bạn rất có thể sẽ bắt gặp một điều bất tiện: Sau một thời gian hoạt động ổn định, bạn không thể click, chỉnh sửa, tăng giảm bất cứ thứ gì trong cửa sổ property. Vậy là bạn phải chỉnh sửa trực tiếp trong code, khá bất tiện và mất thời gian.</p>
+<p>Làm thế nào để sửa được lỗi này?</p>
+<a id="more"></a>
+<h1 id="OLD-WAY-Restart-your-Visual-Studio"><a href="#OLD-WAY-Restart-your-Visual-Studio" class="headerlink" title="OLD WAY: Restart your Visual Studio"></a>OLD WAY: Restart your Visual Studio</h1><p>Phải rồi, câu nói nổi tiếng của Apple Supporter: “Have you tried turn it off and on again?” Tắt đi bật lại Visual Studio chắc chắn sẽ giải quyết vấn đề cho bạn. Nhưng tiếp tục đọc tiếp bài blog này nhé</p>
+<h1 id="NEW-WAY-Run-a-piece-of-code"><a href="#NEW-WAY-Run-a-piece-of-code" class="headerlink" title="NEW WAY: Run a piece of code"></a>NEW WAY: Run a piece of code</h1><p>Đoạn code sau sẽ cho phép bạn kill designer task bên trong Visual Studio. Chạy đoạn code này xong, vào Visual Studio, bấm đường link “Click here to reload Designer”, thế là xong.</p>
+<p>Mở notepad, copy paste đoạn code sau:</p>
+<p>taskkill /f /im XDesProc.exe</p>
+<p>Lưu lại với đuôi .bat</p>
+<p>Vậy là xong. Mỗi lần bị lỗi không thể edit trong khung property của Visual Studio, bạn chỉ cần double click file này là xong.</p>
+<h1 id="More-details-What-does-Microsoft-say"><a href="#More-details-What-does-Microsoft-say" class="headerlink" title="More details: What does Microsoft say?"></a>More details: What does Microsoft say?</h1><p>Các kỹ sư của Microsoft đã biết đến sự tồn tại của lỗi này. Và họ đã “wánh” nó là Won-fix in this version. Tức là trừ phi có phiên bản Visual Studio mới hơn, lỗi này sẽ không được sửa trong phiên bản 2012, 2013.</p>
+]]></content>
+      <categories>
+        <category>c</category>
+        <category>Windows Phone</category>
+        <category>Windows Store App</category>
+      </categories>
+      <tags>
+        <tag>Visual Studio</tag>
+        <tag>windows phone</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Upgrade your apps to Windows 8.1 – Tips and tricks</title>
     <url>/blog/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</url>
     <content><![CDATA[<p>Vậy là Windows 8.1 ra mắt cũng đã lâu. Đối với các ứng dụng viết mới thì target mặc định của nó đã là Windows 8.1. Vậy đối với các ứng dụng cũ kỹ thì sao?</p>
@@ -1968,30 +2032,6 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[Windows Store] When the property window in Visual Studio not responding</title>
-    <url>/blog/2014/10/09/windows-phone-when-the-design-pallet-not-working/</url>
-    <content><![CDATA[<p>Khi làm việc với Visual Studio 2012, VS2013 trở lên, nhất là với việc thiết kế giao diện bằng ngôn ngữ XAML, bạn rất có thể sẽ bắt gặp một điều bất tiện: Sau một thời gian hoạt động ổn định, bạn không thể click, chỉnh sửa, tăng giảm bất cứ thứ gì trong cửa sổ property. Vậy là bạn phải chỉnh sửa trực tiếp trong code, khá bất tiện và mất thời gian.</p>
-<p>Làm thế nào để sửa được lỗi này?</p>
-<a id="more"></a>
-<h1 id="OLD-WAY-Restart-your-Visual-Studio"><a href="#OLD-WAY-Restart-your-Visual-Studio" class="headerlink" title="OLD WAY: Restart your Visual Studio"></a>OLD WAY: Restart your Visual Studio</h1><p>Phải rồi, câu nói nổi tiếng của Apple Supporter: “Have you tried turn it off and on again?” Tắt đi bật lại Visual Studio chắc chắn sẽ giải quyết vấn đề cho bạn. Nhưng tiếp tục đọc tiếp bài blog này nhé</p>
-<h1 id="NEW-WAY-Run-a-piece-of-code"><a href="#NEW-WAY-Run-a-piece-of-code" class="headerlink" title="NEW WAY: Run a piece of code"></a>NEW WAY: Run a piece of code</h1><p>Đoạn code sau sẽ cho phép bạn kill designer task bên trong Visual Studio. Chạy đoạn code này xong, vào Visual Studio, bấm đường link “Click here to reload Designer”, thế là xong.</p>
-<p>Mở notepad, copy paste đoạn code sau:</p>
-<p>taskkill /f /im XDesProc.exe</p>
-<p>Lưu lại với đuôi .bat</p>
-<p>Vậy là xong. Mỗi lần bị lỗi không thể edit trong khung property của Visual Studio, bạn chỉ cần double click file này là xong.</p>
-<h1 id="More-details-What-does-Microsoft-say"><a href="#More-details-What-does-Microsoft-say" class="headerlink" title="More details: What does Microsoft say?"></a>More details: What does Microsoft say?</h1><p>Các kỹ sư của Microsoft đã biết đến sự tồn tại của lỗi này. Và họ đã “wánh” nó là Won-fix in this version. Tức là trừ phi có phiên bản Visual Studio mới hơn, lỗi này sẽ không được sửa trong phiên bản 2012, 2013.</p>
-]]></content>
-      <categories>
-        <category>c</category>
-        <category>Windows Phone</category>
-        <category>Windows Store App</category>
-      </categories>
-      <tags>
-        <tag>Visual Studio</tag>
-        <tag>windows phone</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Fix your glitch Bluetooth mouse</title>
     <url>/blog/2014/11/14/fix-your-glitch-bluetooth-mouse/</url>
     <content><![CDATA[<p><a href="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg"><img src="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg" alt="2_5F00_77B60B43"></a></p>
@@ -2015,48 +2055,8 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>How to make yourself work when you just don’t want to?</title>
-    <url>/blog/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</url>
-    <content><![CDATA[<p>Repost from: <a href="http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/">http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/</a></p>
-<p>By</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2014/07/071414_1416_howtomakeyo1.jpg"></p>
-<p><a href="http://blogs.hbr.org/heidi-grant-halvorson/" title="Posts by Heidi Grant Halvorson">Heidi Grant Halvorson</a></p>
-<p><a href="http://www.heidigranthalvorson.com/">Heidi Grant Halvorson</a>, Ph.D. is associate director for the Motivation Science Center at the Columbia University Business School and author of <a href="http://hbr.org/product/nine-things-successful-people-do-differently/an/11065-PDF-ENG"><em>Nine Things Successful People Do Differently</em></a> and <a href="http://www.amazon.com/Focus-Different-Seeing-Success-Influence/dp/1594631026/ref=la_B004GT04DE_1_4"><em>Focus: Use Different Ways of Seeing the World to Power Influence and Success</em></a>. Dr. Halvorson is available for <a href="http://www.brightsightgroup.net/2011/01/heidi-grant-halvorson.html">speaking and training</a>. She’s on Twitter <a href="https://twitter.com/hghalvorson">@hghalvorson</a>.</p>
-<p>Heidi Grant Halvorson, tiến sỹ, là một giám đốc hợp tác của Trung tâm Khoa học Mục đích (tạm dịch) của Columbia University Business School, và là tác giả của quyển sách “9 điều mà người thành đạt làm một cách khác biệt” và “Tập trung: Sử dụng những cách nhìn khác nhau về thế giới để đạt thành công”</p>
-<p>Bài dịch</p>
-<p>Bạn đang có 1 dự án đang chạy chán ngắt – cái dự án mà deadline đang ngày càng gần hơn trên lịch. Khách hàng thì đang réo rắt gọi điện cho bạn, kiểu gọi mà chả giải quyết được vấn đề gì ngoài việc phàn nàn và làm mất thời gian quý báu của bạn. Ý khoan, chả phải là bạn đang muốn xem một bộ phim hay trên TV sao?</p>
-<p>Bạn có thể tưởng tượng bao nhiêu mặc cảm tội lỗi, stress, và căng thẳng sẽ biến mất khi bạn – bằng cách kỳ diệu nào đó – làm những việc mà bạn không muốn làm, mà thực tế là bạn nên làm những việc đó?</p>
-<p>Tin tốt (rất tốt) là bạn có thể cải thiện tình trạng này, nếu bạn sử dụng các chiến lược đúng đắn. Việc chỉ ra các chiến lược để sử dụng phụ thuộc vào lý do tại sao bạn đang trì hoãn.</p>
-<a id="more"></a>
-<p><strong>Lý do #1: Bạn né tránh làm điều gì đó vì bạn sợ sẽ làm hỏng nó.</strong></p>
-<p>Giải pháp: Áp dụng “Trọng tâm ngăn ngừa”</p>
-<p>Có 2 cách để nhìn vào bất kỳ nhiệm vụ nào. Bạn có thể làm điều gì đó nếu bạn thấy rằng bạn sẽ kết thúc nó tốt đẹp hơn so với hiện tại. Kiểu như “nếu tôi hoàn thành dự án này, tôi sẽ gây ấn tượng với sếp”, hay “Nếu tôi tập thể dục thường xuyên, thân hình tôi sẽ tuyệt vời”. Các nhà tâm lý học gọi đây là “Trọng tâm cầu tiến” – và các nghiên cứu chỉ ra rằng nếu bạn có một “trọng tâm cầu tiến”, bạn sẽ được thúc đẩy bởi các suy nghĩ đạt được thành quả, và bạn sẽ làm việc tốt nhất khi bạn cảm thấy háo hức và lạc quan. Nghe tốt đấy, phải không. Tuy nhiên nếu bạn sợ rằng bạn sẽ làm hỏng nó, bạn sẽ tạo ra sự lo lắng và nghi ngờ, làm cho bạn ít có khả năng thực hiện bất kỳ hành động nào cả.</p>
-<p>Cái bạn cần là một cách nhìn mà không bị ảnh hưởng bởi yếu tố nghi ngờ. Khi bạn có một “trọng tâm ngăn ngừa”, thay vì suy nghĩ bạn sẽ hoàn tất nó tốt đẹp hơn như thế nào, hãy suy nghĩ công việc đó là cách mà bạn sẽ bảo toàn những gì đang có – ngăn ngừa mất mát. Ví dụ đối với một trọng tâm ngăn ngừa: “Hoàn tất dự án này sẽ làm cho sếp không tức giận” hay “tập thể dục thường xuyên để ngăn ngừa cơ thể phì nộn”. Hàng thập kỷ nghiên cứu, điều mà tôi đã mô tả trong quyển Focus, chỉ ra rằng động lực ngăn ngừa được tăng cường bởi sự lo lắng về những điều có thể đi sai so với kế hoạch. Khi bạn tập trung vào ngăn ngừa mất mát, bạn nhận ra rằng cách duy nhất để thoát ra khỏi nguy hiểm là hành động ngay lập tức. Càng lo lắng nhiều bao nhiêu, thì bạn sẽ hoàn tất công việc đó nhanh bấy nhiêu.</p>
-<p>Tôi biết rằng điều này rất không thoải mái, đặc biệt là khi bạn thường có “Trọng tâm cầu tiến” (đa số mọi người đều có), nhưng đây có thể là cách duy nhất để bạn vượt qua sự lo lắng về làm hỏng mọi thứ, thay vì suy nghĩ về những hậu quả thảm khốc khi bạn không làm gì cả. Cố lên, sợ tụt quần đi. Khủng khiếp nhưng nó có ích.</p>
-<p><strong>Lý do #2: Bạn né tránh điều gì đó vì bạn không “cảm thấy” như làm việc đó.</strong></p>
-<p>Giải pháp: Cư xử như Spock, bỏ qua cảm xúc của bạn. Nó đang chặn đường đi của bạn.</p>
-<p>Giải thích một tý: Khi bạn nói “Tôi sẽ đọc sách tại thư viện”, thì não bạn sẽ tự động tưởng tượng ra cảnh mình đi tới thư viện, chọn một quyển sách, và ngồi vào một cái ghế và đọc. Điều này xảy ra nhanh tới mức bạn không hề nghĩ rằng mình đã có những suy nghĩ đó. Khi bạn không thể tưởng tượng được cảnh này, bạn sẽ thấy mình không có cảm giác làm những việc đó.</p>
-<p>Trong một quyển sách xuất sắc của mình: “Thuốc giải: Hạnh phúc cho người không thể có tư duy tích cực”, Oliver Burkeman chỉ ra rằng rất nhiều lần chúng ta nói “Tôi không thể rời khỏi giường lúc sáng sớm”, hay “Tôi không thể tập thể dục được”, thực ra ý của bạn là bạn không có cảm giác mình làm những điều đó. Sau cùng, chả có ai trói bạn trên giường buổi sáng sớm cả, cũng chả có tên côn đồ nào chặn đường đi tới phòng tập thể dục của bạn. Không có gì mang tính vật chất đang chặn đường của bạn – chẳng qua là bạn không có cảm giác làm việc đó. Tuy nhiên, mắc gì bạn phải chờ cho tới khi có “cảm giác” làm điều gì để để thực sự làm nó?</p>
-<p>Hãy nghĩ về nó một tí, vì nó rất quan trọng. Trước tới giờ, chúng ta đều tin rằng để có động lực và hiệu quả, chúng ta cần phải có cảm giác rằng chúng ta muốn hành động. Phải sẵn sàng để làm điều đó. Tôi không biết tại sao chúng ta tin vào điều đó, vì nó 100% vô nghĩa. Đúng là ở một mức độ nào đó, bạn cần phải có một cam kết với những gì bạn đang làm. Bạn cần phải có sự mong muốn dự án hoàn tất, hoặc khỏe mạnh hơn, hoặc dậy sớm hơn. Nhưng bạn chả cần phải có cảm giác làm điều đó.</p>
-<p>Trên thực thế, như Burkeman đã chỉ ra, rất nhiều họa sĩ, nhà văn, nhà sáng tạo đạt năng suất làm việc cao do họ có một thói quen hằng ngày bắt buộc họ làm việc trong một khoảng thời gian nhất định mỗi ngày, không quan trọng là họ có cảm hứng hay không. Burkeman dẫn chứng lời của họa sỹ Chuck Close: “Cảm hứng là dành cho mấy tên nghiệp dư, phần còn lại như chúng tôi chỉ đơn giản là xuất hiện và làm việc”.</p>
-<p>Vì vậy, nếu bạn đang ngồi đó, né tránh làm việc chỉ vì bạn không có cảm giác làm những việc đó, hãy nhớ rằng bạn thực sự chả cần cảm giác đó. Chả có gì ngăn cản bạn cả.</p>
-<p><strong>Lý do #3: Bạn né tránh làm việc vì nó khó, nó chán, hay nó khó chịu</strong></p>
-<p>Giải pháp: Sử dụng cách lên kế hoạch “Nếu – thì”</p>
-<p>Rất thường xuyên, chúng ta cố gắng giải quyết các vấn đề đặc biệt với một ý chí: “Lần tới, tôi sẽ làm cho bản thân mình bắt đầu làm việc này sớm hơn”. Dĩ nhiên là chúng ta có một sức mạnh ý chí để làm điều đó, chúng ta không bao giờ né tránh nó lúc mới bắt đầu cả. Nghiên cứu chỉ ra rằng chúng ta thường đánh giá quá cao khả năng tự kiểm soát của mình, và dựa vào nó quá nhiều để tránh khỏi rắc rối.</p>
-<p>Hãy cho mình một đặc ân, thừa nhận rằng sức mạnh ý chí là có hạn, và nó có thể sẽ không luôn luôn làm cho bạn làm những việc bạn thấy khó khăn, tẻ nhạt hoặc khủng khiếp. Thay vào đó, hãy sử dụng cách lên kế hoạch “Nếu – thì”</p>
-<p>Lên kế hoạch “Nếu – thì” phức tạp hơn là vạch ra các bước bạn phải làm, nó còn là quyết định xem địa điểm và thời gian bạn làm những bước đó.</p>
-<p>“Nếu tới 2:00 PM, tôi sẽ dừng việc tôi đang làm để bắt đầu viết báo cáo mà Bob yêu cầu”</p>
-<p>“Nếu sếp không đề cập tới chuyện tăng lương của tôi trong buổi họp tới, tôi sẽ nhắc lại nó trước khi buổi họp kết thúc”</p>
-<p>Bằng cách quyết định trước một cách chính xác những gì bạn dự định làm, và khi điều kiện xảy ra, bạn sẽ không phải cân nhắc có nên làm việc đó hay không, hay bạn có nên làm một việc khác với việc bạn dự định làm hay không. Khi chúng ta cân nhắc, ý chí trở nên cần thiết cho các lựa chọn khó khăn. Tuy nhiên, dùng kế hoạch “Nếu – thì” sẽ làm giảm đáng kể yêu cầu cần tới ý chí, bằng cách đảm bảo rằng bạn đã ra quyết định đúng đắn trước khi thời điểm đó xảy ra. Trên thực tế, cách lên kế hoạch “Nếu – thì” đã được thể hiện trong hơn 200 nghiên cứu rằng nó sẽ làm tăng tỷ lệ đạt mục tiêu và nâng cao năng suất lên 200% đến 300%</p>
-<p>Tôi nhận ra rằng 3 chiến lược mà tôi giới thiệu cho bạn – suy nghĩ về cách giảm thiểu hậu quả, mặc kệ cảm giác của mình, gắn kết với một kế hoạch điều kiện – không nghe vui vẻ hoặc hay ho như “Hãy đi theo niềm đam mê của bạn”, “Hãy tích cực”. Nhưng nó có lợi thế quyết định bởi thực sự đạt hiệu quả - điều mà bạn sẽ có khi bạn sử dụng chúng</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-  </entry>
-  <entry>
     <title>XAML Styler – Bug and fixes</title>
-    <url>/blog/2014/11/16/xaml-styler-bug-and-fixes/</url>
+    <url>/blog/2014/11/17/xaml-styler-bug-and-fixes/</url>
     <content><![CDATA[<p>Dành cho bạn nào chưa biết, XAML Styler là một extension nho nhỏ dành cho Visual Studio, dùng để format lại file thiết kế giao diện xaml cho đẹp.</p>
 <p>XAML Styler được phát triển thêm dựa trên Beautiful Xaml extension, và sau này được đưa lên Visual Studio Gallery.</p>
 <a id="more"></a>
@@ -2093,21 +2093,6 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>2014 in review</title>
-    <url>/blog/2014/12/29/2014-in-review/</url>
-    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2014 annual report for this blog.</p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
-<p>Here’s an excerpt:</p>
-<blockquote>
-<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>11,000</strong> times in 2014. If it were a concert at Sydney Opera House, it would take about 4 sold-out performances for that many people to see it.</p>
-</blockquote>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/annual-report/">Click here to see the complete report.</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it</title>
     <url>/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</url>
     <content><![CDATA[<p>Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam.</p>
@@ -2142,57 +2127,18 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[Browser Test] New Spartan&#39;s engine on IE 11 Technical Preview</title>
-    <url>/blog/2015/01/26/browser-test-new-spartans-engine-on-ie-11-technical-preview/</url>
-    <content><![CDATA[<p>Hello friends, today I would like to show you the test result of the new Spartan’s engine on IE Technical Preview that came along with Windows 10 build 9926 (with Cortana and stuffs).</p>
-<p>The test will be on 3 main browser: IE, Firefox and Chrome</p>
-<a id="more"></a>
-<p>The first test: SunSpider</p>
-<p>IE: <a href="http://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B7,8,15,7,5,4,4,18,6,4%5D,%223d-morph%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%223d-raytrace%22:%5B6,5,16,11,5,5,4,17,7,5%5D,%22access-binary-trees%22:%5B1,1,4,1,2,1,1,3,2,3%5D,%22access-fannkuch%22:%5B3,3,9,3,3,3,3,9,3,3%5D,%22access-nbody%22:%5B3,3,7,3,3,4,3,9,3,4%5D,%22access-nsieve%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%22bitops-3bit-bits-in-byte%22:%5B0,0,2,0,0,0,0,2,0,0%5D,%22bitops-bits-in-byte%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%22bitops-bitwise-and%22:%5B3,3,3,3,3,3,3,3,3,3%5D,%22bitops-nsieve-bits%22:%5B3,3,6,3,3,3,4,5,4,3%5D,%22controlflow-recursive%22:%5B1,1,4,1,1,1,1,4,1,1%5D,%22crypto-aes%22:%5B17,3,12,6,3,3,3,12,5,3%5D,%22crypto-md5%22:%5B1,1,9,1,2,1,1,8,1,1%5D,%22crypto-sha1%22:%5B1,1,7,1,1,1,1,7,1,1%5D,%22date-format-tofte%22:%5B8,8,13,9,7,7,7,13,8,7%5D,%22date-format-xparb%22:%5B15,14,16,14,13,13,13,15,13,15%5D,%22math-cordic%22:%5B2,1,4,2,2,1,2,3,2,2%5D,%22math-partial-sums%22:%5B9,6,11,9,6,6,7,11,8,7%5D,%22math-spectral-norm%22:%5B1,1,4,1,1,1,1,5,1,1%5D,%22regexp-dna%22:%5B9,9,9,9,9,8,9,8,8,8%5D,%22string-base64%22:%5B2,2,6,2,2,2,2,7,2,2%5D,%22string-fasta%22:%5B8,8,11,7,7,8,7,10,7,7%5D,%22string-tagcloud%22:%5B18,20,21,19,18,19,18,23,20,19%5D,%22string-unpack-code%22:%5B15,16,20,16,16,15,16,20,17,16%5D,%22string-validate-input%22:%5B7,6,9,6,6,6,6,9,6,6%5D%7D" title="Sun Spider of IE">Sun Spider of IE</a></p>
-<p>Firefox: <a href="http://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B134,132,142,143,134,141,137,148,139,140%5D,%223d-morph%22:%5B206,230,190,190,193,189,202,196,191,193%5D,%223d-raytrace%22:%5B177,177,184,177,178,177,191,186,178,190%5D,%22access-binary-trees%22:%5B124,112,116,124,112,123,126,122,113,113%5D,%22access-fannkuch%22:%5B408,478,411,419,408,440,416,415,428,411%5D,%22access-nbody%22:%5B233,272,239,245,234,235,234,238,241,247%5D,%22access-nsieve%22:%5B118,127,112,115,115,119,114,112,111,110%5D,%22bitops-3bit-bits-in-byte%22:%5B80,86,79,88,81,86,90,83,82,101%5D,%22bitops-bits-in-byte%22:%5B105,130,117,108,105,108,105,112,105,105%5D,%22bitops-bitwise-and%22:%5B341,371,349,333,349,330,351,348,342,356%5D,%22bitops-nsieve-bits%22:%5B151,152,147,158,146,156,151,152,150,147%5D,%22controlflow-recursive%22:%5B79,74,72,72,75,72,75,70,75,77%5D,%22crypto-aes%22:%5B144,149,149,144,157,145,143,145,145,152%5D,%22crypto-md5%22:%5B70,71,79,70,70,71,73,70,71,70%5D,%22crypto-sha1%22:%5B73,74,75,81,74,77,77,74,75,73%5D,%22date-format-tofte%22:%5B85,85,88,90,88,88,87,86,91,86%5D,%22date-format-xparb%22:%5B54,56,56,55,60,59,61,56,55,57%5D,%22math-cordic%22:%5B183,191,185,186,183,193,198,197,184,195%5D,%22math-partial-sums%22:%5B136,138,136,139,152,147,144,136,135,162%5D,%22math-spectral-norm%22:%5B81,79,87,81,87,98,79,79,81,83%5D,%22regexp-dna%22:%5B105,104,105,105,104,105,104,103,104,110%5D,%22string-base64%22:%5B92,97,94,94,92,92,97,98,94,96%5D,%22string-fasta%22:%5B119,120,117,122,116,118,118,119,117,128%5D,%22string-tagcloud%22:%5B92,78,74,78,80,75,83,90,76,85%5D,%22string-unpack-code%22:%5B102,110,106,99,105,104,108,103,100,102%5D,%22string-validate-input%22:%5B128,97,89,98,100,97,94,101,102,120%5D%7D" title="Sun Spider of Firefox">Sun Spider of Firefox</a></p>
-<p>Chrome: <a href="https://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B28,28,52,76,27,28,24,44,29,32%5D,%223d-morph%22:%5B87,94,47,69,57,49,68,38,52,58%5D,%223d-raytrace%22:%5B49,90,85,60,34,33,39,60,44,30%5D,%22access-binary-trees%22:%5B5,11,10,4,3,5,2,3,6,4%5D,%22access-fannkuch%22:%5B71,19,15,40,15,24,15,15,15,15%5D,%22access-nbody%22:%5B5,21,41,7,9,12,13,13,8,16%5D,%22access-nsieve%22:%5B8,6,8,6,6,5,7,5,7,10%5D,%22bitops-3bit-bits-in-byte%22:%5B3,6,19,2,3,3,2,7,3,2%5D,%22bitops-bits-in-byte%22:%5B9,65,35,9,9,10,12,8,20,9%5D,%22bitops-bitwise-and%22:%5B4,6,6,6,4,5,5,10,4,10%5D,%22bitops-nsieve-bits%22:%5B11,40,71,9,13,10,12,15,27,17%5D,%22controlflow-recursive%22:%5B40,5,10,4,5,3,8,3,3,5%5D,%22crypto-aes%22:%5B14,14,19,51,19,15,20,15,14,14%5D,%22crypto-md5%22:%5B61,28,43,16,16,27,16,12,19,16%5D,%22crypto-sha1%22:%5B13,15,14,38,14,22,22,14,25,19%5D,%22date-format-tofte%22:%5B64,30,52,24,23,24,23,33,26,25%5D,%22date-format-xparb%22:%5B29,67,20,74,28,21,22,37,18,28%5D,%22math-cordic%22:%5B30,10,48,10,12,12,14,11,18,11%5D,%22math-partial-sums%22:%5B87,115,94,77,41,47,33,33,34,56%5D,%22math-spectral-norm%22:%5B8,7,7,8,7,11,9,9,9,8%5D,%22regexp-dna%22:%5B16,40,21,75,23,22,16,18,15,17%5D,%22string-base64%22:%5B16,13,29,12,12,19,15,13,16,15%5D,%22string-fasta%22:%5B69,24,27,35,27,24,54,44,40,23%5D,%22string-tagcloud%22:%5B122,73,140,149,73,77,67,100,82,87%5D,%22string-unpack-code%22:%5B89,106,97,68,70,70,71,55,71,63%5D,%22string-validate-input%22:%5B23,69,67,30,21,22,27,23,24,22%5D%7D" title="Sun Spider of Chrome">Sun Spider of Chrome</a></p>
-<p>For a better comparison, here it is:</p>
-<p>Firefox vs IE (FROM: Firefox, TO: IE) TEST                   COMPARISON               FROM                 TO             DETAILS</p>
-<p>===============================================================================</p>
-<p>** TOTAL **:           24.7x as fast     3645.6ms +/- 1.2%    147.6ms +/- 21.0%     significant</p>
-<p>===============================================================================</p>
-<p>3d:                  30.0x as fast      518.5ms +/- 1.6%     17.3ms +/- 42.6%     significant cube:              17.8x as fast      139.0ms +/- 2.5%      7.8ms +/- 44.4%     significant morph:             141.4x as fast     198.0ms +/- 4.5%      1.4ms +/- 43.0%     significant raytrace:          22.4x as fast      181.5ms +/- 2.3%      8.1ms +/- 42.7%     significant</p>
-<p>access:              76.8x as fast      899.0ms +/- 2.7%     11.7ms +/- 38.4%     significant binary-trees:      62.4x as fast      118.5ms +/- 3.5%      1.9ms +/- 41.4%     significant fannkuch:          100.8x as fast     423.4ms +/- 3.6%      4.2ms +/- 43.0%     significant nbody:             57.6x as fast      241.8ms +/- 3.4%      4.2ms +/- 35.7%     significant nsieve:            82.4x as fast      115.3ms +/- 3.1%      1.4ms +/- 43.0%     significant</p>
-<p>bitops:              81.6x as fast      693.6ms +/- 1.9%      8.5ms +/- 22.5%     significant 3bit-bits-in-byte: 214.0x as fast 85.6ms +/- 5.4% 0.4ms +/- 150.7% significant bits-in-byte:      78.6x as fast      110.0ms +/- 5.2%      1.4ms +/- 43.0%     significant bitwise-and:       115.7x as fast     347.0ms +/- 2.4%      3.0ms +/- 0.0%      significant nsieve-bits:       40.8x as fast      151.0ms +/- 1.8%      3.7ms +/- 20.5%     significant</p>
-<p>controlflow:         46.3x as fast       74.1ms +/- 2.6%      1.6ms +/- 56.5%     significant recursive:         46.3x as fast       74.1ms +/- 2.6%      1.6ms +/- 56.5%     significant</p>
-<p>crypto:              25.6x as fast      294.1ms +/- 1.2%     11.5ms +/- 58.6%     significant aes:               22.0x as fast      147.3ms +/- 2.2%      6.7ms +/- 54.4%     significant md5:               27.5x as fast       71.5ms +/- 2.8%      2.6ms +/- 86.1%     significant sha1:              34.2x as fast       75.3ms +/- 2.3%      2.2ms +/- 82.2%     significant</p>
-<p>date:                6.33x as fast      144.3ms +/- 1.5%     22.8ms +/- 10.1%     significant format-tofte:      10.0x as fast       87.4ms +/- 1.6%      8.7ms +/- 19.4%     significant format-xparb:      4.04x as fast       56.9ms +/- 2.9%     14.1ms +/- 5.6%      significant</p>
-<p>math:                35.2x as fast      415.5ms +/- 2.5%     11.8ms +/- 24.5%     significant cordic:            90.2x as fast      189.5ms +/- 2.3%      2.1ms +/- 29.8%     significant partial-sums:      17.8x as fast      142.5ms +/- 4.4%      8.0ms +/- 17.4%     significant spectral-norm:     49.1x as fast       83.5ms +/- 5.1%      1.7ms +/- 62.8%     significant</p>
-<p>regexp:              12.2x as fast      104.9ms +/- 1.3%      8.6ms +/- 4.3%      significant dna:               12.2x as fast      104.9ms +/- 1.3%      8.6ms +/- 4.3%      significant</p>
-<p>string:              9.32x as fast      501.6ms +/- 2.6%     53.8ms +/- 10.1%     significant base64:            32.6x as fast       94.6ms +/- 1.7%      2.9ms +/- 47.1%     significant fasta:             14.9x as fast      119.4ms +/- 2.1%      8.0ms +/- 12.6%     significant tagcloud:          4.16x as fast       81.1ms +/- 5.5%     19.5ms +/- 5.8%      significant unpack-code:       6.22x as fast      103.9ms +/- 2.4%     16.7ms +/- 7.8%      significant validate-input:    15.3x as fast      102.6ms +/- 8.4%      6.7ms +/- 13.4%     significant</p>
-<p>Chrome vs IE (FROM: Chrome, TO: IE)</p>
-<p>TEST                   COMPARISON               FROM                 TO             DETAILS</p>
-<p>===============================================================================</p>
-<p>** TOTAL **:           5.19x as fast     766.5ms +/- 19.0%   147.6ms +/- 21.0%     significant</p>
-<p>===============================================================================</p>
-<p>3d:                  8.73x as fast     151.1ms +/- 17.8%    17.3ms +/- 42.6%     significant cube:              4.72x as fast      36.8ms +/- 31.7%     7.8ms +/- 44.4%     significant morph:             44.2x as fast      61.9ms +/- 20.5%     1.4ms +/- 43.0%     significant raytrace:          6.47x as fast      52.4ms +/- 29.0%     8.1ms +/- 42.7%     significant</p>
-<p>access:              4.36x as fast      51.0ms +/- 25.9%    11.7ms +/- 38.4%     significant binary-trees:      2.79x as fast       5.3ms +/- 40.2%     1.9ms +/- 41.4%     significant fannkuch:          5.81x as fast      24.4ms +/- 53.2%     4.2ms +/- 43.0%     significant nbody:             3.45x as fast      14.5ms +/- 51.3%     4.2ms +/- 35.7%     significant nsieve:            4.86x as fast       6.8ms +/- 16.3%     1.4ms +/- 43.0%     significant</p>
-<p>bitops:              6.13x as fast      52.1ms +/- 53.4%     8.5ms +/- 22.5%     significant 3bit-bits-in-byte: 12.5x as fast 5.0ms +/- 74.4% 0.4ms +/- 150.7% significant bits-in-byte:      13.3x as fast      18.6ms +/- 70.4%     1.4ms +/- 43.0%     significant bitwise-and:       2.00x as fast       6.0ms +/- 26.9%     3.0ms +/- 0.0%      significant nsieve-bits:       6.08x as fast      22.5ms +/- 62.1%     3.7ms +/- 20.5%     significant</p>
-<p>controlflow:         -                   8.6ms +/- 93.6%     1.6ms +/- 56.5% recursive:         -                   8.6ms +/- 93.6%     1.6ms +/- 56.5%</p>
-<p>crypto:              5.61x as fast      64.5ms +/- 21.8%    11.5ms +/- 58.6%     significant aes:               2.91x as fast      19.5ms +/- 41.5%     6.7ms +/- 54.4%     significant md5:               9.77x as fast      25.4ms +/- 43.6%     2.6ms +/- 86.1%     significant sha1:              8.91x as fast      19.6ms +/- 28.2%     2.2ms +/- 82.2%     significant</p>
-<p>date:                2.93x as fast      66.8ms +/- 24.0%    22.8ms +/- 10.1%     significant format-tofte:      3.72x as fast      32.4ms +/- 31.2%     8.7ms +/- 19.4%     significant format-xparb:      2.44x as fast      34.4ms +/- 41.3%    14.1ms +/- 5.6%      significant</p>
-<p>math:                7.42x as fast      87.6ms +/- 28.9%    11.8ms +/- 24.5%     significant cordic:            8.38x as fast      17.6ms +/- 49.9%     2.1ms +/- 29.8%     significant partial-sums:      7.71x as fast      61.7ms +/- 34.2%     8.0ms +/- 17.4%     significant spectral-norm:     4.88x as fast       8.3ms +/- 10.8%     1.7ms +/- 62.8%     significant</p>
-<p>regexp:              3.06x as fast      26.3ms +/- 50.5%     8.6ms +/- 4.3%      significant dna:               3.06x as fast      26.3ms +/- 50.5%     8.6ms +/- 4.3%      significant</p>
-<p>string:              4.80x as fast     258.5ms +/- 14.7%    53.8ms +/- 10.1%     significant base64:            5.52x as fast      16.0ms +/- 22.6%     2.9ms +/- 47.1%     significant fasta:             4.59x as fast      36.7ms +/- 29.8%     8.0ms +/- 12.6%     significant tagcloud:          4.97x as fast      97.0ms +/- 21.9%    19.5ms +/- 5.8%      significant unpack-code:       4.55x as fast      76.0ms +/- 15.1%    16.7ms +/- 7.8%      significant validate-input:    4.90x as fast      32.8ms +/- 40.9%     6.7ms +/- 13.4%     significant</p>
-<p>HTML  Test:</p>
-<p>For HTML5, I don’t have any reliable test. I use PeaceKeeper</p>
-<p>IE: <a href="http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056">http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056</a> - 1992</p>
-<p>Chrome: <a href="http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119">http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119</a> - 1490</p>
-<p>Firefox: <a href="http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118">http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118</a> - 850</p>
-<p>CSS3 Test</p>
-<p>For CSS3: I use <a href="http://css3test.com/">http://css3test.com/</a></p>
-<p>IE: 50%, “Determined by passing <strong>614</strong> tests out of <strong>1416</strong> total for <strong>293</strong> features”</p>
-<p>Firefox: 57%, “Determined by passing <strong>702</strong> tests out of <strong>1416</strong> total for <strong>293</strong> features”</p>
-<p>Chrome: 58%, “Determined by passing 730 tests out of 1416 total for 293 features”</p>
-<p>Thanks for reading this</p>
+    <title>2014 in review</title>
+    <url>/blog/2014/12/30/2014-in-review/</url>
+    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2014 annual report for this blog.</p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
+<p>Here’s an excerpt:</p>
+<blockquote>
+<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>11,000</strong> times in 2014. If it were a concert at Sydney Opera House, it would take about 4 sold-out performances for that many people to see it.</p>
+</blockquote>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/annual-report/">Click here to see the complete report.</a></p>
 ]]></content>
       <categories>
-        <category>Computer Tips</category>
+        <category>Others</category>
       </categories>
   </entry>
   <entry>
@@ -2277,6 +2223,60 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[Browser Test] New Spartan&#39;s engine on IE 11 Technical Preview</title>
+    <url>/blog/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</url>
+    <content><![CDATA[<p>Hello friends, today I would like to show you the test result of the new Spartan’s engine on IE Technical Preview that came along with Windows 10 build 9926 (with Cortana and stuffs).</p>
+<p>The test will be on 3 main browser: IE, Firefox and Chrome</p>
+<a id="more"></a>
+<p>The first test: SunSpider</p>
+<p>IE: <a href="http://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B7,8,15,7,5,4,4,18,6,4%5D,%223d-morph%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%223d-raytrace%22:%5B6,5,16,11,5,5,4,17,7,5%5D,%22access-binary-trees%22:%5B1,1,4,1,2,1,1,3,2,3%5D,%22access-fannkuch%22:%5B3,3,9,3,3,3,3,9,3,3%5D,%22access-nbody%22:%5B3,3,7,3,3,4,3,9,3,4%5D,%22access-nsieve%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%22bitops-3bit-bits-in-byte%22:%5B0,0,2,0,0,0,0,2,0,0%5D,%22bitops-bits-in-byte%22:%5B1,1,3,1,1,1,1,3,1,1%5D,%22bitops-bitwise-and%22:%5B3,3,3,3,3,3,3,3,3,3%5D,%22bitops-nsieve-bits%22:%5B3,3,6,3,3,3,4,5,4,3%5D,%22controlflow-recursive%22:%5B1,1,4,1,1,1,1,4,1,1%5D,%22crypto-aes%22:%5B17,3,12,6,3,3,3,12,5,3%5D,%22crypto-md5%22:%5B1,1,9,1,2,1,1,8,1,1%5D,%22crypto-sha1%22:%5B1,1,7,1,1,1,1,7,1,1%5D,%22date-format-tofte%22:%5B8,8,13,9,7,7,7,13,8,7%5D,%22date-format-xparb%22:%5B15,14,16,14,13,13,13,15,13,15%5D,%22math-cordic%22:%5B2,1,4,2,2,1,2,3,2,2%5D,%22math-partial-sums%22:%5B9,6,11,9,6,6,7,11,8,7%5D,%22math-spectral-norm%22:%5B1,1,4,1,1,1,1,5,1,1%5D,%22regexp-dna%22:%5B9,9,9,9,9,8,9,8,8,8%5D,%22string-base64%22:%5B2,2,6,2,2,2,2,7,2,2%5D,%22string-fasta%22:%5B8,8,11,7,7,8,7,10,7,7%5D,%22string-tagcloud%22:%5B18,20,21,19,18,19,18,23,20,19%5D,%22string-unpack-code%22:%5B15,16,20,16,16,15,16,20,17,16%5D,%22string-validate-input%22:%5B7,6,9,6,6,6,6,9,6,6%5D%7D" title="Sun Spider of IE">Sun Spider of IE</a></p>
+<p>Firefox: <a href="http://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B134,132,142,143,134,141,137,148,139,140%5D,%223d-morph%22:%5B206,230,190,190,193,189,202,196,191,193%5D,%223d-raytrace%22:%5B177,177,184,177,178,177,191,186,178,190%5D,%22access-binary-trees%22:%5B124,112,116,124,112,123,126,122,113,113%5D,%22access-fannkuch%22:%5B408,478,411,419,408,440,416,415,428,411%5D,%22access-nbody%22:%5B233,272,239,245,234,235,234,238,241,247%5D,%22access-nsieve%22:%5B118,127,112,115,115,119,114,112,111,110%5D,%22bitops-3bit-bits-in-byte%22:%5B80,86,79,88,81,86,90,83,82,101%5D,%22bitops-bits-in-byte%22:%5B105,130,117,108,105,108,105,112,105,105%5D,%22bitops-bitwise-and%22:%5B341,371,349,333,349,330,351,348,342,356%5D,%22bitops-nsieve-bits%22:%5B151,152,147,158,146,156,151,152,150,147%5D,%22controlflow-recursive%22:%5B79,74,72,72,75,72,75,70,75,77%5D,%22crypto-aes%22:%5B144,149,149,144,157,145,143,145,145,152%5D,%22crypto-md5%22:%5B70,71,79,70,70,71,73,70,71,70%5D,%22crypto-sha1%22:%5B73,74,75,81,74,77,77,74,75,73%5D,%22date-format-tofte%22:%5B85,85,88,90,88,88,87,86,91,86%5D,%22date-format-xparb%22:%5B54,56,56,55,60,59,61,56,55,57%5D,%22math-cordic%22:%5B183,191,185,186,183,193,198,197,184,195%5D,%22math-partial-sums%22:%5B136,138,136,139,152,147,144,136,135,162%5D,%22math-spectral-norm%22:%5B81,79,87,81,87,98,79,79,81,83%5D,%22regexp-dna%22:%5B105,104,105,105,104,105,104,103,104,110%5D,%22string-base64%22:%5B92,97,94,94,92,92,97,98,94,96%5D,%22string-fasta%22:%5B119,120,117,122,116,118,118,119,117,128%5D,%22string-tagcloud%22:%5B92,78,74,78,80,75,83,90,76,85%5D,%22string-unpack-code%22:%5B102,110,106,99,105,104,108,103,100,102%5D,%22string-validate-input%22:%5B128,97,89,98,100,97,94,101,102,120%5D%7D" title="Sun Spider of Firefox">Sun Spider of Firefox</a></p>
+<p>Chrome: <a href="https://www.webkit.org/perf/sunspider-1.0.2/sunspider-1.0.2/results.html?%7B%22v%22:%20%22sunspider-1.0.2%22,%20%223d-cube%22:%5B28,28,52,76,27,28,24,44,29,32%5D,%223d-morph%22:%5B87,94,47,69,57,49,68,38,52,58%5D,%223d-raytrace%22:%5B49,90,85,60,34,33,39,60,44,30%5D,%22access-binary-trees%22:%5B5,11,10,4,3,5,2,3,6,4%5D,%22access-fannkuch%22:%5B71,19,15,40,15,24,15,15,15,15%5D,%22access-nbody%22:%5B5,21,41,7,9,12,13,13,8,16%5D,%22access-nsieve%22:%5B8,6,8,6,6,5,7,5,7,10%5D,%22bitops-3bit-bits-in-byte%22:%5B3,6,19,2,3,3,2,7,3,2%5D,%22bitops-bits-in-byte%22:%5B9,65,35,9,9,10,12,8,20,9%5D,%22bitops-bitwise-and%22:%5B4,6,6,6,4,5,5,10,4,10%5D,%22bitops-nsieve-bits%22:%5B11,40,71,9,13,10,12,15,27,17%5D,%22controlflow-recursive%22:%5B40,5,10,4,5,3,8,3,3,5%5D,%22crypto-aes%22:%5B14,14,19,51,19,15,20,15,14,14%5D,%22crypto-md5%22:%5B61,28,43,16,16,27,16,12,19,16%5D,%22crypto-sha1%22:%5B13,15,14,38,14,22,22,14,25,19%5D,%22date-format-tofte%22:%5B64,30,52,24,23,24,23,33,26,25%5D,%22date-format-xparb%22:%5B29,67,20,74,28,21,22,37,18,28%5D,%22math-cordic%22:%5B30,10,48,10,12,12,14,11,18,11%5D,%22math-partial-sums%22:%5B87,115,94,77,41,47,33,33,34,56%5D,%22math-spectral-norm%22:%5B8,7,7,8,7,11,9,9,9,8%5D,%22regexp-dna%22:%5B16,40,21,75,23,22,16,18,15,17%5D,%22string-base64%22:%5B16,13,29,12,12,19,15,13,16,15%5D,%22string-fasta%22:%5B69,24,27,35,27,24,54,44,40,23%5D,%22string-tagcloud%22:%5B122,73,140,149,73,77,67,100,82,87%5D,%22string-unpack-code%22:%5B89,106,97,68,70,70,71,55,71,63%5D,%22string-validate-input%22:%5B23,69,67,30,21,22,27,23,24,22%5D%7D" title="Sun Spider of Chrome">Sun Spider of Chrome</a></p>
+<p>For a better comparison, here it is:</p>
+<p>Firefox vs IE (FROM: Firefox, TO: IE) TEST                   COMPARISON               FROM                 TO             DETAILS</p>
+<p>===============================================================================</p>
+<p>** TOTAL **:           24.7x as fast     3645.6ms +/- 1.2%    147.6ms +/- 21.0%     significant</p>
+<p>===============================================================================</p>
+<p>3d:                  30.0x as fast      518.5ms +/- 1.6%     17.3ms +/- 42.6%     significant cube:              17.8x as fast      139.0ms +/- 2.5%      7.8ms +/- 44.4%     significant morph:             141.4x as fast     198.0ms +/- 4.5%      1.4ms +/- 43.0%     significant raytrace:          22.4x as fast      181.5ms +/- 2.3%      8.1ms +/- 42.7%     significant</p>
+<p>access:              76.8x as fast      899.0ms +/- 2.7%     11.7ms +/- 38.4%     significant binary-trees:      62.4x as fast      118.5ms +/- 3.5%      1.9ms +/- 41.4%     significant fannkuch:          100.8x as fast     423.4ms +/- 3.6%      4.2ms +/- 43.0%     significant nbody:             57.6x as fast      241.8ms +/- 3.4%      4.2ms +/- 35.7%     significant nsieve:            82.4x as fast      115.3ms +/- 3.1%      1.4ms +/- 43.0%     significant</p>
+<p>bitops:              81.6x as fast      693.6ms +/- 1.9%      8.5ms +/- 22.5%     significant 3bit-bits-in-byte: 214.0x as fast 85.6ms +/- 5.4% 0.4ms +/- 150.7% significant bits-in-byte:      78.6x as fast      110.0ms +/- 5.2%      1.4ms +/- 43.0%     significant bitwise-and:       115.7x as fast     347.0ms +/- 2.4%      3.0ms +/- 0.0%      significant nsieve-bits:       40.8x as fast      151.0ms +/- 1.8%      3.7ms +/- 20.5%     significant</p>
+<p>controlflow:         46.3x as fast       74.1ms +/- 2.6%      1.6ms +/- 56.5%     significant recursive:         46.3x as fast       74.1ms +/- 2.6%      1.6ms +/- 56.5%     significant</p>
+<p>crypto:              25.6x as fast      294.1ms +/- 1.2%     11.5ms +/- 58.6%     significant aes:               22.0x as fast      147.3ms +/- 2.2%      6.7ms +/- 54.4%     significant md5:               27.5x as fast       71.5ms +/- 2.8%      2.6ms +/- 86.1%     significant sha1:              34.2x as fast       75.3ms +/- 2.3%      2.2ms +/- 82.2%     significant</p>
+<p>date:                6.33x as fast      144.3ms +/- 1.5%     22.8ms +/- 10.1%     significant format-tofte:      10.0x as fast       87.4ms +/- 1.6%      8.7ms +/- 19.4%     significant format-xparb:      4.04x as fast       56.9ms +/- 2.9%     14.1ms +/- 5.6%      significant</p>
+<p>math:                35.2x as fast      415.5ms +/- 2.5%     11.8ms +/- 24.5%     significant cordic:            90.2x as fast      189.5ms +/- 2.3%      2.1ms +/- 29.8%     significant partial-sums:      17.8x as fast      142.5ms +/- 4.4%      8.0ms +/- 17.4%     significant spectral-norm:     49.1x as fast       83.5ms +/- 5.1%      1.7ms +/- 62.8%     significant</p>
+<p>regexp:              12.2x as fast      104.9ms +/- 1.3%      8.6ms +/- 4.3%      significant dna:               12.2x as fast      104.9ms +/- 1.3%      8.6ms +/- 4.3%      significant</p>
+<p>string:              9.32x as fast      501.6ms +/- 2.6%     53.8ms +/- 10.1%     significant base64:            32.6x as fast       94.6ms +/- 1.7%      2.9ms +/- 47.1%     significant fasta:             14.9x as fast      119.4ms +/- 2.1%      8.0ms +/- 12.6%     significant tagcloud:          4.16x as fast       81.1ms +/- 5.5%     19.5ms +/- 5.8%      significant unpack-code:       6.22x as fast      103.9ms +/- 2.4%     16.7ms +/- 7.8%      significant validate-input:    15.3x as fast      102.6ms +/- 8.4%      6.7ms +/- 13.4%     significant</p>
+<p>Chrome vs IE (FROM: Chrome, TO: IE)</p>
+<p>TEST                   COMPARISON               FROM                 TO             DETAILS</p>
+<p>===============================================================================</p>
+<p>** TOTAL **:           5.19x as fast     766.5ms +/- 19.0%   147.6ms +/- 21.0%     significant</p>
+<p>===============================================================================</p>
+<p>3d:                  8.73x as fast     151.1ms +/- 17.8%    17.3ms +/- 42.6%     significant cube:              4.72x as fast      36.8ms +/- 31.7%     7.8ms +/- 44.4%     significant morph:             44.2x as fast      61.9ms +/- 20.5%     1.4ms +/- 43.0%     significant raytrace:          6.47x as fast      52.4ms +/- 29.0%     8.1ms +/- 42.7%     significant</p>
+<p>access:              4.36x as fast      51.0ms +/- 25.9%    11.7ms +/- 38.4%     significant binary-trees:      2.79x as fast       5.3ms +/- 40.2%     1.9ms +/- 41.4%     significant fannkuch:          5.81x as fast      24.4ms +/- 53.2%     4.2ms +/- 43.0%     significant nbody:             3.45x as fast      14.5ms +/- 51.3%     4.2ms +/- 35.7%     significant nsieve:            4.86x as fast       6.8ms +/- 16.3%     1.4ms +/- 43.0%     significant</p>
+<p>bitops:              6.13x as fast      52.1ms +/- 53.4%     8.5ms +/- 22.5%     significant 3bit-bits-in-byte: 12.5x as fast 5.0ms +/- 74.4% 0.4ms +/- 150.7% significant bits-in-byte:      13.3x as fast      18.6ms +/- 70.4%     1.4ms +/- 43.0%     significant bitwise-and:       2.00x as fast       6.0ms +/- 26.9%     3.0ms +/- 0.0%      significant nsieve-bits:       6.08x as fast      22.5ms +/- 62.1%     3.7ms +/- 20.5%     significant</p>
+<p>controlflow:         -                   8.6ms +/- 93.6%     1.6ms +/- 56.5% recursive:         -                   8.6ms +/- 93.6%     1.6ms +/- 56.5%</p>
+<p>crypto:              5.61x as fast      64.5ms +/- 21.8%    11.5ms +/- 58.6%     significant aes:               2.91x as fast      19.5ms +/- 41.5%     6.7ms +/- 54.4%     significant md5:               9.77x as fast      25.4ms +/- 43.6%     2.6ms +/- 86.1%     significant sha1:              8.91x as fast      19.6ms +/- 28.2%     2.2ms +/- 82.2%     significant</p>
+<p>date:                2.93x as fast      66.8ms +/- 24.0%    22.8ms +/- 10.1%     significant format-tofte:      3.72x as fast      32.4ms +/- 31.2%     8.7ms +/- 19.4%     significant format-xparb:      2.44x as fast      34.4ms +/- 41.3%    14.1ms +/- 5.6%      significant</p>
+<p>math:                7.42x as fast      87.6ms +/- 28.9%    11.8ms +/- 24.5%     significant cordic:            8.38x as fast      17.6ms +/- 49.9%     2.1ms +/- 29.8%     significant partial-sums:      7.71x as fast      61.7ms +/- 34.2%     8.0ms +/- 17.4%     significant spectral-norm:     4.88x as fast       8.3ms +/- 10.8%     1.7ms +/- 62.8%     significant</p>
+<p>regexp:              3.06x as fast      26.3ms +/- 50.5%     8.6ms +/- 4.3%      significant dna:               3.06x as fast      26.3ms +/- 50.5%     8.6ms +/- 4.3%      significant</p>
+<p>string:              4.80x as fast     258.5ms +/- 14.7%    53.8ms +/- 10.1%     significant base64:            5.52x as fast      16.0ms +/- 22.6%     2.9ms +/- 47.1%     significant fasta:             4.59x as fast      36.7ms +/- 29.8%     8.0ms +/- 12.6%     significant tagcloud:          4.97x as fast      97.0ms +/- 21.9%    19.5ms +/- 5.8%      significant unpack-code:       4.55x as fast      76.0ms +/- 15.1%    16.7ms +/- 7.8%      significant validate-input:    4.90x as fast      32.8ms +/- 40.9%     6.7ms +/- 13.4%     significant</p>
+<p>HTML  Test:</p>
+<p>For HTML5, I don’t have any reliable test. I use PeaceKeeper</p>
+<p>IE: <a href="http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056">http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056</a> - 1992</p>
+<p>Chrome: <a href="http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119">http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119</a> - 1490</p>
+<p>Firefox: <a href="http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118">http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118</a> - 850</p>
+<p>CSS3 Test</p>
+<p>For CSS3: I use <a href="http://css3test.com/">http://css3test.com/</a></p>
+<p>IE: 50%, “Determined by passing <strong>614</strong> tests out of <strong>1416</strong> total for <strong>293</strong> features”</p>
+<p>Firefox: 57%, “Determined by passing <strong>702</strong> tests out of <strong>1416</strong> total for <strong>293</strong> features”</p>
+<p>Chrome: 58%, “Determined by passing 730 tests out of 1416 total for 293 features”</p>
+<p>Thanks for reading this</p>
+]]></content>
+      <categories>
+        <category>Computer Tips</category>
+      </categories>
+  </entry>
+  <entry>
     <title>[MSP] MSP Asia – Pacific Newsletter – Jan 2015</title>
     <url>/blog/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</url>
     <content><![CDATA[<p><strong>MSP Asia-Pacific Newsletter</strong></p>
@@ -2345,7 +2345,7 @@ using std::endl;</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#83;&#104;&#x75;&#110;&#46;&#x4f;&#107;&#x75;&#x62;&#111;&#64;&#115;&#116;&#x75;&#100;&#x65;&#110;&#x74;&#112;&#97;&#114;&#x74;&#110;&#101;&#114;&#x2e;&#99;&#111;&#x6d;">&#83;&#104;&#x75;&#110;&#46;&#x4f;&#107;&#x75;&#x62;&#111;&#64;&#115;&#116;&#x75;&#100;&#x65;&#110;&#x74;&#112;&#97;&#114;&#x74;&#110;&#101;&#114;&#x2e;&#99;&#111;&#x6d;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#117;&#100;&#x65;&#110;&#x74;&#x70;&#x61;&#114;&#x74;&#110;&#101;&#x72;&#46;&#99;&#111;&#x6d;">&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#117;&#100;&#x65;&#110;&#x74;&#x70;&#x61;&#114;&#x74;&#110;&#101;&#x72;&#46;&#99;&#111;&#x6d;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2466,75 +2466,6 @@ using std::endl;</code></pre>
         <category>c</category>
         <category>Windows 10</category>
       </categories>
-  </entry>
-  <entry>
-    <title>[Computer Tips] [Part 2] Be an Advanced user with Web Browser</title>
-    <url>/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
-    <content><![CDATA[<p>Part 1 ở đây: <a href="https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">Phần 1</a></p>
-<p>Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: “Còn gì hay ho nữa không”</p>
-<p>Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.</p>
-<p>Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa</p>
-<p>Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng.</p>
-<p>Có một số add-on chỉ có Firefox mới có, và ngược lại</p>
-<a id="more"></a>
-<ul>
-<li><a href="#c%C3%A1c-addon-n%C3%A2ng-cao">Các addon nâng cao</a><ul>
-<li><a href="#noscript--firefox-only">NoScript – Firefox only</a><ul>
-<li><a href="#thi%E1%BA%BFt-l%E1%BA%ADp">Thiết lập</a></li>
-<li><a href="#s%E1%BB%AD-d%E1%BB%A5ng">Sử dụng</a></li>
-<li><a href="#blacklist-m%E1%BB%99t-%C4%91o%E1%BA%A1n-script">Blacklist một đoạn Script</a></li>
-<li><a href="#tips-and-tricks">Tips and Tricks</a></li>
-<li><a href="#l%E1%BB%A3i-v%C3%A0-h%E1%BA%A1i">Lợi và hại</a></li>
-</ul>
-</li>
-<li><a href="#ublock--firefox-v%C3%A0-chrome">uBlock – Firefox và Chrome</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko? <img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
-<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option <img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"> Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên <img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"> Vậy là xong bước thiết lập</p>
-<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích <img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"> Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript <img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"> Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại <img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"> Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử <img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"> Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt <img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"> Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì? <img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"> Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt <img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"> Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
-<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist <img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"> Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này <img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
-<h3 id="Tips-and-Tricks"><a href="#Tips-and-Tricks" class="headerlink" title="Tips and Tricks"></a>Tips and Tricks</h3><ul>
-<li><p>Để tạm thời cho phép toàn bộ script của một trang, bạn có thể chọn Temporarily allow all on this page</p>
-</li>
-<li><p>Trong một số trường hợp, trang web bị redirect (aka: chuyển qua một trang khác) quá nhanh trước khi bạn kịp “Allow” một đoạn script của trang đó, bạn có thể sử dụng tính năng “Recently Blocked Script” để cho phép các đoạn script bị block gần đây.</p>
-</li>
-<li><p>Bạn có thể Export / Import toàn bộ thiết lập của NoScript trong option của nó</p>
-</li>
-<li><p>Một số trang web không cho bạn blacklist các JavaScript của nó bằng một thủ thuật tinh vi là steal focus, làm cho bạn không thể nào click được Untrust. Bấm F12, chọn thẻ Debugging &gt; Bấm vào nút pause (có hình 2 cái vạch giống vầy || ), là bạn có thể untrust các đoạn script của nó</p>
-</li>
-<li><p>Gõ about:config trên trình duyệt, tìm noscript.untrusted để xem toàn bộ các script đang bị blacklist. Bạn có thể copy danh sách này và paste nó cho bạn bè của mình. Của mình là</p>
-</li>
-</ul>
-<pre><code>
-&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
-<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><p>Lợi</p>
-<p>Hại</p>
-<p>Thời gian load trang nhanh hơn</p>
-<p>Thiết lập phức tạp</p>
-<p>Trang web đỡ rối mắt hơn</p>
-<p>Phải thiết lập cho từng trang web một</p>
-<p>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</p>
-<p>Web chạy mượt mà hơn</p>
-<p>Loại bỏ theo dõi hành vi người dùng của các website</p>
-<p>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</p>
-<p>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</p>
-<h2 id="uBlock-–-Firefox-va-Chrome"><a href="#uBlock-–-Firefox-va-Chrome" class="headerlink" title="uBlock – Firefox và Chrome"></a>uBlock – Firefox và Chrome</h2><p>Không khuyến khích sử dụng Add-on này, vì nó sẽ chặn quảng cáo, là cần câu cơm của các trang web Bạn có bao giờ khó chịu khi mở một website lên mà quảng cáo tràn ngập, không thấy nội dung đâu hết? Các pop up hiện ra liên tục với cường độ cao, các bẫy click mà khi click vào thì quảng cáo nhảy xổ ra tràn ngập màn hình? Đã đến lúc chấm dứt cơn ác mộng đấy, bằng một add-on gọi là uBlock Tải tại đây:</p>
-<ul>
-<li>Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
-<li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></li>
-</ul>
-<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật / tắt cái nút xanh to đùng để bật / tắt quảng cáo Trước khi cài / khi bật quảng cáo <img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"> Sau khi cài / Khi tắt quảng cáo bằng cách kích hoạt uBlock <img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"> Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a> Happy surfing the Internet</p>
-]]></content>
-      <categories>
-        <category>Computer Tips</category>
-      </categories>
-      <tags>
-        <tag>add-on</tag>
-        <tag>noscript</tag>
-        <tag>ublock</tag>
-      </tags>
   </entry>
   <entry>
     <title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser</title>
@@ -2691,8 +2622,77 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[Computer Tips] [Part 2] Be an Advanced user with Web Browser</title>
+    <url>/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
+    <content><![CDATA[<p>Part 1 ở đây: <a href="https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">Phần 1</a></p>
+<p>Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: “Còn gì hay ho nữa không”</p>
+<p>Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.</p>
+<p>Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa</p>
+<p>Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng.</p>
+<p>Có một số add-on chỉ có Firefox mới có, và ngược lại</p>
+<a id="more"></a>
+<ul>
+<li><a href="#c%C3%A1c-addon-n%C3%A2ng-cao">Các addon nâng cao</a><ul>
+<li><a href="#noscript--firefox-only">NoScript – Firefox only</a><ul>
+<li><a href="#thi%E1%BA%BFt-l%E1%BA%ADp">Thiết lập</a></li>
+<li><a href="#s%E1%BB%AD-d%E1%BB%A5ng">Sử dụng</a></li>
+<li><a href="#blacklist-m%E1%BB%99t-%C4%91o%E1%BA%A1n-script">Blacklist một đoạn Script</a></li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a></li>
+<li><a href="#l%E1%BB%A3i-v%C3%A0-h%E1%BA%A1i">Lợi và hại</a></li>
+</ul>
+</li>
+<li><a href="#ublock--firefox-v%C3%A0-chrome">uBlock – Firefox và Chrome</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko? <img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
+<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option <img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"> Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên <img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"> Vậy là xong bước thiết lập</p>
+<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích <img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"> Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript <img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"> Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại <img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"> Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử <img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"> Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt <img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"> Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì? <img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"> Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt <img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"> Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
+<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist <img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"> Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này <img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
+<h3 id="Tips-and-Tricks"><a href="#Tips-and-Tricks" class="headerlink" title="Tips and Tricks"></a>Tips and Tricks</h3><ul>
+<li><p>Để tạm thời cho phép toàn bộ script của một trang, bạn có thể chọn Temporarily allow all on this page</p>
+</li>
+<li><p>Trong một số trường hợp, trang web bị redirect (aka: chuyển qua một trang khác) quá nhanh trước khi bạn kịp “Allow” một đoạn script của trang đó, bạn có thể sử dụng tính năng “Recently Blocked Script” để cho phép các đoạn script bị block gần đây.</p>
+</li>
+<li><p>Bạn có thể Export / Import toàn bộ thiết lập của NoScript trong option của nó</p>
+</li>
+<li><p>Một số trang web không cho bạn blacklist các JavaScript của nó bằng một thủ thuật tinh vi là steal focus, làm cho bạn không thể nào click được Untrust. Bấm F12, chọn thẻ Debugging &gt; Bấm vào nút pause (có hình 2 cái vạch giống vầy || ), là bạn có thể untrust các đoạn script của nó</p>
+</li>
+<li><p>Gõ about:config trên trình duyệt, tìm noscript.untrusted để xem toàn bộ các script đang bị blacklist. Bạn có thể copy danh sách này và paste nó cho bạn bè của mình. Của mình là</p>
+</li>
+</ul>
+<pre><code>
+&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
+<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><p>Lợi</p>
+<p>Hại</p>
+<p>Thời gian load trang nhanh hơn</p>
+<p>Thiết lập phức tạp</p>
+<p>Trang web đỡ rối mắt hơn</p>
+<p>Phải thiết lập cho từng trang web một</p>
+<p>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</p>
+<p>Web chạy mượt mà hơn</p>
+<p>Loại bỏ theo dõi hành vi người dùng của các website</p>
+<p>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</p>
+<p>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</p>
+<h2 id="uBlock-–-Firefox-va-Chrome"><a href="#uBlock-–-Firefox-va-Chrome" class="headerlink" title="uBlock – Firefox và Chrome"></a>uBlock – Firefox và Chrome</h2><p>Không khuyến khích sử dụng Add-on này, vì nó sẽ chặn quảng cáo, là cần câu cơm của các trang web Bạn có bao giờ khó chịu khi mở một website lên mà quảng cáo tràn ngập, không thấy nội dung đâu hết? Các pop up hiện ra liên tục với cường độ cao, các bẫy click mà khi click vào thì quảng cáo nhảy xổ ra tràn ngập màn hình? Đã đến lúc chấm dứt cơn ác mộng đấy, bằng một add-on gọi là uBlock Tải tại đây:</p>
+<ul>
+<li>Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
+<li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></li>
+</ul>
+<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật / tắt cái nút xanh to đùng để bật / tắt quảng cáo Trước khi cài / khi bật quảng cáo <img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"> Sau khi cài / Khi tắt quảng cáo bằng cách kích hoạt uBlock <img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"> Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a> Happy surfing the Internet</p>
+]]></content>
+      <categories>
+        <category>Computer Tips</category>
+      </categories>
+      <tags>
+        <tag>add-on</tag>
+        <tag>noscript</tag>
+        <tag>ublock</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Windows] How to add IsVisible Property to all WinRT UIElement</title>
-    <url>/blog/2015/07/18/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</url>
+    <url>/blog/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</url>
     <content><![CDATA[<p>Trong quá trình dev app sử dụng XAML và C#, chắc chắn bạn sẽ gặp trường hợp phải đặt thuộc tính Visibility, và thuộc tính này có 2 giá trị là Visible/Collapsed. Và để binding tới nó sử dụng bool, bạn phải sử dụng một converter. Vậy tại sao Microsoft không thiết kế nó sử dụng bool từ đầu nhỉ. Và có cách nào để khắc phục không?</p>
 <p>Bài viết được biên tập lại từ: <a href="http://www.rudyhuyn.com/blog/2015/03/26/how-to-add-isvisible-property-to-all-winrt-ui-elements/">http://www.rudyhuyn.com/blog/2015/03/26/how-to-add-isvisible-property-to-all-winrt-ui-elements/</a></p>
 <a id="more"></a>
@@ -3203,7 +3203,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] Fighting with Bugs and Exceptions</title>
-    <url>/blog/2015/11/04/visual-studio-fighting-with-bugs-and-exception/</url>
+    <url>/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</url>
     <content><![CDATA[<p>Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.</p>
 <p>Visual Studio 2015 có một cải tiến đáng giá giúp lập trình viên biết chính xác chỗ code nào bị exception, và một số cải tiến vô cùng đáng giá khác khi debug một đoạn code</p>
 <a id="more"></a>
@@ -3286,7 +3286,7 @@ using std::endl;</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/blog/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#116;&#x75;&#x64;&#121;&#x2e;&#110;&#103;&#111;&#99;&#116;&#105;&#101;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#115;&#116;&#x75;&#x64;&#121;&#x2e;&#110;&#103;&#111;&#99;&#116;&#105;&#101;&#x6e;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#x74;&#x75;&#x64;&#x79;&#46;&#110;&#103;&#111;&#99;&#116;&#x69;&#101;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x73;&#x74;&#x75;&#x64;&#x79;&#46;&#110;&#103;&#111;&#99;&#116;&#x69;&#101;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#103;&#111;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#103;&#111;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3295,25 +3295,10 @@ using std::endl;</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/blog/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#x6f;&#97;&#x74;&#x72;&#117;&#111;&#110;&#x67;&#x62;&#97;&#x63;&#104;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#x6b;&#x68;&#x6f;&#97;&#x74;&#x72;&#117;&#111;&#110;&#x67;&#x62;&#97;&#x63;&#104;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#116;&#x72;&#117;&#x6f;&#x6e;&#103;&#98;&#x61;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;">&#107;&#x68;&#x6f;&#x61;&#116;&#x72;&#117;&#x6f;&#x6e;&#103;&#98;&#x61;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#111;&#x61;&#116;&#114;&#117;&#111;&#110;&#x67;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;">&#x6b;&#x68;&#111;&#x61;&#116;&#114;&#117;&#111;&#110;&#x67;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#104;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#46;&#x63;&#x6f;&#109;">&#107;&#104;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#46;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2015 in review</title>
-    <url>/blog/2015/12/29/2015-in-review/</url>
-    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2015 annual report for this blog.</p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
-<p>Here’s an excerpt:</p>
-<blockquote>
-<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>13,000</strong> times in 2015. If it were a concert at Sydney Opera House, it would take about 5 sold-out performances for that many people to see it.</p>
-</blockquote>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/">Click here to see the complete report.</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
       </categories>
   </entry>
   <entry>
@@ -3349,6 +3334,21 @@ using std::endl;</code></pre>
         <tag>blog</tag>
         <tag>tách</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2015 in review</title>
+    <url>/blog/2015/12/30/2015-in-review/</url>
+    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2015 annual report for this blog.</p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
+<p>Here’s an excerpt:</p>
+<blockquote>
+<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>13,000</strong> times in 2015. If it were a concert at Sydney Opera House, it would take about 5 sold-out performances for that many people to see it.</p>
+</blockquote>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/">Click here to see the complete report.</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
   </entry>
   <entry>
     <title>[Visual Studio Online] TFS love Slack, and vice versa</title>
@@ -3510,6 +3510,15 @@ using std::endl;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
+    <url>/blog/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#x78;&#99;&#x73;&#x39;&#48;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x78;&#99;&#x73;&#x39;&#48;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#120;&#99;&#115;&#x39;&#48;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#97;&#120;&#99;&#115;&#x39;&#48;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+  </entry>
+  <entry>
     <title>[ASP.NET CORE] – My road trip to ASP.NET core – Getting Started</title>
     <url>/blog/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</url>
     <content><![CDATA[<p>Bài viết theo quan điểm cá nhân, các bạn vui lòng đừng ném đá u đầu chết.</p>
@@ -3574,15 +3583,6 @@ using std::endl;</code></pre>
       <tags>
         <tag>core</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
-    <url>/blog/2016/03/23/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#x63;&#115;&#57;&#x30;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#97;&#120;&#x63;&#115;&#57;&#x30;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#x78;&#99;&#115;&#57;&#48;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#97;&#x78;&#99;&#115;&#57;&#48;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
-]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
   </entry>
   <entry>
     <title>C# string performance – Tips and Tricks</title>
@@ -3858,7 +3858,7 @@ if(string.IsNullOrEmpty(s))
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/blog/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#117;&#x6f;&#110;&#x67;&#97;&#x6e;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x6c;&#117;&#x6f;&#110;&#x67;&#97;&#x6e;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#x75;&#x6f;&#110;&#x67;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x6c;&#x75;&#x6f;&#110;&#x67;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#108;&#x75;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4341,7 +4341,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Identity] - 1 - Introduction</title>
-    <url>/blog/2017/08/29/aspnet-identity-1-introduction/</url>
+    <url>/blog/2017/08/30/aspnet-identity-1-introduction/</url>
     <content><![CDATA[<p>Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity phình to tới mức khó tin, và là một cục xương khó nhằn cho bất kỳ ai mới học ASP.NET</p>
 <a id="more"></a>
 <ul>
@@ -6384,81 +6384,6 @@ if(string.IsNullOrEmpty(s))
       </tags>
   </entry>
   <entry>
-    <title>[Research] - LaTex on Windows - Step by step installation</title>
-    <url>/blog/2019/04/02/latex-on-windows-step-by-step-installation/</url>
-    <content><![CDATA[<p>In this blog, I will instruct you on how to install and writing LaTex documents on Windows with ease.</p>
-<ul>
-<li><a href="#1-requirement">1. Requirement</a><ul>
-<li><a href="#11-list-of-software">1.1 List of software</a></li>
-<li><a href="#12-installing-miktex">1.2 Installing MikTex</a></li>
-</ul>
-</li>
-<li><a href="#2-setup-on-visual-studio-code">2. Setup on Visual Studio Code</a></li>
-<li><a href="#3-writing-on-visual-studio-code">3. Writing on Visual Studio Code</a></li>
-<li><a href="#4-collaboration">4. Collaboration</a><ul>
-<li><a href="#41-vscode-live-share">4.1 VSCode Live Share</a></li>
-<li><a href="#42-start-collaboration">4.2 Start Collaboration</a></li>
-<li><a href="#43-join-a-shared-collaboration-session">4.3 Join a shared collaboration session</a></li>
-<li><a href="#44-live-share-maximum-collaborators">4.4 Live Share Maximum collaborators</a><a id="more"></a>
-<h1 id="1-Requirement"><a href="#1-Requirement" class="headerlink" title="1. Requirement"></a>1. Requirement</h1></li>
-</ul>
-</li>
-</ul>
-<h2 id="1-1-List-of-software"><a href="#1-1-List-of-software" class="headerlink" title="1.1 List of software"></a>1.1 List of software</h2><p>First thing first, you would need to download and install a series of software.</p>
-<blockquote>
-<p>Choose the correct version with your windows (x86/x64)</p>
-</blockquote>
-<ol>
-<li><a href="http://strawberryperl.com/">StrawberryPerl</a></li>
-<li><a href="https://code.visualstudio.com/download">Visual Studio Code (text editor, not confused with Visual Studio IDE)</a></li>
-<li><a href="https://miktex.org/download">MikTex</a> (easier to install and use)</li>
-</ol>
-<blockquote>
-<p>For me, MikTex is kinda difficult to download. The server close connection every 30-45 secs. If this happened to you, use a download manager. For example: <a href="http://www.freedownloadmanager.org/download.htm">Free Download Manager</a></p>
-</blockquote>
-<h2 id="1-2-Installing-MikTex"><a href="#1-2-Installing-MikTex" class="headerlink" title="1.2 Installing MikTex"></a>1.2 Installing MikTex</h2><p>Accept all default option, and wait for the installation completed.</p>
-<p>Start &gt; MikTex Console &gt; Updates &gt; Check for updates</p>
-<p><img src="https://lh3.googleusercontent.com/hKiTMvw_chg0MzcT0UenM6z1M7zU7NJJkLop9Nq_5nVy_SUeN7BpS9j1mvLERjMfhBcRzcnu5New9thPpx4IRuByXO7RNijbkJbkCbQTisLSO4tqgWPQFHzE50hI13XjwCCYsQYiiA=w2400" alt="Update MikTex Packages"></p>
-<blockquote>
-<p>In case of difficult in download packages, you can change ‘Install from’ option with a <code>http</code> repository</p>
-</blockquote>
-<p>Install <code>latexmk</code> package</p>
-<p><img src="https://lh3.googleusercontent.com/Wr5yvLr37Tn5pQgda46K2EfUTKFw9qwWkZ0iJFs0Fpi7AJSB_iMFWqE80T3-CqE_r_WdT2RIdho2gvxZqOPu27sinQtqjon5dS2zf_L_gFvS33haw-KRnPfipks2rqMevPaWb1UeoycVx44tAsHuLps5AefKa2PP2Mx7-mItHFd0cYKIPqyy98QpDlypjQmGnsszKzdJ2IOrl3TmIK38kn7ESKPczK4FNN1UKLWfijqySHZ6aUoVWcsM3X4T7cJiFiuD-Mxazoxh5Y8QOWLkA2705VLniHlt_0D8U0WzG-TvVLvr0O2TS5m5i1FTpY5iis55MgF1isyDDzPZ6xUQ2UX15lAv4XCDuzhJP-BiNXb3eDArLDoynxUQv3gTDY8myBwIPhWGtnMcsB2QHyQkwXuEQyftQG4KKUeiYRjmq1g3uM8FXLvT949MnggObXdDewcnI3gnnbmoSEK2FCFyue10QnJbR9Ks0LAnZDfvDvW0fL0F9HSm5yw7C4wNeZskGxBqAWn-f2sy7tX1twEOYcy9QVJcHJ2V1I-6Th_7OCn86OdPePRgopd1FCTPfetLy0pDlyrfIAxWvC2Eiycooqn0WEsmxpojP4QiZhteO-2EMKQYdMluHP-e_51Zf7OR0LRVjftUOntg5XYFWE55bsbrmyyowbI3SpYBt4b51juG_JwMkQmnyYtVTF4u_Q7SjikShzZRNbvPsDoRUTk3irKH=w802-h632-no" alt="latexmk"></p>
-<h1 id="2-Setup-on-Visual-Studio-Code"><a href="#2-Setup-on-Visual-Studio-Code" class="headerlink" title="2. Setup on Visual Studio Code"></a>2. Setup on Visual Studio Code</h1><p>If you are opening Visual Studio Code while installing MikTex and Perl ActiveState, please CLOSE Visual Studio Code and open it again.</p>
-<p>Open Extension &gt; search for Latex &gt; Install LaTeX Workshop</p>
-<p><img src="https://lh3.googleusercontent.com/vr8qIvd2Bz3tT0srcGXASblQHtvInX_cZKZtugGzLfZ71TbWWb3ddmAaHDpuSCO3Rz18KzyYuOBdX15Pgn_7p47EohvqiVCyJ8Ygur8qE9XI5cGeAk6nEMgLuyh2iVy1oIddau0iIbFLSxr6QvpJeT8HFrVD7P4ljDhKOLeBY72uyuEBBZjiqjrm5BIT21h2qZzqG0E-mytMi747yK98kwYUay3cec0uEX3ShVJIr8ffYfTAS17tQ5QdA0zpcql8Kc7yTWpsPMrN-5lCJQYlQnmH5-5AVxlugLVB956LMKXGuj22OUWHv3BpxJvTMPq0GzlvnTbRDhRLLUji-WlTU8rhHlRtbCGBb3SZjt-8aNAPLBtAoGRYWbSEpQiZILwslexygTxsMrkUmarXlfGJONKWt94c4vyFmwLlln8DdGB5ER3R8njYaH1RFxHnUBYAz2mOGuMDkY2_jAxQo1vLW0ftf1bQGEE0SddAnBUoj87n7lbULZi_q2bOJLUfgMn2JHGJq225OeD5oADbhCyJq4cMWTD9xqxS1YG6KGBH_1LWlyOyVd61aHob2UJa_Bh_YJR4fGg-LX2qB8XIHg3pl06rYLFmhSXlACOPYsyW7O3OORa0qcDKhgnzJS-LnXCndxbpOzM42R9lLCcCIkt558-TYaqKUDB0Lx8mc1IiQ4Mp49U6cbjQHbc6CMUe9z23nH3iCfdn_a0ASOuAICKCQi5Y=w699-h488-no" alt="LaTeX Workshop"></p>
-<h1 id="3-Writing-on-Visual-Studio-Code"><a href="#3-Writing-on-Visual-Studio-Code" class="headerlink" title="3. Writing on Visual Studio Code"></a>3. Writing on Visual Studio Code</h1><p>It is recommended to create a folder for each LaTeX document (to store images, charts, data file, etc).</p>
-<p>Open that folder with Visual Studio Code, create a new file ended with <code>.tex</code></p>
-<p>Open that <code>.tex</code> file, then you can start playing with your LaTeX</p>
-<p><img src="https://lh3.googleusercontent.com/lT5SSLoB-mNXiVL8N9szGf5l36w1u4LgxK2JwSCFKiZFgXXF8Og17FuYaBwcCHZogn_ut-aymvoJRn-3yKgF0f6PGREaNym8ZH0kwvPHA6_wqSRBo1xO5cZQd3th8kQd9MogtWLPN6fFCNk-ww8gUiZQNxhYnvG0c4ASCePogPFb-ldilXV-RoM5VSUShrxRBicNTIenJ2jAFAsNf9Pd-HXeGz1iYEXcEEo7aU14__e1v_8UHlm6d1SqvdTdta-xuvrvI59MGW9eGrCWbsC0mX7EDKQkIUX1G5FzESvSEEEw5VYzr37GdRygooETBAaiJdAwaPG3IT1BtBYc3sRxv6xdZc-iyQZUdWJQb1FqUtJtckMME89NtQ7DlOvwv-2wpR3N9dagmKvirRH95ZOtG8iDkWSmjxpW1cXNGBfCw4WkwvnVMNSlgR6-rOpvX9osE0MbaaTLQNfRsCimqjYaMUu8_N26u1oEBoGc6jrrCD2kNtMO2kFI8nS9eF6YASftwF9mMCqpSouWOfjsMjhVeD5XNoaAFEPa3AMaoXXlYD_k7G8V1TmFT1D9IX4umcw1domD1iZNddrf79tvToTCL4dBS7C-jrRh4F22MgFTd5Ga_6woKz9t1Gk7WR3iytTbsO7s1s74BKjmRj97X80PHv5czTvCIMICUTGZ3iZKDvQVTmrRiIw0OEiWmMXSqvod44viPo9dtDfDdQFPiEFXEoOn=w594-h316-no" alt="writing latex"></p>
-<p>To preview the rendered PDF, you can click on small icon on the top-right corner</p>
-<p><img src="https://lh3.googleusercontent.com/fxx75if3R_weAeIaewFsJMXOEKY0TCPuOius0tbqidi3sB-DU5hBsCY_vFNtEqr-4B0DoXGsPq649OIG_9pM6rh2X2UP8In9UQ6lH41vPrHkq3UwMMRKUcrJyO6w-XBoZvl1YeuwO4r9gzXv22JA4TdmWxbDCMi0x3l3DfCnTTaQYyhuxsBoE3iCg6-xfI2oK4rO8OH-12kHLZ0Uf08HhSolhLP01sxzwOiJs9jrUuM9UCa6CPHHF5bVOQa-llPz-ZNLZy8PZacU4orXOHQSr106PgKH-Jw10Lrd2RWBeNtoIziSyMPkG38z_g1wDhJRHBy1iC8Rs940URXh6EilLCIFEqRSAyu35_2znAqQ11MstXwkeTclgv3XGVZHbaMJkeKXneB6a0jMTUXdL6XyHrYBUUaEkNdoiV6GwimUPUICK9zAC8duUNK3y4di9s8X0ew-Ypjl396pUGh0GQudIYLkZwzvqxQNIgJ0-F2gh-8BscL9upPjpFgpVCOv1Ni6RpOY4kQLNkG1tH2hD_YqqO-NElntrxg_N_vVCY0JP7Oq-wy_GBw67EAtTugdPQYdHV1S0r8UUbPO4IgTo6tV5U9EnKaKklFjB7rx32Z5zoEGt2ATfuBS_2iDCfi40e8kJ3IL4PuL-219_25hr1abJrYeRQOaP83z2xAxoVadV-qG4Vn5pui6jFd9yuyPgXE2p7z1Q_Iq4d_S8nxzgcPIlXwU=w457-h215-no" alt="preview PDF"></p>
-<h1 id="4-Collaboration"><a href="#4-Collaboration" class="headerlink" title="4. Collaboration"></a>4. Collaboration</h1><p>Okay okay, it’s cool, but <em><strong>why</strong></em> do I need to write LaTeX offline, using Visual Studio Code, instead of the awesome <a href="https://www.overleaf.com/">Overleaf</a>?</p>
-<p>The answer is the price. For collaboration, overleaf offer 80 USD/year for 6 students (the price is higher if you don’t have student account).</p>
-<p>With visual studio code, it’s free, and super fast too.</p>
-<h2 id="4-1-VSCode-Live-Share"><a href="#4-1-VSCode-Live-Share" class="headerlink" title="4.1 VSCode Live Share"></a>4.1 VSCode Live Share</h2><p>Live Share is an amazing feature offered by Microsoft. It’s not even share files, it’s also share folders and projects.</p>
-<p>To begin with, install VS Live Share extension</p>
-<p><img src="https://lh3.googleusercontent.com/o8pCg6t8GTje2dHSMWtpY2w8NDnUBn5bJwjLFt5FYlZQ-hG-Tqui1_0snN0_QEAAC5nNi7l0v7C2K4n7o6Op52-8VIihQ_npqYo2IzTcpvDQlatMwn3t7qzcaBylosda0bfRquUkCYG553lIi1xzmVVI63AbX00DEmpJIP3xWhEoxDUUOIFIu9WiJVsrIOKpSV4G2wKoJtT0UvVmSbi9KHEo_UW4_Q2vZu2zHNO3pxXOrov13GIwQpOjOQ9uEPnqlPglYJOomrFZJdP1bRlO9dwj1nBr_qs9xF81TIdiXxhhxahiI5rjkEnBZElHbTXbXNJ7giP4dKNRw_1bDC5fZ6Lkk4PIgDX6GYk6mfH0WH73rDzM-jMPRL0ndptmmQmgjws0n-EgZJNhxwO0otXNJb7_EMr228fyXNlD1qerjEKgAZ5MPGZX9TkQFBxW70Xf1hExD7cuXwJujbKVmjU7OMjFWfPu7TrrIlG6SrEOHe7--PgqmITPHjB0-wQcUmY6_UFZnMnLiievB2a2VybN3_wRxRilKG2uQch45zYc6799VttsI67EO-gPWgjB9PezI_BqKiOQomR_7GWr9gilcHlQmAYdMsV4c98tJ_0P-ZbLNDk3jLtxMqImCEgaW_YeQgUck5BqFjR3774FbdkWJMCs-w3j7KtkkJN4yCFZpS7qn9d0VF7OXPEPHNYYLKeoM4q9jI8_az31vLRhM_oBagul=w701-h383-no" alt="Live Share"></p>
-<h2 id="4-2-Start-Collaboration"><a href="#4-2-Start-Collaboration" class="headerlink" title="4.2 Start Collaboration"></a>4.2 Start Collaboration</h2><p>After installation complete, a new feature appeared in VSCode</p>
-<p>Click on that Live Share feature, then <code>Start collaboration session...</code></p>
-<p><img src="https://lh3.googleusercontent.com/xsctwS3GAoe0nTciAGsYE5aYQE2sJq1Llq8YLukCJEMOU3LTiUXNxl7k2rao1d13MG5R7yQmQD4fpLGyLUM3vngH31TSobcA7yhh2raKIcXJDeFaaP3z3NZg8eTxe0nFr__AeriaZ2-3ULpPN7TKjd16AXgNe9px0M60uzyFR7iaGS6sGRsqVYZaVNdugMVzwjhsM-VmAFKFtohzxDn-wbjdqQyf9T-MmKE4Ze4Du-3K5uiQxblBOyvWiSelVXSnw4jvTZ8mu5L5LczGT4kwWGQ0aYFZ_wOAWtejpTk5Beek68vG5Km2eg-c2JK8zsOYN8EVxS4etwMtxTJ2b5wUCfhOl8ra_KC21AHqm5rHsMWM4QmKVkUjg6RneXLclNkQ1RcA3ntmInQcb3NRtLmEpA0-K58i25VrqPsTBWlpIfKarXbnSTRkpeu8IzOwBjqFLxJZWZuBLt4FhBS8Iln8f7EgZxgTynm9UudikU2B_gcwRBUebfXcFE9Y5g07hs7uhIz4ZddLU_eX7_Tpe4H0sGYgyxzjlWyb6sYODGEUQtTEE4VVzLwRA4TSoa6vef7Ek2jaUauOsbDzdT9niTydPp_AYPhZIbwn-8pQnqwfTx-5D5CJuAE4nvvFzCQJwTloIWfp9FyhUrziJztUaRTf8sJXX8pZv8BcgYxSgCqYVNFXD7HSDgmCJ-brXg1zkrPMKSRZSqzTAnz58tbV31IYw5g8=w656-h599-no" alt="start collaboration session"></p>
-<p>It will open a new website that require you login with either Microsoft Account (outlook, hotmail, live) or GitHub Account.</p>
-<p>For this tutorial, I will use my github account</p>
-<p><img src="https://lh3.googleusercontent.com/mC6wby4g6KGGad9dFmNa9UeNer-lVYEn3QEEXqe16I-0IxBoRfnRs6T2sWt3rs0btagDKi1lgbXTKbiPOcqjTmR-_OiScKg6jp87kzVKq7RDTaZ_nd7-YGNVSnCQyl7W3HhVKJvpAcdXPpo5tMuKszkeM0kHHPnXzhNkOBTiGg3l4DyzM1w9CeIhydmwErvzgLzVfOJmosEsVPrwT8d-QT5RF9ZX01VyWmaaTcxZ725rB8iSBiAF4-T6RvwiHJB-vuSmqnioFNGjQ0llR79OfEupHrm2mPZQRqg5vGjfLTrYfP2CKJw0Qefrz_wyhFgPqJ6uMhlSnjxUY6NYZ2GQeTsdS_E4ZDm0isBFlqkd3CEJEG1WAr41ooNHPdAvH3KeeBxW9c4-BKFYubjyrodHJf5f4ub0kvhvk9Q1QqSvKftNNJhYfbXnkk_0t_sZAC5MZKgapuuXLapP0WfCv-pNP_HXXjYq4x55rCa8IBQe4c1JBFd3w6fBzULBLqCbvkfoxzXeCp039GJsqdggW4a3R2g1liyemGqmz_mgFvUYmszKM2cWesSv4HQJ4mKO1z26Rtaglj9F9POHJtNQJl55ByRvIffhJBmO_oHw8vkD_6FX1PYiY9kI4rKFg9JFsFwBDe_X3hoajxFUc4o-bsfiMztQd_LYn19Kd1DIg9Ci5p8jfIX4ECEG4u4scLO87LqA-88TzY-qkPSmsIX9bMLzcxAW=w676-h604-no" alt="github"></p>
-<p>After authorized, Live Share will start working. You can paste the generated link for other users</p>
-<p><img src="https://lh3.googleusercontent.com/WTCm3ZmcTIpKgebl1Hj6ktgKOyZVLUZa6tIAjZYK01AR0id4u2vIdbND2V7Yd6osWNFgClXDSbinESXDWVi3HT5qIIbsPJCaof6GYU9stanOWLb5LGfWD1Kwy8cqnj-q1DzBmA8UCEWgzsK-AYyA4xpl4ybhU2BEyNiS-yQKA4Jay2xXqAnFqaX4wmBPlwEePBFtJikIgiCDzPw75qKx0imDe8z9qqpADaM32cTokrXphiMM5P1tqK8yc-b4ITLd7EGkZpFuQ5QoLOVxOldmbMBmdxtoPuzJNvWBNC6KcPn_Cz8L3FwFVuw4o44jlOg2MJQh4E8FsDszh-3G5Q-9AxoiyDCvLSZMtOHYDqxyc8ApCZaVZy9CqBkDsaL627RIoUvQXE6Dgvr72O3_NDV6FfVxaHPZ1UnRtr5fqqeYrDrPRGQeUIxxfhpz7DFCy8hCuoB-USuKLUAJff3XkhEb6G35hV2jWeNaiQ3fMTikrn76gLqoU6cGZcdTRj0vT_1yHCInaB--ethRevpjISoCX8Dk6YxqY7OBk1kXM-RIO74GbMiWFhcrqkh6ul9kQMEw0RXOT60hd8ThCQtdfy3Q7gokH8bLEYHoOtXaGoBc3yhdBYMkT_nwvL3RYS2to0LBNGQqGJ6R_afekBr9gnkqKCeWUhnfg3XwVOzwLGglDYMqYQ1wERV17mNDvoAvKtps8N9HBIoGgNTmmuli1EYhAppY=w531-h435-no" alt="copy the link"></p>
-<h2 id="4-3-Join-a-shared-collaboration-session"><a href="#4-3-Join-a-shared-collaboration-session" class="headerlink" title="4.3 Join a shared collaboration session"></a>4.3 Join a shared collaboration session</h2><p>If you are not the one who sharing, but the one who join, it’s even easier.</p>
-<p>Open Live Share feature &gt; <code>Join collaboration session</code> &gt; Paste the link you have to the box appeared then press <code>Enter</code></p>
-<p>If successful, it should be like this</p>
-<p><img src="https://lh3.googleusercontent.com/lLtsGd3A741aHZVSpLIIJHvN4Z6Nd0j5G4osNktOxr2K0aB0U_UPUS-C3zs0py-mt9b5psaMIbGeiaXxdO6Z-zvvRDuFRwT2O018uXGX06UIGknCKgEvCEdJypiBrVr9tUGYvc8ndiFlB6QzsScQpxuQdKAhZ-o7vEnkwSYnHrSGvFKAKjWBkMJdr8ixn6T0Cm7_qL7tsq0dNiTdUatlqPN1fP2xFNZBSUCaHjujiz5EJxyoTqMMgJAEJ_Y746I3u566vsXQYkumdbHwTWdwivO4l9NSZW52Ux1OnCPpVMyK51AvvfB3Nr7-A-cRXlWXLG1QeHt5yh0ieW3xuHXGtcvsv6iKEtC9Llm9Foczd9e1kiIDQ2rBo5KluLQmTI_aP5fM9bjQFz7CP2gjDlqET-K-kUpxj-OuA6oRE_NJ-sVEIKf526sP7pxkusS97OsF-b_G6nJd7ncbpD-3POuDHoxaUNlPMRiJ9AaHoeGMBSE_zTnmSiN3zPw63Lo49YCPTxVpWRf9FUQsHlJL0XfwGOVDHHwkJcxhzbDPvlBCWfJ_Xhryn6QGBiFm-zm4nRWch_79rw5SWvmFPXkPHIaKxt1Cn2cD-Q8tPG5M3cy9HPVpjXSuQUuxDbNbtypjfbss_tYMVTvVwpcY2VX2whYpNniHoGzDfSt_0b-aa2Xz4wu20Sf7YvyFCQssGkKntXnHGs9PeVObQUg-Po1AgQvcueqa=w956-h595-no" alt="join collaboration session"></p>
-<h2 id="4-4-Live-Share-Maximum-collaborators"><a href="#4-4-Live-Share-Maximum-collaborators" class="headerlink" title="4.4 Live Share Maximum collaborators"></a>4.4 Live Share Maximum collaborators</h2><p>The short answer: 5</p>
-<p>For more information on when/how you can increase this number can be found here: <a href="https://github.com/MicrosoftDocs/live-share/releases/tag/0.3.788">https://github.com/MicrosoftDocs/live-share/releases/tag/0.3.788</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Machine Learning - 2.3 - Exercise</title>
     <url>/blog/2018/10/18/machine-learning-2-3-exercise/</url>
     <content><![CDATA[<p>Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi bài tập trong tuần 2 của khóa học Machine Learning của giáo sư Andrew Ng.</p>
@@ -6552,6 +6477,81 @@ end</code></pre>
 ]]></content>
       <categories>
         <category>Machine Learning</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>[Research] - LaTex on Windows - Step by step installation</title>
+    <url>/blog/2019/04/02/latex-on-windows-step-by-step-installation/</url>
+    <content><![CDATA[<p>In this blog, I will instruct you on how to install and writing LaTex documents on Windows with ease.</p>
+<ul>
+<li><a href="#1-requirement">1. Requirement</a><ul>
+<li><a href="#11-list-of-software">1.1 List of software</a></li>
+<li><a href="#12-installing-miktex">1.2 Installing MikTex</a></li>
+</ul>
+</li>
+<li><a href="#2-setup-on-visual-studio-code">2. Setup on Visual Studio Code</a></li>
+<li><a href="#3-writing-on-visual-studio-code">3. Writing on Visual Studio Code</a></li>
+<li><a href="#4-collaboration">4. Collaboration</a><ul>
+<li><a href="#41-vscode-live-share">4.1 VSCode Live Share</a></li>
+<li><a href="#42-start-collaboration">4.2 Start Collaboration</a></li>
+<li><a href="#43-join-a-shared-collaboration-session">4.3 Join a shared collaboration session</a></li>
+<li><a href="#44-live-share-maximum-collaborators">4.4 Live Share Maximum collaborators</a><a id="more"></a>
+<h1 id="1-Requirement"><a href="#1-Requirement" class="headerlink" title="1. Requirement"></a>1. Requirement</h1></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-List-of-software"><a href="#1-1-List-of-software" class="headerlink" title="1.1 List of software"></a>1.1 List of software</h2><p>First thing first, you would need to download and install a series of software.</p>
+<blockquote>
+<p>Choose the correct version with your windows (x86/x64)</p>
+</blockquote>
+<ol>
+<li><a href="http://strawberryperl.com/">StrawberryPerl</a></li>
+<li><a href="https://code.visualstudio.com/download">Visual Studio Code (text editor, not confused with Visual Studio IDE)</a></li>
+<li><a href="https://miktex.org/download">MikTex</a> (easier to install and use)</li>
+</ol>
+<blockquote>
+<p>For me, MikTex is kinda difficult to download. The server close connection every 30-45 secs. If this happened to you, use a download manager. For example: <a href="http://www.freedownloadmanager.org/download.htm">Free Download Manager</a></p>
+</blockquote>
+<h2 id="1-2-Installing-MikTex"><a href="#1-2-Installing-MikTex" class="headerlink" title="1.2 Installing MikTex"></a>1.2 Installing MikTex</h2><p>Accept all default option, and wait for the installation completed.</p>
+<p>Start &gt; MikTex Console &gt; Updates &gt; Check for updates</p>
+<p><img src="https://lh3.googleusercontent.com/hKiTMvw_chg0MzcT0UenM6z1M7zU7NJJkLop9Nq_5nVy_SUeN7BpS9j1mvLERjMfhBcRzcnu5New9thPpx4IRuByXO7RNijbkJbkCbQTisLSO4tqgWPQFHzE50hI13XjwCCYsQYiiA=w2400" alt="Update MikTex Packages"></p>
+<blockquote>
+<p>In case of difficult in download packages, you can change ‘Install from’ option with a <code>http</code> repository</p>
+</blockquote>
+<p>Install <code>latexmk</code> package</p>
+<p><img src="https://lh3.googleusercontent.com/Wr5yvLr37Tn5pQgda46K2EfUTKFw9qwWkZ0iJFs0Fpi7AJSB_iMFWqE80T3-CqE_r_WdT2RIdho2gvxZqOPu27sinQtqjon5dS2zf_L_gFvS33haw-KRnPfipks2rqMevPaWb1UeoycVx44tAsHuLps5AefKa2PP2Mx7-mItHFd0cYKIPqyy98QpDlypjQmGnsszKzdJ2IOrl3TmIK38kn7ESKPczK4FNN1UKLWfijqySHZ6aUoVWcsM3X4T7cJiFiuD-Mxazoxh5Y8QOWLkA2705VLniHlt_0D8U0WzG-TvVLvr0O2TS5m5i1FTpY5iis55MgF1isyDDzPZ6xUQ2UX15lAv4XCDuzhJP-BiNXb3eDArLDoynxUQv3gTDY8myBwIPhWGtnMcsB2QHyQkwXuEQyftQG4KKUeiYRjmq1g3uM8FXLvT949MnggObXdDewcnI3gnnbmoSEK2FCFyue10QnJbR9Ks0LAnZDfvDvW0fL0F9HSm5yw7C4wNeZskGxBqAWn-f2sy7tX1twEOYcy9QVJcHJ2V1I-6Th_7OCn86OdPePRgopd1FCTPfetLy0pDlyrfIAxWvC2Eiycooqn0WEsmxpojP4QiZhteO-2EMKQYdMluHP-e_51Zf7OR0LRVjftUOntg5XYFWE55bsbrmyyowbI3SpYBt4b51juG_JwMkQmnyYtVTF4u_Q7SjikShzZRNbvPsDoRUTk3irKH=w802-h632-no" alt="latexmk"></p>
+<h1 id="2-Setup-on-Visual-Studio-Code"><a href="#2-Setup-on-Visual-Studio-Code" class="headerlink" title="2. Setup on Visual Studio Code"></a>2. Setup on Visual Studio Code</h1><p>If you are opening Visual Studio Code while installing MikTex and Perl ActiveState, please CLOSE Visual Studio Code and open it again.</p>
+<p>Open Extension &gt; search for Latex &gt; Install LaTeX Workshop</p>
+<p><img src="https://lh3.googleusercontent.com/vr8qIvd2Bz3tT0srcGXASblQHtvInX_cZKZtugGzLfZ71TbWWb3ddmAaHDpuSCO3Rz18KzyYuOBdX15Pgn_7p47EohvqiVCyJ8Ygur8qE9XI5cGeAk6nEMgLuyh2iVy1oIddau0iIbFLSxr6QvpJeT8HFrVD7P4ljDhKOLeBY72uyuEBBZjiqjrm5BIT21h2qZzqG0E-mytMi747yK98kwYUay3cec0uEX3ShVJIr8ffYfTAS17tQ5QdA0zpcql8Kc7yTWpsPMrN-5lCJQYlQnmH5-5AVxlugLVB956LMKXGuj22OUWHv3BpxJvTMPq0GzlvnTbRDhRLLUji-WlTU8rhHlRtbCGBb3SZjt-8aNAPLBtAoGRYWbSEpQiZILwslexygTxsMrkUmarXlfGJONKWt94c4vyFmwLlln8DdGB5ER3R8njYaH1RFxHnUBYAz2mOGuMDkY2_jAxQo1vLW0ftf1bQGEE0SddAnBUoj87n7lbULZi_q2bOJLUfgMn2JHGJq225OeD5oADbhCyJq4cMWTD9xqxS1YG6KGBH_1LWlyOyVd61aHob2UJa_Bh_YJR4fGg-LX2qB8XIHg3pl06rYLFmhSXlACOPYsyW7O3OORa0qcDKhgnzJS-LnXCndxbpOzM42R9lLCcCIkt558-TYaqKUDB0Lx8mc1IiQ4Mp49U6cbjQHbc6CMUe9z23nH3iCfdn_a0ASOuAICKCQi5Y=w699-h488-no" alt="LaTeX Workshop"></p>
+<h1 id="3-Writing-on-Visual-Studio-Code"><a href="#3-Writing-on-Visual-Studio-Code" class="headerlink" title="3. Writing on Visual Studio Code"></a>3. Writing on Visual Studio Code</h1><p>It is recommended to create a folder for each LaTeX document (to store images, charts, data file, etc).</p>
+<p>Open that folder with Visual Studio Code, create a new file ended with <code>.tex</code></p>
+<p>Open that <code>.tex</code> file, then you can start playing with your LaTeX</p>
+<p><img src="https://lh3.googleusercontent.com/lT5SSLoB-mNXiVL8N9szGf5l36w1u4LgxK2JwSCFKiZFgXXF8Og17FuYaBwcCHZogn_ut-aymvoJRn-3yKgF0f6PGREaNym8ZH0kwvPHA6_wqSRBo1xO5cZQd3th8kQd9MogtWLPN6fFCNk-ww8gUiZQNxhYnvG0c4ASCePogPFb-ldilXV-RoM5VSUShrxRBicNTIenJ2jAFAsNf9Pd-HXeGz1iYEXcEEo7aU14__e1v_8UHlm6d1SqvdTdta-xuvrvI59MGW9eGrCWbsC0mX7EDKQkIUX1G5FzESvSEEEw5VYzr37GdRygooETBAaiJdAwaPG3IT1BtBYc3sRxv6xdZc-iyQZUdWJQb1FqUtJtckMME89NtQ7DlOvwv-2wpR3N9dagmKvirRH95ZOtG8iDkWSmjxpW1cXNGBfCw4WkwvnVMNSlgR6-rOpvX9osE0MbaaTLQNfRsCimqjYaMUu8_N26u1oEBoGc6jrrCD2kNtMO2kFI8nS9eF6YASftwF9mMCqpSouWOfjsMjhVeD5XNoaAFEPa3AMaoXXlYD_k7G8V1TmFT1D9IX4umcw1domD1iZNddrf79tvToTCL4dBS7C-jrRh4F22MgFTd5Ga_6woKz9t1Gk7WR3iytTbsO7s1s74BKjmRj97X80PHv5czTvCIMICUTGZ3iZKDvQVTmrRiIw0OEiWmMXSqvod44viPo9dtDfDdQFPiEFXEoOn=w594-h316-no" alt="writing latex"></p>
+<p>To preview the rendered PDF, you can click on small icon on the top-right corner</p>
+<p><img src="https://lh3.googleusercontent.com/fxx75if3R_weAeIaewFsJMXOEKY0TCPuOius0tbqidi3sB-DU5hBsCY_vFNtEqr-4B0DoXGsPq649OIG_9pM6rh2X2UP8In9UQ6lH41vPrHkq3UwMMRKUcrJyO6w-XBoZvl1YeuwO4r9gzXv22JA4TdmWxbDCMi0x3l3DfCnTTaQYyhuxsBoE3iCg6-xfI2oK4rO8OH-12kHLZ0Uf08HhSolhLP01sxzwOiJs9jrUuM9UCa6CPHHF5bVOQa-llPz-ZNLZy8PZacU4orXOHQSr106PgKH-Jw10Lrd2RWBeNtoIziSyMPkG38z_g1wDhJRHBy1iC8Rs940URXh6EilLCIFEqRSAyu35_2znAqQ11MstXwkeTclgv3XGVZHbaMJkeKXneB6a0jMTUXdL6XyHrYBUUaEkNdoiV6GwimUPUICK9zAC8duUNK3y4di9s8X0ew-Ypjl396pUGh0GQudIYLkZwzvqxQNIgJ0-F2gh-8BscL9upPjpFgpVCOv1Ni6RpOY4kQLNkG1tH2hD_YqqO-NElntrxg_N_vVCY0JP7Oq-wy_GBw67EAtTugdPQYdHV1S0r8UUbPO4IgTo6tV5U9EnKaKklFjB7rx32Z5zoEGt2ATfuBS_2iDCfi40e8kJ3IL4PuL-219_25hr1abJrYeRQOaP83z2xAxoVadV-qG4Vn5pui6jFd9yuyPgXE2p7z1Q_Iq4d_S8nxzgcPIlXwU=w457-h215-no" alt="preview PDF"></p>
+<h1 id="4-Collaboration"><a href="#4-Collaboration" class="headerlink" title="4. Collaboration"></a>4. Collaboration</h1><p>Okay okay, it’s cool, but <em><strong>why</strong></em> do I need to write LaTeX offline, using Visual Studio Code, instead of the awesome <a href="https://www.overleaf.com/">Overleaf</a>?</p>
+<p>The answer is the price. For collaboration, overleaf offer 80 USD/year for 6 students (the price is higher if you don’t have student account).</p>
+<p>With visual studio code, it’s free, and super fast too.</p>
+<h2 id="4-1-VSCode-Live-Share"><a href="#4-1-VSCode-Live-Share" class="headerlink" title="4.1 VSCode Live Share"></a>4.1 VSCode Live Share</h2><p>Live Share is an amazing feature offered by Microsoft. It’s not even share files, it’s also share folders and projects.</p>
+<p>To begin with, install VS Live Share extension</p>
+<p><img src="https://lh3.googleusercontent.com/o8pCg6t8GTje2dHSMWtpY2w8NDnUBn5bJwjLFt5FYlZQ-hG-Tqui1_0snN0_QEAAC5nNi7l0v7C2K4n7o6Op52-8VIihQ_npqYo2IzTcpvDQlatMwn3t7qzcaBylosda0bfRquUkCYG553lIi1xzmVVI63AbX00DEmpJIP3xWhEoxDUUOIFIu9WiJVsrIOKpSV4G2wKoJtT0UvVmSbi9KHEo_UW4_Q2vZu2zHNO3pxXOrov13GIwQpOjOQ9uEPnqlPglYJOomrFZJdP1bRlO9dwj1nBr_qs9xF81TIdiXxhhxahiI5rjkEnBZElHbTXbXNJ7giP4dKNRw_1bDC5fZ6Lkk4PIgDX6GYk6mfH0WH73rDzM-jMPRL0ndptmmQmgjws0n-EgZJNhxwO0otXNJb7_EMr228fyXNlD1qerjEKgAZ5MPGZX9TkQFBxW70Xf1hExD7cuXwJujbKVmjU7OMjFWfPu7TrrIlG6SrEOHe7--PgqmITPHjB0-wQcUmY6_UFZnMnLiievB2a2VybN3_wRxRilKG2uQch45zYc6799VttsI67EO-gPWgjB9PezI_BqKiOQomR_7GWr9gilcHlQmAYdMsV4c98tJ_0P-ZbLNDk3jLtxMqImCEgaW_YeQgUck5BqFjR3774FbdkWJMCs-w3j7KtkkJN4yCFZpS7qn9d0VF7OXPEPHNYYLKeoM4q9jI8_az31vLRhM_oBagul=w701-h383-no" alt="Live Share"></p>
+<h2 id="4-2-Start-Collaboration"><a href="#4-2-Start-Collaboration" class="headerlink" title="4.2 Start Collaboration"></a>4.2 Start Collaboration</h2><p>After installation complete, a new feature appeared in VSCode</p>
+<p>Click on that Live Share feature, then <code>Start collaboration session...</code></p>
+<p><img src="https://lh3.googleusercontent.com/xsctwS3GAoe0nTciAGsYE5aYQE2sJq1Llq8YLukCJEMOU3LTiUXNxl7k2rao1d13MG5R7yQmQD4fpLGyLUM3vngH31TSobcA7yhh2raKIcXJDeFaaP3z3NZg8eTxe0nFr__AeriaZ2-3ULpPN7TKjd16AXgNe9px0M60uzyFR7iaGS6sGRsqVYZaVNdugMVzwjhsM-VmAFKFtohzxDn-wbjdqQyf9T-MmKE4Ze4Du-3K5uiQxblBOyvWiSelVXSnw4jvTZ8mu5L5LczGT4kwWGQ0aYFZ_wOAWtejpTk5Beek68vG5Km2eg-c2JK8zsOYN8EVxS4etwMtxTJ2b5wUCfhOl8ra_KC21AHqm5rHsMWM4QmKVkUjg6RneXLclNkQ1RcA3ntmInQcb3NRtLmEpA0-K58i25VrqPsTBWlpIfKarXbnSTRkpeu8IzOwBjqFLxJZWZuBLt4FhBS8Iln8f7EgZxgTynm9UudikU2B_gcwRBUebfXcFE9Y5g07hs7uhIz4ZddLU_eX7_Tpe4H0sGYgyxzjlWyb6sYODGEUQtTEE4VVzLwRA4TSoa6vef7Ek2jaUauOsbDzdT9niTydPp_AYPhZIbwn-8pQnqwfTx-5D5CJuAE4nvvFzCQJwTloIWfp9FyhUrziJztUaRTf8sJXX8pZv8BcgYxSgCqYVNFXD7HSDgmCJ-brXg1zkrPMKSRZSqzTAnz58tbV31IYw5g8=w656-h599-no" alt="start collaboration session"></p>
+<p>It will open a new website that require you login with either Microsoft Account (outlook, hotmail, live) or GitHub Account.</p>
+<p>For this tutorial, I will use my github account</p>
+<p><img src="https://lh3.googleusercontent.com/mC6wby4g6KGGad9dFmNa9UeNer-lVYEn3QEEXqe16I-0IxBoRfnRs6T2sWt3rs0btagDKi1lgbXTKbiPOcqjTmR-_OiScKg6jp87kzVKq7RDTaZ_nd7-YGNVSnCQyl7W3HhVKJvpAcdXPpo5tMuKszkeM0kHHPnXzhNkOBTiGg3l4DyzM1w9CeIhydmwErvzgLzVfOJmosEsVPrwT8d-QT5RF9ZX01VyWmaaTcxZ725rB8iSBiAF4-T6RvwiHJB-vuSmqnioFNGjQ0llR79OfEupHrm2mPZQRqg5vGjfLTrYfP2CKJw0Qefrz_wyhFgPqJ6uMhlSnjxUY6NYZ2GQeTsdS_E4ZDm0isBFlqkd3CEJEG1WAr41ooNHPdAvH3KeeBxW9c4-BKFYubjyrodHJf5f4ub0kvhvk9Q1QqSvKftNNJhYfbXnkk_0t_sZAC5MZKgapuuXLapP0WfCv-pNP_HXXjYq4x55rCa8IBQe4c1JBFd3w6fBzULBLqCbvkfoxzXeCp039GJsqdggW4a3R2g1liyemGqmz_mgFvUYmszKM2cWesSv4HQJ4mKO1z26Rtaglj9F9POHJtNQJl55ByRvIffhJBmO_oHw8vkD_6FX1PYiY9kI4rKFg9JFsFwBDe_X3hoajxFUc4o-bsfiMztQd_LYn19Kd1DIg9Ci5p8jfIX4ECEG4u4scLO87LqA-88TzY-qkPSmsIX9bMLzcxAW=w676-h604-no" alt="github"></p>
+<p>After authorized, Live Share will start working. You can paste the generated link for other users</p>
+<p><img src="https://lh3.googleusercontent.com/WTCm3ZmcTIpKgebl1Hj6ktgKOyZVLUZa6tIAjZYK01AR0id4u2vIdbND2V7Yd6osWNFgClXDSbinESXDWVi3HT5qIIbsPJCaof6GYU9stanOWLb5LGfWD1Kwy8cqnj-q1DzBmA8UCEWgzsK-AYyA4xpl4ybhU2BEyNiS-yQKA4Jay2xXqAnFqaX4wmBPlwEePBFtJikIgiCDzPw75qKx0imDe8z9qqpADaM32cTokrXphiMM5P1tqK8yc-b4ITLd7EGkZpFuQ5QoLOVxOldmbMBmdxtoPuzJNvWBNC6KcPn_Cz8L3FwFVuw4o44jlOg2MJQh4E8FsDszh-3G5Q-9AxoiyDCvLSZMtOHYDqxyc8ApCZaVZy9CqBkDsaL627RIoUvQXE6Dgvr72O3_NDV6FfVxaHPZ1UnRtr5fqqeYrDrPRGQeUIxxfhpz7DFCy8hCuoB-USuKLUAJff3XkhEb6G35hV2jWeNaiQ3fMTikrn76gLqoU6cGZcdTRj0vT_1yHCInaB--ethRevpjISoCX8Dk6YxqY7OBk1kXM-RIO74GbMiWFhcrqkh6ul9kQMEw0RXOT60hd8ThCQtdfy3Q7gokH8bLEYHoOtXaGoBc3yhdBYMkT_nwvL3RYS2to0LBNGQqGJ6R_afekBr9gnkqKCeWUhnfg3XwVOzwLGglDYMqYQ1wERV17mNDvoAvKtps8N9HBIoGgNTmmuli1EYhAppY=w531-h435-no" alt="copy the link"></p>
+<h2 id="4-3-Join-a-shared-collaboration-session"><a href="#4-3-Join-a-shared-collaboration-session" class="headerlink" title="4.3 Join a shared collaboration session"></a>4.3 Join a shared collaboration session</h2><p>If you are not the one who sharing, but the one who join, it’s even easier.</p>
+<p>Open Live Share feature &gt; <code>Join collaboration session</code> &gt; Paste the link you have to the box appeared then press <code>Enter</code></p>
+<p>If successful, it should be like this</p>
+<p><img src="https://lh3.googleusercontent.com/lLtsGd3A741aHZVSpLIIJHvN4Z6Nd0j5G4osNktOxr2K0aB0U_UPUS-C3zs0py-mt9b5psaMIbGeiaXxdO6Z-zvvRDuFRwT2O018uXGX06UIGknCKgEvCEdJypiBrVr9tUGYvc8ndiFlB6QzsScQpxuQdKAhZ-o7vEnkwSYnHrSGvFKAKjWBkMJdr8ixn6T0Cm7_qL7tsq0dNiTdUatlqPN1fP2xFNZBSUCaHjujiz5EJxyoTqMMgJAEJ_Y746I3u566vsXQYkumdbHwTWdwivO4l9NSZW52Ux1OnCPpVMyK51AvvfB3Nr7-A-cRXlWXLG1QeHt5yh0ieW3xuHXGtcvsv6iKEtC9Llm9Foczd9e1kiIDQ2rBo5KluLQmTI_aP5fM9bjQFz7CP2gjDlqET-K-kUpxj-OuA6oRE_NJ-sVEIKf526sP7pxkusS97OsF-b_G6nJd7ncbpD-3POuDHoxaUNlPMRiJ9AaHoeGMBSE_zTnmSiN3zPw63Lo49YCPTxVpWRf9FUQsHlJL0XfwGOVDHHwkJcxhzbDPvlBCWfJ_Xhryn6QGBiFm-zm4nRWch_79rw5SWvmFPXkPHIaKxt1Cn2cD-Q8tPG5M3cy9HPVpjXSuQUuxDbNbtypjfbss_tYMVTvVwpcY2VX2whYpNniHoGzDfSt_0b-aa2Xz4wu20Sf7YvyFCQssGkKntXnHGs9PeVObQUg-Po1AgQvcueqa=w956-h595-no" alt="join collaboration session"></p>
+<h2 id="4-4-Live-Share-Maximum-collaborators"><a href="#4-4-Live-Share-Maximum-collaborators" class="headerlink" title="4.4 Live Share Maximum collaborators"></a>4.4 Live Share Maximum collaborators</h2><p>The short answer: 5</p>
+<p>For more information on when/how you can increase this number can be found here: <a href="https://github.com/MicrosoftDocs/live-share/releases/tag/0.3.788">https://github.com/MicrosoftDocs/live-share/releases/tag/0.3.788</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
       </categories>
   </entry>
   <entry>
@@ -6861,7 +6861,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>[Machine Learning] - 3.2 - Logistic Regression Model</title>
-    <url>/blog/2019/06/14/machine-learning-3-2-logistic-regression-model/</url>
+    <url>/blog/2019/06/15/machine-learning-3-2-logistic-regression-model/</url>
     <content><![CDATA[<p>Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng</p>
 <a id="more"></a>
 <ul>
@@ -6973,7 +6973,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>Java for Beginner - 1 - Introduction to Java from a .NET guy</title>
-    <url>/blog/2019/07/10/java-for-beginner-1-introduction-to-java-from-a-net-guy/</url>
+    <url>/blog/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</url>
     <content><![CDATA[<p>Coming to Java world, from a .NET guy, is like going from a full feature-rich and comfortable car to a basic bike with a lot of space for extension and customization.<br>In this series, I will walk you through (hopefully) a small part of Java world, just enough for you to continue your exploration.</p>
 <a id="more"></a>
 <ul>
@@ -7106,7 +7106,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>Java for Beginner - 3 - Java from C# cheats sheet</title>
-    <url>/blog/2019/07/13/java-for-beginner-3-java-from-c-cheats-sheet/</url>
+    <url>/blog/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</url>
     <content><![CDATA[<p>Doing C# long enough, you get yourself familiar with C# concepts and syntax. That’s fine, but sometime when you need “the same” concepts in Java, it’s quite difficult. This cheat sheet here to tackle that problem.</p>
 <a id="more"></a>
 
