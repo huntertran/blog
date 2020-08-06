@@ -8,7 +8,7 @@ tags:
   - xaml
 id: '299'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2014-01-20 22:55:07
 ---

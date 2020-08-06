@@ -6,7 +6,7 @@ tags:
   - store
 id: '179'
 categories:
-  - - c
+  - - CSharp
     - Windows Store App
 date: 2013-09-04 10:46:27
 ---

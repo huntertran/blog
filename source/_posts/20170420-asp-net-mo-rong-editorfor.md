@@ -7,7 +7,7 @@ tags:
   - mở rộng
 id: '874'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
   - - Others
 date: 2017-04-20 00:26:01

@@ -7,8 +7,7 @@ tags:
   - windows 10
 id: '570'
 categories:
-  - - C#
-  - - c
+  - - CSharp
     - Windows 10
     - Windows Store App
 date: 2016-01-18 05:05:10

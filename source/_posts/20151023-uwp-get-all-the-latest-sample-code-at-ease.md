@@ -11,7 +11,7 @@ tags:
   - windows 10
 id: '509'
 categories:
-  - - c
+  - - CSharp
     - Windows 10
 date: 2015-10-23 01:01:30
 ---

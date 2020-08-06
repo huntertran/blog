@@ -7,7 +7,7 @@ tags:
   - windows
 id: '595'
 categories:
-  - - c
+  - - CSharp
     - Windows 10
 date: 2016-02-23 01:28:47
 ---

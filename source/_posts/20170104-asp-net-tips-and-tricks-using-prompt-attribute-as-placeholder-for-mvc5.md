@@ -6,9 +6,8 @@ tags:
   - prompt
 id: '657'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
   - - Others
 date: 2017-01-04 08:30:57
 ---

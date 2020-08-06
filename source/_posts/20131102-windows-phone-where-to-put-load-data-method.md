@@ -6,7 +6,7 @@ tags:
   - onnavigatedto
 id: '255'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2013-11-02 00:28:37
 ---

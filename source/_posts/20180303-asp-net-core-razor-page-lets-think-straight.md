@@ -5,9 +5,8 @@ tags:
   - razor
 id: '1020'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
 date: 2018-03-03 05:00:24
 ---
 

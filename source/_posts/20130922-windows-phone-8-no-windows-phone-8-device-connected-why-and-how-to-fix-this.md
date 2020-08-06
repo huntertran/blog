@@ -8,7 +8,7 @@ tags:
   - windows phone
 id: '223'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2013-09-22 00:35:38
 ---

@@ -5,7 +5,7 @@ tags:
   - Visual Studio
 id: '367'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2014-11-16 21:07:16
 ---

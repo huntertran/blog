@@ -5,7 +5,7 @@ tags:
   - windows phone
 id: '346'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
     - Windows Store App
 date: 2014-10-09 22:39:52

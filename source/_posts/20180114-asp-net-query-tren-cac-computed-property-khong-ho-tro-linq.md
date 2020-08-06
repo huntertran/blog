@@ -6,9 +6,8 @@ tags:
   - Query
 id: '938'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
 date: 2018-01-14 11:18:05
 ---
 

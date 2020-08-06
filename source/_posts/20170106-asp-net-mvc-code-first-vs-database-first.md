@@ -5,7 +5,7 @@ tags:
   - database first
 id: '669'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2017-01-06 08:30:52
 ---

@@ -9,8 +9,7 @@ tags:
   - windows phone
 id: '303'
 categories:
-  - - C#
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2014-02-26 09:19:49
 ---

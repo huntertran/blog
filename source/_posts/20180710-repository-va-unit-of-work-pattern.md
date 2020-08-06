@@ -5,9 +5,8 @@ tags:
   - unit of work
 id: '1045'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
   - - Design Pattern
 date: 2018-07-10 03:24:23
 ---

@@ -3,7 +3,7 @@ title: '[Windows 10] SplitView Control (the sidebar on many apps)'
 tags: []
 id: '440'
 categories:
-  - - c
+  - - CSharp
     - Windows 10
 date: 2015-06-18 05:37:30
 ---

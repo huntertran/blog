@@ -3,7 +3,7 @@ title: '[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation'
 tags: []
 id: '1010'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
   - - Others
 date: 2018-03-25 06:03:16

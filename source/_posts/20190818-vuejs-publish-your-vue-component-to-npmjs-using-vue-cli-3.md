@@ -7,7 +7,7 @@ tags:
   - vuejs
 id: '1220'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
   - - JavaScript and TypeScript
   - - VSCode

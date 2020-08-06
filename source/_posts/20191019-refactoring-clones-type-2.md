@@ -5,7 +5,7 @@ tags:
   - refactor
 id: '1232'
 categories:
-  - - C#
+  - - CSharp
   - - Java
 date: 2019-10-19 16:10:18
 ---

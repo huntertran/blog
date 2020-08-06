@@ -6,7 +6,7 @@ tags:
   - windows phone
 id: '231'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2013-09-26 10:09:06
 ---

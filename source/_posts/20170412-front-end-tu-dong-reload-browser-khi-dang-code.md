@@ -8,7 +8,7 @@ tags:
   - visual studio code
 id: '702'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2017-04-12 04:56:00
 ---

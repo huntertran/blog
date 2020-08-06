@@ -5,8 +5,7 @@ tags:
   - windows phone
 id: '259'
 categories:
-  - - C#
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2013-11-11 09:20:58
 ---

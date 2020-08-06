@@ -9,7 +9,7 @@ tags:
   - star size
 id: '273'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
     - Windows Store App
 date: 2013-11-21 12:53:45

@@ -1,11 +1,10 @@
 ---
 title: C# string performance – Tips and Tricks
 tags:
-  - C#
   - performance
 id: '613'
 categories:
-  - - C#
+  - - CSharp
 date: 2016-07-11 00:38:34
 ---
 

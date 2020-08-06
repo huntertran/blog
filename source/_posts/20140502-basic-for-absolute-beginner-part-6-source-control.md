@@ -5,8 +5,7 @@ tags:
   - Team foundation
 id: '317'
 categories:
-  - - C#
-  - - c
+  - - CSharp
     - Windows Phone
     - Windows Store App
 date: 2014-05-02 09:55:19

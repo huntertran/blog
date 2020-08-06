@@ -3,7 +3,7 @@ title: '[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API'
 tags: []
 id: '626'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2016-07-12 05:47:36
 ---

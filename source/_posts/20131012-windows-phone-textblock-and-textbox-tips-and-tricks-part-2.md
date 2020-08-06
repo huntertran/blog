@@ -9,7 +9,7 @@ tags:
   - tricks
 id: '253'
 categories:
-  - - c
+  - - CSharp
     - Windows Phone
 date: 2013-10-12 23:58:57
 ---

@@ -8,7 +8,7 @@ tags:
   - scss
 id: '966'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2018-03-18 06:46:24
 ---

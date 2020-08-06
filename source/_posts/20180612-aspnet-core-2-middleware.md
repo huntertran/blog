@@ -3,7 +3,7 @@ title: '[ASPNET Core 2] – Middleware'
 tags: []
 id: '1032'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2018-06-12 00:18:39
 ---

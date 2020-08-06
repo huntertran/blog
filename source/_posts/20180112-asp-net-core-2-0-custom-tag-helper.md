@@ -7,9 +7,8 @@ tags:
   - tag helper
 id: '928'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
 date: 2018-01-12 11:27:40
 ---
 

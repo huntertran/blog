@@ -7,7 +7,7 @@ tags:
   - model
 id: '952'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2018-03-11 12:11:47
 ---

@@ -5,9 +5,8 @@ tags:
   - .net framework
 id: '922'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
-  - - C#
   - - VSCode
 date: 2017-12-10 04:44:25
 ---

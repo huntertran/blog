@@ -2,7 +2,7 @@
 title: '[Visual Studio] Visual Studio have Super Power with help of Extensions'
 tags:
   - app
-  - C#
+  - CSharp
   - hero
   - indent
   - resharper

@@ -4,7 +4,7 @@ tags:
   - core
 id: '604'
 categories:
-  - - c
+  - - CSharp
     - ASP.NET
 date: 2016-07-06 05:11:44
 ---

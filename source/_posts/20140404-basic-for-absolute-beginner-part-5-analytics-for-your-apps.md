@@ -6,8 +6,7 @@ tags:
   - windows store
 id: '311'
 categories:
-  - - C#
-  - - c
+  - - CSharp
     - Windows Phone
     - Windows Store App
 date: 2014-04-04 10:28:33

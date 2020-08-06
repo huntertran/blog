@@ -6,7 +6,7 @@ tags:
   - Log
 id: '1166'
 categories:
-  - - C++
+  - - CPlusPlus
 date: 2019-06-14 00:12:17
 ---
 

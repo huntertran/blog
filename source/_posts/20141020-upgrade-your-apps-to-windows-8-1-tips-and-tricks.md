@@ -7,8 +7,7 @@ tags:
   - windows 8.1
 id: '351'
 categories:
-  - - C++
-  - - c
+  - - CSharp
     - Windows Store App
 date: 2014-10-20 01:09:29
 ---
