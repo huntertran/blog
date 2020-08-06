@@ -152,7 +152,7 @@ using std::endl;</code></pre>
 </ul>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>CPlusPlus</category>
       </categories>
       <tags>
         <tag>class</tag>
@@ -263,7 +263,7 @@ using std::endl;</code></pre>
 <p>Tùy vào từng Task sẽ có từng cách xài riêng, bạn tự google nhé. Hiện tại chưa kịp viết :3 Sẽ edit bài này sau</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -310,7 +310,7 @@ using std::endl;</code></pre>
 <p><a href="http://www.flickr.com/photos/28322228@N04/9670388069/"><img src="http://cuoilennaocacban2.files.wordpress.com/2013/09/0409201333958pm.png" alt="04-09-2013 3-39-58 PM" title="04-09-2013 3-39-58 PM"></a></p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Store App</category>
       </categories>
       <tags>
@@ -356,7 +356,7 @@ using std::endl;</code></pre>
 <p>Chọn Resource sẽ giảm thiểu hiện tượng ứng dụng load lên được mấy phần trăm giây thì bỗng nhiên Background Image “xuất hiện”</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -389,7 +389,7 @@ using std::endl;</code></pre>
 <p>Bây giờ, bạn có thể canh chỉnh bằng thuộc tính HorizontalAlignment và VerticalAlignment để chỉnh vị trí của ImageControl. Áp dụng “Center” cho cả hai, bạn sẽ có tấm hình “Tuyệt vời”</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -463,7 +463,7 @@ using std::endl;</code></pre>
 <h1 id="3-Ket-luan"><a href="#3-Ket-luan" class="headerlink" title="3. Kết luận"></a>3. Kết luận</h1><p>Power Tools, theo tôi là công cụ tốt nhất để thao tác với Isolated Storage, nhưng công cụ Profile của nó có một số lỗi khó chịu. Ngoài lỗi này ra, tất cả đều tuyệt vời</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -495,7 +495,7 @@ using std::endl;</code></pre>
 </ul>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -542,7 +542,7 @@ using std::endl;</code></pre>
 <p>Tôi đã thử, và thành công. Còn bạn?</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -604,7 +604,7 @@ using std::endl;</code></pre>
 <p>[youtube=<a href="http://www.youtube.com/watch?v=MprFcKyrTAA&amp;w=448&amp;h=252&amp;hd=1%5C%5D">http://www.youtube.com/watch?v=MprFcKyrTAA&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -712,7 +712,7 @@ using std::endl;</code></pre>
 <p>Hết rồi, hẹn gặp lại các bạn ở phần 2 nhé</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -757,7 +757,7 @@ using std::endl;</code></pre>
 <p>Thế là xong</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -825,7 +825,7 @@ using std::endl;</code></pre>
 <h1 id="Tom-lai"><a href="#Tom-lai" class="headerlink" title="Tóm lại"></a>Tóm lại</h1><p>Tùy và lượng dữ liệu, cũng như thời gian mà bạn sử dụng linh hoạt 1 trong 2 phương pháp</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -899,8 +899,7 @@ using std::endl;</code></pre>
 </ul>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -1007,7 +1006,7 @@ using std::endl;</code></pre>
 <p><img src="https://farm8.staticflickr.com/7410/10987169593_dbaab3425c_o.png"></p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
         <category>Windows Store App</category>
       </categories>
@@ -1354,7 +1353,7 @@ using std::endl;</code></pre>
 <p>Vậy là hết rồi, hẹn gặp lại các bạn ở episode tiếp theo của Series Absolute Beginner nhé</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -1462,8 +1461,7 @@ using std::endl;</code></pre>
 <p>Như vậy, bạn đã hiểu rõ các thành phần cấu tạo nên một ứng dụng Windows Phone, áp dụng bài viết số 1 và số 2, hãy bắt tay vào thiết kế ngay cho bạn một ứng dụng Windows Phone hữu ích nào đó nhé</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -1573,8 +1571,7 @@ using std::endl;</code></pre>
 <p>Chúc vui ;)</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -1666,8 +1663,7 @@ using std::endl;</code></pre>
 <p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
         <category>Windows Store App</category>
       </categories>
@@ -1793,8 +1789,7 @@ using std::endl;</code></pre>
 <p>Trong các bài Blog sau, mình hy vọng sẽ có giải thích rõ ràng hơn về các Control dùng chung và cách hiển thị của chúng trên giao diện. Dù sao thì đây mới chỉ là Release Candidate. Sẽ còn thay đổi nhiều trong tương lai.</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
         <category>Windows Store App</category>
       </categories>
@@ -1855,8 +1850,7 @@ using std::endl;</code></pre>
 <p>Như vậy, bạn đã có trong tay một cỗ máy thời gian thần kỳ để kiểm soát Source Code của mình, đồng thời hợp tác làm Team một các hiệu quả</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
         <category>Windows Store App</category>
       </categories>
@@ -1904,7 +1898,7 @@ using std::endl;</code></pre>
 <h2 id="Share-your-idea"><a href="#Share-your-idea" class="headerlink" title="Share your idea"></a>Share your idea</h2><p>Chia sẻ vấn đề của bạn, ý tưởng của bạn, và bạn sẽ có những cải tiến đáng giá, ít ra là những khuyết điểm mà bạn không hề nhận thức rằng nó tồn tại. Đối với các loại vấn đề, bạn có thể sẽ gặp những cách giải quyết vô cùng sáng tạo. Tuy nhiên, hãy đề phòng nạn “đạo ý tưởng”, xảy ra ở khắp mọi nơi trên thế giới. Vì vậy, chỉ chia sẻ cho những người mà bạn biết rằng họ sẽ không ăn cắp ý tưởng của mình, trừ phi bạn có đăng ký bảo hộ ý tưởng đó :3</p>
 ]]></content>
       <categories>
-        <category>C#</category>
+        <category>CSharp</category>
       </categories>
       <tags>
         <tag>problem</tag>
@@ -1966,7 +1960,7 @@ using std::endl;</code></pre>
 <h1 id="More-details-What-does-Microsoft-say"><a href="#More-details-What-does-Microsoft-say" class="headerlink" title="More details: What does Microsoft say?"></a>More details: What does Microsoft say?</h1><p>Các kỹ sư của Microsoft đã biết đến sự tồn tại của lỗi này. Và họ đã “wánh” nó là Won-fix in this version. Tức là trừ phi có phiên bản Visual Studio mới hơn, lỗi này sẽ không được sửa trong phiên bản 2012, 2013.</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
         <category>Windows Store App</category>
       </categories>
@@ -2020,8 +2014,7 @@ using std::endl;</code></pre>
 <p>Vậy là xong. Build lại, bạn sẽ thấy không còn lỗi nào :yay:</p>
 ]]></content>
       <categories>
-        <category>C++</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Store App</category>
       </categories>
       <tags>
@@ -2084,7 +2077,7 @@ using std::endl;</code></pre>
 <p><img src="https://farm6.staticflickr.com/5604/15187797314_d356dce01e_o.png"></p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows Phone</category>
       </categories>
       <tags>
@@ -2345,7 +2338,7 @@ using std::endl;</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#117;&#100;&#x65;&#110;&#x74;&#x70;&#x61;&#114;&#x74;&#110;&#101;&#x72;&#46;&#99;&#111;&#x6d;">&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#117;&#100;&#x65;&#110;&#x74;&#x70;&#x61;&#114;&#x74;&#110;&#101;&#x72;&#46;&#99;&#111;&#x6d;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#107;&#x75;&#98;&#111;&#x40;&#115;&#116;&#117;&#100;&#x65;&#110;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#101;&#x72;&#x2e;&#x63;&#x6f;&#109;">&#x53;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#107;&#x75;&#98;&#111;&#x40;&#115;&#116;&#117;&#100;&#x65;&#110;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#101;&#x72;&#x2e;&#x63;&#x6f;&#109;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2463,7 +2456,7 @@ using std::endl;</code></pre>
 <p>Thế là xong. Chúc bạn thành công</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
       </categories>
   </entry>
@@ -2759,7 +2752,7 @@ using std::endl;</code></pre>
 <p>Stay toon for other cool feature of the new Visual Studio 2015</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
       </categories>
       <tags>
@@ -2997,7 +2990,7 @@ using std::endl;</code></pre>
       <tags>
         <tag>Visual Studio</tag>
         <tag>app</tag>
-        <tag>C#</tag>
+        <tag>CSharp</tag>
         <tag>hero</tag>
         <tag>indent</tag>
         <tag>resharper</tag>
@@ -3142,7 +3135,7 @@ using std::endl;</code></pre>
 <p>Chúc đọc code vui vẻ :3</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
       </categories>
       <tags>
@@ -3185,7 +3178,7 @@ using std::endl;</code></pre>
 <p>Hẹn gặp lại các bạn ở những bài blog khác.</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
       </categories>
       <tags>
@@ -3286,7 +3279,7 @@ using std::endl;</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/blog/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#103;&#111;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#103;&#111;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#116;&#117;&#x64;&#121;&#46;&#110;&#x67;&#111;&#x63;&#x74;&#x69;&#x65;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#115;&#116;&#117;&#x64;&#121;&#46;&#110;&#x67;&#111;&#x63;&#x74;&#x69;&#x65;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#116;&#x75;&#x64;&#x79;&#46;&#110;&#x67;&#111;&#x63;&#x74;&#105;&#101;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x73;&#116;&#x75;&#x64;&#x79;&#46;&#110;&#x67;&#111;&#x63;&#x74;&#105;&#101;&#x6e;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3295,7 +3288,7 @@ using std::endl;</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/blog/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#111;&#x61;&#116;&#114;&#117;&#111;&#110;&#x67;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;">&#x6b;&#x68;&#111;&#x61;&#116;&#114;&#117;&#111;&#110;&#x67;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#x69;&#118;&#101;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#104;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#46;&#x63;&#x6f;&#109;">&#107;&#104;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#46;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#104;&#111;&#97;&#116;&#x72;&#x75;&#x6f;&#x6e;&#103;&#98;&#97;&#99;&#104;&#64;&#x6c;&#105;&#118;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#107;&#104;&#111;&#97;&#116;&#x72;&#x75;&#x6f;&#x6e;&#103;&#98;&#97;&#99;&#104;&#64;&#x6c;&#105;&#118;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#104;&#111;&#97;&#x74;&#x72;&#x75;&#x6f;&#110;&#103;&#98;&#x61;&#99;&#104;&#64;&#108;&#105;&#118;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#107;&#104;&#111;&#97;&#x74;&#x72;&#x75;&#x6f;&#110;&#103;&#98;&#x61;&#99;&#104;&#64;&#108;&#105;&#118;&#101;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3458,8 +3451,7 @@ using std::endl;</code></pre>
 </blockquote>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
         <category>Windows Store App</category>
       </categories>
@@ -3499,7 +3491,7 @@ using std::endl;</code></pre>
 <p>Chúc app bạn lên Store suôn sẻ :D</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>Windows 10</category>
       </categories>
       <tags>
@@ -3512,7 +3504,7 @@ using std::endl;</code></pre>
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/blog/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#x78;&#99;&#x73;&#x39;&#48;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x78;&#99;&#x73;&#x39;&#48;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#120;&#99;&#115;&#x39;&#48;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#97;&#120;&#99;&#115;&#x39;&#48;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#99;&#115;&#x39;&#x30;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#97;&#120;&#99;&#115;&#x39;&#x30;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#x78;&#99;&#x73;&#57;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#97;&#x78;&#99;&#x73;&#57;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3577,7 +3569,7 @@ using std::endl;</code></pre>
 <p><img src="https://farm8.staticflickr.com/7321/27509194014_95f55d6dbd_o.png"></p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -3648,10 +3640,9 @@ if(string.IsNullOrEmpty(s))
 <p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2">https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2</a></p>
 ]]></content>
       <categories>
-        <category>C#</category>
+        <category>CSharp</category>
       </categories>
       <tags>
-        <tag>C#</tag>
         <tag>performance</tag>
       </tags>
   </entry>
@@ -3778,7 +3769,7 @@ if(string.IsNullOrEmpty(s))
 <p>Vậy là xong rồi, chờ bài post tiếp theo nhóe bạn</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
   </entry>
@@ -3803,8 +3794,7 @@ if(string.IsNullOrEmpty(s))
 ]]></content>
       <categories>
         <category>Others</category>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -3847,7 +3837,7 @@ if(string.IsNullOrEmpty(s))
 <p>Hết rồi :D</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -3858,7 +3848,7 @@ if(string.IsNullOrEmpty(s))
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/blog/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#108;&#x75;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#111;&#110;&#103;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#x75;&#111;&#110;&#103;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#x75;&#111;&#110;&#x67;&#97;&#110;&#104;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x6c;&#x75;&#111;&#110;&#x67;&#97;&#110;&#104;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3887,7 +3877,7 @@ if(string.IsNullOrEmpty(s))
 <p>Bạn nào có cách khắc phục khác hay hơn thì nói cho mình biết với nhóe</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -3914,7 +3904,7 @@ if(string.IsNullOrEmpty(s))
 <p>Vậy là bạn đã debug được rồi nhóe</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4009,7 +3999,7 @@ if(string.IsNullOrEmpty(s))
 <p>[code lang=text] File &gt; Autosave [/code]</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4081,7 +4071,7 @@ if(string.IsNullOrEmpty(s))
 ]]></content>
       <categories>
         <category>Others</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4198,7 +4188,7 @@ if(string.IsNullOrEmpty(s))
 <p>Theo bạn, bạn có cách nào cải tiến đoạn code bên trên không?</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4445,7 +4435,7 @@ if(string.IsNullOrEmpty(s))
 </blockquote>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4501,8 +4491,7 @@ if(string.IsNullOrEmpty(s))
 <h2 id="2-4-Run-and-Debug"><a href="#2-4-Run-and-Debug" class="headerlink" title="2.4. Run and Debug"></a>2.4. Run and Debug</h2><p>To run the application <img src="https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png"> Bạn cũng có thể chạy project bằng nút Run trên status bar <img src="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png"> Để debug thì chỉ cần đặt break point ngay tại nơi cần debug <img src="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png"></p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
         <category>VSCode</category>
       </categories>
@@ -4577,8 +4566,7 @@ if(string.IsNullOrEmpty(s))
 <p>[code lang=html] <label for="Username">User name<span class="red bold"> *</span></label> [/code]</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4653,8 +4641,7 @@ if(string.IsNullOrEmpty(s))
 <p>Còn một số chiêu khác với những loại DataAnnotation khác nữa bạn nhé</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4731,8 +4718,7 @@ if(string.IsNullOrEmpty(s))
 <p>[code lang=csharp] DelegateDecompiler.Configuration.Configure(new DelegateDecompilerConfiguration()); [/code]</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4870,7 +4856,7 @@ if(string.IsNullOrEmpty(s))
 <p>Vậy là xong</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -4955,8 +4941,7 @@ if(string.IsNullOrEmpty(s))
 </ul>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -5079,7 +5064,7 @@ if(string.IsNullOrEmpty(s))
 <p>Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở <a href="https://coding4food.net/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/">phần tiếp theo</a> mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng <em>chuẩn</em> nhé</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -5246,7 +5231,7 @@ if(string.IsNullOrEmpty(s))
 <p>Đón đọc phần 3 bạn nhé :)</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -5359,7 +5344,7 @@ if(string.IsNullOrEmpty(s))
 <p>Còn bạn, bạn chọn ngôn ngữ nào?</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -5509,7 +5494,7 @@ if(string.IsNullOrEmpty(s))
 ]]></content>
       <categories>
         <category>Others</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
   </entry>
@@ -5591,7 +5576,7 @@ if(string.IsNullOrEmpty(s))
 <p>Thế nhé bạn ;)</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
       <tags>
@@ -5675,7 +5660,7 @@ if(string.IsNullOrEmpty(s))
 </ul>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
       </categories>
   </entry>
@@ -5861,8 +5846,7 @@ if(string.IsNullOrEmpty(s))
 <h1 id="5-Tong-ket"><a href="#5-Tong-ket" class="headerlink" title="5. Tổng kết"></a>5. Tổng kết</h1><p>Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface <code>IQueryable</code>. Chúc vui :D</p>
 ]]></content>
       <categories>
-        <category>C#</category>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
         <category>Design Pattern</category>
       </categories>
@@ -6851,7 +6835,7 @@ string getName();</code></pre>
 <p>This quickly getting out of hand, since there are hundreds of DOM API we need to log, and I am still looking for another solution.</p>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>CPlusPlus</category>
       </categories>
       <tags>
         <tag>firefox</tag>
@@ -7342,7 +7326,7 @@ public int getWeight() &#123;
 <p>Finally, you can try your newly published package in a new “Hello World” vue cli project, or use the built <code>yourpackagename.common.js</code> file directly in your <code>&lt;head&gt;&lt;/head&gt;</code> section.</p>
 ]]></content>
       <categories>
-        <category>c</category>
+        <category>CSharp</category>
         <category>ASP.NET</category>
         <category>VSCode</category>
         <category>JavaScript and TypeScript</category>
@@ -7395,7 +7379,7 @@ public int getWeight() &#123;
 <p><img src="https://i.imgur.com/ndLJ8Iz.png"></p>
 ]]></content>
       <categories>
-        <category>C#</category>
+        <category>CSharp</category>
         <category>Java</category>
       </categories>
       <tags>
