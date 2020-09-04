@@ -44,48 +44,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/</loc>
     
     <lastmod>2020-09-04</lastmod>
@@ -297,111 +255,6 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/csharp/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/12/14/beginning-with-imagine-cup-2014/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/06/27/not-so-basic-solve-your-problems/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
-    
-    <lastmod>2020-09-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/11/17/xaml-styler-bug-and-fixes/</loc>
     
     <lastmod>2020-09-04</lastmod>
     
@@ -723,6 +576,48 @@
   </url>
   
   <url>
+    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.github.io/blog/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-09-04</lastmod>
@@ -857,6 +752,111 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/2013/11/11/visual-studio-nuget-the-magician/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/12/14/beginning-with-imagine-cup-2014/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/06/27/not-so-basic-solve-your-problems/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
+    
+    <lastmod>2020-09-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/11/17/xaml-styler-bug-and-fixes/</loc>
     
     <lastmod>2020-09-04</lastmod>
     
