@@ -13,8 +13,8 @@ timezone: 'America/Montreal'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://huntertran.github.io/blog
-root: /blog/
+url: https://huntertran.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
