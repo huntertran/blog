@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Đăng ký Imagine Cup 2012</title>
-    <url>/blog/2011/12/31/dang-ky-imagine-cup-2012/</url>
+    <url>/2011/12/31/dang-ky-imagine-cup-2012/</url>
     <content><![CDATA[<p>Để đăng ký, các bạn trong team phải tạo một tài khoản trên <a href="http://www.imaginecup.com/">www.imaginecup.com</a></p>
 <a id="more"></a>
 <p>Sau đó, đăng nhập tài khoản của mình, tại mục Compete, chọn phần team bạn muốn tham gia <a href="http://cuoilennaocacban2.files.wordpress.com/2011/12/3112201193303pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/12/3112201193303pm.png" alt="31-12-2011 9-33-03 PM" title="31-12-2011 9-33-03 PM"></a></p>
@@ -31,7 +31,7 @@
   </entry>
   <entry>
     <title>[C++] Split class and header to separated files with Visual Studio</title>
-    <url>/blog//2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</url>
+    <url>//2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</url>
     <content><![CDATA[<p>Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể tách các thành phần trong code ra thành những file riêng?</p>
 <a id="more"></a>
 <ul>
@@ -164,7 +164,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[IC03] Tạo tài khoản Imagine Cup 2012</title>
-    <url>/blog/2012/01/14/ic03/</url>
+    <url>/2012/01/14/ic03/</url>
     <content><![CDATA[<p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
 <a id="more"></a>
 <p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
@@ -184,7 +184,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[IC04] Đăng ký cho Team của bạn [Dành cho Nhóm trưởng]</title>
-    <url>/blog/2012/01/31/ic04/</url>
+    <url>/2012/01/31/ic04/</url>
     <content><![CDATA[<p>Sau khi đăng nhập, vào mục Compete &gt; Chọn phần bạn đã đăng ký thi</p>
 <a id="more"></a>
 <p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-31-2012-8-07-28-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-31-2012-8-07-28-pm.png" alt="1-31-2012 8-07-28 PM" title="1-31-2012 8-07-28 PM"></a></p>
@@ -209,7 +209,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[IC05] Đăng ký tài khoản Mentor</title>
-    <url>/blog/2012/03/08/ic05/</url>
+    <url>/2012/03/08/ic05/</url>
     <content><![CDATA[<p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
 <a id="more"></a>
 <p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
@@ -229,7 +229,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Microsoft Student Partner [MSP] – for life</title>
-    <url>/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/</url>
+    <url>/2013/08/29/microsoft-student-partner-msp-for-life-2/</url>
     <content><![CDATA[<p>Đam mê công nghệ thông tin, từ cấp 3, tôi đã may mắn biết được chương trình Microsoft Student Partner của Microsoft dành cho sinh viên toàn cầu.</p>
 <a id="more"></a>
 <p>Tham gia MSP, tôi đã có cơ hội học hỏi nhiều thứ, thử sức ở các lĩnh vực vô cùng mới mẻ và hấp dẫn, mà sau này là xu hướng công nghệ. Công nghệ thông tin là một lĩnh vực thay đổi liên tục, phát triển từng ngày. MSP sẽ cho bạn cơ hội để tiếp cận những công nghệ mới nhất, tiên tiến nhất, để từ đó, bạn có thể sáng tạo ra những sản phẩm, những tiện ích vô cùng độc đáo.</p>
@@ -246,7 +246,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Windows Phone 7 Chooser</title>
-    <url>/blog/2013/09/02/windows-phone-7-chooser/</url>
+    <url>/2013/09/02/windows-phone-7-chooser/</url>
     <content><![CDATA[<p>Windows Phone có nhiều tài nguyên để bạn tận dụng, carmera này, danh bạ này, hình ảnh này, blah blah blah. Làm sao để sử dụng những tài nguyên này trong ứng dụng Windows Phone của bạn?</p>
 <a id="more"></a>
 <p>Có một cách: Windows Phone Chooser API. Nó sẽ giúp cho bạn truy cập các tài nguyên này một cách đơn giản và hiệu quả</p>
@@ -273,7 +273,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code</title>
-    <url>/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</url>
+    <url>/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</url>
     <content><![CDATA[<p>Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái</p>
 <p>Lưu ý: yêu cầu phải có thẻ visa</p>
 <p>Sau khi đăng ký, sẽ tới bước trả phí cho tài khoản. Phí là $ 99 / 1 năm. Nhưng nếu là sinh viên UIT, bạn sẽ được đăng ký miễn phí mà ko mất khoản phí này.</p>
@@ -321,7 +321,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Windows Phone – Silverlight: Khác nhau giữa “resource” và “content”</title>
-    <url>/blog/2013/09/07/wp-sl-khac-nhau-resource-content/</url>
+    <url>/2013/09/07/wp-sl-khac-nhau-resource-content/</url>
     <content><![CDATA[<p>Mọi thứ có trong project folder, ta đều phải lựa chọn: Resource hay Content? Bài viết này sẽ nói về sự khác biệt giữa 2 thể loại này, cũng như lợi/hại của từng loại</p>
 <a id="more"></a>
 <ul>
@@ -369,7 +369,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone – Silverlight] Uniform to fill, centered</title>
-    <url>/blog/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</url>
+    <url>/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</url>
     <content><![CDATA[<p>Hiển thị hình ảnh trong các ứng dụng Silverlight, bạn thường sử dụng Image Control.</p>
 <p>Image Control có một số thuộc tính về hiển thị như Stretch, Fill, Uniform, UniformToFill. Uniform To Fill sẽ mở rộng tấm hình ra cho vừa kích thước của control, và thực tế là nó cắt mất một góc trái trên của tấm hình, cho ta có cảm giác như tấm hình được canh giữa</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png" alt="perfect"></p>
@@ -401,7 +401,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage</title>
-    <url>/blog/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</url>
+    <url>/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</url>
     <content><![CDATA[<p>Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụng khác (trừ phi bạn có quyền root, chỉ dành cho Lumia 710 cooked room)</p>
 <p>Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này trực quan, sinh động và dễ dàng?</p>
 <a id="more"></a>
@@ -474,7 +474,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Input Scope</title>
-    <url>/blog/2013/09/18/windows-phone-input-scope/</url>
+    <url>/2013/09/18/windows-phone-input-scope/</url>
     <content><![CDATA[<p>Trong Windows Phone, bạn có một tính năng rất hay gọi là “Input Scope”</p>
 <p>Nếu đã dùng thử Android, bạn sẽ thấy nó cố gắng nhồi nhét thật nhiều thứ vào bàn phím ảo, dẫn tới việc bạn dễ bị bấm nhầm từ không mong muốn.</p>
 <a id="more"></a>
@@ -508,7 +508,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone 8] No Windows Phone 8 Device connected – Why and How to fix this?</title>
-    <url>/blog/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</url>
+    <url>/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</url>
     <content><![CDATA[<p>Nhiều tính năng của Windows Phone đòi hỏi ta phải có 1 cái máy thiệt để test (NFC, Pinch Zoom). Hoặc là sau cùng, ta cũng cần 1 cái máy thiệt để xem ứng dụng hoạt động như thế nào.</p>
 <p>Cắm điện thoại vào cổng USB, chọn Device trong Visual Studio. Nhấn chạy. Nhưng:</p>
 <p><img src="http://www.f5debug.net/image.axd?picture=image_620.png" alt="bug"></p>
@@ -553,7 +553,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Simulate the hard key on Emulator</title>
-    <url>/blog/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</url>
+    <url>/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</url>
     <content><![CDATA[<p>Windows Phone SDK đi kèm với một chiếc máy ảo tiện lợi: Windows Phone Emulator.</p>
 <p>Nhưng nó có 1 điểm phiền toái. Làm thế nào để “bấm” được các phím cứng, ngoài 3 phím mặc định là Back, Start và Search?</p>
 <p><img src="https://farm6.staticflickr.com/5452/9950348143_fa7dbf41af_o.png" alt="phone"></p>
@@ -615,7 +615,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Event][03-10-2013] Seminar Imagine Cup 2014, Microsoft Student Partner, Application Life-Cycle Management at UIT</title>
-    <url>/blog/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</url>
+    <url>/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</url>
     <content><![CDATA[<p>Sáng nay, tại phòng A106, trường Đại học Công nghệ thông tin – Đại học Quốc gia Tp.HCM đã diễn ra buổi Seminar đầy tính cởi mở và thân mật giữa các Developer Evengelist của Microsoft Việt Nam và sinh viên của trường</p>
 <a id="more"></a>
 <h1 id="1-Mo-dau"><a href="#1-Mo-dau" class="headerlink" title="1. Mở đầu"></a>1. Mở đầu</h1><p>Bắt đầu sự kiện, ITIClub đã cho các bạn xem một số đoạn Video đầy thú vị về Microsoft và chương trình MSP, cũng như cuộc thi Imagine Cup các năm</p>
@@ -674,7 +674,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Textblock tip and trick – Part 1</title>
-    <url>/blog/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</url>
+    <url>/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</url>
     <content><![CDATA[<p>Vậy là, bạn đã có một thời gian dài làm việc với Windows Phone</p>
 <p>Hôm nay, tôi sẽ hướng dẫn bạn một số mẹo vặt khi sử dụng Textblock trong Windows Phone</p>
 <p><img src="https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png" alt="advanced text"></p>
@@ -724,7 +724,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] - TextBlock Tips and Tricks – Part 2 – TextBox too</title>
-    <url>/blog/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</url>
+    <url>/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</url>
     <content><![CDATA[<p>Ở phần trước, bạn đã có một số tips and tricks khá thú vị phải ko?</p>
 <blockquote>
 <p>Link phần trước: <a href="https://wp.me/p1V2Tb-43">[Windows Phone] - Textblock Tips and Tricks - Part 1</a></p>
@@ -771,7 +771,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Phone] Where to put load data method?</title>
-    <url>/blog/2013/11/02/windows-phone-where-to-put-load-data-method/</url>
+    <url>/2013/11/02/windows-phone-where-to-put-load-data-method/</url>
     <content><![CDATA[<p>Lập trình ứng dụng cho Windows Phone, bắt buộc phải load data và hiển thị chúng lên giao diện.</p>
 <p><img src="https://farm8.staticflickr.com/7339/10619092335_673c78c2fc_o.png"></p>
 <p>Vậy cách nào là tối ưu để load data?</p>
@@ -836,7 +836,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Xách Laptop lên và....săn lumia</title>
-    <url>/blog/2013/11/03/xach-laptop-len-va-san-lumia/</url>
+    <url>/2013/11/03/xach-laptop-len-va-san-lumia/</url>
     <content><![CDATA[<p>Lưu ý: chỉ dành cho sinh viên UIT</p>
 <a id="more"></a>
 <blockquote>
@@ -851,7 +851,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] NUGET the Magician</title>
-    <url>/blog/2013/11/11/visual-studio-nuget-the-magician/</url>
+    <url>/2013/11/11/visual-studio-nuget-the-magician/</url>
     <content><![CDATA[<p>Khi sử dụng Visual Studio để lập trình, chắc hẳn sẽ có lúc bạn cần thêm các thư viện từ bên ngoài. Cách cũ là lên Google search (Bing search), rồi tìm thư viện, tải về và add thủ công vào Project. Từ bây giờ, bạn không cần phải làm như thế nữa.</p>
 <p><img src="https://farm1.staticflickr.com/819/40232598394_27c397f3e4_o.png" alt="nuget"></p>
 <p>Nuget là một công cụ giúp bạn thêm các thư viện ngoài vào Project của mình. Sử dụng Nuget rất đơn giản và dễ dàng</p>
@@ -909,7 +909,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] - [Part 1] - Layout with XAML</title>
-    <url>/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</url>
+    <url>/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</url>
     <content><![CDATA[<p>Trong thời gian qua, nhất là khi Nokia tổ chức nhiều cuộc thi với giải thưởng là những cái điện thoại hấp dẫn, rất nhiều bạn đã PM mình để hỏi một số vấn đề cơ bản về các control hiển thị giao diện trong Windows Phone.</p>
 <p>Bài viết này sẽ giúp các bạn có một khái niệm chung về giao diện và biết cách sử dụng nó trong lập trình Windows Phone nhé</p>
 <p><img src="https://farm1.staticflickr.com/819/40941396061_a7abc65129_o.png" alt="xaml"></p>
@@ -1021,7 +1021,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>14-12-2013 – Beginning with Imagine Cup 2014</title>
-    <url>/blog/2013/12/14/beginning-with-imagine-cup-2014/</url>
+    <url>/2013/12/14/beginning-with-imagine-cup-2014/</url>
     <content><![CDATA[<p><img src="https://farm8.staticflickr.com/7329/11364392626_9b74cf5a4b_o.jpg"></p>
 <p>Sáng nay, tại phòng C301, ITIC đã có buổi giới thiệu cuộc thi Imagine Cup 2014</p>
 <p>Tham gia buổi giới thiệu, các bạn đã được hướng dẫn đăng ký tài khoản Imagine Cup 2014, đồng thời tham gia 2 trên 3 minigame đang diễn ra trong khoảng thời gian vô cùng ngắn nhằm đạt giải thưởng là $1000 và $3000 từ ban tổ chức</p>
@@ -1114,7 +1114,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Imagine Cup 2014 – Brain game] January Quiz #1 Now Open</title>
-    <url>/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</url>
+    <url>/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</url>
     <content><![CDATA[<p>Lần thứ 3 trong kỳ thi Imagine Cup 2014, cuộc thi Brain Game lại mở ra đón nhận thí sinh với kỹ năng search Google tuyệt hảo để trả lời các câu hỏi hóc búa.</p>
 <p>Nếu bạn đang thắc mắc Brain Game là gì, thì đúng như tên gọi của nó, Brain Game là một trò chơi nhỏ để thi tài giữa các thí sinh</p>
 <p>Bạn sẽ có 10 câu hỏi trắc nghiệm, mỗi câu hỏi có 3 phương án lựa chọn.</p>
@@ -1182,7 +1182,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] - [Part 2] - Layout with XAML</title>
-    <url>/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</url>
+    <url>/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</url>
     <content><![CDATA[<p>Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner</p>
 <p>Bài 1 ở đây: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/" title="[Windows Phone – Silverlight] Layout with XAML–Basic for AbsoluteBeginner - Part 1">[Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1</a></p>
 <p><img src="http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png%22"></p>
@@ -1366,7 +1366,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it</title>
-    <url>/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</url>
+    <url>/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</url>
     <content><![CDATA[<p><img src="http://farm4.staticflickr.com/3740/12789845873_f26035990e_o.png%22"> Chào các bạn,</p>
 <p>Sau đợt nghỉ lễ dài, hôm nay mình giới thiệu phần 3 của loạt bài viết [Basic for Absolute Beginner]</p>
 <p>Phần 1 nói về các control cơ bản là Grid và StackPanel: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Windows Phone–Silverlight] Layout with XAML–Basic for Absolute Beginner – Part 1</a></p>
@@ -1473,7 +1473,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</title>
-    <url>/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</url>
+    <url>/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</url>
     <content><![CDATA[<p><img src="http://farm4.staticflickr.com/3780/13527961224_118ccd2b50_o.png"></p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML</a></p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML</a></p>
@@ -1581,7 +1581,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</title>
-    <url>/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
+    <url>/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
     <content><![CDATA[<p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
 <p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
 <p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
@@ -1675,7 +1675,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Store] Universal Apps across all Windows devices</title>
-    <url>/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</url>
+    <url>/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</url>
     <content><![CDATA[<p>Ở hội nghị BUILD 2014, Microsoft đã nhắc tới Universal App, ứng dụng có thể chạy được trên cả Windows và Windows Phone</p>
 <p>Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 2013, bạn đã có thể xây dựng một ứng dụng như thế</p>
 <p><img src="http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png"></p>
@@ -1801,7 +1801,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Basic for Absolute Beginner] – [Part 6] – Source Control</title>
-    <url>/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</url>
+    <url>/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</url>
     <content><![CDATA[<p>Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa những đoạn code mới thêm vào, nhưng lỗi vẫn còn, và hình như bạn còn thiếu gì đó?</p>
 <p>Tưởng tượng tiếp, Team của bạn đang làm một dự án nào đó, nhưng mỗi thành viên lại ở một chỗ khác nhau, và các bạn không có cách gì gặp nhau được. Làm thế nào để làm việc cùng nhau trên một dự án?</p>
 <p>Tất cả câu hỏi đó, và nhiều câu hỏi khác, được trả lời bằng một tính năng gọi là “Team Foundation Server” của Visual Studio</p>
@@ -1861,7 +1861,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Not so Basic] – Solve your problems</title>
-    <url>/blog/2014/06/27/not-so-basic-solve-your-problems/</url>
+    <url>/2014/06/27/not-so-basic-solve-your-problems/</url>
     <content><![CDATA[<p>Okie, bạn đã có trong tay hầu như mọi thứ cần thiết để tạo ra ứng dụng của mình:</p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML</a></p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML</a></p>
@@ -1907,7 +1907,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>How to make yourself work when you just don’t want to?</title>
-    <url>/blog/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</url>
+    <url>/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</url>
     <content><![CDATA[<p>Repost from: <a href="http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/">http://blogs.hbr.org/2014/02/how-to-make-yourself-work-when-you-just-dont-want-to/</a></p>
 <p>By</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2014/07/071414_1416_howtomakeyo1.jpg"></p>
@@ -1947,7 +1947,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows Store] When the property window in Visual Studio not responding</title>
-    <url>/blog/2014/10/10/windows-phone-when-the-design-pallet-not-working/</url>
+    <url>/2014/10/10/windows-phone-when-the-design-pallet-not-working/</url>
     <content><![CDATA[<p>Khi làm việc với Visual Studio 2012, VS2013 trở lên, nhất là với việc thiết kế giao diện bằng ngôn ngữ XAML, bạn rất có thể sẽ bắt gặp một điều bất tiện: Sau một thời gian hoạt động ổn định, bạn không thể click, chỉnh sửa, tăng giảm bất cứ thứ gì trong cửa sổ property. Vậy là bạn phải chỉnh sửa trực tiếp trong code, khá bất tiện và mất thời gian.</p>
 <p>Làm thế nào để sửa được lỗi này?</p>
 <a id="more"></a>
@@ -1971,7 +1971,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Upgrade your apps to Windows 8.1 – Tips and tricks</title>
-    <url>/blog/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</url>
+    <url>/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</url>
     <content><![CDATA[<p>Vậy là Windows 8.1 ra mắt cũng đã lâu. Đối với các ứng dụng viết mới thì target mặc định của nó đã là Windows 8.1. Vậy đối với các ứng dụng cũ kỹ thì sao?</p>
 <p>Microsoft cung cấp cho bạn một giải pháp, tuy chưa hoàn hảo, nhưng rất hữu ích. Bạn chỉ cần bấm và click.</p>
 <a id="more"></a>
@@ -2026,7 +2026,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Fix your glitch Bluetooth mouse</title>
-    <url>/blog/2014/11/14/fix-your-glitch-bluetooth-mouse/</url>
+    <url>/2014/11/14/fix-your-glitch-bluetooth-mouse/</url>
     <content><![CDATA[<p><a href="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg"><img src="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg" alt="2_5F00_77B60B43"></a></p>
 <p>Bạn có một con chuột thật tuyệt vời. Microsoft Mouse, Bluetooth, bluetrack technology, thoải mái, tiên dụng, nhưng……lâu lâu nó bị đứng và ngắt kết nối với máy tính.</p>
 <p>Làm thế nào để sửa vấn đề này?</p>
@@ -2049,7 +2049,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>XAML Styler – Bug and fixes</title>
-    <url>/blog/2014/11/17/xaml-styler-bug-and-fixes/</url>
+    <url>/2014/11/17/xaml-styler-bug-and-fixes/</url>
     <content><![CDATA[<p>Dành cho bạn nào chưa biết, XAML Styler là một extension nho nhỏ dành cho Visual Studio, dùng để format lại file thiết kế giao diện xaml cho đẹp.</p>
 <p>XAML Styler được phát triển thêm dựa trên Beautiful Xaml extension, và sau này được đưa lên Visual Studio Gallery.</p>
 <a id="more"></a>
@@ -2087,7 +2087,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it</title>
-    <url>/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</url>
+    <url>/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</url>
     <content><![CDATA[<p>Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam.</p>
 <p>Và 1 dịch vụ rất hay của Azure đó là máy ảo. Bạn được phép tạo một cái máy ảo như máy thật, chạy Windows Server 2012 hoặc 2014, thậm chí là tạo một cái máy ảo chạy thử Windows 10 Technical Preview cũng vẫn được.</p>
 <a id="more"></a>
@@ -2121,7 +2121,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>2014 in review</title>
-    <url>/blog/2014/12/30/2014-in-review/</url>
+    <url>/2014/12/30/2014-in-review/</url>
     <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2014 annual report for this blog.</p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2014/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
 <p>Here’s an excerpt:</p>
@@ -2136,7 +2136,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Virtual Machine in Azure Part 2: Configure to login with Microsoft Account &amp; make it FTP Server</title>
-    <url>/blog/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</url>
+    <url>/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</url>
     <content><![CDATA[<p>Chào các bạn, ở phần trước, các bạn đã biết cách tạo một Virtual Machine trên Azure. Phần này mình sẽ hướng dẫn cho các bạn cách thiết lập nó để đăng nhập bằng chính Microsoft Account của bạn, và biến nó thành một máy chủ FTP nhé.</p>
 <a id="more"></a>
 <h1 id="Login-with-MS-Account"><a href="#Login-with-MS-Account" class="headerlink" title="Login with MS Account"></a>Login with MS Account</h1><p>Tạo một user mới, dùng Microsoft Account làm username (ví dụ như <a href="mailto:blahblahblah@hotmail.com">blahblahblah@hotmail.com</a> chả hạn)</p>
@@ -2217,7 +2217,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Browser Test] New Spartan&#39;s engine on IE 11 Technical Preview</title>
-    <url>/blog/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</url>
+    <url>/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</url>
     <content><![CDATA[<p>Hello friends, today I would like to show you the test result of the new Spartan’s engine on IE Technical Preview that came along with Windows 10 build 9926 (with Cortana and stuffs).</p>
 <p>The test will be on 3 main browser: IE, Firefox and Chrome</p>
 <a id="more"></a>
@@ -2271,7 +2271,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[MSP] MSP Asia – Pacific Newsletter – Jan 2015</title>
-    <url>/blog/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</url>
+    <url>/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</url>
     <content><![CDATA[<p><strong>MSP Asia-Pacific Newsletter</strong></p>
 <p>Vol.2 Dec-Jan 2014-2015</p>
 <p><strong>Contents:</strong></p>
@@ -2338,7 +2338,7 @@ using std::endl;</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#117;&#110;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#x75;&#100;&#x65;&#x6e;&#x74;&#x70;&#x61;&#x72;&#116;&#110;&#x65;&#x72;&#46;&#x63;&#111;&#x6d;">&#x53;&#x68;&#117;&#110;&#46;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#116;&#x75;&#100;&#x65;&#x6e;&#x74;&#x70;&#x61;&#x72;&#116;&#110;&#x65;&#x72;&#46;&#x63;&#111;&#x6d;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#104;&#x75;&#110;&#46;&#x4f;&#107;&#x75;&#98;&#111;&#x40;&#115;&#x74;&#x75;&#100;&#x65;&#x6e;&#x74;&#x70;&#97;&#114;&#116;&#110;&#x65;&#114;&#x2e;&#99;&#111;&#x6d;">&#x53;&#104;&#x75;&#110;&#46;&#x4f;&#107;&#x75;&#98;&#111;&#x40;&#115;&#x74;&#x75;&#100;&#x65;&#x6e;&#x74;&#x70;&#97;&#114;&#116;&#110;&#x65;&#114;&#x2e;&#99;&#111;&#x6d;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2347,7 +2347,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Computer Tips] Remove Skype Ads Quick and Easy</title>
-    <url>/blog/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</url>
+    <url>/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</url>
     <content><![CDATA[<p>Xài Skype, chắc ai cũng khó chịu với mấy cái quảng cáo lặp đi lặp lại chán phèo của Skype nhỉ</p>
 <p>Và đây là cách loại bỏ mấy cái quảng cáo đó.</p>
 <a id="more"></a>
@@ -2365,7 +2365,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Azure] - Update - Create Proxy Server on Azure to survive the internet blackout or the broken cable</title>
-    <url>/blog/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</url>
+    <url>/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</url>
     <content><![CDATA[<p>Chào các bạn</p>
 <p>Hiện tại cáp quang AAG đang bị đứt, nhà mạng bóp băng thông, blah blah blah đủ kiểu.</p>
 <p>Update thêm, facebook đang bị chặn các kiểu con đà điểu, ở mọi nơi, trên từng cây số, từ hẻm nhỏ ra tới quốc lộ, từ vùng sâu vùng xa tới hoàng sa trường xa.</p>
@@ -2421,7 +2421,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
-    <url>/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
+    <url>/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
     <content><![CDATA[<p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
 <p>Làm thế nào để bắt chước cách thiết kế này?</p>
 <a id="more"></a>
@@ -2462,7 +2462,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser</title>
-    <url>/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</url>
+    <url>/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</url>
     <content><![CDATA[<p>Giữa một ma trận mê cung các trình duyệt, nào là edge rồi cờ rôm, cáo lửa với chả đít nhôm, bạn sẽ xài cái gì đây?</p>
 <p>Lại nghe, chrome ăn ram như uống nước, firefox chậm như con rùa bò, chỉ hận sao không thể tăng ram, gắn SSD.</p>
 <p>Còn nghe, Add-on như thuốc tăng lực, User-script như lá đu đủ, xài thế nào đây?</p>
@@ -2616,7 +2616,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Computer Tips] [Part 2] Be an Advanced user with Web Browser</title>
-    <url>/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
+    <url>/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
     <content><![CDATA[<p>Part 1 ở đây: <a href="https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">Phần 1</a></p>
 <p>Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: “Còn gì hay ho nữa không”</p>
 <p>Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.</p>
@@ -2685,7 +2685,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows] How to add IsVisible Property to all WinRT UIElement</title>
-    <url>/blog/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</url>
+    <url>/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</url>
     <content><![CDATA[<p>Trong quá trình dev app sử dụng XAML và C#, chắc chắn bạn sẽ gặp trường hợp phải đặt thuộc tính Visibility, và thuộc tính này có 2 giá trị là Visible/Collapsed. Và để binding tới nó sử dụng bool, bạn phải sử dụng một converter. Vậy tại sao Microsoft không thiết kế nó sử dụng bool từ đầu nhỉ. Và có cách nào để khắc phục không?</p>
 <p>Bài viết được biên tập lại từ: <a href="http://www.rudyhuyn.com/blog/2015/03/26/how-to-add-isvisible-property-to-all-winrt-ui-elements/">http://www.rudyhuyn.com/blog/2015/03/26/how-to-add-isvisible-property-to-all-winrt-ui-elements/</a></p>
 <a id="more"></a>
@@ -2721,7 +2721,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [en-US]</title>
-    <url>/blog/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</url>
+    <url>/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</url>
     <content><![CDATA[<p>Chào các bạn, kể từ bài blog này, mình sẽ viết bằng tiếng Anh nhé. Bạn có thể dùng Google Translate hoặc Bing Translate để dịch sang tiếng Việt nhé :3</p>
 <p>Các bài viết trước mình cũng sẽ viết lại bằng tiếng Anh.</p>
 <p>Hello guys, from this post forward, I will write in English. You can use “Google Translate” or “Bing Translate” to read it in Vietnamese</p>
@@ -2762,7 +2762,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Azure] [Vietnamese] Đăng ký Azure - Hướng dẫn từng bước</title>
-    <url>/blog/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</url>
+    <url>/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</url>
     <content><![CDATA[<p>Azure đã tới Việt Nam, và bạn đang phân vân không biết phải đăng ký như thế nào để sử dụng nó, hoàn toàn miễn phí?</p>
 <p>Bài viết sau sẽ hướng dẫn bạn cách đăng ký, từ đơn giản nhất cho tới những cách đăng ký khi bạn có tài khoản DreamSpark hoặc MSDN Subscription</p>
 <a id="more"></a>
@@ -2853,7 +2853,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] Visual Studio have Super Power with help of Extensions</title>
-    <url>/blog/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</url>
+    <url>/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</url>
     <content><![CDATA[<p>Phải rồi, bạn đọc nó đúng rồi đó. Visual Studio có sức mạnh siu nhơn, và sau đây là lý do mà tôi nói nó có.</p>
 <p>Bài viết này bao gồm các thủ thuật, tiện ích và hướng dẫn sử dụng những tính năng cực hay ho nhưng khá ít người biết tới của Visual Studio.</p>
 <a id="more"></a>
@@ -2998,7 +2998,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [vi-vn]</title>
-    <url>/blog/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</url>
+    <url>/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</url>
     <content><![CDATA[<p>Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là “Live Visual Tree” và “Live Property Explorer”. Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy [insert hình há mỏ kinh ngạc]</p>
 <a id="more"></a>
 <h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
@@ -3036,7 +3036,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</title>
-    <url>/blog/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</url>
+    <url>/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</url>
     <content><![CDATA[<p>For Visual Studio 2015</p>
 <p>Từ xưa tới nay, khi debug bằng Visual Studio, hầu như ai cũng biết chọt con chuột lên trên một biến nào đó và một cái bảng nho nhỏ hiện ra hiển thị toàn bộ dữ liệu của biến đó. Bài post này sẽ hướng dẫn bạn cách sử dụng những công cụ mới của Visual Studio 2015 để cải thiện hiệu suất cho ứng dụng của bạn.</p>
 <a id="more"></a>
@@ -3087,7 +3087,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[UWP] Get all the latest sample code at ease</title>
-    <url>/blog/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</url>
+    <url>/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</url>
     <content><![CDATA[<p>English version available at: <a href="https://tuanmsp.wordpress.com/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/">https://tuanmsp.wordpress.com/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</a></p>
 <p>Hồi xưa, nếu bạn muốn có sample code cho một tính năng nào đó, thì quy trình là Google Search &gt; MSDN Page &gt; Download cái sample code đó zìa &gt; giải nén &gt; mở file solution để xem.</p>
 <p>Ngày hôm nay đã khác rồi, Microsoft đã toẹt zời trở lại. Tất cả Sample code bạn cần cho lập trình Windows 10 hiện đã có trên GitHub, và được UPDATE hàng ngày. Vì vậy, bạn sẽ luôn có những đoạn code mới nhất, do chính mấy ông kỹ sư viết ra tính năng đó viết.</p>
@@ -3151,7 +3151,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[UWP] Create image assets for your apps</title>
-    <url>/blog/2015/10/26/uwp-create-image-assets-for-your-apps/</url>
+    <url>/2015/10/26/uwp-create-image-assets-for-your-apps/</url>
     <content><![CDATA[<p>Windows 10 apps (aka Universal Windows App) yêu cầu rất nhiều kích thước hình ảnh khác nhau trong project của nó (hiện tại là 39 kích thước khác nhau). Làm thế nào để tạo ra các hình ảnh này? Mở Photoshop hay GIMP lên để crop, resize, save, rồi lập lại 39 lần hẻ? Hôm nay, bạn đã có thể làm nó dễ dàng chỉ với 1 (vài) click. Thậm chí tạo ra kích thước custom được luôn.</p>
 <a id="more"></a>
 <h1 id="The-App"><a href="#The-App" class="headerlink" title="The App"></a>The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
@@ -3196,7 +3196,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio] Fighting with Bugs and Exceptions</title>
-    <url>/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</url>
+    <url>/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</url>
     <content><![CDATA[<p>Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.</p>
 <p>Visual Studio 2015 có một cải tiến đáng giá giúp lập trình viên biết chính xác chỗ code nào bị exception, và một số cải tiến vô cùng đáng giá khác khi debug một đoạn code</p>
 <a id="more"></a>
@@ -3278,8 +3278,8 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
-    <url>/blog/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#116;&#x75;&#100;&#x79;&#x2e;&#x6e;&#x67;&#x6f;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#116;&#x75;&#100;&#x79;&#x2e;&#x6e;&#x67;&#x6f;&#x63;&#116;&#105;&#x65;&#x6e;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#x74;&#x75;&#100;&#x79;&#46;&#110;&#103;&#x6f;&#x63;&#x74;&#105;&#x65;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x73;&#x74;&#x75;&#100;&#x79;&#46;&#110;&#103;&#x6f;&#x63;&#x74;&#105;&#x65;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#x75;&#100;&#x79;&#46;&#110;&#103;&#111;&#99;&#x74;&#105;&#x65;&#x6e;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x73;&#x74;&#x75;&#100;&#x79;&#46;&#110;&#103;&#111;&#99;&#x74;&#105;&#x65;&#x6e;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#115;&#x74;&#x75;&#x64;&#121;&#x2e;&#110;&#103;&#x6f;&#99;&#x74;&#105;&#101;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#115;&#x74;&#x75;&#x64;&#121;&#x2e;&#110;&#103;&#x6f;&#99;&#x74;&#105;&#101;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3287,8 +3287,8 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
-    <url>/blog/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#104;&#111;&#x61;&#x74;&#114;&#x75;&#x6f;&#110;&#x67;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#x76;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#107;&#104;&#111;&#x61;&#x74;&#114;&#x75;&#x6f;&#110;&#x67;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#x76;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#116;&#x72;&#117;&#111;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#108;&#x69;&#118;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#107;&#x68;&#x6f;&#x61;&#116;&#x72;&#117;&#111;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#108;&#x69;&#118;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#x6f;&#x61;&#116;&#x72;&#x75;&#111;&#x6e;&#x67;&#98;&#97;&#99;&#104;&#x40;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x6b;&#x68;&#x6f;&#x61;&#116;&#x72;&#x75;&#111;&#x6e;&#x67;&#98;&#97;&#99;&#104;&#x40;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#104;&#111;&#x61;&#116;&#x72;&#117;&#111;&#110;&#x67;&#98;&#97;&#99;&#x68;&#64;&#108;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#107;&#104;&#111;&#x61;&#116;&#x72;&#117;&#111;&#110;&#x67;&#98;&#97;&#99;&#x68;&#64;&#108;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3296,7 +3296,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Notice] Tách blog</title>
-    <url>/blog/2015/12/19/notice-tach-blog/</url>
+    <url>/2015/12/19/notice-tach-blog/</url>
     <content><![CDATA[<p>Hồi trước mình có thông báo trong một bài blog là kể từ bài post đó, mình sẽ viết bằng tiếng anh.</p>
 <p>Tuy nhiên, sau đó vẫn xuất hiện khá nhiều bài viết tiếng Việt là do có một cuộc thi viết blog, ngôn ngữ bắt buộc phải là tiếng Việt :P</p>
 <p>Sau đó, có nhiều bạn feedback lại, và cuối cùng mình quyết định sẽ tách blog này ra làm 2 phần giống hệt nhau, chỉ khác nhau về mặt ngôn ngữ.</p>
@@ -3330,7 +3330,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>2015 in review</title>
-    <url>/blog/2015/12/30/2015-in-review/</url>
+    <url>/2015/12/30/2015-in-review/</url>
     <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2015 annual report for this blog.</p>
 <p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
 <p>Here’s an excerpt:</p>
@@ -3345,7 +3345,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Visual Studio Online] TFS love Slack, and vice versa</title>
-    <url>/blog/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</url>
+    <url>/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</url>
     <content><![CDATA[<p>Bài viết này sẽ hướng dẫn bạn tích hợp TFS vào slack. Mỗi khi có hoạt động gì đó xảy ra trên TFS, sẽ có message gửi trong slack cho các thành viên cùng biết</p>
 <p>Nghe cũng hay nhỉ?</p>
 <p>Sau đây sẽ là các bước tích hợp</p>
@@ -3394,7 +3394,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows] Implement In-App Purchase for Windows 10</title>
-    <url>/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</url>
+    <url>/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</url>
     <content><![CDATA[<p>Bạn có một app thặc là tuyệt zời ông mặt trời, tính năng độc đáo, hấp dẫn. Người dùng không thể nào rời mắt khỏi app của bạn. Và bạn quyết định kiếm tiền từ nó. Thế là bạn tìm hiểu cách implement tính năng In-App Purchase của Windows 10 và nhận ra…nó quá phức tạp. Cùng nhau bơi zô nhé.</p>
 <a id="more"></a>
 <ul>
@@ -3464,7 +3464,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[Windows 10] Prevent your app from being hidden on Windows Store</title>
-    <url>/blog/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</url>
+    <url>/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</url>
     <content><![CDATA[<p>Trong những tháng vừa rồi, Window Store đang tiến hành thanh lọc Store, bỏ các app rác, đẩy các app tốt lên feature. Tuy nhiên, theo phản ánh của khá nhiều developer tại Việt Nam, Store đang tiến hành xử trảm khá nhiều app tốt của dev VN và các nước khác. Vậy phải làm thế nào?</p>
 <p>Bài viết này cung cấp cho bạn những thông tin và các gợi ý để app của bạn mãi mãi nằm trên store, hiện trong search và leo lên tóp.</p>
 <a id="more"></a>
@@ -3503,8 +3503,8 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
-    <url>/blog/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#x63;&#x73;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#97;&#120;&#x63;&#x73;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#x61;&#120;&#99;&#115;&#57;&#x30;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#120;&#99;&#115;&#57;&#x30;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#99;&#115;&#x39;&#48;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#120;&#99;&#115;&#x39;&#48;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#x61;&#x78;&#x63;&#115;&#x39;&#x30;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x61;&#x78;&#x63;&#115;&#x39;&#x30;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3512,7 +3512,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>[ASP.NET CORE] – My road trip to ASP.NET core – Getting Started</title>
-    <url>/blog/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</url>
+    <url>/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</url>
     <content><![CDATA[<p>Bài viết theo quan điểm cá nhân, các bạn vui lòng đừng ném đá u đầu chết.</p>
 <p>Microsoft is cool again</p>
 <p>Ngày 27 tháng 6 năm 2016, MS ra mắt một loạt 3 sản phẩm cực khủng, hứa hẹn sẽ thay đổi cán cân quyền lực, lập lại bản đồ Server, và nó là .NET core, ASP.NET core, và Entity Framework Core. Tất cả đều mang số hiệu 1.0</p>
@@ -3578,7 +3578,7 @@ using std::endl;</code></pre>
   </entry>
   <entry>
     <title>C# string performance – Tips and Tricks</title>
-    <url>/blog/2016/07/11/c-string-performance-tips-and-tricks/</url>
+    <url>/2016/07/11/c-string-performance-tips-and-tricks/</url>
     <content><![CDATA[<p>Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương trình viết bằng C#. Chỉ cần search một phát, sẽ ra hàng tá kết quả khác nhau, với các lời khuyên khác nhau, đi kèm với các đoạn code bench mark khác nhau, vô cùng rối ren khiến ta bối rối.</p>
 <a id="more"></a>
 
@@ -3648,7 +3648,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API</title>
-    <url>/blog/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</url>
+    <url>/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</url>
     <content><![CDATA[<p>Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe</p>
 <a id="more"></a>
 <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>Nếu bạn chưa biết API là gì</p>
@@ -3775,7 +3775,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Tips and Tricks] Using Prompt Attribute as Placeholder for MVC5</title>
-    <url>/blog/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</url>
+    <url>/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</url>
     <content><![CDATA[<p>Khi bạn làm một cái form trong ASP.NET MVC5, chắc bạn sẽ dùng HtmlHelpers chứ nhỉ.</p>
 <p>Vậy làm thế nào để hiển thị placeholder, sử dụng thuộc tính prompt?</p>
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png" alt="31716564800_af2c594490_o"></p>
@@ -3805,7 +3805,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET MVC] Code first vs Database First</title>
-    <url>/blog/2017/01/06/asp-net-mvc-code-first-vs-database-first/</url>
+    <url>/2017/01/06/asp-net-mvc-code-first-vs-database-first/</url>
     <content><![CDATA[<p>Lúc mới làm ASP.NET, chắc bạn nào cũng sẽ hỏi câu hỏi này. Như kiểu nên làm quả trứng trước, sau đó để nó nở ra con gà, hay làm con gà trước, rồi để nó đẻ ra quả trứng?</p>
 <p>Chọn cách nào đi chăng nữa, vẫn sẽ có một số sự khác biệt mà bạn cần biết để chọn cho đúng, xong rồi phóng lao để đâm theo</p>
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/original.jpg" alt="original"></p>
@@ -3847,8 +3847,8 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
-    <url>/blog/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#117;&#111;&#x6e;&#103;&#x61;&#110;&#104;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#108;&#117;&#111;&#x6e;&#103;&#x61;&#110;&#104;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#x75;&#x6f;&#x6e;&#x67;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6c;&#x75;&#x6f;&#x6e;&#x67;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#x6f;&#x6e;&#x67;&#x61;&#x6e;&#x68;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#108;&#x75;&#x6f;&#x6e;&#x67;&#x61;&#x6e;&#x68;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#97;&#x6e;&#x68;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#97;&#x6e;&#x68;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3856,7 +3856,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET MVC] Khắc phục lỗi chữ tiếng việt Unicode bị encode trong View</title>
-    <url>/blog/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</url>
+    <url>/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</url>
     <content><![CDATA[<p><img src="https://farm1.staticflickr.com/420/31984906310_6b01d5c873_o.png"></p>
 <p>Làm web mà có tiếng Việt thì khổ nhất là chữ tiếng Việt nó cứ bị encode thành mấy ký tự vô nghĩa</p>
 <p>Điều này ảnh hưởng đến nhìu thứ, đặc biệt là SEO, lưu trữ data lên DB, vân vân và vân vân.</p>
@@ -3888,7 +3888,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET MVC] Debug Route Config</title>
-    <url>/blog/2017/02/07/asp-net-mvc-debug-route-config/</url>
+    <url>/2017/02/07/asp-net-mvc-debug-route-config/</url>
     <content><![CDATA[<p>Route Map là một cái bảng. Khi bạn chạy một ứng dụng ASP.NET, cái bảng này sẽ được đem ra để so sánh với URL mà bạn gõ trên địa chỉ trình duyệt</p>
 <p>Vì nó duyệt theo kiểu bảng như vậy nên rất khó để debug nó. Vỏ dừa dày có con dao nhọn. Vẫn có cách để trị nó nhóe</p>
 <a id="more"></a>
@@ -3913,7 +3913,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[Front-end] Tự động reload browser khi đang code</title>
-    <url>/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</url>
+    <url>/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</url>
     <content><![CDATA[<p>Mỗi lần nói tới CSS, là các front-end developer lại thấy chán nản mệt mỏi các kiểu</p>
 <p>Thử nghĩ xem, mỗi lần sửa CSS (hoặc SCSS), bạn sẽ phải quay lại web browser, nhấn reload / F5 / Ctrl + F5</p>
 <p>Nếu có cách để browser tự động reload mỗi khi có thay đổi code thì sao nhỉ</p>
@@ -4012,7 +4012,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET] Mở rộng EditorFor</title>
-    <url>/blog/2017/04/20/asp-net-mo-rong-editorfor/</url>
+    <url>/2017/04/20/asp-net-mo-rong-editorfor/</url>
     <content><![CDATA[<p>Chắc là bạn đã quá quen với <strong><em>EditorFor</em></strong> control, nhưng nó chỉ render khi gặp những kiểu dữ liệu được hỗ trợ thôi. Bạn sẽ làm gì nếu muốn mở rộng EditorFor để render những kiểu dữ liệu của riêng bạn?</p>
 <a id="more"></a>
 <p>Mục lục</p>
@@ -4083,7 +4083,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASPNET] Editor for với List và thêm mới item dùng AJAX</title>
-    <url>/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</url>
+    <url>/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</url>
     <content><![CDATA[<p>Tưởng tượng bạn có list các item trong ViewModel</p>
 <p>Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao?</p>
 <p>Đọc xong bài này, bạn sẽ biết cách làm nhóe</p>
@@ -4200,7 +4200,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Wordpress - Install Wordpress to Docker containers from Windows</title>
-    <url>/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</url>
+    <url>/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</url>
     <content><![CDATA[<p>In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes</p>
 <a id="more"></a>
 <p><strong>Contents</strong></p>
@@ -4331,7 +4331,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Identity] - 1 - Introduction</title>
-    <url>/blog/2017/08/30/aspnet-identity-1-introduction/</url>
+    <url>/2017/08/30/aspnet-identity-1-introduction/</url>
     <content><![CDATA[<p>Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity phình to tới mức khó tin, và là một cục xương khó nhằn cho bất kỳ ai mới học ASP.NET</p>
 <a id="more"></a>
 <ul>
@@ -4444,7 +4444,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Core 2.0] - dùng VSCode và target .NET Framework</title>
-    <url>/blog/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</url>
+    <url>/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</url>
     <content><![CDATA[<p>Nếu cảm thấy Visual Studio Community quá nặng nề, nhưng bạn vẫn muốn dev website bằng asp.net, và target .net framework, vậy tại sao bạn không sử dụng VSCode nhỉ?</p>
 <p>Trớ trêu thay, OmniSharp chưa hỗ trợ .net core 2 trên vscode, nhưng bài viết này sẽ hướng dẫn bạn cách để vượt qua giới hạn đó</p>
 <p>Lưu ý là cách này chỉ hoạt động trên windows nhé</p>
@@ -4502,7 +4502,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Core 2.0] Custom Tag Helper</title>
-    <url>/blog/2018/01/12/asp-net-core-2-0-custom-tag-helper/</url>
+    <url>/2018/01/12/asp-net-core-2-0-custom-tag-helper/</url>
     <content><![CDATA[<p>ASP.NET Core giới thiệu một cách vô cùng tự nhiên để xây dựng các thẻ <code>input</code>, <code>label</code> và một số thẻ khác với từ khóa <code>asp-for</code>, chúng được gọi là <em><code>tag helper</code></em></p>
 <p>Bạn cũng có thể tạo ra các <code>tag helper</code> của riêng mình để render ra các tag mong muốn</p>
 <a id="more"></a>
@@ -4578,7 +4578,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[asp.net mvc] Error Message - chung mà riêng</title>
-    <url>/blog/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</url>
+    <url>/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</url>
     <content><![CDATA[<p>Bạn có đang dùng Entity Framework với ASP.NET MVC, cùng với đó là client-validation?</p>
 <p>Đối với mỗi ```DataAnnotation`` attribute, bạn lại có 1 câu thông báo lỗi khác nhau, và bạn nhét tất cả chúng vào Resource?</p>
 <p>Có một số cách giúp bạn khắc phục một vài nhược điểm trên ;)</p>
@@ -4651,7 +4651,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[asp.net] - Query trên các computed property không hỗ trợ LINQ</title>
-    <url>/blog/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</url>
+    <url>/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</url>
     <content><![CDATA[<p>Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng:</p>
 <blockquote>
 <p>LINQ và Entity Framework không hỗ trợ query trên các property được tính toán dựa trên các field khác</p>
@@ -4729,7 +4729,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Moving to open source softwares</title>
-    <url>/blog/2018/02/17/moving-to-open-source-softwares/</url>
+    <url>/2018/02/17/moving-to-open-source-softwares/</url>
     <content><![CDATA[<p>Trong suốt quãng đời làm quen với máy tính, mình cũng đồng thời làm quen luôn với khái niệm cờ rắc. Xung quanh, ai cũng crack, tội gì mình lại không crack?</p>
 <p>Cho tới nay, mình tự hào đã dùng toàn bộ sản phẩm có bản quyền đàng hoàng, và thay thế hầu hết các phần mềm có bản quyền bằng các phần mềm miễn phí tương đương. Tuy còn nhiều điều chưa tiện, chưa thông minh, chưa đẹp như những phần mềm tính phí, nhưng nó là công sức của cả một cộng đồng lập trình viên, và điểm đặc biệt là nó update cực nhanh</p>
 <a id="more"></a>
@@ -4838,7 +4838,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Core] Auto Anti-forgery Token</title>
-    <url>/blog/2018/03/03/asp-net-core-auto-anti-forgery-token/</url>
+    <url>/2018/03/03/asp-net-core-auto-anti-forgery-token/</url>
     <content><![CDATA[<p>Có một cách giúp bạn tự động áp dụng <code>ValidateAntiForgeryToken</code> vào tất cả các Post Action trong controller của mình</p>
 <a id="more"></a>
 <p>Chắc bạn đã từng nghe qua <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-site Request Forgery (CSRF) attacks</a>. Hiểu một cách đơn giản là Server thực thi một request giả mạo xuất phát từ hacker, nhưng với chứng thực xịn của 1 user nào đó. Điều này rất dễ thực hiện. Giả sử bạn truy cập 1 forum nào đó, trong đó có chứa đoạn javascript giả mạo 1 request tới ngân hàng của bạn, yêu cầu chuyển tiền. Nếu bạn vẫn đang đăng nhập vào tài khoản ebanking của mình, và ngân hàng ko áp dụng bất kỳ phương pháp bảo vệ nào, thì như một cái búng tay, tiền của bạn đã chuyển vào túi hacker.</p>
@@ -4869,7 +4869,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET Core] - Razor Page - Let&#39;s think straight</title>
-    <url>/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/</url>
+    <url>/2018/03/03/asp-net-core-razor-page-lets-think-straight/</url>
     <content><![CDATA[<p>Khi bạn cần tạo thật nhanh một cái website có các page cần thiết mà không cần phải quan tâm tới các vấn đề phức tạp như mô hình, bảo mật, mở rộng, thì Razor Page chính là câu trả lời</p>
 <a id="more"></a>
 <ul>
@@ -4951,7 +4951,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET for Beginner] - Part 1 - MVC</title>
-    <url>/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</url>
+    <url>/2018/03/04/asp-net-for-beginner-part-1-mvc/</url>
     <content><![CDATA[<p>MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng?</p>
 <p>Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.</p>
 <a id="more"></a>
@@ -5074,7 +5074,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding</title>
-    <url>/blog/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</url>
+    <url>/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</url>
     <content><![CDATA[<p>Ở phần trước bạn đã có một khái niệm cơ bản về mô hình MVC. Dựa vào đó, chúng ta sẽ tiếp tục tìm hiểu thêm về database những vấn đề liên quan nhé.</p>
 <a id="more"></a>
 <blockquote>
@@ -5243,7 +5243,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET for Beginner] - Part 3 - Front end framework nào?</title>
-    <url>/blog/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</url>
+    <url>/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</url>
     <content><![CDATA[<p>Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại</p>
 <a id="more"></a>
 <blockquote>
@@ -5357,7 +5357,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation</title>
-    <url>/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</url>
+    <url>/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</url>
     <content><![CDATA[<p>Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: CRUD</p>
 <a id="more"></a>
 <blockquote>
@@ -5500,7 +5500,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASP.NET] - Project Structure &amp; Package Manager</title>
-    <url>/blog/2018/05/09/asp-net-project-structure-package-manager/</url>
+    <url>/2018/05/09/asp-net-project-structure-package-manager/</url>
     <content><![CDATA[<p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
 <p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
 <a id="more"></a>
@@ -5589,7 +5589,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[ASPNET Core 2] – Middleware</title>
-    <url>/blog/2018/06/12/aspnet-core-2-middleware/</url>
+    <url>/2018/06/12/aspnet-core-2-middleware/</url>
     <content><![CDATA[<p>For English version: <a href="https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/">[ASPNET Core 2] – Middleware</a></p>
 <p>Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET</p>
 <p>Dễ ẹt, <code>dotnet new mvc</code>, rồi sửa <code>Views/Home/Index.cshtml</code> cho nó trả về 1 dòng</p>
@@ -5666,7 +5666,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>[Design Pattern] - Dependency Injection trong ASP.NET Core</title>
-    <url>/blog/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</url>
+    <url>/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</url>
     <content><![CDATA[<p>Dependency Injection là một kỹ thuật vô cùng thông dụng để <em>nới lỏng</em> các objects và class phụ thuộc vào chúng. Nghe khó hiểu quá phải ko các bạn?</p>
 <p>Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn tổng quan (hy vọng là khách quan) về DI</p>
 <a id="more"></a>
@@ -5732,7 +5732,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Repository và Unit of Work Pattern</title>
-    <url>/blog/2018/07/10/repository-va-unit-of-work-pattern/</url>
+    <url>/2018/07/10/repository-va-unit-of-work-pattern/</url>
     <content><![CDATA[<p>Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer.</p>
 <p>Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan tới nhau đều được thực hiện trên cùng một DbContext</p>
 <a id="more"></a>
@@ -5857,7 +5857,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 1.1 - Introduction</title>
-    <url>/blog/2018/09/14/machine-learning-introduction/</url>
+    <url>/2018/09/14/machine-learning-introduction/</url>
     <content><![CDATA[<p>Bài viết mở đầu cho chuỗi tự học Machine Learning. Các khái niệm cơ bản sẽ được giới thiệu trong bài viết này.</p>
 <a id="more"></a>
 <p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
@@ -5917,7 +5917,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 1.2 - Model and Cost Function</title>
-    <url>/blog/2018/09/22/ml-model-and-cost-function/</url>
+    <url>/2018/09/22/ml-model-and-cost-function/</url>
     <content><![CDATA[<p>Bài thứ 2 trong chuỗi bài viết tự học Machine Learning Trong bài này, ta sẽ tìm hiểu về cost function, một function nhằm dự đoán giá trị output với một bộ các giá trị input/output cho trước.</p>
 <a id="more"></a>
 <p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
@@ -6029,7 +6029,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 1.3 - Parameter Learning</title>
-    <url>/blog/2018/09/27/machine-learning-parameter-learning/</url>
+    <url>/2018/09/27/machine-learning-parameter-learning/</url>
     <content><![CDATA[<p>Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.</p>
 <p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis.</p>
 <a id="more"></a>
@@ -6106,7 +6106,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 1.4 - Matrices and Vectors</title>
-    <url>/blog/2018/10/01/machine-learning-matrices-and-vectors/</url>
+    <url>/2018/10/01/machine-learning-matrices-and-vectors/</url>
     <content><![CDATA[<p>Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng.</p>
 <p>Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.</p>
 <a id="more"></a>
@@ -6232,7 +6232,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 2.1 - Multiple Features</title>
-    <url>/blog/2018/10/03/machine-learning-2-1-multiple-features/</url>
+    <url>/2018/10/03/machine-learning-2-1-multiple-features/</url>
     <content><![CDATA[<p>Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành <code>multiple input features</code>, và những best practices để thực hiện linear regression.</p>
 <a id="more"></a>
 <p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
@@ -6327,7 +6327,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 2.2 - Normal Equation</title>
-    <url>/blog/2018/10/09/machine-learning-2-2-normal-equation/</url>
+    <url>/2018/10/09/machine-learning-2-2-normal-equation/</url>
     <content><![CDATA[<p>Bài 2 phần 2 trong khóa học Machine Learning của giáo sư Andrew Ng. Trong bài này, ta sẽ tìm hiểu một cách thay thế cho thuật toán <code>Gradient Descent</code> cùng ưu nhược điểm của nó.</p>
 <a id="more"></a>
 <p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
@@ -6369,7 +6369,7 @@ if(string.IsNullOrEmpty(s))
   </entry>
   <entry>
     <title>Machine Learning - 2.3 - Exercise</title>
-    <url>/blog/2018/10/18/machine-learning-2-3-exercise/</url>
+    <url>/2018/10/18/machine-learning-2-3-exercise/</url>
     <content><![CDATA[<p>Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi bài tập trong tuần 2 của khóa học Machine Learning của giáo sư Andrew Ng.</p>
 <p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a>.</p>
 <a id="more"></a>
@@ -6465,7 +6465,7 @@ end</code></pre>
   </entry>
   <entry>
     <title>[Research] - LaTex on Windows - Step by step installation</title>
-    <url>/blog/2019/04/02/latex-on-windows-step-by-step-installation/</url>
+    <url>/2019/04/02/latex-on-windows-step-by-step-installation/</url>
     <content><![CDATA[<p>In this blog, I will instruct you on how to install and writing LaTex documents on Windows with ease.</p>
 <ul>
 <li><a href="#1-requirement">1. Requirement</a><ul>
@@ -6540,7 +6540,7 @@ end</code></pre>
   </entry>
   <entry>
     <title>[Travel] - Transportation in Europe</title>
-    <url>/blog/2019/05/01/transportation-in-europe/</url>
+    <url>/2019/05/01/transportation-in-europe/</url>
     <content><![CDATA[<p>Nếu bạn có dư dả thời gian và nguồn kinh phí eo hẹp, thì cách tốt nhất để dạo vòng quanh các nước EU chính là các phương tiện công cộng.</p>
 <a id="more"></a>
 <ul>
@@ -6636,7 +6636,7 @@ end</code></pre>
   </entry>
   <entry>
     <title>[Machine Learning] - 3.1 - Classification and Representation</title>
-    <url>/blog/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
+    <url>/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
     <content><![CDATA[<p>Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.</p>
 <a id="more"></a>
 <ul>
@@ -6677,7 +6677,7 @@ end</code></pre>
   </entry>
   <entry>
     <title>Machine Learning Title block</title>
-    <url>/blog/2019/05/15/machine-learning-title-block/</url>
+    <url>/2019/05/15/machine-learning-title-block/</url>
     <content><![CDATA[<p>Xem các bài viết khác tại <a href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
 ]]></content>
       <categories>
@@ -6686,7 +6686,7 @@ end</code></pre>
   </entry>
   <entry>
     <title>[Research] - Gecko Dom Logging system</title>
-    <url>/blog/2019/06/14/gecko-dom-logging-system/</url>
+    <url>/2019/06/14/gecko-dom-logging-system/</url>
     <content><![CDATA[<p>The purpose of this documentation is to record all the findings and my progress while exploring Firefox source code, in order to log how many time a DOM API is called when visit a single website, or multiple common website.</p>
 <p>This require a deep modification in Firefox’s implementation of DOM API.</p>
 <a id="more"></a>
@@ -6845,7 +6845,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>[Machine Learning] - 3.2 - Logistic Regression Model</title>
-    <url>/blog/2019/06/15/machine-learning-3-2-logistic-regression-model/</url>
+    <url>/2019/06/15/machine-learning-3-2-logistic-regression-model/</url>
     <content><![CDATA[<p>Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng</p>
 <a id="more"></a>
 <ul>
@@ -6913,7 +6913,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>[Life] - Fighting with unauthorized copies of your content</title>
-    <url>/blog/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
+    <url>/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
     <content><![CDATA[<p>Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.</p>
 <p>The point is, they are copying content from my blog, without my authorization. It’s time to tackle this problem.</p>
 <a id="more"></a>
@@ -6957,7 +6957,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>Java for Beginner - 1 - Introduction to Java from a .NET guy</title>
-    <url>/blog/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</url>
+    <url>/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</url>
     <content><![CDATA[<p>Coming to Java world, from a .NET guy, is like going from a full feature-rich and comfortable car to a basic bike with a lot of space for extension and customization.<br>In this series, I will walk you through (hopefully) a small part of Java world, just enough for you to continue your exploration.</p>
 <a id="more"></a>
 <ul>
@@ -7019,7 +7019,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>Java for Beginner - 2 - Hello World in Java</title>
-    <url>/blog/2019/07/12/java-for-beginner-2-hello-world-in-java/</url>
+    <url>/2019/07/12/java-for-beginner-2-hello-world-in-java/</url>
     <content><![CDATA[<p>After getting yourself familiar with names and terms in Java in <a href="https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/">part 1</a>, now it’s time for you to create your first program in Java.</p>
 <a id="more"></a>
 
@@ -7090,7 +7090,7 @@ string getName();</code></pre>
   </entry>
   <entry>
     <title>Java for Beginner - 3 - Java from C# cheats sheet</title>
-    <url>/blog/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</url>
+    <url>/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</url>
     <content><![CDATA[<p>Doing C# long enough, you get yourself familiar with C# concepts and syntax. That’s fine, but sometime when you need “the same” concepts in Java, it’s quite difficult. This cheat sheet here to tackle that problem.</p>
 <a id="more"></a>
 
@@ -7235,7 +7235,7 @@ public int getWeight() &#123;
   </entry>
   <entry>
     <title>[vuejs] - Publish your vue component to npmjs using vue-cli 3</title>
-    <url>/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</url>
+    <url>/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</url>
     <content><![CDATA[<p>Using Vuejs, sometime you need to publish your awesome <code>component</code> with the world. Sure you can share the <code>.vue</code> file, but how can you publish it to <code>npmjs</code>, for the ease of installation and usage of others?</p>
 <a id="more"></a>
 <p>With the release of Vue CLI 3, build target <code>-lib</code> is supported, but no tutorials available “out there”, so here is one (and hopfully not the last).</p>
@@ -7340,7 +7340,7 @@ public int getWeight() &#123;
   </entry>
   <entry>
     <title>[java] Refactoring Clones type 2</title>
-    <url>/blog/2019/10/19/refactoring-clones-type-2/</url>
+    <url>/2019/10/19/refactoring-clones-type-2/</url>
     <content><![CDATA[<p>Removing clones in code maybe is the most difficult type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#</p>
 <a id="more"></a>
 
@@ -7389,7 +7389,7 @@ public int getWeight() &#123;
   </entry>
   <entry>
     <title>Connect with Google Cloud Compute Engine (Virtual Machine) using PuTTY</title>
-    <url>/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</url>
+    <url>/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</url>
     <content><![CDATA[<p>I don’t know why Google makes it so difficult to connect to it’s Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?</p>
 <p>Anyway, here is how to connect.</p>
 <a id="more"></a>
@@ -7447,7 +7447,7 @@ public int getWeight() &#123;
   </entry>
   <entry>
     <title>Migrate Azure DevOps TFS to Git reserving history</title>
-    <url>/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</url>
+    <url>/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</url>
     <content><![CDATA[<p>Microsoft acquired GitHub, and every one have unlimited private repository. This reason alone make me want to move all my project and source code to GitHub.</p>
 <a id="more"></a>
 
@@ -7491,7 +7491,7 @@ public int getWeight() &#123;
   </entry>
   <entry>
     <title>GitHub codespaces - write code in web browser</title>
-    <url>/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</url>
+    <url>/2020/09/03/GitHub-codespace-write-code-in-web-browser/</url>
     <content><![CDATA[<p>After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long awaited features are in beta, invitation only, and it is <code>GitHub Codespaces</code></p>
 <a id="more"></a>
 
