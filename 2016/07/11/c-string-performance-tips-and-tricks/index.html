@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.0">
+<meta name="generator" content="Hexo 5.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2016-07-11T04:38:34.000Z">
-<meta property="article:modified_time" content="2020-09-14T04:07:26.687Z">
+<meta property="article:modified_time" content="2020-09-14T14:12:57.614Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="performance">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-14 00:07:26" itemprop="dateModified" datetime="2020-09-14T00:07:26-04:00">2020-09-14</time>
+                <time title="Modified: 2020-09-14 10:12:57" itemprop="dateModified" datetime="2020-09-14T10:12:57-04:00">2020-09-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -305,16 +305,16 @@ blah blah blah</code></pre>
 <pre><code>string s = &quot;&quot;;
 
 if(s == null || s == &quot;&quot;)
-&amp;#123;
+&#123;
     //do something here; 
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <p>Có một cách khác hiện đại hơn</p>
 <pre><code>string s = &quot;&quot;;
 
 if(string.IsNullOrEmpty(s))
-&amp;#123;
+&#123;
     //do something here;
-&amp;#125;</code></pre>
+&#125;</code></pre>
 <p>Và nếu bạn muốn so sánh 2 chuỗi với nhau, hãy sử dụng string.Equal</p>
 <h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
 <p>Sau đây mà tài liệu MSDN về string:</p>
