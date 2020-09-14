@@ -15,17 +15,18 @@ After coming home with Microsoft, more and more good and free things come to Git
 
 <!-- TOC -->
 
-- [Extremely short introduction](#extremely-short-introduction)
-- [Using GitHub codespaces](#using-github-codespaces)
-    - [Change theme](#change-theme)
-    - [Settings](#settings)
-    - [Install your programming language extensions](#install-your-programming-language-extensions)
-    - [Work with multiple repository](#work-with-multiple-repository)
-- [Some interesting things I found](#some-interesting-things-i-found)
+- [1. Extremely short introduction](#1-extremely-short-introduction)
+- [2. Using GitHub codespaces](#2-using-github-codespaces)
+    - [2.1. Change theme](#21-change-theme)
+    - [2.2. Settings](#22-settings)
+    - [2.3. Install your programming language extensions](#23-install-your-programming-language-extensions)
+    - [2.4. Work with multiple repository](#24-work-with-multiple-repository)
+- [3. Some interesting things I found](#3-some-interesting-things-i-found)
 
 <!-- /TOC -->
 
-# Extremely short introduction
+# 1. Extremely short introduction
+<a id="markdown-extremely-short-introduction" name="extremely-short-introduction"></a>
 
 Codespaces, in short, is a linux virtual machine running `vscode` server, and allow you to access it via any web browser.
 
@@ -33,13 +34,15 @@ Microsoft introduce it codespaces first in [Visual Studio Online](https://azure.
 
 To request early access GitHub codespaces, here is the link: https://github.com/features/codespaces
 
-# Using GitHub codespaces
+# 2. Using GitHub codespaces
+<a id="markdown-using-github-codespaces" name="using-github-codespaces"></a>
 
 When you're invited to use codespaces, your GitHub's repositories will have another options in open button
 
 ![open button](https://i.imgur.com/CB6VdCg.png)
 
-## Change theme
+## 2.1. Change theme
+<a id="markdown-change-theme" name="change-theme"></a>
 
 The default theme for VSCode is light. Light attracting bugs. So we need to change it dark
 
@@ -49,11 +52,13 @@ The normal themes used by vscode is not worked, so we need to use an extension d
 
 Sadly, the icon theme is fixed with 1 of the 2 default set.
 
-## Settings
+## 2.2. Settings
+<a id="markdown-settings" name="settings"></a>
 
 Except some settings related to themes and icon that have no effect, almost all other settings are the same. You can just copy and past the settings from your local `vscode` to codespaces `vscode`
 
-## Install your programming language extensions
+## 2.3. Install your programming language extensions
+<a id="markdown-install-your-programming-language-extensions" name="install-your-programming-language-extensions"></a>
 
 I think every programming language extension worked as it should be, but first, you will need to setup the development environment in Linux.
 
@@ -63,7 +68,8 @@ C/C++ and Python extension are pre-installed
 
 When you open a project, based on the language, some language extension will be pre-installed
 
-## Work with multiple repository
+## 2.4. Work with multiple repository
+<a id="markdown-work-with-multiple-repository" name="work-with-multiple-repository"></a>
 
 By default, 1 codespaces can only work with 1 repository. I will use SSH key to have access to every repositories on my Github.
 
@@ -93,7 +99,8 @@ git remote set-url origin git@github.com:<Username>/<Project>.git
 
 That's it
 
-# Some interesting things I found
+# 3. Some interesting things I found
+<a id="markdown-some-interesting-things-i-found" name="some-interesting-things-i-found"></a>
 
 * The codespaces running on Debian 9.13 - `lsb_release -a`
 * 4GB of RAM - `free -m`
