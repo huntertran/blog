@@ -5,20 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="mask-icon" href="/images/apple-touch-icon.png" color="#222">
-  <meta name="google-site-verification" content="Ht7w80BIN_bvclDb3Zu_lKTvlE4Rm1XlNRU8eKoWNH0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":true,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Programming, technologies, computer tips and life thoughts">
@@ -28,16 +32,17 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Programming, technologies, computer tips and life thoughts">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-14T14:12:57.730Z">
-<meta property="article:modified_time" content="2020-09-14T14:12:57.730Z">
+<meta property="article:published_time" content="2020-09-27T16:11:25.422Z">
+<meta property="article:modified_time" content="2020-09-27T16:11:25.422Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://huntertran.com/tags/">
 
 
-<script id="page-configurations">
+<script data-pjax class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -67,50 +72,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
+      <i class="logo-line"></i>
       <h1 class="site-title">Tuan Tran's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share to be shared</p>
   </div>
@@ -124,9 +141,8 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
@@ -168,7 +184,7 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
@@ -176,9 +192,9 @@
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -186,105 +202,18 @@
   </div>
 
 </div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-  
-  
-
-          <div class="content page posts-expand">
-            
-
-    
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">Tags
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              209 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/net-core/" style="font-size: 16.5px; color: #9d9d9d">.net core</a> <a href="/tags/net-framework/" style="font-size: 12px; color: #ccc">.net framework</a> <a href="/tags/ASP-NET/" style="font-size: 12px; color: #ccc">ASP.NET</a> <a href="/tags/Application-Life-cycle/" style="font-size: 12px; color: #ccc">Application Life-cycle</a> <a href="/tags/CSharp/" style="font-size: 12px; color: #ccc">CSharp</a> <a href="/tags/Computed-Property/" style="font-size: 12px; color: #ccc">Computed Property</a> <a href="/tags/DMCA/" style="font-size: 12px; color: #ccc">DMCA</a> <a href="/tags/DOM-API/" style="font-size: 12px; color: #ccc">DOM API</a> <a href="/tags/Header-computing/" style="font-size: 12px; color: #ccc">Header (computing)</a> <a href="/tags/Imagine-Cup/" style="font-size: 12px; color: #ccc">Imagine Cup</a> <a href="/tags/LINQ/" style="font-size: 12px; color: #ccc">LINQ</a> <a href="/tags/Log/" style="font-size: 12px; color: #ccc">Log</a> <a href="/tags/MSP/" style="font-size: 12px; color: #ccc">MSP</a> <a href="/tags/Query/" style="font-size: 12px; color: #ccc">Query</a> <a href="/tags/Separate-class/" style="font-size: 12px; color: #ccc">Separate class</a> <a href="/tags/Source/" style="font-size: 12px; color: #ccc">Source</a> <a href="/tags/TFS/" style="font-size: 16.5px; color: #9d9d9d">TFS</a> <a href="/tags/Team-foundation/" style="font-size: 12px; color: #ccc">Team foundation</a> <a href="/tags/Visual-Studio/" style="font-size: 30px; color: #111">Visual Studio</a> <a href="/tags/account/" style="font-size: 12px; color: #ccc">account</a> <a href="/tags/add-on/" style="font-size: 12px; color: #ccc">add-on</a> <a href="/tags/advanced/" style="font-size: 12px; color: #ccc">advanced</a> <a href="/tags/ajax/" style="font-size: 12px; color: #ccc">ajax</a> <a href="/tags/analytics/" style="font-size: 12px; color: #ccc">analytics</a> <a href="/tags/apache/" style="font-size: 12px; color: #ccc">apache</a> <a href="/tags/app/" style="font-size: 21px; color: #6f6f6f">app</a> <a href="/tags/architech/" style="font-size: 12px; color: #ccc">architech</a> <a href="/tags/assets/" style="font-size: 12px; color: #ccc">assets</a> <a href="/tags/attack/" style="font-size: 12px; color: #ccc">attack</a> <a href="/tags/auto/" style="font-size: 12px; color: #ccc">auto</a> <a href="/tags/automatically/" style="font-size: 12px; color: #ccc">automatically</a> <a href="/tags/azure/" style="font-size: 25.5px; color: #404040">azure</a> <a href="/tags/beginner/" style="font-size: 16.5px; color: #9d9d9d">beginner</a> <a href="/tags/blog/" style="font-size: 12px; color: #ccc">blog</a> <a href="/tags/brain/" style="font-size: 12px; color: #ccc">brain</a> <a href="/tags/browsersync/" style="font-size: 12px; color: #ccc">browsersync</a> <a href="/tags/bugs/" style="font-size: 12px; color: #ccc">bugs</a> <a href="/tags/bus/" style="font-size: 12px; color: #ccc">bus</a> <a href="/tags/centered-image/" style="font-size: 12px; color: #ccc">centered image</a> <a href="/tags/cheats-sheet/" style="font-size: 12px; color: #ccc">cheats sheet</a> <a href="/tags/chooser/" style="font-size: 12px; color: #ccc">chooser</a> <a href="/tags/chrome/" style="font-size: 12px; color: #ccc">chrome</a> <a href="/tags/class/" style="font-size: 12px; color: #ccc">class</a> <a href="/tags/clone/" style="font-size: 12px; color: #ccc">clone</a> <a href="/tags/code/" style="font-size: 12px; color: #ccc">code</a> <a href="/tags/code-first/" style="font-size: 12px; color: #ccc">code first</a> <a href="/tags/column/" style="font-size: 12px; color: #ccc">column</a> <a href="/tags/columndefinition/" style="font-size: 12px; color: #ccc">columndefinition</a> <a href="/tags/component/" style="font-size: 12px; color: #ccc">component</a> <a href="/tags/compute-engine/" style="font-size: 12px; color: #ccc">compute engine</a> <a href="/tags/container/" style="font-size: 12px; color: #ccc">container</a> <a href="/tags/content/" style="font-size: 12px; color: #ccc">content</a> <a href="/tags/core/" style="font-size: 16.5px; color: #9d9d9d">core</a> <a href="/tags/cost-function/" style="font-size: 12px; color: #ccc">cost function</a> <a href="/tags/cross-site/" style="font-size: 12px; color: #ccc">cross-site</a> <a href="/tags/css/" style="font-size: 16.5px; color: #9d9d9d">css</a> <a href="/tags/custom/" style="font-size: 12px; color: #ccc">custom</a> <a href="/tags/data/" style="font-size: 12px; color: #ccc">data</a> <a href="/tags/database/" style="font-size: 12px; color: #ccc">database</a> <a href="/tags/database-first/" style="font-size: 12px; color: #ccc">database first</a> <a href="/tags/dependency-injection/" style="font-size: 12px; color: #ccc">dependency injection</a> <a href="/tags/deploy/" style="font-size: 12px; color: #ccc">deploy</a> <a href="/tags/dev-center/" style="font-size: 12px; color: #ccc">dev center</a> <a href="/tags/devops/" style="font-size: 12px; color: #ccc">devops</a> <a href="/tags/docker/" style="font-size: 12px; color: #ccc">docker</a> <a href="/tags/editorfor/" style="font-size: 16.5px; color: #9d9d9d">editorfor</a> <a href="/tags/editorformany/" style="font-size: 12px; color: #ccc">editorformany</a> <a href="/tags/emulator/" style="font-size: 12px; color: #ccc">emulator</a> <a href="/tags/encode/" style="font-size: 12px; color: #ccc">encode</a> <a href="/tags/entity-framework/" style="font-size: 12px; color: #ccc">entity framework</a> <a href="/tags/error-message/" style="font-size: 12px; color: #ccc">error message</a> <a href="/tags/europe/" style="font-size: 12px; color: #ccc">europe</a> <a href="/tags/exception/" style="font-size: 12px; color: #ccc">exception</a> <a href="/tags/extend/" style="font-size: 12px; color: #ccc">extend</a> <a href="/tags/extension/" style="font-size: 12px; color: #ccc">extension</a> <a href="/tags/file/" style="font-size: 16.5px; color: #9d9d9d">file</a> <a href="/tags/firefox/" style="font-size: 16.5px; color: #9d9d9d">firefox</a> <a href="/tags/forgery/" style="font-size: 12px; color: #ccc">forgery</a> <a href="/tags/forgery-token/" style="font-size: 12px; color: #ccc">forgery token</a> <a href="/tags/framework/" style="font-size: 12px; color: #ccc">framework</a> <a href="/tags/free/" style="font-size: 12px; color: #ccc">free</a> <a href="/tags/frontend/" style="font-size: 12px; color: #ccc">frontend</a> <a href="/tags/ftp/" style="font-size: 12px; color: #ccc">ftp</a> <a href="/tags/game/" style="font-size: 12px; color: #ccc">game</a> <a href="/tags/generate/" style="font-size: 12px; color: #ccc">generate</a> <a href="/tags/git/" style="font-size: 16.5px; color: #9d9d9d">git</a> <a href="/tags/github/" style="font-size: 16.5px; color: #9d9d9d">github</a> <a href="/tags/google-cloud/" style="font-size: 12px; color: #ccc">google cloud</a> <a href="/tags/gradient-descent/" style="font-size: 12px; color: #ccc">gradient descent</a> <a href="/tags/grid/" style="font-size: 12px; color: #ccc">grid</a> <a href="/tags/hello-world/" style="font-size: 12px; color: #ccc">hello world</a> <a href="/tags/hero/" style="font-size: 12px; color: #ccc">hero</a> <a href="/tags/hidden/" style="font-size: 12px; color: #ccc">hidden</a> <a href="/tags/html/" style="font-size: 12px; color: #ccc">html</a> <a href="/tags/htmlhelper/" style="font-size: 12px; color: #ccc">htmlhelper</a> <a href="/tags/hypothesis/" style="font-size: 12px; color: #ccc">hypothesis</a> <a href="/tags/iap/" style="font-size: 12px; color: #ccc">iap</a> <a href="/tags/identity/" style="font-size: 12px; color: #ccc">identity</a> <a href="/tags/images/" style="font-size: 12px; color: #ccc">images</a> <a href="/tags/in-app-purchase/" style="font-size: 12px; color: #ccc">in-app purchase</a> <a href="/tags/indent/" style="font-size: 12px; color: #ccc">indent</a> <a href="/tags/input/" style="font-size: 16.5px; color: #9d9d9d">input</a> <a href="/tags/input-scope/" style="font-size: 12px; color: #ccc">input scope</a> <a href="/tags/isolated-storage/" style="font-size: 12px; color: #ccc">isolated storage</a> <a href="/tags/java-for-beginner/" style="font-size: 21px; color: #6f6f6f">java for beginner</a> <a href="/tags/jquery/" style="font-size: 12px; color: #ccc">jquery</a> <a href="/tags/keyboard-shotcuts/" style="font-size: 12px; color: #ccc">keyboard shotcuts</a> <a href="/tags/label/" style="font-size: 12px; color: #ccc">label</a> <a href="/tags/layout/" style="font-size: 12px; color: #ccc">layout</a> <a href="/tags/list/" style="font-size: 12px; color: #ccc">list</a> <a href="/tags/listbox/" style="font-size: 12px; color: #ccc">listbox</a> <a href="/tags/live-reload/" style="font-size: 12px; color: #ccc">live reload</a> <a href="/tags/live-visual-tree/" style="font-size: 12px; color: #ccc">live visual tree</a> <a href="/tags/loaded/" style="font-size: 12px; color: #ccc">loaded</a> <a href="/tags/logo/" style="font-size: 12px; color: #ccc">logo</a> <a href="/tags/loi/" style="font-size: 12px; color: #ccc">lỗi</a> <a href="/tags/maker/" style="font-size: 12px; color: #ccc">maker</a> <a href="/tags/manager/" style="font-size: 12px; color: #ccc">manager</a> <a href="/tags/matrice/" style="font-size: 12px; color: #ccc">matrice</a> <a href="/tags/matrix/" style="font-size: 12px; color: #ccc">matrix</a> <a href="/tags/model/" style="font-size: 12px; color: #ccc">model</a> <a href="/tags/monetization/" style="font-size: 12px; color: #ccc">monetization</a> <a href="/tags/mvc/" style="font-size: 12px; color: #ccc">mvc</a> <a href="/tags/mo-rong/" style="font-size: 12px; color: #ccc">mở rộng</a> <a href="/tags/no-device/" style="font-size: 12px; color: #ccc">no device</a> <a href="/tags/normal-equation/" style="font-size: 12px; color: #ccc">normal equation</a> <a href="/tags/noscript/" style="font-size: 12px; color: #ccc">noscript</a> <a href="/tags/nuget/" style="font-size: 12px; color: #ccc">nuget</a> <a href="/tags/on-the-fly/" style="font-size: 12px; color: #ccc">on the fly</a> <a href="/tags/online/" style="font-size: 12px; color: #ccc">online</a> <a href="/tags/onnavigatedto/" style="font-size: 12px; color: #ccc">onnavigatedto</a> <a href="/tags/open-source/" style="font-size: 12px; color: #ccc">open source</a> <a href="/tags/original/" style="font-size: 12px; color: #ccc">original</a> <a href="/tags/package/" style="font-size: 12px; color: #ccc">package</a> <a href="/tags/page/" style="font-size: 12px; color: #ccc">page</a> <a href="/tags/performance/" style="font-size: 16.5px; color: #9d9d9d">performance</a> <a href="/tags/perftips/" style="font-size: 12px; color: #ccc">perftips</a> <a href="/tags/php/" style="font-size: 12px; color: #ccc">php</a> <a href="/tags/placeholder/" style="font-size: 12px; color: #ccc">placeholder</a> <a href="/tags/power-tools/" style="font-size: 12px; color: #ccc">power tools</a> <a href="/tags/problem/" style="font-size: 12px; color: #ccc">problem</a> <a href="/tags/project/" style="font-size: 16.5px; color: #9d9d9d">project</a> <a href="/tags/prompt/" style="font-size: 12px; color: #ccc">prompt</a> <a href="/tags/property/" style="font-size: 12px; color: #ccc">property</a> <a href="/tags/proxy/" style="font-size: 12px; color: #ccc">proxy</a> <a href="/tags/putty/" style="font-size: 12px; color: #ccc">putty</a> <a href="/tags/razor/" style="font-size: 12px; color: #ccc">razor</a> <a href="/tags/refactor/" style="font-size: 12px; color: #ccc">refactor</a> <a href="/tags/repository/" style="font-size: 12px; color: #ccc">repository</a> <a href="/tags/request/" style="font-size: 12px; color: #ccc">request</a> <a href="/tags/resharper/" style="font-size: 12px; color: #ccc">resharper</a> <a href="/tags/resource/" style="font-size: 16.5px; color: #9d9d9d">resource</a> <a href="/tags/retarget/" style="font-size: 12px; color: #ccc">retarget</a> <a href="/tags/richtextbox/" style="font-size: 12px; color: #ccc">richtextbox</a> <a href="/tags/route/" style="font-size: 12px; color: #ccc">route</a> <a href="/tags/sample/" style="font-size: 12px; color: #ccc">sample</a> <a href="/tags/scope/" style="font-size: 12px; color: #ccc">scope</a> <a href="/tags/scss/" style="font-size: 12px; color: #ccc">scss</a> <a href="/tags/search/" style="font-size: 12px; color: #ccc">search</a> <a href="/tags/slack/" style="font-size: 12px; color: #ccc">slack</a> <a href="/tags/software/" style="font-size: 12px; color: #ccc">software</a> <a href="/tags/solve/" style="font-size: 12px; color: #ccc">solve</a> <a href="/tags/source-control/" style="font-size: 12px; color: #ccc">source control</a> <a href="/tags/sourcetree/" style="font-size: 12px; color: #ccc">sourcetree</a> <a href="/tags/stackpanel/" style="font-size: 12px; color: #ccc">stackpanel</a> <a href="/tags/star-size/" style="font-size: 12px; color: #ccc">star size</a> <a href="/tags/stopwatch/" style="font-size: 12px; color: #ccc">stopwatch</a> <a href="/tags/store/" style="font-size: 21px; color: #6f6f6f">store</a> <a href="/tags/stretch/" style="font-size: 12px; color: #ccc">stretch</a> <a href="/tags/structure/" style="font-size: 16.5px; color: #9d9d9d">structure</a> <a href="/tags/tag-helper/" style="font-size: 12px; color: #ccc">tag helper</a> <a href="/tags/template/" style="font-size: 12px; color: #ccc">template</a> <a href="/tags/textblock/" style="font-size: 16.5px; color: #9d9d9d">textblock</a> <a href="/tags/textbox/" style="font-size: 21px; color: #6f6f6f">textbox</a> <a href="/tags/tip/" style="font-size: 12px; color: #ccc">tip</a> <a href="/tags/tips/" style="font-size: 21px; color: #6f6f6f">tips</a> <a href="/tags/train/" style="font-size: 12px; color: #ccc">train</a> <a href="/tags/travel/" style="font-size: 12px; color: #ccc">travel</a> <a href="/tags/trick/" style="font-size: 12px; color: #ccc">trick</a> <a href="/tags/tricks/" style="font-size: 12px; color: #ccc">tricks</a> <a href="/tags/tutorial/" style="font-size: 12px; color: #ccc">tutorial</a> <a href="/tags/tach/" style="font-size: 12px; color: #ccc">tách</a> <a href="/tags/ublock/" style="font-size: 12px; color: #ccc">ublock</a> <a href="/tags/ubuntu/" style="font-size: 12px; color: #ccc">ubuntu</a> <a href="/tags/unicode/" style="font-size: 12px; color: #ccc">unicode</a> <a href="/tags/uniform/" style="font-size: 12px; color: #ccc">uniform</a> <a href="/tags/uniformtofill/" style="font-size: 12px; color: #ccc">uniformtofill</a> <a href="/tags/unit-of-work/" style="font-size: 12px; color: #ccc">unit of work</a> <a href="/tags/universal/" style="font-size: 12px; color: #ccc">universal</a> <a href="/tags/upgrade/" style="font-size: 12px; color: #ccc">upgrade</a> <a href="/tags/uwa/" style="font-size: 12px; color: #ccc">uwa</a> <a href="/tags/uwp/" style="font-size: 16.5px; color: #9d9d9d">uwp</a> <a href="/tags/vector/" style="font-size: 12px; color: #ccc">vector</a> <a href="/tags/violation/" style="font-size: 12px; color: #ccc">violation</a> <a href="/tags/virtual-machine/" style="font-size: 21px; color: #6f6f6f">virtual machine</a> <a href="/tags/visual-studio-code/" style="font-size: 12px; color: #ccc">visual studio code</a> <a href="/tags/vscode/" style="font-size: 12px; color: #ccc">vscode</a> <a href="/tags/vue/" style="font-size: 12px; color: #ccc">vue</a> <a href="/tags/vue-cli/" style="font-size: 12px; color: #ccc">vue-cli</a> <a href="/tags/vuejs/" style="font-size: 12px; color: #ccc">vuejs</a>
-            </div>
-          </div>
         
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
   <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
         </li>
@@ -294,18 +223,18 @@
       </ul>
 
       <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
       <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
-      src="/images/avatar.png">
+      src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -328,120 +257,160 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/huntertran/" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran&#x2F;" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://twitter.com/cuoilennao" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;cuoilennao" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
       </span>
   </div>
 
 
 
-      </div>
-
+      </section>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+      
+  
+  
+
+      
+
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Tags<a href="https://github.com/huntertran/blog/edit/master/source/tags/index.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+</h1>
+
+<div class="post-meta-container">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <div class="tag-cloud">
+  <div class="tag-cloud-title">
+    209 tags in total
+  </div>
+  <div class="tag-cloud-tags">
+    <a href="/tags/net-core/" style="font-size: 16.5px;" class="tag-cloud-3">.net core</a> <a href="/tags/net-framework/" style="font-size: 12px;" class="tag-cloud-0">.net framework</a> <a href="/tags/ASP-NET/" style="font-size: 12px;" class="tag-cloud-0">ASP.NET</a> <a href="/tags/Application-Life-cycle/" style="font-size: 12px;" class="tag-cloud-0">Application Life-cycle</a> <a href="/tags/CSharp/" style="font-size: 12px;" class="tag-cloud-0">CSharp</a> <a href="/tags/Computed-Property/" style="font-size: 12px;" class="tag-cloud-0">Computed Property</a> <a href="/tags/DMCA/" style="font-size: 12px;" class="tag-cloud-0">DMCA</a> <a href="/tags/DOM-API/" style="font-size: 12px;" class="tag-cloud-0">DOM API</a> <a href="/tags/Header-computing/" style="font-size: 12px;" class="tag-cloud-0">Header (computing)</a> <a href="/tags/Imagine-Cup/" style="font-size: 12px;" class="tag-cloud-0">Imagine Cup</a> <a href="/tags/LINQ/" style="font-size: 12px;" class="tag-cloud-0">LINQ</a> <a href="/tags/Log/" style="font-size: 12px;" class="tag-cloud-0">Log</a> <a href="/tags/MSP/" style="font-size: 12px;" class="tag-cloud-0">MSP</a> <a href="/tags/Query/" style="font-size: 12px;" class="tag-cloud-0">Query</a> <a href="/tags/Separate-class/" style="font-size: 12px;" class="tag-cloud-0">Separate class</a> <a href="/tags/Source/" style="font-size: 12px;" class="tag-cloud-0">Source</a> <a href="/tags/TFS/" style="font-size: 16.5px;" class="tag-cloud-3">TFS</a> <a href="/tags/Team-foundation/" style="font-size: 12px;" class="tag-cloud-0">Team foundation</a> <a href="/tags/Visual-Studio/" style="font-size: 30px;" class="tag-cloud-10">Visual Studio</a> <a href="/tags/account/" style="font-size: 12px;" class="tag-cloud-0">account</a> <a href="/tags/add-on/" style="font-size: 12px;" class="tag-cloud-0">add-on</a> <a href="/tags/advanced/" style="font-size: 12px;" class="tag-cloud-0">advanced</a> <a href="/tags/ajax/" style="font-size: 12px;" class="tag-cloud-0">ajax</a> <a href="/tags/analytics/" style="font-size: 12px;" class="tag-cloud-0">analytics</a> <a href="/tags/apache/" style="font-size: 12px;" class="tag-cloud-0">apache</a> <a href="/tags/app/" style="font-size: 21px;" class="tag-cloud-5">app</a> <a href="/tags/architech/" style="font-size: 12px;" class="tag-cloud-0">architech</a> <a href="/tags/assets/" style="font-size: 12px;" class="tag-cloud-0">assets</a> <a href="/tags/attack/" style="font-size: 12px;" class="tag-cloud-0">attack</a> <a href="/tags/auto/" style="font-size: 12px;" class="tag-cloud-0">auto</a> <a href="/tags/automatically/" style="font-size: 12px;" class="tag-cloud-0">automatically</a> <a href="/tags/azure/" style="font-size: 25.5px;" class="tag-cloud-8">azure</a> <a href="/tags/beginner/" style="font-size: 16.5px;" class="tag-cloud-3">beginner</a> <a href="/tags/blog/" style="font-size: 12px;" class="tag-cloud-0">blog</a> <a href="/tags/brain/" style="font-size: 12px;" class="tag-cloud-0">brain</a> <a href="/tags/browsersync/" style="font-size: 12px;" class="tag-cloud-0">browsersync</a> <a href="/tags/bugs/" style="font-size: 12px;" class="tag-cloud-0">bugs</a> <a href="/tags/bus/" style="font-size: 12px;" class="tag-cloud-0">bus</a> <a href="/tags/centered-image/" style="font-size: 12px;" class="tag-cloud-0">centered image</a> <a href="/tags/cheats-sheet/" style="font-size: 12px;" class="tag-cloud-0">cheats sheet</a> <a href="/tags/chooser/" style="font-size: 12px;" class="tag-cloud-0">chooser</a> <a href="/tags/chrome/" style="font-size: 12px;" class="tag-cloud-0">chrome</a> <a href="/tags/class/" style="font-size: 12px;" class="tag-cloud-0">class</a> <a href="/tags/clone/" style="font-size: 12px;" class="tag-cloud-0">clone</a> <a href="/tags/code/" style="font-size: 12px;" class="tag-cloud-0">code</a> <a href="/tags/code-first/" style="font-size: 12px;" class="tag-cloud-0">code first</a> <a href="/tags/column/" style="font-size: 12px;" class="tag-cloud-0">column</a> <a href="/tags/columndefinition/" style="font-size: 12px;" class="tag-cloud-0">columndefinition</a> <a href="/tags/component/" style="font-size: 12px;" class="tag-cloud-0">component</a> <a href="/tags/compute-engine/" style="font-size: 12px;" class="tag-cloud-0">compute engine</a> <a href="/tags/container/" style="font-size: 12px;" class="tag-cloud-0">container</a> <a href="/tags/content/" style="font-size: 12px;" class="tag-cloud-0">content</a> <a href="/tags/core/" style="font-size: 16.5px;" class="tag-cloud-3">core</a> <a href="/tags/cost-function/" style="font-size: 12px;" class="tag-cloud-0">cost function</a> <a href="/tags/cross-site/" style="font-size: 12px;" class="tag-cloud-0">cross-site</a> <a href="/tags/css/" style="font-size: 16.5px;" class="tag-cloud-3">css</a> <a href="/tags/custom/" style="font-size: 12px;" class="tag-cloud-0">custom</a> <a href="/tags/data/" style="font-size: 12px;" class="tag-cloud-0">data</a> <a href="/tags/database/" style="font-size: 12px;" class="tag-cloud-0">database</a> <a href="/tags/database-first/" style="font-size: 12px;" class="tag-cloud-0">database first</a> <a href="/tags/dependency-injection/" style="font-size: 12px;" class="tag-cloud-0">dependency injection</a> <a href="/tags/deploy/" style="font-size: 12px;" class="tag-cloud-0">deploy</a> <a href="/tags/dev-center/" style="font-size: 12px;" class="tag-cloud-0">dev center</a> <a href="/tags/devops/" style="font-size: 12px;" class="tag-cloud-0">devops</a> <a href="/tags/docker/" style="font-size: 12px;" class="tag-cloud-0">docker</a> <a href="/tags/editorfor/" style="font-size: 16.5px;" class="tag-cloud-3">editorfor</a> <a href="/tags/editorformany/" style="font-size: 12px;" class="tag-cloud-0">editorformany</a> <a href="/tags/emulator/" style="font-size: 12px;" class="tag-cloud-0">emulator</a> <a href="/tags/encode/" style="font-size: 12px;" class="tag-cloud-0">encode</a> <a href="/tags/entity-framework/" style="font-size: 12px;" class="tag-cloud-0">entity framework</a> <a href="/tags/error-message/" style="font-size: 12px;" class="tag-cloud-0">error message</a> <a href="/tags/europe/" style="font-size: 12px;" class="tag-cloud-0">europe</a> <a href="/tags/exception/" style="font-size: 12px;" class="tag-cloud-0">exception</a> <a href="/tags/extend/" style="font-size: 12px;" class="tag-cloud-0">extend</a> <a href="/tags/extension/" style="font-size: 12px;" class="tag-cloud-0">extension</a> <a href="/tags/file/" style="font-size: 16.5px;" class="tag-cloud-3">file</a> <a href="/tags/firefox/" style="font-size: 16.5px;" class="tag-cloud-3">firefox</a> <a href="/tags/forgery/" style="font-size: 12px;" class="tag-cloud-0">forgery</a> <a href="/tags/forgery-token/" style="font-size: 12px;" class="tag-cloud-0">forgery token</a> <a href="/tags/framework/" style="font-size: 12px;" class="tag-cloud-0">framework</a> <a href="/tags/free/" style="font-size: 12px;" class="tag-cloud-0">free</a> <a href="/tags/frontend/" style="font-size: 12px;" class="tag-cloud-0">frontend</a> <a href="/tags/ftp/" style="font-size: 12px;" class="tag-cloud-0">ftp</a> <a href="/tags/game/" style="font-size: 12px;" class="tag-cloud-0">game</a> <a href="/tags/generate/" style="font-size: 12px;" class="tag-cloud-0">generate</a> <a href="/tags/git/" style="font-size: 16.5px;" class="tag-cloud-3">git</a> <a href="/tags/github/" style="font-size: 16.5px;" class="tag-cloud-3">github</a> <a href="/tags/google-cloud/" style="font-size: 12px;" class="tag-cloud-0">google cloud</a> <a href="/tags/gradient-descent/" style="font-size: 12px;" class="tag-cloud-0">gradient descent</a> <a href="/tags/grid/" style="font-size: 12px;" class="tag-cloud-0">grid</a> <a href="/tags/hello-world/" style="font-size: 12px;" class="tag-cloud-0">hello world</a> <a href="/tags/hero/" style="font-size: 12px;" class="tag-cloud-0">hero</a> <a href="/tags/hidden/" style="font-size: 12px;" class="tag-cloud-0">hidden</a> <a href="/tags/html/" style="font-size: 12px;" class="tag-cloud-0">html</a> <a href="/tags/htmlhelper/" style="font-size: 12px;" class="tag-cloud-0">htmlhelper</a> <a href="/tags/hypothesis/" style="font-size: 12px;" class="tag-cloud-0">hypothesis</a> <a href="/tags/iap/" style="font-size: 12px;" class="tag-cloud-0">iap</a> <a href="/tags/identity/" style="font-size: 12px;" class="tag-cloud-0">identity</a> <a href="/tags/images/" style="font-size: 12px;" class="tag-cloud-0">images</a> <a href="/tags/in-app-purchase/" style="font-size: 12px;" class="tag-cloud-0">in-app purchase</a> <a href="/tags/indent/" style="font-size: 12px;" class="tag-cloud-0">indent</a> <a href="/tags/input/" style="font-size: 16.5px;" class="tag-cloud-3">input</a> <a href="/tags/input-scope/" style="font-size: 12px;" class="tag-cloud-0">input scope</a> <a href="/tags/isolated-storage/" style="font-size: 12px;" class="tag-cloud-0">isolated storage</a> <a href="/tags/java-for-beginner/" style="font-size: 21px;" class="tag-cloud-5">java for beginner</a> <a href="/tags/jquery/" style="font-size: 12px;" class="tag-cloud-0">jquery</a> <a href="/tags/keyboard-shotcuts/" style="font-size: 12px;" class="tag-cloud-0">keyboard shotcuts</a> <a href="/tags/label/" style="font-size: 12px;" class="tag-cloud-0">label</a> <a href="/tags/layout/" style="font-size: 12px;" class="tag-cloud-0">layout</a> <a href="/tags/list/" style="font-size: 12px;" class="tag-cloud-0">list</a> <a href="/tags/listbox/" style="font-size: 12px;" class="tag-cloud-0">listbox</a> <a href="/tags/live-reload/" style="font-size: 12px;" class="tag-cloud-0">live reload</a> <a href="/tags/live-visual-tree/" style="font-size: 12px;" class="tag-cloud-0">live visual tree</a> <a href="/tags/loaded/" style="font-size: 12px;" class="tag-cloud-0">loaded</a> <a href="/tags/logo/" style="font-size: 12px;" class="tag-cloud-0">logo</a> <a href="/tags/loi/" style="font-size: 12px;" class="tag-cloud-0">lỗi</a> <a href="/tags/maker/" style="font-size: 12px;" class="tag-cloud-0">maker</a> <a href="/tags/manager/" style="font-size: 12px;" class="tag-cloud-0">manager</a> <a href="/tags/matrice/" style="font-size: 12px;" class="tag-cloud-0">matrice</a> <a href="/tags/matrix/" style="font-size: 12px;" class="tag-cloud-0">matrix</a> <a href="/tags/model/" style="font-size: 12px;" class="tag-cloud-0">model</a> <a href="/tags/monetization/" style="font-size: 12px;" class="tag-cloud-0">monetization</a> <a href="/tags/mvc/" style="font-size: 12px;" class="tag-cloud-0">mvc</a> <a href="/tags/mo-rong/" style="font-size: 12px;" class="tag-cloud-0">mở rộng</a> <a href="/tags/no-device/" style="font-size: 12px;" class="tag-cloud-0">no device</a> <a href="/tags/normal-equation/" style="font-size: 12px;" class="tag-cloud-0">normal equation</a> <a href="/tags/noscript/" style="font-size: 12px;" class="tag-cloud-0">noscript</a> <a href="/tags/nuget/" style="font-size: 12px;" class="tag-cloud-0">nuget</a> <a href="/tags/on-the-fly/" style="font-size: 12px;" class="tag-cloud-0">on the fly</a> <a href="/tags/online/" style="font-size: 12px;" class="tag-cloud-0">online</a> <a href="/tags/onnavigatedto/" style="font-size: 12px;" class="tag-cloud-0">onnavigatedto</a> <a href="/tags/open-source/" style="font-size: 12px;" class="tag-cloud-0">open source</a> <a href="/tags/original/" style="font-size: 12px;" class="tag-cloud-0">original</a> <a href="/tags/package/" style="font-size: 12px;" class="tag-cloud-0">package</a> <a href="/tags/page/" style="font-size: 12px;" class="tag-cloud-0">page</a> <a href="/tags/performance/" style="font-size: 16.5px;" class="tag-cloud-3">performance</a> <a href="/tags/perftips/" style="font-size: 12px;" class="tag-cloud-0">perftips</a> <a href="/tags/php/" style="font-size: 12px;" class="tag-cloud-0">php</a> <a href="/tags/placeholder/" style="font-size: 12px;" class="tag-cloud-0">placeholder</a> <a href="/tags/power-tools/" style="font-size: 12px;" class="tag-cloud-0">power tools</a> <a href="/tags/problem/" style="font-size: 12px;" class="tag-cloud-0">problem</a> <a href="/tags/project/" style="font-size: 16.5px;" class="tag-cloud-3">project</a> <a href="/tags/prompt/" style="font-size: 12px;" class="tag-cloud-0">prompt</a> <a href="/tags/property/" style="font-size: 12px;" class="tag-cloud-0">property</a> <a href="/tags/proxy/" style="font-size: 12px;" class="tag-cloud-0">proxy</a> <a href="/tags/putty/" style="font-size: 12px;" class="tag-cloud-0">putty</a> <a href="/tags/razor/" style="font-size: 12px;" class="tag-cloud-0">razor</a> <a href="/tags/refactor/" style="font-size: 12px;" class="tag-cloud-0">refactor</a> <a href="/tags/repository/" style="font-size: 12px;" class="tag-cloud-0">repository</a> <a href="/tags/request/" style="font-size: 12px;" class="tag-cloud-0">request</a> <a href="/tags/resharper/" style="font-size: 12px;" class="tag-cloud-0">resharper</a> <a href="/tags/resource/" style="font-size: 16.5px;" class="tag-cloud-3">resource</a> <a href="/tags/retarget/" style="font-size: 12px;" class="tag-cloud-0">retarget</a> <a href="/tags/richtextbox/" style="font-size: 12px;" class="tag-cloud-0">richtextbox</a> <a href="/tags/route/" style="font-size: 12px;" class="tag-cloud-0">route</a> <a href="/tags/sample/" style="font-size: 12px;" class="tag-cloud-0">sample</a> <a href="/tags/scope/" style="font-size: 12px;" class="tag-cloud-0">scope</a> <a href="/tags/scss/" style="font-size: 12px;" class="tag-cloud-0">scss</a> <a href="/tags/search/" style="font-size: 12px;" class="tag-cloud-0">search</a> <a href="/tags/slack/" style="font-size: 12px;" class="tag-cloud-0">slack</a> <a href="/tags/software/" style="font-size: 12px;" class="tag-cloud-0">software</a> <a href="/tags/solve/" style="font-size: 12px;" class="tag-cloud-0">solve</a> <a href="/tags/source-control/" style="font-size: 12px;" class="tag-cloud-0">source control</a> <a href="/tags/sourcetree/" style="font-size: 12px;" class="tag-cloud-0">sourcetree</a> <a href="/tags/stackpanel/" style="font-size: 12px;" class="tag-cloud-0">stackpanel</a> <a href="/tags/star-size/" style="font-size: 12px;" class="tag-cloud-0">star size</a> <a href="/tags/stopwatch/" style="font-size: 12px;" class="tag-cloud-0">stopwatch</a> <a href="/tags/store/" style="font-size: 21px;" class="tag-cloud-5">store</a> <a href="/tags/stretch/" style="font-size: 12px;" class="tag-cloud-0">stretch</a> <a href="/tags/structure/" style="font-size: 16.5px;" class="tag-cloud-3">structure</a> <a href="/tags/tag-helper/" style="font-size: 12px;" class="tag-cloud-0">tag helper</a> <a href="/tags/template/" style="font-size: 12px;" class="tag-cloud-0">template</a> <a href="/tags/textblock/" style="font-size: 16.5px;" class="tag-cloud-3">textblock</a> <a href="/tags/textbox/" style="font-size: 21px;" class="tag-cloud-5">textbox</a> <a href="/tags/tip/" style="font-size: 12px;" class="tag-cloud-0">tip</a> <a href="/tags/tips/" style="font-size: 21px;" class="tag-cloud-5">tips</a> <a href="/tags/train/" style="font-size: 12px;" class="tag-cloud-0">train</a> <a href="/tags/travel/" style="font-size: 12px;" class="tag-cloud-0">travel</a> <a href="/tags/trick/" style="font-size: 12px;" class="tag-cloud-0">trick</a> <a href="/tags/tricks/" style="font-size: 12px;" class="tag-cloud-0">tricks</a> <a href="/tags/tutorial/" style="font-size: 12px;" class="tag-cloud-0">tutorial</a> <a href="/tags/tach/" style="font-size: 12px;" class="tag-cloud-0">tách</a> <a href="/tags/ublock/" style="font-size: 12px;" class="tag-cloud-0">ublock</a> <a href="/tags/ubuntu/" style="font-size: 12px;" class="tag-cloud-0">ubuntu</a> <a href="/tags/unicode/" style="font-size: 12px;" class="tag-cloud-0">unicode</a> <a href="/tags/uniform/" style="font-size: 12px;" class="tag-cloud-0">uniform</a> <a href="/tags/uniformtofill/" style="font-size: 12px;" class="tag-cloud-0">uniformtofill</a> <a href="/tags/unit-of-work/" style="font-size: 12px;" class="tag-cloud-0">unit of work</a> <a href="/tags/universal/" style="font-size: 12px;" class="tag-cloud-0">universal</a> <a href="/tags/upgrade/" style="font-size: 12px;" class="tag-cloud-0">upgrade</a> <a href="/tags/uwa/" style="font-size: 12px;" class="tag-cloud-0">uwa</a> <a href="/tags/uwp/" style="font-size: 16.5px;" class="tag-cloud-3">uwp</a> <a href="/tags/vector/" style="font-size: 12px;" class="tag-cloud-0">vector</a> <a href="/tags/violation/" style="font-size: 12px;" class="tag-cloud-0">violation</a> <a href="/tags/virtual-machine/" style="font-size: 21px;" class="tag-cloud-5">virtual machine</a> <a href="/tags/visual-studio-code/" style="font-size: 12px;" class="tag-cloud-0">visual studio code</a> <a href="/tags/vscode/" style="font-size: 12px;" class="tag-cloud-0">vscode</a> <a href="/tags/vue/" style="font-size: 12px;" class="tag-cloud-0">vue</a> <a href="/tags/vue-cli/" style="font-size: 12px;" class="tag-cloud-0">vue-cli</a> <a href="/tags/vuejs/" style="font-size: 12px;" class="tag-cloud-0">vuejs</a>
+  </div>
+</div>
+
+        
       </div>
-    </main>
+      
+      
+      
+    </div>
+    
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+    
+    
+    
 
-        
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
 
 <div class="copyright">
   
-  &copy; 2012 – 
+  &copy; 2011 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
     'head title',
-    '#page-configurations',
-    '.content-wrap',
+    '.page-configurations',
+    '.main-inner',
     '.post-toc-wrap',
     '.languages',
-    '#pjax'
+    '.pjax'
   ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
   analytics: false,
   cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
 });
 
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
   NexT.boot.refresh();
   // Define Motion Sequence & Bootstrap Motion.
   if (CONFIG.motion.enable) {
@@ -451,11 +420,30 @@ window.addEventListener('pjax:success', () => {
       .add(NexT.motion.middleWares.postList)
       .bootstrap();
   }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
   NexT.utils.updateSidebarPosition();
 });
 </script>
 
 
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
 
 
   
@@ -463,22 +451,11 @@ window.addEventListener('pjax:success', () => {
 
 
 
-  
-<script src="/js/local-search.js"></script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
+    <div class="pjax">
   
 
   
