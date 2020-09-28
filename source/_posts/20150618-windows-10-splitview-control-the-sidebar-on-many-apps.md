@@ -49,7 +49,21 @@ Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamb
 
 Code của cái trên rất đơn giản:
 
-> <SplitView> <SplitView.Pane> <Grid> <Grid.RowDefinitions> <RowDefinition Height="Auto" /> <RowDefinition Height="\*"/> </Grid.RowDefinitions> <Button Grid.Row="0"/> <ListView Grid.Row="1"/> </Grid> </SplitView.Pane> <Grid/> </SplitView>
+```xml
+<SplitView>
+    <SplitView.Pane>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="\*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" />
+            <ListView Grid.Row="1" />
+        </Grid>
+    </SplitView.Pane>
+    <Grid />
+</SplitView>
+```
 
 # Hamburger Button
 
@@ -57,7 +71,9 @@ Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font d�
 
 Để tạo một button có hình Hamburger, paste dòng code sau:
 
-<Button x:Name="HamburgerButton" **FontFamily="Segoe MDL2** Assets" **Content=""/>**
+```xml
+<Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="" />
+```
 
 Mục Content sẽ là đoạn code trong bảng mã sau: [http://modernicons.io/segoe-mdl2/cheatsheet/](http://modernicons.io/segoe-mdl2/cheatsheet/)
 
