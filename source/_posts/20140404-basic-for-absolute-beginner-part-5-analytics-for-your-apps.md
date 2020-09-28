@@ -19,20 +19,26 @@ Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người 
 ![](https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png)
 
 Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3
+
 <!-- more -->
-*   [Trên Project](#trên-project)
-    
-    *   [Cài SDK](#cài-sdk)
-    *   [Khai báo thông tin](#khai-báo-thông-tin)
-*   [Trên Google Analytics](#trên-google-analytics)
-*   [Thiết lập theo dõi](#thiết-lập-theo-dõi)
-    
-    *   [Coding](#coding)
-*   [Xem Analytics](#xem-analytics)
 
-# Trên Project
+<!-- TOC -->
 
-## Cài SDK
+- [1. Trên Project](#1-tr%C3%AAn-project)
+    - [1.1. Cài SDK](#11-c%C3%A0i-sdk)
+    - [1.2. Khai báo thông tin](#12-khai-b%C3%A1o-th%C3%B4ng-tin)
+- [2. Trên Google Analytics](#2-tr%C3%AAn-google-analytics)
+- [3. Thiết lập theo dõi](#3-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i)
+    - [3.1. Coding](#31-coding)
+- [4. Xem Analytics](#4-xem-analytics)
+
+<!-- /TOC -->
+
+# 1. Trên Project
+<a id="markdown-tr%C3%AAn-project" name="tr%C3%AAn-project"></a>
+
+## 1.1. Cài SDK
+<a id="markdown-c%C3%A0i-sdk" name="c%C3%A0i-sdk"></a>
 
 Mở project của bạn lên, vào Tools > NuGet Package Manager > Package Manager Console
 
@@ -48,7 +54,8 @@ Install-Package GoogleAnalyticsSDK
 
 Chờ một chút cho nó chạy
 
-## Khai báo thông tin
+## 1.2. Khai báo thông tin
+<a id="markdown-khai-b%C3%A1o-th%C3%B4ng-tin" name="khai-b%C3%A1o-th%C3%B4ng-tin"></a>
 
 Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới
 
@@ -64,7 +71,8 @@ File analytics.xsd
 
 Là file compiled của file trên, bạn không cần quan tâm tới file này
 
-# Trên Google Analytics
+# 2. Trên Google Analytics
+<a id="markdown-tr%C3%AAn-google-analytics" name="tr%C3%AAn-google-analytics"></a>
 
 vào link này: [Google Analytics Account](http://google.com/analytics)
 
@@ -86,7 +94,8 @@ Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi
 
 Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn
 
-# Thiết lập theo dõi
+# 3. Thiết lập theo dõi
+<a id="markdown-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i" name="thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i"></a>
 
 Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:
 
@@ -106,33 +115,35 @@ Và tất nhiên, bạn sẽ có các con số sau đây:
 *   Tỷ lệ thoát ứng dụng
 *   Phiên bản ứng dụng (cái này phải cài đặt trong file XML)
 
-## Coding
+## 3.1. Coding
+<a id="markdown-coding" name="coding"></a>
 
 Trong sự kiện `RootFrame_NavigationFailed`, thêm đoạn code sau
 
-\[code lang=csharp\] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, false);
-
-\[/code\]
+```csharp
+GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, false);
+```
 
 Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang
 
 Trong sự kiện `Application_UnhandledException`, thêm đoạn code sau:
 
-\[code lang=csharp\] GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, false);
-
-\[/code\]
+```csharp
+GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, false);
+```
 
 Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác
 
 Trong method `InitializePhoneApplication()`, khai báo một Event Handler:
 
-\[code lang=csharp\] // Track Navigation RootFrame.Navigated += RootFrame\_Navigated; \[/code\]
+```csharp // Track Navigation RootFrame.Navigated += RootFrame_Navigated; ```
 
 Trong Event Handler, thêm đoạn code sau:
 
-\[code lang=csharp\] if (e.Content != null) { GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); } \[/code\]
+```csharp if (e.Content != null) { GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); } ```
 
-# Xem Analytics
+# 4. Xem Analytics
+<a id="markdown-xem-analytics" name="xem-analytics"></a>
 
 Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app
 

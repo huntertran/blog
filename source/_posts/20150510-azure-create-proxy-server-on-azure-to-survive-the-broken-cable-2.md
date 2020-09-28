@@ -70,7 +70,8 @@ Putty nhớ để port là 22 để đăng nhập vô nhé
 
 Sau khi đăng nhập xong, lần lượt gõ các dòng lệnh sau
 
-\[code language="bash"\] sudo apt-get install squid
+```shell
+sudo apt-get install squid
 
 cd /etc/squid
 
@@ -80,17 +81,20 @@ sudo rm squid.conf
 
 sudo touch squid.conf
 
-sudo vim squid.conf \[/code\]
+sudo vim squid.conf
+```
 
 sau đó gõ "a" > Enter để edit file này
 
 gõ
 
-\[code language="bash"\] http\_access allow all
+```shell
+http_access allow all
 
-http\_port \[port bạn đã tạo ở trên\]
+http_port [port bạn đã tạo ở trên]
 
-dns\_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4 \[/code\]
+dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4
+```
 
 sau đó gõ ESC để way zề command line
 
@@ -98,7 +102,9 @@ gõ ":wq" để save và thoát
 
 Xong rồi restart squid service:
 
-\[code language="bash"\] sudo service squid3 restart \[/code\]
+```shell
+sudo service squid3 restart
+```
 
 Restart xong, bạn sẽ thấy process của squid
 

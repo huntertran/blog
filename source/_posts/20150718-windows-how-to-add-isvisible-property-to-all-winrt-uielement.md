@@ -25,36 +25,79 @@ Qua đến Silverlight, sau này Windows RT trên Windows 8.1 và Windows Phone 
 
 Đây là một class nhỏ giúp bạn thêm một thuộc tính gọi là "IsVisible" vào UIElements và truyền cho nó giá trị true hoặc false
 
-\[code language="java"\]
+```csharp
+public class Extension: DependencyObject
+{
+    public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached("IsVisible",
+                                                                                                      typeof(bool),
+                                                                                                      typeof(Extension),
+                                                                                                      new PropertyMetadata(true, IsVisibleCallback));
 
-public class Extension : DependencyObject { public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached("IsVisible", typeof (bool), typeof (Extension), new PropertyMetadata(true, IsVisibleCallback));
+    private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed;
+    }
 
-private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) { ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed; }
+    public static void SetIsVisible(UIElement element, bool value)
+    {
+        element.SetValue(IsVisibleProperty, value);
+    }
 
-public static void SetIsVisible(UIElement element, bool value) { element.SetValue(IsVisibleProperty, value); }
+    public static bool GetIsVisible(UIElement element)
+    {
+        return (bool) element.GetValue(IsVisibleProperty);
+    }
+}
+```
 
-public static bool GetIsVisible(UIElement element) { return (bool) element.GetValue(IsVisibleProperty); } }
-
-\[/code\]
 
 Vậy là xong, bạn có thể sử dụng nó ngay
 
-\[code language="xml"\]
+```xml
+<Page x:Class="IsVisibleSample.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:ext="using:Huyn"
+      mc:Ignorable="d">
+    <Rectangle Height="100"
+               Width="100"
+               Fill="Red" 
+               x:Name="Rectangle" 
+               ext:Extension.IsVisible="false"/>
+</Page>
+```
 
-<Page x:Class="IsVisibleSample.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ext="using:Huyn" mc:Ignorable="d"> <Rectangle Height="100" Width="100" Fill="Red" x:Name="Rectangle" ext:Extension.IsVisible="false"/> </Page>
-
-\[/code\]
 
 Hoặc dùng Binding với nó
 
-\[code language="xml"\] <CheckBox x:Name="MyCheckBox" IsChecked="True" Content="show rectangle"/> <Rectangle Height="100" Width="100" Fill="Red" x:Name="Rectangle" ext:Extension.IsVisible="{Binding IsChecked,ElementName=MyCheckBox}"/> \[/code\]
+```xml
+<CheckBox x:Name="MyCheckBox"
+          IsChecked="True"
+          Content="show rectangle"/>
+<Rectangle Height="100"
+           Width="100"
+           Fill="Red"
+           x:Name="Rectangle"
+           ext:Extension.IsVisible="{Binding IsChecked,ElementName=MyCheckBox}"/>
+```
+
 
 Hoặc dùng nó như một Binding Source
 
-\[code language="xml"\] <CheckBox IsChecked="{Binding (ext:Extension.IsVisible),ElementName=Rectangle}" IsEnabled="False" Content="rectangle is visible?"/> \[/code\]
+```xml
+<CheckBox IsChecked="{Binding (ext:Extension.IsVisible),ElementName=Rectangle}"
+          IsEnabled="False"
+          Content="rectangle is visible?"/>
+```
+
 
 Hoặc dùng nó trong code behind
 
-\[code language="java"\] var val=Extension.GetIsVisible(Rectangle); Extension.SetIsVisible(Rectangle,true); \[/code\]
+```csharp
+ var val = Extension.GetIsVisible(Rectangle);
+ Extension.SetIsVisible(Rectangle,true);
+ ```
 
 Thế là xong
