@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png">
 <meta property="og:image" content="https://farm3.staticflickr.com/2834/10238287965_30e435db37_o.png">
 <meta property="article:published_time" content="2013-10-13T03:58:57.000Z">
-<meta property="article:modified_time" content="2020-09-28T14:40:12.199Z">
+<meta property="article:modified_time" content="2020-09-28T14:58:41.024Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="textbox">
 <meta property="article:tag" content="textblock">
@@ -343,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 10:40:12" itemprop="dateModified" datetime="2020-09-28T10:40:12-04:00">2020-09-28</time>
+        <time title="Modified: 2020-09-28 10:58:41" itemprop="dateModified" datetime="2020-09-28T10:58:41-04:00">2020-09-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,9 +395,91 @@
 <h1 id="2-Selectable-TextBlock"><a href="#2-Selectable-TextBlock" class="headerlink" title="2. Selectable TextBlock"></a>2. Selectable TextBlock</h1><p>Textblock, dĩ nhiên là không select được rồi.</p>
 <p>Vậy ta sẽ chỉnh một chút cho TextBox giống với TextBlock, để lợi dụng tính “Selectable” của nó</p>
 <p>add code sau vào resource</p>
-<p>[code lang=xml] <Style x:Key="TextBoxStyle1" TargetType="TextBox"> <Setter Property="Background" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="Foreground" Value="{StaticResource PhoneForegroundBrush}" /> <Setter Property="BorderBrush" Value="{StaticResource PhoneBackgroundBrush}" /> <Setter Property="SelectionBackground" Value="{StaticResource PhoneAccentBrush}" /> <Setter Property="SelectionForeground" Value="{StaticResource PhoneTextBoxSelectionForegroundBrush}" /> <Setter Property="Template"> &lt;Setter.Value&gt; <ControlTemplate TargetType="TextBox"> <Grid Background="Transparent"> &lt;VisualStateManager.VisualStateGroups&gt; <VisualStateGroup x:Name="CommonStates"> <VisualState x:Name="ReadOnly"> <Storyboard> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EnabledBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Collapsed</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Visibility"> <DiscreteObjectKeyFrame KeyTime="0"> &lt;DiscreteObjectKeyFrame.Value&gt; <Visibility>Visible</Visibility> &lt;/DiscreteObjectKeyFrame.Value&gt; </DiscreteObjectKeyFrame> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="Background"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyBorder" Storyboard.TargetProperty="BorderBrush"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneBackgroundBrush}" /> </ObjectAnimationUsingKeyFrames> <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DisabledOrReadonlyContent" Storyboard.TargetProperty="Foreground"> <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneForegroundBrush}" /> </ObjectAnimationUsingKeyFrames> </Storyboard> </VisualState> </VisualStateGroup> &lt;/VisualStateManager.VisualStateGroups&gt; <Border x:Name="EnabledBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"> <ContentControl x:Name="ContentElement" Margin="{StaticResource PhoneTextBoxInnerMargin}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" BorderThickness="0" Padding="{TemplateBinding Padding}" /> </Border> <Border x:Name="DisabledOrReadonlyBorder" Margin="{StaticResource PhoneTouchTargetOverhang}" Background="Transparent" BorderBrush="{StaticResource PhoneDisabledBrush}" BorderThickness="{TemplateBinding BorderThickness}" Visibility="Collapsed"> <TextBox x:Name="DisabledOrReadonlyContent" Background="Transparent" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" Foreground="{StaticResource PhoneDisabledBrush}" IsReadOnly="True" SelectionBackground="{TemplateBinding SelectionBackground}" SelectionForeground="{TemplateBinding SelectionForeground}" Template="{StaticResource PhoneDisabledTextBoxTemplate}" Text="{TemplateBinding Text}" TextAlignment="{TemplateBinding TextAlignment}" TextWrapping="{TemplateBinding TextWrapping}" /> </Border> </Grid> </ControlTemplate> &lt;/Setter.Value&gt; </Setter> </Style> [/code]</p>
+<pre><code class="xml">&lt;Style x:Key=&quot;TextBoxStyle1&quot; TargetType=&quot;TextBox&quot;&gt;
+    &lt;Setter Property=&quot;Background&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
+    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;&#123;StaticResource PhoneForegroundBrush&#125;&quot; /&gt;
+    &lt;Setter Property=&quot;BorderBrush&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
+    &lt;Setter Property=&quot;SelectionBackground&quot; Value=&quot;&#123;StaticResource PhoneAccentBrush&#125;&quot; /&gt;
+    &lt;Setter Property=&quot;SelectionForeground&quot; Value=&quot;&#123;StaticResource PhoneTextBoxSelectionForegroundBrush&#125;&quot; /&gt;
+    &lt;Setter Property=&quot;Template&quot;&gt;
+        &lt;Setter.Value&gt;
+            &lt;ControlTemplate TargetType=&quot;TextBox&quot;&gt;
+                &lt;Grid Background=&quot;Transparent&quot;&gt;
+                    &lt;VisualStateManager.VisualStateGroups&gt;
+                        &lt;VisualStateGroup x:Name=&quot;CommonStates&quot;&gt;
+                            &lt;VisualState x:Name=&quot;ReadOnly&quot;&gt;
+                                &lt;Storyboard&gt;
+                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;EnabledBorder&quot; Storyboard.TargetProperty=&quot;Visibility&quot;&gt;
+                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;
+                                            &lt;DiscreteObjectKeyFrame.Value&gt;
+                                                &lt;Visibility&gt;Collapsed&lt;/Visibility&gt;
+                                            &lt;/DiscreteObjectKeyFrame.Value&gt;
+                                        &lt;/DiscreteObjectKeyFrame&gt;
+                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
+                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;Visibility&quot;&gt;
+                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;
+                                            &lt;DiscreteObjectKeyFrame.Value&gt;
+                                                &lt;Visibility&gt;Visible&lt;/Visibility&gt;
+                                            &lt;/DiscreteObjectKeyFrame.Value&gt;
+                                        &lt;/DiscreteObjectKeyFrame&gt;
+                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
+                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;Background&quot;&gt;
+                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
+                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
+                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;BorderBrush&quot;&gt;
+                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
+                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
+                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyContent&quot; Storyboard.TargetProperty=&quot;Foreground&quot;&gt;
+                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneForegroundBrush&#125;&quot; /&gt;
+                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
+                                &lt;/Storyboard&gt;
+                            &lt;/VisualState&gt;
+                        &lt;/VisualStateGroup&gt;
+                    &lt;/VisualStateManager.VisualStateGroups&gt;
+                    &lt;Border x:Name=&quot;EnabledBorder&quot;
+                            Margin=&quot;&#123;StaticResource PhoneTouchTargetOverhang&#125;&quot;
+                            Background=&quot;&#123;TemplateBinding Background&#125;&quot;
+                            BorderBrush=&quot;&#123;TemplateBinding BorderBrush&#125;&quot;
+                            BorderThickness=&quot;&#123;TemplateBinding BorderThickness&#125;&quot;&gt;
+                        &lt;ContentControl x:Name=&quot;ContentElement&quot;
+                                        Margin=&quot;&#123;StaticResource PhoneTextBoxInnerMargin&#125;&quot;
+                                        HorizontalContentAlignment=&quot;Stretch&quot;
+                                        VerticalContentAlignment=&quot;Stretch&quot;
+                                        BorderThickness=&quot;0&quot;
+                                        Padding=&quot;&#123;TemplateBinding Padding&#125;&quot; /&gt;
+                    &lt;/Border&gt;
+                    &lt;Border x:Name=&quot;DisabledOrReadonlyBorder&quot;
+                            Margin=&quot;&#123;StaticResource PhoneTouchTargetOverhang&#125;&quot;
+                            Background=&quot;Transparent&quot;
+                            BorderBrush=&quot;&#123;StaticResource PhoneDisabledBrush&#125;&quot;
+                            BorderThickness=&quot;&#123;TemplateBinding BorderThickness&#125;&quot;
+                            Visibility=&quot;Collapsed&quot;&gt;
+                        &lt;TextBox x:Name=&quot;DisabledOrReadonlyContent&quot;
+                                 Background=&quot;Transparent&quot;
+                                 FontFamily=&quot;&#123;TemplateBinding FontFamily&#125;&quot;
+                                 FontSize=&quot;&#123;TemplateBinding FontSize&#125;&quot;
+                                 FontStyle=&quot;&#123;TemplateBinding FontStyle&#125;&quot;
+                                 FontWeight=&quot;&#123;TemplateBinding FontWeight&#125;&quot;
+                                 Foreground=&quot;&#123;StaticResource PhoneDisabledBrush&#125;&quot;
+                                 IsReadOnly=&quot;True&quot;
+                                 SelectionBackground=&quot;&#123;TemplateBinding SelectionBackground&#125;&quot;
+                                 SelectionForeground=&quot;&#123;TemplateBinding SelectionForeground&#125;&quot;
+                                 Template=&quot;&#123;StaticResource PhoneDisabledTextBoxTemplate&#125;&quot;
+                                 Text=&quot;&#123;TemplateBinding Text&#125;&quot;
+                                 TextAlignment=&quot;&#123;TemplateBinding TextAlignment&#125;&quot;
+                                 TextWrapping=&quot;&#123;TemplateBinding TextWrapping&#125;&quot; /&gt;
+                    &lt;/Border&gt;
+                &lt;/Grid&gt;
+            &lt;/ControlTemplate&gt;
+        &lt;/Setter.Value&gt;
+    &lt;/Setter&gt;
+&lt;/Style&gt;</code></pre>
 <p>Khi dùng, chỉ cần</p>
-<p>[code lang=xml] <TextBox x:Name="testTextBox" IsReadOnly="True" Style="{StaticResource TextBoxStyle1}" Text="Hello world, afdafkj aflaskfjalk lakfaljfklak lfjlaksfjlask jfldsj lskadjfl dslfj lasjf lkasjfl" TextWrapping="Wrap" /> [/code]</p>
+<pre><code class="xml">&lt;TextBox x:Name=&quot;testTextBox&quot;
+         IsReadOnly=&quot;True&quot;
+         Style=&quot;&#123;StaticResource TextBoxStyle1&#125;&quot;
+         Text=&quot;Hello world&quot;
+         TextWrapping=&quot;Wrap&quot; /&gt;</code></pre>
 <p>Thế là xong</p>
 
     </div>
