@@ -26,18 +26,20 @@ Bài viết này sẽ mô tả kỹ thuật này, cho bạn một cái nhìn t�
 
 # 1. Vấn đề
 
-\[code lang=text\] Hãy tưởng tượng bạn muốn uống coca, nhà ko còn chai coca nào Bạn phải ra Circle K, đi lòng vòng trong cửa hàng để kiếm 1 chai coca, trả tiền, đi về \[/code\]
+Hãy tưởng tượng bạn muốn uống coca, nhà ko còn chai coca nào Bạn phải ra Circle K, đi lòng vòng trong cửa hàng để kiếm 1 chai coca, trả tiền, đi về
 
 *   Bạn có thể quên ko trả tiền
-    
 *   Bạn có thể ko tìm thấy Circle K nào gần cả
-    
 *   Bạn có thể ko tìm thấy chai coca nào trong circle k cả
-    
 *   Bạn có thể lấy nhầm 1 chai xá xị chương dương thay vì coca
-    
 
-Với Dependency Injection, mọi việc sẽ khác đi \[code lang=text\] Bạn đưa tiền cho 1 thằng nhóc có nhiệm vụ chuyên đi mua nước ngọt cho khu xóm 5 phút sau, nó xuất hiện với chai coca của bạn \[/code\] Một người khác trong cùng khu xóm cũng có nhu cần gần giống bạn, nhưng họ muốn uống pepsi Thay vì cũng phải đi ra cửa hàng và tự mua pepsi và gặp các vấn đề như bạn gặp, họ cũng gọi thằng nhóc đó lại, và 5 phút sau, chai pepsi ướp lạnh ở trong tay họ. Thằng nhóc đó chính là 1 **_Service_**, và bạn phụ thuộc vô thằng nhóc đó để có nước ngọt uống
+Với Dependency Injection, mọi việc sẽ khác đi
+
+Bạn đưa tiền cho 1 thằng nhóc có nhiệm vụ chuyên đi mua nước ngọt cho khu xóm 5 phút sau, nó xuất hiện với chai coca của bạn
+
+Một người khác trong cùng khu xóm cũng có nhu cần gần giống bạn, nhưng họ muốn uống pepsi
+
+Thay vì cũng phải đi ra cửa hàng và tự mua pepsi và gặp các vấn đề như bạn gặp, họ cũng gọi thằng nhóc đó lại, và 5 phút sau, chai pepsi ướp lạnh ở trong tay họ. Thằng nhóc đó chính là 1 **_Service_**, và bạn phụ thuộc vô thằng nhóc đó để có nước ngọt uống
 
 # 2. Lợi ích
 
@@ -52,7 +54,11 @@ Quay trở lại với code, bạn sẽ implement DI như thế nào?
 
 ## 3.1. Interface
 
-\[code lang=csharp\] public interface IDrinkBuyer { void BuyDrink(string name); } \[/code\] Khi thằng nhóc mua nước ngọt ở bên trên đã già, nó sẽ muốn truyền lại nhiệm vụ mua nước ngọt cho 1 thằng nhóc khác, và cứ thể. Mọi thằng nhóc mua nước ngọt trong xóm đều sẽ có 1 phương thức cơ bản là `BuyDrink` chấp nhận 1 param là tên của loại nước cần mua Bạn đóng vai trò là `WebApplication`, sẽ gọi phương thức này để có nước ngọt uống
+```csharp
+public interface IDrinkBuyer { void BuyDrink(string name); }
+```
+
+Khi thằng nhóc mua nước ngọt ở bên trên đã già, nó sẽ muốn truyền lại nhiệm vụ mua nước ngọt cho 1 thằng nhóc khác, và cứ thể. Mọi thằng nhóc mua nước ngọt trong xóm đều sẽ có 1 phương thức cơ bản là `BuyDrink` chấp nhận 1 param là tên của loại nước cần mua Bạn đóng vai trò là `WebApplication`, sẽ gọi phương thức này để có nước ngọt uống
 
 ## 3.2. Implementation
 
@@ -61,11 +67,34 @@ Người quản lý của mấy thằng nhóc mua nước ngọt này sẽ phân
 *   Nhóc A mua ở Circle K
 *   Nhóc B mua ở Vinmart
 
-Và họ sẽ implement như sau \[code lang=csharp\] public class CircleKDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to circle k // Find the -name- drink // Buy it and deliver } } public class VinmartDrinkBuyer : IDrinkBuyer { public void BuyDrink(string name) { // Go to Vinmart // Find the -name- drink // Buy it and deliver } } \[/code\] Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống
+Và họ sẽ implement như sau 
+```csharp
+public class CircleKDrinkBuyer: IDrinkBuyer 
+{
+  public void BuyDrink(string name) 
+  {
+    // Go to circle k 
+    // Find the -name- drink 
+    // Buy it and deliver 
+  }
+}
+
+public class VinmartDrinkBuyer: IDrinkBuyer 
+{
+  public void BuyDrink(string name) 
+  {
+    // Go to Vinmart 
+    // Find the -name- drink 
+    // Buy it and deliver 
+  }
+}
+```
+
+Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống
 
 # 4. Register
 
-Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn ![method in startup.cs](https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png) bằng cách thêm vào dòng code sau \[code lang=csharp\] services.AddScoped(); \[/code\] bạn đã khai báo cho tất cả các class có dùng phương thức BuyDrink sẽ mua nước ngọt ở CircleK
+Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn ![method in startup.cs](https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png) bằng cách thêm vào dòng code sau `services.AddScoped();` bạn đã khai báo cho tất cả các class có dùng phương thức `BuyDrink` sẽ mua nước ngọt ở CircleK
 
 ## 4.1. Lifetime
 
@@ -81,8 +110,70 @@ Sau khi đã register service của bạn với 1 lifetime phù hợp, việc ti
 
 ## 4.3. Action Injection
 
-Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác \[code lang=csharp\] public IActionResult About(\[FromServices\] IDrinkBuyer drinkBuyer) { drinkBuyer.BuyDrink("coca"); return View(); } \[/code\]
+Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác 
+
+```csharp
+public IActionResult About([FromServices] IDrinkBuyer drinkBuyer) 
+{
+  drinkBuyer.BuyDrink("coca");
+  return View();
+}
+```
 
 ## 4.4. Service trong Service
 
-Nested services, service con, vân vân và mây mây Đôi khi bạn cần phải có 1 service con để service cha chạy được, thì inject như nào Rất đơn giản, cũng dùng contructor injection thôi Giả sử Service DrinkBuyer cần có service Trasport để chạy \[code lang=csharp\] public interface ITransport { void Transport(); } public class BikeTransport : ITransport { public void Transport() { // transport by bike } } public class CarTransport : ITransport { public void Transport() { // transport by car } } \[/code\] đầu tiên đăng ký nó trong `Startup.cs` \[code lang=csharp\] services.AddScoped(); \[/code\] sau đó bạn inject nó vào DrinkBuyer như sau \[code lang=csharp\] public class CircleKDrinkBuyer : IDrinkBuyer { private readonly ITransport \_transport; public CircleKDrinkBuyer(ITransport transport) { \_transport = transport; } public void BuyDrink(string name) { // Go to circle k // Find the -name- drink // Buy it // Deliver \_transport.Transport(); } } \[/code\] thế nà xong :D
+Nested services, service con, vân vân và mây mây
+
+Đôi khi bạn cần phải có 1 service con để service cha chạy được, thì inject như nào
+
+Rất đơn giản, cũng dùng contructor injection thôi
+
+Giả sử Service `DrinkBuyer` cần có service `Trasport` để chạy 
+
+```csharp
+public interface ITransport
+{
+  void Transport();
+}
+public class BikeTransport: ITransport
+{
+  public void Transport() 
+  {
+    // transport by bike 
+  }
+}
+
+public class CarTransport: ITransport
+{
+  public void Transport()
+  {
+    // transport by car
+  }
+}
+```
+
+đầu tiên đăng ký nó trong `Startup.cs` `services.AddScoped();`
+
+sau đó bạn inject nó vào `DrinkBuyer` như sau
+
+```csharp
+public class CircleKDrinkBuyer: IDrinkBuyer 
+{
+  private readonly ITransport _transport;
+  
+  public CircleKDrinkBuyer(ITransport transport) 
+  {
+      _transport = transport;
+  }
+  
+  public void BuyDrink(string name) {
+    // Go to circle k 
+    // Find the -name- drink 
+    // Buy it 
+    // Deliver 
+    _transport.Transport();
+  }
+}
+```
+
+thế nà xong :D
