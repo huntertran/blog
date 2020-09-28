@@ -40,7 +40,9 @@ Mở project của bạn lên, vào Tools > NuGet Package Manager > Package Mana
 
 Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau
 
-\[code lang=bash\] Install-Package GoogleAnalyticsSDK \[/code\]
+```shell
+Install-Package GoogleAnalyticsSDK
+```
 
 ![](http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png)
 

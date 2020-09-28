@@ -32,13 +32,25 @@ Lưu ý là cách này chỉ hoạt động trên windows nhé
 *   .NET Framework 4.7.1 developer pack: [https://www.microsoft.com/net/download/thank-you/net471-developer-pack](https://www.microsoft.com/net/download/thank-you/net471-developer-pack)
 *   Build Tools for Visual Studio 2017 (MSBuild is licensed under the MIT license): [https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15)
 
-> ![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png) NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense \[code lang=bash\] dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01 \[/code\]
+> ![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png)
+
+NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense
+
+```shell
+dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01
+```
 
 # 2. Các bước cài đặt
 
 ## 2.1. Create project
 
-\[code lang=text\] Open VSCode -> Open Folder -> trỏ tới folder sẽ chứa tất cả code của bạn Views > Integrated Terminal \[/code\] rồi gõ \[code lang=bash\] dotnet new mvc \[/code\] SDK sẽ tạo ra toàn bộ folders và files cần thiết cho bạn Các lựa chọn khác khi tạo một project: ['dotnet new' command at docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x)
+Open VSCode -> Open Folder -> trỏ tới folder sẽ chứa tất cả code của bạn Views > Integrated Terminal rồi gõ 
+
+```shell
+dotnet new mvc
+```
+
+SDK sẽ tạo ra toàn bộ folders và files cần thiết cho bạn Các lựa chọn khác khi tạo một project: ['dotnet new' command at docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x)
 
 ## 2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)
 

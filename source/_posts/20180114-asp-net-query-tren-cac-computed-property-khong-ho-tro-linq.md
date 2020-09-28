@@ -84,7 +84,9 @@ Sử dụng nó thì không còn gì dễ hơn
 
 Bước 1: Cài đặt nuget DelegateDecompiler
 
-\[code lang=bash\] Install-Package DelegateDecompiler \[/code\]
+```shell
+Install-Package DelegateDecompiler
+```
 
 Bước 2: Trang trí property với attribute `[Computed]`
 
