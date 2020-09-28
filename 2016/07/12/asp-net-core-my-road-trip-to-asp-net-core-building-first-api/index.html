@@ -32,7 +32,7 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://docs.asp.net/en/latest/_images/architecture.png">
+<meta property="og:image" content="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview/_static/mvc.png?view=aspnetcore-3.1">
 <meta property="og:image" content="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png">
@@ -41,11 +41,11 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png">
 <meta property="article:published_time" content="2016-07-12T09:47:36.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:26:51.596Z">
+<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://docs.asp.net/en/latest/_images/architecture.png">
+<meta name="twitter:image" content="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview/_static/mvc.png?view=aspnetcore-3.1">
 
 
 <link rel="canonical" href="https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/">
@@ -232,7 +232,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tools"><span class="nav-text">Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fiddler"><span class="nav-text">Fiddler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Chrome"><span class="nav-text">Google Chrome</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Start"><span class="nav-text">Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Khoi-tao-Project"><span class="nav-text">Khởi tạo Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Them-model"><span class="nav-text">Thêm model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Them-Repository"><span class="nav-text">Thêm Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Register-cai-Repository"><span class="nav-text">Register cái Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Them-controller"><span class="nav-text">Thêm controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-to-do-items"><span class="nav-text">Getting to-do items</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Routing-va-URL-Paths"><span class="nav-text">Routing và URL Paths</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Return-values"><span class="nav-text">Return values</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Trien-them-cac-phuong-thuc-CRUD-khac"><span class="nav-text">Triển thêm các phương thức CRUD khác</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create"><span class="nav-text">Create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Update"><span class="nav-text">Update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Delete"><span class="nav-text">Delete</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Overview"><span class="nav-text">1. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Tools"><span class="nav-text">2. Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Fiddler"><span class="nav-text">2.1. Fiddler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Google-Chrome"><span class="nav-text">2.2. Google Chrome</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Start"><span class="nav-text">3. Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Khoi-tao-Project"><span class="nav-text">3.1. Khởi tạo Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Them-model"><span class="nav-text">3.2. Thêm model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Them-Repository"><span class="nav-text">3.3. Thêm Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-Register-cai-Repository"><span class="nav-text">3.4. Register cái Repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-Them-controller"><span class="nav-text">3.5. Thêm controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-6-Getting-to-do-items"><span class="nav-text">3.6. Getting to-do items</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Routing-va-URL-Paths"><span class="nav-text">4. Routing và URL Paths</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Return-values"><span class="nav-text">5. Return values</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Trien-them-cac-phuong-thuc-CRUD-khac"><span class="nav-text">6. Triển thêm các phương thức CRUD khác</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-Create"><span class="nav-text">6.1. Create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-Update"><span class="nav-text">6.2. Update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-Delete"><span class="nav-text">6.3. Delete</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -344,7 +344,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:26:51" itemprop="dateModified" datetime="2020-09-28T12:26:51-04:00">2020-09-28</time>
+        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -372,89 +372,211 @@
     <div class="post-body" itemprop="articleBody">
         <p>Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe</p>
 <a id="more"></a>
-<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>Nếu bạn chưa biết API là gì</p>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-overview">1. Overview</a></li>
+<li><a href="#2-tools">2. Tools</a><ul>
+<li><a href="#21-fiddler">2.1. Fiddler</a></li>
+<li><a href="#22-google-chrome">2.2. Google Chrome</a></li>
+</ul>
+</li>
+<li><a href="#3-start">3. Start</a><ul>
+<li><a href="#31-kh%E1%BB%9Fi-t%E1%BA%A1o-project">3.1. Khởi tạo Project</a></li>
+<li><a href="#32-th%C3%AAm-model">3.2. Thêm model</a></li>
+<li><a href="#33-th%C3%AAm-repository">3.3. Thêm Repository</a></li>
+<li><a href="#34-register-c%C3%A1i-repository">3.4. Register cái Repository</a></li>
+<li><a href="#35-th%C3%AAm-controller">3.5. Thêm controller</a></li>
+<li><a href="#36-getting-to-do-items">3.6. Getting to-do items</a></li>
+</ul>
+</li>
+<li><a href="#4-routing-v%C3%A0-url-paths">4. Routing và URL Paths</a></li>
+<li><a href="#5-return-values">5. Return values</a></li>
+<li><a href="#6-tri%E1%BB%83n-th%C3%AAm-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-crud-kh%C3%A1c">6. Triển thêm các phương thức CRUD khác</a><ul>
+<li><a href="#61-create">6.1. Create</a></li>
+<li><a href="#62-update">6.2. Update</a></li>
+<li><a href="#63-delete">6.3. Delete</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-Overview"><a href="#1-Overview" class="headerlink" title="1. Overview"></a>1. Overview</h1><p><a id="markdown-overview" name="overview"></a></p>
+<p>Nếu bạn chưa biết API là gì</p>
 <p>API là viết tắt của cụm từ Application Programming Interface, là một dạng giao diện cho phép bạn tương tác với một dữ liệu nào đó.</p>
 <p>Ví dụ như Uber chả hạn, bật app Uber lên, bạn sẽ thấy có vài xe Uber đang đậu quanh bạn. Làm sao Uber biết chuyện này? Bằng cách gửi tọa độ GPS của bạn lên server, và server sẽ trả về vị trí các xe đang rảnh xung quanh bạn. App Uber sẽ gắn nó lên trên bản đồ.</p>
 <p>Đây sẽ là các API mà chúng ta sẽ build</p>
-<p><strong>API</strong></p>
-<p><strong>Description</strong></p>
-<p><strong>Request body</strong></p>
-<p><strong>Response body</strong></p>
-<p><strong>GET /api/todo</strong></p>
-<p>Get all to-do items</p>
-<p>None</p>
-<p>Array of to-do items</p>
-<p><strong>GET /api/todo/{id}</strong></p>
-<p>Get an item by ID</p>
-<p>None</p>
-<p>To-do item</p>
-<p><strong>POST /api/todo</strong></p>
-<p>Add a new item</p>
-<p>To-do item</p>
-<p>To-do item</p>
-<p><strong>PUT /api/todo/{id}</strong></p>
-<p>Update an existing item</p>
-<p>To-do item</p>
-<p>None</p>
-<p><strong>DELETE /api/todo/{id}</strong></p>
-<p>Delete an item.</p>
-<p>None</p>
-<p>None</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Request body</th>
+<th>Response body</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET /api/todo</td>
+<td>Get all to-do items</td>
+<td>None</td>
+<td>Array of to-do items</td>
+</tr>
+<tr>
+<td>GET /api/todo/{id}</td>
+<td>Get an item by ID</td>
+<td>None</td>
+<td>To-do item</td>
+</tr>
+<tr>
+<td>POST /api/todo</td>
+<td>Add a new item</td>
+<td>To-do item</td>
+<td>To-do item</td>
+</tr>
+<tr>
+<td>PUT /api/todo/{id}</td>
+<td>Update an existing item</td>
+<td>To-do item</td>
+<td>None</td>
+</tr>
+<tr>
+<td>DELETE /api/todo/{id}</td>
+<td>Delete an item.</td>
+<td>None</td>
+<td>None</td>
+</tr>
+</tbody></table>
 <p>Sơ đồ</p>
-<p><img src="https://docs.asp.net/en/latest/_images/architecture.png"></p>
+<p><img src="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview/_static/mvc.png?view=aspnetcore-3.1"></p>
 <p>Chú thích</p>
-<p>Client: app / web sẽ sử dụng API. Tạm thời chúng ta chưa quan tâm tới nó</p>
+<p>View: app / web sẽ sử dụng API. Tạm thời chúng ta chưa quan tâm tới nó</p>
 <p>Model: là kiểu dữ liệu của bạn. Trong ví dụ này, Model là To-do item</p>
 <p>Controller: là thứ sẽ nhận HTTP Request, và tạo ra HTTP Responses. Ví dụ này sẽ chỉ có 1 controller duy nhất</p>
 <p>Ví dụ này cũng không sử dụng Database, mà sẽ lưu trực tiếp trên bộ nhớ. Một API hoàn chỉnh sẽ có Database đi kèm nó</p>
-<h1 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h1><p>Đễ dễ dàng debug, test API do mình tạo ra, bạn có thể sử dụng một số phần mềm</p>
-<h2 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h2><p>Tải và cài đặt tại đây: <a target="_blank" rel="noopener" href="https://www.telerik.com/download/fiddler">https://www.telerik.com/download/fiddler</a></p>
-<h2 id="Google-Chrome"><a href="#Google-Chrome" class="headerlink" title="Google Chrome"></a>Google Chrome</h2><p>Google Chrome thì khá tốt trong chuyện test tiếc các kiểu</p>
-<h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><h2 id="Khoi-tao-Project"><a href="#Khoi-tao-Project" class="headerlink" title="Khởi tạo Project"></a>Khởi tạo Project</h2><p>Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi &gt; OK</p>
+<h1 id="2-Tools"><a href="#2-Tools" class="headerlink" title="2. Tools"></a>2. Tools</h1><p><a id="markdown-tools" name="tools"></a></p>
+<p>Đễ dễ dàng debug, test API do mình tạo ra, bạn có thể sử dụng một số phần mềm</p>
+<h2 id="2-1-Fiddler"><a href="#2-1-Fiddler" class="headerlink" title="2.1. Fiddler"></a>2.1. Fiddler</h2><p><a id="markdown-fiddler" name="fiddler"></a></p>
+<p>Tải và cài đặt tại đây: <a target="_blank" rel="noopener" href="https://www.telerik.com/download/fiddler">https://www.telerik.com/download/fiddler</a></p>
+<h2 id="2-2-Google-Chrome"><a href="#2-2-Google-Chrome" class="headerlink" title="2.2. Google Chrome"></a>2.2. Google Chrome</h2><p><a id="markdown-google-chrome" name="google-chrome"></a></p>
+<p>Google Chrome thì khá tốt trong chuyện test tiếc các kiểu</p>
+<h1 id="3-Start"><a href="#3-Start" class="headerlink" title="3. Start"></a>3. Start</h1><p><a id="markdown-start" name="start"></a></p>
+<h2 id="3-1-Khoi-tao-Project"><a href="#3-1-Khoi-tao-Project" class="headerlink" title="3.1. Khởi tạo Project"></a>3.1. Khởi tạo Project</h2><p><a id="markdown-kh%E1%BB%9Fi-t%E1%BA%A1o-project" name="kh%E1%BB%9Fi-t%E1%BA%A1o-project"></a></p>
+<p>Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi &gt; OK</p>
 <p><img src="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png"></p>
 <p>Chọn template là Web API &gt; OK</p>
 <p><img src="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png"></p>
-<h2 id="Them-model"><a href="#Them-model" class="headerlink" title="Thêm model"></a>Thêm model</h2><p>Model là một object đại diện cho dữ liệu của bạn trong ứng dụng. Trong ví dụ này thì model duy nhất chỉ là một to-do item thôi.</p>
+<h2 id="3-2-Them-model"><a href="#3-2-Them-model" class="headerlink" title="3.2. Thêm model"></a>3.2. Thêm model</h2><p><a id="markdown-th%C3%AAm-model" name="th%C3%AAm-model"></a></p>
+<p>Model là một object đại diện cho dữ liệu của bạn trong ứng dụng. Trong ví dụ này thì model duy nhất chỉ là một to-do item thôi.</p>
 <p>Tips: bạn nên đặt toàn bộ model trong một folder riêng, tương tự với view và controller (đã có sẵn folder cho controller)</p>
 <p>Chuột phải vào Project &gt; Add &gt; New Folder</p>
 <p><img src="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png"></p>
 <p>Tiếp tục chuột phải vào Folder Models &gt; Add &gt; Class, đặt tên class là TodoItem &gt; Ok</p>
 <p><img src="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png"></p>
 <p>Thêm 3 Property vô</p>
-<p>[code language=”csharp”] public string Key { get; set; } public string Name { get; set; } public bool IsComplete { get; set; } [/code]</p>
-<h2 id="Them-Repository"><a href="#Them-Repository" class="headerlink" title="Thêm Repository"></a>Thêm Repository</h2><p>Repository, tiếng Việt là một chỗ lưu trữ cái gì đó, là một kỹ thuật mới tinh beng của ASP.NET core. Theo như tài liệu của họ, thì Repository dùng để đóng gói data, và chứa logic cho việc truy cập dữ liệu và chuyển nó qua cho Entity Model.</p>
+<pre><code class="csharp">public string Key &#123; get; set; &#125;
+public string Name &#123; get; set; &#125;
+public bool IsComplete &#123; get; set; &#125;</code></pre>
+<h2 id="3-3-Them-Repository"><a href="#3-3-Them-Repository" class="headerlink" title="3.3. Thêm Repository"></a>3.3. Thêm Repository</h2><p><a id="markdown-th%C3%AAm-repository" name="th%C3%AAm-repository"></a></p>
+<p>Repository, tiếng Việt là một chỗ lưu trữ cái gì đó, là một kỹ thuật mới tinh beng của ASP.NET core. Theo như tài liệu của họ, thì Repository dùng để đóng gói data, và chứa logic cho việc truy cập dữ liệu và chuyển nó qua cho Entity Model.</p>
 <p>Mặc dù app của chúng ta ko có database, nhưng mà cũng hay nếu như bạn hiểu cái đám code này hoạt động dư lào</p>
 <p>Để bắt đầu, chúng ta sẽ tạo một repository interface có tên ITodoRepository, dùng cách thêm class như trên, nhưng chọn template là Interface nhóe</p>
-<p>[code language=”csharp”] namespace todoapi.Models { public interface ITodoRepository { void Add(TodoItem item); IEnumerable<TodoItem> GetAll(); TodoItem Find(string key); TodoItem Remove(string key); void Update(TodoItem item); } } [/code]</p>
+<pre><code class="csharp">namespace todoapi.Models
+&#123;
+    public interface ITodoRepository
+    &#123;
+        void Add(TodoItem item);
+        IEnumerable&lt;TodoItem&gt; GetAll();
+        TodoItem Find(string key);
+        TodoItem Remove(string key);
+        void Update(TodoItem item);
+    &#125;
+&#125;</code></pre>
 <p>Cái interface này định nghĩa các phương thức CRUD (Create - Read – Update – Delete)</p>
 <p>Tiếp theo, ta thêm class TodoRepository, triển khai các phương thức trong Interface mới tạo bên trên</p>
-<p>[code language=”csharp”] public class TodoRepository : ITodoRepository { private static ConcurrentDictionary&lt;string, TodoItem&gt; _todos = new ConcurrentDictionary&lt;string, TodoItem&gt;(); public TodoRepository() { Add(new TodoItem { Name = “Item1” }); }</p>
-<p>public void Add(TodoItem item) { item.Key = Guid.NewGuid().ToString(); _todos[item.Key] = item; }</p>
-<p>public IEnumerable<TodoItem> GetAll() { return _todos.Values; }</p>
-<p>public TodoItem Find(string key) { TodoItem item; _todos.TryGetValue(key, out item); return item; }</p>
-<p>public TodoItem Remove(string key) { TodoItem item; _todos.TryGetValue(key, out item); _todos.TryRemove(key, out item); return item; }</p>
-<p>public void Update(TodoItem item) { _todos[item.Key] = item; } } [/code]</p>
+<pre><code class="csharp">public class TodoRepository : ITodoRepository
+&#123;
+    private static ConcurrentDictionary&lt;string, TodoItem&gt; _todos = new ConcurrentDictionary&lt;string, TodoItem&gt;();
+    public TodoRepository()
+    &#123;
+        Add(new TodoItem &#123; Name = &quot;Item1&quot; &#125;);
+    &#125;
+
+    public void Add(TodoItem item)
+    &#123;
+        item.Key = Guid.NewGuid().ToString();
+        _todos[item.Key] = item;
+    &#125;
+
+    public IEnumerable&lt;TodoItem&gt; GetAll()
+    &#123;
+        return _todos.Values;
+    &#125;
+
+    public TodoItem Find(string key)
+    &#123;
+        TodoItem item;
+        _todos.TryGetValue(key, out item);
+        return item;
+    &#125;
+
+    public TodoItem Remove(string key)
+    &#123;
+        TodoItem item;
+        _todos.TryGetValue(key, out item);
+        _todos.TryRemove(key, out item);
+        return item;
+    &#125;
+
+    public void Update(TodoItem item)
+    &#123;
+        _todos[item.Key] = item;
+    &#125;
+&#125;</code></pre>
 <p>Xong xuôi thì build nó phát để coi có lỗi gì hok</p>
 <p><img src="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png"></p>
 <p>Build xong nó lên dư lày là okie</p>
 <p><img src="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png"></p>
-<h2 id="Register-cai-Repository"><a href="#Register-cai-Repository" class="headerlink" title="Register cái Repository"></a>Register cái Repository</h2><p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a target="_blank" rel="noopener" href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
+<h2 id="3-4-Register-cai-Repository"><a href="#3-4-Register-cai-Repository" class="headerlink" title="3.4. Register cái Repository"></a>3.4. Register cái Repository</h2><p><a id="markdown-register-c%C3%A1i-repository" name="register-c%C3%A1i-repository"></a></p>
+<p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a target="_blank" rel="noopener" href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
 <p>Cách này giúp bạn dễ dàng viết Unit Test hơn. Test sẽ thu hẹp lại xuống logic của controller, chứ không test cái truy xuất dữ liệu.</p>
 <p>Để chọt (inject) nó vô controller, ta cần đăng ký nó. Mở file Startup.cs, thêm dòng sau vô đầu</p>
-<p>[code language=”csharp”] using todoapi.Models; [/code]</p>
+<pre><code class="csharp">using todoapi.Models;</code></pre>
 <p>Trong phương thức configureServices, thêm đoạn code sau vô cuối</p>
-<p>[code language=”csharp”] //Add our repository type</p>
-<p>services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;(); [/code]</p>
-<h2 id="Them-controller"><a href="#Them-controller" class="headerlink" title="Thêm controller"></a>Thêm controller</h2><p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
+<pre><code class="csharp">//Add our repository type
+services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
+<h2 id="3-5-Them-controller"><a href="#3-5-Them-controller" class="headerlink" title="3.5. Thêm controller"></a>3.5. Thêm controller</h2><p><a id="markdown-th%C3%AAm-controller" name="th%C3%AAm-controller"></a></p>
+<p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
 <p>Chọn Web API Controller Class, đặt tên TodoController</p>
 <p><img src="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png"></p>
 <p>Xóa hết code trong class đi, thay bằng cái lày</p>
-<p>[code language=”csharp”] public class TodoController : Controller { public ITodoRepository TodoItems { get; set; }</p>
-<p>public TodoController(ITodoRepository todoItems) { TodoItems = todoItems; } } [/code]</p>
+<pre><code class="csharp">public class TodoController : Controller
+&#123;
+    public ITodoRepository TodoItems &#123; get; set; &#125;
+
+    public TodoController(ITodoRepository todoItems)
+    &#123;
+        TodoItems = todoItems;
+    &#125;
+&#125;</code></pre>
 <p>Như vậy là bạn đã khai báo một cái controller chả có gì bên trong cả. Trong các phần tiếp theo, chúng ta sẽ thêm các method để triển khai API nhóe.</p>
-<h2 id="Getting-to-do-items"><a href="#Getting-to-do-items" class="headerlink" title="Getting to-do items"></a>Getting to-do items</h2><p>Thêm method sau vào TodoController</p>
-<p>[code language=”csharp”] public IEnumerable<TodoItem> GetAll() { return TodoItems.GetAll(); }</p>
-<p>[HttpGet(“{id}”, Name = “GetToDo”)] public IActionResult GetById(string id) { var item = TodoItems.Find(id); if (item == null) { return NotFound(); } return new ObjectResult(item); } [/code]</p>
+<h2 id="3-6-Getting-to-do-items"><a href="#3-6-Getting-to-do-items" class="headerlink" title="3.6. Getting to-do items"></a>3.6. Getting to-do items</h2><p><a id="markdown-getting-to-do-items" name="getting-to-do-items"></a></p>
+<p>Thêm method sau vào TodoController</p>
+<pre><code class="csharp">public IEnumerable&lt;TodoItem&gt; GetAll()
+&#123;
+    return TodoItems.GetAll();
+&#125;
+
+[HttpGet(&quot;&#123;id&#125;&quot;, Name = &quot;GetToDo&quot;)]
+public IActionResult GetById(string id)
+&#123;
+    var item = TodoItems.Find(id);
+    if (item == null)
+    &#123;
+        return NotFound();
+    &#125;
+    return new ObjectResult(item);
+&#125;</code></pre>
 <p>Phương thức này có 2 cái get</p>
 <ul>
 <li>GET /api/todo</li>
@@ -466,26 +588,59 @@
 <p>[{“Key”:”4f67d7c5-a2a9-4aae-b030-16003dd829ae”,”Name”:”Item1”,”IsComplete”:false}]</p>
 </blockquote>
 <p>Sau này chúng ta sẽ dùng Fiddler để test các phương thức này nhóe</p>
-<h1 id="Routing-va-URL-Paths"><a href="#Routing-va-URL-Paths" class="headerlink" title="Routing và URL Paths"></a>Routing và URL Paths</h1><p>Trong cái phương thức trên, bạn sẽ thấy có [HttpGet]. Cái này gọi là Attribute, và Attribute này dùng để chỉ định phương thức cho method bên dưới là Get. Đường dẫn Url thì được xây dựng như sau</p>
+<h1 id="4-Routing-va-URL-Paths"><a href="#4-Routing-va-URL-Paths" class="headerlink" title="4. Routing và URL Paths"></a>4. Routing và URL Paths</h1><p><a id="markdown-routing-v%C3%A0-url-paths" name="routing-v%C3%A0-url-paths"></a></p>
+<p>Trong cái phương thức trên, bạn sẽ thấy có [HttpGet]. Cái này gọi là Attribute, và Attribute này dùng để chỉ định phương thức cho method bên dưới là Get. Đường dẫn Url thì được xây dựng như sau</p>
 <ul>
-<li>Lấy cái string trong Controller’s Route: [Route(“api/[controller]“)]</li>
+<li>Lấy cái string trong Controller’s Route: [Route(“api/[controller]”)]</li>
 <li>Bỏ cái [controller] ra, thay bằng tên của cái controller (tất nhiên là trừ đi chữ “Controller” nhóe). Ví dụ TodoController thì sẽ thay cái chữ Todo vô thôi</li>
 <li>Nếu mà HttpGet có template string, thì thêm cái string đó vô path. Cái ví dụ trên thì ko có</li>
 </ul>
 <p>Trong cái phương thức GetId bên trên, “{id}” là một giá trị giữ chỗ. Khi request lên, client sẽ xài cái Id của TodoItem thế vô đó.</p>
-<h1 id="Return-values"><a href="#Return-values" class="headerlink" title="Return values"></a>Return values</h1><p>Phương thức GetAll trả về một kiểu dữ liệu là CLR Object. MVC tự động đổi nó thành JSON và viết JSON ra cái body của cái Reponse message. Reponse code sẽ là 200. Nếu có unhandled exception, reponse code sẽ là 5xx</p>
+<h1 id="5-Return-values"><a href="#5-Return-values" class="headerlink" title="5. Return values"></a>5. Return values</h1><p><a id="markdown-return-values" name="return-values"></a></p>
+<p>Phương thức GetAll trả về một kiểu dữ liệu là CLR Object. MVC tự động đổi nó thành JSON và viết JSON ra cái body của cái Reponse message. Reponse code sẽ là 200. Nếu có unhandled exception, reponse code sẽ là 5xx</p>
 <ul>
 <li>Nếu không có item nào có Id như răng, trả về reponse code 404. Cái này được định nghĩa bằng phương thức NotFound()</li>
 </ul>
-<h1 id="Trien-them-cac-phuong-thuc-CRUD-khac"><a href="#Trien-them-cac-phuong-thuc-CRUD-khac" class="headerlink" title="Triển thêm các phương thức CRUD khác"></a>Triển thêm các phương thức CRUD khác</h1><h2 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h2><p>[code language=”csharp”] [HttpPost] public IActionResult Create([FromBody] TodoItem item) { if (item == null) { return BadRequest(); } TodoItems.Add(item); return CreatedAtRoute(“GetTodo”, new {id = item.Key}, item); } [/code]</p>
+<h1 id="6-Trien-them-cac-phuong-thuc-CRUD-khac"><a href="#6-Trien-them-cac-phuong-thuc-CRUD-khac" class="headerlink" title="6. Triển thêm các phương thức CRUD khác"></a>6. Triển thêm các phương thức CRUD khác</h1><p><a id="markdown-tri%E1%BB%83n-th%C3%AAm-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-crud-kh%C3%A1c" name="tri%E1%BB%83n-th%C3%AAm-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-crud-kh%C3%A1c"></a></p>
+<h2 id="6-1-Create"><a href="#6-1-Create" class="headerlink" title="6.1. Create"></a>6.1. Create</h2><p><a id="markdown-create" name="create"></a></p>
+<pre><code class="csharp">[HttpPost]
+public IActionResult Create([FromBody] TodoItem item)
+&#123;
+    if (item == null)
+    &#123;
+        return BadRequest();
+    &#125;
+    TodoItems.Add(item);
+    return CreatedAtRoute(&quot;GetTodo&quot;, new &#123;id = item.Key&#125;, item);
+&#125;</code></pre>
 <p>Phương thức Post</p>
 <p>[FromBody] cho phép MVC biết là cái TodoItem đó lấy từ body của request message</p>
 <p>Return CreatedAtRoute: sẽ trả về địa chỉ của cái item đấy luôn</p>
-<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>[code language=”csharp”] [HttpPut(“{id}”)] public IActionResult Update(string id, [FromBody] TodoItem item) { if (item == null || item.Key != id) { return BadRequest(); }</p>
-<p>var todo = TodoItems.Find(id); if (todo == null) { return NotFound(); } TodoItems.Update(item); return new NoContentResult(); } [/code]</p>
+<h2 id="6-2-Update"><a href="#6-2-Update" class="headerlink" title="6.2. Update"></a>6.2. Update</h2><p><a id="markdown-update" name="update"></a></p>
+<pre><code class="csharp">[HttpPut(&quot;&#123;id&#125;&quot;)]
+public IActionResult Update(string id, [FromBody] TodoItem item) 
+&#123;
+    if (item == null || item.Key != id) 
+    &#123;
+        return BadRequest();
+    &#125;
+
+    var todo = TodoItems.Find(id);
+    if (todo == null) 
+    &#123;
+        return NotFound();
+    &#125;
+    TodoItems.Update(item);
+    return new NoContentResult();
+&#125;</code></pre>
 <p>Update cũng giống giống Create, nhưng mà xài HttpPut. Response chuẩn là 204 (No Content)</p>
 <p>Theo như tài liệu của HTTP, thì Put request đòi hỏi client phải gửi toàn bộ nội dung của item cần update, chứ không phải vài thông tin rời rạc. Để update chỉ 1 thông tin nào đó, dùng HttpPatch</p>
-<h2 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h2><p>[code language=”csharp”] [HttpDelete(“{id}”)] public void Delete(string id) { TodoItems.Remove(id); } [/code]</p>
+<h2 id="6-3-Delete"><a href="#6-3-Delete" class="headerlink" title="6.3. Delete"></a>6.3. Delete</h2><p><a id="markdown-delete" name="delete"></a></p>
+<pre><code class="csharp">[HttpDelete(&quot;&#123;id&#125;&quot;)]
+public void Delete(string id)
+&#123;
+    TodoItems.Remove(id);
+&#125;</code></pre>
 <p>Void trả về response là 204 (No Content). Tức là client sẽ nhận được 204 kể cả khi Item đã bị delete hay item ko tồn tại</p>
 <p>Vậy là xong rồi, chờ bài post tiếp theo nhóe bạn</p>
 
