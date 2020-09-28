@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7758/16861970254_d3723ce4fc_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7706/17484960575_5d4f494465_o.png">
 <meta property="article:published_time" content="2015-05-10T14:55:51.000Z">
-<meta property="article:modified_time" content="2020-09-28T14:58:41.024Z">
+<meta property="article:modified_time" content="2020-09-28T16:26:51.596Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="azure">
 <meta property="article:tag" content="proxy">
@@ -232,7 +232,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Test-Toc-do-mang-toi-Azure"><span class="nav-number">1.</span> <span class="nav-text">Test Tốc độ mạng tới Azure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tao-may-ao-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">Tạo máy ảo Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cau-hinh-cho-Proxy"><span class="nav-number">3.</span> <span class="nav-text">Cấu hình cho Proxy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dang-nhap-vao-may-ao"><span class="nav-number">3.1.</span> <span class="nav-text">Đăng nhập vào máy ảo</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Test-Toc-do-mang-toi-Azure"><span class="nav-text">Test Tốc độ mạng tới Azure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tao-may-ao-Ubuntu"><span class="nav-text">Tạo máy ảo Ubuntu</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cau-hinh-cho-Proxy"><span class="nav-text">Cấu hình cho Proxy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dang-nhap-vao-may-ao"><span class="nav-text">Đăng nhập vào máy ảo</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -344,7 +344,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 10:58:41" itemprop="dateModified" datetime="2020-09-28T10:58:41-04:00">2020-09-28</time>
+        <time title="Modified: 2020-09-28 12:26:51" itemprop="dateModified" datetime="2020-09-28T12:26:51-04:00">2020-09-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -392,21 +392,28 @@
 <p><img src="https://farm8.staticflickr.com/7706/17484960575_5d4f494465_o.png"></p>
 <p>Putty nhớ để port là 22 để đăng nhập vô nhé</p>
 <p>Sau khi đăng nhập xong, lần lượt gõ các dòng lệnh sau</p>
-<p>[code language=”bash”] sudo apt-get install squid</p>
-<p>cd /etc/squid</p>
-<p>sudo cp squid.conf squid.conf.bak</p>
-<p>sudo rm squid.conf</p>
-<p>sudo touch squid.conf</p>
-<p>sudo vim squid.conf [/code]</p>
+<pre><code class="shell">sudo apt-get install squid
+
+cd /etc/squid
+
+sudo cp squid.conf squid.conf.bak
+
+sudo rm squid.conf
+
+sudo touch squid.conf
+
+sudo vim squid.conf</code></pre>
 <p>sau đó gõ “a” &gt; Enter để edit file này</p>
 <p>gõ</p>
-<p>[code language=”bash”] http_access allow all</p>
-<p>http_port [port bạn đã tạo ở trên]</p>
-<p>dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4 [/code]</p>
+<pre><code class="shell">http_access allow all
+
+http_port [port bạn đã tạo ở trên]
+
+dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <p>sau đó gõ ESC để way zề command line</p>
 <p>gõ “:wq” để save và thoát</p>
 <p>Xong rồi restart squid service:</p>
-<p>[code language=”bash”] sudo service squid3 restart [/code]</p>
+<pre><code class="shell">sudo service squid3 restart</code></pre>
 <p>Restart xong, bạn sẽ thấy process của squid</p>
 <p>Vậy là xong, Proxy của bạn đã chạy, test bằng cách mở firefox và thiết lập proxy rồi kết nối thử tới google nha</p>
 

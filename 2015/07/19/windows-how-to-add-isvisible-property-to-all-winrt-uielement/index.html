@@ -33,7 +33,7 @@
 <meta property="og:description" content="Trong quá trình dev app sử dụng XAML và C#, chắc chắn bạn sẽ gặp trường hợp phải đặt thuộc tính Visibility, và thuộc tính này có 2 giá trị là Visible&#x2F;Collapsed. Và để binding tới nó sử dụng bool, bạn">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2015-07-19T03:56:05.000Z">
-<meta property="article:modified_time" content="2020-09-28T14:58:41.028Z">
+<meta property="article:modified_time" content="2020-09-28T16:26:51.596Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -223,7 +223,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lich-su"><span class="nav-number">1.</span> <span class="nav-text">Lịch sử</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cach-khac-phuc"><span class="nav-number">2.</span> <span class="nav-text">Cách khắc phục</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lich-su"><span class="nav-text">Lịch sử</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cach-khac-phuc"><span class="nav-text">Cách khắc phục</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -335,7 +335,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 10:58:41" itemprop="dateModified" datetime="2020-09-28T10:58:41-04:00">2020-09-28</time>
+        <time title="Modified: 2020-09-28 12:26:51" itemprop="dateModified" datetime="2020-09-28T12:26:51-04:00">2020-09-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -368,22 +368,58 @@
 </ul>
 <p>Qua đến Silverlight, sau này Windows RT trên Windows 8.1 và Windows Phone 8.1, thuộc tính hidden đã bị bỏ, nhưng do vẫn dùng chung nhân Windows NT nên Microsoft không chỉnh sửa giá trị nó thành bool mà vẫn giữ 2 giá trị cũ</p>
 <h1 id="Cach-khac-phuc"><a href="#Cach-khac-phuc" class="headerlink" title="Cách khắc phục"></a>Cách khắc phục</h1><p>Đây là một class nhỏ giúp bạn thêm một thuộc tính gọi là “IsVisible” vào UIElements và truyền cho nó giá trị true hoặc false</p>
-<p>[code language=”java”]</p>
-<p>public class Extension : DependencyObject { public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached(“IsVisible”, typeof (bool), typeof (Extension), new PropertyMetadata(true, IsVisibleCallback));</p>
-<p>private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) { ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed; }</p>
-<p>public static void SetIsVisible(UIElement element, bool value) { element.SetValue(IsVisibleProperty, value); }</p>
-<p>public static bool GetIsVisible(UIElement element) { return (bool) element.GetValue(IsVisibleProperty); } }</p>
-<p>[/code]</p>
+<pre><code class="csharp">public class Extension: DependencyObject
+&#123;
+    public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached(&quot;IsVisible&quot;,
+                                                                                                      typeof(bool),
+                                                                                                      typeof(Extension),
+                                                                                                      new PropertyMetadata(true, IsVisibleCallback));
+
+    private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    &#123;
+        ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed;
+    &#125;
+
+    public static void SetIsVisible(UIElement element, bool value)
+    &#123;
+        element.SetValue(IsVisibleProperty, value);
+    &#125;
+
+    public static bool GetIsVisible(UIElement element)
+    &#123;
+        return (bool) element.GetValue(IsVisibleProperty);
+    &#125;
+&#125;</code></pre>
 <p>Vậy là xong, bạn có thể sử dụng nó ngay</p>
-<p>[code language=”xml”]</p>
-<p><Page x:Class="IsVisibleSample.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ext="using:Huyn" mc:Ignorable="d"> <Rectangle Height="100" Width="100" Fill="Red" x:Name="Rectangle" ext:Extension.IsVisible="false"/> </Page></p>
-<p>[/code]</p>
+<pre><code class="xml">&lt;Page x:Class=&quot;IsVisibleSample.MainPage&quot;
+      xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+      xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+      xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
+      xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
+      xmlns:ext=&quot;using:Huyn&quot;
+      mc:Ignorable=&quot;d&quot;&gt;
+    &lt;Rectangle Height=&quot;100&quot;
+               Width=&quot;100&quot;
+               Fill=&quot;Red&quot; 
+               x:Name=&quot;Rectangle&quot; 
+               ext:Extension.IsVisible=&quot;false&quot;/&gt;
+&lt;/Page&gt;</code></pre>
 <p>Hoặc dùng Binding với nó</p>
-<p>[code language=”xml”] <CheckBox x:Name="MyCheckBox" IsChecked="True" Content="show rectangle"/> <Rectangle Height="100" Width="100" Fill="Red" x:Name="Rectangle" ext:Extension.IsVisible="{Binding IsChecked,ElementName=MyCheckBox}"/> [/code]</p>
+<pre><code class="xml">&lt;CheckBox x:Name=&quot;MyCheckBox&quot;
+          IsChecked=&quot;True&quot;
+          Content=&quot;show rectangle&quot;/&gt;
+&lt;Rectangle Height=&quot;100&quot;
+           Width=&quot;100&quot;
+           Fill=&quot;Red&quot;
+           x:Name=&quot;Rectangle&quot;
+           ext:Extension.IsVisible=&quot;&#123;Binding IsChecked,ElementName=MyCheckBox&#125;&quot;/&gt;</code></pre>
 <p>Hoặc dùng nó như một Binding Source</p>
-<p>[code language=”xml”] <CheckBox IsChecked="{Binding (ext:Extension.IsVisible),ElementName=Rectangle}" IsEnabled="False" Content="rectangle is visible?"/> [/code]</p>
+<pre><code class="xml">&lt;CheckBox IsChecked=&quot;&#123;Binding (ext:Extension.IsVisible),ElementName=Rectangle&#125;&quot;
+          IsEnabled=&quot;False&quot;
+          Content=&quot;rectangle is visible?&quot;/&gt;</code></pre>
 <p>Hoặc dùng nó trong code behind</p>
-<p>[code language=”java”] var val=Extension.GetIsVisible(Rectangle); Extension.SetIsVisible(Rectangle,true); [/code]</p>
+<pre><code class="csharp"> var val = Extension.GetIsVisible(Rectangle);
+ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Thế là xong</p>
 
     </div>

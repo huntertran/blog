@@ -44,6 +44,69 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2018/09/22/ml-model-and-cost-function/</loc>
     
     <lastmod>2020-09-28</lastmod>
@@ -220,6 +283,167 @@
   
   <url>
     <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/12/14/beginning-with-imagine-cup-2014/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/06/27/not-so-basic-solve-your-problems/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/11/17/xaml-styler-bug-and-fixes/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
     
     <lastmod>2020-09-28</lastmod>
     
@@ -492,69 +716,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-09-28</lastmod>
@@ -696,167 +857,6 @@
   
   <url>
     <loc>https://huntertran.com/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/12/14/beginning-with-imagine-cup-2014/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/06/27/not-so-basic-solve-your-problems/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/11/17/xaml-styler-bug-and-fixes/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
-    
-    <lastmod>2020-09-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
     
     <lastmod>2020-09-28</lastmod>
     
@@ -2442,20 +2442,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/categories/Machine-Learning/</loc>
-    <lastmod>2020-09-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/categories/Java/</loc>
-    <lastmod>2020-09-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/CSharp/Windows-10/Windows-Store-App/</loc>
     <lastmod>2020-09-28</lastmod>
     <changefreq>daily</changefreq>
@@ -2464,6 +2450,20 @@
   
   <url>
     <loc>https://huntertran.com/categories/VSCode/</loc>
+    <lastmod>2020-09-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/Machine-Learning/</loc>
+    <lastmod>2020-09-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/Java/</loc>
     <lastmod>2020-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
