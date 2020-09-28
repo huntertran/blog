@@ -1,5 +1,5 @@
 ---
-title: 'Windows Phone – Silverlight: Khác nhau giữa “resource” và “content”'
+title: 'Windows Phone – Silverlight: Khác nhau giữa “resource" và “content"'
 tags:
   - content
   - file
@@ -40,11 +40,16 @@ Content là một file nằm riêng biệt, nên truy xuất dễ dàng:
 
 XAML:
 
-\[code lang=xml\] <Image Stretch=”None” Source=”/images/yourImage.png”/> \[/code\]
+```xml
+<Image Stretch="None" Source="/images/yourImage.png"/>
+```
 
 C#:
 
-\[code lang=csharp\] Uri uri = new Uri("/images/yourImage.png", UriKind.Relative); BitmapImage imgSource = new BitmapImage(uri); \[/code\]
+```csharp
+Uri uri = new Uri("/images/yourImage.png", UriKind.Relative);
+BitmapImage imgSource = new BitmapImage(uri);
+```
 
 ## 2.2. Hình ảnh thuộc tính Resource
 
@@ -52,11 +57,16 @@ Resource, vì nằm trong một file dll, nên truy xuất nó khó khăn hơn n
 
 XAML:
 
-\[code lang=xml\] <Image Source="/TestProjet;component/images/yourImage.png"/> \[/code\]
+```xml
+<Image Source="/TestProjet;component/images/yourImage.png"/>
+```
 
 C#:
 
-\[code lang=csharp\] Uri uri = new Uri("/TestProjet;component/images/yourImage.png", UriKind.Relative); this.Image.Source = new BitmapImage(uri); \[/code\]
+```csharp
+Uri uri = new Uri("/TestProjet;component/images/yourImage.png", UriKind.Relative);
+this.Image.Source = new BitmapImage(uri);
+```
 
 # 3. Chọn cái nào
 

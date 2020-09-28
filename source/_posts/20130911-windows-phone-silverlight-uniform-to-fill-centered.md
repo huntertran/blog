@@ -33,7 +33,11 @@ Image Control có 4 trạng thái của Stretch Property (Hình minh họa)
 
 Thêm một Border bọc ngoài Image Control
 
-\[code lang=xml\] <border Width="200" Height="200"> <Image Source="/your\_source" Stretch="UniformToFill"> </border> \[/code\]
+```xml
+<border Width="200" Height="200"> 
+  <Image Source="/your_source" Stretch="UniformToFill"> 
+</border>
+```
 
 Ngay khi thêm border, bạn sẽ thấy nó hiển thị một kết quả như khi không có border. Cũng như ko =.=
 

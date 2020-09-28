@@ -15,34 +15,38 @@ date: 2014-01-20 22:55:07
 
 Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner
 
-Bài 1 ở đây: [\[Windows Phone – Silverlight\] Layout with XAML – Basic for AbsoluteBeginner - Part 1](http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/ "[Windows Phone – Silverlight] Layout with XAML–Basic for AbsoluteBeginner - Part 1")
+Bài 1 ở đây: [[Windows Phone – Silverlight] Layout with XAML – Basic for AbsoluteBeginner - Part 1](http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/ "[Windows Phone – Silverlight] Layout with XAML–Basic for AbsoluteBeginner - Part 1")
 
 ![](http://farm8.staticflickr.com/7369/11949617853_c885ed2f42_o.png")
 
 Như các bạn đã biết, ngoài Stackpanel và Grid ra, XAML còn có 1 control cơ bản khác, đó là ListBox (và GridView, ListView, nếu bạn đang lập trình cho Windows 8 hay các ứng dụng WPF)
 
 Trong phạm vi bài viết này, mình sẽ đề cập tới ListBox cùng cách thiết kế nó trên giao diện.
-<!-- more -->
-*   [**1 LISTBOX CONTROL**](#1-listbox-control)
-    
-    *   [**1.1 Các thuộc tính quan trọng**](#11-các-thuộc-tính-quan-trọng)
-        
-        *   [**1.1.1 ItemsSource**](#111-itemssource)
-        *   [**1.1.2 SelectedIndex**](#112-selectedindex)
-        *   [**1.1.3 SelectedItem**](#113-selecteditem)
-        *   [**1.1.4 DataConext – ngữ cảnh dữ liệu**](#114-dataconext--ngữ-cảnh-dữ-liệu)
-    *   [**1.2 Thử nghiệm**](#12-thử-nghiệm)
-*   [**DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu**](#databinding--phương-pháp-tuyệt-vời-để-hiển-thị-dữ-liệu)
-    
-    *   [**2.1 Chuẩn bị**](#21-chuẩn-bị)
-    *   [**2.2 Kiểu dữ liệu**](#22-kiểu-dữ-liệu)
-    *   [**2.3 Nguồn dữ liệu**](#23-nguồn-dữ-liệu)
-    *   [**2.4 Nạp dữ liệu**](#24-nạp-dữ-liệu)
-    *   [**2.5 Binding**](#25-binding)
-    *   [**2.6 DataTemplate**](#26-datatemplate)
-*   [**Event Handling**](#event-handling)
 
-# **1 LISTBOX CONTROL**
+<!-- more -->
+
+<!-- TOC -->
+
+- [1. LISTBOX CONTROL](#1-listbox-control)
+    - [1.1. Các thuộc tính quan trọng](#11-c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng)
+        - [1.1.1. ItemsSource](#111-itemssource)
+        - [1.1.2. SelectedIndex](#112-selectedindex)
+        - [1.1.3. SelectedItem](#113-selecteditem)
+        - [1.1.4. DataConext – ngữ cảnh dữ liệu](#114-dataconext--ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u)
+    - [1.2. Thử nghiệm](#12-th%E1%BB%AD-nghi%E1%BB%87m)
+- [2. DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu](#2-databinding--ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u)
+    - [2.1. Chuẩn bị](#21-chu%E1%BA%A9n-b%E1%BB%8B)
+    - [2.2. Kiểu dữ liệu](#22-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u)
+    - [2.3. Nguồn dữ liệu](#23-ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u)
+    - [2.4. Nạp dữ liệu](#24-n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u)
+    - [2.5. Binding](#25-binding)
+    - [2.6. DataTemplate](#26-datatemplate)
+- [3. Event Handling](#3-event-handling)
+
+<!-- /TOC -->
+
+# 1. LISTBOX CONTROL
+<a id="markdown-listbox-control" name="listbox-control"></a>
 
 ListBox control dùng để hiện thị một danh sách các item.
 
@@ -50,33 +54,39 @@ Danh sách này sẽ có một giao diện nhất định, một kiểu dữ li�
 
 Ví dụ: "Top 30 video được xem nhiều nhất trên youtube" là một dạng dữ liệu mà ta sẽ dùng ListBox để hiển thị
 
-## **1.1 Các thuộc tính quan trọng**
+## 1.1. Các thuộc tính quan trọng
+<a id="markdown-c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng" name="c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng"></a>
 
 ![](http://farm8.staticflickr.com/7352/11957902726_0aa577d3c4_o.png)
 
-### **1.1.1 ItemsSource**
+### 1.1.1. ItemsSource
+<a id="markdown-itemssource" name="itemssource"></a>
 
 ItemsSource là nguồn dữ liệu. Listbox này sẽ hiển thị dữ liệu từ đâu?
 
 ItemsSource có thể là một List hoặc một ObservableCollection, ta sẽ nói đến nó ở phần sau
 
-### **1.1.2 SelectedIndex**
+### 1.1.2. SelectedIndex
+<a id="markdown-selectedindex" name="selectedindex"></a>
 
 Cái tên đã nói lên tất cả. Đây là item đang được chọn trong listbox của bạn. Trong quá trình khởi tạo, giá trị này sẽ là -1
 
 Lưu ý rằng item bắt đầu từ số 0 trở đi. Giả sử bạn có 5 items, thì nó sẽ được đánh số từ 0 tới 4
 
-### **1.1.3 SelectedItem**
+### 1.1.3. SelectedItem
+<a id="markdown-selecteditem" name="selecteditem"></a>
 
 Đây lại là một thuộc tính khác. Giá trị của thuộc tínhnày bằng null khi khởi tạo. Và khi người dùng chọn một item nào đó trong listbox, item đó sẽ được phản xạ sang thuộc tính này.
 
 Thuộc tính này có kiểu dữ liệu là Object, khi dùng bạn phải ép kiểu sang kiểu dữ liệu của danh sách
 
-### **1.1.4 DataConext – ngữ cảnh dữ liệu**
+### 1.1.4. DataConext – ngữ cảnh dữ liệu
+<a id="markdown-dataconext-%E2%80%93-ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u" name="dataconext-%E2%80%93-ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u"></a>
 
 DataContext sẽ được dùng trong một số trường hợp advance binding, hiện tại thì bạn chưa cần phải quan tâm tới nó
 
-## **1.2 Thử nghiệm**
+## 1.2. Thử nghiệm
+<a id="markdown-th%E1%BB%AD-nghi%E1%BB%87m" name="th%E1%BB%AD-nghi%E1%BB%87m"></a>
 
 Tạo một project Windows Phone
 
@@ -106,11 +116,12 @@ Rồi thêm vào content như hình sau:
 
 Nhấn nút chạy thử, và bạn sẽ thấy cách hoạt động của listbox
 
-[http://youtu.be/8cu\_REIkxPQ](http://youtu.be/8cu_REIkxPQ)
+[http://youtu.be/8cu_REIkxPQ](http://youtu.be/8cu_REIkxPQ)
 
 Bây giờ bạn đã nắm cách thức Listbox hoạt động cơ bản nhất. Ta hãy cùng "Đào sâu" vào thế giới XAML nhé
 
-# **DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu**
+# 2. DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu
+<a id="markdown-databinding-%E2%80%93-ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u" name="databinding-%E2%80%93-ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u"></a>
 
 Listbox được dùng nhiều nhất với kỹ thuật DataBinding này (tạm dịch là gắn kết dữ liệu đi)
 
@@ -122,7 +133,8 @@ Khoan đã, trong vai một người mới học, hẳn bạn cũng sẽ không 
 
 Vì vậy, hãy tìm hiểu một số khái niệm và cách thức cơ bản trước đã
 
-## **2.1 Chuẩn bị**
+## 2.1. Chuẩn bị
+<a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B" name="chu%E1%BA%A9n-b%E1%BB%8B"></a>
 
 Để thực hiện theo bài viết này, bạn cần có các công cụ sau:
 
@@ -132,7 +144,8 @@ ReSharper: hỗ trợ cho bạn tự động hóa các công việc nhàm chán 
 
 Sau khi cài ReSharper, hãy tiếp tục bài viết nhé
 
-## **2.2 Kiểu dữ liệu**
+## 2.2. Kiểu dữ liệu
+<a id="markdown-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u" name="ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u"></a>
 
 Để gắn dữ liệu lên ListBox, ta cần phải có một "Nguồn dữ liệu", và nguồn dữ liệu đó phải được tạo ra bởi một kiểu dữ liệu nào đó, vì nó là một danh sách các item
 
@@ -156,7 +169,7 @@ Một class DataStructure mới được tạo ra. Bạn có thể xóa nó đi,
 
 Theo như hình trên, bạn có 3 thuộc tính private. Khoan đã, private không thể truy cập ngoài class, nên ta cần tạo các public property cho chúng
 
-Trước khi tạo các public property, ta nên làm một chuyện khác, đó là khai báo Interface INotifyPropertyChanged
+Trước khi tạo các public property, ta nên làm một chuyện khác, đó là khai báo Interface `INotifyPropertyChanged`
 
 Interface này giúp cho việc binding dữ liệu lên giao diện được "liên tục". Tức là khi có một sự thay đổi về mặt dữ liệu trong nguồn dữ liệu, sự thay đổi đó sẽ lập tức được hiển thị trên giao diện.
 
@@ -168,9 +181,17 @@ Okie, khai báo thuộc tính nào
 
 Bạn phải bắt buộc khai báo thêm 1 event và một Method trong class của mình sau khi khai báo Interface
 
-\[code lang=csharp\] protected virtual void OnPropertyChanged(\[CallerMemberName\] string propertyName = null) { PropertyChangedEventHandler handler = PropertyChanged;
+```csharp
+protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+{
+    PropertyChangedEventHandler handler = PropertyChanged;
 
-if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName)); } \[/code\]
+    if (handler != null)
+    {
+      handler(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+```
 
 Nếu bạn có ReShaper, thì mọi việc đơn giản hơn nhiều
 
@@ -210,7 +231,8 @@ Thế là bạn có 3 thuộc tính đúng chuẩn như sau
 
 ![](http://farm8.staticflickr.com/7290/11958720644_183a2247f4_o.png")
 
-## **2.3 Nguồn dữ liệu**
+## 2.3. Nguồn dữ liệu
+<a id="markdown-ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u" name="ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u"></a>
 
 Bạn đã có 1 kiểu dữ liệu, bây giờ bạn sẽ cần 1 nguồn dữ liệu
 
@@ -232,13 +254,14 @@ Kết quả là bạn có như sau:
 
 ![](http://farm3.staticflickr.com/2879/11958878734_06cb55d64e_o.png")
 
-## **2.4 Nạp dữ liệu**
+## 2.4. Nạp dữ liệu
+<a id="markdown-n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u" name="n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u"></a>
 
 Bây giờ, ta sẽ nạp dữ liệu vào ObservableCollection này
 
 Mở file code behind của page có chứa listbox mà bạn đã tạo trong phần 1
 
-Khai báo như sau, bạn sẽ thấy kiểu khai báo này quen thuộc trong bài: [\[Windows Phone\] Where to put LoadData method](http://cuoilennaocacban.blogspot.com/2013/11/windows-phone-where-to-put-load-data.html)
+Khai báo như sau, bạn sẽ thấy kiểu khai báo này quen thuộc trong bài: [[Windows Phone] Where to put LoadData method](http://cuoilennaocacban.blogspot.com/2013/11/windows-phone-where-to-put-load-data.html)
 
 ![](http://farm6.staticflickr.com/5472/11961364684_421975edb5_o.png")
 
@@ -248,23 +271,36 @@ Bước 1: kiểm tra dữ liệu đã tồn tại
 
 Vì vậy, ta chỉnh sửa event OnLoaded để ngăn ngừa việc load lại dữ liệu như sau:
 
-\[code lang=csharp\] private void OnLoaded(object sender, RoutedEventArgs routedEventArgs) { if (StaticData.FoodItemCollection.Count == 0) { LoadData(); } } \[/code\]
+```csharp
+private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+{ 
+  if (StaticData.FoodItemCollection.Count == 0)
+  {
+    LoadData();
+  }
+}
+```
 
 Thêm một số code như sau vào hàm LoadData
 
-\[code lang=csharp\] private void LoadData() { for (int i =0;i <5;i++) { FoodItem foodItem =new FoodItem();
-
-foodItem.Id = i;
-
-foodItem.FoodName ="Food Name is " +i;
-
-foodItem.ImageLink ="FoodItem\_"+i +"\_imageLink";
-
-StaticData.FoodItemCollection.Add(foodItem); } } \[/code\]
+```csharp
+private void LoadData() 
+{ 
+  for (int i =0;i <5;i++)
+  { 
+    FoodItem foodItem =new FoodItem();
+    foodItem.Id = i;
+    foodItem.FoodName ="Food Name is " +i;
+    foodItem.ImageLink ="FoodItem_" + i + "_imageLink";
+    StaticData.FoodItemCollection.Add(foodItem);
+  }
+}
+```
 
 Mục tiêu của đoạn code trên là add 5 item giả vào FoodItemCollection.
 
-## **2.5 Binding**
+## 2.5. Binding
+<a id="markdown-binding" name="binding"></a>
 
 Vậy ta đã có dữ liệu, có nguồn dữ liệu, có luôn listbox, bây giờ ta sẽ tiến hành binding dữ liệu này vào listbox
 
@@ -276,7 +312,16 @@ Việc này được thực hiện bởi 1 dòng code duy nhất.
 
 Sửa event OnLoaded lại như sau:
 
-\[code lang=csharp\] private void OnLoaded(object sender, RoutedEventArgs routedEventArgs) { if (StaticData.FoodItemCollection.Count == 0) { LoadData(); FoodListBox.ItemsSource = StaticData.FoodItemCollection; } } \[/code\]
+```csharp
+private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+{
+  if (StaticData.FoodItemCollection.Count == 0)
+  { 
+    LoadData();
+    FoodListBox.ItemsSource = StaticData.FoodItemCollection;
+  }
+}
+```
 
 Sau đó, bấm chạy thử trên Emulator hay trên Device tùy thích
 
@@ -286,7 +331,8 @@ Và đây chính là thành quả của các bạn
 
 ![](http://farm4.staticflickr.com/3826/11961917396_bb27d31e3c_o.png")
 
-## **2.6 DataTemplate**
+## 2.6. DataTemplate
+<a id="markdown-datatemplate" name="datatemplate"></a>
 
 Vậy là dữ liệu đã được hiển thị trên giao diện, nhưng không theo cách bạn mong muốn
 
@@ -318,7 +364,8 @@ Nhấn chạy một lần nữa, và mọi thứ sẽ đúng như ý bạn
 
 ![](http://farm8.staticflickr.com/7397/11961908164_dfe6879e28_o.png")
 
-# **Event Handling**
+# 3. Event Handling
+<a id="markdown-event-handling" name="event-handling"></a>
 
 Vậy là bạn đã có 1 listbox, bây giờ ta sẽ áp dụng một số sự kiện cho nó để thông báo cho người dùng biết họ đã chọn Listbox nào
 
@@ -330,7 +377,13 @@ Double Click vào event "Selection Changed" để khai báo event
 
 Thêm đoạn code sau vào event mới được tạo
 
-\[code lang=csharp\] if (FoodListBox.SelectedIndex != –1) { FoodItem foodItem = FoodListBox.SelectedItem as FoodItem; MessageBox.Show(foodItem.FoodName); } \[/code\]
+```csharp
+if (FoodListBox.SelectedIndex != –1)
+{
+  FoodItem foodItem = FoodListBox.SelectedItem as FoodItem;
+  MessageBox.Show(foodItem.FoodName);
+}
+```
 
 Chạy thử và chọn một item bất kỳ
 
