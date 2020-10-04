@@ -34,7 +34,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png">
 <meta property="article:published_time" content="2017-01-04T13:30:57.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="htmlhelper">
 <meta property="article:tag" content="placeholder">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -373,16 +373,33 @@
 <p>Vậy làm thế nào để hiển thị placeholder, sử dụng thuộc tính prompt?</p>
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png" alt="31716564800_af2c594490_o"></p>
 <a id="more"></a>
+
 <h1 id="Chuan-bi-trong-ViewModel-hoac-Model"><a href="#Chuan-bi-trong-ViewModel-hoac-Model" class="headerlink" title="Chuẩn bị trong ViewModel (hoặc Model)"></a>Chuẩn bị trong ViewModel (hoặc Model)</h1><p>Các properties trong ViewModel sẽ có default get set như sau</p>
-<p>[code language=”csharp”] public int DistrictId { get; set; } [/code]</p>
+<pre><code class="csharp">public int DistrictId &#123; get; set; &#125;</code></pre>
 <p>Bạn sẽ phải thêm các DisplayAttribute cho Property này như sau</p>
-<p>[code language=”csharp”] [Display(Name = “Quận huyện”, Prompt = “Gõ để chọn từ danh sách”)] public int DistrictId { get; set; } [/code]</p>
+<pre><code class="csharp">[Display(Name = &quot;Quận huyện&quot;, Prompt = &quot;Gõ để chọn từ danh sách&quot;)]
+public int DistrictId &#123; get; set; &#125;</code></pre>
 <p>DisplayAttribute có chức năng dựng ra các thuộc tính HTML cần thiết để hiển thị ra web khi bạn dùng HtmlHelpers để tạo các tag input</p>
 <p>Thuộc tính Name sẽ được dùng cho label của input, thuộc tính Prompt sẽ được dùng cho placeholder của input</p>
 <h1 id="Code-cho-C"><a href="#Code-cho-C" class="headerlink" title="Code cho C#"></a>Code cho C#</h1><p>Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó</p>
-<p>[code language=”csharp”] public static class Extensions { public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(this HtmlHelper html, Expression&lt;Func&lt;TModel, TValue&gt;&gt; expression) { var result = ModelMetadata.FromLambdaExpression(expression, html.ViewData).Watermark; return new MvcHtmlString(result); } } [/code]</p>
+<pre><code class="csharp">public static class Extensions
+&#123;
+    public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(
+                                                                      this HtmlHelper html,
+                                                                      Expression&lt;Func&lt;TModel, TValue&gt;&gt; expression)
+    &#123;
+        var result = ModelMetadata.FromLambdaExpression(expression, html.ViewData).Watermark;
+        return new MvcHtmlString(result);
+    &#125;
+&#125;</code></pre>
 <p>Expression sẽ là câu truy vấn bạn truyền vô cho cái extension này</p>
-<h1 id="Code-cho-Razor"><a href="#Code-cho-Razor" class="headerlink" title="Code cho Razor"></a>Code cho Razor</h1><p>[code language=”csharp”] //Hiển thị label @Html.LabelFor(x =&gt; x.DistrictId) //Hiển thị Textbox và Placeholder @Html.TextBoxFor(x =&gt; x. DistrictId, new {@class = “form-control”, placeholder = Html.DisplayPlaceHolderFor(x =&gt; x.DistrictId)}) [/code]</p>
+<h1 id="Code-cho-Razor"><a href="#Code-cho-Razor" class="headerlink" title="Code cho Razor"></a>Code cho Razor</h1><pre><code class="csharp">//Hiển thị label
+@Html.LabelFor(x =&gt; x.DistrictId)
+//Hiển thị Textbox và Placeholder
+@Html.TextBoxFor(x =&gt; x. DistrictId,
+                 new &#123;@class = &quot;form-control&quot;,
+                 placeholder = Html.DisplayPlaceHolderFor(x =&gt; x.DistrictId)&#125;)
+</code></pre>
 <p>Thế là xong :D</p>
 
     </div>

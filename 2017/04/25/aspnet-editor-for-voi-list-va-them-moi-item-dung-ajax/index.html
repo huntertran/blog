@@ -34,7 +34,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png">
 <meta property="article:published_time" content="2017-04-25T07:32:39.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="editorfor">
 <meta property="article:tag" content="ajax">
@@ -228,7 +228,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EditorFor-Control"><span class="nav-text">EditorFor Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class"><span class="nav-text">Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-code"><span class="nav-text">C# code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-Code"><span class="nav-text">JavaScript Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cach-xai"><span class="nav-text">Cách xài</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chuan-bi-model"><span class="nav-text">Chuẩn bị model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Razor-code"><span class="nav-text">Razor code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ket-qua"><span class="nav-text">Kết quả</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cach-hoat-dong"><span class="nav-text">Cách hoạt động</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cac-buoc"><span class="nav-text">Các bước</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tai-sao-lai-can-Index"><span class="nav-text">Tại sao lại cần Index</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-EditorFor-Control"><span class="nav-text">1. EditorFor Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Class"><span class="nav-text">2. Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-C-code"><span class="nav-text">2.1. C# code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-JavaScript-Code"><span class="nav-text">2.2. JavaScript Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Cach-xai"><span class="nav-text">3. Cách xài</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Chuan-bi-model"><span class="nav-text">3.1. Chuẩn bị model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Razor-code"><span class="nav-text">3.2. Razor code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Ket-qua"><span class="nav-text">4. Kết quả</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Cach-hoat-dong"><span class="nav-text">5. Cách hoạt động</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Cac-buoc"><span class="nav-text">5.1. Các bước</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Tai-sao-lai-can-Index"><span class="nav-text">5.2. Tại sao lại cần Index</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -370,82 +370,263 @@
 <p>Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao?</p>
 <p>Đọc xong bài này, bạn sẽ biết cách làm nhóe</p>
 <a id="more"></a>
+
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#editorfor-control">EditorFor Control</a></p>
-</li>
-<li><p><a href="#class">Class</a></p>
-<ul>
-<li><a href="#c-code">C# code</a></li>
-<li><a href="#javascript-code">JavaScript Code</a></li>
+<li><a href="#1-editorfor-control">1. EditorFor Control</a></li>
+<li><a href="#2-class">2. Class</a><ul>
+<li><a href="#21-c-code">2.1. C# code</a></li>
+<li><a href="#22-javascript-code">2.2. JavaScript Code</a></li>
 </ul>
 </li>
-<li><p><a href="#c%C3%A1ch-x%C3%A0i">Cách xài</a></p>
-<ul>
-<li><a href="#chu%E1%BA%A9n-b%E1%BB%8B-model">Chuẩn bị model</a></li>
-<li><a href="#razor-code">Razor code</a></li>
+<li><a href="#3-c%C3%A1ch-x%C3%A0i">3. Cách xài</a><ul>
+<li><a href="#31-chu%E1%BA%A9n-b%E1%BB%8B-model">3.1. Chuẩn bị model</a></li>
+<li><a href="#32-razor-code">3.2. Razor code</a></li>
 </ul>
 </li>
-<li><p><a href="#k%E1%BA%BFt-qu%E1%BA%A3">Kết quả</a></p>
-</li>
-<li><p><a href="#c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng">Cách hoạt động</a></p>
-<ul>
-<li><a href="#c%C3%A1c-b%C6%B0%E1%BB%9Bc">Các bước</a></li>
-<li><a href="#t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index">Tại sao lại cần Index</a></li>
+<li><a href="#4-k%E1%BA%BFt-qu%E1%BA%A3">4. Kết quả</a></li>
+<li><a href="#5-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng">5. Cách hoạt động</a><ul>
+<li><a href="#51-c%C3%A1c-b%C6%B0%E1%BB%9Bc">5.1. Các bước</a></li>
+<li><a href="#52-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index">5.2. Tại sao lại cần Index</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="EditorFor-Control"><a href="#EditorFor-Control" class="headerlink" title="EditorFor Control"></a>EditorFor Control</h1><p>Trong <a target="_blank" rel="noopener" href="https://coding4food.net/2017/04/20/asp-net-mo-rong-editorfor/">bài kỳ trước</a>, bạn đã biết cách xài EditorFor và EditorForModel control.</p>
+<!-- /TOC -->
+
+<h1 id="1-EditorFor-Control"><a href="#1-EditorFor-Control" class="headerlink" title="1. EditorFor Control"></a>1. EditorFor Control</h1><p><a id="markdown-editorfor-control" name="editorfor-control"></a></p>
+<p>Trong <a target="_blank" rel="noopener" href="https://coding4food.net/2017/04/20/asp-net-mo-rong-editorfor/">bài kỳ trước</a>, bạn đã biết cách xài EditorFor và EditorForModel control.</p>
 <p>Một điểm hạn chế của 2 thằng này là chúng không tạo ra input cho các class tùy biến của bạn</p>
 <p>Còn 1 list các item thì lại càng không có.</p>
 <p>Hiển thị một list thì dễ, một vòng lặp for (hoặc foreach) là xong</p>
 <p>Nhưng một “Editor” cho cả một list thì ko được support, nên bạn phải tự tạo thôi</p>
 <p>Từ một bài viết thú vị từ Matt Lunn <a target="_blank" rel="noopener" href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
-<h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><h2 id="C-code"><a href="#C-code" class="headerlink" title="C# code"></a>C# code</h2><p>[code lang=csharp] namespace Yournamespace.Utilities { using System; using System.Collections.Generic; using System.Linq; using System.Linq.Expressions; using System.Text; using System.Web.Mvc; using System.Web.Mvc.Html;</p>
-<p>public static class HtmlHelperExtensions { /// <summary> /// Generate appropriate control for a list of data /// </summary> /// <typeparam name="TModel">The Model contain the list</typeparam> /// <typeparam name="TValue">The Model of list of items</typeparam> /// <param name="html"></param> /// <param name="propertyExpression">Which property</param> /// <param name="indexResolverExpression">Select the property to be the index</param> /// <param name="isIncludeNewItem">Set to true to include a default new item</param> /// <param name="includeIndexField">Set to true to include Index in values sent to server</param> /// <returns>HTML codes of editorfor a list of items</returns> public static MvcHtmlString EditorForMany&lt;TModel, TValue&gt;( this HtmlHelper<TModel> html, Expression&lt;Func&lt;TModel, IEnumerable<TValue>&gt;&gt; propertyExpression, Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression = null, bool isIncludeNewItem = false, bool includeIndexField = true) where TModel : class where TValue : new() { var items = propertyExpression.Compile()(html.ViewData.Model); var htmlBuilder = new StringBuilder(); var htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression); var htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName); var indexResolver = GetIndexResolver(indexResolverExpression); items = AddDefaultNewItem(isIncludeNewItem, items);</p>
-<p>foreach (var item in items) { var dummy = new { Item = item };</p>
-<p>var guid = indexResolver(item);</p>
-<p>var memberExp = Expression.MakeMemberAccess( Expression.Constant(dummy), dummy.GetType().GetProperty(“Item”));</p>
-<p>var singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);</p>
-<p>guid = string.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid); BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp); }</p>
-<p>return new MvcHtmlString(htmlBuilder.ToString()); }</p>
-<p>private static void BuildHtmlString&lt;TModel, TValue&gt;( HtmlHelper<TModel> html, Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression, bool includeIndexField, StringBuilder htmlBuilder, string htmlFieldName, string htmlFieldNameWithPrefix, string guid, Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp) where TModel : class where TValue : new() { htmlBuilder.Append(@”<div>“);</p>
-<p>if (includeIndexField) { htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression)); }</p>
-<p>htmlBuilder.Append(html.EditorFor(singleItemExp, null, $”{htmlFieldName}[{guid}]“));</p>
-<p>htmlBuilder.Append(@”</div>“); }</p>
-<p>private static IEnumerable<TValue> AddDefaultNewItem<TValue>(bool isIncludeNewItem, IEnumerable<TValue> items) where TValue : new() { if (isIncludeNewItem) { items = items.Concat(new[] { new TValue() }); }</p>
-<p>return items; }</p>
-<p>private static Func&lt;TValue, string&gt; GetIndexResolver<TValue>(Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression) where TValue : new() { Func&lt;TValue, string&gt; indexResolver; if (indexResolverExpression == null) { indexResolver = x =&gt; null; } else { indexResolver = indexResolverExpression.Compile(); }</p>
-<p>return indexResolver; }</p>
-<p>public static MvcHtmlString EditorForManyIndexField<TModel>( this HtmlHelper<TModel> html, Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression = null) { var htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix; var first = htmlPrefix.LastIndexOf(‘[‘); var last = htmlPrefix.IndexOf(‘]‘, first + 1);</p>
-<p>if (first == -1 || last == -1) { throw new InvalidOperationException(“EditorForManyIndexField called when not in a EditorForMany context”); }</p>
-<p>var htmlFieldNameWithPrefix = htmlPrefix.Substring(0, first); var guid = htmlPrefix.Substring(first + 1, last - first - 1);</p>
-<p>return _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression); }</p>
-<p>private static MvcHtmlString _EditorForManyIndexField<TModel>( string htmlFieldNameWithPrefix, string guid, Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression) { var htmlBuilder = new StringBuilder(); htmlBuilder.AppendFormat( @”&lt;input type=””hidden”” name=””{0}.Index”” value=””{1}”” /&gt;”, htmlFieldNameWithPrefix, guid);</p>
-<p>if (indexResolverExpression != null) { htmlBuilder.AppendFormat( @”&lt;input type=””hidden”” name=””{0}[{1}].{2}”” value=””{1}”” /&gt;”, htmlFieldNameWithPrefix, guid, ExpressionHelper.GetExpressionText(indexResolverExpression)); }</p>
-<p>return new MvcHtmlString(htmlBuilder.ToString()); } } } [/code]</p>
-<h2 id="JavaScript-Code"><a href="#JavaScript-Code" class="headerlink" title="JavaScript Code"></a>JavaScript Code</h2><p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
-<p>[code lang=javascript] function GenerateGuid() { function s4() { return Math.floor((1 + Math.random()) * 0x10000) .toString(16) .substring(1); }</p>
-<p>return s4() + s4() + “-“ + s4() + “-“ + s4() + “-“ + s4() + “-“ + s4() + s4() + s4(); }</p>
-<p>function AssignAddMoreButton() { $(“.add-more-button”).click(function (event) { event.preventDefault(); debugger; var id = “#” + $(this).data(“class”); var clone = $(id).children().last().clone(); var guid = clone.children().first().val(); var regex = new RegExp(guid, “g”); var newHtml = clone.html(function (i, oldHtml) { return oldHtml.replace(regex, GenerateGuid()); }); $(id).append(newHtml); }); } [/code]</p>
-<h1 id="Cach-xai"><a href="#Cach-xai" class="headerlink" title="Cách xài"></a>Cách xài</h1><h2 id="Chuan-bi-model"><a href="#Chuan-bi-model" class="headerlink" title="Chuẩn bị model"></a>Chuẩn bị model</h2><p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
+<h1 id="2-Class"><a href="#2-Class" class="headerlink" title="2. Class"></a>2. Class</h1><p><a id="markdown-class" name="class"></a></p>
+<h2 id="2-1-C-code"><a href="#2-1-C-code" class="headerlink" title="2.1. C# code"></a>2.1. C# code</h2><p><a id="markdown-c%23-code" name="c%23-code"></a></p>
+<pre><code class="cs">namespace Yournamespace.Utilities
+&#123;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Text;
+    using System.Web.Mvc;
+    using System.Web.Mvc.Html;
+
+    public static class HtmlHelperExtensions
+    &#123;
+        /// &lt;summary&gt;
+        /// Generate appropriate control for a list of data
+        /// &lt;/summary&gt;
+        /// &lt;typeparam name=&quot;TModel&quot;&gt;The Model contain the list&lt;/typeparam&gt;
+        /// &lt;typeparam name=&quot;TValue&quot;&gt;The Model of list of items&lt;/typeparam&gt;
+        /// &lt;param name=&quot;html&quot;&gt;&lt;/param&gt;
+        /// &lt;param name=&quot;propertyExpression&quot;&gt;Which property&lt;/param&gt;
+        /// &lt;param name=&quot;indexResolverExpression&quot;&gt;Select the property to be the index&lt;/param&gt;
+        /// &lt;param name=&quot;isIncludeNewItem&quot;&gt;Set to true to include a default new item&lt;/param&gt;
+        /// &lt;param name=&quot;includeIndexField&quot;&gt;Set to true to include Index in values sent to server&lt;/param&gt;
+        /// &lt;returns&gt;HTML codes of editorfor a list of items&lt;/returns&gt;
+        public static MvcHtmlString EditorForMany&lt;TModel, TValue&gt;(
+            this HtmlHelper&lt;TModel&gt; html,
+            Expression&lt;Func&lt;TModel, IEnumerable&lt;TValue&gt;&gt;&gt; propertyExpression,
+            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression = null,
+            bool isIncludeNewItem = false,
+            bool includeIndexField = true)
+            where TModel 
+                : class where TValue 
+                : new()
+        &#123;
+            var items = propertyExpression.Compile()(html.ViewData.Model);
+            var htmlBuilder = new StringBuilder();
+            var htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression);
+            var htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName);
+            var indexResolver = GetIndexResolver(indexResolverExpression);
+            items = AddDefaultNewItem(isIncludeNewItem, items);
+
+            foreach (var item in items)
+            &#123;
+                var dummy = new
+                &#123;
+                    Item = item
+                &#125;;
+
+                var guid = indexResolver(item);
+
+                var memberExp = Expression.MakeMemberAccess(
+                    Expression.Constant(dummy),
+                    dummy.GetType().GetProperty(&quot;Item&quot;));
+
+                var singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);
+
+                guid = string.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid);
+                BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp);
+            &#125;
+
+            return new MvcHtmlString(htmlBuilder.ToString());
+        &#125;
+
+        private static void BuildHtmlString&lt;TModel, TValue&gt;(
+            HtmlHelper&lt;TModel&gt; html,
+            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression,
+            bool includeIndexField,
+            StringBuilder htmlBuilder,
+            string htmlFieldName,
+            string htmlFieldNameWithPrefix,
+            string guid,
+            Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp)
+            where TModel : class
+            where TValue : new()
+        &#123;
+            htmlBuilder.Append(@&quot;&lt;div&gt;&quot;);
+
+            if (includeIndexField)
+            &#123;
+                htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression));
+            &#125;
+
+            htmlBuilder.Append(html.EditorFor(singleItemExp, null, $&quot;&#123;htmlFieldName&#125;[&#123;guid&#125;]&quot;));
+
+            htmlBuilder.Append(@&quot;&lt;/div&gt;&quot;);
+        &#125;
+
+        private static IEnumerable&lt;TValue&gt; AddDefaultNewItem&lt;TValue&gt;(bool isIncludeNewItem, IEnumerable&lt;TValue&gt; items) where TValue : new()
+        &#123;
+            if (isIncludeNewItem)
+            &#123;
+                items = items.Concat(new[]
+                &#123;
+                    new TValue()
+                &#125;);
+            &#125;
+
+            return items;
+        &#125;
+
+        private static Func&lt;TValue, string&gt; GetIndexResolver&lt;TValue&gt;(Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression) where TValue : new()
+        &#123;
+            Func&lt;TValue, string&gt; indexResolver;
+            if (indexResolverExpression == null)
+            &#123;
+                indexResolver = x =&gt; null;
+            &#125;
+            else
+            &#123;
+                indexResolver = indexResolverExpression.Compile();
+            &#125;
+
+            return indexResolver;
+        &#125;
+
+        public static MvcHtmlString EditorForManyIndexField&lt;TModel&gt;(
+            this HtmlHelper&lt;TModel&gt; html,
+            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression = null)
+        &#123;
+            var htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix;
+            var first = htmlPrefix.LastIndexOf(&#39;[&#39;);
+            var last = htmlPrefix.IndexOf(&#39;]&#39;, first + 1);
+
+            if (first == -1 || last == -1)
+            &#123;
+                throw new InvalidOperationException(&quot;EditorForManyIndexField called when not in a EditorForMany context&quot;);
+            &#125;
+
+            var htmlFieldNameWithPrefix = htmlPrefix.Substring(0, first);
+            var guid = htmlPrefix.Substring(first + 1, last - first - 1);
+
+            return _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression);
+        &#125;
+
+        private static MvcHtmlString _EditorForManyIndexField&lt;TModel&gt;(
+            string htmlFieldNameWithPrefix,
+            string guid,
+            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression)
+        &#123;
+            var htmlBuilder = new StringBuilder();
+            htmlBuilder.AppendFormat(
+                @&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;.Index&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;,
+                htmlFieldNameWithPrefix,
+                guid);
+
+            if (indexResolverExpression != null)
+            &#123;
+                htmlBuilder.AppendFormat(
+                    @&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;[&#123;1&#125;].&#123;2&#125;&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;,
+                    htmlFieldNameWithPrefix,
+                    guid,
+                    ExpressionHelper.GetExpressionText(indexResolverExpression));
+            &#125;
+
+            return new MvcHtmlString(htmlBuilder.ToString());
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h2 id="2-2-JavaScript-Code"><a href="#2-2-JavaScript-Code" class="headerlink" title="2.2. JavaScript Code"></a>2.2. JavaScript Code</h2><p><a id="markdown-javascript-code" name="javascript-code"></a></p>
+<p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
+<pre><code class="js">function GenerateGuid() &#123;
+    function s4() &#123;
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    &#125;
+
+    return s4() + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + s4() + s4();
+&#125;
+
+function AssignAddMoreButton() &#123;
+    $(&quot;.add-more-button&quot;).click(function (event) &#123;
+        event.preventDefault();
+        debugger;
+        var id = &quot;#&quot; + $(this).data(&quot;class&quot;);
+        var clone = $(id).children().last().clone();
+        var guid = clone.children().first().val();
+        var regex = new RegExp(guid, &quot;g&quot;);
+        var newHtml = clone.html(function (i, oldHtml) &#123;
+            return oldHtml.replace(regex, GenerateGuid());
+        &#125;);
+        $(id).append(newHtml);
+    &#125;);
+&#125;</code></pre>
+<h1 id="3-Cach-xai"><a href="#3-Cach-xai" class="headerlink" title="3. Cách xài"></a>3. Cách xài</h1><p><a id="markdown-c%C3%A1ch-x%C3%A0i" name="c%C3%A1ch-x%C3%A0i"></a></p>
+<h2 id="3-1-Chuan-bi-model"><a href="#3-1-Chuan-bi-model" class="headerlink" title="3.1. Chuẩn bị model"></a>3.1. Chuẩn bị model</h2><p><a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B-model" name="chu%E1%BA%A9n-b%E1%BB%8B-model"></a></p>
+<p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
 <p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
-<p>[code lang=csharp] public class Model { // Your normal, already existed properties</p>
-<p>// set to false if you don’t want to generate a HTML input tag // for it when using with editorfor control [ScaffoldColumn(false)] public string Index { get; set; } } [/code]</p>
-<h2 id="Razor-code"><a href="#Razor-code" class="headerlink" title="Razor code"></a>Razor code</h2><p>[code lang=csharp] @using(Html.BeginForm(“ActionName”,”ControllerName”,FormMethod.Post, new {@class=”CssClassName”})) { // the last parameter “true” is to generate a default item @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, true) }</p>
-<p>// include the javascript code file above AssignAddMoreButton();</p>
-<p>[/code]</p>
+<pre><code class="cs">public class Model
+&#123;
+    // Your normal, already existed properties
+
+    // set to false if you don&#39;t want to generate a HTML input tag
+    // for it when using with editorfor control
+    [ScaffoldColumn(false)]
+    public string Index &#123; get; set; &#125;
+&#125;</code></pre>
+<h2 id="3-2-Razor-code"><a href="#3-2-Razor-code" class="headerlink" title="3.2. Razor code"></a>3.2. Razor code</h2><p><a id="markdown-razor-code" name="razor-code"></a></p>
+<pre><code class="cs">@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;,FormMethod.Post, new &#123;@class=&quot;CssClassName&quot;&#125;))
+&#123;
+    // the last parameter &quot;true&quot; is to generate a default item
+    @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, true)
+&#125;
+
+
+    // include the javascript code file above
+    AssignAddMoreButton();</code></pre>
 <p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
-<h1 id="Ket-qua"><a href="#Ket-qua" class="headerlink" title="Kết quả"></a>Kết quả</h1><p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) <img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
-<h1 id="Cach-hoat-dong"><a href="#Cach-hoat-dong" class="headerlink" title="Cách hoạt động"></a>Cách hoạt động</h1><p>HtmlHelperExtensions chính là chỗ mà điều kỳ diệu xảy ra. Keyword Extensions sẽ “đăng ký” nó thành một extension của HtmlHelper</p>
-<h2 id="Cac-buoc"><a href="#Cac-buoc" class="headerlink" title="Các bước"></a>Các bước</h2><p>Về cơ bản, nó sẽ làm những bước sau</p>
+<h1 id="4-Ket-qua"><a href="#4-Ket-qua" class="headerlink" title="4. Kết quả"></a>4. Kết quả</h1><p><a id="markdown-k%E1%BA%BFt-qu%E1%BA%A3" name="k%E1%BA%BFt-qu%E1%BA%A3"></a></p>
+<p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) <img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
+<h1 id="5-Cach-hoat-dong"><a href="#5-Cach-hoat-dong" class="headerlink" title="5. Cách hoạt động"></a>5. Cách hoạt động</h1><p><a id="markdown-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng" name="c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng"></a></p>
+<p>HtmlHelperExtensions chính là chỗ mà điều kỳ diệu xảy ra. Keyword Extensions sẽ “đăng ký” nó thành một extension của HtmlHelper</p>
+<h2 id="5-1-Cac-buoc"><a href="#5-1-Cac-buoc" class="headerlink" title="5.1. Các bước"></a>5.1. Các bước</h2><p><a id="markdown-c%C3%A1c-b%C6%B0%E1%BB%9Bc" name="c%C3%A1c-b%C6%B0%E1%BB%9Bc"></a></p>
+<p>Về cơ bản, nó sẽ làm những bước sau</p>
 <ol>
 <li>Lấy danh sách Items</li>
 <li>Lấy Index property (nếu bạn có khai báo index)</li>
 <li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
 <li>Dựng code HTML</li>
 </ol>
-<p>[code lang=html] <div class="form-group"> // List of your html input tag generated by editorfor and extended templates </div> [/code]</p>
-<h2 id="Tai-sao-lai-can-Index"><a href="#Tai-sao-lai-can-Index" class="headerlink" title="Tại sao lại cần Index"></a>Tại sao lại cần Index</h2><p>Có 2 cách để send một list data tới controller</p>
+<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="5-2-Tai-sao-lai-can-Index"><a href="#5-2-Tai-sao-lai-can-Index" class="headerlink" title="5.2. Tại sao lại cần Index"></a>5.2. Tại sao lại cần Index</h2><p><a id="markdown-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index" name="t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index"></a></p>
+<p>Có 2 cách để send một list data tới controller</p>
 <ul>
 <li><p>dùng một mảng có đánh số</p>
 <ul>
@@ -454,17 +635,20 @@
 </ul>
 </li>
 </ul>
-<p>[code lang=html] <input type="text" name="YourList\[0\].Data"/> <input type="text" name="YourList\[1\].Data"/> [/code]</p>
+<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;YourList[0].Data&quot;/&gt;
+&lt;input type=&quot;text&quot; name=&quot;YourList[1].Data&quot;/&gt;</code></pre>
 <ul>
-<li><p>dùng mảng có index dạng string</p>
-<ul>
+<li>dùng mảng có index dạng string<ul>
 <li>yêu cầu thêm một tag input ẩn để chứa index</li>
 <li>dễ thêm, xóa, sửa item</li>
 </ul>
 </li>
 </ul>
-<p>[code lang=html] <input type="hidden" name="YourList.Index" value="radomGuid1"/> <input type="text" name="YourList\[randomGuid1\].Data"/></p>
-<p><input type="hidden" name="YourList.Index" value="anotherGuid2"/> <input type="text" name="YourList\[anotherGuid2\].Data"/> [/code]</p>
+<pre><code class="html">&lt;input type=&quot;hidden&quot; name=&quot;YourList.Index&quot; value=&quot;radomGuid1&quot;/&gt;
+&lt;input type=&quot;text&quot; name=&quot;YourList[randomGuid1].Data&quot;/&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;YourList.Index&quot; value=&quot;anotherGuid2&quot;/&gt;
+&lt;input type=&quot;text&quot; name=&quot;YourList[anotherGuid2].Data&quot;/&gt;</code></pre>
 <p>Như bạn cũng thấy, giá trị của hidden input tag có thể là bất cứ gì, miễn là giá trị trong ngoặc vuông giống với nó.</p>
 <p>Bước 1 bước xa hơn, đoạn code javascript bên trên sẽ tạo ra index dạng GUID, cho nên bạn sẽ không phải lo về vấn đề trùng lặp index. Tuy nhiên, nó ko phải là GUID thiệt, vì để generate GUID thiệt sẽ hơi phức tạp, và làm cho app nặng lên, giống như xài tên lửa đi giết ruồi, cho nên để cho đơn giản, đoạn code đó chỉ sinh ra “fake” GUID, nhưng theo cách code thì khó mà trùng được</p>
 <p>Theo bạn, bạn có cách nào cải tiến đoạn code bên trên không?</p>

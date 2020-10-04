@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png">
 <meta property="article:published_time" content="2017-08-30T02:54:40.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="identity">
 <meta name="twitter:card" content="summary">
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -368,28 +368,26 @@
     <div class="post-body" itemprop="articleBody">
         <p>Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity phình to tới mức khó tin, và là một cục xương khó nhằn cho bất kỳ ai mới học ASP.NET</p>
 <a id="more"></a>
+
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#1-qu%C3%A1-tr%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n">1. Quá trình phát triển</a></p>
-<ul>
+<li><a href="#1-qu%C3%A1-tr%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n">1. Quá trình phát triển</a><ul>
 <li><a href="#11-aspnet-membership">1.1. Asp.net Membership</a></li>
 <li><a href="#12-aspnet-simple-membership">1.2. Asp.net Simple Membership</a></li>
 <li><a href="#13-aspnet-universal-providers">1.3. ASP.NET Universal Providers</a></li>
 <li><a href="#14-aspnet-identity">1.4. Asp.net Identity</a></li>
 </ul>
 </li>
-<li><p><a href="#2-b%E1%BA%AFt-%C4%91%E1%BA%A7u-v%E1%BB%9Bi-aspnet-identity">2. Bắt đầu với ASP.NET Identity</a></p>
-</li>
-<li><p><a href="#3-break-down">3. Break-down</a></p>
-<ul>
-<li><p><a href="#31-database">3.1. Database</a></p>
-<ul>
+<li><a href="#2-b%E1%BA%AFt-%C4%91%E1%BA%A7u-v%E1%BB%9Bi-aspnet-identity">2. Bắt đầu với ASP.NET Identity</a></li>
+<li><a href="#3-break-down">3. Break-down</a><ul>
+<li><a href="#31-database">3.1. Database</a><ul>
 <li><a href="#311-k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database">3.1.1. Kết nối tới database</a></li>
 <li><a href="#312-code-first">3.1.2. Code first</a></li>
 <li><a href="#313-c%E1%BA%A5u-tr%C3%BAc">3.1.3. Cấu trúc</a></li>
 </ul>
 </li>
-<li><p><a href="#32-ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m">3.2. Kiến trúc và các khái niệm</a></p>
-<ul>
+<li><a href="#32-ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m">3.2. Kiến trúc và các khái niệm</a><ul>
 <li><a href="#321-aspnetusers">3.2.1. AspNetUsers</a></li>
 <li><a href="#322-aspnetuserlogins">3.2.2. AspNetUserLogins</a></li>
 <li><a href="#323-aspnetuserclaims">3.2.3. AspNetUserClaims</a></li>
@@ -398,12 +396,19 @@
 </ul>
 </li>
 </ul>
-<h1 id="1-Qua-trinh-phat-trien"><a href="#1-Qua-trinh-phat-trien" class="headerlink" title="1. Quá trình phát triển"></a>1. Quá trình phát triển</h1><h2 id="1-1-Asp-net-Membership"><a href="#1-1-Asp-net-Membership" class="headerlink" title="1.1. Asp.net Membership"></a>1.1. Asp.net Membership</h2><p>Hồi năm 2k hồi đó, có nhu cầu rõ rệt về websites phải có đăng nhập, đăng ký thành viên đồ các kiểu. MS thấy vậy nhảy vào và ASP.NET Membership ra đời</p>
+<!-- /TOC -->
+
+<h1 id="1-Qua-trinh-phat-trien"><a href="#1-Qua-trinh-phat-trien" class="headerlink" title="1. Quá trình phát triển"></a>1. Quá trình phát triển</h1><p><a id="markdown-qu%C3%A1-tr%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n" name="qu%C3%A1-tr%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n"></a></p>
+<h2 id="1-1-Asp-net-Membership"><a href="#1-1-Asp-net-Membership" class="headerlink" title="1.1. Asp.net Membership"></a>1.1. Asp.net Membership</h2><p><a id="markdown-asp.net-membership" name="asp.net-membership"></a></p>
+<p>Hồi năm 2k hồi đó, có nhu cầu rõ rệt về websites phải có đăng nhập, đăng ký thành viên đồ các kiểu. MS thấy vậy nhảy vào và ASP.NET Membership ra đời</p>
 <p>Version này cực kỳ hạn chế + DB được thiết kế cho SQL Server, và ko thể thay đổi + Tuy các provider được thiết kể để có thể thay đổi, nhưng mà hàng loạt hardcode + tư duy chắc chắn phải dùng SQL server của dev khiến việc thay đổi này vô cùng cực khổ + Ko xài được OWIN</p>
-<h2 id="1-2-Asp-net-Simple-Membership"><a href="#1-2-Asp-net-Simple-Membership" class="headerlink" title="1.2. Asp.net Simple Membership"></a>1.2. Asp.net Simple Membership</h2><p>Sang tới 2k10, lúc này WebMatrix đang thịnh, MS cũng cho ra liền một bản rút gọn / nâng cấp của Membership, nhưng tóm lại vẫn quá nhiều vấn đề</p>
-<h2 id="1-3-ASP-NET-Universal-Providers"><a href="#1-3-ASP-NET-Universal-Providers" class="headerlink" title="1.3. ASP.NET Universal Providers"></a>1.3. ASP.NET Universal Providers</h2><p>Tới hồi Azure ra đời, MS vẫn chưa chịu từ bỏ nền tảng Membership, cho ra mắt phiên bản Universal Providers (đặt tên sang choảnh)</p>
+<h2 id="1-2-Asp-net-Simple-Membership"><a href="#1-2-Asp-net-Simple-Membership" class="headerlink" title="1.2. Asp.net Simple Membership"></a>1.2. Asp.net Simple Membership</h2><p><a id="markdown-asp.net-simple-membership" name="asp.net-simple-membership"></a></p>
+<p>Sang tới 2k10, lúc này WebMatrix đang thịnh, MS cũng cho ra liền một bản rút gọn / nâng cấp của Membership, nhưng tóm lại vẫn quá nhiều vấn đề</p>
+<h2 id="1-3-ASP-NET-Universal-Providers"><a href="#1-3-ASP-NET-Universal-Providers" class="headerlink" title="1.3. ASP.NET Universal Providers"></a>1.3. ASP.NET Universal Providers</h2><p><a id="markdown-asp.net-universal-providers" name="asp.net-universal-providers"></a></p>
+<p>Tới hồi Azure ra đời, MS vẫn chưa chịu từ bỏ nền tảng Membership, cho ra mắt phiên bản Universal Providers (đặt tên sang choảnh)</p>
 <p>Vì xài chung nền tảng kiến trúc, nên các lỗi lầm từ trước đó vẫn còn y nguyên</p>
-<h2 id="1-4-Asp-net-Identity"><a href="#1-4-Asp-net-Identity" class="headerlink" title="1.4. Asp.net Identity"></a>1.4. Asp.net Identity</h2><p>Sau quá nhiều feedback, asp.net team cho ra đời version này, khắc phục mấy cái hạn chế trên kia.</p>
+<h2 id="1-4-Asp-net-Identity"><a href="#1-4-Asp-net-Identity" class="headerlink" title="1.4. Asp.net Identity"></a>1.4. Asp.net Identity</h2><p><a id="markdown-asp.net-identity" name="asp.net-identity"></a></p>
+<p>Sau quá nhiều feedback, asp.net team cho ra đời version này, khắc phục mấy cái hạn chế trên kia.</p>
 <ul>
 <li>Có thể xài chung cho nhiều Framework (MVC, Forms, Web Pages, Web API, SingalR)</li>
 <li>Dễ gắn thêm field vào user profile</li>
@@ -415,41 +420,64 @@
 <li>Cài được bằng Nuget</li>
 </ul>
 <p>Bắt đầu nhảy vô nhé</p>
-<h1 id="2-Bat-dau-voi-ASP-NET-Identity"><a href="#2-Bat-dau-voi-ASP-NET-Identity" class="headerlink" title="2. Bắt đầu với ASP.NET Identity"></a>2. Bắt đầu với ASP.NET Identity</h1><blockquote>
+<h1 id="2-Bat-dau-voi-ASP-NET-Identity"><a href="#2-Bat-dau-voi-ASP-NET-Identity" class="headerlink" title="2. Bắt đầu với ASP.NET Identity"></a>2. Bắt đầu với ASP.NET Identity</h1><p><a id="markdown-b%E1%BA%AFt-%C4%91%E1%BA%A7u-v%E1%BB%9Bi-asp.net-identity" name="b%E1%BA%AFt-%C4%91%E1%BA%A7u-v%E1%BB%9Bi-asp.net-identity"></a></p>
+<blockquote>
 <p>Xem code ở đây: <a target="_blank" rel="noopener" href="https://github.com/cuoilennaocacban/ASP.NETIdentty2">ASP.NET Identity 2 clone on GitHub</a></p>
 </blockquote>
 <p>Để hiểu rõ hơn, bạn có thể tạo một Sample Project bằng ASP.NET, chọn Identity là Individual nhé File &gt; New &gt; Project…</p>
 <p><img src="https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png" alt="New Project"></p>
 <p>Ngay khi tạo xong, bạn có thể nhấn chạy luôn</p>
 <p><img src="https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png" alt="Run Project"></p>
-<h1 id="3-Break-down"><a href="#3-Break-down" class="headerlink" title="3. Break-down"></a>3. Break-down</h1><p>Bây giờ mình sẽ tìm hiểu từng phần một của Identity nhé</p>
-<h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><h3 id="3-1-1-Ket-noi-toi-database"><a href="#3-1-1-Ket-noi-toi-database" class="headerlink" title="3.1.1. Kết nối tới database"></a>3.1.1. Kết nối tới database</h3><p>Mặc định, Identity dùng connection string có tên “DefaultConnection” Mở <code>Models/IdentityModels</code></p>
-<p>[code lang=csharp] public class ApplicationDbContext : IdentityDbContext<ApplicationUser> { public ApplicationDbContext() : base(“DefaultConnection”, throwIfV1Schema: false) { }</p>
-<p>public static ApplicationDbContext Create() { return new ApplicationDbContext(); } } [/code]</p>
+<h1 id="3-Break-down"><a href="#3-Break-down" class="headerlink" title="3. Break-down"></a>3. Break-down</h1><p><a id="markdown-break-down" name="break-down"></a></p>
+<p>Bây giờ mình sẽ tìm hiểu từng phần một của Identity nhé</p>
+<h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
+<h3 id="3-1-1-Ket-noi-toi-database"><a href="#3-1-1-Ket-noi-toi-database" class="headerlink" title="3.1.1. Kết nối tới database"></a>3.1.1. Kết nối tới database</h3><p><a id="markdown-k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database" name="k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database"></a></p>
+<p>Mặc định, Identity dùng connection string có tên “DefaultConnection” Mở <code>Models/IdentityModels</code></p>
+<pre><code class="cs">public class ApplicationDbContext : IdentityDbContext&lt;ApplicationUser&gt;
+&#123; 
+    public ApplicationDbContext() : base(&quot;DefaultConnection&quot;, throwIfV1Schema: false)
+    &#123;
+    &#125;
+
+    public static ApplicationDbContext Create()
+    &#123;
+        return new ApplicationDbContext();
+    &#125;
+&#125;</code></pre>
 <p>Mở Web.config, kiếm <code>DefaultConnection</code>, bạn sẽ thấy connection string của nó nối tới Database</p>
-<p>[code lang=xml] <connectionStrings> <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog=aspnet-LearnIdentity2-20170824112720;Integrated Security=True" providerName="System.Data.SqlClient" /> </connectionStrings> [/code]</p>
+<pre><code class="xml">&lt;connectionStrings&gt;
+  &lt;add name=&quot;DefaultConnection&quot;
+       connectionString=&quot;Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog=aspnet-LearnIdentity2-20170824112720;Integrated Security=True&quot;
+       providerName=&quot;System.Data.SqlClient&quot; /&gt;
+&lt;/connectionStrings&gt;</code></pre>
 <p>Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó</p>
 <p><img src="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
 <p>Vậy bạn có tự hỏi làm sao mà mới chỉ chạy project thôi mà Identity đã tạo được database?</p>
-<h3 id="3-1-2-Code-first"><a href="#3-1-2-Code-first" class="headerlink" title="3.1.2. Code first"></a>3.1.2. Code first</h3><p>Để trả lời cho câu hỏi đó, từ EF4, MS đã giới thiệu một hướng tiếp cận hoàn toàn mới gọi là Code first, bên cạnh hướng tiếp cận truyền thống là Database First như xưa nay. Với hướng tiếp cận này, Dev chỉ cần tập trung vào code của mình, db sẽ do EF tạo ra ứng với code của dev</p>
+<h3 id="3-1-2-Code-first"><a href="#3-1-2-Code-first" class="headerlink" title="3.1.2. Code first"></a>3.1.2. Code first</h3><p><a id="markdown-code-first" name="code-first"></a></p>
+<p>Để trả lời cho câu hỏi đó, từ EF4, MS đã giới thiệu một hướng tiếp cận hoàn toàn mới gọi là Code first, bên cạnh hướng tiếp cận truyền thống là Database First như xưa nay. Với hướng tiếp cận này, Dev chỉ cần tập trung vào code của mình, db sẽ do EF tạo ra ứng với code của dev</p>
 <p>Một flow cơ bản là Dev viết các model và class -&gt; Nhấn F5 -&gt; EF tạo / map database -&gt; Ứng dụng khởi chạy với datbase được tạo / map</p>
-<h3 id="3-1-3-Cau-truc"><a href="#3-1-3-Cau-truc" class="headerlink" title="3.1.3. Cấu trúc"></a>3.1.3. Cấu trúc</h3><p>Identity tạo ra 5 bảng trong DB, và mỗi bảng đều liên hệ với nhau</p>
+<h3 id="3-1-3-Cau-truc"><a href="#3-1-3-Cau-truc" class="headerlink" title="3.1.3. Cấu trúc"></a>3.1.3. Cấu trúc</h3><p><a id="markdown-c%E1%BA%A5u-tr%C3%BAc" name="c%E1%BA%A5u-tr%C3%BAc"></a></p>
+<p>Identity tạo ra 5 bảng trong DB, và mỗi bảng đều liên hệ với nhau</p>
 <p><img src="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png" alt="Db Structure"></p>
 <p>Tất cả các trường Id đều dùng nvarchar(128), giá trị lưu trữ là code GUID</p>
-<h2 id="3-2-Kien-truc-va-cac-khai-niem"><a href="#3-2-Kien-truc-va-cac-khai-niem" class="headerlink" title="3.2. Kiến trúc và các khái niệm"></a>3.2. Kiến trúc và các khái niệm</h2><h3 id="3-2-1-AspNetUsers"><a href="#3-2-1-AspNetUsers" class="headerlink" title="3.2.1. AspNetUsers"></a>3.2.1. AspNetUsers</h3><p><strong>PasswordHash</strong></p>
+<h2 id="3-2-Kien-truc-va-cac-khai-niem"><a href="#3-2-Kien-truc-va-cac-khai-niem" class="headerlink" title="3.2. Kiến trúc và các khái niệm"></a>3.2. Kiến trúc và các khái niệm</h2><p><a id="markdown-ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m" name="ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m"></a></p>
+<h3 id="3-2-1-AspNetUsers"><a href="#3-2-1-AspNetUsers" class="headerlink" title="3.2.1. AspNetUsers"></a>3.2.1. AspNetUsers</h3><p><a id="markdown-aspnetusers" name="aspnetusers"></a></p>
+<p><strong>PasswordHash</strong></p>
 <p>Identity ko lưu trữ trực tiếp password theo dạng plain text (đề phòng trường hợp Db của bạn bị hack, hacker cũng ko biết password) <code>ASP.NETIdentty2/src/Microsoft.AspNet.Identity.Core/Crypto.cs</code></p>
 <p>Identity Hash password của bạn dựa trên 1 chuỗi salt 128 bit. Nói chung về thuật toán mã hóa bạn cũng ko cần phải quan tâm :D</p>
 <p>Trong Identity Core, thuật toán này có thay đổi, nên việc convert từ Identity 2 lên 3 sẽ cần configure lại đôi chút</p>
 <p><strong>SecurityStamp</strong></p>
 <p>Về cơ bản, SecurityStamp được dùng để xác thực một request nào đó. Giả sử như bạn đổi pass ở máy này, nhưng trên máy khác vẫn lưu cookie, thì ngay khi đổi pass xong, SecurityStamp thay đổi, cookie trên tất cả các máy khác sẽ mất hiệu lực</p>
-<h3 id="3-2-2-AspNetUserLogins"><a href="#3-2-2-AspNetUserLogins" class="headerlink" title="3.2.2. AspNetUserLogins"></a>3.2.2. AspNetUserLogins</h3><p>Bảng này chịu trách nhiệm cho việc login bằng account của các dịch vụ thứ 3 như Google, Facebook, Twitter,…</p>
+<h3 id="3-2-2-AspNetUserLogins"><a href="#3-2-2-AspNetUserLogins" class="headerlink" title="3.2.2. AspNetUserLogins"></a>3.2.2. AspNetUserLogins</h3><p><a id="markdown-aspnetuserlogins" name="aspnetuserlogins"></a></p>
+<p>Bảng này chịu trách nhiệm cho việc login bằng account của các dịch vụ thứ 3 như Google, Facebook, Twitter,…</p>
 <p><strong>LoginProvider</strong></p>
 <p>Là tên của Service được dùng để login (ví dụ “Facebook”, “Google”)</p>
 <p><strong>ProviderKey</strong></p>
 <p>Là một key ko trùng lặp do service cung cấp cho bạn, key này gắn liền với tài khoản của bạn tại service đó</p>
 <p>Cả 3 field này kết hợp tạo thành khóa chính. Tức là 1 user có thể đăng nhập bằng nhiều dịch vụ khác nhau</p>
 <p>Bảng này cho phép Identity dùng OWIN</p>
-<h3 id="3-2-3-AspNetUserClaims"><a href="#3-2-3-AspNetUserClaims" class="headerlink" title="3.2.3. AspNetUserClaims"></a>3.2.3. AspNetUserClaims</h3><p><code>claim</code> là một hành vi mô mà một chủ thể nào đó tuyên bố điều gì đó về chính nó hoặc về các chủ thể khác.</p>
+<h3 id="3-2-3-AspNetUserClaims"><a href="#3-2-3-AspNetUserClaims" class="headerlink" title="3.2.3. AspNetUserClaims"></a>3.2.3. AspNetUserClaims</h3><p><a id="markdown-aspnetuserclaims" name="aspnetuserclaims"></a></p>
+<p><code>claim</code> là một hành vi mô mà một chủ thể nào đó tuyên bố điều gì đó về chính nó hoặc về các chủ thể khác.</p>
 <blockquote>
 <p>Ví dụ: User A claim rằng A có quyền xem hình</p>
 </blockquote>

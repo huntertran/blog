@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://farm3.staticflickr.com/2902/33235009203_a69320020e_o.png">
 <meta property="og:image" content="https://farm4.staticflickr.com/3703/33662203760_71636d02d3_o.png">
 <meta property="article:published_time" content="2017-04-12T08:56:00.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="browsersync">
 <meta property="article:tag" content="css">
@@ -347,7 +347,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -398,48 +398,83 @@
 <p>Bật Terminal Windows trong Visual Studio Code bằng cách nhấn Ctrl + ` hoặc View &gt; Integrated Terminal</p>
 <p><img src="https://farm3.staticflickr.com/2814/33234696593_9fcee9f965_o.png"></p>
 <p><strong>Cài đặt trình biên dịch SASS/LESS</strong></p>
-<p>[code lang=text] npm install -g node-sass less [/code]</p>
+<pre><code class="s">npm install -g node-sass less</code></pre>
 <p>Tham số -g là để cài đặt trên môi trường global</p>
 <p><img src="https://farm3.staticflickr.com/2873/33889703622_3cbc71f1cc_o.png"></p>
 <p><em>Sau khi cài đặt SASS/LESS compiler</em></p>
 <p><strong>Cài đặt gulp toolkit</strong></p>
 <p>Cài đặt gulp toolkit để tự động hóa quá trình biên dịch</p>
-<p>[code lang=text] npm install -g gulp [/code]</p>
+<pre><code class="s">npm install -g gulp</code></pre>
 <p><img src="https://farm3.staticflickr.com/2885/33234839763_71ffba8cfd_o.png"></p>
 <p><em>Bạn có thể bỏ qua các warning khi cài đặt gulp</em></p>
 <p><strong>Initialize Node.Js</strong></p>
 <p>Nếu trước đó, bạn chưa bao giờ cài đặt NodeJs package manager, bạn sẽ gặp lỗi như sau</p>
 <p><img src="https://farm3.staticflickr.com/2829/33662078970_a1aaf77d2c_o.png"></p>
 <p>Gõ lệnh</p>
-<p>[code lang=text] npm init [/code]</p>
+<pre><code class="s">npm init</code></pre>
 <p>để init các tham số cần thiết cho npm và làm theo hướng dẫn trên màn hình.</p>
 <p>Nếu bạn không nhập gì cả và nhấn enter, npm sẽ dùng tham số default</p>
 <p><img src="https://farm3.staticflickr.com/2902/33235009203_a69320020e_o.png"></p>
 <h1 id="Buoc-3-Cai-dat-o-local-folder"><a href="#Buoc-3-Cai-dat-o-local-folder" class="headerlink" title="Bước 3: Cài đặt ở local folder"></a>Bước 3: Cài đặt ở local folder</h1><p>Mặc dù bạn đã cài gulp ở global, nhưng bạn vẫn sẽ cần gulp được “copy” vào folder có chứa project của bạn. Lý do là khi gulp global được upgrade, hoặc bị xóa mất, gulp local của bạn vẫn chạy bình thường với một bản sao ổn định trong project folder của bạn Cài đặt gulp local</p>
-<p>[code lang=text] npm install gulp –save-dev [/code]</p>
+<pre><code class="s">npm install gulp --save-dev</code></pre>
 <p>Cài đặt gulp plugin</p>
-<p>[code lang=text] npm install gulp gulp-sass gulp-less [/code]</p>
+<pre><code class="s">npm install gulp gulp-sass gulp-less</code></pre>
 <h1 id="Buoc-4-Cai-dat-BrowserSync"><a href="#Buoc-4-Cai-dat-BrowserSync" class="headerlink" title="Bước 4: Cài đặt BrowserSync"></a>Bước 4: Cài đặt BrowserSync</h1><p>BrowserSync chính là thứ sẽ giúp chúng ta tự động reload trình duyệt Cũng trong Terminal Windows của Visual Studio, gõ lệnh</p>
-<p>[code lang=text] npm install browser-sync gulp –save-dev [/code]</p>
+<pre><code class="s">npm install browser-sync gulp --save-dev</code></pre>
 <p>Tương tự, bạn cũng có thể bỏ qua các đoạn warning, thông báo</p>
 <p><img src="https://farm4.staticflickr.com/3703/33662203760_71636d02d3_o.png"></p>
 <h1 id="Buoc-5-Tao-gulp-task"><a href="#Buoc-5-Tao-gulp-task" class="headerlink" title="Bước 5: Tạo gulp task"></a>Bước 5: Tạo gulp task</h1><p>Gulp task là một file .json có chứa các lệnh, tham số cần thiết để thiết lập cho gulp</p>
 <ul>
 <li>Trong Visual Studio Code, mở folder có chứa project HTML/CSS/JavaScript của bạn</li>
 </ul>
-<p>[code lang=text] File &gt; Open Folder &gt; [Chọn folder] [/code]</p>
+<pre><code class="s">File &gt; Open Folder &gt; \[Chọn folder\]</code></pre>
 <ul>
 <li>Tạo một file tên “gulpfile.js” trong root folder của project</li>
 <li>Gõ nội dung sau:</li>
 </ul>
-<p>[code lang=javascript] var gulp = require(‘gulp’);</p>
-<p>var sass = require(‘gulp-sass’);</p>
-<p>var browserSync = require(‘browser-sync’);</p>
-<p>// compile task var gulp = require(‘gulp’); var sass = require(‘gulp-sass’); var browserSync = require(‘browser-sync’);</p>
-<p>// compile task gulp.task(‘sass’, function () { gulp.src(‘css/*.scss’) .pipe(sass()) .on(‘error’, swallowError) .pipe(gulp.dest(function (f) { return f.base; })) .pipe(browserSync.stream()); });</p>
-<p>// browser sync init gulp.task(‘browser-sync’, [‘sass’], function () { browserSync.init({ server: { baseDir: “./“ } }); });</p>
-<p>// watch for changes in html, css, scss gulp.task(‘default’, [‘browser-sync’], function () { gulp.watch(‘css/*.scss’, [‘sass’]); gulp.watch(‘*.html’) .on(‘change’, browserSync.reload); })</p>
-<p>// skip if error occured function swallowError(error) { console.log(error.toString()) this.emit(‘end’) } [/code]</p>
+<pre><code class="js">var gulp = require(&#39;gulp&#39;);
+
+var sass = require(&#39;gulp-sass&#39;);
+
+var browserSync = require(&#39;browser-sync&#39;);
+
+// compile task
+var gulp = require(&#39;gulp&#39;);
+var sass = require(&#39;gulp-sass&#39;);
+var browserSync = require(&#39;browser-sync&#39;);
+
+// compile task
+gulp.task(&#39;sass&#39;, function () &#123;
+    gulp.src(&#39;css/*.scss&#39;)
+        .pipe(sass())
+        .on(&#39;error&#39;, swallowError)
+        .pipe(gulp.dest(function (f) &#123;
+            return f.base;
+        &#125;))
+        .pipe(browserSync.stream());
+&#125;);
+
+// browser sync init
+gulp.task(&#39;browser-sync&#39;, [&#39;sass&#39;], function () &#123;
+    browserSync.init(&#123;
+        server: &#123;
+            baseDir: &quot;./&quot;
+        &#125;
+    &#125;);
+&#125;);
+
+// watch for changes in html, css, scss
+gulp.task(&#39;default&#39;, [&#39;browser-sync&#39;], function () &#123;
+    gulp.watch(&#39;css/*.scss&#39;, [&#39;sass&#39;]);
+    gulp.watch(&#39;*.html&#39;)
+        .on(&#39;change&#39;, browserSync.reload);
+&#125;)
+
+// skip if error occured
+function swallowError(error) &#123;
+    console.log(error.toString())
+    this.emit(&#39;end&#39;)
+&#125;</code></pre>
 <ul>
 <li><p>Tạo tasks.json tasks.json giúp cho Visual Studio code biết cách chạy task gulp khi được ra lệnh</p>
 <ul>
@@ -449,13 +484,25 @@
 </ul>
 </li>
 </ul>
-<p>[code lang=javascript] { “version”: “0.1.0”, “command”: “gulp”, “isShellCommand”: true, “tasks”: [ { “taskName”: “default”, “isBuildCommand”: true, “showOutput”: “always”, “isBackground”: true } ] } [/code]</p>
+<pre><code class="json">&#123;
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;command&quot;: &quot;gulp&quot;,
+  &quot;isShellCommand&quot;: true,
+  &quot;tasks&quot;: [
+      &#123;
+          &quot;taskName&quot;: &quot;default&quot;,
+          &quot;isBuildCommand&quot;: true,
+          &quot;showOutput&quot;: &quot;always&quot;,
+          &quot;isBackground&quot;: true
+      &#125;
+  ]
+&#125;</code></pre>
 <h1 id="Chay-tasks"><a href="#Chay-tasks" class="headerlink" title="Chạy tasks"></a>Chạy tasks</h1><ul>
 <li>Tạo file “index.html” trong thư mục gốc. Mặc định BrowserSync sẽ theo dõi file này</li>
 <li>Trong Visual Studio Code, nhấn <strong>Ctrl + Shift + B</strong> để bắt đầu chạy tasks</li>
 <li>Bật tính năng Autosave cho Visual Studio Code</li>
 </ul>
-<p>[code lang=text] File &gt; Autosave [/code]</p>
+<pre><code class="s">File &gt; Autosave</code></pre>
 
     </div>
 

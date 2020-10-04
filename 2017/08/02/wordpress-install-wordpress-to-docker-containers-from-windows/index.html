@@ -42,7 +42,7 @@
 <meta property="og:image" content="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png">
 <meta property="og:image" content="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png">
 <meta property="article:published_time" content="2017-08-02T04:18:56.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="apache">
 <meta property="article:tag" content="container">
@@ -350,7 +350,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -374,118 +374,146 @@
     <div class="post-body" itemprop="articleBody">
         <p>In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes</p>
 <a id="more"></a>
-<p><strong>Contents</strong></p>
+
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#1-install-apache">1. Install Apache</a></p>
-</li>
-<li><p><a href="#2-install-mysql">2. Install MySQL</a></p>
-<ul>
+<li><a href="#1-install-apache">1. Install Apache</a></li>
+<li><a href="#2-install-mysql">2. Install MySQL</a><ul>
 <li><a href="#21-install-mysql-server">2.1. Install mysql-server</a></li>
 </ul>
 </li>
-<li><p><a href="#3-install-php">3. Install PHP</a></p>
-</li>
-<li><p><a href="#4-setup-wordpress">4. Setup Wordpress</a></p>
-<ul>
+<li><a href="#3-install-php">3. Install PHP</a></li>
+<li><a href="#4-setup-wordpress">4. Setup Wordpress</a><ul>
 <li><a href="#41-create-mysql-database-and-user">4.1. Create MySQL database and user</a></li>
 <li><a href="#42-install-wordpress">4.2. Install wordpress</a></li>
 <li><a href="#43-config">4.3. Config</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="1-Install-Apache"><a href="#1-Install-Apache" class="headerlink" title="1. Install Apache"></a>1. Install Apache</h1><p>Login to Docker container with SuperPutty / Putty</p>
-<p>[code lang=text] apt-get update [/code]</p>
-<p>[code lang=text] apt-get install apache2 [/code]</p>
+<!-- /TOC -->
+
+<h1 id="1-Install-Apache"><a href="#1-Install-Apache" class="headerlink" title="1. Install Apache"></a>1. Install Apache</h1><p><a id="markdown-install-apache" name="install-apache"></a></p>
+<p>Login to Docker container with SuperPutty / Putty</p>
+<pre><code class="s">apt-get update
+apt-get install apache2</code></pre>
 <p>(type y to confirm installation)</p>
-<p>[code lang=text] apache2ctl configtest [/code]</p>
+<pre><code class="s">apache2ctl configtest</code></pre>
 <p>If output is</p>
-<p>[code lang=text] AH00558: apache2: Could not reliably determine the server’s fully qualified domain name, using 127.0.1.1. Set the ‘ServerName’ directive globally to suppress this message Syntax OK [/code]</p>
+<pre><code class="s">AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globally to suppress this message Syntax OK</code></pre>
 <p>Meaning: apache cannot get the reliably server domain name</p>
-<p>IT JUST A WARNING</p>
+<p><em><strong>IT JUST A WARNING</strong></em></p>
 <p>To fix: edit <code>apache2.conf</code></p>
 <blockquote>
-<p>Recommended: Map network drive to easily config or copy file to container <a target="_blank" rel="noopener" href="https://github.com/dokan-dev/dokany/releases">Download</a> + install Dolkan <a target="_blank" rel="noopener" href="https://github.com/Foreveryone-cz/win-sshfs/releases">Download</a> + install win-sshfs follow the step to map <img src="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></p>
+<p>Recommended: Map network drive to easily config or copy file to container <a target="_blank" rel="noopener" href="https://github.com/dokan-dev/dokany/releases">Download</a> </p>
+<ul>
+<li>install Dolkan <a target="_blank" rel="noopener" href="https://github.com/Foreveryone-cz/win-sshfs/releases">Download</a></li>
+<li>install win-sshfs follow the step to map<br><img src="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></li>
+</ul>
 </blockquote>
 <p>open <code>/etc/apache2/apache2.conf</code> in your favorite editor</p>
 <p>add this line at the end of the file</p>
-<p>[code lang=text] ServerName localhost [/code]</p>
+<pre><code class="s">ServerName localhost</code></pre>
 <p>type <code>apache2ctl configtest</code> again to see warning is disappeared</p>
-<h1 id="2-Install-MySQL"><a href="#2-Install-MySQL" class="headerlink" title="2. Install MySQL"></a>2. Install MySQL</h1><h2 id="2-1-Install-mysql-server"><a href="#2-1-Install-mysql-server" class="headerlink" title="2.1. Install mysql-server"></a>2.1. Install mysql-server</h2><p>[code lang=text] apt-get install mysql-server [/code]</p>
+<h1 id="2-Install-MySQL"><a href="#2-Install-MySQL" class="headerlink" title="2. Install MySQL"></a>2. Install MySQL</h1><p><a id="markdown-install-mysql" name="install-mysql"></a></p>
+<h2 id="2-1-Install-mysql-server"><a href="#2-1-Install-mysql-server" class="headerlink" title="2.1. Install mysql-server"></a>2.1. Install mysql-server</h2><p><a id="markdown-install-mysql-server" name="install-mysql-server"></a></p>
+<pre><code class="s">apt-get install mysql-server</code></pre>
 <p>In the installation process, type password for root user</p>
-<h1 id="3-Install-PHP"><a href="#3-Install-PHP" class="headerlink" title="3. Install PHP"></a>3. Install PHP</h1><p>[code lang=text] apt-get install php libapache2-mod-php php-mcrypt php-mysql [/code]</p>
+<h1 id="3-Install-PHP"><a href="#3-Install-PHP" class="headerlink" title="3. Install PHP"></a>3. Install PHP</h1><p><a id="markdown-install-php" name="install-php"></a></p>
+<pre><code class="s">apt-get install php libapache2-mod-php php-mcrypt php-mysql</code></pre>
 <p>Config apache priority for index.php instead of index.html</p>
 <p>Because dir.conf presented as folder, so we have to edit with linux nano</p>
-<p>[code lang=text] nano /etc/apache2/mods-enabled/dir.conf [/code]</p>
+<pre><code class="s">nano /etc/apache2/mods-enabled/dir.conf</code></pre>
 <p>It should look like this</p>
 <p><img src="http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
 <p>Type <code>Ctrl + X</code> to exit nano, type y to save</p>
 <p>Restart Apache2 server</p>
-<p>[code lang=text] service apache2 restart [/code]</p>
+<pre><code class="s">service apache2 restart</code></pre>
 <p>To test PHP server (REMOVE the file after test because it will show your server info)</p>
 <p>Create new file <code>info.php</code> in <code>/var/www/html/</code></p>
 <p>Insert some PHP code</p>
-<p>[code lang=php] <?php phpinfo(); ?> [/code]</p>
+<pre><code class="php">&lt;?php phpinfo(); ?&gt;</code></pre>
 <p>Then you can access <a target="_blank" rel="noopener" href="http://your_domain_name/info">http://your_domain_name/info</a></p>
 <p><img src="http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
-<h1 id="4-Setup-Wordpress"><a href="#4-Setup-Wordpress" class="headerlink" title="4. Setup Wordpress"></a>4. Setup Wordpress</h1><h2 id="4-1-Create-MySQL-database-and-user"><a href="#4-1-Create-MySQL-database-and-user" class="headerlink" title="4.1. Create MySQL database and user"></a>4.1. Create MySQL database and user</h2><p>Start MySQL server</p>
-<p>[code lang=text] /etc/init.d/mysql start [/code]</p>
+<h1 id="4-Setup-Wordpress"><a href="#4-Setup-Wordpress" class="headerlink" title="4. Setup Wordpress"></a>4. Setup Wordpress</h1><p><a id="markdown-setup-wordpress" name="setup-wordpress"></a></p>
+<h2 id="4-1-Create-MySQL-database-and-user"><a href="#4-1-Create-MySQL-database-and-user" class="headerlink" title="4.1. Create MySQL database and user"></a>4.1. Create MySQL database and user</h2><p><a id="markdown-create-mysql-database-and-user" name="create-mysql-database-and-user"></a></p>
+<p>Start MySQL server</p>
+<pre><code class="s">/etc/init.d/mysql start</code></pre>
 <p>Login into mysql</p>
-<p>[code lang=text] mysql -u root -p [/code]</p>
+<pre><code class="s">mysql -u root -p</code></pre>
 <p>Enter your password</p>
 <p>Your console windows will now start with <code>mysql&amp;gt;</code></p>
 <p>Type in to create database for wordpress (database name can be customize)</p>
-<p>[code lang=sql] CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci; [/code]</p>
+<pre><code class="sql">CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;</code></pre>
 <p>SQL query must end with semicolon(;)</p>
 <p>Create a separate account to manage wordpress database</p>
-<p>[code lang=sql] GRANT ALL ON wordpress.* TO ‘admin’@’localhost’ IDENTIFIED BY ‘admin’; [/code]</p>
+<pre><code class="sql">GRANT ALL ON wordpress.* TO &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;admin&#39;;</code></pre>
 <p>Flush the current Privileges, so MySQL will know about the recent changes</p>
-<p>[code lang=sql] FLUSH PRIVILEGES; [/code]</p>
+<pre><code class="sql">FLUSH PRIVILEGES;</code></pre>
 <p>Exit MySQL</p>
-<p>[code lang=sql] EXIT; [/code]</p>
-<p>Adjust Apache configuration to allow for .htaccess override and rewrites</p>
+<pre><code class="sql">EXIT;</code></pre>
+<p>Adjust Apache configuration to allow for <code>.htaccess</code> override and rewrites</p>
 <p>Open apache configuration file to edit</p>
-<p>[code lang=text] /etc/apache2/apache2.conf [/code]</p>
+<pre><code class="s">/etc/apache2/apache2.conf</code></pre>
 <p>You can use Ubuntu nano editor, or if you’ve mapped the network drive before (step 4), open the file like any other file on windows</p>
 <p>Nano</p>
-<p>[code lang=text] nano /etc/apache2/apache2.conf [/code]</p>
+<pre><code class="s">nano /etc/apache2/apache2.conf</code></pre>
 <p>Network Drive</p>
 <p><img src="http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
 <p>Search for this part and change</p>
-<p>[code lang=text] . . .</p>
-<p>&lt;Directory /var/www/html/&gt; AllowOverride All </Directory></p>
-<p>. . . [/code]</p>
+<pre><code class="xml">. . .
+
+&lt;Directory /var/www/html/&gt;
+    AllowOverride All
+&lt;/Directory&gt;
+
+. . .</code></pre>
 <p>Save and close the file</p>
 <p>Enable rewrite module</p>
-<p>[code lang=text] a2enmod rewrite [/code]</p>
+<pre><code class="s">a2enmod rewrite</code></pre>
 <p>Enable changes</p>
-<p>[code lang=text] apache2ctl configtest [/code]</p>
+<pre><code class="s">apache2ctl configtest</code></pre>
 <p>Restart apache2 service</p>
-<p>[code lang=text] service apache2 restart [/code]</p>
-<h2 id="4-2-Install-wordpress"><a href="#4-2-Install-wordpress" class="headerlink" title="4.2. Install wordpress"></a>4.2. Install wordpress</h2><p>Download wordpress at: <a target="_blank" rel="noopener" href="https://wordpress.org/">https://wordpress.org/</a></p>
+<pre><code class="s">service apache2 restart</code></pre>
+<h2 id="4-2-Install-wordpress"><a href="#4-2-Install-wordpress" class="headerlink" title="4.2. Install wordpress"></a>4.2. Install wordpress</h2><p><a id="markdown-install-wordpress" name="install-wordpress"></a></p>
+<p>Download wordpress at: <a target="_blank" rel="noopener" href="https://wordpress.org/">https://wordpress.org/</a></p>
 <p>Extract to a folder</p>
 <p>Copy the content of folder “wordpress” to folder “/var/www/html” on container</p>
 <p>Permission and .htaccess Show hidden files and folder on WinSCP</p>
-<p>[code lang=text] Open WinSCP &gt; Option &gt; References… [/code]</p>
+<pre><code class="s">Open WinSCP &gt; Option &gt; References…</code></pre>
 <p><img src="http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
-<p>Create .htaccess file</p>
-<p>Right click on an empty space &gt; New File &gt; enter .htaccess</p>
+<p>Create <code>.htaccess</code> file</p>
+<p>Right click on an empty space &gt; New File &gt; enter <code>.htaccess</code></p>
 <p><img src="http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
 <p>Set Read / Write permission for .htaccess</p>
 <p>Right click on .htaccess &gt; Properties</p>
 <p><img src="http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
 <p>Set permission recursively for all 3 folders</p>
 <p><img src="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
-<h2 id="4-3-Config"><a href="#4-3-Config" class="headerlink" title="4.3. Config"></a>4.3. Config</h2><p>Open <code>wp-config.php</code> and fill in these info</p>
-<p>[code lang=php] // ** MySQL settings - You can get this info from your web host ** // /** The name of the database for WordPress */ define(‘DB_NAME’, ‘wordpress’);</p>
-<p>/** MySQL database username */ define(‘DB_USER’, ‘admin’);</p>
-<p>/** MySQL database password */ define(‘DB_PASSWORD’, ‘admin’);</p>
-<p>/** MySQL hostname */ define(‘DB_HOST’, ‘localhost’);</p>
-<p>/** Database Charset to use in creating database tables. */ define(‘DB_CHARSET’, ‘utf8’);</p>
-<p>/** The Database Collate type. Don’t change this if in doubt. */ define(‘DB_COLLATE’, ‘’); [/code]</p>
+<h2 id="4-3-Config"><a href="#4-3-Config" class="headerlink" title="4.3. Config"></a>4.3. Config</h2><p><a id="markdown-config" name="config"></a></p>
+<p>Open <code>wp-config.php</code> and fill in these info</p>
+<pre><code class="php">// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define(&#39;DB_NAME&#39;, &#39;wordpress&#39;);
+
+/** MySQL database username */
+define(&#39;DB_USER&#39;, &#39;admin&#39;);
+
+/** MySQL database password */
+define(&#39;DB_PASSWORD&#39;, &#39;admin&#39;);
+
+/** MySQL hostname */
+define(&#39;DB_HOST&#39;, &#39;localhost&#39;);
+
+/** Database Charset to use in creating database tables. */
+define(&#39;DB_CHARSET&#39;, &#39;utf8&#39;);
+
+/** The Database Collate type. Don&#39;t change this if in doubt. */
+define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <p>Open link and copy the code show up then replace them</p>
 <p><img src="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
 <p>Add this line (to enable wordpress can modify files and folder directly</p>
-<p>[code lang=php] define(‘FS_METHOD’, ‘direct’); [/code]</p>
+<pre><code class="php">define(&#39;FS_METHOD&#39;, &#39;direct&#39;);</code></pre>
 <p>It’s done, open your <code>domain:port</code> to config wordpress using web interface</p>
 
     </div>

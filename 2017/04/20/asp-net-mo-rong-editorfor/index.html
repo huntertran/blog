@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png">
 <meta property="og:image" content="https://farm3.staticflickr.com/2855/34151179025_3e849d7d2c_o.png">
 <meta property="article:published_time" content="2017-04-20T04:26:01.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="custom">
 <meta property="article:tag" content="editorfor">
@@ -341,7 +341,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -391,26 +391,54 @@
 <h1 id="1-Su-dung-EditorFor-va-EditorForModel"><a href="#1-Su-dung-EditorFor-va-EditorForModel" class="headerlink" title="1. Sử dụng EditorFor và EditorForModel"></a>1. Sử dụng EditorFor và EditorForModel</h1><p>Tại sao chả thấy ai nói gì về Editor: Từ hồi MVC2, Editor control đi kèm với phiên bản đầu tiên của MVC có thể được thay thế bởi EditorFor. Từ “For” ám chỉ đây là một <em>strongly typed html helper</em>, tức là bạn có thể chọn tên property từ model mà không sợ sai</p>
 <h2 id="Model-hoac-ViewModel"><a href="#Model-hoac-ViewModel" class="headerlink" title="Model (hoặc ViewModel)"></a>Model (hoặc ViewModel)</h2><p>Để render 1 cái form, bạn cần phải biết data nó nhận vô là gì. Để hiển thị những data này, bạn cần phải tạo một class với các Properties</p>
 <p>Model</p>
-<p>[code lang=csharp] public class Lesson { // ScaffoldColumn mark that EditorFor should render it or not [ScaffoldColumn(false)] public int Id { get; set; }</p>
-<p>// To display as label [Display(Name = “Lesson Name”)] public string Name { get; set; }</p>
-<p>[Display(Name = “CD Number”)] public int CDNumber { get; set; }</p>
-<p>[Display(Name = “CD Track”)] public int CDTrack { get; set; } } [/code]</p>
+<pre><code class="csharp">public class Lesson
+&#123;
+    // ScaffoldColumn mark that EditorFor should render it or not
+    [ScaffoldColumn(false)]
+    public int Id &#123; get; set; &#125;
+
+    // To display as label
+    [Display(Name = &quot;Lesson Name&quot;)]
+    public string Name &#123; get; set; &#125;
+
+    [Display(Name = &quot;CD Number&quot;)]
+    public int CDNumber &#123; get; set; &#125;
+
+    [Display(Name = &quot;CD Track&quot;)]
+    public int CDTrack &#123; get; set; &#125;
+&#125;</code></pre>
 <p>ViewModel</p>
-<p>[code lang=csharp] public class LessonViewModel { public Lesson LessonItem { get; set; } } [/code]</p>
+<pre><code class="csharp">public class LessonViewModel
+&#123;
+    public Lesson LessonItem &#123; get; set; &#125;
+&#125;</code></pre>
 <h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><ul>
 <li>EditorFor control phải nằm bên trong form tag</li>
 <li>Razor support bạn render cái form tag đó tự động luôn</li>
 </ul>
-<p>[code lang=csharp] @model LessonViewModel</p>
-<p>@using(Html.BeginForm(“ActionName”,”ControllerName”, FormMethod.Post,new {@class = “myformclass”})) { @Html.EditorFor(x =&gt; x.LessonItem) } [/code]</p>
+<pre><code class="csharp">@model LessonViewModel
+
+@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;, FormMethod.Post,new &#123;@class = &quot;myformclass&quot;&#125;))
+&#123;
+    @Html.EditorFor(x =&gt; x.LessonItem)
+&#125;</code></pre>
 <p>Nếu bạn không có ViewModel, nhưng muốn render trực tiếp từ Lesson model</p>
-<p>[code lang=csharp] @model Lesson</p>
-<p>@using(Html.BeginForm(“ActionName”,”ControllerName”, FormMethod.Post,new {@class = “myformclass”})) { @Html.EditorForModel() } [/code]</p>
+<pre><code class="csharp">@model Lesson
+
+@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;, FormMethod.Post,new &#123;@class = &quot;myformclass&quot;&#125;))
+&#123;
+    @Html.EditorForModel()
+&#125;</code></pre>
 <h1 id="2-Mo-rong-EditorFor"><a href="#2-Mo-rong-EditorFor" class="headerlink" title="2. Mở rộng EditorFor"></a>2. Mở rộng EditorFor</h1><p>Tạo một class mới để giữ data</p>
-<p>[code lang=csharp] public class TextBoxWithCheck { [Display(Name = “Fancy Text”)] public string MyText { get; set;}</p>
-<p>public bool IsTrue { get; set; } } [/code]</p>
+<pre><code class="csharp">public class TextBoxWithCheck
+&#123;
+    [Display(Name = &quot;Fancy Text&quot;)]
+    public string MyText &#123; get; set;&#125;
+
+    public bool IsTrue &#123; get; set; &#125;
+&#125;</code></pre>
 <p>Thêm cái class mới này vô Lesson model</p>
-<p>[code lang=csharp] public TextBoxWithCheck FancyBox { get; set; } [/code]</p>
+<pre><code class="csharp">public TextBoxWithCheck FancyBox &#123; get; set; &#125;</code></pre>
 <p>Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy</p>
 <p><img src="https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png" alt="textbox with checkbox"></p>
 <p>Rõ ràng là chả có cái default control nào có thể làm được trò này, mà EditorFor cũng không biết chọn cái gì để render cái property “FancyBox” của kiểu “TextBoxWithCheck”.</p>
@@ -422,8 +450,15 @@
 <ul>
 <li>Thêm View mới vào folder đó, đặt tên là “TextBoxWithCheck.cshtml” (phải trùng tên với cái custom class)</li>
 </ul>
-<p>[code lang=html] @model TextBoxWithCheck</p>
-<p>@Html.LabelFor(x =&gt; x.MyText) <div class="input-group"> @Html.TextAreaFor(x =&gt; x.Answer, new {@class=”form-control”}) <span class="input-group-addon"> @Html.CheckBoxFor(x =&gt; x.IsTrue) </span> </div> [/code]</p>
+<pre><code class="html">@model TextBoxWithCheck
+
+@Html.LabelFor(x =&gt; x.MyText)
+&lt;div class=&quot;input-group&quot;&gt;
+    @Html.TextAreaFor(x =&gt; x.Answer, new &#123;@class=&quot;form-control&quot;&#125;)
+    &lt;span class=&quot;input-group-addon&quot;&gt;
+        @Html.CheckBoxFor(x =&gt; x.IsTrue)
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
 <p>Thế là xong. Giờ EditorFor đã biết render tất cả instance của TextBoxWithCheck.</p>
 <p>Cũng dễ mà phải không?</p>
 

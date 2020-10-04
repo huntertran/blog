@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png">
 <meta property="article:published_time" content="2017-12-10T09:44:25.000Z">
-<meta property="article:modified_time" content="2020-09-28T16:39:21.474Z">
+<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content=".net core">
 <meta property="article:tag" content=".net framework">
@@ -343,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-09-28 12:39:21" itemprop="dateModified" datetime="2020-09-28T12:39:21-04:00">2020-09-28</time>
+        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -400,11 +400,33 @@
 <p><img src="https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png"></p>
 </blockquote>
 <p>NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense</p>
-<pre><code class="shell">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01</code></pre>
+<pre><code class="s">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01</code></pre>
 <h1 id="2-Cac-buoc-cai-dat"><a href="#2-Cac-buoc-cai-dat" class="headerlink" title="2. Các bước cài đặt"></a>2. Các bước cài đặt</h1><h2 id="2-1-Create-project"><a href="#2-1-Create-project" class="headerlink" title="2.1. Create project"></a>2.1. Create project</h2><p>Open VSCode -&gt; Open Folder -&gt; trỏ tới folder sẽ chứa tất cả code của bạn Views &gt; Integrated Terminal rồi gõ </p>
-<pre><code class="shell">dotnet new mvc</code></pre>
+<pre><code class="s">dotnet new mvc</code></pre>
 <p>SDK sẽ tạo ra toàn bộ folders và files cần thiết cho bạn Các lựa chọn khác khi tạo một project: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x">‘dotnet new’ command at docs.microsoft.com</a></p>
-<h2 id="2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1"><a href="#2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1" class="headerlink" title="2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)"></a>2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)</h2><p>Trong thư mục gốc của project mới tạo, mở file <code>YourProjectName.csproj</code> và sửa như sau [code lang=xml] <Project Sdk="Microsoft.NET.Sdk.Web"> <PropertyGroup> <TargetFramework>net471</TargetFramework> <!--RuntimeIdentifier is based on your local machine. A list of all available values here--> <RuntimeIdentifier>win10-x64</RuntimeIdentifier> </PropertyGroup> <ItemGroup> <!--These are nuget package targeting .net framework, dependency is .NET Standard 2.0, which is supported by .net framework 4.7.1--> <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" /> <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" /> <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.1" PrivateAssets="All" /> <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" /> <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" /> </ItemGroup> <ItemGroup> <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" /> </ItemGroup> </Project> [/code]</p>
+<h2 id="2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1"><a href="#2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1" class="headerlink" title="2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)"></a>2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)</h2><p>Trong thư mục gốc của project mới tạo, mở file <code>YourProjectName.csproj</code> và sửa như sau</p>
+<pre><code class="xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk.Web&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;net471&lt;/TargetFramework&gt;
+    &lt;!--RuntimeIdentifier is based on your local machine. A list of all available values here--&gt;
+    &lt;RuntimeIdentifier&gt;win10-x64&lt;/RuntimeIdentifier&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;!--These are nuget package targeting .net framework, dependency is .NET Standard 2.0, which is supported by .net framework 4.7.1--&gt;
+    &lt;PackageReference Include=&quot;Microsoft.AspNetCore&quot; Version=&quot;2.0.1&quot; /&gt;
+    &lt;PackageReference Include=&quot;Microsoft.AspNetCore.Mvc&quot; Version=&quot;2.0.1&quot; /&gt;
+    &lt;PackageReference Include=&quot;Microsoft.AspNetCore.Mvc.Razor.ViewCompilation&quot; Version=&quot;2.0.1&quot; PrivateAssets=&quot;All&quot; /&gt;
+    &lt;PackageReference Include=&quot;Microsoft.AspNetCore.StaticFiles&quot; Version=&quot;2.0.1&quot; /&gt;
+    &lt;PackageReference Include=&quot;Microsoft.VisualStudio.Web.BrowserLink&quot; Version=&quot;2.0.1&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;DotNetCliToolReference Include=&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version=&quot;2.0.1&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;</code></pre>
 <h2 id="2-3-Compile-Run-va-Debug"><a href="#2-3-Compile-Run-va-Debug" class="headerlink" title="2.3. Compile, Run và Debug"></a>2.3. Compile, Run và Debug</h2><ol>
 <li>Debug &gt; Settings</li>
 </ol>
@@ -416,11 +438,30 @@
 </li>
 </ol>
 <p><img src="https://farm5.staticflickr.com/4683/27177480069_ee651b8559_o.png"></p>
-<ol>
+<ol start="3">
 <li>Tạo một file mới cũng trong thư mục đó, với tên là <code>tasks.json</code> với đoạn code sau</li>
 </ol>
-<p>[code lang=text] { “version”: “2.0.0”, “tasks”: [ { “taskName”: “build”, “command”: “dotnet”, “type”: “process”, “args”: [ “build”, “${workspaceFolder}/StudyAspCore.csproj” ], “problemMatcher”: “$msCompile” } ] } [/code]</p>
-<h2 id="2-4-Run-and-Debug"><a href="#2-4-Run-and-Debug" class="headerlink" title="2.4. Run and Debug"></a>2.4. Run and Debug</h2><p>To run the application <img src="https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png"> Bạn cũng có thể chạy project bằng nút Run trên status bar <img src="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png"> Để debug thì chỉ cần đặt break point ngay tại nơi cần debug <img src="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png"></p>
+<pre><code class="json">&#123;
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        &#123;
+            &quot;taskName&quot;: &quot;build&quot;,
+            &quot;command&quot;: &quot;dotnet&quot;,
+            &quot;type&quot;: &quot;process&quot;,
+            &quot;args&quot;: [
+                &quot;build&quot;,
+                &quot;$&#123;workspaceFolder&#125;/StudyAspCore.csproj&quot;
+            ],
+            &quot;problemMatcher&quot;: &quot;$msCompile&quot;
+        &#125;
+    ]
+&#125;</code></pre>
+<h2 id="2-4-Run-and-Debug"><a href="#2-4-Run-and-Debug" class="headerlink" title="2.4. Run and Debug"></a>2.4. Run and Debug</h2><p>To run the application</p>
+<p><img src="https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png"></p>
+<p>Bạn cũng có thể chạy project bằng nút Run trên status bar</p>
+<p><img src="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png"></p>
+<p>Để debug thì chỉ cần đặt break point ngay tại nơi cần debug</p>
+<p><img src="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png"></p>
 
     </div>
 
