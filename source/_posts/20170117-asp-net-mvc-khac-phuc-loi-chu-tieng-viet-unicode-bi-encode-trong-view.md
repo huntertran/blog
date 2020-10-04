@@ -34,8 +34,8 @@ ASP.NET convert chuỗi đó sang một dạng code gọi là "Unicode Decimal C
 # Cách khắc phục
 
 1.  Mở file Web.config ra
-2.  Tìm tag \[code language="xml"\]<system.web>\[/code\]
-3.  Thêm vào: \[code language="xml"\]<globalization fileEncoding="utf-8" />\[/code\]
+2.  Tìm tag `<system.web>`
+3.  Thêm vào: `<globalization fileEncoding="utf-8" />`
 
 Thành quả:
 

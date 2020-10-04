@@ -37,44 +37,78 @@ Tại sao chả thấy ai nói gì về Editor: Từ hồi MVC2, Editor control 
 
 Model
 
-\[code lang=csharp\] public class Lesson { // ScaffoldColumn mark that EditorFor should render it or not \[ScaffoldColumn(false)\] public int Id { get; set; }
-
-// To display as label \[Display(Name = "Lesson Name")\] public string Name { get; set; }
-
-\[Display(Name = "CD Number")\] public int CDNumber { get; set; }
-
-\[Display(Name = "CD Track")\] public int CDTrack { get; set; } } \[/code\]
+```csharp
+public class Lesson
+{
+    // ScaffoldColumn mark that EditorFor should render it or not
+    [ScaffoldColumn(false)]
+    public int Id { get; set; }
+ 
+    // To display as label
+    [Display(Name = "Lesson Name")]
+    public string Name { get; set; }
+ 
+    [Display(Name = "CD Number")]
+    public int CDNumber { get; set; }
+ 
+    [Display(Name = "CD Track")]
+    public int CDTrack { get; set; }
+}
+```
 
 ViewModel
 
-\[code lang=csharp\] public class LessonViewModel { public Lesson LessonItem { get; set; } } \[/code\]
+```csharp
+public class LessonViewModel
+{
+    public Lesson LessonItem { get; set; }
+}
+```
 
 ## View
 
-*   EditorFor control phải nằm bên trong form tag
-*   Razor support bạn render cái form tag đó tự động luôn
+* EditorFor control phải nằm bên trong form tag
+* Razor support bạn render cái form tag đó tự động luôn
 
-\[code lang=csharp\] @model LessonViewModel
-
-@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorFor(x => x.LessonItem) } \[/code\]
+```csharp
+@model LessonViewModel
+ 
+@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"}))
+{
+    @Html.EditorFor(x => x.LessonItem)
+}
+```
 
 Nếu bạn không có ViewModel, nhưng muốn render trực tiếp từ Lesson model
 
-\[code lang=csharp\] @model Lesson
-
-@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"})) { @Html.EditorForModel() } \[/code\]
+```csharp
+@model Lesson
+ 
+@using(Html.BeginForm("ActionName","ControllerName", FormMethod.Post,new {@class = "myformclass"}))
+{
+    @Html.EditorForModel()
+}
+```
 
 # 2. Mở rộng EditorFor
 
 Tạo một class mới để giữ data
 
-\[code lang=csharp\] public class TextBoxWithCheck { \[Display(Name = "Fancy Text")\] public string MyText { get; set;}
-
-public bool IsTrue { get; set; } } \[/code\]
+```csharp
+public class TextBoxWithCheck
+{
+    [Display(Name = "Fancy Text")]
+    public string MyText { get; set;}
+ 
+    public bool IsTrue { get; set; }
+}
+```
 
 Thêm cái class mới này vô Lesson model
 
-\[code lang=csharp\] public TextBoxWithCheck FancyBox { get; set; } \[/code\]
+```csharp
+public TextBoxWithCheck FancyBox { get; set; }
+```
 
 Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy
 
@@ -92,9 +126,17 @@ Vì thế, bạn sẽ **_dạy_** nó cách render nhóe.
 
 *   Thêm View mới vào folder đó, đặt tên là "TextBoxWithCheck.cshtml" (phải trùng tên với cái custom class)
 
-\[code lang=html\] @model TextBoxWithCheck
-
-@Html.LabelFor(x => x.MyText) <div class="input-group"> @Html.TextAreaFor(x => x.Answer, new {@class="form-control"}) <span class="input-group-addon"> @Html.CheckBoxFor(x => x.IsTrue) </span> </div> \[/code\]
+```html
+@model TextBoxWithCheck
+ 
+@Html.LabelFor(x => x.MyText)
+<div class="input-group">
+    @Html.TextAreaFor(x => x.Answer, new {@class="form-control"})
+    <span class="input-group-addon">
+        @Html.CheckBoxFor(x => x.IsTrue)
+    </span>
+</div>
+```
 
 Thế là xong. Giờ EditorFor đã biết render tất cả instance của TextBoxWithCheck.
 
