@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://i.imgur.com/CB6VdCg.png">
 <meta property="og:image" content="https://i.imgur.com/osKi6Sl.png">
 <meta property="article:published_time" content="2020-09-03T20:02:21.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="github">
 <meta property="article:tag" content="vscode">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -407,13 +407,15 @@
 <ol>
 <li>Generate SSH key</li>
 </ol>
-<pre><code class="s">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ol start="2">
 <li>Add ssh key to ssh agent</li>
 </ol>
-<pre><code class="s">$ eval &quot;$(ssh-agent -s)&quot;
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">$ eval &quot;$(ssh-agent -s)&quot;
 &gt; Agent pid xxxxx
-$ ssh-add ~/.ssh/id_rsa</code></pre>
+$ ssh-add ~&#x2F;.ssh&#x2F;id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <ol start="3">
 <li>Add the public key to GitHub</li>
 </ol>
@@ -421,7 +423,8 @@ $ ssh-add ~/.ssh/id_rsa</code></pre>
 <ol start="4">
 <li>Change repo remote URL from HTTPS to SSH</li>
 </ol>
-<pre><code class="s">git remote set-url origin git@github.com:&lt;Username&gt;/&lt;Project&gt;.git</code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">git remote set-url origin git@github.com:&lt;Username&gt;&#x2F;&lt;Project&gt;.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>That’s it</p>
 <h1 id="3-Some-interesting-things-I-found"><a href="#3-Some-interesting-things-I-found" class="headerlink" title="3. Some interesting things I found"></a>3. Some interesting things I found</h1><p><a id="markdown-some-interesting-things-i-found" name="some-interesting-things-i-found"></a></p>
 <ul>

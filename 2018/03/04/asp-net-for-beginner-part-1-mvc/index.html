@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png">
 <meta property="article:published_time" content="2018-03-04T12:41:16.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="beginner">
 <meta property="article:tag" content="mvc">
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -369,6 +369,7 @@
         <p>MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng?</p>
 <p>Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.</p>
 <a id="more"></a>
+
 <blockquote>
 <p>Xem các bài viết trong series</p>
 <ul>
@@ -378,102 +379,216 @@
 <li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
 </ul>
 </blockquote>
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#1-mvc-l%C3%A0-g%C3%AC">1. MVC là gì?</a></p>
-<ul>
+<li><a href="#1-mvc-l%C3%A0-g%C3%AC">1. MVC là gì?</a><ul>
 <li><a href="#11-model">1.1. Model</a></li>
 <li><a href="#12-view">1.2. View</a></li>
 <li><a href="#13-controller">1.3. Controller</a></li>
 </ul>
 </li>
-<li><p><a href="#2-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n">2. Một ví dụ đơn giản</a></p>
-<ul>
-<li><p><a href="#21-b%C3%A0i-to%C3%A1n">2.1. Bài toán</a></p>
-</li>
-<li><p><a href="#22-ph%C3%A2n-t%C3%ADch">2.2. Phân tích</a></p>
-</li>
-<li><p><a href="#23-tri%E1%BB%83n-khai">2.3. Triển khai</a></p>
-<ul>
+<li><a href="#2-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n">2. Một ví dụ đơn giản</a><ul>
+<li><a href="#21-b%C3%A0i-to%C3%A1n">2.1. Bài toán</a></li>
+<li><a href="#22-ph%C3%A2n-t%C3%ADch">2.2. Phân tích</a></li>
+<li><a href="#23-tri%E1%BB%83n-khai">2.3. Triển khai</a><ul>
 <li><a href="#231-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch">2.3.1. Tính năng xem danh sách</a></li>
 <li><a href="#232-t%C3%ADnh-n%C4%83ng-th%C3%AAm">2.3.2. Tính năng thêm</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a href="#3-t%E1%BB%B1-t%E1%BA%A1o-project">3. Tự tạo project</a></p>
-<ul>
+<li><a href="#3-t%E1%BB%B1-t%E1%BA%A1o-project">3. Tự tạo project</a><ul>
 <li><a href="#31-ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt">3.1. Phần mềm cần thiết</a></li>
 <li><a href="#32-tri%E1%BB%83n">3.2. Triển</a></li>
 <li><a href="#33-aspnet-convention">3.3. ASP.NET Convention</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="1-MVC-la-gi"><a href="#1-MVC-la-gi" class="headerlink" title="1. MVC là gì?"></a>1. MVC là gì?</h1><p>MVC là một kiến trúc phần mềm dùng để phát triển kha khá ứng dụng bạn đang dùng trên thị trường. Mô hình MVC bóc tách 3 tầng của ứng dụng thành 3 thành phần khác nhau, giúp việc phát triển dễ dàng hơn.</p>
+<!-- /TOC -->
+
+<h1 id="1-MVC-la-gi"><a href="#1-MVC-la-gi" class="headerlink" title="1. MVC là gì?"></a>1. MVC là gì?</h1><p><a id="markdown-mvc-l%C3%A0-g%C3%AC%3F" name="mvc-l%C3%A0-g%C3%AC%3F"></a></p>
+<p>MVC là một kiến trúc phần mềm dùng để phát triển kha khá ứng dụng bạn đang dùng trên thị trường. Mô hình MVC bóc tách 3 tầng của ứng dụng thành 3 thành phần khác nhau, giúp việc phát triển dễ dàng hơn.</p>
 <p>MVC là viết tắt của Model-View-Controller</p>
 <blockquote>
 <p>3 thành phần này phải đi kèm với nhau, nhưng đối với người mới học, sẽ rất khó để hình dung ra chúng liên kết như thế nào. Học bất kỳ thành phần nào trước đều khó khăn khi không hiểu 2 thành phần kia. Vì vậy mình khuyên các bạn chỉ cần hình dung mỗi thành phần ra trong đầu, chứ đừng bắt tay ngay vào việc tìm hiểu liên kết giữa chúng.</p>
 </blockquote>
-<h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
-<p>[code lang=csharp] // A basic model public class User { public string Name { get; set; } public int Age { get; set; } public string Address { get; set; } } [/code]</p>
-<h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có/không) là những thứ thường thấy trên View.</p>
+<h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p><a id="markdown-model" name="model"></a></p>
+<p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// A basic model</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Age <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Address <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p><a id="markdown-view" name="view"></a></p>
+<p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có/không) là những thứ thường thấy trên View.</p>
 <p>Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau</p>
-<p>[code lang=html] @model User <div> @Model.Name @Model.Age @Model.Address </div> [/code]</p>
-<h2 id="1-3-Controller"><a href="#1-3-Controller" class="headerlink" title="1.3. Controller"></a>1.3. Controller</h2><p>Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân</p>
-<h1 id="2-Mot-vi-du-don-gian"><a href="#2-Mot-vi-du-don-gian" class="headerlink" title="2. Một ví dụ đơn giản"></a>2. Một ví dụ đơn giản</h1><p>Vì ví dụ này được đưa ra để bạn hiểu mô hình MVC, nên bạn ko cần phải làm theo. Chỉ cần đọc tiếp thôi</p>
-<h2 id="2-1-Bai-toan"><a href="#2-1-Bai-toan" class="headerlink" title="2.1. Bài toán"></a>2.1. Bài toán</h2><p>Thế giới di động cần 1 cái website có thể hiện thị danh sách các điện thoại, thêm/xóa/sửa một điện thoại nào đó (bỏ qua tất cả các yêu cầu về bảo mật, đăng nhập, giao diện)</p>
-<h2 id="2-2-Phan-tich"><a href="#2-2-Phan-tich" class="headerlink" title="2.2. Phân tích"></a>2.2. Phân tích</h2><p>Đọc vào thấy ngay, ta cần một model cho điện thoại, 4 view cho 4 cái tính năng là <code>xem danh sách</code>, <code>thêm</code>, <code>xóa</code>, <code>sửa</code>. Vì cả 4 view này đều thao tác trên cái model <code>điện thoại</code>, nên ta chỉ cần 1 controller mà thôi</p>
-<h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><strong>Model</strong></p>
-<p>[code lang=csharp] public class MobilePhone { // To identify which phones // Dùng để xác định cái điện thoại nào public int Id { get; set; }</p>
-<p>public string Name { get; set; } } [/code]</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model User
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    @Model.Name
+    @Model.Age
+    @Model.Address
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-3-Controller"><a href="#1-3-Controller" class="headerlink" title="1.3. Controller"></a>1.3. Controller</h2><p><a id="markdown-controller" name="controller"></a></p>
+<p>Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân</p>
+<h1 id="2-Mot-vi-du-don-gian"><a href="#2-Mot-vi-du-don-gian" class="headerlink" title="2. Một ví dụ đơn giản"></a>2. Một ví dụ đơn giản</h1><p><a id="markdown-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n" name="m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n"></a></p>
+<p>Vì ví dụ này được đưa ra để bạn hiểu mô hình MVC, nên bạn ko cần phải làm theo. Chỉ cần đọc tiếp thôi</p>
+<h2 id="2-1-Bai-toan"><a href="#2-1-Bai-toan" class="headerlink" title="2.1. Bài toán"></a>2.1. Bài toán</h2><p><a id="markdown-b%C3%A0i-to%C3%A1n" name="b%C3%A0i-to%C3%A1n"></a></p>
+<p>Thế giới di động cần 1 cái website có thể hiện thị danh sách các điện thoại, thêm/xóa/sửa một điện thoại nào đó (bỏ qua tất cả các yêu cầu về bảo mật, đăng nhập, giao diện)</p>
+<h2 id="2-2-Phan-tich"><a href="#2-2-Phan-tich" class="headerlink" title="2.2. Phân tích"></a>2.2. Phân tích</h2><p><a id="markdown-ph%C3%A2n-t%C3%ADch" name="ph%C3%A2n-t%C3%ADch"></a></p>
+<p>Đọc vào thấy ngay, ta cần một model cho điện thoại, 4 view cho 4 cái tính năng là <code>xem danh sách</code>, <code>thêm</code>, <code>xóa</code>, <code>sửa</code>. Vì cả 4 view này đều thao tác trên cái model <code>điện thoại</code>, nên ta chỉ cần 1 controller mà thôi</p>
+<h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><p><a id="markdown-tri%E1%BB%83n-khai" name="tri%E1%BB%83n-khai"></a></p>
+<h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch" name="t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch"></a></p>
+<p><strong>Model</strong></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhone</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// To identify which phones</span>
+    <span class="token comment">// Dùng để xác định cái điện thoại nào</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Id <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>Controller</strong></p>
-<p>[code lang=csharp] public class MobilePhoneController { public void List() { // Get all phones from database var allPhones = database.MobilePhones;</p>
-<p>// Return the View that render a list of phones return View(allPhones) } } [/code]</p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Get all phones from database</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Return the View that render a list of phones</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>View</strong></p>
-<p>[code lang=html] @model List<MobilePhone> <div> <table> <!--Table headers--> <th> <td>Id</td> <td>Name</td> </th> <!--Table body--> <tbody> @foreach(var phone in Model) { <tr> <td>@phone.Id</td> <td>@phone.Name</td> </tr> } </tbody> </table> </div> [/code]</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MobilePhone</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!--Table headers--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!--Table body--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+            @foreach(var phone in Model)
+            &#123;
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            &#125;
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>ASP.NET tự động hiểu class <code>MobilePhoneController</code> sẽ có đường dẫn là <code>/MobilePhone</code></p>
 <p>Khi người dùng trỏ tới URL sau:</p>
-<p>[code lang=text] yourdomain/MobilePhone/List [/code]</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">yourdomain&#x2F;MobilePhone&#x2F;List<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>thì bằng một cách thần kỳ nào đó, asp.net đã gọi method <code>List</code> trong controller này, và chạy những đoạn code trong đó, trả về một cái bảng danh sách các điện thoại hiển thị lên cho người dùng</p>
-<h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
+<h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-th%C3%AAm" name="t%C3%ADnh-n%C4%83ng-th%C3%AAm"></a></p>
+<p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
 <p><strong>Controller</strong></p>
-<p>[code lang=csharp] public class MobilePhoneController { public void List() { // Get all phones from database // Lấy tất cả điện thoại từ database var allPhones = database.MobilePhones;</p>
-<p>// Return the View that render a list of phones // Trả về view chứa thông tin tất cả điện thoại return View(allPhones) }</p>
-<p>// Render the Add form // Hiển thị cái form Add public void Add() { return View(); }</p>
-<p>// Recieved the new phone input by user // Nhận data được nhập vào từ người dùng [HttpPost] public void Add(MobilePhone newPhone) { var existedPhone = database.MobilePhones.Find(newPhone.Id)</p>
-<p>if(existedPhone != null) { // Phone is existed, return the Add View // Điện thoại với Id này đã tồn tại, trả về cái view Add return View(newPhone); }</p>
-<p>// Add new data to database database.MobilePhones.Add(newPhone);</p>
-<p>// Save the changes database.SaveChanges(); } } [/code]</p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Get all phones from database</span>
+        <span class="token comment">// Lấy tất cả điện thoại từ database</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Return the View that render a list of phones</span>
+        <span class="token comment">// Trả về view chứa thông tin tất cả điện thoại</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token comment">// Render the Add form</span>
+    <span class="token comment">// Hiển thị cái form Add</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token comment">// Recieved the new phone input by user</span>
+    <span class="token comment">// Nhận data được nhập vào từ người dùng</span>
+    <span class="token punctuation">[</span>HttpPost<span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">MobilePhone</span> newPhone<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> existedPhone <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">.</span>Id<span class="token punctuation">)</span>
+ 
+        <span class="token keyword">if</span><span class="token punctuation">(</span>existedPhone <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token comment">// Phone is existed, return the Add View</span>
+            <span class="token comment">// Điện thoại với Id này đã tồn tại, trả về cái view Add</span>
+            <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// Add new data to database</span>
+        database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Save the changes</span>
+        database<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>Tại sao lại có 2 method Add? Ở method đầu tiên, ASP.NET sẽ trả về cái form rỗng cho người dùng tự nhập vào giá trị. Method thứ 2 có chứa parameter là newPhone. Method có trách nhiệm nhận thông tin được post lên từ phía người dùng. ASP.NET đủ thông minh để có thể tự hiểu nó là object kiểu MobilePhone, và nó gọi là <code>Model Binding</code>. Ta sẽ tìm hiểu về chủ đề này sau.</p>
 </blockquote>
 <p><strong>View</strong></p>
-<p>[code lang=html] thêm file Add.cshtml [/code]</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">thêm file Add.cshtml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Đối với ASP.NET Core</p>
-<p>[code lang=html] @model MobilePhone</p>
-<form asp-action="Add" asp-controller="MobilePhone"> <label>Id</label> <input asp-for="Id"/> <label>Name</label> <input asp-for="Name"/> </form> \[/code\]
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">asp-action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Add<span class="token punctuation">"</span></span> <span class="token attr-name">asp-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MobilePhone<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Id<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>Đối với ASP.NET MVC cũ</p>
-<p>[code lang=html] @model MobilePhone</p>
-<p>@using(Html.BeginForm(“Add”,”MobilePhone”,Method.Post)) { <label>Id</label> @Html.TextBoxFor(x =&gt; x.Id) <label>Name</label> @Html.TextBoxFor(x =&gt; x.Name) } [/code]</p>
-<h1 id="3-Tu-tao-project"><a href="#3-Tu-tao-project" class="headerlink" title="3. Tự tạo project"></a>3. Tự tạo project</h1><p>Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+ 
+@using(Html.BeginForm("Add","MobilePhone",Method.Post))
+&#123;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    @Html.TextBoxFor(x => x.Id)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    @Html.TextBoxFor(x => x.Name)
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="3-Tu-tao-project"><a href="#3-Tu-tao-project" class="headerlink" title="3. Tự tạo project"></a>3. Tự tạo project</h1><p><a id="markdown-t%E1%BB%B1-t%E1%BA%A1o-project" name="t%E1%BB%B1-t%E1%BA%A1o-project"></a></p>
+<p>Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một</p>
 <p>ASP.NET có kha khá phiên bản, <code>MVC1</code>, <code>MVC2</code>, <code>MVC3</code>, <code>MVC4</code>, và gần đây nhất là <code>MVC5</code> và <code>MVC Core</code>. Từ version 5 trở xuống là cách phát triển cũ, chỉ chạy được trên môi trường Windows, từ phiên bản <code>MVC Core</code> trở lên là cách phát triển mới, có thể chạy được trên <code>Linux</code>, <code>Windows</code> hoặc <code>MacOS</code>. Nếu đang học, thì mình khuyến khích nên học luôn từ <code>MVC Core</code> trở lên luôn cho nó hot</p>
-<h2 id="3-1-Phan-mem-can-thiet"><a href="#3-1-Phan-mem-can-thiet" class="headerlink" title="3.1. Phần mềm cần thiết"></a>3.1. Phần mềm cần thiết</h2><ul>
+<h2 id="3-1-Phan-mem-can-thiet"><a href="#3-1-Phan-mem-can-thiet" class="headerlink" title="3.1. Phần mềm cần thiết"></a>3.1. Phần mềm cần thiết</h2><p><a id="markdown-ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt" name="ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt"></a></p>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://www.microsoft.com/net/core">.NET Core SDK 2.0</a> trở lên</li>
 <li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
 <li>VS Code <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension</a></li>
 </ul>
-<h2 id="3-2-Trien"><a href="#3-2-Trien" class="headerlink" title="3.2. Triển"></a>3.2. Triển</h2><p>Mở VSCode lên, nhấn Ctrl + ` để hiện Terminal, hoặc làm như hình</p>
+<h2 id="3-2-Trien"><a href="#3-2-Trien" class="headerlink" title="3.2. Triển"></a>3.2. Triển</h2><p><a id="markdown-tri%E1%BB%83n" name="tri%E1%BB%83n"></a></p>
+<p>Mở VSCode lên, nhấn Ctrl + ` để hiện Terminal, hoặc làm như hình</p>
 <p><img src="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png" alt="show termial"></p>
 <p>dùng các lệnh <code>cd</code> để trỏ tới thư mục mong muốn tạo project của bạn</p>
 <p>hoặc</p>
 <p><img src="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
 <p>gõ</p>
-<p>[code lang=text] dotnet new mvc [/code]</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Bấm F5 &gt; Chọn .NET Core</p>
 <p>Nếu bạn được hỏi “Required assets to build and debug are missing from blah blah blah”, thì bấm Yes nhé</p>
 <p><img src="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png" alt="yes to build"></p>
 <p>Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET Core rồi nhé. Bạn có thể mở class HomeController để hiểu rõ hơn về mô hình MVC mình vừa nói ở trên.</p>
-<h2 id="3-3-ASP-NET-Convention"><a href="#3-3-ASP-NET-Convention" class="headerlink" title="3.3. ASP.NET Convention"></a>3.3. ASP.NET Convention</h2><p>ở trên mình có nhắc tới MobilePhoneController, thì đường dẫn của nó sẽ là /MobilePhone, hay ở project bạn mới tạo, HomeController sẽ có đường dẫn là /Home .ASP.NET tự hiểu controller của bạn, và sẽ có đường dẫn tương ứng.</p>
+<h2 id="3-3-ASP-NET-Convention"><a href="#3-3-ASP-NET-Convention" class="headerlink" title="3.3. ASP.NET Convention"></a>3.3. ASP.NET Convention</h2><p><a id="markdown-asp.net-convention" name="asp.net-convention"></a></p>
+<p>ở trên mình có nhắc tới MobilePhoneController, thì đường dẫn của nó sẽ là /MobilePhone, hay ở project bạn mới tạo, HomeController sẽ có đường dẫn là /Home .ASP.NET tự hiểu controller của bạn, và sẽ có đường dẫn tương ứng.</p>
 <p>Mặc định, các method <code>Index</code> trong controller của bạn sẽ là method được gọi khi URL ko có bất kỳ cái gì đằng sau. Ví dụ như HomeController ở trên, nếu bạn chỉ nhập <a target="_blank" rel="noopener" href="https://localhost:5000/Home/">https://localhost:5000/Home/</a> thì method <code>Index</code> sẽ được gọi, View <code>Index.cshtml</code> sẽ được hiển thị.</p>
 <p>Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở <a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/">phần tiếp theo</a> mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng <em>chuẩn</em> nhé</p>
 

@@ -33,7 +33,7 @@
 <meta property="og:description" content="Trong quá trình dev app sử dụng XAML và C#, chắc chắn bạn sẽ gặp trường hợp phải đặt thuộc tính Visibility, và thuộc tính này có 2 giá trị là Visible&#x2F;Collapsed. Và để binding tới nó sử dụng bool, bạn">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2015-07-19T03:56:05.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -335,7 +335,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -368,58 +368,67 @@
 </ul>
 <p>Qua đến Silverlight, sau này Windows RT trên Windows 8.1 và Windows Phone 8.1, thuộc tính hidden đã bị bỏ, nhưng do vẫn dùng chung nhân Windows NT nên Microsoft không chỉnh sửa giá trị nó thành bool mà vẫn giữ 2 giá trị cũ</p>
 <h1 id="Cach-khac-phuc"><a href="#Cach-khac-phuc" class="headerlink" title="Cách khắc phục"></a>Cách khắc phục</h1><p>Đây là một class nhỏ giúp bạn thêm một thuộc tính gọi là “IsVisible” vào UIElements và truyền cho nó giá trị true hoặc false</p>
-<pre><code class="csharp">public class Extension: DependencyObject
-&#123;
-    public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached(&quot;IsVisible&quot;,
-                                                                                                      typeof(bool),
-                                                                                                      typeof(Extension),
-                                                                                                      new PropertyMetadata(true, IsVisibleCallback));
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Extension</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">DependencyObject</span></span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">readonly</span> <span class="token class-name">DependencyProperty</span> IsVisibleProperty <span class="token operator">=</span> DependencyProperty<span class="token punctuation">.</span><span class="token function">RegisterAttached</span><span class="token punctuation">(</span><span class="token string">"IsVisible"</span><span class="token punctuation">,</span>
+                                                                                                      <span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name"><span class="token keyword">bool</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                                                                      <span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">Extension</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                                                                      <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PropertyMetadata</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> IsVisibleCallback<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
-    &#123;
-        ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed;
-    &#125;
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">IsVisibleCallback</span><span class="token punctuation">(</span><span class="token class-name">DependencyObject</span> d<span class="token punctuation">,</span> <span class="token class-name">DependencyPropertyChangedEventArgs</span> e<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token punctuation">(</span><span class="token punctuation">(</span>UIElement<span class="token punctuation">)</span> d<span class="token punctuation">)</span><span class="token punctuation">.</span>Visibility <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">bool</span><span class="token punctuation">)</span> e<span class="token punctuation">.</span>NewValue <span class="token punctuation">?</span> Visibility<span class="token punctuation">.</span>Visible <span class="token punctuation">:</span> Visibility<span class="token punctuation">.</span>Collapsed<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    public static void SetIsVisible(UIElement element, bool value)
-    &#123;
-        element.SetValue(IsVisibleProperty, value);
-    &#125;
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetIsVisible</span><span class="token punctuation">(</span><span class="token class-name">UIElement</span> element<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> <span class="token keyword">value</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        element<span class="token punctuation">.</span><span class="token function">SetValue</span><span class="token punctuation">(</span>IsVisibleProperty<span class="token punctuation">,</span> <span class="token keyword">value</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    public static bool GetIsVisible(UIElement element)
-    &#123;
-        return (bool) element.GetValue(IsVisibleProperty);
-    &#125;
-&#125;</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">GetIsVisible</span><span class="token punctuation">(</span><span class="token class-name">UIElement</span> element<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">bool</span><span class="token punctuation">)</span> element<span class="token punctuation">.</span><span class="token function">GetValue</span><span class="token punctuation">(</span>IsVisibleProperty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <p>Vậy là xong, bạn có thể sử dụng nó ngay</p>
-<pre><code class="xml">&lt;Page x:Class=&quot;IsVisibleSample.MainPage&quot;
-      xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
-      xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
-      xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;
-      xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;
-      xmlns:ext=&quot;using:Huyn&quot;
-      mc:Ignorable=&quot;d&quot;&gt;
-    &lt;Rectangle Height=&quot;100&quot;
-               Width=&quot;100&quot;
-               Fill=&quot;Red&quot; 
-               x:Name=&quot;Rectangle&quot; 
-               ext:Extension.IsVisible=&quot;false&quot;/&gt;
-&lt;/Page&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Page</span> <span class="token attr-name"><span class="token namespace">x:</span>Class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IsVisibleSample.MainPage<span class="token punctuation">"</span></span>
+      <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml/presentation<span class="token punctuation">"</span></span>
+      <span class="token attr-name"><span class="token namespace">xmlns:</span>x</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml<span class="token punctuation">"</span></span>
+      <span class="token attr-name"><span class="token namespace">xmlns:</span>d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/expression/blend/2008<span class="token punctuation">"</span></span>
+      <span class="token attr-name"><span class="token namespace">xmlns:</span>mc</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.openxmlformats.org/markup-compatibility/2006<span class="token punctuation">"</span></span>
+      <span class="token attr-name"><span class="token namespace">xmlns:</span>ext</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>using:Huyn<span class="token punctuation">"</span></span>
+      <span class="token attr-name"><span class="token namespace">mc:</span>Ignorable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>d<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rectangle</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span>
+               <span class="token attr-name">Width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span>
+               <span class="token attr-name">Fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Red<span class="token punctuation">"</span></span> 
+               <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Rectangle<span class="token punctuation">"</span></span> 
+               <span class="token attr-name"><span class="token namespace">ext:</span>Extension.IsVisible</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Page</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <p>Hoặc dùng Binding với nó</p>
-<pre><code class="xml">&lt;CheckBox x:Name=&quot;MyCheckBox&quot;
-          IsChecked=&quot;True&quot;
-          Content=&quot;show rectangle&quot;/&gt;
-&lt;Rectangle Height=&quot;100&quot;
-           Width=&quot;100&quot;
-           Fill=&quot;Red&quot;
-           x:Name=&quot;Rectangle&quot;
-           ext:Extension.IsVisible=&quot;&#123;Binding IsChecked,ElementName=MyCheckBox&#125;&quot;/&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CheckBox</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MyCheckBox<span class="token punctuation">"</span></span>
+          <span class="token attr-name">IsChecked</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>True<span class="token punctuation">"</span></span>
+          <span class="token attr-name">Content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show rectangle<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Rectangle</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span>
+           <span class="token attr-name">Width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span>
+           <span class="token attr-name">Fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Red<span class="token punctuation">"</span></span>
+           <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Rectangle<span class="token punctuation">"</span></span>
+           <span class="token attr-name"><span class="token namespace">ext:</span>Extension.IsVisible</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;Binding IsChecked,ElementName=MyCheckBox&#125;<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <p>Hoặc dùng nó như một Binding Source</p>
-<pre><code class="xml">&lt;CheckBox IsChecked=&quot;&#123;Binding (ext:Extension.IsVisible),ElementName=Rectangle&#125;&quot;
-          IsEnabled=&quot;False&quot;
-          Content=&quot;rectangle is visible?&quot;/&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CheckBox</span> <span class="token attr-name">IsChecked</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;Binding (ext:Extension.IsVisible),ElementName=Rectangle&#125;<span class="token punctuation">"</span></span>
+          <span class="token attr-name">IsEnabled</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>False<span class="token punctuation">"</span></span>
+          <span class="token attr-name">Content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rectangle is visible?<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
 <p>Hoặc dùng nó trong code behind</p>
-<pre><code class="csharp"> var val = Extension.GetIsVisible(Rectangle);
- Extension.SetIsVisible(Rectangle,true);</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> val <span class="token operator">=</span> Extension<span class="token punctuation">.</span><span class="token function">GetIsVisible</span><span class="token punctuation">(</span>Rectangle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Extension<span class="token punctuation">.</span><span class="token function">SetIsVisible</span><span class="token punctuation">(</span>Rectangle<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>Thế là xong</p>
 
     </div>

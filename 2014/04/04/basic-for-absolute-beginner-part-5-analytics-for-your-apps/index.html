@@ -42,7 +42,7 @@
 <meta property="og:image" content="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png">
 <meta property="og:image" content="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png">
 <meta property="article:published_time" content="2014-04-04T14:28:33.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="windows store">
@@ -347,7 +347,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -405,7 +405,8 @@
 <p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
 <p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
 <p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
-<pre><code class="shell">Install-Package GoogleAnalyticsSDK</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Install-Package GoogleAnalyticsSDK<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
 <p>Chờ một chút cho nó chạy</p>
 <h2 id="1-2-Khai-bao-thong-tin"><a href="#1-2-Khai-bao-thong-tin" class="headerlink" title="1.2. Khai báo thông tin"></a>1.2. Khai báo thông tin</h2><p><a id="markdown-khai-b%C3%A1o-th%C3%B4ng-tin" name="khai-b%C3%A1o-th%C3%B4ng-tin"></a></p>
@@ -448,10 +449,12 @@
 </ul>
 <h2 id="3-1-Coding"><a href="#3-1-Coding" class="headerlink" title="3.1. Coding"></a>3.1. Coding</h2><p><a id="markdown-coding" name="coding"></a></p>
 <p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
-<pre><code class="csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, false);</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">GoogleAnalytics<span class="token punctuation">.</span>EasyTracker<span class="token punctuation">.</span><span class="token function">GetTracker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SendException</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>Exception<span class="token punctuation">.</span>Message<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
 <p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
-<pre><code class="csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, false);</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">GoogleAnalytics<span class="token punctuation">.</span>EasyTracker<span class="token punctuation">.</span><span class="token function">GetTracker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SendException</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>ExceptionObject<span class="token punctuation">.</span>Message<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
 <p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
 <p><code>csharp // Track Navigation RootFrame.Navigated += RootFrame_Navigated; </code></p>

@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png">
 <meta property="og:image" content="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png">
 <meta property="article:published_time" content="2015-06-18T09:37:30.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -388,22 +388,24 @@
 <h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
 <p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
 <p>Code của cái trên rất đơn giản:</p>
-<pre><code class="xml">&lt;SplitView&gt;
-    &lt;SplitView.Pane&gt;
-        &lt;Grid&gt;
-            &lt;Grid.RowDefinitions&gt;
-                &lt;RowDefinition Height=&quot;Auto&quot; /&gt;
-                &lt;RowDefinition Height=&quot;\*&quot; /&gt;
-            &lt;/Grid.RowDefinitions&gt;
-            &lt;Button Grid.Row=&quot;0&quot; /&gt;
-            &lt;ListView Grid.Row=&quot;1&quot; /&gt;
-        &lt;/Grid&gt;
-    &lt;/SplitView.Pane&gt;
-    &lt;Grid /&gt;
-&lt;/SplitView&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SplitView</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SplitView.Pane</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid.RowDefinitions</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RowDefinition</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Auto<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RowDefinition</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>\*<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid.RowDefinitions</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">Grid.Row</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListView</span> <span class="token attr-name">Grid.Row</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>SplitView.Pane</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>SplitView</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
 <p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
-<pre><code class="xml">&lt;Button x:Name=&quot;HamburgerButton&quot; FontFamily=&quot;Segoe MDL2 Assets&quot; Content=&quot;&quot; /&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>HamburgerButton<span class="token punctuation">"</span></span> <span class="token attr-name">FontFamily</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Segoe MDL2 Assets<span class="token punctuation">"</span></span> <span class="token attr-name">Content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Mục Content sẽ là đoạn code trong bảng mã sau: <a target="_blank" rel="noopener" href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
 <p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen = true” hoặc “IsPaneOpen = false” trong event click của button nhé.</p>
 <p>Thế là xong. Chúc bạn thành công</p>

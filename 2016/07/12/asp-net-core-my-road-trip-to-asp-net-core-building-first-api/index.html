@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png">
 <meta property="article:published_time" content="2016-07-12T09:47:36.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -344,7 +344,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -474,65 +474,68 @@
 <p>Tiếp tục chuột phải vào Folder Models &gt; Add &gt; Class, đặt tên class là TodoItem &gt; Ok</p>
 <p><img src="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png"></p>
 <p>Thêm 3 Property vô</p>
-<pre><code class="csharp">public string Key &#123; get; set; &#125;
-public string Name &#123; get; set; &#125;
-public bool IsComplete &#123; get; set; &#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Key <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> IsComplete <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="3-3-Them-Repository"><a href="#3-3-Them-Repository" class="headerlink" title="3.3. Thêm Repository"></a>3.3. Thêm Repository</h2><p><a id="markdown-th%C3%AAm-repository" name="th%C3%AAm-repository"></a></p>
 <p>Repository, tiếng Việt là một chỗ lưu trữ cái gì đó, là một kỹ thuật mới tinh beng của ASP.NET core. Theo như tài liệu của họ, thì Repository dùng để đóng gói data, và chứa logic cho việc truy cập dữ liệu và chuyển nó qua cho Entity Model.</p>
 <p>Mặc dù app của chúng ta ko có database, nhưng mà cũng hay nếu như bạn hiểu cái đám code này hoạt động dư lào</p>
 <p>Để bắt đầu, chúng ta sẽ tạo một repository interface có tên ITodoRepository, dùng cách thêm class như trên, nhưng chọn template là Interface nhóe</p>
-<pre><code class="csharp">namespace todoapi.Models
-&#123;
-    public interface ITodoRepository
-    &#123;
-        void Add(TodoItem item);
-        IEnumerable&lt;TodoItem&gt; GetAll();
-        TodoItem Find(string key);
-        TodoItem Remove(string key);
-        void Update(TodoItem item);
-    &#125;
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">namespace</span> <span class="token namespace">todoapi<span class="token punctuation">.</span>Models</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ITodoRepository</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>TodoItem<span class="token punctuation">></span></span> <span class="token function">GetAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name">TodoItem</span> <span class="token function">Find</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name">TodoItem</span> <span class="token function">Remove</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Cái interface này định nghĩa các phương thức CRUD (Create - Read – Update – Delete)</p>
 <p>Tiếp theo, ta thêm class TodoRepository, triển khai các phương thức trong Interface mới tạo bên trên</p>
-<pre><code class="csharp">public class TodoRepository : ITodoRepository
-&#123;
-    private static ConcurrentDictionary&lt;string, TodoItem&gt; _todos = new ConcurrentDictionary&lt;string, TodoItem&gt;();
-    public TodoRepository()
-    &#123;
-        Add(new TodoItem &#123; Name = &quot;Item1&quot; &#125;);
-    &#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TodoRepository</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ITodoRepository</span></span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">ConcurrentDictionary<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> TodoItem<span class="token punctuation">></span></span> _todos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ConcurrentDictionary<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> TodoItem<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">TodoRepository</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">TodoItem</span> <span class="token punctuation">&#123;</span> Name <span class="token operator">=</span> <span class="token string">"Item1"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        item<span class="token punctuation">.</span>Key <span class="token operator">=</span> Guid<span class="token punctuation">.</span><span class="token function">NewGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _todos<span class="token punctuation">[</span>item<span class="token punctuation">.</span>Key<span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>TodoItem<span class="token punctuation">></span></span> <span class="token function">GetAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> _todos<span class="token punctuation">.</span>Values<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name">TodoItem</span> <span class="token function">Find</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> key<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name">TodoItem</span> item<span class="token punctuation">;</span>
+        _todos<span class="token punctuation">.</span><span class="token function">TryGetValue</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token keyword">out</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name">TodoItem</span> <span class="token function">Remove</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> key<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name">TodoItem</span> item<span class="token punctuation">;</span>
+        _todos<span class="token punctuation">.</span><span class="token function">TryGetValue</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token keyword">out</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _todos<span class="token punctuation">.</span><span class="token function">TryRemove</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token keyword">out</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        _todos<span class="token punctuation">[</span>item<span class="token punctuation">.</span>Key<span class="token punctuation">]</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    public void Add(TodoItem item)
-    &#123;
-        item.Key = Guid.NewGuid().ToString();
-        _todos[item.Key] = item;
-    &#125;
-
-    public IEnumerable&lt;TodoItem&gt; GetAll()
-    &#123;
-        return _todos.Values;
-    &#125;
-
-    public TodoItem Find(string key)
-    &#123;
-        TodoItem item;
-        _todos.TryGetValue(key, out item);
-        return item;
-    &#125;
-
-    public TodoItem Remove(string key)
-    &#123;
-        TodoItem item;
-        _todos.TryGetValue(key, out item);
-        _todos.TryRemove(key, out item);
-        return item;
-    &#125;
-
-    public void Update(TodoItem item)
-    &#123;
-        _todos[item.Key] = item;
-    &#125;
-&#125;</code></pre>
 <p>Xong xuôi thì build nó phát để coi có lỗi gì hok</p>
 <p><img src="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png"></p>
 <p>Build xong nó lên dư lày là okie</p>
@@ -541,42 +544,46 @@ public bool IsComplete &#123; get; set; &#125;</code></pre>
 <p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a target="_blank" rel="noopener" href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
 <p>Cách này giúp bạn dễ dàng viết Unit Test hơn. Test sẽ thu hẹp lại xuống logic của controller, chứ không test cái truy xuất dữ liệu.</p>
 <p>Để chọt (inject) nó vô controller, ta cần đăng ký nó. Mở file Startup.cs, thêm dòng sau vô đầu</p>
-<pre><code class="csharp">using todoapi.Models;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">todoapi<span class="token punctuation">.</span>Models</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Trong phương thức configureServices, thêm đoạn code sau vô cuối</p>
-<pre><code class="csharp">//Add our repository type
-services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token comment">//Add our repository type</span>
+services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddSingleton</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ITodoRepository<span class="token punctuation">,</span> TodoRepository<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h2 id="3-5-Them-controller"><a href="#3-5-Them-controller" class="headerlink" title="3.5. Thêm controller"></a>3.5. Thêm controller</h2><p><a id="markdown-th%C3%AAm-controller" name="th%C3%AAm-controller"></a></p>
 <p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
 <p>Chọn Web API Controller Class, đặt tên TodoController</p>
 <p><img src="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png"></p>
 <p>Xóa hết code trong class đi, thay bằng cái lày</p>
-<pre><code class="csharp">public class TodoController : Controller
-&#123;
-    public ITodoRepository TodoItems &#123; get; set; &#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TodoController</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Controller</span></span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">ITodoRepository</span> TodoItems <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token function">TodoController</span><span class="token punctuation">(</span><span class="token class-name">ITodoRepository</span> todoItems<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        TodoItems <span class="token operator">=</span> todoItems<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    public TodoController(ITodoRepository todoItems)
-    &#123;
-        TodoItems = todoItems;
-    &#125;
-&#125;</code></pre>
 <p>Như vậy là bạn đã khai báo một cái controller chả có gì bên trong cả. Trong các phần tiếp theo, chúng ta sẽ thêm các method để triển khai API nhóe.</p>
 <h2 id="3-6-Getting-to-do-items"><a href="#3-6-Getting-to-do-items" class="headerlink" title="3.6. Getting to-do items"></a>3.6. Getting to-do items</h2><p><a id="markdown-getting-to-do-items" name="getting-to-do-items"></a></p>
 <p>Thêm method sau vào TodoController</p>
-<pre><code class="csharp">public IEnumerable&lt;TodoItem&gt; GetAll()
-&#123;
-    return TodoItems.GetAll();
-&#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>TodoItem<span class="token punctuation">></span></span> <span class="token function">GetAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> TodoItems<span class="token punctuation">.</span><span class="token function">GetAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+ 
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpGet</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"&#123;id&#125;"</span><span class="token punctuation">,</span> Name <span class="token operator">=</span> <span class="token string">"GetToDo"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">GetById</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> id<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> item <span class="token operator">=</span> TodoItems<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>item <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">NotFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ObjectResult</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-[HttpGet(&quot;&#123;id&#125;&quot;, Name = &quot;GetToDo&quot;)]
-public IActionResult GetById(string id)
-&#123;
-    var item = TodoItems.Find(id);
-    if (item == null)
-    &#123;
-        return NotFound();
-    &#125;
-    return new ObjectResult(item);
-&#125;</code></pre>
 <p>Phương thức này có 2 cái get</p>
 <ul>
 <li>GET /api/todo</li>
@@ -603,44 +610,47 @@ public IActionResult GetById(string id)
 </ul>
 <h1 id="6-Trien-them-cac-phuong-thuc-CRUD-khac"><a href="#6-Trien-them-cac-phuong-thuc-CRUD-khac" class="headerlink" title="6. Triển thêm các phương thức CRUD khác"></a>6. Triển thêm các phương thức CRUD khác</h1><p><a id="markdown-tri%E1%BB%83n-th%C3%AAm-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-crud-kh%C3%A1c" name="tri%E1%BB%83n-th%C3%AAm-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-crud-kh%C3%A1c"></a></p>
 <h2 id="6-1-Create"><a href="#6-1-Create" class="headerlink" title="6.1. Create"></a>6.1. Create</h2><p><a id="markdown-create" name="create"></a></p>
-<pre><code class="csharp">[HttpPost]
-public IActionResult Create([FromBody] TodoItem item)
-&#123;
-    if (item == null)
-    &#123;
-        return BadRequest();
-    &#125;
-    TodoItems.Add(item);
-    return CreatedAtRoute(&quot;GetTodo&quot;, new &#123;id = item.Key&#125;, item);
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">Create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromBody</span></span><span class="token punctuation">]</span> <span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>item <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">BadRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    TodoItems<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">CreatedAtRoute</span><span class="token punctuation">(</span><span class="token string">"GetTodo"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token punctuation">&#123;</span>id <span class="token operator">=</span> item<span class="token punctuation">.</span>Key<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Phương thức Post</p>
 <p>[FromBody] cho phép MVC biết là cái TodoItem đó lấy từ body của request message</p>
 <p>Return CreatedAtRoute: sẽ trả về địa chỉ của cái item đấy luôn</p>
 <h2 id="6-2-Update"><a href="#6-2-Update" class="headerlink" title="6.2. Update"></a>6.2. Update</h2><p><a id="markdown-update" name="update"></a></p>
-<pre><code class="csharp">[HttpPut(&quot;&#123;id&#125;&quot;)]
-public IActionResult Update(string id, [FromBody] TodoItem item) 
-&#123;
-    if (item == null || item.Key != id) 
-    &#123;
-        return BadRequest();
-    &#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPut</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"&#123;id&#125;"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> id<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromBody</span></span><span class="token punctuation">]</span> <span class="token class-name">TodoItem</span> item<span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>item <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> item<span class="token punctuation">.</span>Key <span class="token operator">!=</span> id<span class="token punctuation">)</span> 
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">BadRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token class-name"><span class="token keyword">var</span></span> todo <span class="token operator">=</span> TodoItems<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>todo <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">NotFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    TodoItems<span class="token punctuation">.</span><span class="token function">Update</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">NoContentResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    var todo = TodoItems.Find(id);
-    if (todo == null) 
-    &#123;
-        return NotFound();
-    &#125;
-    TodoItems.Update(item);
-    return new NoContentResult();
-&#125;</code></pre>
 <p>Update cũng giống giống Create, nhưng mà xài HttpPut. Response chuẩn là 204 (No Content)</p>
 <p>Theo như tài liệu của HTTP, thì Put request đòi hỏi client phải gửi toàn bộ nội dung của item cần update, chứ không phải vài thông tin rời rạc. Để update chỉ 1 thông tin nào đó, dùng HttpPatch</p>
 <h2 id="6-3-Delete"><a href="#6-3-Delete" class="headerlink" title="6.3. Delete"></a>6.3. Delete</h2><p><a id="markdown-delete" name="delete"></a></p>
-<pre><code class="csharp">[HttpDelete(&quot;&#123;id&#125;&quot;)]
-public void Delete(string id)
-&#123;
-    TodoItems.Remove(id);
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpDelete</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"&#123;id&#125;"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Delete</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> id<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    TodoItems<span class="token punctuation">.</span><span class="token function">Remove</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Void trả về response là 204 (No Content). Tức là client sẽ nhận được 204 kể cả khi Item đã bị delete hay item ko tồn tại</p>
 <p>Vậy là xong rồi, chờ bài post tiếp theo nhóe bạn</p>
 

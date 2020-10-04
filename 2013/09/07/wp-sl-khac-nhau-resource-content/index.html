@@ -33,7 +33,7 @@
 <meta property="og:description" content="Mọi thứ có trong project folder, ta đều phải lựa chọn: Resource hay Content? Bài viết này sẽ nói về sự khác biệt giữa 2 thể loại này, cũng như lợi&#x2F;hại của từng loại">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2013-09-07T08:59:02.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.903Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.046Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="content">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -385,16 +385,20 @@
 <h1 id="2-Truy-xuat"><a href="#2-Truy-xuat" class="headerlink" title="2. Truy xuất"></a>2. Truy xuất</h1><p>Truy xuất tới các file resource và content khác nhau một tí</p>
 <h2 id="2-1-Hinh-anh-thuoc-tinh-Content"><a href="#2-1-Hinh-anh-thuoc-tinh-Content" class="headerlink" title="2.1. Hình ảnh thuộc tính Content"></a>2.1. Hình ảnh thuộc tính Content</h2><p>Content là một file nằm riêng biệt, nên truy xuất dễ dàng:</p>
 <p>XAML:</p>
-<pre><code class="xml">&lt;Image Stretch=&quot;None&quot; Source=&quot;/images/yourImage.png&quot;/&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Stretch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>None<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/images/yourImage.png<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>C#:</p>
-<pre><code class="csharp">Uri uri = new Uri(&quot;/images/yourImage.png&quot;, UriKind.Relative);
-BitmapImage imgSource = new BitmapImage(uri);</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token class-name">Uri</span> uri <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Uri</span><span class="token punctuation">(</span><span class="token string">"/images/yourImage.png"</span><span class="token punctuation">,</span> UriKind<span class="token punctuation">.</span>Relative<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">BitmapImage</span> imgSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">BitmapImage</span><span class="token punctuation">(</span>uri<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h2 id="2-2-Hinh-anh-thuoc-tinh-Resource"><a href="#2-2-Hinh-anh-thuoc-tinh-Resource" class="headerlink" title="2.2. Hình ảnh thuộc tính Resource"></a>2.2. Hình ảnh thuộc tính Resource</h2><p>Resource, vì nằm trong một file dll, nên truy xuất nó khó khăn hơn nhiều</p>
 <p>XAML:</p>
-<pre><code class="xml">&lt;Image Source=&quot;/TestProjet;component/images/yourImage.png&quot;/&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/TestProjet;component/images/yourImage.png<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>C#:</p>
-<pre><code class="csharp">Uri uri = new Uri(&quot;/TestProjet;component/images/yourImage.png&quot;, UriKind.Relative);
-this.Image.Source = new BitmapImage(uri);</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token class-name">Uri</span> uri <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Uri</span><span class="token punctuation">(</span><span class="token string">"/TestProjet;component/images/yourImage.png"</span><span class="token punctuation">,</span> UriKind<span class="token punctuation">.</span>Relative<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>Image<span class="token punctuation">.</span>Source <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">BitmapImage</span><span class="token punctuation">(</span>uri<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h1 id="3-Chon-cai-nao"><a href="#3-Chon-cai-nao" class="headerlink" title="3. Chọn cái nào"></a>3. Chọn cái nào</h1><p>Hiểu rồi, giờ bạn sẽ chọn cái nào cho các file thêm vào project?</p>
 <p>Một file Resource sẽ load nhanh hơn khi bạn truy xuất nó. Tuy nhiên, ứng dụng sẽ khởi động chậm hơn. Và ngược lại, một file Content sẽ load chậm hơn, bù lại, ứng dụng sẽ không phải load file này vào bộ nhớ trong lúc đang khởi động.</p>
 <p>Nếu bạn cần truy xuất một file rất lớn, mà ứng dụng chưa cần ngay, hay chọn ngay Content. Ngược lại, nếu ứng dụng của bạn cần load file đó ngay khi chạy (ví dụ như Wallpaper chẳng hạn), thì lời khuyên là nên chọn Resource cho nó, vì đằng nào bạn cũng phải load nó lên.</p>

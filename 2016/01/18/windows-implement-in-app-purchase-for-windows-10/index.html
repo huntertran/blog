@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png">
 <meta property="og:image" content="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png">
 <meta property="article:published_time" content="2016-01-18T10:05:10.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows 10">
 <meta property="article:tag" content="iap">
@@ -344,7 +344,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -438,50 +438,54 @@
 <p>Và đây sẽ là cách. Lưu ý làm theo đúng thứ tự được trình bày trong blog này</p>
 <h3 id="3-3-1-Su-dung-CurrentAppSimulator"><a href="#3-3-1-Su-dung-CurrentAppSimulator" class="headerlink" title="3.3.1. Sử dụng CurrentAppSimulator"></a>3.3.1. Sử dụng CurrentAppSimulator</h3><p><a id="markdown-s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator" name="s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator"></a></p>
 <p>Trong method khởi tạo hoặc load data cho app của bạn, đặt các dòng code sau</p>
-<pre><code class="csharp">StaticData.license = CurrentAppSimulator.LicenseInformation; StaticData.listings = await CurrentAppSimulator.LoadListingInformationAsync();</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">StaticData<span class="token punctuation">.</span>license <span class="token operator">=</span> CurrentAppSimulator<span class="token punctuation">.</span>LicenseInformation<span class="token punctuation">;</span> StaticData<span class="token punctuation">.</span>listings <span class="token operator">=</span> <span class="token keyword">await</span> CurrentAppSimulator<span class="token punctuation">.</span><span class="token function">LoadListingInformationAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>StaticData là một class chứa các biến Static, có thể truy cập ở mọi class khác Ngay sau khi chạy đoạn code này, Visual Studio sẽ tạo ra 1 file XML giả ở C:UsersAppDataLocalPackagesLocalStateMicrosoftWindows StoreApiDataWindowsStoreProxy.xml</p>
 <p>Bạn mở nó lên, và sửa các giá trị sau</p>
-<pre><code class="xml">&lt;App&gt;
- &lt;IsActive&gt;true&lt;/IsActive&gt;
- &lt;IsTrial&gt;false&lt;/IsTrial&gt;
-&lt;/App&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IsActive</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IsActive</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IsTrial</span><span class="token punctuation">></span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IsTrial</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>App</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Mục Product ID, sửa lại cho trùng với Product ID bạn đã đặt trên Dev Center</p>
 <h3 id="3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham"><a href="#3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham" class="headerlink" title="3.3.2. Hiện giá (và các thông tin khác) của sản phẩm"></a>3.3.2. Hiện giá (và các thông tin khác) của sản phẩm</h3><p><a id="markdown-hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m" name="hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m"></a></p>
 <p>Như bạn đã thấy rõ, StaticData.listings chứa toàn bộ In-App Purchase của bạn. Mọi sản phẩm đều có mặt trong này. Như vậy, để gắn giá lên một sản phẩm nào đó, ngoài việc có template, model ra, bạn sẽ cần phải chạy một vòng lặp</p>
-<pre><code class="csharp">foreach(KeyValuePair&lt;string, ProductListing&gt; productListing in StaticData.listings.ProductListings)
-&#123;
-  if (productListing.Key.TrimStart(&#39;0&#39;) == issue.id)
-  &#123;
-    issue.billing.price = productListing.Value.FormattedPrice;
-  &#125;
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token class-name">KeyValuePair<span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">,</span> ProductListing<span class="token punctuation">></span></span> productListing <span class="token keyword">in</span> StaticData<span class="token punctuation">.</span>listings<span class="token punctuation">.</span>ProductListings<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>productListing<span class="token punctuation">.</span>Key<span class="token punctuation">.</span><span class="token function">TrimStart</span><span class="token punctuation">(</span><span class="token string character">'0'</span><span class="token punctuation">)</span> <span class="token operator">==</span> issue<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span>
+    issue<span class="token punctuation">.</span>billing<span class="token punctuation">.</span>price <span class="token operator">=</span> productListing<span class="token punctuation">.</span>Value<span class="token punctuation">.</span>FormattedPrice<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Trong đoạn code trên, Product ID của mình là 0154, và issue.id là “154” FormattedPrice sẽ bao gồm cả đơn vị tiền tệ mà hệ thống đang sử dụng. Bạn cũng có thể đọc các thông tin khác như Description, Tag, vân vân và vân vân</p>
 <h3 id="3-3-3-Mua-In-App-Purchase"><a href="#3-3-3-Mua-In-App-Purchase" class="headerlink" title="3.3.3. Mua In-App Purchase"></a>3.3.3. Mua In-App Purchase</h3><p><a id="markdown-mua-in-app-purchase" name="mua-in-app-purchase"></a></p>
 <p>Nhờ sự giúp đỡ của CurrentAppSimulator, bạn có thể test mua thoải mái. Chỉ cần chỉnh sửa các giá trị trong file WindowsStoreProxy.xml để test đi test lại Về cơ bản, đoạn code mua một vật phẩm bằng In-App Purchase sẽ như sau</p>
-<pre><code class="csharp">if (!StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
-&#123;
-  try
-  &#123;
-    // Người dùng chưa từng mua cái này 
-    // Hiện hộp thoại mua
-    await CurrentAppSimulator.RequestProductPurchaseAsync(_selectedIssue.billing.iapKey);
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>StaticData<span class="token punctuation">.</span>license<span class="token punctuation">.</span>ProductLicenses<span class="token punctuation">[</span>_selectedIssue<span class="token punctuation">.</span>billing<span class="token punctuation">.</span>iapKey<span class="token punctuation">]</span><span class="token punctuation">.</span>IsActive<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">try</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Người dùng chưa từng mua cái này </span>
+    <span class="token comment">// Hiện hộp thoại mua</span>
+    <span class="token keyword">await</span> CurrentAppSimulator<span class="token punctuation">.</span><span class="token function">RequestProductPurchaseAsync</span><span class="token punctuation">(</span>_selectedIssue<span class="token punctuation">.</span>billing<span class="token punctuation">.</span>iapKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    //Kiểm tra lại xem đã mua thành công chưa 
-    if (StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
-    &#123;
-      // Nếu mua thành công thì làm trò mèo gì đó 
-    &#125;
-  &#125;
-  catch(Exception)
-  &#123;
-    // Mua bị lỗi 
-    // an error occurred. 
-  &#125;
-&#125;
-else
-&#123;
-  // Đã mua cái này rồi, tiếp tục trò mèo 
-&#125;</code></pre>
+    <span class="token comment">//Kiểm tra lại xem đã mua thành công chưa </span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>StaticData<span class="token punctuation">.</span>license<span class="token punctuation">.</span>ProductLicenses<span class="token punctuation">[</span>_selectedIssue<span class="token punctuation">.</span>billing<span class="token punctuation">.</span>iapKey<span class="token punctuation">]</span><span class="token punctuation">.</span>IsActive<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+      <span class="token comment">// Nếu mua thành công thì làm trò mèo gì đó </span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Mua bị lỗi </span>
+    <span class="token comment">// an error occurred. </span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token comment">// Đã mua cái này rồi, tiếp tục trò mèo </span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật <img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"> Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
 <h2 id="3-4-Step-4-Change-the-test-code-to-actual-code"><a href="#3-4-Step-4-Change-the-test-code-to-actual-code" class="headerlink" title="3.4. Step 4: Change the test code to actual code"></a>3.4. Step 4: Change the test code to actual code</h2><p><a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a></p>
 <p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công <img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>

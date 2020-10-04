@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7407/10135898285_7ea60ebd9a_o.png">
 <meta property="og:image" content="https://farm3.staticflickr.com/2834/10238287965_30e435db37_o.png">
 <meta property="article:published_time" content="2013-10-13T03:58:57.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.903Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="textbox">
 <meta property="article:tag" content="textblock">
@@ -343,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,91 +395,93 @@
 <h1 id="2-Selectable-TextBlock"><a href="#2-Selectable-TextBlock" class="headerlink" title="2. Selectable TextBlock"></a>2. Selectable TextBlock</h1><p>Textblock, dĩ nhiên là không select được rồi.</p>
 <p>Vậy ta sẽ chỉnh một chút cho TextBox giống với TextBlock, để lợi dụng tính “Selectable” của nó</p>
 <p>add code sau vào resource</p>
-<pre><code class="xml">&lt;Style x:Key=&quot;TextBoxStyle1&quot; TargetType=&quot;TextBox&quot;&gt;
-    &lt;Setter Property=&quot;Background&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
-    &lt;Setter Property=&quot;Foreground&quot; Value=&quot;&#123;StaticResource PhoneForegroundBrush&#125;&quot; /&gt;
-    &lt;Setter Property=&quot;BorderBrush&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
-    &lt;Setter Property=&quot;SelectionBackground&quot; Value=&quot;&#123;StaticResource PhoneAccentBrush&#125;&quot; /&gt;
-    &lt;Setter Property=&quot;SelectionForeground&quot; Value=&quot;&#123;StaticResource PhoneTextBoxSelectionForegroundBrush&#125;&quot; /&gt;
-    &lt;Setter Property=&quot;Template&quot;&gt;
-        &lt;Setter.Value&gt;
-            &lt;ControlTemplate TargetType=&quot;TextBox&quot;&gt;
-                &lt;Grid Background=&quot;Transparent&quot;&gt;
-                    &lt;VisualStateManager.VisualStateGroups&gt;
-                        &lt;VisualStateGroup x:Name=&quot;CommonStates&quot;&gt;
-                            &lt;VisualState x:Name=&quot;ReadOnly&quot;&gt;
-                                &lt;Storyboard&gt;
-                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;EnabledBorder&quot; Storyboard.TargetProperty=&quot;Visibility&quot;&gt;
-                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;
-                                            &lt;DiscreteObjectKeyFrame.Value&gt;
-                                                &lt;Visibility&gt;Collapsed&lt;/Visibility&gt;
-                                            &lt;/DiscreteObjectKeyFrame.Value&gt;
-                                        &lt;/DiscreteObjectKeyFrame&gt;
-                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
-                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;Visibility&quot;&gt;
-                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;
-                                            &lt;DiscreteObjectKeyFrame.Value&gt;
-                                                &lt;Visibility&gt;Visible&lt;/Visibility&gt;
-                                            &lt;/DiscreteObjectKeyFrame.Value&gt;
-                                        &lt;/DiscreteObjectKeyFrame&gt;
-                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
-                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;Background&quot;&gt;
-                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
-                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
-                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyBorder&quot; Storyboard.TargetProperty=&quot;BorderBrush&quot;&gt;
-                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; /&gt;
-                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
-                                    &lt;ObjectAnimationUsingKeyFrames Storyboard.TargetName=&quot;DisabledOrReadonlyContent&quot; Storyboard.TargetProperty=&quot;Foreground&quot;&gt;
-                                        &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;&#123;StaticResource PhoneForegroundBrush&#125;&quot; /&gt;
-                                    &lt;/ObjectAnimationUsingKeyFrames&gt;
-                                &lt;/Storyboard&gt;
-                            &lt;/VisualState&gt;
-                        &lt;/VisualStateGroup&gt;
-                    &lt;/VisualStateManager.VisualStateGroups&gt;
-                    &lt;Border x:Name=&quot;EnabledBorder&quot;
-                            Margin=&quot;&#123;StaticResource PhoneTouchTargetOverhang&#125;&quot;
-                            Background=&quot;&#123;TemplateBinding Background&#125;&quot;
-                            BorderBrush=&quot;&#123;TemplateBinding BorderBrush&#125;&quot;
-                            BorderThickness=&quot;&#123;TemplateBinding BorderThickness&#125;&quot;&gt;
-                        &lt;ContentControl x:Name=&quot;ContentElement&quot;
-                                        Margin=&quot;&#123;StaticResource PhoneTextBoxInnerMargin&#125;&quot;
-                                        HorizontalContentAlignment=&quot;Stretch&quot;
-                                        VerticalContentAlignment=&quot;Stretch&quot;
-                                        BorderThickness=&quot;0&quot;
-                                        Padding=&quot;&#123;TemplateBinding Padding&#125;&quot; /&gt;
-                    &lt;/Border&gt;
-                    &lt;Border x:Name=&quot;DisabledOrReadonlyBorder&quot;
-                            Margin=&quot;&#123;StaticResource PhoneTouchTargetOverhang&#125;&quot;
-                            Background=&quot;Transparent&quot;
-                            BorderBrush=&quot;&#123;StaticResource PhoneDisabledBrush&#125;&quot;
-                            BorderThickness=&quot;&#123;TemplateBinding BorderThickness&#125;&quot;
-                            Visibility=&quot;Collapsed&quot;&gt;
-                        &lt;TextBox x:Name=&quot;DisabledOrReadonlyContent&quot;
-                                 Background=&quot;Transparent&quot;
-                                 FontFamily=&quot;&#123;TemplateBinding FontFamily&#125;&quot;
-                                 FontSize=&quot;&#123;TemplateBinding FontSize&#125;&quot;
-                                 FontStyle=&quot;&#123;TemplateBinding FontStyle&#125;&quot;
-                                 FontWeight=&quot;&#123;TemplateBinding FontWeight&#125;&quot;
-                                 Foreground=&quot;&#123;StaticResource PhoneDisabledBrush&#125;&quot;
-                                 IsReadOnly=&quot;True&quot;
-                                 SelectionBackground=&quot;&#123;TemplateBinding SelectionBackground&#125;&quot;
-                                 SelectionForeground=&quot;&#123;TemplateBinding SelectionForeground&#125;&quot;
-                                 Template=&quot;&#123;StaticResource PhoneDisabledTextBoxTemplate&#125;&quot;
-                                 Text=&quot;&#123;TemplateBinding Text&#125;&quot;
-                                 TextAlignment=&quot;&#123;TemplateBinding TextAlignment&#125;&quot;
-                                 TextWrapping=&quot;&#123;TemplateBinding TextWrapping&#125;&quot; /&gt;
-                    &lt;/Border&gt;
-                &lt;/Grid&gt;
-            &lt;/ControlTemplate&gt;
-        &lt;/Setter.Value&gt;
-    &lt;/Setter&gt;
-&lt;/Style&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Style</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextBoxStyle1<span class="token punctuation">"</span></span> <span class="token attr-name">TargetType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextBox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Background<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneBackgroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Foreground<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneForegroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>BorderBrush<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneBackgroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>SelectionBackground<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneAccentBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>SelectionForeground<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneTextBoxSelectionForegroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Template<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter.Value</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ControlTemplate</span> <span class="token attr-name">TargetType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextBox<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span> <span class="token attr-name">Background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Transparent<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VisualStateManager.VisualStateGroups</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VisualStateGroup</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>CommonStates<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VisualState</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ReadOnly<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Storyboard</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectAnimationUsingKeyFrames</span> <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EnabledBorder<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Visibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame</span> <span class="token attr-name">KeyTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame.Value</span><span class="token punctuation">></span></span>
+                                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Visibility</span><span class="token punctuation">></span></span>Collapsed<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Visibility</span><span class="token punctuation">></span></span>
+                                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>DiscreteObjectKeyFrame.Value</span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>DiscreteObjectKeyFrame</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ObjectAnimationUsingKeyFrames</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectAnimationUsingKeyFrames</span> <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyBorder<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Visibility<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame</span> <span class="token attr-name">KeyTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame.Value</span><span class="token punctuation">></span></span>
+                                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Visibility</span><span class="token punctuation">></span></span>Visible<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Visibility</span><span class="token punctuation">></span></span>
+                                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>DiscreteObjectKeyFrame.Value</span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>DiscreteObjectKeyFrame</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ObjectAnimationUsingKeyFrames</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectAnimationUsingKeyFrames</span> <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyBorder<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Background<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame</span> <span class="token attr-name">KeyTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneBackgroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ObjectAnimationUsingKeyFrames</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectAnimationUsingKeyFrames</span> <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyBorder<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>BorderBrush<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame</span> <span class="token attr-name">KeyTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneBackgroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ObjectAnimationUsingKeyFrames</span><span class="token punctuation">></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectAnimationUsingKeyFrames</span> <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyContent<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Foreground<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DiscreteObjectKeyFrame</span> <span class="token attr-name">KeyTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneForegroundBrush&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ObjectAnimationUsingKeyFrames</span><span class="token punctuation">></span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Storyboard</span><span class="token punctuation">></span></span>
+                            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VisualState</span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VisualStateGroup</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VisualStateManager.VisualStateGroups</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Border</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EnabledBorder<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneTouchTargetOverhang&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">Background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding Background&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">BorderBrush</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding BorderBrush&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">BorderThickness</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding BorderThickness&#125;<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContentControl</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ContentElement<span class="token punctuation">"</span></span>
+                                        <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneTextBoxInnerMargin&#125;<span class="token punctuation">"</span></span>
+                                        <span class="token attr-name">HorizontalContentAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Stretch<span class="token punctuation">"</span></span>
+                                        <span class="token attr-name">VerticalContentAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Stretch<span class="token punctuation">"</span></span>
+                                        <span class="token attr-name">BorderThickness</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>
+                                        <span class="token attr-name">Padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding Padding&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Border</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Border</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyBorder<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneTouchTargetOverhang&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">Background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Transparent<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">BorderBrush</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneDisabledBrush&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">BorderThickness</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding BorderThickness&#125;<span class="token punctuation">"</span></span>
+                            <span class="token attr-name">Visibility</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Collapsed<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextBox</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DisabledOrReadonlyContent<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">Background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Transparent<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">FontFamily</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding FontFamily&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">FontSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding FontSize&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">FontStyle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding FontStyle&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">FontWeight</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding FontWeight&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">Foreground</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneDisabledBrush&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">IsReadOnly</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>True<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">SelectionBackground</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding SelectionBackground&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">SelectionForeground</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding SelectionForeground&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">Template</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource PhoneDisabledTextBoxTemplate&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">Text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding Text&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">TextAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding TextAlignment&#125;<span class="token punctuation">"</span></span>
+                                 <span class="token attr-name">TextWrapping</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;TemplateBinding TextWrapping&#125;<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Border</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ControlTemplate</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Setter.Value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Setter</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Khi dùng, chỉ cần</p>
-<pre><code class="xml">&lt;TextBox x:Name=&quot;testTextBox&quot;
-         IsReadOnly=&quot;True&quot;
-         Style=&quot;&#123;StaticResource TextBoxStyle1&#125;&quot;
-         Text=&quot;Hello world&quot;
-         TextWrapping=&quot;Wrap&quot; /&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextBox</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>testTextBox<span class="token punctuation">"</span></span>
+         <span class="token attr-name">IsReadOnly</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>True<span class="token punctuation">"</span></span>
+         <span class="token attr-name">Style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&#123;StaticResource TextBoxStyle1&#125;<span class="token punctuation">"</span></span>
+         <span class="token attr-name">Text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Hello world<span class="token punctuation">"</span></span>
+         <span class="token attr-name">TextWrapping</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Wrap<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Thế là xong</p>
 
     </div>

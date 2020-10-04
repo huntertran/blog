@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.com/internettips/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/machine-learning-course/</loc>
     
     <lastmod>2020-10-04</lastmod>
@@ -37,7 +44,35 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/internettips/</loc>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
     
     <lastmod>2020-10-04</lastmod>
     
@@ -101,13 +136,6 @@
   
   <url>
     <loc>https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2020-10-04</lastmod>
     
@@ -310,6 +338,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/about/</loc>
     
     <lastmod>2020-10-04</lastmod>
@@ -324,21 +359,56 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/11/visual-studio-nuget-the-magician/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/12/14/beginning-with-imagine-cup-2014/</loc>
+    
+    <lastmod>2020-10-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
     
     <lastmod>2020-10-04</lastmod>
     
@@ -681,27 +751,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-10-04</lastmod>
@@ -808,55 +857,6 @@
   
   <url>
     <loc>https://huntertran.com/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/11/visual-studio-nuget-the-magician/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/12/14/beginning-with-imagine-cup-2014/</loc>
-    
-    <lastmod>2020-10-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
     
     <lastmod>2020-10-04</lastmod>
     
@@ -2027,27 +2027,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/tags/database/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/tags/entity-framework/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/tags/model/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/tags/framework/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
@@ -2334,6 +2313,27 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://huntertran.com/tags/database/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/tags/entity-framework/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/tags/model/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -2449,13 +2449,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/categories/Java/</loc>
-    <lastmod>2020-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/CSharp/Windows-10/Windows-Store-App/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
@@ -2464,6 +2457,13 @@
   
   <url>
     <loc>https://huntertran.com/categories/VSCode/</loc>
+    <lastmod>2020-10-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/Java/</loc>
     <lastmod>2020-10-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png">
 <meta property="article:published_time" content="2017-08-30T02:54:40.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="identity">
 <meta name="twitter:card" content="summary">
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -433,23 +433,25 @@
 <h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
 <h3 id="3-1-1-Ket-noi-toi-database"><a href="#3-1-1-Ket-noi-toi-database" class="headerlink" title="3.1.1. Kết nối tới database"></a>3.1.1. Kết nối tới database</h3><p><a id="markdown-k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database" name="k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database"></a></p>
 <p>Mặc định, Identity dùng connection string có tên “DefaultConnection” Mở <code>Models/IdentityModels</code></p>
-<pre><code class="cs">public class ApplicationDbContext : IdentityDbContext&lt;ApplicationUser&gt;
-&#123; 
-    public ApplicationDbContext() : base(&quot;DefaultConnection&quot;, throwIfV1Schema: false)
-    &#123;
-    &#125;
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ApplicationDbContext</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IdentityDbContext<span class="token punctuation">&lt;</span>ApplicationUser<span class="token punctuation">></span></span></span>
+<span class="token punctuation">&#123;</span> 
+    <span class="token keyword">public</span> <span class="token function">ApplicationDbContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span><span class="token string">"DefaultConnection"</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">throwIfV1Schema</span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#125;</span>
 
-    public static ApplicationDbContext Create()
-    &#123;
-        return new ApplicationDbContext();
-    &#125;
-&#125;</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">ApplicationDbContext</span> <span class="token function">Create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ApplicationDbContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Mở Web.config, kiếm <code>DefaultConnection</code>, bạn sẽ thấy connection string của nó nối tới Database</p>
-<pre><code class="xml">&lt;connectionStrings&gt;
-  &lt;add name=&quot;DefaultConnection&quot;
-       connectionString=&quot;Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog=aspnet-LearnIdentity2-20170824112720;Integrated Security=True&quot;
-       providerName=&quot;System.Data.SqlClient&quot; /&gt;
-&lt;/connectionStrings&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>connectionStrings</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>DefaultConnection<span class="token punctuation">"</span></span>
+       <span class="token attr-name">connectionString</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog=aspnet-LearnIdentity2-20170824112720;Integrated Security=True<span class="token punctuation">"</span></span>
+       <span class="token attr-name">providerName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>System.Data.SqlClient<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>connectionStrings</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó</p>
 <p><img src="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
 <p>Vậy bạn có tự hỏi làm sao mà mới chỉ chạy project thôi mà Identity đã tạo được database?</p>

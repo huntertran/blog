@@ -33,7 +33,7 @@
 <meta property="og:description" content="Có một cách giúp bạn tự động áp dụng ValidateAntiForgeryToken vào tất cả các Post Action trong controller của mình">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-03-03T09:09:06.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="attack">
 <meta property="article:tag" content="cross-site">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,18 +367,62 @@
     <div class="post-body" itemprop="articleBody">
         <p>Có một cách giúp bạn tự động áp dụng <code>ValidateAntiForgeryToken</code> vào tất cả các Post Action trong controller của mình</p>
 <a id="more"></a>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-default-protection-with-aspnet-core-2">1. Default protection with ASP.NET Core 2</a></li>
+<li><a href="#2-auto-protection-with-aspnet-core-2">2. Auto protection with ASP.NET Core 2</a><ul>
+<li><a href="#21-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-t%E1%BB%B1-%C4%91%E1%BB%99ng-cho-t%E1%BB%ABng-controller">2.1. Nếu bạn muốn tự động cho từng Controller</a></li>
+<li><a href="#22-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-%C3%A1p-d%E1%BB%A5ng-cho-to%C3%A0n-b%E1%BB%99-app">2.2. Nếu bạn muốn áp dụng cho toàn bộ app</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
 <p>Chắc bạn đã từng nghe qua <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-site Request Forgery (CSRF) attacks</a>. Hiểu một cách đơn giản là Server thực thi một request giả mạo xuất phát từ hacker, nhưng với chứng thực xịn của 1 user nào đó. Điều này rất dễ thực hiện. Giả sử bạn truy cập 1 forum nào đó, trong đó có chứa đoạn javascript giả mạo 1 request tới ngân hàng của bạn, yêu cầu chuyển tiền. Nếu bạn vẫn đang đăng nhập vào tài khoản ebanking của mình, và ngân hàng ko áp dụng bất kỳ phương pháp bảo vệ nào, thì như một cái búng tay, tiền của bạn đã chuyển vào túi hacker.</p>
 <p>ASP.NET đã implement sẵn cho bạn cách để chống lại phương thức tấn công này, và họ gọi nó là <em><code>Anti-forgery Token</code></em></p>
-<h1 id="Default-protection-with-ASP-NET-Core-2"><a href="#Default-protection-with-ASP-NET-Core-2" class="headerlink" title="Default protection with ASP.NET Core 2"></a>Default protection with ASP.NET Core 2</h1><p>Với ASP.NET Core 2, mỗi khi bạn dùng <code>form</code> tag, asp.net sẽ tự động chèn anti-forgery token cho bạn</p>
+<h1 id="Default-protection-with-ASP-NET-Core-2"><a href="#Default-protection-with-ASP-NET-Core-2" class="headerlink" title="Default protection with ASP.NET Core 2"></a>Default protection with ASP.NET Core 2</h1><p><a id="markdown-default-protection-with-asp.net-core-2" name="default-protection-with-asp.net-core-2"></a></p>
+<p>Với ASP.NET Core 2, mỗi khi bạn dùng <code>form</code> tag, asp.net sẽ tự động chèn anti-forgery token cho bạn</p>
 <blockquote>
-<p>Với điều kiện: <code>form</code> tag có attribute <code>method=&quot;post&quot;</code> VÀ * attribute <code>action</code> không có data: <code>action=&quot;&quot;</code> HOẶC * attribute <code>action</code> không có</p>
+<p>Với điều kiện: <code>form</code> tag có attribute <code>method=&quot;post&quot;</code></p>
+<p>VÀ</p>
+<ul>
+<li>attribute <code>action</code> không có data: <code>action=&quot;&quot;</code><br>HOẶC</li>
+<li>attribute <code>action</code> không có</li>
+</ul>
 </blockquote>
 <p>Tiếp tục, bạn phải thêm attribute <code>[ValidateAntiForgeryToken]</code> và action nhận data post lên</p>
-<p>[code lang=csharp] [HttpPost] [ValidateAntiForgeryToken] public async Task<IActionResult> RemoveLogin(RemoveLoginViewModel account) { // Do something here } [/code]</p>
-<h1 id="Auto-protection-with-ASP-NET-Core-2"><a href="#Auto-protection-with-ASP-NET-Core-2" class="headerlink" title="Auto protection with ASP.NET Core 2"></a>Auto protection with ASP.NET Core 2</h1><p>Ở cách trên, với mỗi Action nhận Post request, bạn đều phải thêm [ValidationAntiForgeryToken] thủ công</p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">ValidateAntiForgeryToken</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span>IActionResult<span class="token punctuation">></span></span> <span class="token function">RemoveLogin</span><span class="token punctuation">(</span><span class="token class-name">RemoveLoginViewModel</span> account<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// Do something here</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="Auto-protection-with-ASP-NET-Core-2"><a href="#Auto-protection-with-ASP-NET-Core-2" class="headerlink" title="Auto protection with ASP.NET Core 2"></a>Auto protection with ASP.NET Core 2</h1><p><a id="markdown-auto-protection-with-asp.net-core-2" name="auto-protection-with-asp.net-core-2"></a></p>
+<p>Ở cách trên, với mỗi Action nhận Post request, bạn đều phải thêm <code>[ValidationAntiForgeryToken]</code> thủ công</p>
 <p>Asp.net Core giới thiệu 1 class mới, giúp bạn tự động hóa quá trình này</p>
-<h2 id="Neu-ban-muon-tu-dong-cho-tung-Controller"><a href="#Neu-ban-muon-tu-dong-cho-tung-Controller" class="headerlink" title="Nếu bạn muốn tự động cho từng Controller"></a>Nếu bạn muốn tự động cho từng Controller</h2><p>[code lang=csharp] [Authorize] [AutoValidateAntiforgeryToken] public class ManageController : Controller { // Your code here } [/code]</p>
-<h2 id="Neu-ban-muon-ap-dung-cho-toan-bo-app"><a href="#Neu-ban-muon-ap-dung-cho-toan-bo-app" class="headerlink" title="Nếu bạn muốn áp dụng cho toàn bộ app"></a>Nếu bạn muốn áp dụng cho toàn bộ app</h2><p>[code lang=csharp] public class Startup { public void ConfigureServices(IServiceCollection services) { services.AddMvc(options =&gt; { options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()); }); } } [/code]</p>
+<h2 id="Neu-ban-muon-tu-dong-cho-tung-Controller"><a href="#Neu-ban-muon-tu-dong-cho-tung-Controller" class="headerlink" title="Nếu bạn muốn tự động cho từng Controller"></a>Nếu bạn muốn tự động cho từng Controller</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-t%E1%BB%B1-%C4%91%E1%BB%99ng-cho-t%E1%BB%ABng-controller" name="n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-t%E1%BB%B1-%C4%91%E1%BB%99ng-cho-t%E1%BB%ABng-controller"></a></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Authorize</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">AutoValidateAntiforgeryToken</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ManageController</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Controller</span></span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// Your code here</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Neu-ban-muon-ap-dung-cho-toan-bo-app"><a href="#Neu-ban-muon-ap-dung-cho-toan-bo-app" class="headerlink" title="Nếu bạn muốn áp dụng cho toàn bộ app"></a>Nếu bạn muốn áp dụng cho toàn bộ app</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-%C3%A1p-d%E1%BB%A5ng-cho-to%C3%A0n-b%E1%BB%99-app" name="n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-%C3%A1p-d%E1%BB%A5ng-cho-to%C3%A0n-b%E1%BB%99-app"></a></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Startup</span>  
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ConfigureServices</span><span class="token punctuation">(</span><span class="token class-name">IServiceCollection</span> services<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        services<span class="token punctuation">.</span><span class="token function">AddMvc</span><span class="token punctuation">(</span>options <span class="token operator">=></span>
+        <span class="token punctuation">&#123;</span>
+            options<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">AutoValidateAntiforgeryTokenAttribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Vậy là xong</p>
 
     </div>

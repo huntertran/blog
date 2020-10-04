@@ -33,7 +33,7 @@
 <meta property="og:description" content="ASP.NET Core giới thiệu một cách vô cùng tự nhiên để xây dựng các thẻ input, label và một số thẻ khác với từ khóa asp-for, chúng được gọi là tag helper Bạn cũng có thể tạo ra các tag helper của riêng">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-01-12T16:27:40.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="input">
 <meta property="article:tag" content=".net core">
@@ -338,7 +338,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -413,121 +413,126 @@
 <p><code>label</code> là cái tag mà bạn sẽ customize hơi nhiều trong ứng dụng asp.net core của mình. Lý do là vì bạn muốn nó có thêm một dấu <code>*</code> màu đỏ đối với các input yêu cầu bắt buộc, bạn cũng muốn nó có thêm <code>(500 ký tự)</code> khi ô input chỉ cho phép nhập 500 ký tự.</p>
 <p>Tất nhiên, tất cả những cái đó đều có thể thêm vào dễ dàng bằng cách … add tay</p>
 <p>ASP.NET MVC, và sau này là ASP.NET CORE, cho phép bạn xây dựng <code>model</code> với các <code>DataAnnotation</code> nhằm khai báo cho cơ sở dữ liệu biết các giới hạn hoặc định nghĩa của một column trên database, đồng thời giúp bạn validate input field của nó ở client-side code</p>
-<pre><code class="cs">[Required]
-[Display(Name = &quot;User name&quot;)]
-[StringLenght(15)]
-public string Username &#123; get; set; &#125;</code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Display</span><span class="token attribute-arguments"><span class="token punctuation">(</span>Name <span class="token operator">=</span> <span class="token string">"User name"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">StringLenght</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Username <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Tuy nhiên, khi tạo input field cho property <code>username</code> này, bạn vẫn phải tự tạo tay các dấu <code>*</code> và dòng chữ <code>tối đa 15 ký tự</code> kia</p>
-<pre><code class="html">&lt;label asp-for=&quot;Username&quot;&gt;&lt;/label&gt;
-&lt;input asp-for=&quot;Username&quot;/&gt;
-&lt;span asp-validation-for=&quot;Username&quot;&gt;&lt;/span&gt;</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">asp-validation-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>đoạn code trên sẽ generate ra các dòng html sau</p>
-<pre><code class="html">&lt;label for=&quot;Username&quot;&gt;User name&lt;/label&gt;
-....các dòng khác...</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>User name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+....các dòng khác...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h1 id="3-Customize-Label-tag-helper"><a href="#3-Customize-Label-tag-helper" class="headerlink" title="3. Customize Label tag helper"></a>3. Customize Label tag helper</h1><p><a id="markdown-customize-label-tag-helper" name="customize-label-tag-helper"></a></p>
 <p>Chúng ta sẽ tạo ra một custom tag helper với tên là <code>requiredlabel</code></p>
 <h2 id="3-1-Code"><a href="#3-1-Code" class="headerlink" title="3.1. Code"></a>3.1. Code</h2><p><a id="markdown-code" name="code"></a></p>
-<pre><code class="cs">namespace YourNamespace.Extensions.TagHelpers
-&#123;
-    using System;
-    using System.IO;
-    using System.Text.Encodings.Web;
-    using Microsoft.AspNetCore.Mvc.Rendering;
-    using Microsoft.AspNetCore.Mvc.TagHelpers;
-    using Microsoft.AspNetCore.Mvc.ViewFeatures;
-    using Microsoft.AspNetCore.Razor.TagHelpers;
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">namespace</span> <span class="token namespace">YourNamespace<span class="token punctuation">.</span>Extensions<span class="token punctuation">.</span>TagHelpers</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>IO</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>Encodings<span class="token punctuation">.</span>Web</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>Rendering</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>TagHelpers</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>ViewFeatures</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Razor<span class="token punctuation">.</span>TagHelpers</span><span class="token punctuation">;</span>
+ 
+    <span class="token comment">// Source code for label tag helper: Mvc/src/Microsoft.AspNetCore.Mvc.TagHelpers/LabelTagHelper.cs</span>
+    <span class="token comment">// https://github.com/aspnet/Mvc/blob/dev/src/Microsoft.AspNetCore.Mvc.TagHelpers/LabelTagHelper.cs</span>
+ 
+    <span class="token punctuation">[</span><span class="token function">HtmlTargetElement</span><span class="token punctuation">(</span><span class="token string">"requiredlabel"</span><span class="token punctuation">,</span> Attributes <span class="token operator">=</span> ForAttributeName<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RequiredLabelTagHelper</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">TagHelper</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> <span class="token keyword">const</span> <span class="token class-name"><span class="token keyword">string</span></span> ForAttributeName <span class="token operator">=</span> <span class="token string">"asp-for"</span><span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Will be used as highlight-class in html</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> HighlightClass <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">/// &lt;summary></span>
+        <span class="token comment">/// Creates a new &lt;see cref="LabelTagHelper"/>.</span>
+        <span class="token comment">/// &lt;/summary></span>
+        <span class="token comment">/// &lt;param name="generator">The &lt;see cref="IHtmlGenerator"/>.&lt;/param></span>
+        <span class="token keyword">public</span> <span class="token function">RequiredLabelTagHelper</span><span class="token punctuation">(</span><span class="token class-name">IHtmlGenerator</span> generator<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            Generator <span class="token operator">=</span> generator<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">/// &lt;inheritdoc /></span>
+        <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Order <span class="token operator">=></span> <span class="token operator">-</span><span class="token number">1000</span><span class="token punctuation">;</span>
+ 
+        <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HtmlAttributeNotBound</span></span><span class="token punctuation">]</span>
+        <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">ViewContext</span></span><span class="token punctuation">]</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">ViewContext</span> ViewContext <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">protected</span> <span class="token return-type class-name">IHtmlGenerator</span> Generator <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">/// &lt;summary></span>
+        <span class="token comment">/// An expression to be evaluated against the current model.</span>
+        <span class="token comment">/// &lt;/summary></span>
+        <span class="token punctuation">[</span><span class="token function">HtmlAttributeName</span><span class="token punctuation">(</span>ForAttributeName<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">ModelExpression</span> For <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">/// &lt;inheritdoc /></span>
+        <span class="token comment">/// &lt;remarks>Does nothing if &lt;see cref="For"/> is &lt;c>null&lt;/c>.&lt;/remarks></span>
+        <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Process</span><span class="token punctuation">(</span><span class="token class-name">TagHelperContext</span> context<span class="token punctuation">,</span> <span class="token class-name">TagHelperOutput</span> output<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>context <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>output <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ArgumentNullException</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token class-name"><span class="token keyword">var</span></span> requiredMarkTagBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">TagBuilder</span><span class="token punctuation">(</span><span class="token string">"span"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            requiredMarkTagBuilder<span class="token punctuation">.</span><span class="token function">AddCssClass</span><span class="token punctuation">(</span>HighlightClass<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            requiredMarkTagBuilder<span class="token punctuation">.</span>InnerHtml<span class="token punctuation">.</span><span class="token function">Append</span><span class="token punctuation">(</span><span class="token string">" *"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token class-name"><span class="token keyword">var</span></span> tagBuilder <span class="token operator">=</span> Generator<span class="token punctuation">.</span><span class="token function">GenerateLabel</span><span class="token punctuation">(</span>
+                ViewContext<span class="token punctuation">,</span>
+                For<span class="token punctuation">.</span>ModelExplorer<span class="token punctuation">,</span>
+                For<span class="token punctuation">.</span>Name<span class="token punctuation">,</span>
+                <span class="token named-parameter punctuation">labelText</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                <span class="token named-parameter punctuation">htmlAttributes</span><span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>For<span class="token punctuation">.</span>ModelExplorer<span class="token punctuation">.</span>Metadata<span class="token punctuation">.</span>IsRequired<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">StringWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    requiredMarkTagBuilder<span class="token punctuation">.</span><span class="token function">WriteTo</span><span class="token punctuation">(</span>writer<span class="token punctuation">,</span> HtmlEncoder<span class="token punctuation">.</span>Default<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    tagBuilder<span class="token punctuation">.</span>InnerHtml<span class="token punctuation">.</span><span class="token function">AppendHtml</span><span class="token punctuation">(</span>writer<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            output<span class="token punctuation">.</span>TagName <span class="token operator">=</span> tagBuilder<span class="token punctuation">.</span>TagName<span class="token punctuation">;</span>
+            output<span class="token punctuation">.</span><span class="token function">MergeAttributes</span><span class="token punctuation">(</span>tagBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            output<span class="token punctuation">.</span>Content<span class="token punctuation">.</span><span class="token function">SetHtmlContent</span><span class="token punctuation">(</span>tagBuilder<span class="token punctuation">.</span>InnerHtml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    // Source code for label tag helper: Mvc/src/Microsoft.AspNetCore.Mvc.TagHelpers/LabelTagHelper.cs
-    // https://github.com/aspnet/Mvc/blob/dev/src/Microsoft.AspNetCore.Mvc.TagHelpers/LabelTagHelper.cs
-
-    [HtmlTargetElement(&quot;requiredlabel&quot;, Attributes = ForAttributeName)]
-    public class RequiredLabelTagHelper : TagHelper
-    &#123;
-        private const string ForAttributeName = &quot;asp-for&quot;;
-
-        // Will be used as highlight-class in html
-        public string HighlightClass &#123; get; set; &#125;
-
-        /// &lt;summary&gt;
-        /// Creates a new &lt;see cref=&quot;LabelTagHelper&quot;/&gt;.
-        /// &lt;/summary&gt;
-        /// &lt;param name=&quot;generator&quot;&gt;The &lt;see cref=&quot;IHtmlGenerator&quot;/&gt;.&lt;/param&gt;
-        public RequiredLabelTagHelper(IHtmlGenerator generator)
-        &#123;
-            Generator = generator;
-        &#125;
-
-        /// &lt;inheritdoc /&gt;
-        public override int Order =&gt; -1000;
-
-        [HtmlAttributeNotBound]
-        [ViewContext]
-        public ViewContext ViewContext &#123; get; set; &#125;
-
-        protected IHtmlGenerator Generator &#123; get; &#125;
-
-        /// &lt;summary&gt;
-        /// An expression to be evaluated against the current model.
-        /// &lt;/summary&gt;
-        [HtmlAttributeName(ForAttributeName)]
-        public ModelExpression For &#123; get; set; &#125;
-
-        /// &lt;inheritdoc /&gt;
-        /// &lt;remarks&gt;Does nothing if &lt;see cref=&quot;For&quot;/&gt; is &lt;c&gt;null&lt;/c&gt;.&lt;/remarks&gt;
-        public override void Process(TagHelperContext context, TagHelperOutput output)
-        &#123;
-            if (context == null)
-            &#123;
-                throw new ArgumentNullException(nameof(context));
-            &#125;
-
-            if (output == null)
-            &#123;
-                throw new ArgumentNullException(nameof(output));
-            &#125;
-
-            var requiredMarkTagBuilder = new TagBuilder(&quot;span&quot;);
-            requiredMarkTagBuilder.AddCssClass(HighlightClass);
-            requiredMarkTagBuilder.InnerHtml.Append(&quot; *&quot;);
-
-            var tagBuilder = Generator.GenerateLabel(
-                ViewContext,
-                For.ModelExplorer,
-                For.Name,
-                labelText: null,
-                htmlAttributes: null);
-
-            if (For.ModelExplorer.Metadata.IsRequired)
-            &#123;
-                using (var writer = new StringWriter())
-                &#123;
-                    requiredMarkTagBuilder.WriteTo(writer, HtmlEncoder.Default);
-                    tagBuilder.InnerHtml.AppendHtml(writer.ToString());
-                &#125;
-            &#125;
-
-            output.TagName = tagBuilder.TagName;
-            output.MergeAttributes(tagBuilder);
-            output.Content.SetHtmlContent(tagBuilder.InnerHtml);
-        &#125;
-    &#125;
-&#125;</code></pre>
 <h2 id="3-2-Khai-bao"><a href="#3-2-Khai-bao" class="headerlink" title="3.2. Khai báo"></a>3.2. Khai báo</h2><p><a id="markdown-khai-b%C3%A1o" name="khai-b%C3%A1o"></a></p>
 <p>Mở <code>View/_ViewImports.cshtml</code></p>
-<pre><code class="cs">@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@addTagHelper <span class="token operator">*</span><span class="token punctuation">,</span> Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>TagHelpers
+ 
+@<span class="token operator">*</span> Thêm dòng sau <span class="token operator">*</span>@
+@addTagHelper <span class="token operator">*</span><span class="token punctuation">,</span> YourNamespace<span class="token punctuation">.</span>Extensions<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-@* Thêm dòng sau *@
-@addTagHelper *, YourNamespace.Extensions</code></pre>
 <blockquote>
 <p>Đoạn code này giúp tag helper của bạn có thể hoạt động trong các view razor. Với tên namespace khác, bạn cần phải thay đổi đoạn code đó tương ứng</p>
 <p>Xem thêm tại: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro">https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro</a> mục <em>Managing Tag Helper scope</em></p>
 </blockquote>
 <h1 id="4-Su-dung"><a href="#4-Su-dung" class="headerlink" title="4. Sử dụng"></a>4. Sử dụng</h1><p><a id="markdown-s%E1%BB%AD-d%E1%BB%A5ng" name="s%E1%BB%AD-d%E1%BB%A5ng"></a></p>
 <p>Vô cùng đơn giản</p>
-<pre><code class="html">&lt;requiredlabel asp-for=&quot;Username&quot; highlight-class=&quot;red bold&quot;&gt;&lt;/requiredlabel&gt;</code></pre>
-<p>sẽ render ra đoạn code html sau</p>
-<pre><code class="html">&lt;label for=&quot;Username&quot;&gt;User name&lt;span class=&quot;red bold&quot;&gt; *&lt;/span&gt;&lt;/label&gt;</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>requiredlabel</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span> <span class="token attr-name">highlight-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red bold<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>requiredlabel</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>sẽ render ra đoạn code html sau</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>User name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red bold<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> *<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
     </div>
 
     

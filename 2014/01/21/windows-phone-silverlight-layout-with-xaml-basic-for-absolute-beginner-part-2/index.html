@@ -69,7 +69,7 @@
 <meta property="og:image" content="http://farm4.staticflickr.com/3678/11961483605_78ff2960f3_o.png%22">
 <meta property="og:image" content="http://farm4.staticflickr.com/3751/11962377686_6b9e9bdb79_o.png%22">
 <meta property="article:published_time" content="2014-01-21T03:55:07.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.050Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="layout">
@@ -376,7 +376,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -499,15 +499,16 @@
 <p>Okie, khai báo thuộc tính nào</p>
 <p><img src="http://farm8.staticflickr.com/7448/11958537464_42bf1c99d6_o.png%22"></p>
 <p>Bạn phải bắt buộc khai báo thêm 1 event và một Method trong class của mình sau khi khai báo Interface</p>
-<pre><code class="csharp">protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-&#123;
-    PropertyChangedEventHandler handler = PropertyChanged;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">OnPropertyChanged</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">CallerMemberName</span></span><span class="token punctuation">]</span> <span class="token class-name"><span class="token keyword">string</span></span> propertyName <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name">PropertyChangedEventHandler</span> handler <span class="token operator">=</span> PropertyChanged<span class="token punctuation">;</span>
 
-    if (handler != null)
-    &#123;
-      handler(this, new PropertyChangedEventArgs(propertyName));
-    &#125;
-&#125;</code></pre>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>handler <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PropertyChangedEventArgs</span><span class="token punctuation">(</span>propertyName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Nếu bạn có ReShaper, thì mọi việc đơn giản hơn nhiều</p>
 <p><img src="http://farm8.staticflickr.com/7353/11958604664_35f1789b07_o.png%22"></p>
 <p>Tiếp tục chọn Yes nhé</p>
@@ -546,25 +547,27 @@
 <p>Bước 1: kiểm tra dữ liệu đã tồn tại</p>
 <p>Đặc trưng cơ bản của cách khai báo LoadData như thế này là khi ta navigate tới trang này, hoặc có sự thay đổi về elements trên giao diện, event OnLoaded sẽ được gọi lại.</p>
 <p>Vì vậy, ta chỉnh sửa event OnLoaded để ngăn ngừa việc load lại dữ liệu như sau:</p>
-<pre><code class="csharp">private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
-&#123; 
-  if (StaticData.FoodItemCollection.Count == 0)
-  &#123;
-    LoadData();
-  &#125;
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">OnLoaded</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">RoutedEventArgs</span> routedEventArgs<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span> 
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>StaticData<span class="token punctuation">.</span>FoodItemCollection<span class="token punctuation">.</span>Count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token function">LoadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Thêm một số code như sau vào hàm LoadData</p>
-<pre><code class="csharp">private void LoadData() 
-&#123; 
-  for (int i =0;i &lt;5;i++)
-  &#123; 
-    FoodItem foodItem =new FoodItem();
-    foodItem.Id = i;
-    foodItem.FoodName =&quot;Food Name is &quot; +i;
-    foodItem.ImageLink =&quot;FoodItem_&quot; + i + &quot;_imageLink&quot;;
-    StaticData.FoodItemCollection.Add(foodItem);
-  &#125;
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">LoadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span> 
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span> 
+    <span class="token class-name">FoodItem</span> foodItem <span class="token operator">=</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">FoodItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    foodItem<span class="token punctuation">.</span>Id <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    foodItem<span class="token punctuation">.</span>FoodName <span class="token operator">=</span><span class="token string">"Food Name is "</span> <span class="token operator">+</span>i<span class="token punctuation">;</span>
+    foodItem<span class="token punctuation">.</span>ImageLink <span class="token operator">=</span><span class="token string">"FoodItem_"</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"_imageLink"</span><span class="token punctuation">;</span>
+    StaticData<span class="token punctuation">.</span>FoodItemCollection<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>foodItem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Mục tiêu của đoạn code trên là add 5 item giả vào FoodItemCollection.</p>
 <h2 id="2-5-Binding"><a href="#2-5-Binding" class="headerlink" title="2.5. Binding"></a>2.5. Binding</h2><p><a id="markdown-binding" name="binding"></a></p>
 <p>Vậy ta đã có dữ liệu, có nguồn dữ liệu, có luôn listbox, bây giờ ta sẽ tiến hành binding dữ liệu này vào listbox</p>
@@ -572,14 +575,15 @@
 <p>Đặt tên cho listbox của bạn:</p>
 <p><img src="http://farm4.staticflickr.com/3740/11961472144_46f86145ef_o.png%22"></p>
 <p>Sửa event OnLoaded lại như sau:</p>
-<pre><code class="csharp">private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
-&#123;
-  if (StaticData.FoodItemCollection.Count == 0)
-  &#123; 
-    LoadData();
-    FoodListBox.ItemsSource = StaticData.FoodItemCollection;
-  &#125;
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">OnLoaded</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">RoutedEventArgs</span> routedEventArgs<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>StaticData<span class="token punctuation">.</span>FoodItemCollection<span class="token punctuation">.</span>Count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span> 
+    <span class="token function">LoadData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    FoodListBox<span class="token punctuation">.</span>ItemsSource <span class="token operator">=</span> StaticData<span class="token punctuation">.</span>FoodItemCollection<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Sau đó, bấm chạy thử trên Emulator hay trên Device tùy thích</p>
 <p><img src="http://farm4.staticflickr.com/3712/11961887436_8c77ca2cce_o.png%22"></p>
 <p>Và đây chính là thành quả của các bạn</p>
@@ -606,11 +610,12 @@
 <p><img src="http://farm4.staticflickr.com/3678/11961483605_78ff2960f3_o.png%22"></p>
 <p>Double Click vào event “Selection Changed” để khai báo event</p>
 <p>Thêm đoạn code sau vào event mới được tạo</p>
-<pre><code class="csharp">if (FoodListBox.SelectedIndex != –1)
-&#123;
-  FoodItem foodItem = FoodListBox.SelectedItem as FoodItem;
-  MessageBox.Show(foodItem.FoodName);
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">if</span> <span class="token punctuation">(</span>FoodListBox<span class="token punctuation">.</span>SelectedIndex <span class="token operator">!=</span> –<span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token class-name">FoodItem</span> foodItem <span class="token operator">=</span> FoodListBox<span class="token punctuation">.</span>SelectedItem <span class="token keyword">as</span> <span class="token class-name">FoodItem</span><span class="token punctuation">;</span>
+  MessageBox<span class="token punctuation">.</span><span class="token function">Show</span><span class="token punctuation">(</span>foodItem<span class="token punctuation">.</span>FoodName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Chạy thử và chọn một item bất kỳ</p>
 <p><img src="http://farm4.staticflickr.com/3751/11962377686_6b9e9bdb79_o.png%22"></p>
 <p>Thật tuyệt vời phải không</p>

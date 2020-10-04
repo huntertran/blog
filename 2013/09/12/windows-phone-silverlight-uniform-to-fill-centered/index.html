@@ -34,7 +34,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2013/09/steeve2.png">
 <meta property="article:published_time" content="2013-09-12T02:54:45.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.903Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.046Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="centered image">
 <meta property="article:tag" content="stretch">
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -379,9 +379,10 @@
 <li><strong>Uniform To Fill:</strong> Hình bị scale, giữ nguyên tỷ lệ và fill đầy control. Nếu control có tỷ lệ khác với Image, một phần góc trái và góc phải sẽ bị cắt mất</li>
 </ul>
 <h1 id="Giai-phap"><a href="#Giai-phap" class="headerlink" title="Giải pháp"></a>Giải pháp</h1><p>Thêm một Border bọc ngoài Image Control</p>
-<pre><code class="xml">&lt;border Width=&quot;200&quot; Height=&quot;200&quot;&gt; 
-  &lt;Image Source=&quot;/your_source&quot; Stretch=&quot;UniformToFill&quot;&gt; 
-&lt;/border&gt;</code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>border</span> <span class="token attr-name">Width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/your_source<span class="token punctuation">"</span></span> <span class="token attr-name">Stretch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UniformToFill<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>border</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>Ngay khi thêm border, bạn sẽ thấy nó hiển thị một kết quả như khi không có border. Cũng như ko =.=</p>
 <p>Tuy nhiên, Image control sẽ bị giới hạn bởi Border bọc bên ngoài nó có kích thước nhất định.</p>
 <p>Bây giờ, bạn có thể canh chỉnh bằng thuộc tính HorizontalAlignment và VerticalAlignment để chỉnh vị trí của ImageControl. Áp dụng “Center” cho cả hai, bạn sẽ có tấm hình “Tuyệt vời”</p>

@@ -33,7 +33,7 @@
 <meta property="og:description" content="Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-03-18T10:46:24.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="framework">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,6 +367,7 @@
     <div class="post-body" itemprop="articleBody">
         <p>Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại</p>
 <a id="more"></a>
+
 <blockquote>
 <p>Xem các bài viết trong series</p>
 <ul>
@@ -376,48 +377,55 @@
 <li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
 </ul>
 </blockquote>
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#1-css">1. CSS</a></p>
-<ul>
-<li><p><a href="#11-css-framework">1.1. CSS Framework</a></p>
-<ul>
-<li><a href="#111-bootstraphttpgetbootstrapcom">1.1.1. <a target="_blank" rel="noopener" href="http://getbootstrap.com/">Bootstrap</a></a></li>
-<li><a href="#112-materializecsshttpmaterializecsscom">1.1.2. <a target="_blank" rel="noopener" href="http://materializecss.com/">MaterializeCSS</a></a></li>
+<li><a href="#1-css">1. CSS</a><ul>
+<li><a href="#11-css-framework">1.1. CSS Framework</a><ul>
+<li><a href="#111-bootstrap">1.1.1. Bootstrap</a></li>
+<li><a href="#112-materializecss">1.1.2. MaterializeCSS</a></li>
 <li><a href="#113-c%C3%A1c-grid-system">1.1.3. Các Grid System</a></li>
 </ul>
 </li>
-<li><p><a href="#12-css-language-preprocessor">1.2. CSS Language Preprocessor</a></p>
-<ul>
-<li><a href="#121-scsshttpssass-langcom">1.2.1. <a target="_blank" rel="noopener" href="https://sass-lang.com/">SCSS</a></a></li>
-<li><a href="#122-lesshttplesscssorg">1.2.2. <a target="_blank" rel="noopener" href="http://lesscss.org/">LESS</a></a></li>
+<li><a href="#12-css-language-preprocessor">1.2. CSS Language Preprocessor</a><ul>
+<li><a href="#121-scss">1.2.1. SCSS</a></li>
+<li><a href="#122-less">1.2.2. LESS</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a href="#2-javascript">2. Javascript</a></p>
-<ul>
+<li><a href="#2-javascript">2. Javascript</a><ul>
 <li><a href="#21-jquery">2.1. jQuery</a></li>
 <li><a href="#22-xu-h%C6%B0%E1%BB%9Bng">2.2. Xu hướng</a></li>
 </ul>
 </li>
-<li><p><a href="#3-html">3. HTML</a></p>
-</li>
-<li><p><a href="#c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t">Cái nào là tốt nhất?</a></p>
-</li>
+<li><a href="#3-html">3. HTML</a></li>
+<li><a href="#4-c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t">4. Cái nào là tốt nhất?</a></li>
 </ul>
+<!-- /TOC -->
+
 <p>Một ứng dụng web được chia thành 2 thành phần chính là Front-end và Back-end. Về phía back end, có hàng ty tỷ ngôn ngữ và công nghệ có thể làm nên chúng. ASP.NET là một trong các công nghệ đó. Và tất cả các công nghệ / ngôn ngữ này đều phục vụ một mục đích tối thượng: Tạo ra front end</p>
 <p>Trong một diễn biến khác, Front end chỉ có 1, được cấu thành từ 3 ngôn ngữ là <code>HTML</code>, <code>CSS</code> và <code>Javascript</code></p>
 <blockquote>
-<p>Nếu bạn chưa biết cơ bản về HTML, Javascript và CSS, thì hãy học ngay * <a target="_blank" rel="noopener" href="https://www.w3schools.com/html/default.asp">Học HTML</a> * <a target="_blank" rel="noopener" href="https://www.w3schools.com/css/">Học CSS</a> * <a target="_blank" rel="noopener" href="https://www.w3schools.com/js/">Học Javascript</a></p>
+<p>Nếu bạn chưa biết cơ bản về HTML, Javascript và CSS, thì hãy học ngay</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/html/default.asp">Học HTML</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/css/">Học CSS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/js/">Học Javascript</a></li>
+</ul>
 </blockquote>
 <p>3 ngôn ngữ này, theo ý kiến chủ quan của mình, như mì ăn liền. Cách tổ chức khá lộn xộn, và quy chuẩn thì được áp dụng khác nhau đối với các trình duyệt khác nhau</p>
 <blockquote>
-<p><strong>Quy chuẩn của HTML</strong> HTML có 1 bộ quy chuẩn giúp cho các nhà phát triển trình duyệt biết được chính xác phải làm gì khi hiển thị các thẻ của HTML trên trình duyệt</p>
+<p><strong>Quy chuẩn của HTML</strong></p>
+<p>HTML có 1 bộ quy chuẩn giúp cho các nhà phát triển trình duyệt biết được chính xác phải làm gì khi hiển thị các thẻ của HTML trên trình duyệt</p>
 </blockquote>
 <p>Để làm cho cuộc đời bớt đau khổ, các developer trên khắp thế giới đã cùng nhau phát triển thêm những framework, những ngôn ngữ hỗ trợ thêm cho bộ 3 này</p>
-<h1 id="1-CSS"><a href="#1-CSS" class="headerlink" title="1. CSS"></a>1. CSS</h1><h2 id="1-1-CSS-Framework"><a href="#1-1-CSS-Framework" class="headerlink" title="1.1. CSS Framework"></a>1.1. CSS Framework</h2><p>Làm sao để chia web thành các cột linh hoạt? Làm sao để khi kích thước trình duyệt thay đổi, trang web sẽ hiển thị các thành phần phù hợp? Làm sao để trang web có thể đọc được trên điện thoại di động?</p>
+<h1 id="1-CSS"><a href="#1-CSS" class="headerlink" title="1. CSS"></a>1. CSS</h1><p><a id="markdown-css" name="css"></a></p>
+<h2 id="1-1-CSS-Framework"><a href="#1-1-CSS-Framework" class="headerlink" title="1.1. CSS Framework"></a>1.1. CSS Framework</h2><p><a id="markdown-css-framework" name="css-framework"></a></p>
+<p>Làm sao để chia web thành các cột linh hoạt? Làm sao để khi kích thước trình duyệt thay đổi, trang web sẽ hiển thị các thành phần phù hợp? Làm sao để trang web có thể đọc được trên điện thoại di động?</p>
 <p>Hàng tá các câu hỏi như vậy sẽ nảy ra trong đầu bạn khi bạn đang phát triển một website nào đó. Để giải quyết vấn đề đó, ta có các CSS Frameworks làm sẵn giúp bạn các công việc này, bạn chỉ cần áp dụng.</p>
-<h3 id="1-1-1-Bootstrap"><a href="#1-1-1-Bootstrap" class="headerlink" title="1.1.1. Bootstrap"></a>1.1.1. <a target="_blank" rel="noopener" href="http://getbootstrap.com/">Bootstrap</a></h3><p>Bootstrap có lẽ là css framework được sử dụng nhiều nhất hiện nay với bộ plugin đồ sộ + kho tàng theme thủng cực khủng của mình</p>
+<h3 id="1-1-1-Bootstrap"><a href="#1-1-1-Bootstrap" class="headerlink" title="1.1.1. Bootstrap"></a>1.1.1. <a target="_blank" rel="noopener" href="http://getbootstrap.com/">Bootstrap</a></h3><p><a id="markdown-bootstrap" name="bootstrap"></a></p>
+<p>Bootstrap có lẽ là css framework được sử dụng nhiều nhất hiện nay với bộ plugin đồ sộ + kho tàng theme thủng cực khủng của mình</p>
 <p>Bootstrap sử dụng 1 khái niệm gọi là responsive breakdown, tức là khi bề ngang trình duyệt đạt tới 1 số lượng pixels nào đó, thì một số thành phần HTML sẽ bị ẩn đi hoặc hiện ra.</p>
 <p><strong>Nhược điểm</strong></p>
 <ul>
@@ -425,43 +433,61 @@
 <li>Grid system dùng concrete class: Đối với mỗi size khác nhau, bạn sẽ phải thêm các class khác nhau của mỗi column vào thẻ html</li>
 <li>Nặng: Bootstrap cần 1 file css, 1 file javascript, và cả cái thư viện jQuery + poper.js. Nếu website của bạn ko dùng jQuery? Thôi nghỉ chơi với boostrap nhé</li>
 </ul>
-<h3 id="1-1-2-MaterializeCSS"><a href="#1-1-2-MaterializeCSS" class="headerlink" title="1.1.2. MaterializeCSS"></a>1.1.2. <a target="_blank" rel="noopener" href="http://materializecss.com/">MaterializeCSS</a></h3><p>Nếu bạn có đang dùng các sản phẩm của google, thì bạn sẽ thấy họ có 1 style khá đẹp, nhất là khi nhấn vào 1 cái nút nào đó, sẽ có 1 vòng tròn tỏa ra. Cái này được gọi là Material Design</p>
+<h3 id="1-1-2-MaterializeCSS"><a href="#1-1-2-MaterializeCSS" class="headerlink" title="1.1.2. MaterializeCSS"></a>1.1.2. <a target="_blank" rel="noopener" href="http://materializecss.com/">MaterializeCSS</a></h3><p><a id="markdown-materializecss" name="materializecss"></a></p>
+<p>Nếu bạn có đang dùng các sản phẩm của google, thì bạn sẽ thấy họ có 1 style khá đẹp, nhất là khi nhấn vào 1 cái nút nào đó, sẽ có 1 vòng tròn tỏa ra. Cái này được gọi là Material Design</p>
 <p>Materializecss làm theo cái design này, và open source nó cho mọi người sử dụng. Nhanh, nhẹ, đẹp, hỗ trợ tốt, cộng đồng lớn là những ưu điểm của framework này</p>
 <p><strong>Nhược điểm</strong></p>
 <ul>
 <li>Quá Google: website của bạn khi dùng framework này, nó sẽ cho người dùng 1 cảm giác hơi…google. Từ cái nút bấm cho tới cái ô grid</li>
 <li>Chưa release: Tin hay ko thì tùy bạn, dù có hằng hà sa số website đang dùng, với gần 32k stars trên Github, nhưng framework này vẫn chưa được release version 1.0. Các nhà phát triển nó đang rất gấp rút fix bug và hoàn thiện để ra mắt phiên bản release đầu tiên của nó ;)</li>
 </ul>
-<h3 id="1-1-3-Cac-Grid-System"><a href="#1-1-3-Cac-Grid-System" class="headerlink" title="1.1.3. Các Grid System"></a>1.1.3. Các Grid System</h3><p>Cái quan trọng nhất của một framework là grid system, tức là cách chia website thành các column khác nhau. Nắm bắt được điều này, kha khá framework ra đời, và chỉ chứa độc nhất 1 tính năng: chia column.</p>
+<h3 id="1-1-3-Cac-Grid-System"><a href="#1-1-3-Cac-Grid-System" class="headerlink" title="1.1.3. Các Grid System"></a>1.1.3. Các Grid System</h3><p><a id="markdown-c%C3%A1c-grid-system" name="c%C3%A1c-grid-system"></a></p>
+<p>Cái quan trọng nhất của một framework là grid system, tức là cách chia website thành các column khác nhau. Nắm bắt được điều này, kha khá framework ra đời, và chỉ chứa độc nhất 1 tính năng: chia column.</p>
 <p><strong>Nhược điểm</strong></p>
 <p>Nhìn chung, khi sử dụng các framework dạng này, bạn sẽ phải khá chuyên nghiệp rồi. Khi đó bạn sẽ phải tự code các thành phần css khác ko liên quan tới grid, hoặc tìm các thư viện hỗ trợ cho những thành phần mong muốn</p>
-<h2 id="1-2-CSS-Language-Preprocessor"><a href="#1-2-CSS-Language-Preprocessor" class="headerlink" title="1.2. CSS Language Preprocessor"></a>1.2. CSS Language Preprocessor</h2><p>Ngôn ngữ css, với một cách tổ chức tè le, là một thử thách khá khó khăn cho developer mới học. May mắn thay, đã có những ngôn ngữ thay thế cho nó</p>
+<h2 id="1-2-CSS-Language-Preprocessor"><a href="#1-2-CSS-Language-Preprocessor" class="headerlink" title="1.2. CSS Language Preprocessor"></a>1.2. CSS Language Preprocessor</h2><p><a id="markdown-css-language-preprocessor" name="css-language-preprocessor"></a></p>
+<p>Ngôn ngữ css, với một cách tổ chức tè le, là một thử thách khá khó khăn cho developer mới học. May mắn thay, đã có những ngôn ngữ thay thế cho nó</p>
 <p>Thay thế cũng không hẳn là đúng. Các ngôn ngữ này chỉ giúp bạn viết code css dễ hiểu hơn, khoa học hơn, tổ chức tốt hơn. Sau cùng, nó vẫn generate ra file .css cho bạn sử dụng.</p>
-<h3 id="1-2-1-SCSS"><a href="#1-2-1-SCSS" class="headerlink" title="1.2.1. SCSS"></a>1.2.1. <a target="_blank" rel="noopener" href="https://sass-lang.com/">SCSS</a></h3><p>SCSS kế thừa và cải tiến CSS selector bằng các cấu trúc <code>&#123;&#125;</code>, <code>:</code>và <code>&amp;gt;</code>. Khi bạn bắt tay vào học nó, bạn sẽ thấy cách select một element vô cùng tự nhiên của nó</p>
-<h3 id="1-2-2-LESS"><a href="#1-2-2-LESS" class="headerlink" title="1.2.2. LESS"></a>1.2.2. <a target="_blank" rel="noopener" href="http://lesscss.org/">LESS</a></h3><p>Less giống như một phiên bản khác của Scss vậy, với cú pháp cũng khá giống nhau, các khái niệm cũng giống luôn.</p>
+<h3 id="1-2-1-SCSS"><a href="#1-2-1-SCSS" class="headerlink" title="1.2.1. SCSS"></a>1.2.1. <a target="_blank" rel="noopener" href="https://sass-lang.com/">SCSS</a></h3><p><a id="markdown-scss" name="scss"></a></p>
+<p>SCSS kế thừa và cải tiến CSS selector bằng các cấu trúc <code>&#123;&#125;</code>, <code>:</code>và <code>&amp;gt;</code>. Khi bạn bắt tay vào học nó, bạn sẽ thấy cách select một element vô cùng tự nhiên của nó</p>
+<h3 id="1-2-2-LESS"><a href="#1-2-2-LESS" class="headerlink" title="1.2.2. LESS"></a>1.2.2. <a target="_blank" rel="noopener" href="http://lesscss.org/">LESS</a></h3><p><a id="markdown-less" name="less"></a></p>
+<p>Less giống như một phiên bản khác của Scss vậy, với cú pháp cũng khá giống nhau, các khái niệm cũng giống luôn.</p>
 <blockquote>
 <p>Bạn chỉ nên chọn 1, hoặc SCSS, hoặc LESS</p>
 </blockquote>
-<h1 id="2-Javascript"><a href="#2-Javascript" class="headerlink" title="2. Javascript"></a>2. Javascript</h1><p>Ngôn ngữ HTML, vốn dĩ chỉ là các đoạn text có thêm markup và link, chỉ có thể cho phép bạn đọc text và nhấn link để nhảy sang 1 trang khác mà thôi.</p>
+<h1 id="2-Javascript"><a href="#2-Javascript" class="headerlink" title="2. Javascript"></a>2. Javascript</h1><p><a id="markdown-javascript" name="javascript"></a></p>
+<p>Ngôn ngữ HTML, vốn dĩ chỉ là các đoạn text có thêm markup và link, chỉ có thể cho phép bạn đọc text và nhấn link để nhảy sang 1 trang khác mà thôi.</p>
 <p>Mọi chuyện thay đổi khi javascript được gắn thêm vào. Giờ đây bạn có thể thay đổi 1 khúc text mà ko cần reload, làm cho biểu tượng này xoay xoay, làm cho nút kia chuyển động, hiển thị popup, vân vân và vân vân.</p>
 <blockquote>
 <p><code>Javascript</code> không hề dính dáng gì tới <code>Java</code> cả</p>
 </blockquote>
-<h2 id="2-1-jQuery"><a href="#2-1-jQuery" class="headerlink" title="2.1. jQuery"></a>2.1. jQuery</h2><p>jQuery giống như 1 thư viện “phải có” vậy. Nó giúp cho việc sử dụng cả tá css framework khác trở nên đơn giản và hiệu quả.</p>
+<h2 id="2-1-jQuery"><a href="#2-1-jQuery" class="headerlink" title="2.1. jQuery"></a>2.1. jQuery</h2><p><a id="markdown-jquery" name="jquery"></a></p>
+<p>jQuery giống như 1 thư viện “phải có” vậy. Nó giúp cho việc sử dụng cả tá css framework khác trở nên đơn giản và hiệu quả.</p>
 <p>Ví dụ: Để đổi đoạn value của thẻ input có id là “test” thành chữ khác</p>
-<p>[code lang=javascript] // Before jquery document.getElementById(“test”).value = “Test Value”;</p>
-<p>// After jquery $(“#test”).val(“Test Value”); [/code]</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// Before jquery</span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"Test Value"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// After jquery</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Test Value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Vì sử dụng các khái niệm của CSS Selector, bạn có thể chọn các html element bằng jQuery y như khi bạn code css cho nó vậy.</p>
-<h2 id="2-2-Xu-huong"><a href="#2-2-Xu-huong" class="headerlink" title="2.2. Xu hướng"></a>2.2. Xu hướng</h2><p>vì jQuery khá nặng, việc xử lý jQuery cũng đòi hỏi một phần tài nguyên của trình duyện, nên hiện đang có 1 xu hướng là bỏ hẳn jQuery ko xài nó nữa.</p>
+<h2 id="2-2-Xu-huong"><a href="#2-2-Xu-huong" class="headerlink" title="2.2. Xu hướng"></a>2.2. Xu hướng</h2><p><a id="markdown-xu-h%C6%B0%E1%BB%9Bng" name="xu-h%C6%B0%E1%BB%9Bng"></a></p>
+<p>vì jQuery khá nặng, việc xử lý jQuery cũng đòi hỏi một phần tài nguyên của trình duyện, nên hiện đang có 1 xu hướng là bỏ hẳn jQuery ko xài nó nữa.</p>
 <p>Nhưng từ giờ tới lúc jQuery biến mất vẫn còn xa lắm. Máy tính và điện thoại thì ngày càng mạnh mẽ hơn. jQuery hầu như đã được tải sẵn trên bất cứ trình duyệt nào bạn tìm thấy</p>
-<h1 id="3-HTML"><a href="#3-HTML" class="headerlink" title="3. HTML"></a>3. HTML</h1><p>HTML5, như đã nói ở trên, là version mới nhất của HTML, và tất cả các trình duyệt phổ biến hỗ trợ.</p>
+<h1 id="3-HTML"><a href="#3-HTML" class="headerlink" title="3. HTML"></a>3. HTML</h1><p><a id="markdown-html" name="html"></a></p>
+<p>HTML5, như đã nói ở trên, là version mới nhất của HTML, và tất cả các trình duyệt phổ biến hỗ trợ.</p>
 <p>Nếu bạn code bằng Visual Studio, thì HTML đã được hỗ trợ khá tốt rồi. Còn nếu bạn code bằng Visual Studio Code, thì sau đây là 1 số extension mình sử dụng để việc code HTML được dễ thở hơn</p>
 <ul>
 <li>Auto Close Tag: tự đóng các thẻ HTML. Không cần phải gõ tay nữa</li>
 <li>HTML Snippets: tự nhắc các property của 1 thẻ HTML</li>
 </ul>
-<h1 id="Cai-nao-la-tot-nhat"><a href="#Cai-nao-la-tot-nhat" class="headerlink" title="Cái nào là tốt nhất?"></a>Cái nào là tốt nhất?</h1><p>Không có câu trả lời cụ thể cho câu hỏi này, nên mình sẽ đưa ý kiến của mình, và cái mình đang sử dụng để bạn tham khảo</p>
-<p>[code lang=text] CSS: SCSS CSS Framework: Materializecss Javascript: jQuery HTML: HTML5 [/code]</p>
+<h1 id="Cai-nao-la-tot-nhat"><a href="#Cai-nao-la-tot-nhat" class="headerlink" title="Cái nào là tốt nhất?"></a>Cái nào là tốt nhất?</h1><p><a id="markdown-c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t%3F" name="c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t%3F"></a></p>
+<p>Không có câu trả lời cụ thể cho câu hỏi này, nên mình sẽ đưa ý kiến của mình, và cái mình đang sử dụng để bạn tham khảo</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">CSS: SCSS
+CSS Framework: Materializecss
+Javascript: jQuery
+HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Còn bạn, bạn chọn ngôn ngữ nào?</p>
 
     </div>

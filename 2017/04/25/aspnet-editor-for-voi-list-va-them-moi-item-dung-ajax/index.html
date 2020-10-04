@@ -34,7 +34,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png">
 <meta property="article:published_time" content="2017-04-25T07:32:39.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.907Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="editorfor">
 <meta property="article:tag" content="ajax">
@@ -340,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -403,212 +403,216 @@
 <p>Từ một bài viết thú vị từ Matt Lunn <a target="_blank" rel="noopener" href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
 <h1 id="2-Class"><a href="#2-Class" class="headerlink" title="2. Class"></a>2. Class</h1><p><a id="markdown-class" name="class"></a></p>
 <h2 id="2-1-C-code"><a href="#2-1-C-code" class="headerlink" title="2.1. C# code"></a>2.1. C# code</h2><p><a id="markdown-c%23-code" name="c%23-code"></a></p>
-<pre><code class="cs">namespace Yournamespace.Utilities
-&#123;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Text;
-    using System.Web.Mvc;
-    using System.Web.Mvc.Html;
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">namespace</span> <span class="token namespace">Yournamespace<span class="token punctuation">.</span>Utilities</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq<span class="token punctuation">.</span>Expressions</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Text</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Web<span class="token punctuation">.</span>Mvc</span><span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Web<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>Html</span><span class="token punctuation">;</span>
+ 
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">HtmlHelperExtensions</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">/// &lt;summary></span>
+        <span class="token comment">/// Generate appropriate control for a list of data</span>
+        <span class="token comment">/// &lt;/summary></span>
+        <span class="token comment">/// &lt;typeparam name="TModel">The Model contain the list&lt;/typeparam></span>
+        <span class="token comment">/// &lt;typeparam name="TValue">The Model of list of items&lt;/typeparam></span>
+        <span class="token comment">/// &lt;param name="html">&lt;/param></span>
+        <span class="token comment">/// &lt;param name="propertyExpression">Which property&lt;/param></span>
+        <span class="token comment">/// &lt;param name="indexResolverExpression">Select the property to be the index&lt;/param></span>
+        <span class="token comment">/// &lt;param name="isIncludeNewItem">Set to true to include a default new item&lt;/param></span>
+        <span class="token comment">/// &lt;param name="includeIndexField">Set to true to include Index in values sent to server&lt;/param></span>
+        <span class="token comment">/// &lt;returns>HTML codes of editorfor a list of items&lt;/returns></span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">MvcHtmlString</span> <span class="token generic-method"><span class="token function">EditorForMany</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> TValue<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>
+            <span class="token keyword">this</span> <span class="token class-name">HtmlHelper<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">></span></span> html<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> IEnumerable<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">></span><span class="token punctuation">></span><span class="token punctuation">></span></span> propertyExpression<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span><span class="token punctuation">></span></span> indexResolverExpression <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">bool</span></span> isIncludeNewItem <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">bool</span></span> includeIndexField <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+            <span class="token keyword">where</span> <span class="token class-name">TModel</span> 
+                <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span> <span class="token keyword">where</span> <span class="token class-name">TValue</span> 
+                <span class="token punctuation">:</span> <span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> items <span class="token operator">=</span> propertyExpression<span class="token punctuation">.</span><span class="token function">Compile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>html<span class="token punctuation">.</span>ViewData<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlFieldName <span class="token operator">=</span> ExpressionHelper<span class="token punctuation">.</span><span class="token function">GetExpressionText</span><span class="token punctuation">(</span>propertyExpression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlFieldNameWithPrefix <span class="token operator">=</span> html<span class="token punctuation">.</span>ViewData<span class="token punctuation">.</span>TemplateInfo<span class="token punctuation">.</span><span class="token function">GetFullHtmlFieldName</span><span class="token punctuation">(</span>htmlFieldName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> indexResolver <span class="token operator">=</span> <span class="token function">GetIndexResolver</span><span class="token punctuation">(</span>indexResolverExpression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            items <span class="token operator">=</span> <span class="token function">AddDefaultNewItem</span><span class="token punctuation">(</span>isIncludeNewItem<span class="token punctuation">,</span> items<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> item <span class="token keyword">in</span> items<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> dummy <span class="token operator">=</span> <span class="token keyword">new</span>
+                <span class="token punctuation">&#123;</span>
+                    Item <span class="token operator">=</span> item
+                <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+ 
+                <span class="token class-name"><span class="token keyword">var</span></span> guid <span class="token operator">=</span> <span class="token function">indexResolver</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+                <span class="token class-name"><span class="token keyword">var</span></span> memberExp <span class="token operator">=</span> Expression<span class="token punctuation">.</span><span class="token function">MakeMemberAccess</span><span class="token punctuation">(</span>
+                    Expression<span class="token punctuation">.</span><span class="token function">Constant</span><span class="token punctuation">(</span>dummy<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    dummy<span class="token punctuation">.</span><span class="token function">GetType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetProperty</span><span class="token punctuation">(</span><span class="token string">"Item"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+                <span class="token class-name"><span class="token keyword">var</span></span> singleItemExp <span class="token operator">=</span> Expression<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Lambda</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> TValue<span class="token punctuation">></span><span class="token punctuation">></span></span></span><span class="token punctuation">(</span>memberExp<span class="token punctuation">,</span> propertyExpression<span class="token punctuation">.</span>Parameters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+                guid <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">IsNullOrEmpty</span><span class="token punctuation">(</span>guid<span class="token punctuation">)</span> <span class="token punctuation">?</span> Guid<span class="token punctuation">.</span><span class="token function">NewGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> html<span class="token punctuation">.</span><span class="token function">AttributeEncode</span><span class="token punctuation">(</span>guid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">BuildHtmlString</span><span class="token punctuation">(</span>html<span class="token punctuation">,</span> indexResolverExpression<span class="token punctuation">,</span> includeIndexField<span class="token punctuation">,</span> htmlBuilder<span class="token punctuation">,</span> htmlFieldName<span class="token punctuation">,</span> htmlFieldNameWithPrefix<span class="token punctuation">,</span> guid<span class="token punctuation">,</span> singleItemExp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MvcHtmlString</span><span class="token punctuation">(</span>htmlBuilder<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token generic-method"><span class="token function">BuildHtmlString</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> TValue<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>
+            <span class="token class-name">HtmlHelper<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">></span></span> html<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span><span class="token punctuation">></span></span> indexResolverExpression<span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">bool</span></span> includeIndexField<span class="token punctuation">,</span>
+            <span class="token class-name">StringBuilder</span> htmlBuilder<span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> htmlFieldName<span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> htmlFieldNameWithPrefix<span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> guid<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> TValue<span class="token punctuation">></span><span class="token punctuation">></span></span> singleItemExp<span class="token punctuation">)</span>
+            <span class="token keyword">where</span> <span class="token class-name">TModel</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+            <span class="token keyword">where</span> <span class="token class-name">TValue</span> <span class="token punctuation">:</span> <span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            htmlBuilder<span class="token punctuation">.</span><span class="token function">Append</span><span class="token punctuation">(</span><span class="token string">@"&lt;div>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>includeIndexField<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                htmlBuilder<span class="token punctuation">.</span><span class="token function">Append</span><span class="token punctuation">(</span><span class="token function">_EditorForManyIndexField</span><span class="token punctuation">(</span>htmlFieldNameWithPrefix<span class="token punctuation">,</span> guid<span class="token punctuation">,</span> indexResolverExpression<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            htmlBuilder<span class="token punctuation">.</span><span class="token function">Append</span><span class="token punctuation">(</span>html<span class="token punctuation">.</span><span class="token function">EditorFor</span><span class="token punctuation">(</span>singleItemExp<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">htmlFieldName</span><span class="token punctuation">&#125;</span></span><span class="token string">[</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">guid</span><span class="token punctuation">&#125;</span></span><span class="token string">]"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            htmlBuilder<span class="token punctuation">.</span><span class="token function">Append</span><span class="token punctuation">(</span><span class="token string">@"&lt;/div>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">></span></span> <span class="token generic-method"><span class="token function">AddDefaultNewItem</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TValue<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> isIncludeNewItem<span class="token punctuation">,</span> <span class="token class-name">IEnumerable<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">></span></span> items<span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token class-name">TValue</span> <span class="token punctuation">:</span> <span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isIncludeNewItem<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                items <span class="token operator">=</span> items<span class="token punctuation">.</span><span class="token function">Concat</span><span class="token punctuation">(</span><span class="token keyword">new</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+                <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">new</span> <span class="token constructor-invocation class-name">TValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token keyword">return</span> items<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token return-type class-name">Func<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> <span class="token generic-method"><span class="token function">GetIndexResolver</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TValue<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span><span class="token punctuation">></span></span> indexResolverExpression<span class="token punctuation">)</span> <span class="token keyword">where</span> <span class="token class-name">TValue</span> <span class="token punctuation">:</span> <span class="token keyword">new</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name">Func<span class="token punctuation">&lt;</span>TValue<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span></span> indexResolver<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>indexResolverExpression <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                indexResolver <span class="token operator">=</span> x <span class="token operator">=></span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">&#123;</span>
+                indexResolver <span class="token operator">=</span> indexResolverExpression<span class="token punctuation">.</span><span class="token function">Compile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token keyword">return</span> indexResolver<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">MvcHtmlString</span> <span class="token generic-method"><span class="token function">EditorForManyIndexField</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TModel<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>
+            <span class="token keyword">this</span> <span class="token class-name">HtmlHelper<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">></span></span> html<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span><span class="token punctuation">></span></span> indexResolverExpression <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlPrefix <span class="token operator">=</span> html<span class="token punctuation">.</span>ViewData<span class="token punctuation">.</span>TemplateInfo<span class="token punctuation">.</span>HtmlFieldPrefix<span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> first <span class="token operator">=</span> htmlPrefix<span class="token punctuation">.</span><span class="token function">LastIndexOf</span><span class="token punctuation">(</span><span class="token string character">'['</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> last <span class="token operator">=</span> htmlPrefix<span class="token punctuation">.</span><span class="token function">IndexOf</span><span class="token punctuation">(</span><span class="token string character">']'</span><span class="token punctuation">,</span> first <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>first <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span> last <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">InvalidOperationException</span><span class="token punctuation">(</span><span class="token string">"EditorForManyIndexField called when not in a EditorForMany context"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlFieldNameWithPrefix <span class="token operator">=</span> htmlPrefix<span class="token punctuation">.</span><span class="token function">Substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> first<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> guid <span class="token operator">=</span> htmlPrefix<span class="token punctuation">.</span><span class="token function">Substring</span><span class="token punctuation">(</span>first <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> last <span class="token operator">-</span> first <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">return</span> <span class="token function">_EditorForManyIndexField</span><span class="token punctuation">(</span>htmlFieldNameWithPrefix<span class="token punctuation">,</span> guid<span class="token punctuation">,</span> indexResolverExpression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token return-type class-name">MvcHtmlString</span> <span class="token generic-method"><span class="token function">_EditorForManyIndexField</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TModel<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> htmlFieldNameWithPrefix<span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> guid<span class="token punctuation">,</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TModel<span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token punctuation">></span><span class="token punctuation">></span></span> indexResolverExpression<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> htmlBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            htmlBuilder<span class="token punctuation">.</span><span class="token function">AppendFormat</span><span class="token punctuation">(</span>
+                <span class="token string">@"&lt;input type=""hidden"" name=""&#123;0&#125;.Index"" value=""&#123;1&#125;"" />"</span><span class="token punctuation">,</span>
+                htmlFieldNameWithPrefix<span class="token punctuation">,</span>
+                guid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>indexResolverExpression <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                htmlBuilder<span class="token punctuation">.</span><span class="token function">AppendFormat</span><span class="token punctuation">(</span>
+                    <span class="token string">@"&lt;input type=""hidden"" name=""&#123;0&#125;[&#123;1&#125;].&#123;2&#125;"" value=""&#123;1&#125;"" />"</span><span class="token punctuation">,</span>
+                    htmlFieldNameWithPrefix<span class="token punctuation">,</span>
+                    guid<span class="token punctuation">,</span>
+                    ExpressionHelper<span class="token punctuation">.</span><span class="token function">GetExpressionText</span><span class="token punctuation">(</span>indexResolverExpression<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MvcHtmlString</span><span class="token punctuation">(</span>htmlBuilder<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    public static class HtmlHelperExtensions
-    &#123;
-        /// &lt;summary&gt;
-        /// Generate appropriate control for a list of data
-        /// &lt;/summary&gt;
-        /// &lt;typeparam name=&quot;TModel&quot;&gt;The Model contain the list&lt;/typeparam&gt;
-        /// &lt;typeparam name=&quot;TValue&quot;&gt;The Model of list of items&lt;/typeparam&gt;
-        /// &lt;param name=&quot;html&quot;&gt;&lt;/param&gt;
-        /// &lt;param name=&quot;propertyExpression&quot;&gt;Which property&lt;/param&gt;
-        /// &lt;param name=&quot;indexResolverExpression&quot;&gt;Select the property to be the index&lt;/param&gt;
-        /// &lt;param name=&quot;isIncludeNewItem&quot;&gt;Set to true to include a default new item&lt;/param&gt;
-        /// &lt;param name=&quot;includeIndexField&quot;&gt;Set to true to include Index in values sent to server&lt;/param&gt;
-        /// &lt;returns&gt;HTML codes of editorfor a list of items&lt;/returns&gt;
-        public static MvcHtmlString EditorForMany&lt;TModel, TValue&gt;(
-            this HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TModel, IEnumerable&lt;TValue&gt;&gt;&gt; propertyExpression,
-            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression = null,
-            bool isIncludeNewItem = false,
-            bool includeIndexField = true)
-            where TModel 
-                : class where TValue 
-                : new()
-        &#123;
-            var items = propertyExpression.Compile()(html.ViewData.Model);
-            var htmlBuilder = new StringBuilder();
-            var htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression);
-            var htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName);
-            var indexResolver = GetIndexResolver(indexResolverExpression);
-            items = AddDefaultNewItem(isIncludeNewItem, items);
-
-            foreach (var item in items)
-            &#123;
-                var dummy = new
-                &#123;
-                    Item = item
-                &#125;;
-
-                var guid = indexResolver(item);
-
-                var memberExp = Expression.MakeMemberAccess(
-                    Expression.Constant(dummy),
-                    dummy.GetType().GetProperty(&quot;Item&quot;));
-
-                var singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);
-
-                guid = string.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid);
-                BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp);
-            &#125;
-
-            return new MvcHtmlString(htmlBuilder.ToString());
-        &#125;
-
-        private static void BuildHtmlString&lt;TModel, TValue&gt;(
-            HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression,
-            bool includeIndexField,
-            StringBuilder htmlBuilder,
-            string htmlFieldName,
-            string htmlFieldNameWithPrefix,
-            string guid,
-            Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp)
-            where TModel : class
-            where TValue : new()
-        &#123;
-            htmlBuilder.Append(@&quot;&lt;div&gt;&quot;);
-
-            if (includeIndexField)
-            &#123;
-                htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression));
-            &#125;
-
-            htmlBuilder.Append(html.EditorFor(singleItemExp, null, $&quot;&#123;htmlFieldName&#125;[&#123;guid&#125;]&quot;));
-
-            htmlBuilder.Append(@&quot;&lt;/div&gt;&quot;);
-        &#125;
-
-        private static IEnumerable&lt;TValue&gt; AddDefaultNewItem&lt;TValue&gt;(bool isIncludeNewItem, IEnumerable&lt;TValue&gt; items) where TValue : new()
-        &#123;
-            if (isIncludeNewItem)
-            &#123;
-                items = items.Concat(new[]
-                &#123;
-                    new TValue()
-                &#125;);
-            &#125;
-
-            return items;
-        &#125;
-
-        private static Func&lt;TValue, string&gt; GetIndexResolver&lt;TValue&gt;(Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression) where TValue : new()
-        &#123;
-            Func&lt;TValue, string&gt; indexResolver;
-            if (indexResolverExpression == null)
-            &#123;
-                indexResolver = x =&gt; null;
-            &#125;
-            else
-            &#123;
-                indexResolver = indexResolverExpression.Compile();
-            &#125;
-
-            return indexResolver;
-        &#125;
-
-        public static MvcHtmlString EditorForManyIndexField&lt;TModel&gt;(
-            this HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression = null)
-        &#123;
-            var htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix;
-            var first = htmlPrefix.LastIndexOf(&#39;[&#39;);
-            var last = htmlPrefix.IndexOf(&#39;]&#39;, first + 1);
-
-            if (first == -1 || last == -1)
-            &#123;
-                throw new InvalidOperationException(&quot;EditorForManyIndexField called when not in a EditorForMany context&quot;);
-            &#125;
-
-            var htmlFieldNameWithPrefix = htmlPrefix.Substring(0, first);
-            var guid = htmlPrefix.Substring(first + 1, last - first - 1);
-
-            return _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression);
-        &#125;
-
-        private static MvcHtmlString _EditorForManyIndexField&lt;TModel&gt;(
-            string htmlFieldNameWithPrefix,
-            string guid,
-            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression)
-        &#123;
-            var htmlBuilder = new StringBuilder();
-            htmlBuilder.AppendFormat(
-                @&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;.Index&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;,
-                htmlFieldNameWithPrefix,
-                guid);
-
-            if (indexResolverExpression != null)
-            &#123;
-                htmlBuilder.AppendFormat(
-                    @&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;[&#123;1&#125;].&#123;2&#125;&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;,
-                    htmlFieldNameWithPrefix,
-                    guid,
-                    ExpressionHelper.GetExpressionText(indexResolverExpression));
-            &#125;
-
-            return new MvcHtmlString(htmlBuilder.ToString());
-        &#125;
-    &#125;
-&#125;</code></pre>
 <h2 id="2-2-JavaScript-Code"><a href="#2-2-JavaScript-Code" class="headerlink" title="2.2. JavaScript Code"></a>2.2. JavaScript Code</h2><p><a id="markdown-javascript-code" name="javascript-code"></a></p>
 <p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
-<pre><code class="js">function GenerateGuid() &#123;
-    function s4() &#123;
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-    &#125;
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">GenerateGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">0x10000</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">return</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">s4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+ 
+<span class="token keyword">function</span> <span class="token function">AssignAddMoreButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".add-more-button"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">debugger</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> id <span class="token operator">=</span> <span class="token string">"#"</span> <span class="token operator">+</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token string">"class"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> clone <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">last</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> guid <span class="token operator">=</span> clone<span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>guid<span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> newHtml <span class="token operator">=</span> clone<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> oldHtml</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> oldHtml<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regex<span class="token punctuation">,</span> <span class="token function">GenerateGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">$</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>newHtml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    return s4() + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + s4() + s4();
-&#125;
-
-function AssignAddMoreButton() &#123;
-    $(&quot;.add-more-button&quot;).click(function (event) &#123;
-        event.preventDefault();
-        debugger;
-        var id = &quot;#&quot; + $(this).data(&quot;class&quot;);
-        var clone = $(id).children().last().clone();
-        var guid = clone.children().first().val();
-        var regex = new RegExp(guid, &quot;g&quot;);
-        var newHtml = clone.html(function (i, oldHtml) &#123;
-            return oldHtml.replace(regex, GenerateGuid());
-        &#125;);
-        $(id).append(newHtml);
-    &#125;);
-&#125;</code></pre>
 <h1 id="3-Cach-xai"><a href="#3-Cach-xai" class="headerlink" title="3. Cách xài"></a>3. Cách xài</h1><p><a id="markdown-c%C3%A1ch-x%C3%A0i" name="c%C3%A1ch-x%C3%A0i"></a></p>
 <h2 id="3-1-Chuan-bi-model"><a href="#3-1-Chuan-bi-model" class="headerlink" title="3.1. Chuẩn bị model"></a>3.1. Chuẩn bị model</h2><p><a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B-model" name="chu%E1%BA%A9n-b%E1%BB%8B-model"></a></p>
 <p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
 <p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
-<pre><code class="cs">public class Model
-&#123;
-    // Your normal, already existed properties
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Model</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// Your normal, already existed properties</span>
+ 
+    <span class="token comment">// set to false if you don't want to generate a HTML input tag</span>
+    <span class="token comment">// for it when using with editorfor control</span>
+    <span class="token punctuation">[</span><span class="token function">ScaffoldColumn</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Index <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    // set to false if you don&#39;t want to generate a HTML input tag
-    // for it when using with editorfor control
-    [ScaffoldColumn(false)]
-    public string Index &#123; get; set; &#125;
-&#125;</code></pre>
 <h2 id="3-2-Razor-code"><a href="#3-2-Razor-code" class="headerlink" title="3.2. Razor code"></a>3.2. Razor code</h2><p><a id="markdown-razor-code" name="razor-code"></a></p>
-<pre><code class="cs">@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;,FormMethod.Post, new &#123;@class=&quot;CssClassName&quot;&#125;))
-&#123;
-    // the last parameter &quot;true&quot; is to generate a default item
-    @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, true)
-&#125;
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@<span class="token keyword">using</span><span class="token punctuation">(</span>Html<span class="token punctuation">.</span><span class="token function">BeginForm</span><span class="token punctuation">(</span><span class="token string">"ActionName"</span><span class="token punctuation">,</span><span class="token string">"ControllerName"</span><span class="token punctuation">,</span>FormMethod<span class="token punctuation">.</span>Post<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token punctuation">&#123;</span>@<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"CssClassName"</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// the last parameter "true" is to generate a default item</span>
+    @Html<span class="token punctuation">.</span><span class="token function">EditorForMany</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>Model<span class="token punctuation">,</span> x <span class="token operator">=></span> x<span class="token punctuation">.</span>Index<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+ 
+ 
+    <span class="token comment">// include the javascript code file above</span>
+    <span class="token function">AssignAddMoreButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-    // include the javascript code file above
-    AssignAddMoreButton();</code></pre>
 <p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
 <h1 id="4-Ket-qua"><a href="#4-Ket-qua" class="headerlink" title="4. Kết quả"></a>4. Kết quả</h1><p><a id="markdown-k%E1%BA%BFt-qu%E1%BA%A3" name="k%E1%BA%BFt-qu%E1%BA%A3"></a></p>
 <p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) <img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
@@ -622,9 +626,10 @@ function AssignAddMoreButton() &#123;
 <li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
 <li>Dựng code HTML</li>
 </ol>
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;
-&lt;/div&gt;</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- List of your html input tag generated by editorfor and extended templates --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="5-2-Tai-sao-lai-can-Index"><a href="#5-2-Tai-sao-lai-can-Index" class="headerlink" title="5.2. Tại sao lại cần Index"></a>5.2. Tại sao lại cần Index</h2><p><a id="markdown-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index" name="t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index"></a></p>
 <p>Có 2 cách để send một list data tới controller</p>
 <ul>
@@ -635,8 +640,9 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;YourList[0].Data&quot;/&gt;
-&lt;input type=&quot;text&quot; name=&quot;YourList[1].Data&quot;/&gt;</code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList[0].Data<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList[1].Data<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <ul>
 <li>dùng mảng có index dạng string<ul>
 <li>yêu cầu thêm một tag input ẩn để chứa index</li>
@@ -644,11 +650,12 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre><code class="html">&lt;input type=&quot;hidden&quot; name=&quot;YourList.Index&quot; value=&quot;radomGuid1&quot;/&gt;
-&lt;input type=&quot;text&quot; name=&quot;YourList[randomGuid1].Data&quot;/&gt;
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList.Index<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>radomGuid1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList[randomGuid1].Data<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList.Index<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>anotherGuid2<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>YourList[anotherGuid2].Data<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-&lt;input type=&quot;hidden&quot; name=&quot;YourList.Index&quot; value=&quot;anotherGuid2&quot;/&gt;
-&lt;input type=&quot;text&quot; name=&quot;YourList[anotherGuid2].Data&quot;/&gt;</code></pre>
 <p>Như bạn cũng thấy, giá trị của hidden input tag có thể là bất cứ gì, miễn là giá trị trong ngoặc vuông giống với nó.</p>
 <p>Bước 1 bước xa hơn, đoạn code javascript bên trên sẽ tạo ra index dạng GUID, cho nên bạn sẽ không phải lo về vấn đề trùng lặp index. Tuy nhiên, nó ko phải là GUID thiệt, vì để generate GUID thiệt sẽ hơi phức tạp, và làm cho app nặng lên, giống như xài tên lửa đi giết ruồi, cho nên để cho đơn giản, đoạn code đó chỉ sinh ra “fake” GUID, nhưng theo cách code thì khó mà trùng được</p>
 <p>Theo bạn, bạn có cách nào cải tiến đoạn code bên trên không?</p>

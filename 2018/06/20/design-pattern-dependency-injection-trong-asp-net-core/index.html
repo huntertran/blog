@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png">
 <meta property="og:image" content="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png">
 <meta property="article:published_time" content="2018-06-20T12:30:55.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:13:45.911Z">
+<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="ASP.NET">
 <meta property="article:tag" content="dependency injection">
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:13:45" itemprop="dateModified" datetime="2020-10-04T12:13:45-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -397,7 +397,8 @@
 <li>Bạn có thể yêu cầu nhiều loại nước ngọt khác nhau mà ko cần biết hình dạng hay chỗ bán</li>
 </ul>
 <h1 id="3-Back-to-code"><a href="#3-Back-to-code" class="headerlink" title="3. Back to code"></a>3. Back to code</h1><p>Quay trở lại với code, bạn sẽ implement DI như thế nào?</p>
-<h2 id="3-1-Interface"><a href="#3-1-Interface" class="headerlink" title="3.1. Interface"></a>3.1. Interface</h2><pre><code class="csharp">public interface IDrinkBuyer &#123; void BuyDrink(string name); &#125;</code></pre>
+<h2 id="3-1-Interface"><a href="#3-1-Interface" class="headerlink" title="3.1. Interface"></a>3.1. Interface</h2><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IDrinkBuyer</span> <span class="token punctuation">&#123;</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BuyDrink</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Khi thằng nhóc mua nước ngọt ở bên trên đã già, nó sẽ muốn truyền lại nhiệm vụ mua nước ngọt cho 1 thằng nhóc khác, và cứ thể. Mọi thằng nhóc mua nước ngọt trong xóm đều sẽ có 1 phương thức cơ bản là <code>BuyDrink</code> chấp nhận 1 param là tên của loại nước cần mua Bạn đóng vai trò là <code>WebApplication</code>, sẽ gọi phương thức này để có nước ngọt uống</p>
 <h2 id="3-2-Implementation"><a href="#3-2-Implementation" class="headerlink" title="3.2. Implementation"></a>3.2. Implementation</h2><p>Người quản lý của mấy thằng nhóc mua nước ngọt này sẽ phân nhiệm vụ cho từng thằng nhóc 1</p>
 <ul>
@@ -405,25 +406,26 @@
 <li>Nhóc B mua ở Vinmart</li>
 </ul>
 <p>Và họ sẽ implement như sau </p>
-<pre><code class="csharp">public class CircleKDrinkBuyer: IDrinkBuyer 
-&#123;
-  public void BuyDrink(string name) 
-  &#123;
-    // Go to circle k 
-    // Find the -name- drink 
-    // Buy it and deliver 
-  &#125;
-&#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CircleKDrinkBuyer</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IDrinkBuyer</span></span> 
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BuyDrink</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">)</span> 
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Go to circle k </span>
+    <span class="token comment">// Find the -name- drink </span>
+    <span class="token comment">// Buy it and deliver </span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-public class VinmartDrinkBuyer: IDrinkBuyer 
-&#123;
-  public void BuyDrink(string name) 
-  &#123;
-    // Go to Vinmart 
-    // Find the -name- drink 
-    // Buy it and deliver 
-  &#125;
-&#125;</code></pre>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VinmartDrinkBuyer</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IDrinkBuyer</span></span> 
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BuyDrink</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">)</span> 
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Go to Vinmart </span>
+    <span class="token comment">// Find the -name- drink </span>
+    <span class="token comment">// Buy it and deliver </span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống</p>
 <h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn <img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"> bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
 <h2 id="4-1-Lifetime"><a href="#4-1-Lifetime" class="headerlink" title="4.1. Lifetime"></a>4.1. Lifetime</h2><p><code>AddScoped</code> dùng để chỉ định <em>thời gian sống</em> của service này, có 3 loại:</p>
@@ -434,53 +436,56 @@ public class VinmartDrinkBuyer: IDrinkBuyer
 </ul>
 <h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó <img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
 <h2 id="4-3-Action-Injection"><a href="#4-3-Action-Injection" class="headerlink" title="4.3. Action Injection"></a>4.3. Action Injection</h2><p>Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác </p>
-<pre><code class="csharp">public IActionResult About([FromServices] IDrinkBuyer drinkBuyer) 
-&#123;
-  drinkBuyer.BuyDrink(&quot;coca&quot;);
-  return View();
-&#125;</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">About</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromServices</span></span><span class="token punctuation">]</span> <span class="token class-name">IDrinkBuyer</span> drinkBuyer<span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span>
+  drinkBuyer<span class="token punctuation">.</span><span class="token function">BuyDrink</span><span class="token punctuation">(</span><span class="token string">"coca"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="4-4-Service-trong-Service"><a href="#4-4-Service-trong-Service" class="headerlink" title="4.4. Service trong Service"></a>4.4. Service trong Service</h2><p>Nested services, service con, vân vân và mây mây</p>
 <p>Đôi khi bạn cần phải có 1 service con để service cha chạy được, thì inject như nào</p>
 <p>Rất đơn giản, cũng dùng contructor injection thôi</p>
 <p>Giả sử Service <code>DrinkBuyer</code> cần có service <code>Trasport</code> để chạy </p>
-<pre><code class="csharp">public interface ITransport
-&#123;
-  void Transport();
-&#125;
-public class BikeTransport: ITransport
-&#123;
-  public void Transport() 
-  &#123;
-    // transport by bike 
-  &#125;
-&#125;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ITransport</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BikeTransport</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ITransport</span></span>
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transport</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// transport by bike </span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-public class CarTransport: ITransport
-&#123;
-  public void Transport()
-  &#123;
-    // transport by car
-  &#125;
-&#125;</code></pre>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CarTransport</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">ITransport</span></span>
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Transport</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token comment">// transport by car</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>đầu tiên đăng ký nó trong <code>Startup.cs</code> <code>services.AddScoped();</code></p>
 <p>sau đó bạn inject nó vào <code>DrinkBuyer</code> như sau</p>
-<pre><code class="csharp">public class CircleKDrinkBuyer: IDrinkBuyer 
-&#123;
-  private readonly ITransport _transport;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CircleKDrinkBuyer</span><span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IDrinkBuyer</span></span> 
+<span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">ITransport</span> _transport<span class="token punctuation">;</span>
+  
+  <span class="token keyword">public</span> <span class="token function">CircleKDrinkBuyer</span><span class="token punctuation">(</span><span class="token class-name">ITransport</span> transport<span class="token punctuation">)</span> 
+  <span class="token punctuation">&#123;</span>
+      _transport <span class="token operator">=</span> transport<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  
+  <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">BuyDrink</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Go to circle k </span>
+    <span class="token comment">// Find the -name- drink </span>
+    <span class="token comment">// Buy it </span>
+    <span class="token comment">// Deliver </span>
+    _transport<span class="token punctuation">.</span><span class="token function">Transport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-  public CircleKDrinkBuyer(ITransport transport) 
-  &#123;
-      _transport = transport;
-  &#125;
-
-  public void BuyDrink(string name) &#123;
-    // Go to circle k 
-    // Find the -name- drink 
-    // Buy it 
-    // Deliver 
-    _transport.Transport();
-  &#125;
-&#125;</code></pre>
 <p>thế nà xong :D</p>
 
     </div>
