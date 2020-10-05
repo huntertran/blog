@@ -25,16 +25,16 @@
     var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng [code lang">
+  <meta name="description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng &lt;p&gt;hell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASPNET Core 2] – Middleware">
 <meta property="og:url" content="https://huntertran.com/2018/06/12/aspnet-core-2-middleware/">
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
-<meta property="og:description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng [code lang">
+<meta property="og:description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng &lt;p&gt;hell">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png">
 <meta property="article:published_time" content="2018-06-12T04:18:39.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
+<meta property="article:modified_time" content="2020-10-05T15:59:56.213Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -337,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-05 11:59:56" itemprop="dateModified" datetime="2020-10-05T11:59:56-04:00">2020-10-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -366,70 +366,190 @@
         <p>For English version: <a target="_blank" rel="noopener" href="https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/">[ASPNET Core 2] – Middleware</a></p>
 <p>Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET</p>
 <p>Dễ ẹt, <code>dotnet new mvc</code>, rồi sửa <code>Views/Home/Index.cshtml</code> cho nó trả về 1 dòng</p>
-<p>[code lang=html] <p>hello world</p> [/code]</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>hello world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Thế là xong, phải ko? Có cách khác :D</p>
 <a id="more"></a>
+
+<!-- TOC -->
+
 <ul>
 <li><a href="#1-middleware-l%C3%A0-gi%E1%BB%81">1. Middleware là giề</a></li>
-<li><a href="#2-c%C3%A1c-lo%E1%BA%A1i-middleware">2. Các loại middleware</a></li>
+<li><a href="#2-c%C3%A1c-lo%E1%BA%A1i-middleware">2. Các loại middleware</a><ul>
+<li><a href="#21---so-s%C3%A1nh-v%E1%BB%9Bi-%C4%91%E1%BB%93-c%E1%BB%95-aspnet-mvc5">2.1. &gt; ## So sánh với đồ cổ ASP.NET MVC5</a></li>
+</ul>
+</li>
 <li><a href="#3-default-middleware">3. Default middleware</a></li>
 <li><a href="#4-vi%E1%BA%BFt-m%E1%BB%99t-middleware">4. Viết một middleware</a><ul>
 <li><a href="#41-d%C3%B9ng-delegate">4.1. Dùng delegate</a></li>
 <li><a href="#42-x%C3%A0i-class-ri%C3%AAng">4.2. Xài class riêng</a></li>
-<li><a href="#ghi-ch%C3%BA-khi-x%C3%A0i-dependency-injection">ghi chú khi xài Dependency Injection</a></li>
+<li><a href="#43-ghi-ch%C3%BA-khi-x%C3%A0i-dependency-injection">4.3. ghi chú khi xài Dependency Injection</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="1-Middleware-la-gie"><a href="#1-Middleware-la-gie" class="headerlink" title="1. Middleware là giề"></a>1. Middleware là giề</h1><p>Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses <img src="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png" alt="middleware"></p>
+<!-- /TOC -->
+
+<h1 id="1-Middleware-la-gie"><a href="#1-Middleware-la-gie" class="headerlink" title="1. Middleware là giề"></a>1. Middleware là giề</h1><p><a id="markdown-middleware-l%C3%A0-gi%E1%BB%81" name="middleware-l%C3%A0-gi%E1%BB%81"></a></p>
+<p>Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses <img src="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png" alt="middleware"></p>
 <blockquote>
-<p>middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là [code lang=text] short-circuit [/code]</p>
+<p>middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là <code>short-circuit</code></p>
 </blockquote>
-<h1 id="2-Cac-loai-middleware"><a href="#2-Cac-loai-middleware" class="headerlink" title="2. Các loại middleware"></a>2. Các loại middleware</h1><p>Có 3 loại middleware, phân loại bằng cách bạn implement nó như nào</p>
-<p>Loại</p>
-<p>Có thể short-circuit</p>
-<p>Dùng để</p>
-<p>Use</p>
-<p>Có</p>
-<p>Short-circuit một request<br>Logic để tạo response</p>
-<p>Run</p>
-<p>Không</p>
-<p>Kết thúc pipeline</p>
-<p>Map<br>MapWhen</p>
-<p>Không</p>
-<p>Phân nhánh pipeline dựa trên request path<br>MapWhen phân nhánh dựa trên điều kiện<br>Hỗ trợ Nesting (multi-level branching)</p>
+<h1 id="2-Cac-loai-middleware"><a href="#2-Cac-loai-middleware" class="headerlink" title="2. Các loại middleware"></a>2. Các loại middleware</h1><p><a id="markdown-c%C3%A1c-lo%E1%BA%A1i-middleware" name="c%C3%A1c-lo%E1%BA%A1i-middleware"></a></p>
+<p>Có 3 loại middleware, phân loại bằng cách bạn implement nó như nào</p>
+<table>
+<thead>
+<tr>
+<th>Loại</th>
+<th>Có thể short-circuit</th>
+<th>Dùng để</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Use</td>
+<td>Có</td>
+<td>Short-circuit một request<br>Logic để tạo response</td>
+</tr>
+<tr>
+<td>Run</td>
+<td>Không</td>
+<td>Kết thúc pipeline</td>
+</tr>
+<tr>
+<td>Map<br>MapWhen</td>
+<td>Không</td>
+<td>Phân nhánh pipeline dựa trên request path<br>MapWhen phân nhánh dựa trên điều kiện<br>Hỗ trợ Nesting (multi-level branching)</td>
+</tr>
+</tbody></table>
 <blockquote>
-<h2 id="So-sanh-voi-do-co-ASP-NET-MVC5"><a href="#So-sanh-voi-do-co-ASP-NET-MVC5" class="headerlink" title="So sánh với đồ cổ ASP.NET MVC5"></a>So sánh với đồ cổ ASP.NET MVC5</h2><p>ASP.NET MVC5</p>
-<p>ASP.NET Core 2</p>
-<p>Khái niệm</p>
-<p>HTTP Handlers<br>HTTP Modules</p>
-<p>middleware</p>
-<p>Lựa chọn?</p>
-<p>HTTP Handlers =&gt; Dựa trên filename extension<br>HTTP Modules =&gt; Móc vào life cycle bằng cách dùng events</p>
-<p>Định nghĩa theo 1 thứ tự đặc biệt và các từ khóa<br>Run =&gt; kết thúc pipeline<br>Use =&gt; short-circuit và xử lý logic<br>Map =&gt; phân nhánh dựa trên path</p>
-<p>Dễ xài ko?</p>
-<p>Đòi hỏi hiểu sâu về ASP.NET life-cycle<br>Khó xài vì nhiều modules có thể móc vào cùng 1 event</p>
-<p>Yêu cầu 1 thứ tự nhất định<br>Chỉ có 1 dòng pipeline, dễ hiểu/xài/debug</p>
+<h2 id="So-sanh-voi-do-co-ASP-NET-MVC5"><a href="#So-sanh-voi-do-co-ASP-NET-MVC5" class="headerlink" title="So sánh với đồ cổ ASP.NET MVC5"></a>So sánh với đồ cổ ASP.NET MVC5</h2><p><a id="markdown-%3E-%23%23-so-s%C3%A1nh-v%E1%BB%9Bi-%C4%91%E1%BB%93-c%E1%BB%95-asp.net-mvc5" name="%3E-%23%23-so-s%C3%A1nh-v%E1%BB%9Bi-%C4%91%E1%BB%93-c%E1%BB%95-asp.net-mvc5"></a></p>
 </blockquote>
-<h1 id="3-Default-middleware"><a href="#3-Default-middleware" class="headerlink" title="3. Default middleware"></a>3. Default middleware</h1><p>Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số middleware cho bạn</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ASP.NET MVC5</th>
+<th>ASP.NET Core 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Khái niệm</td>
+<td>HTTP Handlers<br><br>HTTP Modules</td>
+<td>middleware</td>
+</tr>
+<tr>
+<td>Lựa chọn?</td>
+<td>HTTP Handlers =&gt; Dựa trên filename extension<br><br>HTTP Modules =&gt; Móc vào life cycle bằng cách dùng events</td>
+<td>Định nghĩa theo 1 thứ tự đặc biệt và các từ khóa<br><br>Run =&gt; kết thúc pipeline<br><br>Use =&gt; short-circuit và xử lý logic<br><br>Map =&gt; phân nhánh dựa trên path</td>
+</tr>
+<tr>
+<td>Dễ xài ko?</td>
+<td>Đòi hỏi hiểu sâu về ASP.NET life-cycle<br><br>Khó xài vì nhiều modules có thể móc vào cùng 1 event</td>
+<td>Yêu cầu 1 thứ tự nhất định<br><br>Chỉ có 1 dòng pipeline, dễ hiểu/xài/debug</td>
+</tr>
+</tbody></table>
+<h1 id="3-Default-middleware"><a href="#3-Default-middleware" class="headerlink" title="3. Default middleware"></a>3. Default middleware</h1><p><a id="markdown-default-middleware" name="default-middleware"></a></p>
+<p>Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số middleware cho bạn</p>
 <ol>
 <li>Exception Handler: handle exception từ các middleware ở dưới</li>
 <li>Static Files: trả về files trong wwwroots</li>
 <li>Mvc: Hướng request tới các action trong controller</li>
 </ol>
-<p>source code nè [code lang=csharp] public static void Configure(IApplicationBuilder app, IHostingEnvironment env) { if (env.IsDevelopment()) { app.UseDeveloperExceptionPage(); } else { app.UseExceptionHandler(“/Error/500”); } app.UseStaticFiles(); app.UseAuthentication(); app.UseSession(); if (!env.IsDevelopment()) { app.UseMiddleware<ErrorHandlingMiddleware>(); } app.UseMvc(routes =&gt; { routes.MapRoute( name: “default”, template: “{controller=Home}/{action=Index}/{id?}”); }); } [/code] <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.1&tabs=aspnetcore2x#built-in-middleware">Đây</a> danh sách các built-in middlewares</p>
-<h1 id="4-Viet-mot-middleware"><a href="#4-Viet-mot-middleware" class="headerlink" title="4. Viết một middleware"></a>4. Viết một middleware</h1><h2 id="4-1-Dung-delegate"><a href="#4-1-Dung-delegate" class="headerlink" title="4.1. Dùng delegate"></a>4.1. Dùng delegate</h2><p>thêm code vào <code>Startup.cs</code>, method <code>Configure</code> [code lang=csharp] app.Use((context, next) =&gt; { var cultureQuery = context.Request.Query[“culture”]; if (!string.IsNullOrWhiteSpace(cultureQuery)) { var culture = new CultureInfo(cultureQuery); CultureInfo.CurrentCulture = culture; CultureInfo.CurrentUICulture = culture; } // Call the next delegate/middleware in the pipeline return next(); }); [/code]</p>
-<h2 id="4-2-Xai-class-rieng"><a href="#4-2-Xai-class-rieng" class="headerlink" title="4.2. Xài class riêng"></a>4.2. Xài class riêng</h2><p>phức tạp hơn, nhưng bù lại linh hoạt hơn đầu tiên, code cho middleware [code lang=csharp] public class RequestCultureMiddleware { private readonly RequestDelegate _next; public RequestCultureMiddleware(RequestDelegate next) { _next =next; } public Task InvokeAsync(HttpContext context) { var cultureQuery = context.Request.Query[“culture”]; if (!string.IsNullOrWhiteSpace(cultureQuery)) { var culture = new CultureInfo(cultureQuery); CultureInfo.CurrentCulture = culture; CultureInfo.CurrentUICulture = culture; } // Call the next delegate/middleware in the pipeline return this._next(context); } } [/code] sau đó, code cho extension để xài được middleware đó trong method <code>Configure</code> [code lang=csharp] // Expose through IApplicationBuilder public static class RequestCultureMiddlewareExtensions { public static IApplicationBuilder UseRequestCulture(this IApplicationBuilder builder) { return builder.UseMiddleware<RequestCultureMiddleware>(); } } [/code] cuối cùng, xài trong <code>Configure</code> method [code lang=csharp] // Use in Startup.cs =&gt; Configure method public void Configure(IApplicationBuilder app) { app.UseRequestCulture(); app.Run(async (context) =&gt; { await context.Response.WriteAsync($”Hello{CultureInfo.CurrentCulture.DisplayName}”); }); } [/code]</p>
-<h2 id="ghi-chu-khi-xai-Dependency-Injection"><a href="#ghi-chu-khi-xai-Dependency-Injection" class="headerlink" title="ghi chú khi xài Dependency Injection"></a>ghi chú khi xài Dependency Injection</h2><blockquote>
+<p>source code nè:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Configure</span><span class="token punctuation">(</span><span class="token class-name">IApplicationBuilder</span> app<span class="token punctuation">,</span> <span class="token class-name">IHostingEnvironment</span> env<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>env<span class="token punctuation">.</span><span class="token function">IsDevelopment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        app<span class="token punctuation">.</span><span class="token function">UseDeveloperExceptionPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">&#123;</span>
+        app<span class="token punctuation">.</span><span class="token function">UseExceptionHandler</span><span class="token punctuation">(</span><span class="token string">"/Error/500"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    app<span class="token punctuation">.</span><span class="token function">UseStaticFiles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">UseAuthentication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">UseSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>env<span class="token punctuation">.</span><span class="token function">IsDevelopment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        app<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">UseMiddleware</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>ErrorHandlingMiddleware<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    app<span class="token punctuation">.</span><span class="token function">UseMvc</span><span class="token punctuation">(</span>routes <span class="token operator">=></span>
+    <span class="token punctuation">&#123;</span>
+        routes<span class="token punctuation">.</span><span class="token function">MapRoute</span><span class="token punctuation">(</span>
+            <span class="token named-parameter punctuation">name</span><span class="token punctuation">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+            <span class="token named-parameter punctuation">template</span><span class="token punctuation">:</span> <span class="token string">"&#123;controller=Home&#125;/&#123;action=Index&#125;/&#123;id?&#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-2.1&tabs=aspnetcore2x#built-in-middleware">Đây</a> danh sách các built-in middlewares</p>
+<h1 id="4-Viet-mot-middleware"><a href="#4-Viet-mot-middleware" class="headerlink" title="4. Viết một middleware"></a>4. Viết một middleware</h1><p><a id="markdown-vi%E1%BA%BFt-m%E1%BB%99t-middleware" name="vi%E1%BA%BFt-m%E1%BB%99t-middleware"></a></p>
+<h2 id="4-1-Dung-delegate"><a href="#4-1-Dung-delegate" class="headerlink" title="4.1. Dùng delegate"></a>4.1. Dùng delegate</h2><p><a id="markdown-d%C3%B9ng-delegate" name="d%C3%B9ng-delegate"></a></p>
+<p>thêm code vào <code>Startup.cs</code>, method <code>Configure</code></p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">app<span class="token punctuation">.</span><span class="token function">Use</span><span class="token punctuation">(</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=></span>
+<span class="token punctuation">&#123;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> cultureQuery <span class="token operator">=</span> context<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>Query<span class="token punctuation">[</span><span class="token string">"culture"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">IsNullOrWhiteSpace</span><span class="token punctuation">(</span>cultureQuery<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> culture <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CultureInfo</span><span class="token punctuation">(</span>cultureQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        CultureInfo<span class="token punctuation">.</span>CurrentCulture <span class="token operator">=</span> culture<span class="token punctuation">;</span>
+        CultureInfo<span class="token punctuation">.</span>CurrentUICulture <span class="token operator">=</span> culture<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// Call the next delegate/middleware in the pipeline</span>
+    <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h2 id="4-2-Xai-class-rieng"><a href="#4-2-Xai-class-rieng" class="headerlink" title="4.2. Xài class riêng"></a>4.2. Xài class riêng</h2><p><a id="markdown-x%C3%A0i-class-ri%C3%AAng" name="x%C3%A0i-class-ri%C3%AAng"></a></p>
+<p>phức tạp hơn, nhưng bù lại linh hoạt hơn đầu tiên, code cho middleware </p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RequestCultureMiddleware</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">RequestDelegate</span> _next<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">RequestCultureMiddleware</span><span class="token punctuation">(</span><span class="token class-name">RequestDelegate</span> next<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> _next <span class="token operator">=</span>next<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name">Task</span> <span class="token function">InvokeAsync</span><span class="token punctuation">(</span><span class="token class-name">HttpContext</span> context<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> cultureQuery <span class="token operator">=</span> context<span class="token punctuation">.</span>Request<span class="token punctuation">.</span>Query<span class="token punctuation">[</span><span class="token string">"culture"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">IsNullOrWhiteSpace</span><span class="token punctuation">(</span>cultureQuery<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> culture <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">CultureInfo</span><span class="token punctuation">(</span>cultureQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            CultureInfo<span class="token punctuation">.</span>CurrentCulture <span class="token operator">=</span> culture<span class="token punctuation">;</span>
+            CultureInfo<span class="token punctuation">.</span>CurrentUICulture <span class="token operator">=</span> culture<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token comment">// Call the next delegate/middleware in the pipeline</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_next</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> sau đó, code cho extension để xài được middleware đó trong method <code>Configure</code> </p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token comment">// Expose through IApplicationBuilder</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">RequestCultureMiddlewareExtensions</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">IApplicationBuilder</span> <span class="token function">UseRequestCulture</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token class-name">IApplicationBuilder</span> builder<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> builder<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">UseMiddleware</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>RequestCultureMiddleware<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> cuối cùng, xài trong <code>Configure</code> method </p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token comment">// Use in Startup.cs => Configure method</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Configure</span><span class="token punctuation">(</span><span class="token class-name">IApplicationBuilder</span> app<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    app<span class="token punctuation">.</span><span class="token function">UseRequestCulture</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">await</span> context<span class="token punctuation">.</span>Response<span class="token punctuation">.</span><span class="token function">WriteAsync</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$"Hello</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">CultureInfo<span class="token punctuation">.</span>CurrentCulture<span class="token punctuation">.</span>DisplayName</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h2 id="ghi-chu-khi-xai-Dependency-Injection"><a href="#ghi-chu-khi-xai-Dependency-Injection" class="headerlink" title="ghi chú khi xài Dependency Injection"></a>ghi chú khi xài Dependency Injection</h2><p><a id="markdown-ghi-ch%C3%BA-khi-x%C3%A0i-dependency-injection" name="ghi-ch%C3%BA-khi-x%C3%A0i-dependency-injection"></a></p>
+<blockquote>
 <p><code>Scoped lifetime service</code> phải được inject vào Invoke hoặc InvokeAsync method Inject cái <code>scoped lifetime service</code> thông qua constructor sẽ ép cái service đó thành singleton</p>
 </blockquote>
 <p>có 3 loại lifetime cho một service trong asp.net, là <code>transient</code>, <code>scoped</code> và <code>singleton</code></p>
 <ul>
-<li><p><strong>Transient</strong> lifetime services được tạo ra mỗi lần nó được gọi. Loại này phù hợp cho các service lightweight, stateless.</p>
-</li>
-<li><p><strong>Scoped</strong> lifetime services được tạo cho mỗi request.</p>
-</li>
-<li><p><strong>Singleton</strong> lifetime services được tạo cho lần requested đầu tiên (hoặc khi ConfigureServices khởi chạy nếu bạn có tạo 1 instance của service trong đó) rồi các request sau đó sẽ xài lại instance này.</p>
-</li>
+<li><strong>Transient</strong> lifetime services được tạo ra mỗi lần nó được gọi. Loại này phù hợp cho các service lightweight, stateless.</li>
+<li><strong>Scoped</strong> lifetime services được tạo cho mỗi request.</li>
+<li><strong>Singleton</strong> lifetime services được tạo cho lần requested đầu tiên (hoặc khi ConfigureServices khởi chạy nếu bạn có tạo 1 instance của service trong đó) rồi các request sau đó sẽ xài lại instance này.</li>
 </ul>
 
     </div>

@@ -34,7 +34,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png">
 <meta property="article:published_time" content="2018-07-10T07:24:23.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:54:47.054Z">
+<meta property="article:modified_time" content="2020-10-05T15:59:56.213Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="repository">
 <meta property="article:tag" content="unit of work">
@@ -338,7 +338,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-04 12:54:47" itemprop="dateModified" datetime="2020-10-04T12:54:47-04:00">2020-10-04</time>
+        <time title="Modified: 2020-10-05 11:59:56" itemprop="dateModified" datetime="2020-10-05T11:59:56-04:00">2020-10-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -371,27 +371,28 @@
         <p>Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer.</p>
 <p>Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan tới nhau đều được thực hiện trên cùng một DbContext</p>
 <a id="more"></a>
+
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#1-dbcontext-c%E1%BB%A7a-entity-framework-core">1. DbContext của Entity Framework Core</a></p>
-<ul>
+<li><a href="#1-dbcontext-c%E1%BB%A7a-entity-framework-core">1. DbContext của Entity Framework Core</a><ul>
 <li><a href="#11-dbcontext-tracking">1.1. DbContext Tracking</a></li>
 </ul>
 </li>
-<li><p><a href="#2-repository">2. Repository</a></p>
-<ul>
+<li><a href="#2-repository">2. Repository</a><ul>
 <li><a href="#21-l%C3%BD-do">2.1. Lý do</a></li>
 <li><a href="#22-implement">2.2. Implement</a></li>
 <li><a href="#23-performance-hit">2.3. Performance Hit</a></li>
 </ul>
 </li>
-<li><p><a href="#3-generic-repository">3. Generic Repository</a></p>
-</li>
-<li><p><a href="#4-t%E1%BA%A1o-class-unit-of-work">4. Tạo class Unit of Work</a></p>
-</li>
-<li><p><a href="#5-t%E1%BB%95ng-k%E1%BA%BFt">5. Tổng kết</a></p>
-</li>
+<li><a href="#3-generic-repository">3. Generic Repository</a></li>
+<li><a href="#4-t%E1%BA%A1o-class-unit-of-work">4. Tạo class Unit of Work</a></li>
+<li><a href="#5-t%E1%BB%95ng-k%E1%BA%BFt">5. Tổng kết</a></li>
 </ul>
-<h1 id="1-DbContext-cua-Entity-Framework-Core"><a href="#1-DbContext-cua-Entity-Framework-Core" class="headerlink" title="1. DbContext của Entity Framework Core"></a>1. DbContext của Entity Framework Core</h1><p>“Trước giờ xài mà có để ý <code>DbContext</code> là gì đâu” -&gt; đây chắc là tình trạng chung của kha khá công nghệ liên quan tới .NET, khi mà mọi thứ đã được xây dựng sẵn, và bạn chỉ có nhiệm vụ … xài</p>
+<!-- /TOC -->
+
+<h1 id="1-DbContext-cua-Entity-Framework-Core"><a href="#1-DbContext-cua-Entity-Framework-Core" class="headerlink" title="1. DbContext của Entity Framework Core"></a>1. DbContext của Entity Framework Core</h1><p><a id="markdown-dbcontext-c%E1%BB%A7a-entity-framework-core" name="dbcontext-c%E1%BB%A7a-entity-framework-core"></a></p>
+<p>“Trước giờ xài mà có để ý <code>DbContext</code> là gì đâu” -&gt; đây chắc là tình trạng chung của kha khá công nghệ liên quan tới .NET, khi mà mọi thứ đã được xây dựng sẵn, và bạn chỉ có nhiệm vụ … xài</p>
 <blockquote>
 <p><code>DbContext</code> là một thực thể đại diện cho một phiên làm việc với database, dùng để query và lưu dữ liệu của bạn</p>
 </blockquote>
@@ -400,14 +401,17 @@
 <blockquote>
 <p>Bạn có thể tham khảo thêm về cách thiết lập <code>DbContext</code> ở <a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">đây</a>, mục 3.2</p>
 </blockquote>
-<h2 id="1-1-DbContext-Tracking"><a href="#1-1-DbContext-Tracking" class="headerlink" title="1.1. DbContext Tracking"></a>1.1. DbContext Tracking</h2><p>Để đảm bảo tính toàn vẹn dữ liệu, DbContext dùng 1 cơ chế gọi là <code>tracking</code>.</p>
+<h2 id="1-1-DbContext-Tracking"><a href="#1-1-DbContext-Tracking" class="headerlink" title="1.1. DbContext Tracking"></a>1.1. DbContext Tracking</h2><p><a id="markdown-dbcontext-tracking" name="dbcontext-tracking"></a></p>
+<p>Để đảm bảo tính toàn vẹn dữ liệu, DbContext dùng 1 cơ chế gọi là <code>tracking</code>.</p>
 <p>Khi bạn thay đổi 1 record (thêm, xóa, sửa), thì thay đổi đó ko được đưa xuống database ngay, mà sẽ còn vương vấn lại. DbContext sẽ theo dõi sự thay đổi này.</p>
 <p>Cho tới khi bạn đã thực hiện tất cả các thay đổi cần thiết, rồi gọi <code>yourDbContext.SaveChanges()</code>, thì lúc này, những thay đổi được track sẽ được <em>ship</em> xuống database.</p>
 <p>Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application</p>
-<h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p>Có cái sơ đồ hay ho sau <img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
+<h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p><a id="markdown-repository" name="repository"></a></p>
+<p>Có cái sơ đồ hay ho sau <img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
 <p>Bạn có thể đọc thêm về các services được inject tại bài viết <a target="_blank" rel="noopener" href="https://coding4food.net/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">Dependency Injection trong ASP.NET Core</a></p>
 <p>Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)</p>
-<h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><ul>
+<h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><p><a id="markdown-l%C3%BD-do" name="l%C3%BD-do"></a></p>
+<ul>
 <li><p>Tách việc xử lý logic và việc truy cập database</p>
 <ul>
 <li>Dễ trace bug</li>
@@ -421,64 +425,305 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-2-Implement"><a href="#2-2-Implement" class="headerlink" title="2.2. Implement"></a>2.2. Implement</h2><p>Cụ tỉ, Repository sẽ có các nhiệm vụ: Liệt kê danh sách các record - Lấy 1 record - Thêm - Xóa - Sửa 1 record</p>
+<h2 id="2-2-Implement"><a href="#2-2-Implement" class="headerlink" title="2.2. Implement"></a>2.2. Implement</h2><p><a id="markdown-implement" name="implement"></a></p>
+<p>Cụ tỉ, Repository sẽ có các nhiệm vụ: Liệt kê danh sách các record - Lấy 1 record - Thêm - Xóa - Sửa 1 record</p>
 <p>Bài toán: quản lý học sinh</p>
 <p>Tạo interface</p>
-<p>[code lang=csharp] using System; using System.Collections.Generic; using ContosoUniversity.Models;</p>
-<p>namespace ContosoUniversity.DAL { public interface IStudentRepository : IDisposable { IEnumerable<Student> GetStudents(); Student GetStudentByID(int studentId); void InsertStudent(Student student); void DeleteStudent(int studentID); void UpdateStudent(Student student); void Save(); } } [/code]</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>Models</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">namespace</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>DAL</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IStudentRepository</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IDisposable</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>Student<span class="token punctuation">></span></span> <span class="token function">GetStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name">Student</span> <span class="token function">GetStudentByID</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> studentId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">InsertStudent</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DeleteStudent</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> studentID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">UpdateStudent</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Đoạn code trên khai báo một bộ CRUD (Create - Read - Update - Delete) kinh điển</p>
 <p>Tạo class implement</p>
-<p>[code lang=csharp] using System; using System.Collections.Generic; using System.Linq; using System.Data; using ContosoUniversity.Models;</p>
-<p>namespace ContosoUniversity.DAL { public class StudentRepository : IStudentRepository, IDisposable { // SchoolContext kế thừa từ DbContext, và có thêm DbSet<Student> private SchoolContext context;</p>
-<p>public StudentRepository(SchoolContext context) { this.context = context; }</p>
-<p>public IEnumerable<Student> GetStudents() { return context.Students.ToList(); }</p>
-<p>public Student GetStudentByID(int id) { return context.Students.Find(id); }</p>
-<p>public void InsertStudent(Student student) { context.Students.Add(student); }</p>
-<p>public void DeleteStudent(int studentID) { Student student = context.Students.Find(studentID); context.Students.Remove(student); }</p>
-<p>public void UpdateStudent(Student student) { context.Entry(student).State = EntityState.Modified; }</p>
-<p>public void Save() { context.SaveChanges(); }</p>
-<p>private bool disposed = false;</p>
-<p>protected virtual void Dispose(bool disposing) { if (!this.disposed) { if (disposing) { context.Dispose(); } } this.disposed = true; }</p>
-<p>public void Dispose() { Dispose(true); GC.SuppressFinalize(this); } } } [/code]</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Data</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>Models</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">namespace</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>DAL</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentRepository</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IStudentRepository</span><span class="token punctuation">,</span> <span class="token class-name">IDisposable</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// SchoolContext kế thừa từ DbContext, và có thêm DbSet&lt;Student></span>
+        <span class="token keyword">private</span> <span class="token class-name">SchoolContext</span> context<span class="token punctuation">;</span>
+ 
+        <span class="token keyword">public</span> <span class="token function">StudentRepository</span><span class="token punctuation">(</span><span class="token class-name">SchoolContext</span> context<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>Student<span class="token punctuation">></span></span> <span class="token function">GetStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> context<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name">Student</span> <span class="token function">GetStudentByID</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> id<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> context<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">InsertStudent</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            context<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">DeleteStudent</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> studentID<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name">Student</span> student <span class="token operator">=</span> context<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>studentID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            context<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Remove</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">UpdateStudent</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            context<span class="token punctuation">.</span><span class="token function">Entry</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">.</span>State <span class="token operator">=</span> EntityState<span class="token punctuation">.</span>Modified<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            context<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">bool</span></span> disposed <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+ 
+        <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> disposing<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>disposed<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>disposing<span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    context<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>disposed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Inject repository này vào Controller hoặc Service (nhớ khai báo nó trong <code>Startup.cs</code> trước nhóe)</p>
-<p>[code lang=csharp] public class StudentController { private readonly IStudentRepository _studentRepository;</p>
-<p>public StudentController(IStudentRepository studentRepository) { _studentRepository = studentRepository } } [/code]</p>
-<h2 id="2-3-Performance-Hit"><a href="#2-3-Performance-Hit" class="headerlink" title="2.3. Performance Hit"></a>2.3. Performance Hit</h2><p>Entity Framework khi query một record hoặc 1 bộ record nào đó trong database, nó sẽ trả về dạng <code>IQueryable</code>. Chỉ khi nào bạn gọi <code>.ToList();</code>, thì câu lệnh SQL mới được sinh ra và gửi tới database.</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentController</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token class-name">IStudentRepository</span> _studentRepository<span class="token punctuation">;</span>
+ 
+    <span class="token keyword">public</span> <span class="token function">StudentController</span><span class="token punctuation">(</span><span class="token class-name">IStudentRepository</span> studentRepository<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        _studentRepository <span class="token operator">=</span> studentRepository
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-3-Performance-Hit"><a href="#2-3-Performance-Hit" class="headerlink" title="2.3. Performance Hit"></a>2.3. Performance Hit</h2><p><a id="markdown-performance-hit" name="performance-hit"></a></p>
+<p>Entity Framework khi query một record hoặc 1 bộ record nào đó trong database, nó sẽ trả về dạng <code>IQueryable</code>. Chỉ khi nào bạn gọi <code>.ToList();</code>, thì câu lệnh SQL mới được sinh ra và gửi tới database.</p>
 <p>Trong StudentRepository ở trên, nếu bạn muốn filter 1 list các student có tên là “ABC”, thì sẽ phải code trong controller như sau</p>
-<p>[code lang=csharp] public IActionResult GetStudents(string name) { // SQL đã được sinh ra, toàn bộ student trong db đã được trả về và lưu trong memory var allStudents = _studentRepository.GetStudents();</p>
-<p>// filter này chỉ thực hiện việc filter trên memory var filteredStudents = allStudents.Where(x =&gt; x.Name.Contains(name));</p>
-<p>return View(filteredStudents); } [/code]</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name">IActionResult</span> <span class="token function">GetStudents</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// SQL đã được sinh ra, toàn bộ student trong db đã được trả về và lưu trong memory</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> allStudents <span class="token operator">=</span> _studentRepository<span class="token punctuation">.</span><span class="token function">GetStudents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    <span class="token comment">// filter này chỉ thực hiện việc filter trên memory</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> filteredStudents <span class="token operator">=</span> allStudents<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>Name<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+    <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>filteredStudents<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Đây là 1 code rất tệ khi mà student có hàng triệu record, trong khi bạn chỉ cần 1 số ít các record mà thôi.</p>
 <p>Ở phần sau, bạn sẽ biết cách fix cho vấn đề này, đồng thời implement 1 generic repository cho các tác vụ CRUD cơ bản</p>
-<h1 id="3-Generic-Repository"><a href="#3-Generic-Repository" class="headerlink" title="3. Generic Repository"></a>3. Generic Repository</h1><p>Về cơ bản, ta sẽ dùng kiểu khai báo generic class của C# để implement generic repository</p>
-<p>[code lang=csharp] using System; using System.Collections.Generic; using System.Linq; using System.Data; using System.Data.Entity; using ContosoUniversity.Models; using System.Linq.Expressions;</p>
-<p>namespace ContosoUniversity.DAL { public class GenericRepository<TEntity> where TEntity : class { // SchoolContext được kế thừa từ DbContext internal SchoolContext context;</p>
-<p>// Generic repository này sẽ hoạt động dựa trên entity được truyền vào khi đăng ký trong Startup.cs internal DbSet<TEntity> dbSet;</p>
-<p>public GenericRepository(SchoolContext context) { this.context = context; this.dbSet = context.Set<TEntity>(); }</p>
-<p>// Expression&lt;Func&lt;TEntity, bool&gt;&gt; filter: cho phép bạn truyền vào một filter expression dạng LINQ public virtual IEnumerable<TEntity> Get( Expression&lt;Func&lt;TEntity, bool&gt;&gt; filter = null, Func&lt;IQueryable<TEntity>, IOrderedQueryable<TEntity>&gt; orderBy = null, string includeProperties = “”) { IQueryable<TEntity> query = dbSet;</p>
-<p>// Query là 1 dạng IQueryable, chỉ được thực thi khi cần giá trị list if (filter != null) { query = query.Where(filter); }</p>
-<p>// Tiếp theo, nó sẽ kèm theo các property cần thiết khi người dùng chỉ định foreach (var includeProperty in includeProperties.Split (new char[] { ‘,’ }, StringSplitOptions.RemoveEmptyEntries)) { query = query.Include(includeProperty); }</p>
-<p>// Sau cùng, nó thực thi bằng cách translate thành câu lệnh SQL và gọi xuống database if (orderBy != null) { return orderBy(query).ToList(); } else { return query.ToList(); } }</p>
-<p>// trong asp.net, Id cho 1 object có thể là GUID hoặc int public virtual TEntity GetByID(object id) { return dbSet.Find(id); }</p>
-<p>public virtual void Insert(TEntity entity) { dbSet.Add(entity); }</p>
-<p>// trong asp.net, Id cho 1 object có thể là GUID hoặc int public virtual void Delete(object id) { TEntity entityToDelete = dbSet.Find(id); Delete(entityToDelete); }</p>
-<p>public virtual void Delete(TEntity entityToDelete) { if (context.Entry(entityToDelete).State == EntityState.Detached) { dbSet.Attach(entityToDelete); } dbSet.Remove(entityToDelete); }</p>
-<p>public virtual void Update(TEntity entityToUpdate) { dbSet.Attach(entityToUpdate); context.Entry(entityToUpdate).State = EntityState.Modified; } } } [/code]</p>
-<h1 id="4-Tao-class-Unit-of-Work"><a href="#4-Tao-class-Unit-of-Work" class="headerlink" title="4. Tạo class Unit of Work"></a>4. Tạo class Unit of Work</h1><p>Unit of Work chỉ có 1 nhiệm vụ duy nhất, đảm bảo tất cả các repository của bạn đều dùng chung một <code>DbContext</code>. Bằng cách này, khi thực hiện xong tất cả các tác vụ thay đổi database, bạn chỉ cần gọi <code>DbContext.SaveChanges()</code> 1 lần duy nhất, và các thay đổi đó sẽ được lưu lại trong database</p>
-<p>[code lang=csharp] using System; using ContosoUniversity.Models;</p>
-<p>namespace ContosoUniversity.DAL { public class UnitOfWork : IDisposable { private SchoolContext context = new SchoolContext(); private GenericRepository<Department> departmentRepository; private GenericRepository<Course> courseRepository;</p>
-<p>// Kiểm tra xem repository đã được khởi tạo chưa public GenericRepository<Department> DepartmentRepository { get { if (this.departmentRepository == null) { this.departmentRepository = new GenericRepository<Department>(context); } return departmentRepository; } }</p>
-<p>// Kiểm tra xem repository đã được khởi tạo chưa public GenericRepository<Course> CourseRepository { get { if (this.courseRepository == null) { this.courseRepository = new GenericRepository<Course>(context); } return courseRepository; } }</p>
-<p>public void Save() { context.SaveChanges(); }</p>
-<p>private bool disposed = false;</p>
-<p>protected virtual void Dispose(bool disposing) { if (!this.disposed) { if (disposing) { context.Dispose(); } } this.disposed = true; }</p>
-<p>public void Dispose() { Dispose(true); GC.SuppressFinalize(this); } } } [/code]</p>
+<h1 id="3-Generic-Repository"><a href="#3-Generic-Repository" class="headerlink" title="3. Generic Repository"></a>3. Generic Repository</h1><p><a id="markdown-generic-repository" name="generic-repository"></a></p>
+<p>Về cơ bản, ta sẽ dùng kiểu khai báo generic class của C# để implement generic repository</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Data</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Entity</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>Models</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq<span class="token punctuation">.</span>Expressions</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">namespace</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>DAL</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GenericRepository<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span></span> <span class="token keyword">where</span> <span class="token class-name">TEntity</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token keyword">class</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// SchoolContext được kế thừa từ DbContext</span>
+        <span class="token keyword">internal</span> <span class="token class-name">SchoolContext</span> context<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Generic repository này sẽ hoạt động dựa trên entity được truyền vào khi đăng ký trong Startup.cs</span>
+        <span class="token keyword">internal</span> <span class="token class-name">DbSet<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span></span> dbSet<span class="token punctuation">;</span>
+ 
+        <span class="token keyword">public</span> <span class="token function">GenericRepository</span><span class="token punctuation">(</span><span class="token class-name">SchoolContext</span> context<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>dbSet <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Set</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// Expression&lt;Func&lt;TEntity, bool>> filter: cho phép bạn truyền vào một filter expression dạng LINQ</span>
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name">IEnumerable<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span></span> <span class="token function">Get</span><span class="token punctuation">(</span>
+            <span class="token class-name">Expression<span class="token punctuation">&lt;</span>Func<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">,</span> <span class="token keyword">bool</span><span class="token punctuation">></span><span class="token punctuation">></span></span> filter <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            <span class="token class-name">Func<span class="token punctuation">&lt;</span>IQueryable<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span><span class="token punctuation">,</span> IOrderedQueryable<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span><span class="token punctuation">></span></span> orderBy <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">string</span></span> includeProperties <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name">IQueryable<span class="token punctuation">&lt;</span>TEntity<span class="token punctuation">></span></span> query <span class="token operator">=</span> dbSet<span class="token punctuation">;</span>
+ 
+            <span class="token comment">// Query là 1 dạng IQueryable, chỉ được thực thi khi cần giá trị list</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>filter <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                query <span class="token operator">=</span> query<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>filter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token comment">// Tiếp theo, nó sẽ kèm theo các property cần thiết khi người dùng chỉ định</span>
+            <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> includeProperty <span class="token keyword">in</span> includeProperties<span class="token punctuation">.</span>Split
+                <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token punctuation">&#123;</span> <span class="token string character">','</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> StringSplitOptions<span class="token punctuation">.</span>RemoveEmptyEntries<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                query <span class="token operator">=</span> query<span class="token punctuation">.</span><span class="token function">Include</span><span class="token punctuation">(</span>includeProperty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+ 
+            <span class="token comment">// Sau cùng, nó thực thi bằng cách translate thành câu lệnh SQL và gọi xuống database</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>orderBy <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">return</span> <span class="token function">orderBy</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">return</span> query<span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// trong asp.net, Id cho 1 object có thể là GUID hoặc int</span>
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name">TEntity</span> <span class="token function">GetByID</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> id<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> dbSet<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Insert</span><span class="token punctuation">(</span><span class="token class-name">TEntity</span> entity<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            dbSet<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// trong asp.net, Id cho 1 object có thể là GUID hoặc int</span>
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Delete</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">object</span></span> id<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token class-name">TEntity</span> entityToDelete <span class="token operator">=</span> dbSet<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">Delete</span><span class="token punctuation">(</span>entityToDelete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Delete</span><span class="token punctuation">(</span><span class="token class-name">TEntity</span> entityToDelete<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>context<span class="token punctuation">.</span><span class="token function">Entry</span><span class="token punctuation">(</span>entityToDelete<span class="token punctuation">)</span><span class="token punctuation">.</span>State <span class="token operator">==</span> EntityState<span class="token punctuation">.</span>Detached<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                dbSet<span class="token punctuation">.</span><span class="token function">Attach</span><span class="token punctuation">(</span>entityToDelete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            dbSet<span class="token punctuation">.</span><span class="token function">Remove</span><span class="token punctuation">(</span>entityToDelete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token class-name">TEntity</span> entityToUpdate<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            dbSet<span class="token punctuation">.</span><span class="token function">Attach</span><span class="token punctuation">(</span>entityToUpdate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            context<span class="token punctuation">.</span><span class="token function">Entry</span><span class="token punctuation">(</span>entityToUpdate<span class="token punctuation">)</span><span class="token punctuation">.</span>State <span class="token operator">=</span> EntityState<span class="token punctuation">.</span>Modified<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="4-Tao-class-Unit-of-Work"><a href="#4-Tao-class-Unit-of-Work" class="headerlink" title="4. Tạo class Unit of Work"></a>4. Tạo class Unit of Work</h1><p><a id="markdown-t%E1%BA%A1o-class-unit-of-work" name="t%E1%BA%A1o-class-unit-of-work"></a></p>
+<p>Unit of Work chỉ có 1 nhiệm vụ duy nhất, đảm bảo tất cả các repository của bạn đều dùng chung một <code>DbContext</code>. Bằng cách này, khi thực hiện xong tất cả các tác vụ thay đổi database, bạn chỉ cần gọi <code>DbContext.SaveChanges()</code> 1 lần duy nhất, và các thay đổi đó sẽ được lưu lại trong database</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>Models</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">namespace</span> <span class="token namespace">ContosoUniversity<span class="token punctuation">.</span>DAL</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UnitOfWork</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IDisposable</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> <span class="token class-name">SchoolContext</span> context <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">SchoolContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">GenericRepository<span class="token punctuation">&lt;</span>Department<span class="token punctuation">></span></span> departmentRepository<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token class-name">GenericRepository<span class="token punctuation">&lt;</span>Course<span class="token punctuation">></span></span> courseRepository<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Kiểm tra xem repository đã được khởi tạo chưa</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">GenericRepository<span class="token punctuation">&lt;</span>Department<span class="token punctuation">></span></span> DepartmentRepository
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">get</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>departmentRepository <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span>departmentRepository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">GenericRepository<span class="token punctuation">&lt;</span>Department<span class="token punctuation">></span></span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">return</span> departmentRepository<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// Kiểm tra xem repository đã được khởi tạo chưa</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">GenericRepository<span class="token punctuation">&lt;</span>Course<span class="token punctuation">></span></span> CourseRepository
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">get</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>courseRepository <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span>courseRepository <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">GenericRepository<span class="token punctuation">&lt;</span>Course<span class="token punctuation">></span></span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">return</span> courseRepository<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            context<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">bool</span></span> disposed <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+ 
+        <span class="token keyword">protected</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">bool</span></span> disposing<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>disposed<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>disposing<span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    context<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>disposed <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            GC<span class="token punctuation">.</span><span class="token function">SuppressFinalize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Bước tiếp theo là thay đổi code của controller để sử dụng class UnitOfWork vừa mới khởi tạo</p>
-<p>[code lang=csharp] <br />// Lấy data var courses = unitOfWork.CourseRepository.Get(includeProperties: “Department”);</p>
-<p>// Lấy và order data var departmentsQuery = unitOfWork.DepartmentRepository.Get(orderBy: q =&gt; q.OrderBy(d =&gt; d.Name));</p>
-<p>// Insert var course = new Course(); course.Name = “Test”; … unitOfWork.CourseRepository.Insert(course); unitOfWork.Save();</p>
-<p>// Hủy unitOfWork.Dispose(); [/code]</p>
-<h1 id="5-Tong-ket"><a href="#5-Tong-ket" class="headerlink" title="5. Tổng kết"></a>5. Tổng kết</h1><p>Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface <code>IQueryable</code>. Chúc vui :D</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token comment">// Lấy data</span>
+<span class="token class-name"><span class="token keyword">var</span></span> courses <span class="token operator">=</span> unitOfWork<span class="token punctuation">.</span>CourseRepository<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">includeProperties</span><span class="token punctuation">:</span> <span class="token string">"Department"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">// Lấy và order data</span>
+<span class="token class-name"><span class="token keyword">var</span></span> departmentsQuery <span class="token operator">=</span> unitOfWork<span class="token punctuation">.</span>DepartmentRepository<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">orderBy</span><span class="token punctuation">:</span> q <span class="token operator">=></span> q<span class="token punctuation">.</span><span class="token function">OrderBy</span><span class="token punctuation">(</span>d <span class="token operator">=></span> d<span class="token punctuation">.</span>Name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">// Insert</span>
+<span class="token class-name"><span class="token keyword">var</span></span> course <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Course</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+course<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Test"</span><span class="token punctuation">;</span>
+<span class="token range operator">..</span><span class="token punctuation">.</span>
+unitOfWork<span class="token punctuation">.</span>CourseRepository<span class="token punctuation">.</span><span class="token function">Insert</span><span class="token punctuation">(</span>course<span class="token punctuation">)</span><span class="token punctuation">;</span>
+unitOfWork<span class="token punctuation">.</span><span class="token function">Save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">// Hủy</span>
+unitOfWork<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="5-Tong-ket"><a href="#5-Tong-ket" class="headerlink" title="5. Tổng kết"></a>5. Tổng kết</h1><p><a id="markdown-t%E1%BB%95ng-k%E1%BA%BFt" name="t%E1%BB%95ng-k%E1%BA%BFt"></a></p>
+<p>Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface <code>IQueryable</code>. Chúc vui :D</p>
 
     </div>
 
