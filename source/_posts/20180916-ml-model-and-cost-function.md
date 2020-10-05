@@ -88,7 +88,7 @@ Vậy ta có:
 
 Tập hợp kỳ vọng = hypothesis
 
-$latex h\_\\theta(x)=\\theta\_0+\\theta\_1x$
+$h\_\\theta(x)=\\theta\_0+\\theta\_1x$
 
 Độ lệch chuẩn:
 
