@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành multiple input features, và những best practices để thực hiện">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning - 2.1 - Multiple Features">
+<meta property="og:url" content="https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành multiple input features, và những best practices để thực hiện">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/DA49vil.png">
+<meta property="article:published_time" content="2018-10-03T09:48:42.000Z">
+<meta property="article:modified_time" content="2020-10-08T21:21:46.342Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/DA49vil.png">
+
+
+<link rel="canonical" href="https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Machine Learning - 2.1 - Multiple Features | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Mutiple-Features"><span class="nav-text">1. Mutiple Features</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Ky-hieu"><span class="nav-text">1.1. Ký hiệu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Hypothesis"><span class="nav-text">1.2. Hypothesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Trick"><span class="nav-text">1.3. Trick</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Gradient-Descent-cho-Multiple-Variables"><span class="nav-text">2. Gradient Descent cho Multiple Variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Gradient-Descent-in-Practice"><span class="nav-text">3. Gradient Descent in Practice</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Feature-Scaling-va-Mean-Normalization"><span class="nav-text">3.1. Feature Scaling và Mean Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Learning-Rate"><span class="nav-text">3.2. Learning Rate</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Features-va-Polynomial-Regression"><span class="nav-text">4. Features và Polynomial Regression</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">209</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Machine Learning - 2.1 - Multiple Features<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20181003-machine-learning-2-1-multiple-features.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-10-03 05:48:42" itemprop="dateCreated datePublished" datetime="2018-10-03T05:48:42-04:00">2018-10-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-08 17:21:46" itemprop="dateModified" datetime="2020-10-08T17:21:46-04:00">2020-10-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành <code>multiple input features</code>, và những best practices để thực hiện linear regression.</p>
+<a id="more"></a>
+<p>Xem các bài viết khác tại <a target="_blank" rel="noopener" href="https://coding4food.net/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><p><a href="#1-mutiple-features">1. Mutiple Features</a></p>
+<ul>
+<li><a href="#11-k%C3%BD-hi%E1%BB%87u">1.1. Ký hiệu</a></li>
+<li><a href="#12-hypothesis">1.2. Hypothesis</a></li>
+<li><a href="#13-trick">1.3. Trick</a></li>
+</ul>
+</li>
+<li><p><a href="#2-gradient-descent-cho-multiple-variables">2. Gradient Descent cho Multiple Variables</a></p>
+</li>
+<li><p><a href="#3-gradient-descent-in-practice">3. Gradient Descent in Practice</a></p>
+<ul>
+<li><a href="#31-feature-scaling-v%C3%A0-mean-normalization">3.1. Feature Scaling và Mean Normalization</a></li>
+<li><a href="#32-learning-rate">3.2. Learning Rate</a></li>
+</ul>
+</li>
+<li><p><a href="#4-features-v%C3%A0-polynomial-regression">4. Features và Polynomial Regression</a></p>
+</li>
+</ul>
+<h1 id="1-Mutiple-Features"><a href="#1-Mutiple-Features" class="headerlink" title="1. Mutiple Features"></a>1. Mutiple Features</h1><p>Linear Regression với <code>multiple features</code> còn được biết đến với cái tên <code>multivariate linear regression</code>.</p>
+<h2 id="1-1-Ky-hieu"><a href="#1-1-Ky-hieu" class="headerlink" title="1.1. Ký hiệu"></a>1.1. Ký hiệu</h2><ul>
+<li>$latex x^{(i)}_j$ = giá trị của feature <code>j</code> trong training example thứ <code>i</code>.</li>
+<li>$latex x^{(i)}$ = input (feature) thứ <code>i</code> của training example.</li>
+<li>m = số training example</li>
+<li>n = số features</li>
+</ul>
+<h2 id="1-2-Hypothesis"><a href="#1-2-Hypothesis" class="headerlink" title="1.2. Hypothesis"></a>1.2. Hypothesis</h2><p>Như vậy, hàm hypothesis của chúng ta được viết lại như sau:</p>
+<p>$latex h_0(x) = \theta_0x_0 + \theta_1x_1 + … + \theta_nx_n$</p>
+<p>với $latex x_0 = 1$.</p>
+<h2 id="1-3-Trick"><a href="#1-3-Trick" class="headerlink" title="1.3. Trick"></a>1.3. Trick</h2><p>Áp dụng các kiến thức về phép nhân matrix đã học ở bài trước, ta có như sau</p>
+<p>$latex h_0(x) = \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; … &amp; \theta_n \end{bmatrix} \begin{bmatrix} x_0 \\ x_1 \\ … \\ x_n \end{bmatrix} = \theta^Tx$</p>
+<p>Trên đây là công thức của hàm hypothesis được rút gọn thành phép nhân matrix với vector.</p>
+<h1 id="2-Gradient-Descent-cho-Multiple-Variables"><a href="#2-Gradient-Descent-cho-Multiple-Variables" class="headerlink" title="2. Gradient Descent cho Multiple Variables"></a>2. Gradient Descent cho Multiple Variables</h1><p>Công thức cho thuật toán Gradient Descent thì y hệt như cũ. Ta chỉ lặp lại nó cho <code>n</code> features mà thôi.</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)} \\ \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \\ \theta_2 := \theta_2 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} \\ …$</p>
+<p>hoặc diễn giải theo một cách khác:</p>
+<p>$latex \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
+<p>với j:= 0…n</p>
+<blockquote>
+<p>Đối với $latex \theta_0$, $latex x^i_0 = 1$</p>
+</blockquote>
+<h1 id="3-Gradient-Descent-in-Practice"><a href="#3-Gradient-Descent-in-Practice" class="headerlink" title="3. Gradient Descent in Practice"></a>3. Gradient Descent in Practice</h1><h2 id="3-1-Feature-Scaling-va-Mean-Normalization"><a href="#3-1-Feature-Scaling-va-Mean-Normalization" class="headerlink" title="3.1. Feature Scaling và Mean Normalization"></a>3.1. Feature Scaling và Mean Normalization</h2><p>Khi các features có giá trị giao động trong các khoảng cách xa nhau, thì thuật toán Gradient Descent thường tốn nhiều thơi gian để tìm ra kết quả.</p>
+<p>Ví dụ ta có 2 feature là <code>diện tích nhà</code> và <code>số phòng ngủ</code>:</p>
+<p>[code lang=text] 200 &lt; Diện tích nhà &lt; 2000 1 &lt; Số phòng ngủ &lt; 5 [/code]</p>
+<p>Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.</p>
+<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"> <em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
+<p>Ta có thể tăng tốc gradient descent bằng cách <code>biến đổi</code> các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.</p>
+<p>Nhìn chung, ta sẽ biến đổi sao cho:</p>
+<p>$latex -1 \leq x_{(i)} \leq 1$</p>
+<p>hoặc</p>
+<p>$latex -0.5 \leq x_{(i)} \leq 0.5$</p>
+<p>Trên đây chỉ là ví dụ, mục tiêu là làm cho vùng giá trị của các feature càng gần nhau càng tốt.</p>
+<p>2 kỹ thuật để làm chuyện này là <code>Feature Scaling</code> và <code>Mean Normalization</code>.</p>
+<blockquote>
+<p>Feature Scaling là chia input với khoảng giá trị (max - min). Mean Normalization là input - giá trị trung bình của input.</p>
+</blockquote>
+<p>$latex x_i := \frac{x_i - \mu_i}{\delta_i}$</p>
+<p>với:</p>
+<ul>
+<li>$latex \mu_i$: trung bình của feature i</li>
+<li>$latex \delta_i$: Max - min hoặc độ lệch chuẩn</li>
+</ul>
+<blockquote>
+<p>Max - min sẽ cho ra kết quả rất khác với độ lệch chuẩn.</p>
+</blockquote>
+<h2 id="3-2-Learning-Rate"><a href="#3-2-Learning-Rate" class="headerlink" title="3.2. Learning Rate"></a>3.2. Learning Rate</h2><p>Để xác định tham số $latex \alpha$, ta có thể áp dụng 1 số kỹ thuật:</p>
+<ul>
+<li>Vẽ đồ thị với trục x = số bước lặp của gradient descent, trục y = giá trị của $latex J(\theta)$. Nếu $latex J(\theta)$ tăng, thì bạn phải giảm giá trị $latex \alpha$ xuống và làm lại từ đầu.</li>
+<li>Automatic convergence test: Xác định điểm hội tụ khi giá trị $latex J(\theta)$ không vượt quá E trong một lần lặp, với E là một giá trị rất nhỏ nào đó. Tuy nhiên trong thực tế, thường rất khó xác định giá trị E này.</li>
+</ul>
+<p>Người ta đã chứng minh được rằng, nếu learning rate $latex \alpha$ đủ nhỏ, thì giá trị $latex J(\theta)$ sẽ giảm sau mỗi lần lặp.</p>
+<p>Túm lại: * Nếu $latex \alpha$ quá nhỏ: gradient descent chạy lâu. * Nếu $latex \alpha$ quá lớn: $latex J(\theta)$ có thể sẽ không giảm sau mỗi lần lặp -&gt; không hội tụ.</p>
+<h1 id="4-Features-va-Polynomial-Regression"><a href="#4-Features-va-Polynomial-Regression" class="headerlink" title="4. Features và Polynomial Regression"></a>4. Features và Polynomial Regression</h1><p>Ta có thể cải thiện features và dạng của hàm hypothesis bằng nhiều cách.</p>
+<p>Một trong số những cách đó là <strong>kết hợp</strong> các feature lại với nhau. Ví dụ như khi ta có 2 feature là <code>dài</code> và <code>rộng</code>, ta có thể kết hợp chúng thành <code>diện tích = dài * rộng</code>.</p>
+<p>Ngoài ra, không phải lúc nào ta cũng có thể sử dụng được hàm hypothesis là một đường thẳng, nhất là khi nó không “vừa” với bộ data. Lúc này, có thể biến đổi nó một chút, hoặc bẻ cong nó bằng cách nâng lũy thừa, hoặc lấy căn của các features (hoặc bất cứ dạng nào khác đều được).</p>
+<p>Ví dụ:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1$</p>
+<p>Ta có thể thêm 1 feature mới bằng cách lũy thừa x lên:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1 + \theta_2x_1^2$</p>
+<p>hoặc lấy căn của nó:</p>
+<p>$latex h_{\theta}(x) = \theta_0 + \theta_1x_1 + \theta_2\sqrt{x_1}$</p>
+<blockquote>
+<p>Một điều quan trọng là khi bạn biến đổi các feature như thế này, vùng giá trị của nó sẽ trở nên cách biệt so với feature gốc. Lúc này, bạn sẽ phải áp dụng những cách tối ưu như <code>Feature Scaling</code> và <code>Mean Normalization</code> đã nói ở trên để tối ưu thuật toán Gradient Descent.</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/" title="Machine Learning - 2.1 - Multiple Features">https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/10/01/machine-learning-matrices-and-vectors/" rel="prev" title="Machine Learning - 1.4 - Matrices and Vectors">
+                  <i class="fa fa-chevron-left"></i> Machine Learning - 1.4 - Matrices and Vectors
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/09/machine-learning-2-2-normal-equation/" rel="next" title="Machine Learning - 2.2 - Normal Equation">
+                  Machine Learning - 2.2 - Normal Equation <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>

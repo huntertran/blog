@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[ASP.NET for Beginner] - Part 3 - Front end framework nào?">
+<meta property="og:url" content="https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-03-18T10:46:24.000Z">
+<meta property="article:modified_time" content="2020-10-08T21:21:46.342Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="framework">
+<meta property="article:tag" content="frontend">
+<meta property="article:tag" content="jquery">
+<meta property="article:tag" content="scss">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>[ASP.NET for Beginner] - Part 3 - Front end framework nào? | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-CSS"><span class="nav-text">1. CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-CSS-Framework"><span class="nav-text">1.1. CSS Framework</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Bootstrap"><span class="nav-text">1.1.1. Bootstrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-MaterializeCSS"><span class="nav-text">1.1.2. MaterializeCSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-Cac-Grid-System"><span class="nav-text">1.1.3. Các Grid System</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-CSS-Language-Preprocessor"><span class="nav-text">1.2. CSS Language Preprocessor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-SCSS"><span class="nav-text">1.2.1. SCSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-LESS"><span class="nav-text">1.2.2. LESS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Javascript"><span class="nav-text">2. Javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-jQuery"><span class="nav-text">2.1. jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Xu-huong"><span class="nav-text">2.2. Xu hướng</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-HTML"><span class="nav-text">3. HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cai-nao-la-tot-nhat"><span class="nav-text">Cái nào là tốt nhất?</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">209</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [ASP.NET for Beginner] - Part 3 - Front end framework nào?<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180318-asp-net-for-beginner-part-3-front-end-framework-nao.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-03-18 06:46:24" itemprop="dateCreated datePublished" datetime="2018-03-18T06:46:24-04:00">2018-03-18</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-08 17:21:46" itemprop="dateModified" datetime="2020-10-08T17:21:46-04:00">2020-10-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại</p>
+<a id="more"></a>
+
+<blockquote>
+<p>Xem các bài viết trong series</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/">Phần 1: Mô hình MVC</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">Phần 2: Connect Database và Model Binding</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">Phần 3: Front end framework nào</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
+</ul>
+</blockquote>
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-css">1. CSS</a><ul>
+<li><a href="#11-css-framework">1.1. CSS Framework</a><ul>
+<li><a href="#111-bootstrap">1.1.1. Bootstrap</a></li>
+<li><a href="#112-materializecss">1.1.2. MaterializeCSS</a></li>
+<li><a href="#113-c%C3%A1c-grid-system">1.1.3. Các Grid System</a></li>
+</ul>
+</li>
+<li><a href="#12-css-language-preprocessor">1.2. CSS Language Preprocessor</a><ul>
+<li><a href="#121-scss">1.2.1. SCSS</a></li>
+<li><a href="#122-less">1.2.2. LESS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-javascript">2. Javascript</a><ul>
+<li><a href="#21-jquery">2.1. jQuery</a></li>
+<li><a href="#22-xu-h%C6%B0%E1%BB%9Bng">2.2. Xu hướng</a></li>
+</ul>
+</li>
+<li><a href="#3-html">3. HTML</a></li>
+<li><a href="#4-c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t">4. Cái nào là tốt nhất?</a></li>
+</ul>
+<!-- /TOC -->
+
+<p>Một ứng dụng web được chia thành 2 thành phần chính là Front-end và Back-end. Về phía back end, có hàng ty tỷ ngôn ngữ và công nghệ có thể làm nên chúng. ASP.NET là một trong các công nghệ đó. Và tất cả các công nghệ / ngôn ngữ này đều phục vụ một mục đích tối thượng: Tạo ra front end</p>
+<p>Trong một diễn biến khác, Front end chỉ có 1, được cấu thành từ 3 ngôn ngữ là <code>HTML</code>, <code>CSS</code> và <code>Javascript</code></p>
+<blockquote>
+<p>Nếu bạn chưa biết cơ bản về HTML, Javascript và CSS, thì hãy học ngay</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/html/default.asp">Học HTML</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/css/">Học CSS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/js/">Học Javascript</a></li>
+</ul>
+</blockquote>
+<p>3 ngôn ngữ này, theo ý kiến chủ quan của mình, như mì ăn liền. Cách tổ chức khá lộn xộn, và quy chuẩn thì được áp dụng khác nhau đối với các trình duyệt khác nhau</p>
+<blockquote>
+<p><strong>Quy chuẩn của HTML</strong></p>
+<p>HTML có 1 bộ quy chuẩn giúp cho các nhà phát triển trình duyệt biết được chính xác phải làm gì khi hiển thị các thẻ của HTML trên trình duyệt</p>
+</blockquote>
+<p>Để làm cho cuộc đời bớt đau khổ, các developer trên khắp thế giới đã cùng nhau phát triển thêm những framework, những ngôn ngữ hỗ trợ thêm cho bộ 3 này</p>
+<h1 id="1-CSS"><a href="#1-CSS" class="headerlink" title="1. CSS"></a>1. CSS</h1><p><a id="markdown-css" name="css"></a></p>
+<h2 id="1-1-CSS-Framework"><a href="#1-1-CSS-Framework" class="headerlink" title="1.1. CSS Framework"></a>1.1. CSS Framework</h2><p><a id="markdown-css-framework" name="css-framework"></a></p>
+<p>Làm sao để chia web thành các cột linh hoạt? Làm sao để khi kích thước trình duyệt thay đổi, trang web sẽ hiển thị các thành phần phù hợp? Làm sao để trang web có thể đọc được trên điện thoại di động?</p>
+<p>Hàng tá các câu hỏi như vậy sẽ nảy ra trong đầu bạn khi bạn đang phát triển một website nào đó. Để giải quyết vấn đề đó, ta có các CSS Frameworks làm sẵn giúp bạn các công việc này, bạn chỉ cần áp dụng.</p>
+<h3 id="1-1-1-Bootstrap"><a href="#1-1-1-Bootstrap" class="headerlink" title="1.1.1. Bootstrap"></a>1.1.1. <a target="_blank" rel="noopener" href="http://getbootstrap.com/">Bootstrap</a></h3><p><a id="markdown-bootstrap" name="bootstrap"></a></p>
+<p>Bootstrap có lẽ là css framework được sử dụng nhiều nhất hiện nay với bộ plugin đồ sộ + kho tàng theme thủng cực khủng của mình</p>
+<p>Bootstrap sử dụng 1 khái niệm gọi là responsive breakdown, tức là khi bề ngang trình duyệt đạt tới 1 số lượng pixels nào đó, thì một số thành phần HTML sẽ bị ẩn đi hoặc hiện ra.</p>
+<p><strong>Nhược điểm</strong></p>
+<ul>
+<li>Quá phổ biến: Điều này tuy giúp ích trong quá trình phát triển, nhưng sẽ làm cho website của bạn nó…na ná với cả triệu website khác</li>
+<li>Grid system dùng concrete class: Đối với mỗi size khác nhau, bạn sẽ phải thêm các class khác nhau của mỗi column vào thẻ html</li>
+<li>Nặng: Bootstrap cần 1 file css, 1 file javascript, và cả cái thư viện jQuery + poper.js. Nếu website của bạn ko dùng jQuery? Thôi nghỉ chơi với boostrap nhé</li>
+</ul>
+<h3 id="1-1-2-MaterializeCSS"><a href="#1-1-2-MaterializeCSS" class="headerlink" title="1.1.2. MaterializeCSS"></a>1.1.2. <a target="_blank" rel="noopener" href="http://materializecss.com/">MaterializeCSS</a></h3><p><a id="markdown-materializecss" name="materializecss"></a></p>
+<p>Nếu bạn có đang dùng các sản phẩm của google, thì bạn sẽ thấy họ có 1 style khá đẹp, nhất là khi nhấn vào 1 cái nút nào đó, sẽ có 1 vòng tròn tỏa ra. Cái này được gọi là Material Design</p>
+<p>Materializecss làm theo cái design này, và open source nó cho mọi người sử dụng. Nhanh, nhẹ, đẹp, hỗ trợ tốt, cộng đồng lớn là những ưu điểm của framework này</p>
+<p><strong>Nhược điểm</strong></p>
+<ul>
+<li>Quá Google: website của bạn khi dùng framework này, nó sẽ cho người dùng 1 cảm giác hơi…google. Từ cái nút bấm cho tới cái ô grid</li>
+<li>Chưa release: Tin hay ko thì tùy bạn, dù có hằng hà sa số website đang dùng, với gần 32k stars trên Github, nhưng framework này vẫn chưa được release version 1.0. Các nhà phát triển nó đang rất gấp rút fix bug và hoàn thiện để ra mắt phiên bản release đầu tiên của nó ;)</li>
+</ul>
+<h3 id="1-1-3-Cac-Grid-System"><a href="#1-1-3-Cac-Grid-System" class="headerlink" title="1.1.3. Các Grid System"></a>1.1.3. Các Grid System</h3><p><a id="markdown-c%C3%A1c-grid-system" name="c%C3%A1c-grid-system"></a></p>
+<p>Cái quan trọng nhất của một framework là grid system, tức là cách chia website thành các column khác nhau. Nắm bắt được điều này, kha khá framework ra đời, và chỉ chứa độc nhất 1 tính năng: chia column.</p>
+<p><strong>Nhược điểm</strong></p>
+<p>Nhìn chung, khi sử dụng các framework dạng này, bạn sẽ phải khá chuyên nghiệp rồi. Khi đó bạn sẽ phải tự code các thành phần css khác ko liên quan tới grid, hoặc tìm các thư viện hỗ trợ cho những thành phần mong muốn</p>
+<h2 id="1-2-CSS-Language-Preprocessor"><a href="#1-2-CSS-Language-Preprocessor" class="headerlink" title="1.2. CSS Language Preprocessor"></a>1.2. CSS Language Preprocessor</h2><p><a id="markdown-css-language-preprocessor" name="css-language-preprocessor"></a></p>
+<p>Ngôn ngữ css, với một cách tổ chức tè le, là một thử thách khá khó khăn cho developer mới học. May mắn thay, đã có những ngôn ngữ thay thế cho nó</p>
+<p>Thay thế cũng không hẳn là đúng. Các ngôn ngữ này chỉ giúp bạn viết code css dễ hiểu hơn, khoa học hơn, tổ chức tốt hơn. Sau cùng, nó vẫn generate ra file .css cho bạn sử dụng.</p>
+<h3 id="1-2-1-SCSS"><a href="#1-2-1-SCSS" class="headerlink" title="1.2.1. SCSS"></a>1.2.1. <a target="_blank" rel="noopener" href="https://sass-lang.com/">SCSS</a></h3><p><a id="markdown-scss" name="scss"></a></p>
+<p>SCSS kế thừa và cải tiến CSS selector bằng các cấu trúc <code>&#123;&#125;</code>, <code>:</code>và <code>&amp;gt;</code>. Khi bạn bắt tay vào học nó, bạn sẽ thấy cách select một element vô cùng tự nhiên của nó</p>
+<h3 id="1-2-2-LESS"><a href="#1-2-2-LESS" class="headerlink" title="1.2.2. LESS"></a>1.2.2. <a target="_blank" rel="noopener" href="http://lesscss.org/">LESS</a></h3><p><a id="markdown-less" name="less"></a></p>
+<p>Less giống như một phiên bản khác của Scss vậy, với cú pháp cũng khá giống nhau, các khái niệm cũng giống luôn.</p>
+<blockquote>
+<p>Bạn chỉ nên chọn 1, hoặc SCSS, hoặc LESS</p>
+</blockquote>
+<h1 id="2-Javascript"><a href="#2-Javascript" class="headerlink" title="2. Javascript"></a>2. Javascript</h1><p><a id="markdown-javascript" name="javascript"></a></p>
+<p>Ngôn ngữ HTML, vốn dĩ chỉ là các đoạn text có thêm markup và link, chỉ có thể cho phép bạn đọc text và nhấn link để nhảy sang 1 trang khác mà thôi.</p>
+<p>Mọi chuyện thay đổi khi javascript được gắn thêm vào. Giờ đây bạn có thể thay đổi 1 khúc text mà ko cần reload, làm cho biểu tượng này xoay xoay, làm cho nút kia chuyển động, hiển thị popup, vân vân và vân vân.</p>
+<blockquote>
+<p><code>Javascript</code> không hề dính dáng gì tới <code>Java</code> cả</p>
+</blockquote>
+<h2 id="2-1-jQuery"><a href="#2-1-jQuery" class="headerlink" title="2.1. jQuery"></a>2.1. jQuery</h2><p><a id="markdown-jquery" name="jquery"></a></p>
+<p>jQuery giống như 1 thư viện “phải có” vậy. Nó giúp cho việc sử dụng cả tá css framework khác trở nên đơn giản và hiệu quả.</p>
+<p>Ví dụ: Để đổi đoạn value của thẻ input có id là “test” thành chữ khác</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// Before jquery</span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"Test Value"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// After jquery</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Test Value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Vì sử dụng các khái niệm của CSS Selector, bạn có thể chọn các html element bằng jQuery y như khi bạn code css cho nó vậy.</p>
+<h2 id="2-2-Xu-huong"><a href="#2-2-Xu-huong" class="headerlink" title="2.2. Xu hướng"></a>2.2. Xu hướng</h2><p><a id="markdown-xu-h%C6%B0%E1%BB%9Bng" name="xu-h%C6%B0%E1%BB%9Bng"></a></p>
+<p>vì jQuery khá nặng, việc xử lý jQuery cũng đòi hỏi một phần tài nguyên của trình duyện, nên hiện đang có 1 xu hướng là bỏ hẳn jQuery ko xài nó nữa.</p>
+<p>Nhưng từ giờ tới lúc jQuery biến mất vẫn còn xa lắm. Máy tính và điện thoại thì ngày càng mạnh mẽ hơn. jQuery hầu như đã được tải sẵn trên bất cứ trình duyệt nào bạn tìm thấy</p>
+<h1 id="3-HTML"><a href="#3-HTML" class="headerlink" title="3. HTML"></a>3. HTML</h1><p><a id="markdown-html" name="html"></a></p>
+<p>HTML5, như đã nói ở trên, là version mới nhất của HTML, và tất cả các trình duyệt phổ biến hỗ trợ.</p>
+<p>Nếu bạn code bằng Visual Studio, thì HTML đã được hỗ trợ khá tốt rồi. Còn nếu bạn code bằng Visual Studio Code, thì sau đây là 1 số extension mình sử dụng để việc code HTML được dễ thở hơn</p>
+<ul>
+<li>Auto Close Tag: tự đóng các thẻ HTML. Không cần phải gõ tay nữa</li>
+<li>HTML Snippets: tự nhắc các property của 1 thẻ HTML</li>
+</ul>
+<h1 id="Cai-nao-la-tot-nhat"><a href="#Cai-nao-la-tot-nhat" class="headerlink" title="Cái nào là tốt nhất?"></a>Cái nào là tốt nhất?</h1><p><a id="markdown-c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t%3F" name="c%C3%A1i-n%C3%A0o-l%C3%A0-t%E1%BB%91t-nh%E1%BA%A5t%3F"></a></p>
+<p>Không có câu trả lời cụ thể cho câu hỏi này, nên mình sẽ đưa ý kiến của mình, và cái mình đang sử dụng để bạn tham khảo</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">CSS: SCSS
+CSS Framework: Materializecss
+Javascript: jQuery
+HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Còn bạn, bạn chọn ngôn ngữ nào?</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/" title="[ASP.NET for Beginner] - Part 3 - Front end framework nào?">https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/framework/" rel="tag"># framework</a>
+              <a href="/tags/frontend/" rel="tag"># frontend</a>
+              <a href="/tags/jquery/" rel="tag"># jquery</a>
+              <a href="/tags/scss/" rel="tag"># scss</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/" rel="prev" title="[ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding">
+                  <i class="fa fa-chevron-left"></i> [ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/" rel="next" title="[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation">
+                  [ASP.NET for Beginner] - Part 4 - CRUD và Data Validation <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>

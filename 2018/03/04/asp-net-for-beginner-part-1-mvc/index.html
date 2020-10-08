@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng? Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[ASP.NET for Beginner] - Part 1 - MVC">
+<meta property="og:url" content="https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng? Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png">
+<meta property="og:image" content="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png">
+<meta property="og:image" content="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png">
+<meta property="article:published_time" content="2018-03-04T12:41:16.000Z">
+<meta property="article:modified_time" content="2020-10-08T21:21:46.342Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="beginner">
+<meta property="article:tag" content="mvc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png">
+
+
+<link rel="canonical" href="https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>[ASP.NET for Beginner] - Part 1 - MVC | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-MVC-la-gi"><span class="nav-text">1. MVC là gì?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Model"><span class="nav-text">1.1. Model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-View"><span class="nav-text">1.2. View</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Controller"><span class="nav-text">1.3. Controller</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Mot-vi-du-don-gian"><span class="nav-text">2. Một ví dụ đơn giản</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Bai-toan"><span class="nav-text">2.1. Bài toán</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Phan-tich"><span class="nav-text">2.2. Phân tích</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Trien-khai"><span class="nav-text">2.3. Triển khai</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-Tinh-nang-xem-danh-sach"><span class="nav-text">2.3.1. Tính năng xem danh sách</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-Tinh-nang-them"><span class="nav-text">2.3.2. Tính năng thêm</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Tu-tao-project"><span class="nav-text">3. Tự tạo project</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Phan-mem-can-thiet"><span class="nav-text">3.1. Phần mềm cần thiết</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Trien"><span class="nav-text">3.2. Triển</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-ASP-NET-Convention"><span class="nav-text">3.3. ASP.NET Convention</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">209</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [ASP.NET for Beginner] - Part 1 - MVC<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180304-asp-net-for-beginner-part-1-mvc.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-03-04 07:41:16" itemprop="dateCreated datePublished" datetime="2018-03-04T07:41:16-05:00">2018-03-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-08 17:21:46" itemprop="dateModified" datetime="2020-10-08T17:21:46-04:00">2020-10-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng?</p>
+<p>Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.</p>
+<a id="more"></a>
+
+<blockquote>
+<p>Xem các bài viết trong series</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/">Phần 1: Mô hình MVC</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">Phần 2: Connect Database và Model Binding</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">Phần 3: Front end framework nào</a></li>
+<li><a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
+</ul>
+</blockquote>
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-mvc-l%C3%A0-g%C3%AC">1. MVC là gì?</a><ul>
+<li><a href="#11-model">1.1. Model</a></li>
+<li><a href="#12-view">1.2. View</a></li>
+<li><a href="#13-controller">1.3. Controller</a></li>
+</ul>
+</li>
+<li><a href="#2-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n">2. Một ví dụ đơn giản</a><ul>
+<li><a href="#21-b%C3%A0i-to%C3%A1n">2.1. Bài toán</a></li>
+<li><a href="#22-ph%C3%A2n-t%C3%ADch">2.2. Phân tích</a></li>
+<li><a href="#23-tri%E1%BB%83n-khai">2.3. Triển khai</a><ul>
+<li><a href="#231-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch">2.3.1. Tính năng xem danh sách</a></li>
+<li><a href="#232-t%C3%ADnh-n%C4%83ng-th%C3%AAm">2.3.2. Tính năng thêm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3-t%E1%BB%B1-t%E1%BA%A1o-project">3. Tự tạo project</a><ul>
+<li><a href="#31-ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt">3.1. Phần mềm cần thiết</a></li>
+<li><a href="#32-tri%E1%BB%83n">3.2. Triển</a></li>
+<li><a href="#33-aspnet-convention">3.3. ASP.NET Convention</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-MVC-la-gi"><a href="#1-MVC-la-gi" class="headerlink" title="1. MVC là gì?"></a>1. MVC là gì?</h1><p><a id="markdown-mvc-l%C3%A0-g%C3%AC%3F" name="mvc-l%C3%A0-g%C3%AC%3F"></a></p>
+<p>MVC là một kiến trúc phần mềm dùng để phát triển kha khá ứng dụng bạn đang dùng trên thị trường. Mô hình MVC bóc tách 3 tầng của ứng dụng thành 3 thành phần khác nhau, giúp việc phát triển dễ dàng hơn.</p>
+<p>MVC là viết tắt của Model-View-Controller</p>
+<blockquote>
+<p>3 thành phần này phải đi kèm với nhau, nhưng đối với người mới học, sẽ rất khó để hình dung ra chúng liên kết như thế nào. Học bất kỳ thành phần nào trước đều khó khăn khi không hiểu 2 thành phần kia. Vì vậy mình khuyên các bạn chỉ cần hình dung mỗi thành phần ra trong đầu, chứ đừng bắt tay ngay vào việc tìm hiểu liên kết giữa chúng.</p>
+</blockquote>
+<h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p><a id="markdown-model" name="model"></a></p>
+<p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// A basic model</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Age <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Address <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p><a id="markdown-view" name="view"></a></p>
+<p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có/không) là những thứ thường thấy trên View.</p>
+<p>Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model User
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    @Model.Name
+    @Model.Age
+    @Model.Address
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-3-Controller"><a href="#1-3-Controller" class="headerlink" title="1.3. Controller"></a>1.3. Controller</h2><p><a id="markdown-controller" name="controller"></a></p>
+<p>Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân</p>
+<h1 id="2-Mot-vi-du-don-gian"><a href="#2-Mot-vi-du-don-gian" class="headerlink" title="2. Một ví dụ đơn giản"></a>2. Một ví dụ đơn giản</h1><p><a id="markdown-m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n" name="m%E1%BB%99t-v%C3%AD-d%E1%BB%A5-%C4%91%C6%A1n-gi%E1%BA%A3n"></a></p>
+<p>Vì ví dụ này được đưa ra để bạn hiểu mô hình MVC, nên bạn ko cần phải làm theo. Chỉ cần đọc tiếp thôi</p>
+<h2 id="2-1-Bai-toan"><a href="#2-1-Bai-toan" class="headerlink" title="2.1. Bài toán"></a>2.1. Bài toán</h2><p><a id="markdown-b%C3%A0i-to%C3%A1n" name="b%C3%A0i-to%C3%A1n"></a></p>
+<p>Thế giới di động cần 1 cái website có thể hiện thị danh sách các điện thoại, thêm/xóa/sửa một điện thoại nào đó (bỏ qua tất cả các yêu cầu về bảo mật, đăng nhập, giao diện)</p>
+<h2 id="2-2-Phan-tich"><a href="#2-2-Phan-tich" class="headerlink" title="2.2. Phân tích"></a>2.2. Phân tích</h2><p><a id="markdown-ph%C3%A2n-t%C3%ADch" name="ph%C3%A2n-t%C3%ADch"></a></p>
+<p>Đọc vào thấy ngay, ta cần một model cho điện thoại, 4 view cho 4 cái tính năng là <code>xem danh sách</code>, <code>thêm</code>, <code>xóa</code>, <code>sửa</code>. Vì cả 4 view này đều thao tác trên cái model <code>điện thoại</code>, nên ta chỉ cần 1 controller mà thôi</p>
+<h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><p><a id="markdown-tri%E1%BB%83n-khai" name="tri%E1%BB%83n-khai"></a></p>
+<h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch" name="t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch"></a></p>
+<p><strong>Model</strong></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhone</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">// To identify which phones</span>
+    <span class="token comment">// Dùng để xác định cái điện thoại nào</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Id <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+ 
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Controller</strong></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Get all phones from database</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Return the View that render a list of phones</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>View</strong></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MobilePhone</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!--Table headers--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+        <span class="token comment">&lt;!--Table body--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+            @foreach(var phone in Model)
+            &#123;
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+            &#125;
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>ASP.NET tự động hiểu class <code>MobilePhoneController</code> sẽ có đường dẫn là <code>/MobilePhone</code></p>
+<p>Khi người dùng trỏ tới URL sau:</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">yourdomain&#x2F;MobilePhone&#x2F;List<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>thì bằng một cách thần kỳ nào đó, asp.net đã gọi method <code>List</code> trong controller này, và chạy những đoạn code trong đó, trả về một cái bảng danh sách các điện thoại hiển thị lên cho người dùng</p>
+<h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-th%C3%AAm" name="t%C3%ADnh-n%C4%83ng-th%C3%AAm"></a></p>
+<p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
+<p><strong>Controller</strong></p>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Get all phones from database</span>
+        <span class="token comment">// Lấy tất cả điện thoại từ database</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Return the View that render a list of phones</span>
+        <span class="token comment">// Trả về view chứa thông tin tất cả điện thoại</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token comment">// Render the Add form</span>
+    <span class="token comment">// Hiển thị cái form Add</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+ 
+    <span class="token comment">// Recieved the new phone input by user</span>
+    <span class="token comment">// Nhận data được nhập vào từ người dùng</span>
+    <span class="token punctuation">[</span>HttpPost<span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">MobilePhone</span> newPhone<span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token class-name"><span class="token keyword">var</span></span> existedPhone <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">.</span>Id<span class="token punctuation">)</span>
+ 
+        <span class="token keyword">if</span><span class="token punctuation">(</span>existedPhone <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token comment">// Phone is existed, return the Add View</span>
+            <span class="token comment">// Điện thoại với Id này đã tồn tại, trả về cái view Add</span>
+            <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+ 
+        <span class="token comment">// Add new data to database</span>
+        database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+        <span class="token comment">// Save the changes</span>
+        database<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>Tại sao lại có 2 method Add? Ở method đầu tiên, ASP.NET sẽ trả về cái form rỗng cho người dùng tự nhập vào giá trị. Method thứ 2 có chứa parameter là newPhone. Method có trách nhiệm nhận thông tin được post lên từ phía người dùng. ASP.NET đủ thông minh để có thể tự hiểu nó là object kiểu MobilePhone, và nó gọi là <code>Model Binding</code>. Ta sẽ tìm hiểu về chủ đề này sau.</p>
+</blockquote>
+<p><strong>View</strong></p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">thêm file Add.cshtml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Đối với ASP.NET Core</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">asp-action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Add<span class="token punctuation">"</span></span> <span class="token attr-name">asp-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MobilePhone<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Id<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Đối với ASP.NET MVC cũ</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+ 
+@using(Html.BeginForm("Add","MobilePhone",Method.Post))
+&#123;
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    @Html.TextBoxFor(x => x.Id)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    @Html.TextBoxFor(x => x.Name)
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="3-Tu-tao-project"><a href="#3-Tu-tao-project" class="headerlink" title="3. Tự tạo project"></a>3. Tự tạo project</h1><p><a id="markdown-t%E1%BB%B1-t%E1%BA%A1o-project" name="t%E1%BB%B1-t%E1%BA%A1o-project"></a></p>
+<p>Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một</p>
+<p>ASP.NET có kha khá phiên bản, <code>MVC1</code>, <code>MVC2</code>, <code>MVC3</code>, <code>MVC4</code>, và gần đây nhất là <code>MVC5</code> và <code>MVC Core</code>. Từ version 5 trở xuống là cách phát triển cũ, chỉ chạy được trên môi trường Windows, từ phiên bản <code>MVC Core</code> trở lên là cách phát triển mới, có thể chạy được trên <code>Linux</code>, <code>Windows</code> hoặc <code>MacOS</code>. Nếu đang học, thì mình khuyến khích nên học luôn từ <code>MVC Core</code> trở lên luôn cho nó hot</p>
+<h2 id="3-1-Phan-mem-can-thiet"><a href="#3-1-Phan-mem-can-thiet" class="headerlink" title="3.1. Phần mềm cần thiết"></a>3.1. Phần mềm cần thiết</h2><p><a id="markdown-ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt" name="ph%E1%BA%A7n-m%E1%BB%81m-c%E1%BA%A7n-thi%E1%BA%BFt"></a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/net/core">.NET Core SDK 2.0</a> trở lên</li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li>VS Code <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">C# extension</a></li>
+</ul>
+<h2 id="3-2-Trien"><a href="#3-2-Trien" class="headerlink" title="3.2. Triển"></a>3.2. Triển</h2><p><a id="markdown-tri%E1%BB%83n" name="tri%E1%BB%83n"></a></p>
+<p>Mở VSCode lên, nhấn Ctrl + ` để hiện Terminal, hoặc làm như hình</p>
+<p><img src="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png" alt="show termial"></p>
+<p>dùng các lệnh <code>cd</code> để trỏ tới thư mục mong muốn tạo project của bạn</p>
+<p>hoặc</p>
+<p><img src="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
+<p>gõ</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Bấm F5 &gt; Chọn .NET Core</p>
+<p>Nếu bạn được hỏi “Required assets to build and debug are missing from blah blah blah”, thì bấm Yes nhé</p>
+<p><img src="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png" alt="yes to build"></p>
+<p>Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET Core rồi nhé. Bạn có thể mở class HomeController để hiểu rõ hơn về mô hình MVC mình vừa nói ở trên.</p>
+<h2 id="3-3-ASP-NET-Convention"><a href="#3-3-ASP-NET-Convention" class="headerlink" title="3.3. ASP.NET Convention"></a>3.3. ASP.NET Convention</h2><p><a id="markdown-asp.net-convention" name="asp.net-convention"></a></p>
+<p>ở trên mình có nhắc tới MobilePhoneController, thì đường dẫn của nó sẽ là /MobilePhone, hay ở project bạn mới tạo, HomeController sẽ có đường dẫn là /Home .ASP.NET tự hiểu controller của bạn, và sẽ có đường dẫn tương ứng.</p>
+<p>Mặc định, các method <code>Index</code> trong controller của bạn sẽ là method được gọi khi URL ko có bất kỳ cái gì đằng sau. Ví dụ như HomeController ở trên, nếu bạn chỉ nhập <a target="_blank" rel="noopener" href="https://localhost:5000/Home/">https://localhost:5000/Home/</a> thì method <code>Index</code> sẽ được gọi, View <code>Index.cshtml</code> sẽ được hiển thị.</p>
+<p>Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở <a target="_blank" rel="noopener" href="https://coding4food.net/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/">phần tiếp theo</a> mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng <em>chuẩn</em> nhé</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/" title="[ASP.NET for Beginner] - Part 1 - MVC">https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/beginner/" rel="tag"># beginner</a>
+              <a href="/tags/mvc/" rel="tag"># mvc</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/03/03/asp-net-core-razor-page-lets-think-straight/" rel="prev" title="[ASP.NET Core] - Razor Page - Let's think straight">
+                  <i class="fa fa-chevron-left"></i> [ASP.NET Core] - Razor Page - Let's think straight
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/" rel="next" title="[ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding">
+                  [ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>

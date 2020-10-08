@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Ở hội nghị BUILD 2014, Microsoft đã nhắc tới Universal App, ứng dụng có thể chạy được trên cả Windows và Windows Phone Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 2013, bạn đã có th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Windows Store] Universal Apps across all Windows devices">
+<meta property="og:url" content="https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Ở hội nghị BUILD 2014, Microsoft đã nhắc tới Universal App, ứng dụng có thể chạy được trên cả Windows và Windows Phone Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 2013, bạn đã có th">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7212/13789855595_5d445495c2_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3808/13790231944_a53d45556f_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7447/13789942533_67c31f57db_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7414/13790305334_ae2e50f650_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7387/13790346144_0eda252f4e_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7117/13790357494_ca7a9589b9_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7261/13790057603_73d1eb4d5e_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3820/13790402894_fb134c2ecc_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2934/13790084775_4662772e1a_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7427/13790093875_eb1cc4a58d_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7437/13790126693_3277529e49_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7440/13816583833_af8e4ff21f_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3811/13816896774_7eda94c0fd_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7349/13817716275_cd906cb30a_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7066/13816648423_80664aab92_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3718/13816652445_57b587715d_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7090/13818091324_6f9567c7ce_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7396/13818053024_8a8f63e046_o.png">
+<meta property="og:image" content="http://farm6.staticflickr.com/5095/13818062924_84818d20d1_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7371/13817751965_3b549082de_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3794/13818117864_1bac953a3c_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7308/13818173834_c9983506b6_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2903/13817868373_46fdd7e116_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2844/13817864265_226b8940eb_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7457/13818218074_cfcbe1015f_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3802/13818261174_95d475e43e_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7433/13817947335_83e0d03ede_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3809/13818652393_97c16b491e_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3732/13818649855_10b7a8e826_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3786/13818700683_7345a9aa07_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3793/13818743355_40d8d045a1_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7361/13819126364_02dda6cce9_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3763/13819120204_1aa2d2caff_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2891/13818903143_7951e186c4_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7104/13819321114_2b92d23a10_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7269/13819008325_d5b627d827_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3730/13819137865_97f6aea455_o.png">
+<meta property="og:image" content="http://farm6.staticflickr.com/5006/13819151033_e8fe2f0c54_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2937/13819149935_bea2bb72da_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2891/13818903143_7951e186c4_o.png">
+<meta property="article:published_time" content="2014-04-13T13:24:26.000Z">
+<meta property="article:modified_time" content="2020-10-08T21:21:46.338Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="windows phone">
+<meta property="article:tag" content="windows store">
+<meta property="article:tag" content="universal">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png">
+
+
+<link rel="canonical" href="https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>[Windows Store] Universal Apps across all Windows devices | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cap-nhat-Visual-Studio-2013-len-Updat-2-RC"><span class="nav-text">Cập nhật Visual Studio 2013 lên Updat 2 RC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tao-Project-Universal"><span class="nav-text">Tạo Project Universal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xay-dung-Model-va-ViewModel"><span class="nav-text">Xây dựng Model và ViewModel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xay-dung-Template"><span class="nav-text">Xây dựng Template</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tao-tuong-tu-ben-Windows-Phone-8-1"><span class="nav-text">Tạo tương tự bên Windows Phone 8.1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XAML-va-CodeBehind-dung-chung"><span class="nav-text">XAML và CodeBehind dùng chung</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">209</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Windows Store] Universal Apps across all Windows devices<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20140413-windows-store-universal-apps-across-all-windows-devices.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-04-13 09:24:26" itemprop="dateCreated datePublished" datetime="2014-04-13T09:24:26-04:00">2014-04-13</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-08 17:21:46" itemprop="dateModified" datetime="2020-10-08T17:21:46-04:00">2020-10-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-Phone/Windows-Store-App/" itemprop="url" rel="index"><span itemprop="name">Windows Store App</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Ở hội nghị BUILD 2014, Microsoft đã nhắc tới Universal App, ứng dụng có thể chạy được trên cả Windows và Windows Phone</p>
+<p>Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 2013, bạn đã có thể xây dựng một ứng dụng như thế</p>
+<p><img src="http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png"></p>
+<a id="more"></a>
+
+<h1 id="Cap-nhat-Visual-Studio-2013-len-Updat-2-RC"><a href="#Cap-nhat-Visual-Studio-2013-len-Updat-2-RC" class="headerlink" title="Cập nhật Visual Studio 2013 lên Updat 2 RC"></a>Cập nhật Visual Studio 2013 lên Updat 2 RC</h1><p>Ngày 13-04-2014: Link tải: <a target="_blank" rel="noopener" href="http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx">http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx</a></p>
+<h1 id="Tao-Project-Universal"><a href="#Tao-Project-Universal" class="headerlink" title="Tạo Project Universal"></a>Tạo Project Universal</h1><p>Sau khi cài đặt xong, bạn sẽ có thêm một số tùy chọn mới trong Visual Studio</p>
+<p><img src="http://farm8.staticflickr.com/7212/13789855595_5d445495c2_o.png"></p>
+<p>Chọn New Project</p>
+<p><img src="http://farm4.staticflickr.com/3808/13790231944_a53d45556f_o.png"></p>
+<p>Chọn Visual C# &gt; Store Apps &gt; Universal Apps</p>
+<p>Tạo project xong, bạn sẽ có một Solution như trong hình dưới</p>
+<p><img src="http://farm8.staticflickr.com/7447/13789942533_67c31f57db_o.png"></p>
+<p>Nhìn vào là ta cũng biết ngay, Project Windows 8.1 và project Windows Phone 8.1</p>
+<p>Còn Project “Shared” sẽ chứa các file dùng chung, cụ thể là Model và View Model</p>
+<p>Ta sẽ tạo một ứng dụng đọc tin RSS đơn giản nhé</p>
+<h1 id="Xay-dung-Model-va-ViewModel"><a href="#Xay-dung-Model-va-ViewModel" class="headerlink" title="Xây dựng Model và ViewModel"></a>Xây dựng Model và ViewModel</h1><p>Tạo 2 thư mục mới tên là Model và ViewModel trong Project Shared</p>
+<p><img src="http://farm8.staticflickr.com/7414/13790305334_ae2e50f650_o.png"></p>
+<p>Giả sử ta lấy trang này làm nguồn tin: <a target="_blank" rel="noopener" href="http://nhipsongso.tuoitre.vn/RssFeeds.aspx?ChannelID=430">http://nhipsongso.tuoitre.vn/RssFeeds.aspx?ChannelID=430</a></p>
+<p>Vậy Model sẽ bao gồm 1 title và 1 content</p>
+<p>Ta tạo class News với 2 Properties là Title và Content, tương ứng với 2 biến là title và content</p>
+<p><img src="http://farm8.staticflickr.com/7387/13790346144_0eda252f4e_o.png"></p>
+<p>Tạo file class trong Folder “Model”</p>
+<p><img src="http://farm8.staticflickr.com/7117/13790357494_ca7a9589b9_o.png"></p>
+<p>Kết quả</p>
+<p><img src="http://farm8.staticflickr.com/7261/13790057603_73d1eb4d5e_o.png"></p>
+<p>Tạo 2 biến private, dùng Resharper generate code ra Property</p>
+<p>À mà quên, bạn phải khai báo kế thừa từ Interface INotifyPropertyChanged</p>
+<p><img src="http://farm4.staticflickr.com/3820/13790402894_fb134c2ecc_o.png"></p>
+<p>Sau đó dùng Generate Code của Resharper</p>
+<p><img src="http://farm3.staticflickr.com/2934/13790084775_4662772e1a_o.png"></p>
+<p>Chọn Property</p>
+<p><img src="http://farm8.staticflickr.com/7427/13790093875_eb1cc4a58d_o.png"></p>
+<p>Chọn luôn như hình, bấm finish</p>
+<p><img src="http://farm8.staticflickr.com/7437/13790126693_3277529e49_o.png"></p>
+<p>Thế là xong Model</p>
+<p>Tạo class NewsViewModel trong Folder ViewModel</p>
+<p>Trong class đó, khai báo một ObservableCollection</p>
+<p><img src="http://farm8.staticflickr.com/7440/13816583833_af8e4ff21f_o.png"></p>
+<p>Tạo thêm một class StaticViewModels trong Folder ViewModel. File class này sẽ chứa các biến ViewModel dạng static mà ta sẽ sử dụng trong toàn App (Trước kia bạn thường khai báo chúng trực tiếp trong file App.xaml.cs, nay gom nó lại một nơi để dễ quản lý)</p>
+<p><img src="http://farm4.staticflickr.com/3811/13816896774_7eda94c0fd_o.png"></p>
+<p>Trong file này, khai báo một Intance của NewsViewModel</p>
+<p><img src="http://farm8.staticflickr.com/7349/13817716275_cd906cb30a_o.png"></p>
+<p>Tạo một thư mục Utilities, trong đó, tạo một class StaticMethod. Ta sẽ nhét code lấy HTML vào đây</p>
+<p><img src="http://farm8.staticflickr.com/7066/13816648423_80664aab92_o.png"></p>
+<p>Trong này, gõ lệnh như sau</p>
+<p><img src="http://farm4.staticflickr.com/3718/13816652445_57b587715d_o.png"></p>
+<p>Mở lại file NewsViewModel, tạo thêm method GetNewsAsyncTask</p>
+<p><img src="http://farm8.staticflickr.com/7090/13818091324_6f9567c7ce_o.png"></p>
+<p>Thư viện HtmlDocument lấy từ HtmlAgilityPack trong Nuget, bạn phải add nó vào trong References của Project Windows 8.1</p>
+<p>Sau khi xong, mở file MainPage.xaml của Project Windows 8.1 lên, thêm vào đó một ListBox để hiển thị danh sách tin</p>
+<p><img src="http://farm8.staticflickr.com/7396/13818053024_8a8f63e046_o.png"></p>
+<p>Sau đó, mở file Code Behind và thêm những dòng sau:</p>
+<p><img src="http://farm6.staticflickr.com/5095/13818062924_84818d20d1_o.png"></p>
+<p>Chạy thử</p>
+<p><img src="http://farm8.staticflickr.com/7371/13817751965_3b549082de_o.png"></p>
+<h1 id="Xay-dung-Template"><a href="#Xay-dung-Template" class="headerlink" title="Xây dựng Template"></a>Xây dựng Template</h1><p>Mở file MainPage.xaml trong Project Windows 8.1</p>
+<p>Click chuột phải vào ListBox &gt; Edit Additional Template &gt; Create Empty</p>
+<p><img src="http://farm4.staticflickr.com/3794/13818117864_1bac953a3c_o.png"></p>
+<p>Trong hộp thoại hiện ra, đặt tên nó là DataTemplate</p>
+<p><img src="http://farm8.staticflickr.com/7308/13818173834_c9983506b6_o.png"></p>
+<p>Edit lại thành như sau</p>
+<p><img src="http://farm3.staticflickr.com/2903/13817868373_46fdd7e116_o.png"></p>
+<p>Nhấn nút Local Machine để chạy thử</p>
+<p><img src="http://farm3.staticflickr.com/2844/13817864265_226b8940eb_o.png"></p>
+<p>Thật tuyệt phải không?</p>
+<h1 id="Tao-tuong-tu-ben-Windows-Phone-8-1"><a href="#Tao-tuong-tu-ben-Windows-Phone-8-1" class="headerlink" title="Tạo tương tự bên Windows Phone 8.1"></a>Tạo tương tự bên Windows Phone 8.1</h1><p>Mở file MainPage.xaml của Project Windows Phone 8.1, copy và paste những thứ tương tự nhau</p>
+<p><img src="http://farm8.staticflickr.com/7457/13818218074_cfcbe1015f_o.png"></p>
+<p>Tiếp tục mở code behind, và làm tương tự</p>
+<p><img src="http://farm4.staticflickr.com/3802/13818261174_95d475e43e_o.png"></p>
+<p>Chọn lại Startup Project</p>
+<p><img src="http://farm8.staticflickr.com/7433/13817947335_83e0d03ede_o.png"></p>
+<p>Ôi không, lỗi xuất hiện :’(</p>
+<p><img src="http://farm4.staticflickr.com/3809/13818652393_97c16b491e_o.png"></p>
+<p>Khi bạn chọn Startup Project là Windows Phone, vì trong Reference của Windows Phone chưa có thư viện HtmlAgilityPack nên các tham chiếu tới thư viện này đều gặp lỗi</p>
+<p>Ta add thêm thư viện này thông qua Nuget</p>
+<p><img src="http://farm4.staticflickr.com/3732/13818649855_10b7a8e826_o.png"></p>
+<p>Một lỗi xuất hiện</p>
+<p><img src="http://farm4.staticflickr.com/3786/13818700683_7345a9aa07_o.png"></p>
+<p>Nó phàn nàn là cái package này chả chứa file nào target tới Windows Phone 8.1 cả.</p>
+<p>Vì dùng chung một bộ thư viện với Windows 8.1, Windows Phone 8.1 có khả năng add các DLL chỉ tương thích với Windows 8.1.</p>
+<p>Chọn References &gt; Ad References…</p>
+<p><img src="http://farm4.staticflickr.com/3793/13818743355_40d8d045a1_o.png"></p>
+<p>Chọn mục Browse &gt; Nhấn nút Browse, tìm đến thư mục bin &gt; Debug của Windows 8.1 để add thư viện HtmlAgilityPack</p>
+<p><img src="http://farm8.staticflickr.com/7361/13819126364_02dda6cce9_o.png"></p>
+<p><img src="http://farm4.staticflickr.com/3763/13819120204_1aa2d2caff_o.png"></p>
+<p>Và khi add xong, woala, mọi lỗi đã biến mất, code đã “green” trở lại</p>
+<p>Lưu ý: Copy file Annotation.cs trong thư mục Property của Project Windows 8.1 và Paste nó vào bất kỳ chỗ nào trong Project Windows Phone (thực hiện việc Copy và Paste này trên Solution Explorer nhé). Nếu bạn có Resharper, bạn có thể để Resharper tự sinh lại file này bằng cách xóa các method OnPropertyChanged trong News Model, và để Resharper Implement lại nó</p>
+<p>Chạy thử Project WP8.1</p>
+<p><img src="http://farm3.staticflickr.com/2891/13818903143_7951e186c4_o.png"></p>
+<p>Done, bạn đã tự tạo một UniversalApp rồi đấy</p>
+<h1 id="XAML-va-CodeBehind-dung-chung"><a href="#XAML-va-CodeBehind-dung-chung" class="headerlink" title="XAML và CodeBehind dùng chung"></a>XAML và CodeBehind dùng chung</h1><p>Như bạn có thể thấy ở hình trên, XAML và CodeBehind ở cả 2 Project rất giống nhau, hầu như không thay đổi gì cả</p>
+<p>Cách đây rất lâu, trong một buổi training tại văn phòng Microsoft, đã có người từng hỏi “tại sao không dùng chung XAML cho cả Windows 8 và Windows Phone?”. Câu trả lời khi đó là Windows 8 và Windows Phone có bộ thư viện hơi khác nhau, nên một số control cũng khác nhau. Bây giờ, Microsoft đã đem lại khả năng “dùng chung” đó</p>
+<p>Tạo một Folder tên View trong Project Shared</p>
+<p>Add New một BlankPage, đặt tên nó là MainPage</p>
+<p><img src="http://farm8.staticflickr.com/7104/13819321114_2b92d23a10_o.png"></p>
+<p>Copy và Paste code từ Project Windows Phone (cả XAML lẫn code Behind)</p>
+<p>Ở trên cùng của XAML Editor, bạn sẽ thấy một Drop down list thú vị</p>
+<p><img src="http://farm8.staticflickr.com/7269/13819008325_d5b627d827_o.png"></p>
+<p>Ở đây, bạn có thể thay đổi kiểu View mà Code XAML này được compile, trong hình đang chọn Windows Phone</p>
+<p>Hãy thử chuyển nó sang Windows, bạn sẽ thấy giao diện Visual Editor thay đổi</p>
+<p>Mở file App.xaml.cs, kéo xuống dòng 98, chỉnh sửa thành View.MainPage</p>
+<p><img src="http://farm4.staticflickr.com/3730/13819137865_97f6aea455_o.png"></p>
+<p>Chỉnh Startup Project là Windows</p>
+<p><img src="http://farm6.staticflickr.com/5006/13819151033_e8fe2f0c54_o.png"></p>
+<p>Chạy thử</p>
+<p><img src="http://farm3.staticflickr.com/2937/13819149935_bea2bb72da_o.png"></p>
+<p>Chỉnh Startup Project thành Windows Phone, nhấn chạy thử</p>
+<p><img src="http://farm3.staticflickr.com/2891/13818903143_7951e186c4_o.png"></p>
+<p>Thế là xong, bạn đã có một Page hiển thị được ở cả 2 giao diện nhé.</p>
+<p>Trong các bài Blog sau, mình hy vọng sẽ có giải thích rõ ràng hơn về các Control dùng chung và cách hiển thị của chúng trên giao diện. Dù sao thì đây mới chỉ là Release Candidate. Sẽ còn thay đổi nhiều trong tương lai.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/" title="[Windows Store] Universal Apps across all Windows devices">https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/windows-phone/" rel="tag"># windows phone</a>
+              <a href="/tags/windows-store/" rel="tag"># windows store</a>
+              <a href="/tags/universal/" rel="tag"># universal</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/" rel="prev" title="[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps">
+                  <i class="fa fa-chevron-left"></i> [Basic for Absolute Beginner] – [Part 5] – Analytics for your apps
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2014/05/02/basic-for-absolute-beginner-part-6-source-control/" rel="next" title="[Basic for Absolute Beginner] – [Part 6] – Source Control">
+                  [Basic for Absolute Beginner] – [Part 6] – Source Control <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>

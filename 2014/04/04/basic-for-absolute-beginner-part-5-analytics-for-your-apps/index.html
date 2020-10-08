@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn. Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps">
+<meta property="og:url" content="https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn. Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png">
+<meta property="og:image" content="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png">
+<meta property="og:image" content="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png">
+<meta property="og:image" content="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png">
+<meta property="article:published_time" content="2014-04-04T14:28:33.000Z">
+<meta property="article:modified_time" content="2020-10-08T21:21:46.338Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="windows phone">
+<meta property="article:tag" content="windows store">
+<meta property="article:tag" content="analytics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png">
+
+
+<link rel="canonical" href="https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Tren-Project"><span class="nav-text">1. Trên Project</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Cai-SDK"><span class="nav-text">1.1. Cài SDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Khai-bao-thong-tin"><span class="nav-text">1.2. Khai báo thông tin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Tren-Google-Analytics"><span class="nav-text">2. Trên Google Analytics</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Thiet-lap-theo-doi"><span class="nav-text">3. Thiết lập theo dõi</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Coding"><span class="nav-text">3.1. Coding</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Xem-Analytics"><span class="nav-text">4. Xem Analytics</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">209</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Basic for Absolute Beginner] – [Part 5] – Analytics for your apps<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20140404-basic-for-absolute-beginner-part-5-analytics-for-your-apps.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-04-04 10:28:33" itemprop="dateCreated datePublished" datetime="2014-04-04T10:28:33-04:00">2014-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-08 17:21:46" itemprop="dateModified" datetime="2020-10-08T17:21:46-04:00">2020-10-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-Phone/" itemprop="url" rel="index"><span itemprop="name">Windows Phone</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-Phone/Windows-Store-App/" itemprop="url" rel="index"><span itemprop="name">Windows Store App</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
+<p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
+<p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
+<p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
+<a id="more"></a>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-tr%C3%AAn-project">1. Trên Project</a><ul>
+<li><a href="#11-c%C3%A0i-sdk">1.1. Cài SDK</a></li>
+<li><a href="#12-khai-b%C3%A1o-th%C3%B4ng-tin">1.2. Khai báo thông tin</a></li>
+</ul>
+</li>
+<li><a href="#2-tr%C3%AAn-google-analytics">2. Trên Google Analytics</a></li>
+<li><a href="#3-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">3. Thiết lập theo dõi</a><ul>
+<li><a href="#31-coding">3.1. Coding</a></li>
+</ul>
+</li>
+<li><a href="#4-xem-analytics">4. Xem Analytics</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-Tren-Project"><a href="#1-Tren-Project" class="headerlink" title="1. Trên Project"></a>1. Trên Project</h1><p><a id="markdown-tr%C3%AAn-project" name="tr%C3%AAn-project"></a></p>
+<h2 id="1-1-Cai-SDK"><a href="#1-1-Cai-SDK" class="headerlink" title="1.1. Cài SDK"></a>1.1. Cài SDK</h2><p><a id="markdown-c%C3%A0i-sdk" name="c%C3%A0i-sdk"></a></p>
+<p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
+<p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
+<p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Install-Package GoogleAnalyticsSDK<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
+<p>Chờ một chút cho nó chạy</p>
+<h2 id="1-2-Khai-bao-thong-tin"><a href="#1-2-Khai-bao-thong-tin" class="headerlink" title="1.2. Khai báo thông tin"></a>1.2. Khai báo thông tin</h2><p><a id="markdown-khai-b%C3%A1o-th%C3%B4ng-tin" name="khai-b%C3%A1o-th%C3%B4ng-tin"></a></p>
+<p>Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới</p>
+<p>File analytics.xml</p>
+<p>File này chứa các thông số cần thiết để Google Analytics theo dõi ứng dụng của bạn.</p>
+<p>Trong file này có các dòng comment vô cùng đầy đủ, bạn có thể Comment out nó và tự điền các thông số mong muốn</p>
+<p><img src="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png"></p>
+<p>File analytics.xsd</p>
+<p>Là file compiled của file trên, bạn không cần quan tâm tới file này</p>
+<h1 id="2-Tren-Google-Analytics"><a href="#2-Tren-Google-Analytics" class="headerlink" title="2. Trên Google Analytics"></a>2. Trên Google Analytics</h1><p><a id="markdown-tr%C3%AAn-google-analytics" name="tr%C3%AAn-google-analytics"></a></p>
+<p>vào link này: <a target="_blank" rel="noopener" href="http://google.com/analytics">Google Analytics Account</a></p>
+<p>Nhấn nút Đăng nhập</p>
+<p><img src="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png"></p>
+<p>Chọn tab Quản trị</p>
+<p><img src="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png"></p>
+<p>Tạo thuộc tính mới</p>
+<p><img src="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png"></p>
+<p>Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi điều gì”, chọn Ứng dụng di động nhé</p>
+<p><img src="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png"></p>
+<p>Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn</p>
+<h1 id="3-Thiet-lap-theo-doi"><a href="#3-Thiet-lap-theo-doi" class="headerlink" title="3. Thiết lập theo dõi"></a>3. Thiết lập theo dõi</h1><p><a id="markdown-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i" name="thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i"></a></p>
+<p>Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:</p>
+<ul>
+<li>Màn hình ứng dụng: màn hình nào người dùng sử dụng nhiều</li>
+<li>Event: Nút nào được click nhiều, sự kiện nào xảy ra nhiều</li>
+<li>Exception: Lỗi nào bị bắt nhiều nhất</li>
+<li>Transaction: Thanh toán, mua đồ, In-app Purchase</li>
+<li>Social: Chia sẻ trong mạng xã hội</li>
+<li>Timing: thời gian mà ứng dụng chạy một task nào đó</li>
+</ul>
+<p>Và tất nhiên, bạn sẽ có các con số sau đây:</p>
+<ul>
+<li>Số lượng người dùng</li>
+<li>Người dùng mới cài đặt trong ngày</li>
+<li>Người dùng đang sử dụng app hiện tại (Realtime)</li>
+<li>Mức độ trung thành</li>
+<li>Tỷ lệ thoát ứng dụng</li>
+<li>Phiên bản ứng dụng (cái này phải cài đặt trong file XML)</li>
+</ul>
+<h2 id="3-1-Coding"><a href="#3-1-Coding" class="headerlink" title="3.1. Coding"></a>3.1. Coding</h2><p><a id="markdown-coding" name="coding"></a></p>
+<p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">GoogleAnalytics<span class="token punctuation">.</span>EasyTracker<span class="token punctuation">.</span><span class="token function">GetTracker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SendException</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>Exception<span class="token punctuation">.</span>Message<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
+<p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">GoogleAnalytics<span class="token punctuation">.</span>EasyTracker<span class="token punctuation">.</span><span class="token function">GetTracker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SendException</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>ExceptionObject<span class="token punctuation">.</span>Message<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
+<p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
+<p><code>csharp // Track Navigation RootFrame.Navigated += RootFrame_Navigated; </code></p>
+<p>Trong Event Handler, thêm đoạn code sau:</p>
+<p><code>csharp if (e.Content != null) &#123; GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); &#125; </code></p>
+<h1 id="4-Xem-Analytics"><a href="#4-Xem-Analytics" class="headerlink" title="4. Xem Analytics"></a>4. Xem Analytics</h1><p><a id="markdown-xem-analytics" name="xem-analytics"></a></p>
+<p>Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app</p>
+<p><img src="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png"></p>
+<p>Bạn có thể khám phá thêm trong trang Google Analytics của mình.</p>
+<p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/" title="[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps">https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/windows-phone/" rel="tag"># windows phone</a>
+              <a href="/tags/windows-store/" rel="tag"># windows store</a>
+              <a href="/tags/analytics/" rel="tag"># analytics</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/" rel="prev" title="[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app">
+                  <i class="fa fa-chevron-left"></i> [Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2014/04/13/windows-store-universal-apps-across-all-windows-devices/" rel="next" title="[Windows Store] Universal Apps across all Windows devices">
+                  [Windows Store] Universal Apps across all Windows devices <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>
