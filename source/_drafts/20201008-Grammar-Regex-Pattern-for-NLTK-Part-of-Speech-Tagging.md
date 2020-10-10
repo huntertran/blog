@@ -19,7 +19,10 @@ NLTK have a function called `regexpparser` to parse the Part-of-Speech tagged se
 - [1. Part-of-Speech tagging](#1-part-of-speech-tagging)
     - [1.1. The tags and explanations](#11-the-tags-and-explanations)
     - [1.2. Tagging them](#12-tagging-them)
-- [2. Regular Expression regex](#2-regular-expression-regex)
+- [2. Regular Expression regex grammar](#2-regular-expression-regex-grammar)
+    - [2.1. Exact match](#21-exact-match)
+    - [2.2. Skip some tags](#22-skip-some-tags)
+- [3. Full list of tags](#3-full-list-of-tags)
 
 <!-- /TOC -->
 
@@ -36,6 +39,95 @@ The full list of tag can be show when run the command
 ```py
 nltk.help.upenn_tagset()
 ```
+
+For the full list of explanation, scroll to the bottom of this post.
+
+## 1.2. Tagging them
+<a id="markdown-tagging-them" name="tagging-them"></a>
+
+For example, when you have the sentence:
+
+```
+The quick brown fox jumps over the lazy dog
+```
+
+The process should be something like this
+
+```py
+sentence = 'The quick brown fox jumps over the lazy dog'
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
+
+# result of 'tags'
+# [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN')]
+```
+
+# 2. Regular Expression (regex) grammar
+<a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a>
+
+The regular expression with nltk tokens is quite different than normal text. The grammar treat each token as a string of text, and apply the regex pattern on that string with matched to position of the token in sentence.
+
+Below I will present a list of grammar, from the most simple to a more complex one, using the same sentence above
+
+## 2.1. Exact match
+<a id="markdown-exact-match" name="exact-match"></a>
+
+```py
+sentence = 'The quick brown fox jumps over the lazy dog'
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
+
+# result of 'tags'
+# [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN')]
+
+grammar = 'exact: {<DT><JJ><NN><NN>}'
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
+
+# parsed result
+# Tree
+# ('S', [Tree('exact', [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN')]), 
+# ('jumps', 'VBZ'),
+# ('over', 'IN'),
+# ('the', 'DT'),
+# ('lazy', 'JJ'),
+# ('dog', 'NN')])
+```
+
+## 2.2. Skip some tags
+<a id="markdown-skip-some-tags" name="skip-some-tags"></a>
+
+We will skips all tags between `The` and `fox` (between DT and NN tags)
+
+```py
+sentence = 'The quick brown fox jumps over the lazy dog'
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
+
+# result of 'tags'
+# [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN')]
+
+grammar = 'exact: {<DT><.*>*<VBZ>}'
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
+
+# parsed result
+# Tree
+# ('S', [Tree('exact', [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ')]), 
+# ('over', 'IN'), 
+# ('the', 'DT'), 
+# ('lazy', 'JJ'), 
+# ('dog', 'NN')])
+```
+
+Explanation:
+
+`<.*>` means match every tags. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.
+
+The next asterisk (*) right behind it mean repeat the matching tags from 0 to unlimited time.
+
+# 3. Full list of tags
+<a id="markdown-full-list-of-tags" name="full-list-of-tags"></a>
 
 Here is the full list of tags to save you some time:
 
@@ -161,26 +253,3 @@ Here is the full list of tags to save you some time:
 |  | whose |
 | WRB | Wh-adverb |
 |  | how however whence whenever where   whereby whereever wherein whereof why |
-
-## 1.2. Tagging them
-<a id="markdown-tagging-them" name="tagging-them"></a>
-
-For example, when you have the sentence:
-
-```
-The quick brown fox jumps over the lazy dog
-```
-
-The process should be something like this
-
-```py
-sentence = 'The quick brown fox jumps over the lazy dog'
-tokens = nltk.tokenize.word_tokenize(sentence)
-tags = nltk.pos_tag(tokens)
-
-# result of 'tags'
-# [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN')]
-```
-
-# 2. Regular Expression (regex)
-<a id="markdown-regular-expression-regex" name="regular-expression-regex"></a>
