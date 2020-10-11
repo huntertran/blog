@@ -10,7 +10,7 @@ categories:
     - research
 ---
 
-NLTK have a function called `regexpparser` to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.
+NLTK has a function called `regexpparser` to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.
 
 <!--more-->
 
@@ -22,25 +22,27 @@ NLTK have a function called `regexpparser` to parse the Part-of-Speech tagged se
 - [2. Regular Expression regex grammar](#2-regular-expression-regex-grammar)
     - [2.1. Exact match](#21-exact-match)
     - [2.2. Skip some tags](#22-skip-some-tags)
-- [3. Full list of tags](#3-full-list-of-tags)
+    - [2.3. Match all tags start with a character](#23-match-all-tags-start-with-a-character)
+- [3. Match multiple grammars](#3-match-multiple-grammars)
+- [4. Full list of tags](#4-full-list-of-tags)
 
 <!-- /TOC -->
 
 # 1. Part-of-Speech tagging
 <a id="markdown-part-of-speech-tagging" name="part-of-speech-tagging"></a>
 
-This action simply _**tag**_ your tokenized words with the word type, for example Verb, noun, adjective, etc.
+This action simply _**tag**_ your tokenized words with the word type, for example, Verb, noun, adjective, etc.
 
 ## 1.1. The tags and explanations
 <a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a>
 
-The full list of tag can be show when run the command
+The full list of tags can be shown when running the command
 
 ```py
 nltk.help.upenn_tagset()
 ```
 
-For the full list of explanation, scroll to the bottom of this post.
+For the full list of explanations, scroll to the bottom of this post.
 
 ## 1.2. Tagging them
 <a id="markdown-tagging-them" name="tagging-them"></a>
@@ -65,9 +67,9 @@ tags = nltk.pos_tag(tokens)
 # 2. Regular Expression (regex) grammar
 <a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a>
 
-The regular expression with nltk tokens is quite different than normal text. The grammar treat each token as a string of text, and apply the regex pattern on that string with matched to position of the token in sentence.
+The regular expression with nltk tokens is quite different than normal text. The grammar treats each token as a string of text, and apply the regex pattern on that string with matched to the position of the token in the sentence.
 
-Below I will present a list of grammar, from the most simple to a more complex one, using the same sentence above
+Below I will present a list of grammar, from the most simple to the more complex one, using the same sentence above
 
 ## 2.1. Exact match
 <a id="markdown-exact-match" name="exact-match"></a>
@@ -97,7 +99,7 @@ result = parser.parse(tags)
 ## 2.2. Skip some tags
 <a id="markdown-skip-some-tags" name="skip-some-tags"></a>
 
-We will skips all tags between `The` and `fox` (between DT and NN tags)
+We will skip all tags between `The` and `fox` (between DT and NN tags)
 
 ```py
 sentence = 'The quick brown fox jumps over the lazy dog'
@@ -122,11 +124,62 @@ result = parser.parse(tags)
 
 Explanation:
 
-`<.*>` means match every tags. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.
+`<.*>` means match every tag. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.
 
-The next asterisk (*) right behind it mean repeat the matching tags from 0 to unlimited time.
+The next asterisk (*) right behind it means repeat the matching tags from 0 to unlimited time.
 
-# 3. Full list of tags
+## 2.3. Match all tags start with a character
+<a id="markdown-match-all-tags-start-with-a-character" name="match-all-tags-start-with-a-character"></a>
+
+We will match all tag starting with 'N', this is including 'NN', 'NNP', 'NNPS', 'NNS' tags
+
+```py
+sentence = 'The quick brown fox jumps over the lazy dog'
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
+
+# result of 'tags'
+# [('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN')]
+
+grammar = 'exact: {<N.*>}'
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
+
+# parsed result
+# Tree
+# ('S', [('The', 'DT'), 
+# ('quick', 'JJ'), 
+# Tree('exact', [('brown', 'NN')]), 
+# Tree('exact', [('fox', 'NN')]), 
+# ('jumps', 'VBZ'), 
+# ('over', 'IN'), 
+# ('the', 'DT'), 
+# ('lazy', 'JJ'), 
+# Tree('exact', 
+# [('dog', 'NN')])])
+```
+
+# 3. Match multiple grammars
+<a id="markdown-match-multiple-grammars" name="match-multiple-grammars"></a>
+
+To use multiple grammars to scan your text, simply combine them with new line character `\n`
+
+For example:
+
+Single pattern grammar
+
+```python
+grammar = 'exact: {<N.*>}'
+```
+
+Multiple patterns grammar
+
+```python
+grammars = 'n_tags: {<N.*>}
+            skip_tags: exact: {<DT><.*>*<VBZ>}'
+```
+
+# 4. Full list of tags
 <a id="markdown-full-list-of-tags" name="full-list-of-tags"></a>
 
 Here is the full list of tags to save you some time:
