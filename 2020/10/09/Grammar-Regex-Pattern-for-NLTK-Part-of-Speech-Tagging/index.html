@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="NLTK has a function called regexpparser to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging">
+<meta property="og:url" content="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="NLTK has a function called regexpparser to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-09T01:26:02.000Z">
+<meta property="article:modified_time" content="2020-10-11T15:15:06.003Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="nlp">
+<meta property="article:tag" content="nltk">
+<meta property="article:tag" content="research">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+    <script data-pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-174401878-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tuan Tran's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Part-of-Speech-tagging"><span class="nav-text">1. Part-of-Speech tagging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-The-tags-and-explanations"><span class="nav-text">1.1. The tags and explanations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Tagging-them"><span class="nav-text">1.2. Tagging them</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Regular-Expression-regex-grammar"><span class="nav-text">2. Regular Expression (regex) grammar</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Exact-match"><span class="nav-text">2.1. Exact match</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Skip-some-tags"><span class="nav-text">2.2. Skip some tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Match-all-tags-start-with-a-character"><span class="nav-text">2.3. Match all tags start with a character</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Match-multiple-grammars"><span class="nav-text">3. Match multiple grammars</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Full-list-of-tags"><span class="nav-text">4. Full list of tags</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">213</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20201008-Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-08 21:26:02" itemprop="dateCreated datePublished" datetime="2020-10-08T21:26:02-04:00">2020-10-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-10-11 11:15:06" itemprop="dateModified" datetime="2020-10-11T11:15:06-04:00">2020-10-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/research/" itemprop="url" rel="index"><span itemprop="name">research</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>NLTK has a function called <code>regexpparser</code> to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.</p>
+<a id="more"></a>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-part-of-speech-tagging">1. Part-of-Speech tagging</a><ul>
+<li><a href="#11-the-tags-and-explanations">1.1. The tags and explanations</a></li>
+<li><a href="#12-tagging-them">1.2. Tagging them</a></li>
+</ul>
+</li>
+<li><a href="#2-regular-expression-regex-grammar">2. Regular Expression regex grammar</a><ul>
+<li><a href="#21-exact-match">2.1. Exact match</a></li>
+<li><a href="#22-skip-some-tags">2.2. Skip some tags</a></li>
+<li><a href="#23-match-all-tags-start-with-a-character">2.3. Match all tags start with a character</a></li>
+</ul>
+</li>
+<li><a href="#3-match-multiple-grammars">3. Match multiple grammars</a></li>
+<li><a href="#4-full-list-of-tags">4. Full list of tags</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-Part-of-Speech-tagging"><a href="#1-Part-of-Speech-tagging" class="headerlink" title="1. Part-of-Speech tagging"></a>1. Part-of-Speech tagging</h1><p><a id="markdown-part-of-speech-tagging" name="part-of-speech-tagging"></a></p>
+<p>This action simply <em><strong>tag</strong></em> your tokenized words with the word type, for example, Verb, noun, adjective, etc.</p>
+<h2 id="1-1-The-tags-and-explanations"><a href="#1-1-The-tags-and-explanations" class="headerlink" title="1.1. The tags and explanations"></a>1.1. The tags and explanations</h2><p><a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a></p>
+<p>The full list of tags can be shown when running the command</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">nltk.help.upenn_tagset()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>For the full list of explanations, scroll to the bottom of this post.</p>
+<h2 id="1-2-Tagging-them"><a href="#1-2-Tagging-them" class="headerlink" title="1.2. Tagging them"></a>1.2. Tagging them</h2><p><a id="markdown-tagging-them" name="tagging-them"></a></p>
+<p>For example, when you have the sentence:</p>
+<pre class="line-numbers language-none"><code class="language-none">The quick brown fox jumps over the lazy dog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The process should be something like this</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
+tags &#x3D; nltk.pos_tag(tokens)
+
+# result of &#39;tags&#39;
+# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="2-Regular-Expression-regex-grammar"><a href="#2-Regular-Expression-regex-grammar" class="headerlink" title="2. Regular Expression (regex) grammar"></a>2. Regular Expression (regex) grammar</h1><p><a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a></p>
+<p>The regular expression with nltk tokens is quite different than normal text. The grammar treats each token as a string of text, and apply the regex pattern on that string with matched to the position of the token in the sentence.</p>
+<p>Below I will present a list of grammar, from the most simple to the more complex one, using the same sentence above</p>
+<h2 id="2-1-Exact-match"><a href="#2-1-Exact-match" class="headerlink" title="2.1. Exact match"></a>2.1. Exact match</h2><p><a id="markdown-exact-match" name="exact-match"></a></p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
+tags &#x3D; nltk.pos_tag(tokens)
+
+# result of &#39;tags&#39;
+# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+
+grammar &#x3D; &#39;exact: &#123;&lt;DT&gt;&lt;JJ&gt;&lt;NN&gt;&lt;NN&gt;&#125;&#39;
+parser &#x3D; nltk.RegexpParser(grammar)
+result &#x3D; parser.parse(tags)
+
+# parsed result
+# Tree
+# (&#39;S&#39;, [Tree(&#39;exact&#39;, [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;)]), 
+# (&#39;jumps&#39;, &#39;VBZ&#39;),
+# (&#39;over&#39;, &#39;IN&#39;),
+# (&#39;the&#39;, &#39;DT&#39;),
+# (&#39;lazy&#39;, &#39;JJ&#39;),
+# (&#39;dog&#39;, &#39;NN&#39;)])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-2-Skip-some-tags"><a href="#2-2-Skip-some-tags" class="headerlink" title="2.2. Skip some tags"></a>2.2. Skip some tags</h2><p><a id="markdown-skip-some-tags" name="skip-some-tags"></a></p>
+<p>We will skip all tags between <code>The</code> and <code>fox</code> (between DT and NN tags)</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
+tags &#x3D; nltk.pos_tag(tokens)
+
+# result of &#39;tags&#39;
+# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+
+grammar &#x3D; &#39;exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#39;
+parser &#x3D; nltk.RegexpParser(grammar)
+result &#x3D; parser.parse(tags)
+
+# parsed result
+# Tree
+# (&#39;S&#39;, [Tree(&#39;exact&#39;, [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;)]), 
+# (&#39;over&#39;, &#39;IN&#39;), 
+# (&#39;the&#39;, &#39;DT&#39;), 
+# (&#39;lazy&#39;, &#39;JJ&#39;), 
+# (&#39;dog&#39;, &#39;NN&#39;)])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Explanation:</p>
+<p><code>&lt;.*&gt;</code> means match every tag. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.</p>
+<p>The next asterisk (*) right behind it means repeat the matching tags from 0 to unlimited time.</p>
+<h2 id="2-3-Match-all-tags-start-with-a-character"><a href="#2-3-Match-all-tags-start-with-a-character" class="headerlink" title="2.3. Match all tags start with a character"></a>2.3. Match all tags start with a character</h2><p><a id="markdown-match-all-tags-start-with-a-character" name="match-all-tags-start-with-a-character"></a></p>
+<p>We will match all tag starting with ‘N’, this is including ‘NN’, ‘NNP’, ‘NNPS’, ‘NNS’ tags</p>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
+tags &#x3D; nltk.pos_tag(tokens)
+
+# result of &#39;tags&#39;
+# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+
+grammar &#x3D; &#39;exact: &#123;&lt;N.*&gt;&#125;&#39;
+parser &#x3D; nltk.RegexpParser(grammar)
+result &#x3D; parser.parse(tags)
+
+# parsed result
+# Tree
+# (&#39;S&#39;, [(&#39;The&#39;, &#39;DT&#39;), 
+# (&#39;quick&#39;, &#39;JJ&#39;), 
+# Tree(&#39;exact&#39;, [(&#39;brown&#39;, &#39;NN&#39;)]), 
+# Tree(&#39;exact&#39;, [(&#39;fox&#39;, &#39;NN&#39;)]), 
+# (&#39;jumps&#39;, &#39;VBZ&#39;), 
+# (&#39;over&#39;, &#39;IN&#39;), 
+# (&#39;the&#39;, &#39;DT&#39;), 
+# (&#39;lazy&#39;, &#39;JJ&#39;), 
+# Tree(&#39;exact&#39;, 
+# [(&#39;dog&#39;, &#39;NN&#39;)])])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="3-Match-multiple-grammars"><a href="#3-Match-multiple-grammars" class="headerlink" title="3. Match multiple grammars"></a>3. Match multiple grammars</h1><p><a id="markdown-match-multiple-grammars" name="match-multiple-grammars"></a></p>
+<p>To use multiple grammars to scan your text, simply combine them with new line character <code>\n</code></p>
+<p>For example:</p>
+<p>Single pattern grammar</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammar <span class="token operator">=</span> <span class="token string">'exact: &#123;&lt;N.*>&#125;'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Multiple patterns grammar</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammars <span class="token operator">=</span> 'n_tags<span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token operator">&lt;</span>N<span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">></span><span class="token punctuation">&#125;</span>
+            skip_tags<span class="token punctuation">:</span> exact<span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token operator">&lt;</span>DT<span class="token operator">></span><span class="token operator">&lt;</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">></span><span class="token operator">*</span><span class="token operator">&lt;</span>VBZ<span class="token operator">></span><span class="token punctuation">&#125;</span>'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h1 id="4-Full-list-of-tags"><a href="#4-Full-list-of-tags" class="headerlink" title="4. Full list of tags"></a>4. Full list of tags</h1><p><a id="markdown-full-list-of-tags" name="full-list-of-tags"></a></p>
+<p>Here is the full list of tags to save you some time:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tag</strong></th>
+<th><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CC</td>
+<td>conjunction,   coordinating</td>
+</tr>
+<tr>
+<td></td>
+<td>&amp; ‘n and both but either et for less   minus neither nor or plus so</td>
+</tr>
+<tr>
+<td></td>
+<td>therefore   times v. versus vs. whether yet</td>
+</tr>
+<tr>
+<td>CD</td>
+<td>numeral, cardinal</td>
+</tr>
+<tr>
+<td></td>
+<td>mid-1890   nine-thirty forty-two one-tenth ten million 0.5 one forty-</td>
+</tr>
+<tr>
+<td></td>
+<td>seven 1987 twenty ‘79 zero two   78-degrees eighty-four IX ‘60s .025</td>
+</tr>
+<tr>
+<td></td>
+<td>fifteen   271,124 dozen quintillion DM2,000 …</td>
+</tr>
+<tr>
+<td>DT</td>
+<td>determiner</td>
+</tr>
+<tr>
+<td></td>
+<td>all   an another any both del each either every half la many much nary</td>
+</tr>
+<tr>
+<td></td>
+<td>neither no some such that the them these   this those</td>
+</tr>
+<tr>
+<td>EX</td>
+<td>existential   there</td>
+</tr>
+<tr>
+<td></td>
+<td>there</td>
+</tr>
+<tr>
+<td>FW</td>
+<td>foreign   word</td>
+</tr>
+<tr>
+<td></td>
+<td>gemeinschaft hund ich jeux habeas   Haementeria Herr K’ang-si vous</td>
+</tr>
+<tr>
+<td></td>
+<td>lutihaw   alai je jour objets salutaris fille quibusdam pas trop Monte</td>
+</tr>
+<tr>
+<td></td>
+<td>terram fiche oui corporis …</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>preposition   or conjunction, subordinating</td>
+</tr>
+<tr>
+<td></td>
+<td>astride among uppon whether out inside   pro despite on by throughout</td>
+</tr>
+<tr>
+<td></td>
+<td>below   within for towards near behind atop around if like until below</td>
+</tr>
+<tr>
+<td></td>
+<td>next into if beside …</td>
+</tr>
+<tr>
+<td>JJ</td>
+<td>adjective   or numeral, ordinal</td>
+</tr>
+<tr>
+<td></td>
+<td>third ill-mannered pre-war regrettable   oiled calamitous first separable</td>
+</tr>
+<tr>
+<td></td>
+<td>ectoplasmic   battery-powered participatory fourth still-to-be-named</td>
+</tr>
+<tr>
+<td></td>
+<td>multilingual multi-disciplinary …</td>
+</tr>
+<tr>
+<td>JJR</td>
+<td>adjective,   comparative</td>
+</tr>
+<tr>
+<td></td>
+<td>bleaker braver breezier briefer brighter   brisker broader bumper busier</td>
+</tr>
+<tr>
+<td></td>
+<td>calmer   cheaper choosier cleaner clearer closer colder commoner costlier</td>
+</tr>
+<tr>
+<td></td>
+<td>cozier creamier crunchier cuter …</td>
+</tr>
+<tr>
+<td>JJS</td>
+<td>adjective,   superlative</td>
+</tr>
+<tr>
+<td></td>
+<td>calmest cheapest choicest classiest   cleanest clearest closest commonest</td>
+</tr>
+<tr>
+<td></td>
+<td>corniest   costliest crassest creepiest crudest cutest darkest deadliest</td>
+</tr>
+<tr>
+<td></td>
+<td>dearest deepest densest dinkiest …</td>
+</tr>
+<tr>
+<td>LS</td>
+<td>list   item marker</td>
+</tr>
+<tr>
+<td></td>
+<td>A A. B B. C C. D E F First G H I J K One   SP-44001 SP-44002 SP-44005</td>
+</tr>
+<tr>
+<td></td>
+<td>SP-44007   Second Third Three Two * a b c d first five four one six three</td>
+</tr>
+<tr>
+<td></td>
+<td>two</td>
+</tr>
+<tr>
+<td>MD</td>
+<td>modal   auxiliary</td>
+</tr>
+<tr>
+<td></td>
+<td>can cannot could couldn’t dare may might   must need ought shall should</td>
+</tr>
+<tr>
+<td></td>
+<td>shouldn’t   will would</td>
+</tr>
+<tr>
+<td>NN</td>
+<td>noun, common, singular or mass</td>
+</tr>
+<tr>
+<td></td>
+<td>common-carrier   cabbage knuckle-duster Casino afghan shed thermostat</td>
+</tr>
+<tr>
+<td></td>
+<td>investment slide humour falloff slick   wind hyena override subhumanity</td>
+</tr>
+<tr>
+<td></td>
+<td>machinist   …</td>
+</tr>
+<tr>
+<td>NNP</td>
+<td>noun, proper, singular</td>
+</tr>
+<tr>
+<td></td>
+<td>Motown   Venneboerger Czestochwa Ranzer Conchita Trumplane Christos</td>
+</tr>
+<tr>
+<td></td>
+<td>Oceanside Escobar Kreisler Sawyer Cougar   Yvette Ervin ODI Darryl CTCA</td>
+</tr>
+<tr>
+<td></td>
+<td>Shannon   A.K.C. Meltex Liverpool …</td>
+</tr>
+<tr>
+<td>NNPS</td>
+<td>noun, proper, plural</td>
+</tr>
+<tr>
+<td></td>
+<td>Americans   Americas Amharas Amityvilles Amusements Anarcho-Syndicalists</td>
+</tr>
+<tr>
+<td></td>
+<td>Andalusians Andes Andruses Angels   Animals Anthony Antilles Antiques</td>
+</tr>
+<tr>
+<td></td>
+<td>Apache   Apaches Apocrypha …</td>
+</tr>
+<tr>
+<td>NNS</td>
+<td>noun, common, plural</td>
+</tr>
+<tr>
+<td></td>
+<td>undergraduates   scotches bric-a-brac products bodyguards facets coasts</td>
+</tr>
+<tr>
+<td></td>
+<td>divestitures storehouses designs clubs   fragrances averages</td>
+</tr>
+<tr>
+<td></td>
+<td>subjectivists   apprehensions muses factory-jobs …</td>
+</tr>
+<tr>
+<td>PDT</td>
+<td>pre-determiner</td>
+</tr>
+<tr>
+<td></td>
+<td>all   both half many quite such sure this</td>
+</tr>
+<tr>
+<td>POS</td>
+<td>genitive marker</td>
+</tr>
+<tr>
+<td></td>
+<td>‘   ‘s</td>
+</tr>
+<tr>
+<td>PRP</td>
+<td>pronoun, personal</td>
+</tr>
+<tr>
+<td></td>
+<td>hers   herself him himself hisself it itself me myself one oneself ours</td>
+</tr>
+<tr>
+<td></td>
+<td>ourselves ownself self she thee theirs   them themselves they thou thy us</td>
+</tr>
+<tr>
+<td>PRP$</td>
+<td>pronoun,   possessive</td>
+</tr>
+<tr>
+<td></td>
+<td>her his mine my our ours their thy your</td>
+</tr>
+<tr>
+<td>RB</td>
+<td>adverb</td>
+</tr>
+<tr>
+<td></td>
+<td>occasionally unabatingly maddeningly   adventurously professedly</td>
+</tr>
+<tr>
+<td></td>
+<td>stirringly   prominently technologically magisterially predominately</td>
+</tr>
+<tr>
+<td></td>
+<td>swiftly fiscally pitilessly …</td>
+</tr>
+<tr>
+<td>RBR</td>
+<td>adverb,   comparative</td>
+</tr>
+<tr>
+<td></td>
+<td>further gloomier grander graver greater   grimmer harder harsher</td>
+</tr>
+<tr>
+<td></td>
+<td>healthier   heavier higher however larger later leaner lengthier less-</td>
+</tr>
+<tr>
+<td></td>
+<td>perfectly lesser lonelier longer louder   lower more …</td>
+</tr>
+<tr>
+<td>RBS</td>
+<td>adverb,   superlative</td>
+</tr>
+<tr>
+<td></td>
+<td>best biggest bluntest earliest farthest   first furthest hardest</td>
+</tr>
+<tr>
+<td></td>
+<td>heartiest   highest largest least less most nearest second tightest worst</td>
+</tr>
+<tr>
+<td>RP</td>
+<td>particle</td>
+</tr>
+<tr>
+<td></td>
+<td>aboard   about across along apart around aside at away back before behind</td>
+</tr>
+<tr>
+<td></td>
+<td>by crop down ever fast for forth from go   high i.e. in into just later</td>
+</tr>
+<tr>
+<td></td>
+<td>low   more off on open out over per pie raising start teeth that through</td>
+</tr>
+<tr>
+<td></td>
+<td>under unto up up-pp upon whole with you</td>
+</tr>
+<tr>
+<td>SYM</td>
+<td>symbol</td>
+</tr>
+<tr>
+<td></td>
+<td>% &amp; ‘ ‘’ ‘’. ) ). * + ,. &lt; = &gt;   @ A[fj] U.S U.S.S.R * ** ***</td>
+</tr>
+<tr>
+<td>TO</td>
+<td>to   as preposition or infinitive marker</td>
+</tr>
+<tr>
+<td></td>
+<td>to</td>
+</tr>
+<tr>
+<td>UH</td>
+<td>interjection</td>
+</tr>
+<tr>
+<td></td>
+<td>Goodbye Goody Gosh Wow Jeepers Jee-sus   Hubba Hey Kee-reist Oops amen</td>
+</tr>
+<tr>
+<td></td>
+<td>huh   howdy uh dammit whammo shucks heck anyways whodunnit honey golly</td>
+</tr>
+<tr>
+<td></td>
+<td>man baby diddle hush sonuvabitch …</td>
+</tr>
+<tr>
+<td>VB</td>
+<td>verb,   base form</td>
+</tr>
+<tr>
+<td></td>
+<td>ask assemble assess assign assume atone   attention avoid bake balkanize</td>
+</tr>
+<tr>
+<td></td>
+<td>bank   begin behold believe bend benefit bevel beware bless boil bomb</td>
+</tr>
+<tr>
+<td></td>
+<td>boost brace break bring broil brush   build …</td>
+</tr>
+<tr>
+<td>VBD</td>
+<td>verb,   past tense</td>
+</tr>
+<tr>
+<td></td>
+<td>dipped pleaded swiped regummed soaked   tidied convened halted registered</td>
+</tr>
+<tr>
+<td></td>
+<td>cushioned   exacted snubbed strode aimed adopted belied figgered</td>
+</tr>
+<tr>
+<td></td>
+<td>speculated wore appreciated contemplated   …</td>
+</tr>
+<tr>
+<td>VBG</td>
+<td>verb,   present participle or gerund</td>
+</tr>
+<tr>
+<td></td>
+<td>telegraphing stirring focusing angering   judging stalling lactating</td>
+</tr>
+<tr>
+<td></td>
+<td>hankerin’   alleging veering capping approaching traveling besieging</td>
+</tr>
+<tr>
+<td></td>
+<td>encrypting interrupting erasing wincing   …</td>
+</tr>
+<tr>
+<td>VBN</td>
+<td>verb,   past participle</td>
+</tr>
+<tr>
+<td></td>
+<td>multihulled dilapidated aerosolized   chaired languished panelized used</td>
+</tr>
+<tr>
+<td></td>
+<td>experimented   flourished imitated reunifed factored condensed sheared</td>
+</tr>
+<tr>
+<td></td>
+<td>unsettled primed dubbed desired …</td>
+</tr>
+<tr>
+<td>VBP</td>
+<td>verb,   present tense, not 3rd person singular</td>
+</tr>
+<tr>
+<td></td>
+<td>predominate wrap resort sue twist spill   cure lengthen brush terminate</td>
+</tr>
+<tr>
+<td></td>
+<td>appear   tend stray glisten obtain comprise detest tease attract</td>
+</tr>
+<tr>
+<td></td>
+<td>emphasize mold postpone sever return wag   …</td>
+</tr>
+<tr>
+<td>VBZ</td>
+<td>verb,   present tense, 3rd person singular</td>
+</tr>
+<tr>
+<td></td>
+<td>bases reconstructs marks mixes   displeases seals carps weaves snatches</td>
+</tr>
+<tr>
+<td></td>
+<td>slumps   stretches authorizes smolders pictures emerges stockpiles</td>
+</tr>
+<tr>
+<td></td>
+<td>seduces fizzes uses bolsters slaps   speaks pleads …</td>
+</tr>
+<tr>
+<td>WDT</td>
+<td>WH-determiner</td>
+</tr>
+<tr>
+<td></td>
+<td>that what whatever which whichever</td>
+</tr>
+<tr>
+<td>WP</td>
+<td>WH-pronoun</td>
+</tr>
+<tr>
+<td></td>
+<td>that what whatever whatsoever which who   whom whosoever</td>
+</tr>
+<tr>
+<td>WP$</td>
+<td>WH-pronoun,   possessive</td>
+</tr>
+<tr>
+<td></td>
+<td>whose</td>
+</tr>
+<tr>
+<td>WRB</td>
+<td>Wh-adverb</td>
+</tr>
+<tr>
+<td></td>
+<td>how however whence whenever where   whereby whereever wherein whereof why</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/" title="Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging">https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          
+
+  <div class="followme">
+    <span>Welcome to my other publishing channels</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/nlp/" rel="tag"># nlp</a>
+              <a href="/tags/nltk/" rel="tag"># nltk</a>
+              <a href="/tags/research/" rel="tag"># research</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/09/03/GitHub-codespace-write-code-in-web-browser/" rel="prev" title="GitHub codespaces - write code in web browser">
+                  <i class="fa fa-chevron-left"></i> GitHub codespaces - write code in web browser
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    <div class="pjax">
+  
+
+  
+
+  
+
+    </div>
+</body>
+</html>
