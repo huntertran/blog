@@ -19,10 +19,10 @@ Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end ph�
 
 > Xem các bài viết trong series
 > 
-> *   [Phần 1: Mô hình MVC](https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/)
-> *   [Phần 2: Connect Database và Model Binding](https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
-> *   [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
-> *   [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
+> *   [Phần 1: Mô hình MVC](https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/)
+> *   [Phần 2: Connect Database và Model Binding](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
+> *   [Phần 3: Front end framework nào](https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
+> *   [Phần 4: CRUD và Data Validation](https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
 <!-- TOC -->
 

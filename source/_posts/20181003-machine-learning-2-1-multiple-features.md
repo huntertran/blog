@@ -9,7 +9,7 @@ date: 2018-10-03 05:48:42
 
 Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành `multiple input features`, và những best practices để thực hiện linear regression.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
 
 *   [1. Mutiple Features](#1-mutiple-features)
     

@@ -39,7 +39,7 @@ Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ ite
 # 1. EditorFor Control
 <a id="markdown-editorfor-control" name="editorfor-control"></a>
 
-Trong [bài kỳ trước](https://coding4food.net/2017/04/20/asp-net-mo-rong-editorfor/), bạn đã biết cách xài EditorFor và EditorForModel control.
+Trong [bài kỳ trước](https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/), bạn đã biết cách xài EditorFor và EditorForModel control.
 
 Một điểm hạn chế của 2 thằng này là chúng không tạo ra input cho các class tùy biến của bạn
 

@@ -10,7 +10,7 @@ date: 2018-10-09 05:39:28
 
 Bài 2 phần 2 trong khóa học Machine Learning của giáo sư Andrew Ng. Trong bài này, ta sẽ tìm hiểu một cách thay thế cho thuật toán `Gradient Descent` cùng ưu nhược điểm của nó.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
 
 *   [1. Normal Equation](#1-normal-equation)
     

@@ -18,10 +18,10 @@ Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụn
 
 > Xem các bài viết trong series
 > 
-> * [Phần 1: Mô hình MVC](https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/)
-> * [Phần 2: Connect Database và Model Binding](https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
-> * [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
-> * [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
+> * [Phần 1: Mô hình MVC](https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/)
+> * [Phần 2: Connect Database và Model Binding](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
+> * [Phần 3: Front end framework nào](https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
+> * [Phần 4: CRUD và Data Validation](https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
 <!-- TOC -->
 
@@ -306,4 +306,4 @@ Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET C
 
 Mặc định, các method `Index` trong controller của bạn sẽ là method được gọi khi URL ko có bất kỳ cái gì đằng sau. Ví dụ như HomeController ở trên, nếu bạn chỉ nhập https://localhost:5000/Home/ thì method `Index` sẽ được gọi, View `Index.cshtml` sẽ được hiển thị.
 
-Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở [phần tiếp theo](https://coding4food.net/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/) mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng _chuẩn_ nhé
+Như vậy, bạn đã hiểu khá đủ về mô hình MVC, ở [phần tiếp theo](https://huntertran.com/2018/03/11/asp-net-for-beginer-part-2-connect-database-and-model-binding/) mình sẽ tiếp tục nói về kết nối database và những thứ bạn có thể làm với Model cho đúng _chuẩn_ nhé

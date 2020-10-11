@@ -15,10 +15,10 @@ Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nố
 
 > Xem các bài viết trong series
 > 
-> * [Phần 1: Mô hình MVC](https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/)
-> * [Phần 2: Connect Database và Model Binding](https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
-> * [Phần 3: Front end framework nào](https://coding4food.net/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
-> * [Phần 4: CRUD và Data Validation](https://coding4food.net/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
+> * [Phần 1: Mô hình MVC](https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/)
+> * [Phần 2: Connect Database và Model Binding](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
+> * [Phần 3: Front end framework nào](https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
+> * [Phần 4: CRUD và Data Validation](https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
 <!-- TOC -->
 
@@ -45,7 +45,7 @@ Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nố
 
 CRUD viết tắt cho 4 hành động liên quan tới database là `Create`, `Read`, `Update` và `Delete`
 
-> Bài viết này giả định rằng bạn sử dụng Entity Framework, như đã nói ở [phần 2](https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/), và đã có sẵn code trong ví dụ Bạn có thể clone code tại Github ở [đây](https://github.com/huntertran/mvcbasic/releases/tag/0.2)
+> Bài viết này giả định rằng bạn sử dụng Entity Framework, như đã nói ở [phần 2](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/), và đã có sẵn code trong ví dụ Bạn có thể clone code tại Github ở [đây](https://github.com/huntertran/mvcbasic/releases/tag/0.2)
 
 ## 1.1. DbContext
 <a id="markdown-dbcontext" name="dbcontext"></a>
@@ -259,7 +259,7 @@ namespace mvcbasic.Models
 }
 ```
 
-> Bạn có thể tìm hiểu sâu hơn về cách làm 1 câu error message chung cho tất cả các property cùng loại tại đây: [Error Message – chung mà riêng](https://coding4food.net/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/)
+> Bạn có thể tìm hiểu sâu hơn về cách làm 1 câu error message chung cho tất cả các property cùng loại tại đây: [Error Message – chung mà riêng](https://huntertran.com/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/)
 
 Để check một object có thỏa điều kiện của model ko, bạn có thể dùng `ModelState`. Ví dụ trong method `Create`
 

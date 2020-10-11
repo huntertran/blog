@@ -14,7 +14,7 @@ Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera
 
 Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
 
 *   [1. Các ký hiệu](#1-các-ký-hiệu)
     *   [1.1. Matrix](#11-matrix)

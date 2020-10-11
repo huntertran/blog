@@ -15,8 +15,8 @@ Doing C# long enough, you get yourself familiar with C# concepts and syntax. Tha
 
 You can view other posts in the series here:
 
-1.  [Introduction](https://coding4food.net/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/)
-2.  [Hello World](https://coding4food.net/2019/07/12/java-for-beginner-2-hello-world-in-java/)
+1.  [Introduction](https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/)
+2.  [Hello World](https://huntertran.com/2019/07/12/java-for-beginner-2-hello-world-in-java/)
 3.  Cheats sheet (this post)
 
 Table of Content

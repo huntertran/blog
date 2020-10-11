@@ -18,19 +18,19 @@ date: 2018-09-22 23:43:16
 
 # 1\. Part 1: Introduction
 
-## 1.1. [Introduction](https://coding4food.net/2018/09/14/20180914-machine-learning-introduction/)
+## 1.1. [Introduction](https://huntertran.com/2018/09/14/20180914-machine-learning-introduction/)
 
-## 1.2. [Model and Cost Function](https://coding4food.net/2018/09/22/20180916-ml-model-and-cost-function/)
+## 1.2. [Model and Cost Function](https://huntertran.com/2018/09/22/20180916-ml-model-and-cost-function/)
 
-## 1.3. [Parameter Learning](https://coding4food.net/2018/09/27/machine-learning-parameter-learning/)
+## 1.3. [Parameter Learning](https://huntertran.com/2018/09/27/machine-learning-parameter-learning/)
 
-## 1.4. [Matrices and Vectors](https://coding4food.net/2018/10/01/machine-learning-matrices-and-vectors/)
+## 1.4. [Matrices and Vectors](https://huntertran.com/2018/10/01/machine-learning-matrices-and-vectors/)
 
 # 2\. Part 2: Linear Regression with Multiple Variables
 
-## 2.2. [Multivariate Features](https://coding4food.net/2018/10/03/machine-learning-2-1-multiple-features/)
+## 2.2. [Multivariate Features](https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/)
 
-## 2.3. [Normal Equation](https://coding4food.net/2018/10/09/machine-learning-2-2-normal-equation/)
+## 2.3. [Normal Equation](https://huntertran.com/2018/10/09/machine-learning-2-2-normal-equation/)
 
 ## 2.4. Submitting Programming Assignments
 

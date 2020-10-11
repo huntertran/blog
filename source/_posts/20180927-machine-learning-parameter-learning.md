@@ -13,7 +13,7 @@ Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.
 
 Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://coding4food.net/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
 
 *   [1. Gradient Descent](#1-gradient-descent)
     *   [1.1. Biểu diễn đồ thị](#11-biểu-diễn-đồ-thị)

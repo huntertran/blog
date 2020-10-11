@@ -36,7 +36,7 @@ Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn b�
 
 ![mvc pattern](https://farm1.staticflickr.com/794/39482986360_fe3ba6ff76_o.png)
 
-> Nếu bạn muốn làm quen với mô hình MVC, có thể đọc bài viết [\[ASP.NET for Beginner\] – Part 1 – MVC](https://coding4food.net/2018/03/04/asp-net-for-beginner-part-1-mvc/)
+> Nếu bạn muốn làm quen với mô hình MVC, có thể đọc bài viết [\[ASP.NET for Beginner\] – Part 1 – MVC](https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/)
 
 **'Mô hình' Razor Page**
 

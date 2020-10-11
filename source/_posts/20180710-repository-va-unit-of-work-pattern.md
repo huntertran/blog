@@ -42,7 +42,7 @@ Vì nó chỉ đại diện cho 1 phiên làm việc, trong ASP.NET, mỗi khi c
 
 Thông thường, bạn sẽ kế thừa lại từ `DbContext`, nhét thêm các `DbSet` vào, từ đó mới query các kiểu được
 
-> Bạn có thể tham khảo thêm về cách thiết lập `DbContext` ở [đây](https://coding4food.net/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/), mục 3.2
+> Bạn có thể tham khảo thêm về cách thiết lập `DbContext` ở [đây](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/), mục 3.2
 
 ## 1.1. DbContext Tracking
 <a id="markdown-dbcontext-tracking" name="dbcontext-tracking"></a>
@@ -60,7 +60,7 @@ Vậy tất cả những điều này liên quan gì tới Repository và Unit o
 
 Có cái sơ đồ hay ho sau ![repository diagram](https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png)
 
-Bạn có thể đọc thêm về các services được inject tại bài viết [Dependency Injection trong ASP.NET Core](https://coding4food.net/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/)
+Bạn có thể đọc thêm về các services được inject tại bài viết [Dependency Injection trong ASP.NET Core](https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/)
 
 Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)
 
