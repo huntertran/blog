@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Nếu cảm thấy Visual Studio Community quá nặng nề, nhưng bạn vẫn muốn dev website bằng asp.net, và target .net framework, vậy tại sao bạn không sử dụng VSCode nhỉ? Trớ trêu thay, OmniSharp chưa hỗ trợ">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png">
 <meta property="article:published_time" content="2017-12-10T09:44:25.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:05.999Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content=".net core">
 <meta property="article:tag" content=".net framework">
@@ -235,13 +235,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -264,7 +264,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -304,10 +304,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -319,9 +323,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           [ASP.NET Core 2.0] - dùng VSCode và target .NET Framework<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20171210-asp-net-core-2-0-dung-vscode-va-target-net-framework.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -342,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:05" itemprop="dateModified" datetime="2020-10-11T11:15:05-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -399,35 +400,35 @@
 <p><img src="https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png"></p>
 </blockquote>
 <p>NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01</code></pre>
 
 <h1 id="2-Cac-buoc-cai-dat"><a href="#2-Cac-buoc-cai-dat" class="headerlink" title="2. Các bước cài đặt"></a>2. Các bước cài đặt</h1><h2 id="2-1-Create-project"><a href="#2-1-Create-project" class="headerlink" title="2.1. Create project"></a>2.1. Create project</h2><p>Open VSCode -&gt; Open Folder -&gt; trỏ tới folder sẽ chứa tất cả code của bạn Views &gt; Integrated Terminal rồi gõ </p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc</code></pre>
 
 <p>SDK sẽ tạo ra toàn bộ folders và files cần thiết cho bạn Các lựa chọn khác khi tạo một project: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x">‘dotnet new’ command at docs.microsoft.com</a></p>
 <h2 id="2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1"><a href="#2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1" class="headerlink" title="2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)"></a>2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)</h2><p>Trong thư mục gốc của project mới tạo, mở file <code>YourProjectName.csproj</code> và sửa như sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Project</span> <span class="token attr-name">Sdk</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.NET.Sdk.Web<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TargetFramework</span><span class="token punctuation">></span></span>net471<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TargetFramework</span><span class="token punctuation">></span></span>
-    <span class="token comment">&lt;!--RuntimeIdentifier is based on your local machine. A list of all available values here--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RuntimeIdentifier</span><span class="token punctuation">></span></span>win10-x64<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>RuntimeIdentifier</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;net471&lt;&#x2F;TargetFramework&gt;
+    &lt;!--RuntimeIdentifier is based on your local machine. A list of all available values here--&gt;
+    &lt;RuntimeIdentifier&gt;win10-x64&lt;&#x2F;RuntimeIdentifier&gt;
+  &lt;&#x2F;PropertyGroup&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
-    <span class="token comment">&lt;!--These are nuget package targeting .net framework, dependency is .NET Standard 2.0, which is supported by .net framework 4.7.1--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.AspNetCore<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.AspNetCore.Mvc<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.AspNetCore.Mvc.Razor.ViewCompilation<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token attr-name">PrivateAssets</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>All<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.AspNetCore.StaticFiles<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.BrowserLink<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span>
+  &lt;ItemGroup&gt;
+    &lt;!--These are nuget package targeting .net framework, dependency is .NET Standard 2.0, which is supported by .net framework 4.7.1--&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore.Mvc&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore.Mvc.Razor.ViewCompilation&quot; Version&#x3D;&quot;2.0.1&quot; PrivateAssets&#x3D;&quot;All&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore.StaticFiles&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.BrowserLink&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+  &lt;&#x2F;ItemGroup&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DotNetCliToolReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.CodeGeneration.Tools<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span>
+  &lt;ItemGroup&gt;
+    &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+  &lt;&#x2F;ItemGroup&gt;
  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Project</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;Project&gt;</code></pre>
 
 <h2 id="2-3-Compile-Run-va-Debug"><a href="#2-3-Compile-Run-va-Debug" class="headerlink" title="2.3. Compile, Run và Debug"></a>2.3. Compile, Run và Debug</h2><ol>
 <li>Debug &gt; Settings</li>
@@ -443,21 +444,21 @@
 <ol start="3">
 <li>Tạo một file mới cũng trong thư mục đó, với tên là <code>tasks.json</code> với đoạn code sau</li>
 </ol>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
-    <span class="token property">"tasks"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">&#123;</span>
-            <span class="token property">"taskName"</span><span class="token operator">:</span> <span class="token string">"build"</span><span class="token punctuation">,</span>
-            <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"dotnet"</span><span class="token punctuation">,</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"process"</span><span class="token punctuation">,</span>
-            <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-                <span class="token string">"build"</span><span class="token punctuation">,</span>
-                <span class="token string">"$&#123;workspaceFolder&#125;/StudyAspCore.csproj"</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token property">"problemMatcher"</span><span class="token operator">:</span> <span class="token string">"$msCompile"</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">&#123;
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        &#123;
+            &quot;taskName&quot;: &quot;build&quot;,
+            &quot;command&quot;: &quot;dotnet&quot;,
+            &quot;type&quot;: &quot;process&quot;,
+            &quot;args&quot;: [
+                &quot;build&quot;,
+                &quot;$&#123;workspaceFolder&#125;&#x2F;StudyAspCore.csproj&quot;
+            ],
+            &quot;problemMatcher&quot;: &quot;$msCompile&quot;
+        &#125;
+    ]
+&#125;</code></pre>
 
 <h2 id="2-4-Run-and-Debug"><a href="#2-4-Run-and-Debug" class="headerlink" title="2.4. Run and Debug"></a>2.4. Run and Debug</h2><p>To run the application</p>
 <p><img src="https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png"></p>
@@ -554,9 +555,10 @@
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -602,7 +604,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -611,8 +613,11 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -654,6 +659,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 

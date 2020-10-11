@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="NLTK has a function called regexpparser to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.">
@@ -32,7 +32,7 @@
 <meta property="og:description" content="NLTK has a function called regexpparser to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-09T01:26:02.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:06.003Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="nlp">
@@ -230,13 +230,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -259,7 +259,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -299,10 +299,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -314,9 +318,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20201008-Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -337,7 +338,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:06" itemprop="dateModified" datetime="2020-10-11T11:15:06-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -385,12 +386,12 @@
 <p>This action simply <em><strong>tag</strong></em> your tokenized words with the word type, for example, Verb, noun, adjective, etc.</p>
 <h2 id="1-1-The-tags-and-explanations"><a href="#1-1-The-tags-and-explanations" class="headerlink" title="1.1. The tags and explanations"></a>1.1. The tags and explanations</h2><p><a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a></p>
 <p>The full list of tags can be shown when running the command</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">nltk.help.upenn_tagset()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">nltk.help.upenn_tagset()</code></pre>
 
 <p>For the full list of explanations, scroll to the bottom of this post.</p>
 <h2 id="1-2-Tagging-them"><a href="#1-2-Tagging-them" class="headerlink" title="1.2. Tagging them"></a>1.2. Tagging them</h2><p><a id="markdown-tagging-them" name="tagging-them"></a></p>
 <p>For example, when you have the sentence:</p>
-<pre class="line-numbers language-none"><code class="language-none">The quick brown fox jumps over the lazy dog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">The quick brown fox jumps over the lazy dog</code></pre>
 
 <p>The process should be something like this</p>
 <pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
@@ -398,7 +399,7 @@ tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
 tags &#x3D; nltk.pos_tag(tokens)
 
 # result of &#39;tags&#39;
-# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]</code></pre>
 
 <h1 id="2-Regular-Expression-regex-grammar"><a href="#2-Regular-Expression-regex-grammar" class="headerlink" title="2. Regular Expression (regex) grammar"></a>2. Regular Expression (regex) grammar</h1><p><a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a></p>
 <p>The regular expression with nltk tokens is quite different than normal text. The grammar treats each token as a string of text, and apply the regex pattern on that string with matched to the position of the token in the sentence.</p>
@@ -422,7 +423,7 @@ result &#x3D; parser.parse(tags)
 # (&#39;over&#39;, &#39;IN&#39;),
 # (&#39;the&#39;, &#39;DT&#39;),
 # (&#39;lazy&#39;, &#39;JJ&#39;),
-# (&#39;dog&#39;, &#39;NN&#39;)])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# (&#39;dog&#39;, &#39;NN&#39;)])</code></pre>
 
 <h2 id="2-2-Skip-some-tags"><a href="#2-2-Skip-some-tags" class="headerlink" title="2.2. Skip some tags"></a>2.2. Skip some tags</h2><p><a id="markdown-skip-some-tags" name="skip-some-tags"></a></p>
 <p>We will skip all tags between <code>The</code> and <code>fox</code> (between DT and NN tags)</p>
@@ -443,7 +444,7 @@ result &#x3D; parser.parse(tags)
 # (&#39;over&#39;, &#39;IN&#39;), 
 # (&#39;the&#39;, &#39;DT&#39;), 
 # (&#39;lazy&#39;, &#39;JJ&#39;), 
-# (&#39;dog&#39;, &#39;NN&#39;)])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# (&#39;dog&#39;, &#39;NN&#39;)])</code></pre>
 
 <p>Explanation:</p>
 <p><code>&lt;.*&gt;</code> means match every tag. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.</p>
@@ -472,17 +473,17 @@ result &#x3D; parser.parse(tags)
 # (&#39;the&#39;, &#39;DT&#39;), 
 # (&#39;lazy&#39;, &#39;JJ&#39;), 
 # Tree(&#39;exact&#39;, 
-# [(&#39;dog&#39;, &#39;NN&#39;)])])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# [(&#39;dog&#39;, &#39;NN&#39;)])])</code></pre>
 
 <h1 id="3-Match-multiple-grammars"><a href="#3-Match-multiple-grammars" class="headerlink" title="3. Match multiple grammars"></a>3. Match multiple grammars</h1><p><a id="markdown-match-multiple-grammars" name="match-multiple-grammars"></a></p>
 <p>To use multiple grammars to scan your text, simply combine them with new line character <code>\n</code></p>
 <p>For example:</p>
 <p>Single pattern grammar</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammar <span class="token operator">=</span> <span class="token string">'exact: &#123;&lt;N.*>&#125;'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammar &#x3D; &#39;exact: &#123;&lt;N.*&gt;&#125;&#39;</code></pre>
 
 <p>Multiple patterns grammar</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammars <span class="token operator">=</span> 'n_tags<span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token operator">&lt;</span>N<span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">></span><span class="token punctuation">&#125;</span>
-            skip_tags<span class="token punctuation">:</span> exact<span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token operator">&lt;</span>DT<span class="token operator">></span><span class="token operator">&lt;</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token operator">></span><span class="token operator">*</span><span class="token operator">&lt;</span>VBZ<span class="token operator">></span><span class="token punctuation">&#125;</span>'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammars &#x3D; &#39;n_tags: &#123;&lt;N.*&gt;&#125;
+            skip_tags: exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#39;</code></pre>
 
 <h1 id="4-Full-list-of-tags"><a href="#4-Full-list-of-tags" class="headerlink" title="4. Full list of tags"></a>4. Full list of tags</h1><p><a id="markdown-full-list-of-tags" name="full-list-of-tags"></a></p>
 <p>Here is the full list of tags to save you some time:</p>
@@ -1062,9 +1063,10 @@ result &#x3D; parser.parse(tags)
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -1110,7 +1112,7 @@ result &#x3D; parser.parse(tags)
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -1119,8 +1121,11 @@ result &#x3D; parser.parse(tags)
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -1162,6 +1167,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 

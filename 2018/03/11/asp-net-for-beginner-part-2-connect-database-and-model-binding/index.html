@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Ở phần trước bạn đã có một khái niệm cơ bản về mô hình MVC. Dựa vào đó, chúng ta sẽ tiếp tục tìm hiểu thêm về database những vấn đề liên quan nhé.">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4782/40705936652_1e3d6b551d_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4779/25877724937_7bfed1c8d7_o.png">
 <meta property="article:published_time" content="2018-03-11T16:11:47.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:06.003Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="core">
 <meta property="article:tag" content="database">
@@ -234,13 +234,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -263,7 +263,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -303,10 +303,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -318,9 +322,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           [ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180311-asp-net-for-beginner-part-2-connect-database-and-model-binding.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -341,7 +342,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:06" itemprop="dateModified" datetime="2020-10-11T11:15:06-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -428,15 +429,15 @@
 <p>Mở project mvcbasic bằng vscode</p>
 <p>Lần lượt gõ các lệnh sau trong terminal</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 
 <p>Sau đó, mở file mvcbasic.csproj và thêm dòng sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DotNetCliToolReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.EntityFrameworkCore.Tools.DotNet<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ItemGroup&gt;
+  &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version&#x3D;&quot;2.0.0&quot; &#x2F;&gt;
+&lt;&#x2F;ItemGroup&gt;</code></pre>
 
 <p>tiếp tục gõ trong terminal</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet restore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet restore</code></pre>
 
 <h1 id="3-Tao-Model-va-Database"><a href="#3-Tao-Model-va-Database" class="headerlink" title="3. Tạo Model và Database"></a>3. Tạo Model và Database</h1><p><a id="markdown-t%E1%BA%A1o-model-v%C3%A0-database" name="t%E1%BA%A1o-model-v%C3%A0-database"></a></p>
 <p>Có 2 cách để bắt đầu làm việc với database trong asp.net core là Code first và Database first.</p>
@@ -444,38 +445,38 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design<span aria-hi
 <p>Bạn có thể tham khảo thêm ở đây: <a target="_blank" rel="noopener" href="https://coding4food.net/2017/01/06/asp-net-mvc-code-first-vs-database-first/">Code first vs Database first</a></p>
 <h2 id="3-1-Tao-model-Phone"><a href="#3-1-Tao-model-Phone" class="headerlink" title="3.1. Tạo model Phone"></a>3.1. Tạo model Phone</h2><p><a id="markdown-t%E1%BA%A1o-model-phone" name="t%E1%BA%A1o-model-phone"></a></p>
 <p>chuột phải vào folder Models &gt; new file &gt; Phone.cs</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">namespace</span> <span class="token namespace">mvcbasic<span class="token punctuation">.</span>Models</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Phone</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Id <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-        <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace mvcbasic.Models
+&#123;
+    public class Phone
+    &#123;
+        public int Id &#123; get; set; &#125;
+        public string Name &#123; get; set; &#125;
+    &#125;
+&#125;</code></pre>
 
 <h2 id="3-2-Tao-Database-Context"><a href="#3-2-Tao-Database-Context" class="headerlink" title="3.2. Tạo Database Context"></a>3.2. Tạo Database Context</h2><p><a id="markdown-t%E1%BA%A1o-database-context" name="t%E1%BA%A1o-database-context"></a></p>
 <p>Database Context có thể hiểu như một công cụ cho phép ứng dụng của bạn kết nối tới Database và thực hiện các tác vụ thêm xóa sửa.</p>
 <p>Tạo 1 folder mới ở thư mục gốc với tên ‘Data’</p>
 <p>Chuột phải vào folder Data &gt; new file &gt; MvcBasicDbContext.cs</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">namespace</span> <span class="token namespace">mvcbasic<span class="token punctuation">.</span>Data</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">using</span> <span class="token namespace">Models</span><span class="token punctuation">;</span>
-    <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>EntityFrameworkCore</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace mvcbasic.Data
+&#123;
+    using Models;
+    using Microsoft.EntityFrameworkCore;
  
-    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MvcBasicDbContext</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">DbContext</span></span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token keyword">public</span> <span class="token function">MvcBasicDbContext</span><span class="token punctuation">(</span><span class="token class-name">DbContextOptions<span class="token punctuation">&lt;</span>MvcBasicDbContext<span class="token punctuation">></span></span> options<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-        <span class="token punctuation">&#125;</span>
+    public class MvcBasicDbContext : DbContext
+    &#123;
+        public MvcBasicDbContext(DbContextOptions&lt;MvcBasicDbContext&gt; options) : base(options)
+        &#123;
+        &#125;
  
-        <span class="token keyword">public</span> <span class="token return-type class-name">DbSet<span class="token punctuation">&lt;</span>Phone<span class="token punctuation">></span></span> Phones <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        public DbSet&lt;Phone&gt; Phones &#123; get; set; &#125;
+    &#125;
+&#125;</code></pre>
 
 <h2 id="3-3-Cai-dat-Connection-String"><a href="#3-3-Cai-dat-Connection-String" class="headerlink" title="3.3. Cài đặt Connection String"></a>3.3. Cài đặt Connection String</h2><p><a id="markdown-c%C3%A0i-%C4%91%E1%BA%B7t-connection-string" name="c%C3%A0i-%C4%91%E1%BA%B7t-connection-string"></a></p>
 <p>Để kết nối tới database, thì Entity Framework sẽ cần có các thông tin như username, password, tên database, server đang host cái database này. Tất cả thông số đó đều gộp chung lại thành 1 đoạn string, và giang hồ gọi nó là <code>connection string</code></p>
 <p>Mở file appsettings.json và thêm vào đoạn json sau</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"ConnectionStrings"</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token property">"PhoneDbConnectionString"</span><span class="token operator">:</span> <span class="token string">"Server=(localdb)\\\\mssqllocaldb;Database=PhoneDb;Trusted\_Connection=True;"</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">&quot;ConnectionStrings&quot; : &#123; &quot;PhoneDbConnectionString&quot;: &quot;Server&#x3D;(localdb)\\\\mssqllocaldb;Database&#x3D;PhoneDb;Trusted\_Connection&#x3D;True;&quot; &#125;</code></pre>
 
 <blockquote>
 <p>Đoạn connection string trên có ý nghĩa như sau Server: LocalDb (là một dạng database local có trên các phiên bản mới của SQL Server) Database: PhoneDb Connection tới database dùng Windows Authentication</p>
@@ -483,21 +484,21 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design<span aria-hi
 <p>Bạn có thể sẽ phải config lại đoạn connection string này cho đúng với môi trường làm việc của bạn</p>
 <h2 id="3-4-Cai-dat-ket-noi"><a href="#3-4-Cai-dat-ket-noi" class="headerlink" title="3.4. Cài đặt kết nối"></a>3.4. Cài đặt kết nối</h2><p><a id="markdown-c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i" name="c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i"></a></p>
 <p>Mở file Startup.cs, tìm method <code>ConfigureServices</code> và thêm vào dòng sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddDbContext</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>MvcBasicDbContext<span class="token punctuation">></span></span></span><span class="token punctuation">(</span>options <span class="token operator">=></span> options<span class="token punctuation">.</span><span class="token function">UseSqlServer</span><span class="token punctuation">(</span>Configuration<span class="token punctuation">.</span><span class="token function">GetConnectionString</span><span class="token punctuation">(</span><span class="token string">"PhoneDbConnectionString"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">services.AddDbContext&lt;MvcBasicDbContext&gt;(options &#x3D;&gt; options.UseSqlServer(Configuration.GetConnectionString(&quot;PhoneDbConnectionString&quot;)));</code></pre>
 
 <p>và nhớ add thêm 2 dòng using</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>EntityFrameworkCore</span><span class="token punctuation">;</span>
-<span class="token keyword">using</span> <span class="token namespace">mvcbasic<span class="token punctuation">.</span>Data</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">using Microsoft.EntityFrameworkCore;
+using mvcbasic.Data;</code></pre>
 
 <h2 id="3-5-Tao-Migration-dau-tien"><a href="#3-5-Tao-Migration-dau-tien" class="headerlink" title="3.5. Tạo Migration đầu tiên"></a>3.5. Tạo Migration đầu tiên</h2><p><a id="markdown-t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn" name="t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn"></a></p>
 <p>Sau khi tất cả các thao tác chuẩn bị đã hoàn tất, đã tới lúc bạn tạo migration đầu tiên của mình</p>
 <p>Trong terminal, gõ</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef migrations add InitialCreate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef migrations add InitialCreate</code></pre>
 
 <p>VSCode sẽ tự động tạo ra một thư mục tên Migrations, và thêm cơ số file vào đấy</p>
 <p><a target="_blank" rel="noopener" href="https://farm5.staticflickr.com/4784/40748059781_d2b5740095_o.png">new files</a></p>
 <p>Tiếp tục, gõ</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef database update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef database update</code></pre>
 
 <p>thì những migration này sẽ được thực thi, và database sẽ được tạo ra</p>
 <p><img src="https://farm5.staticflickr.com/4774/38937566770_e203e7c169_o.png" alt="database created"></p>
@@ -530,38 +531,38 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design<span aria-hi
 <p>Để có thể tạo controller, bạn sẽ cần thêm một số tool nữa</p>
 <p>Mở mvcbasic.csproj và thêm các dòng sau</p>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">...
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.CodeGeneration.Design<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+&lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
 ...
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DotNetCliToolReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.CodeGeneration.Tools<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
+...</code></pre>
 
 <p>Tổng quan, file csproj sẽ giống như sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Project</span> <span class="token attr-name">Sdk</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.NET.Sdk.Web<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PropertyGroup</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TargetFramework</span><span class="token punctuation">></span></span>netcoreapp2.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TargetFramework</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PropertyGroup</span><span class="token punctuation">></span></span>
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;netcoreapp2.0&lt;&#x2F;TargetFramework&gt;
+  &lt;&#x2F;PropertyGroup&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.AspNetCore.All<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.5<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.EntityFrameworkCore.SqlServer<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.EntityFrameworkCore.SqlServer.Design<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.1.5<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PackageReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.CodeGeneration.Design<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span>
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore.All&quot; Version&#x3D;&quot;2.0.5&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.SqlServer&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.SqlServer.Design&quot; Version&#x3D;&quot;1.1.5&quot; &#x2F;&gt;
+    &lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
+  &lt;&#x2F;ItemGroup&gt;
  
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemGroup</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DotNetCliToolReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.EntityFrameworkCore.Tools.DotNet<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DotNetCliToolReference</span> <span class="token attr-name">Include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Microsoft.VisualStudio.Web.CodeGeneration.Tools<span class="token punctuation">"</span></span> <span class="token attr-name">Version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.0.2<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ItemGroup</span><span class="token punctuation">></span></span>
+  &lt;ItemGroup&gt;
+    &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
+    &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
+  &lt;&#x2F;ItemGroup&gt;
  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Project</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;Project&gt;</code></pre>
 
 <h2 id="4-3-Scaffolding"><a href="#4-3-Scaffolding" class="headerlink" title="4.3. Scaffolding"></a>4.3. Scaffolding</h2><p><a id="markdown-scaffolding" name="scaffolding"></a></p>
 <p>Mở terminal, và gõ lệnh sau</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet restore
 dotnet build
  
-dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBasicDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBasicDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries</code></pre>
 
 <p>Nhìn vào câu lệnh trên, chắc bạn cũng sẽ đoán được nó làm gì: “Này dotnet, tạo cho tao 1 controller mới tên là <code>PhoneController</code>, dùng model là <code>Phone</code>, Data Context là <code>MvcBasicDbContext</code>, trong folder tên là <code>Controllers</code>, dùng default layout, à có scripts đi kèm nhá”</p>
 <p>2 câu lệnh đầu tiên giúp bạn thực sự cài nuget, và build project một phát để đảm bảo ko có lỗi phát sinh, và clear các file tạm ko còn cần thiết</p>
@@ -572,66 +573,66 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
 <h1 id="5-Model-Binding"><a href="#5-Model-Binding" class="headerlink" title="5. Model Binding"></a>5. Model Binding</h1><p><a id="markdown-model-binding" name="model-binding"></a></p>
 <p>Mở file PhoneController ra, bạn sẽ thấy có sẵn code trong đấy rồi, tuy ko đẹp lắm, nhưng nhìn chung là nó chạy tốt</p>
 <p>Hãy nhìn vào method Details</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// GET: Phone/Details/5</span>
-<span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span>IActionResult<span class="token punctuation">></span></span> <span class="token function">Details</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span><span class="token punctuation">?</span></span> id<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>id <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">NotFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; GET: Phone&#x2F;Details&#x2F;5
+public async Task&lt;IActionResult&gt; Details(int? id)
+&#123;
+    if (id &#x3D;&#x3D; null)
+    &#123;
+        return NotFound();
+    &#125;
  
-    <span class="token class-name"><span class="token keyword">var</span></span> phone <span class="token operator">=</span> <span class="token keyword">await</span> _context<span class="token punctuation">.</span>Phones
-                              <span class="token punctuation">.</span><span class="token function">SingleOrDefaultAsync</span><span class="token punctuation">(</span>m <span class="token operator">=></span> m<span class="token punctuation">.</span>Id <span class="token operator">==</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>phone <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">NotFound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+    var phone &#x3D; await _context.Phones
+                              .SingleOrDefaultAsync(m &#x3D;&gt; m.Id &#x3D;&#x3D; id);
+    if (phone &#x3D;&#x3D; null)
+    &#123;
+        return NotFound();
+    &#125;
  
-    <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    return View(phone);
+&#125;</code></pre>
 
 <p>Method này nhận một tham số là nullable int có tên là id, khi bạn gọi tới url Phone/Details/5 (như dòng comment ở bên trên), thì số 5 đó sẽ được hiểu là Id. Đó chính là model binding</p>
 <p>Tiếp tục, nhìn vào class Create có attribute <code>[HttpPost]</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// POST: Phone/Create</span>
-<span class="token comment">// To protect from overposting attacks, please enable the specific properties you want to bind to, for </span>
-<span class="token comment">// more details see http://go.microsoft.com/fwlink/?LinkId=317598.</span>
-<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
-<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">ValidateAntiForgeryToken</span></span><span class="token punctuation">]</span>
-<span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span>IActionResult<span class="token punctuation">></span></span> <span class="token function">Create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Bind</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"Id,Name"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span> <span class="token class-name">Phone</span> phone<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>ModelState<span class="token punctuation">.</span>IsValid<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        _context<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">await</span> _context<span class="token punctuation">.</span><span class="token function">SaveChangesAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token function">RedirectToAction</span><span class="token punctuation">(</span><span class="token keyword">nameof</span><span class="token punctuation">(</span>Index<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; POST: Phone&#x2F;Create
+&#x2F;&#x2F; To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+&#x2F;&#x2F; more details see http:&#x2F;&#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkId&#x3D;317598.
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone phone)
+&#123;
+    if (ModelState.IsValid)
+    &#123;
+        _context.Add(phone);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    &#125;
+    return View(phone);
+&#125;</code></pre>
 
 <p>Model binding còn vi diệu ở chỗ, nếu bạn dùng hẳn 1 class làm parameter, thì ASP.NET sẽ tự hiểu các property trong class đó, và gắn đúng từng giá trị một</p>
 <p>Bạn có thể xóa <code>[Bind(&quot;Id,Name&quot;)]</code> đi và code vẫn chạy tốt, nhưng như Microsoft đã cảnh báo, để bảo vệ bạn khỏi chuyện orver posting attack, thì bạn phải chỉ định luôn là property nào sẽ được gắn</p>
 <p>Method này tương ứng với Views &gt; Phone &gt; Create.cshtml</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!--dòng 17--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;!--dòng 17--&gt;
+&lt;input asp-for&#x3D;&quot;Name&quot; class&#x3D;&quot;form-control&quot; &#x2F;&gt;</code></pre>
 
 <p>từ khóa <code>asp-for</code> thông báo rằng Name là property sẽ được truyền lên server, và server sẽ “gắn” nó vào model phone của method Create</p>
 <blockquote>
 <p>Tại sao lại ko có Id? Vì Id mặc định được coi như Key của bảng Phone, và key thì ko cần phải có khi tạo mới, vì database sẽ tự sinh ra nó</p>
 </blockquote>
 <p>Tiếp tục, mở Views &gt; Phone &gt; Index.cshtml bạn sẽ thấy đoạn code sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@<span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> item <span class="token keyword">in</span> Model<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token operator">&lt;</span>tr<span class="token operator">></span>
-        <span class="token operator">&lt;</span>td<span class="token operator">></span>
-            @Html<span class="token punctuation">.</span><span class="token function">DisplayFor</span><span class="token punctuation">(</span>modelItem <span class="token operator">=></span> item<span class="token punctuation">.</span>Name<span class="token punctuation">)</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
-        <span class="token operator">&lt;</span>td<span class="token operator">></span>
-            <span class="token operator">&lt;</span>a asp<span class="token operator">-</span>action<span class="token operator">=</span><span class="token string">"Edit"</span> asp<span class="token operator">-</span>route<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"@item.Id"</span><span class="token operator">></span>Edit<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span> <span class="token operator">|</span>
-            <span class="token operator">&lt;</span>a asp<span class="token operator">-</span>action<span class="token operator">=</span><span class="token string">"Details"</span> asp<span class="token operator">-</span>route<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"@item.Id"</span><span class="token operator">></span>Details<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span> <span class="token operator">|</span>
-            <span class="token operator">&lt;</span>a asp<span class="token operator">-</span>action<span class="token operator">=</span><span class="token string">"Delete"</span> asp<span class="token operator">-</span>route<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"@item.Id"</span><span class="token operator">></span>Delete<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@foreach (var item in Model)
+&#123;
+    &lt;tr&gt;
+        &lt;td&gt;
+            @Html.DisplayFor(modelItem &#x3D;&gt; item.Name)
+        &lt;&#x2F;td&gt;
+        &lt;td&gt;
+            &lt;a asp-action&#x3D;&quot;Edit&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Edit&lt;&#x2F;a&gt; |
+            &lt;a asp-action&#x3D;&quot;Details&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Details&lt;&#x2F;a&gt; |
+            &lt;a asp-action&#x3D;&quot;Delete&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Delete&lt;&#x2F;a&gt;
+        &lt;&#x2F;td&gt;
+    &lt;&#x2F;tr&gt;
+&#125;</code></pre>
 
 <blockquote>
 <p>ô lạ chưa, có foreach trong html Ngôn ngữ này gọi là Razor, cho phép bạn thực thi một số đoạn code C# trong html, giúp cho việc render ra các tag html như mong muốn.</p>
@@ -734,9 +735,10 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -782,7 +784,7 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -791,8 +793,11 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -834,6 +839,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 

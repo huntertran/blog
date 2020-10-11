@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại">
@@ -32,7 +32,7 @@
 <meta property="og:description" content="Trong phần 3 này chúng ta sẽ tìm hiểu về các framework front end phổ biến hiện tại">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-03-18T10:46:24.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:06.003Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="css">
 <meta property="article:tag" content="framework">
@@ -231,13 +231,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -260,7 +260,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -300,10 +300,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -315,9 +319,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           [ASP.NET for Beginner] - Part 3 - Front end framework nào?<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180318-asp-net-for-beginner-part-3-front-end-framework-nao.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -338,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:06" itemprop="dateModified" datetime="2020-10-11T11:15:06-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -463,11 +464,11 @@
 <h2 id="2-1-jQuery"><a href="#2-1-jQuery" class="headerlink" title="2.1. jQuery"></a>2.1. jQuery</h2><p><a id="markdown-jquery" name="jquery"></a></p>
 <p>jQuery giống như 1 thư viện “phải có” vậy. Nó giúp cho việc sử dụng cả tá css framework khác trở nên đơn giản và hiệu quả.</p>
 <p>Ví dụ: Để đổi đoạn value của thẻ input có id là “test” thành chữ khác</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// Before jquery</span>
-document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"Test Value"</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">&#x2F;&#x2F; Before jquery
+document.getElementById(&quot;test&quot;).value &#x3D; &quot;Test Value&quot;;
 
-<span class="token comment">// After jquery</span>
-<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Test Value"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#x2F;&#x2F; After jquery
+$(&quot;#test&quot;).val(&quot;Test Value&quot;);</code></pre>
 
 <p>Vì sử dụng các khái niệm của CSS Selector, bạn có thể chọn các html element bằng jQuery y như khi bạn code css cho nó vậy.</p>
 <h2 id="2-2-Xu-huong"><a href="#2-2-Xu-huong" class="headerlink" title="2.2. Xu hướng"></a>2.2. Xu hướng</h2><p><a id="markdown-xu-h%C6%B0%E1%BB%9Bng" name="xu-h%C6%B0%E1%BB%9Bng"></a></p>
@@ -485,7 +486,7 @@ document<span class="token punctuation">.</span><span class="token function">get
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">CSS: SCSS
 CSS Framework: Materializecss
 Javascript: jQuery
-HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+HTML: HTML5</code></pre>
 
 <p>Còn bạn, bạn chọn ngôn ngữ nào?</p>
 
@@ -580,9 +581,10 @@ HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -628,7 +630,7 @@ HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -637,8 +639,11 @@ HTML: HTML5<span aria-hidden="true" class="line-numbers-rows"><span></span><span
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -680,6 +685,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 

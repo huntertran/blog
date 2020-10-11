@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="MVC, mờ vờ cờ, model-view-controller, ai ai cũng đã nghe qua, nhưng bạn mới bắt đầu học nó, thì làm sao cho đúng? Bài viết này đưa ra một số khái niệm cơ bản, và cách áp dụng chúng trong code thực tế.">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png">
 <meta property="og:image" content="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png">
 <meta property="article:published_time" content="2018-03-04T12:41:16.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:06.003Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="beginner">
 <meta property="article:tag" content="mvc">
@@ -232,13 +232,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -261,7 +261,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -301,10 +301,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -316,9 +320,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           [ASP.NET for Beginner] - Part 1 - MVC<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180304-asp-net-for-beginner-part-1-mvc.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -339,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:06" itemprop="dateModified" datetime="2020-10-11T11:15:06-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -414,23 +415,23 @@
 </blockquote>
 <h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p><a id="markdown-model" name="model"></a></p>
 <p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// A basic model</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Age <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Address <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; A basic model
+public class User
+&#123;
+    public string Name &#123; get; set; &#125;
+    public int Age &#123; get; set; &#125;
+    public string Address &#123; get; set; &#125;
+&#125;</code></pre>
 
 <h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p><a id="markdown-view" name="view"></a></p>
 <p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có/không) là những thứ thường thấy trên View.</p>
 <p>Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">@model User
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+&lt;div&gt;
     @Model.Name
     @Model.Age
     @Model.Address
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;&#x2F;div&gt;</code></pre>
 
 <h2 id="1-3-Controller"><a href="#1-3-Controller" class="headerlink" title="1.3. Controller"></a>1.3. Controller</h2><p><a id="markdown-controller" name="controller"></a></p>
 <p>Controller là thứ quyết định View nào sẽ được hiển thị khi user nhập một URL. Nó cũng sẽ là thứ nhận data từ user khi họ điền một form, click một nút, vân vân và vân vân</p>
@@ -443,126 +444,126 @@
 <h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><p><a id="markdown-tri%E1%BB%83n-khai" name="tri%E1%BB%83n-khai"></a></p>
 <h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch" name="t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch"></a></p>
 <p><strong>Model</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhone</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token comment">// To identify which phones</span>
-    <span class="token comment">// Dùng để xác định cái điện thoại nào</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> Id <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhone
+&#123;
+    &#x2F;&#x2F; To identify which phones
+    &#x2F;&#x2F; Dùng để xác định cái điện thoại nào
+    public int Id &#123; get; set; &#125;
  
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> Name <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    public string Name &#123; get; set; &#125;
+&#125;</code></pre>
 
 <p><strong>Controller</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Get all phones from database</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhoneController
+&#123;
+    public void List()
+    &#123;
+        &#x2F;&#x2F; Get all phones from database
+        var allPhones &#x3D; database.MobilePhones;
  
-        <span class="token comment">// Return the View that render a list of phones</span>
-        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        &#x2F;&#x2F; Return the View that render a list of phones
+        return View(allPhones)
+    &#125;
+&#125;</code></pre>
 
 <p><strong>View</strong></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MobilePhone</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
-        <span class="token comment">&lt;!--Table headers--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-        <span class="token comment">&lt;!--Table body--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model List&lt;MobilePhone&gt;
+&lt;div&gt;
+    &lt;table&gt;
+        &lt;!--Table headers--&gt;
+        &lt;th&gt;
+            &lt;td&gt;Id&lt;&#x2F;td&gt;
+            &lt;td&gt;Name&lt;&#x2F;td&gt;
+        &lt;&#x2F;th&gt;
+        &lt;!--Table body--&gt;
+        &lt;tbody&gt;
             @foreach(var phone in Model)
             &#123;
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>@phone.Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+                &lt;tr&gt;
+                    &lt;td&gt;@phone.Id&lt;&#x2F;td&gt;
+                    &lt;td&gt;@phone.Name&lt;&#x2F;td&gt;
+                &lt;&#x2F;tr&gt;
             &#125;
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        &lt;&#x2F;tbody&gt;
+    &lt;&#x2F;table&gt;
+&lt;&#x2F;div&gt;</code></pre>
 
 <p>ASP.NET tự động hiểu class <code>MobilePhoneController</code> sẽ có đường dẫn là <code>/MobilePhone</code></p>
 <p>Khi người dùng trỏ tới URL sau:</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">yourdomain&#x2F;MobilePhone&#x2F;List<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">yourdomain&#x2F;MobilePhone&#x2F;List</code></pre>
 
 <p>thì bằng một cách thần kỳ nào đó, asp.net đã gọi method <code>List</code> trong controller này, và chạy những đoạn code trong đó, trả về một cái bảng danh sách các điện thoại hiển thị lên cho người dùng</p>
 <h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-th%C3%AAm" name="t%C3%ADnh-n%C4%83ng-th%C3%AAm"></a></p>
 <p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
 <p><strong>Controller</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MobilePhoneController</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">List</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Get all phones from database</span>
-        <span class="token comment">// Lấy tất cả điện thoại từ database</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> allPhones <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhoneController
+&#123;
+    public void List()
+    &#123;
+        &#x2F;&#x2F; Get all phones from database
+        &#x2F;&#x2F; Lấy tất cả điện thoại từ database
+        var allPhones &#x3D; database.MobilePhones;
  
-        <span class="token comment">// Return the View that render a list of phones</span>
-        <span class="token comment">// Trả về view chứa thông tin tất cả điện thoại</span>
-        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>allPhones<span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span>
+        &#x2F;&#x2F; Return the View that render a list of phones
+        &#x2F;&#x2F; Trả về view chứa thông tin tất cả điện thoại
+        return View(allPhones)
+    &#125;
  
-    <span class="token comment">// Render the Add form</span>
-    <span class="token comment">// Hiển thị cái form Add</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+    &#x2F;&#x2F; Render the Add form
+    &#x2F;&#x2F; Hiển thị cái form Add
+    public void Add()
+    &#123;
+        return View();
+    &#125;
  
-    <span class="token comment">// Recieved the new phone input by user</span>
-    <span class="token comment">// Nhận data được nhập vào từ người dùng</span>
-    <span class="token punctuation">[</span>HttpPost<span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Add</span><span class="token punctuation">(</span><span class="token class-name">MobilePhone</span> newPhone<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token class-name"><span class="token keyword">var</span></span> existedPhone <span class="token operator">=</span> database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">.</span>Id<span class="token punctuation">)</span>
+    &#x2F;&#x2F; Recieved the new phone input by user
+    &#x2F;&#x2F; Nhận data được nhập vào từ người dùng
+    [HttpPost]
+    public void Add(MobilePhone newPhone)
+    &#123;
+        var existedPhone &#x3D; database.MobilePhones.Find(newPhone.Id)
  
-        <span class="token keyword">if</span><span class="token punctuation">(</span>existedPhone <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-            <span class="token comment">// Phone is existed, return the Add View</span>
-            <span class="token comment">// Điện thoại với Id này đã tồn tại, trả về cái view Add</span>
-            <span class="token keyword">return</span> <span class="token function">View</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
+        if(existedPhone !&#x3D; null)
+        &#123;
+            &#x2F;&#x2F; Phone is existed, return the Add View
+            &#x2F;&#x2F; Điện thoại với Id này đã tồn tại, trả về cái view Add
+            return View(newPhone);
+        &#125;
  
-        <span class="token comment">// Add new data to database</span>
-        database<span class="token punctuation">.</span>MobilePhones<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>newPhone<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        &#x2F;&#x2F; Add new data to database
+        database.MobilePhones.Add(newPhone);
  
-        <span class="token comment">// Save the changes</span>
-        database<span class="token punctuation">.</span><span class="token function">SaveChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        &#x2F;&#x2F; Save the changes
+        database.SaveChanges();
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p>Tại sao lại có 2 method Add? Ở method đầu tiên, ASP.NET sẽ trả về cái form rỗng cho người dùng tự nhập vào giá trị. Method thứ 2 có chứa parameter là newPhone. Method có trách nhiệm nhận thông tin được post lên từ phía người dùng. ASP.NET đủ thông minh để có thể tự hiểu nó là object kiểu MobilePhone, và nó gọi là <code>Model Binding</code>. Ta sẽ tìm hiểu về chủ đề này sau.</p>
 </blockquote>
 <p><strong>View</strong></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">thêm file Add.cshtml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">thêm file Add.cshtml</code></pre>
 
 <p>Đối với ASP.NET Core</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">asp-action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Add<span class="token punctuation">"</span></span> <span class="token attr-name">asp-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MobilePhone<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Id<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">asp-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;form asp-action&#x3D;&quot;Add&quot; asp-controller&#x3D;&quot;MobilePhone&quot;&gt;
+    &lt;label&gt;Id&lt;&#x2F;label&gt;
+    &lt;input asp-for&#x3D;&quot;Id&quot;&#x2F;&gt;
+    &lt;label&gt;Name&lt;&#x2F;label&gt;
+    &lt;input asp-for&#x3D;&quot;Name&quot;&#x2F;&gt;
+&lt;&#x2F;form&gt;</code></pre>
 
 <p>Đối với ASP.NET MVC cũ</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
  
-@using(Html.BeginForm("Add","MobilePhone",Method.Post))
+@using(Html.BeginForm(&quot;Add&quot;,&quot;MobilePhone&quot;,Method.Post))
 &#123;
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
-    @Html.TextBoxFor(x => x.Id)
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
-    @Html.TextBoxFor(x => x.Name)
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    &lt;label&gt;Id&lt;&#x2F;label&gt;
+    @Html.TextBoxFor(x &#x3D;&gt; x.Id)
+    &lt;label&gt;Name&lt;&#x2F;label&gt;
+    @Html.TextBoxFor(x &#x3D;&gt; x.Name)
+&#125;</code></pre>
 
 <h1 id="3-Tu-tao-project"><a href="#3-Tu-tao-project" class="headerlink" title="3. Tự tạo project"></a>3. Tự tạo project</h1><p><a id="markdown-t%E1%BB%B1-t%E1%BA%A1o-project" name="t%E1%BB%B1-t%E1%BA%A1o-project"></a></p>
 <p>Từ khúc này trở đi, bạn sẽ cần phải làm theo từng bước một</p>
@@ -580,7 +581,7 @@
 <p>hoặc</p>
 <p><img src="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
 <p>gõ</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc</code></pre>
 
 <p>Bấm F5 &gt; Chọn .NET Core</p>
 <p>Nếu bạn được hỏi “Required assets to build and debug are missing from blah blah blah”, thì bấm Yes nhé</p>
@@ -679,9 +680,10 @@
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -727,7 +729,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -736,8 +738,11 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -779,6 +784,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 

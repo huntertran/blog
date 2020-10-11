@@ -17,11 +17,11 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Mist","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng:  LINQ và Entity Framework không hỗ trợ query trên các property được tính toán dựa trên các field khác  Vậy giờ ta phải làm sao? May mắ">
@@ -32,7 +32,7 @@
 <meta property="og:description" content="Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng:  LINQ và Entity Framework không hỗ trợ query trên các property được tính toán dựa trên các field khác  Vậy giờ ta phải làm sao? May mắ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-01-14T16:18:05.000Z">
-<meta property="article:modified_time" content="2020-10-11T15:15:05.999Z">
+<meta property="article:modified_time" content="2020-10-11T15:48:34.781Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="Computed Property">
 <meta property="article:tag" content="LINQ">
@@ -229,13 +229,13 @@
       <!--/noindex-->
 
       <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap animated">
+<div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -258,7 +258,7 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author animated">
+  <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huntetran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntetran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -298,10 +298,14 @@
 
       
 
-    
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://huntertran.com/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -313,9 +317,6 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
     </span>
-
-    
-    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           [asp.net] - Query trên các computed property không hỗ trợ LINQ<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180114-asp-net-query-tren-cac-computed-property-khong-ho-tro-linq.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
@@ -336,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-11 11:15:05" itemprop="dateModified" datetime="2020-10-11T11:15:05-04:00">2020-10-11</time>
+        <time title="Modified: 2020-10-11 11:48:34" itemprop="dateModified" datetime="2020-10-11T11:48:34-04:00">2020-10-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -386,45 +387,45 @@
 
 <h1 id="1-Computed-Property"><a href="#1-Computed-Property" class="headerlink" title="1. Computed Property"></a>1. Computed Property</h1><p><a id="markdown-computed-property" name="computed-property"></a></p>
 <p>Là một property chỉ có hàm get, và trong get đó, giá trị trả về được tính toán dựa trên các property khác</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestViewModel</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span></span><span class="token punctuation">]</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">MaxLength</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> ErrorMessage <span class="token operator">=</span> <span class="token string">"Length must fewer than &#123;1&#125;"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> FirstName <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class TestViewModel
+&#123;
+    [Required]
+    [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
+    public string FirstName &#123; get; set; &#125;
  
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span></span><span class="token punctuation">]</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">StringLength</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> LastName <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    [Required]
+    [StringLength(10)]
+    public string LastName &#123; get; set; &#125;
  
-    <span class="token comment">// Computed Property</span>
-    <span class="token punctuation">[</span>NotMapped<span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> FullName <span class="token operator">=></span> FirstName <span class="token operator">+</span> LastName<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    &#x2F;&#x2F; Computed Property
+    [NotMapped]
+    public string FullName &#x3D;&gt; FirstName + LastName;
+&#125;</code></pre>
 
 <p>Theo các chuẩn thiết kế database, một column phải chứa dữ liệu mà không thể được suy ra từ các dữ liệu khác. Đoạn Attribute <code>[NotMapped]</code> phục vụ cho việc đó. EF sẽ không sinh ra code generate column <code>FullName</code> nếu bạn dùng code first, không cố gắng tìm column <code>FullName</code> trong table nếu bạn dùng database first</p>
 <h1 id="2-Simple-LINQ"><a href="#2-Simple-LINQ" class="headerlink" title="2. Simple LINQ"></a>2. Simple LINQ</h1><p><a id="markdown-simple-linq" name="simple-linq"></a></p>
 <p>Để query một giá trị nào đó trong Database dùng Entity Framework, bạn có thể dùng LINQ rất đơn giản như sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// TableNameWithS is your table name in plural</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; TableNameWithS is your table name in plural
  
-<span class="token class-name"><span class="token keyword">var</span></span> names <span class="token operator">=</span> dbContext<span class="token punctuation">.</span>TableNameWithS<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>FirstName<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FirstName.Contains(&quot;test&quot;));</code></pre>
 
 <p>Nhưng cũng đoạn code đó sẽ gây lỗi nếu bạn cố gắn dùng nó với Property <code>FullName</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token comment">// BUG BUG BUG</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; BUG BUG BUG
 
-<span class="token class-name"><span class="token keyword">var</span></span> names <span class="token operator">=</span> dbContext<span class="token punctuation">.</span>TableNameWithS<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>FullName<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
 
 <h1 id="3-Solution"><a href="#3-Solution" class="headerlink" title="3. Solution"></a>3. Solution</h1><p><a id="markdown-solution" name="solution"></a></p>
 <blockquote>
 <p>TL;DR: <a href="#4-the-best-solution">The best solution</a></p>
 </blockquote>
 <h2 id="3-1-Slow-performance-Goi-ToList"><a href="#3-1-Slow-performance-Goi-ToList" class="headerlink" title="3.1. [Slow performance] Gọi ToList"></a>3.1. [Slow performance] Gọi ToList</h2><p><a id="markdown-%5Bslow-performance%5D-g%E1%BB%8Di-tolist" name="%5Bslow-performance%5D-g%E1%BB%8Di-tolist"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token class-name"><span class="token keyword">var</span></span> names <span class="token operator">=</span> dbContext<span class="token punctuation">.</span>TableNameWithS<span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>FullName<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS.ToList().Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
 
 <p>Gọi ToList sẽ làm Entity Framework gọi tới database, thực thi bất kỳ đoạn query nào trước đó, rồi mới thực thi tới đoạn LINQ có computed property của bạn</p>
 <p>Nhược điểm của nó là EF sẽ query ra kết quả nhiều hơn so với cần thiết, làm giảm performance của ứng dụng</p>
 <h2 id="3-2-DRY-Principle-violated-Viet-bieu-thuc"><a href="#3-2-DRY-Principle-violated-Viet-bieu-thuc" class="headerlink" title="3.2. [DRY Principle violated] Viết biểu thức"></a>3.2. [DRY Principle violated] Viết biểu thức</h2><p><a id="markdown-%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c" name="%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c"></a></p>
 <p>Một cách khác là thay vì sử dụng computed property, ta có thể viết thẳng biểu thức của property đó vào câu query</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token class-name"><span class="token keyword">var</span></span> names <span class="token operator">=</span> dbContext<span class="token punctuation">.</span>TableNameWithS<span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> <span class="token punctuation">(</span>x<span class="token punctuation">.</span>FirstName <span class="token operator">+</span> x<span class="token punctuation">.</span>LastName<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; (x.FirstName + x.LastName).Contains(&quot;test&quot;));</code></pre>
 
 <p>Nhược điểm của cách này là bạn đã vi phạm nguyên tắc “DRY” - Don’t repeat yourself. Một biểu thức mà phải code tới 2 lần. Nếu sau này bạn thay đổi biểu thức đó ở 1 chỗ, thì ở chỗ còn lại bạn cũng sẽ phải đổi theo. Nếu bạn quên -&gt; BUG ngay và luôn</p>
 <blockquote>
@@ -436,30 +437,30 @@
 <p>Nhược điểm của nó là nó không thể dịch được khi bạn sử dụng các method, class mà bạn tự định nghĩa, không nằm trong .NET Framework</p>
 <p>Sử dụng nó thì không còn gì dễ hơn</p>
 <p>Bước 1: Cài đặt nuget DelegateDecompiler</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">Install-Package DelegateDecompiler<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">Install-Package DelegateDecompiler</code></pre>
 
 <p>Bước 2: Trang trí property với attribute <code>[Computed]</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestViewModel</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span></span><span class="token punctuation">]</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">MaxLength</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> ErrorMessage <span class="token operator">=</span> <span class="token string">"Length must fewer than &#123;1&#125;"</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> FirstName <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class TestViewModel
+&#123;
+    [Required]
+    [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
+    public string FirstName &#123; get; set; &#125;
  
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Required</span></span><span class="token punctuation">]</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">StringLength</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> LastName <span class="token punctuation">&#123;</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+    [Required]
+    [StringLength(10)]
+    public string LastName &#123; get; set; &#125;
  
-    <span class="token comment">// Computed Property</span>
-    <span class="token punctuation">[</span>NotMapped<span class="token punctuation">]</span>
-    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Computed</span></span><span class="token punctuation">]</span>
-    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> FullName <span class="token operator">=></span> FirstName <span class="token operator">+</span> LastName<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    &#x2F;&#x2F; Computed Property
+    [NotMapped]
+    [Computed]
+    public string FullName &#x3D;&gt; FirstName + LastName;
+&#125;</code></pre>
 
 <p>Bước 3: Gọi method Decompile</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token class-name"><span class="token keyword">var</span></span> names <span class="token operator">=</span> dbContext<span class="token punctuation">.</span>TableNameWithS
-                     <span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-                     <span class="token punctuation">.</span><span class="token function">Where</span><span class="token punctuation">(</span>x <span class="token operator">=></span> x<span class="token punctuation">.</span>FullName<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Decompile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS
+                     .ToList()
+                     .Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;)).Decompile();
+</code></pre>
 
 <blockquote>
 <p>Thư viện này thậm chí còn hỗ trợ async, các advanced functions của EF như <code>Include</code>, <code>AsNoTracking</code> với phần mở rộng <a target="_blank" rel="noopener" href="https://nuget.org/packages/DelegateDecompiler.EntityFramework">DelegateDecompiler.EntityFramework</a></p>
@@ -467,18 +468,18 @@
 <h1 id="5-Make-life-easier"><a href="#5-Make-life-easier" class="headerlink" title="5. Make life easier"></a>5. Make life easier</h1><p><a id="markdown-make-life-easier" name="make-life-easier"></a></p>
 <p>Bạn cũng có thể cấu hình cho asp tự xử lý các property có [NotMapped]</p>
 <p>Tạo một class <code>Configuration</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DelegateDecompilerConfiguration</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">DefaultConfiguration</span></span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">bool</span></span> <span class="token function">ShouldDecompile</span><span class="token punctuation">(</span><span class="token class-name">MemberInfo</span> memberInfo<span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        <span class="token comment">// Automatically decompile all NotMapped members</span>
-        <span class="token keyword">return</span> <span class="token keyword">base</span><span class="token punctuation">.</span><span class="token function">ShouldDecompile</span><span class="token punctuation">(</span>memberInfo<span class="token punctuation">)</span> <span class="token operator">||</span> memberInfo<span class="token punctuation">.</span><span class="token function">GetCustomAttributes</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">NotMappedAttribute</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class DelegateDecompilerConfiguration : DefaultConfiguration
+&#123;
+    public override bool ShouldDecompile(MemberInfo memberInfo)
+    &#123;
+        &#x2F;&#x2F; Automatically decompile all NotMapped members
+        return base.ShouldDecompile(memberInfo) || memberInfo.GetCustomAttributes(typeof(NotMappedAttribute), true).Length &gt; 0;
+    &#125;
+&#125;</code></pre>
 
 <p>Rồi đăng ký nó trong method Startup như sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">DelegateDecompiler<span class="token punctuation">.</span>Configuration
-                  <span class="token punctuation">.</span><span class="token function">Configure</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">DelegateDecompilerConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">DelegateDecompiler.Configuration
+                  .Configure(new DelegateDecompilerConfiguration());</code></pre>
     </div>
 
     
@@ -568,9 +569,10 @@
           </div>
     </footer>
   </article>
-  
-  
-  
+</div>
+
+
+
 
 
 
@@ -616,7 +618,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
@@ -625,8 +627,11 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
   <script>
 var pjax = new Pjax({
   selectors: [
@@ -668,6 +673,9 @@ document.addEventListener('pjax:success', () => {
 
 
   <script src="/js/local-search.js"></script>
+
+
+
 
 
 
