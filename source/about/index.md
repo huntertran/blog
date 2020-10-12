@@ -10,3 +10,16 @@ date: 2011-10-12 04:33:25
 Hi, my name is Tuan, you can call me Hunter, and welcome to my blog.
 
 If you find this blog interesting, you can buy me a coffee by click the button below
+
+Via QR Code:
+
+![paypal](https://github.com/huntertran/blog/blob/master/source/images/theme/paypal.png?raw=true)
+
+OR
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="L74JZ33L6JABN" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_CA/i/scr/pixel.gif" width="1" height="1" />
+</form>
