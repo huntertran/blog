@@ -3307,3 +3307,20 @@ mjx-container[display="true"] + br {
 pre {
   white-space: pre-wrap !important;
 }
+:root {
+  --content-bg-color: rgba(51,51,51,0.949) !important;
+}
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: 1 !important;
+  }
+}
+.post-copyright ul {
+  background: rgba(0,0,0,0.702) !important;
+}
+.followme {
+  background: rgba(0,0,0,0.702) !important;
+}
+.site-author-image {
+  border: none !important;
+}
