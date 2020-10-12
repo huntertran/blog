@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.com/win32console/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/internettips/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -37,7 +44,77 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/win32console/</loc>
+    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/08/30/aspnet-identity-1-introduction/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/01/12/asp-net-core-2-0-custom-tag-helper/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/02/17/moving-to-open-source-softwares/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -268,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/about/thankyou</loc>
+    <loc>https://huntertran.com/about/cancel</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -276,6 +353,13 @@
   
   <url>
     <loc>https://huntertran.com/about/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/thankyou</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -304,6 +388,76 @@
   
   <url>
     <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/09/18/windows-phone-input-scope/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2013/11/11/visual-studio-nuget-the-magician/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -660,83 +814,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/08/30/aspnet-identity-1-introduction/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/12/asp-net-core-2-0-custom-tag-helper/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/02/17/moving-to-open-source-softwares/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -801,76 +878,6 @@
   
   <url>
     <loc>https://huntertran.com/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/18/windows-phone-input-scope/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/11/11/visual-studio-nuget-the-magician/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
