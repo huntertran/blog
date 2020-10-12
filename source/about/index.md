@@ -13,7 +13,7 @@ If you find this blog interesting, you can buy me a coffee
 
 Via QR Code:
 
-![paypal](https://github.com/huntertran/blog/blob/master/source/images/theme/paypal.png?raw=true)
+![paypal](https://huntertran.com/images/theme/paypal.png)
 
 OR
 
