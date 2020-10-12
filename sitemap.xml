@@ -247,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/about/cancel</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -297,27 +290,6 @@
   
   <url>
     <loc>https://huntertran.com/csharp/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/06/27/not-so-basic-solve-your-problems/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -695,6 +667,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -878,6 +857,27 @@
   
   <url>
     <loc>https://huntertran.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/06/27/not-so-basic-solve-your-problems/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -2505,13 +2505,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/categories/research/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/CSharp/Windows-10/Windows-Store-App/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
@@ -2527,6 +2520,13 @@
   
   <url>
     <loc>https://huntertran.com/categories/JavaScript-and-TypeScript/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/research/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
