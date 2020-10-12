@@ -28,7 +28,7 @@ NLTK has a function called `regexpparser` to parse the Part-of-Speech tagged sen
 
 <!-- /TOC -->
 
-![tag](https://i.imgur.com/R8RfjxP.png)
+![tag](https://i.imgur.com/NMl56Bk.png)
 
 # 1. Part-of-Speech tagging
 <a id="markdown-part-of-speech-tagging" name="part-of-speech-tagging"></a>
