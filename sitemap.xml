@@ -44,69 +44,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/22/ml-model-and-cost-function/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/27/machine-learning-parameter-learning/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2018/10/01/machine-learning-matrices-and-vectors/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -290,62 +227,6 @@
   
   <url>
     <loc>https://huntertran.com/csharp/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/11/17/xaml-styler-bug-and-fixes/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -667,6 +548,69 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/22/ml-model-and-cost-function/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/27/machine-learning-parameter-learning/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2020-10-12</lastmod>
@@ -878,6 +822,62 @@
   
   <url>
     <loc>https://huntertran.com/2014/06/27/not-so-basic-solve-your-problems/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/11/17/xaml-styler-bug-and-fixes/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
+    
+    <lastmod>2020-10-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
     
     <lastmod>2020-10-12</lastmod>
     
@@ -2505,6 +2505,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/categories/research/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/categories/CSharp/Windows-10/Windows-Store-App/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
@@ -2520,13 +2527,6 @@
   
   <url>
     <loc>https://huntertran.com/categories/JavaScript-and-TypeScript/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/categories/research/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
