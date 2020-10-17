@@ -8,8 +8,9 @@ categories:
 date: 2020-10-17 13:08:02
 ---
 
-
 Step by step instruction on how to download Windows 10 ISO.
+
+<!-- more -->
 
 <!-- TOC -->
 
