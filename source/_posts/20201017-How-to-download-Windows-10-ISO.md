@@ -1,7 +1,15 @@
 ---
 title: How to download Windows 10 ISO
 tags:
+  - iso
+  - windows
+categories:
+  - - Computer Tips
+date: 2020-10-17 13:08:02
 ---
+
+
+Step by step instruction on how to download Windows 10 ISO.
 
 <!-- TOC -->
 
