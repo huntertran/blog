@@ -6,7 +6,7 @@
   <link href="https://huntertran.com/atom.xml" rel="self"/>
   
   <link href="https://huntertran.com/"/>
-  <updated>2020-10-17T17:15:08.817Z</updated>
+  <updated>2020-10-17T17:36:01.998Z</updated>
   <id>https://huntertran.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://huntertran.com/2020/10/17/How-to-download-Windows-10-ISO/"/>
     <id>https://huntertran.com/2020/10/17/How-to-download-Windows-10-ISO/</id>
     <published>2020-10-17T17:08:02.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step by step instruction on how to download Windows 10 ISO.&lt;/p&gt;</summary>
@@ -42,7 +42,7 @@
     <link href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
     <id>https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
     <published>2020-10-09T01:26:02.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;NLTK has a function called &lt;code&gt;regexpparser&lt;/code&gt; to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.&lt;/p&gt;</summary>
@@ -67,7 +67,7 @@
     <link href="https://huntertran.com/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
     <id>https://huntertran.com/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
     <published>2020-09-03T20:02:21.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long awaited features are in beta, invitation only, and it is &lt;code&gt;GitHub Codespaces&lt;/code&gt;&lt;/p&gt;</summary>
@@ -90,7 +90,7 @@
     <link href="https://huntertran.com/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
     <id>https://huntertran.com/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
     <published>2020-07-30T04:31:02.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft acquired GitHub, and every one have unlimited private repository. This reason alone make me want to move all my project and source code to GitHub.&lt;/p&gt;</summary>
@@ -115,7 +115,7 @@
     <link href="https://huntertran.com/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
     <id>https://huntertran.com/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
     <published>2020-07-20T22:28:46.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;I don’t know why Google makes it so difficult to connect to it’s Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?&lt;/p&gt;
@@ -141,7 +141,7 @@
     <link href="https://huntertran.com/2019/10/19/refactoring-clones-type-2/"/>
     <id>https://huntertran.com/2019/10/19/refactoring-clones-type-2/</id>
     <published>2019-10-19T20:10:18.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Removing clones in code maybe is the most difficult type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#&lt;/p&gt;</summary>
@@ -164,7 +164,7 @@
     <link href="https://huntertran.com/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/"/>
     <id>https://huntertran.com/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</id>
     <published>2019-08-18T18:54:08.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Using Vuejs, sometime you need to publish your awesome &lt;code&gt;component&lt;/code&gt; with the world. Sure you can share the &lt;code&gt;.vue&lt;/code&gt; file, but how can you publish it to &lt;code&gt;npmjs&lt;/code&gt;, for the ease of installation and usage of others?&lt;/p&gt;</summary>
@@ -195,7 +195,7 @@
     <link href="https://huntertran.com/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/"/>
     <id>https://huntertran.com/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</id>
     <published>2019-07-14T01:15:56.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Doing C# long enough, you get yourself familiar with C# concepts and syntax. That’s fine, but sometime when you need “the same” concepts in Java, it’s quite difficult. This cheat sheet here to tackle that problem.&lt;/p&gt;</summary>
@@ -216,7 +216,7 @@
     <link href="https://huntertran.com/2019/07/12/java-for-beginner-2-hello-world-in-java/"/>
     <id>https://huntertran.com/2019/07/12/java-for-beginner-2-hello-world-in-java/</id>
     <published>2019-07-12T16:40:13.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;After getting yourself familiar with names and terms in Java in &lt;a href=&quot;https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/&quot;&gt;part 1&lt;/a&gt;, now it’s time for you to create your first program in Java.&lt;/p&gt;</summary>
@@ -237,7 +237,7 @@
     <link href="https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/"/>
     <id>https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</id>
     <published>2019-07-11T00:11:54.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Coming to Java world, from a .NET guy, is like going from a full feature-rich and comfortable car to a basic bike with a lot of space for extension and customization.&lt;br&gt;In this series, I will walk you through (hopefully) a small part of Java world, just enough for you to continue your exploration.&lt;/p&gt;</summary>
@@ -256,7 +256,7 @@
     <link href="https://huntertran.com/2019/06/16/fighting-with-unauthorized-copies-of-your-content/"/>
     <id>https://huntertran.com/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</id>
     <published>2019-06-16T04:37:17.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.&lt;/p&gt;
@@ -280,7 +280,7 @@
     <link href="https://huntertran.com/2019/06/15/machine-learning-3-2-logistic-regression-model/"/>
     <id>https://huntertran.com/2019/06/15/machine-learning-3-2-logistic-regression-model/</id>
     <published>2019-06-15T03:14:11.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng&lt;/p&gt;</summary>
@@ -297,7 +297,7 @@
     <link href="https://huntertran.com/2019/06/14/gecko-dom-logging-system/"/>
     <id>https://huntertran.com/2019/06/14/gecko-dom-logging-system/</id>
     <published>2019-06-14T04:12:17.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;The purpose of this documentation is to record all the findings and my progress while exploring Firefox source code, in order to log how many time a DOM API is called when visit a single website, or multiple common website.&lt;/p&gt;
@@ -321,7 +321,7 @@
     <link href="https://huntertran.com/2019/05/15/machine-learning-title-block/"/>
     <id>https://huntertran.com/2019/05/15/machine-learning-title-block/</id>
     <published>2019-05-15T04:06:14.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
       
@@ -344,7 +344,7 @@
     <link href="https://huntertran.com/2019/05/14/machine-learning-1-3-classification-and-representation/"/>
     <id>https://huntertran.com/2019/05/14/machine-learning-1-3-classification-and-representation/</id>
     <published>2019-05-14T09:43:52.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.&lt;/p&gt;</summary>
@@ -361,7 +361,7 @@
     <link href="https://huntertran.com/2019/05/01/transportation-in-europe/"/>
     <id>https://huntertran.com/2019/05/01/transportation-in-europe/</id>
     <published>2019-05-01T09:59:14.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.998Z</updated>
     
     
     <summary type="html">&lt;p&gt;Nếu bạn có dư dả thời gian và nguồn kinh phí eo hẹp, thì cách tốt nhất để dạo vòng quanh các nước EU chính là các phương tiện công cộng.&lt;/p&gt;</summary>
@@ -386,7 +386,7 @@
     <link href="https://huntertran.com/2019/04/02/latex-on-windows-step-by-step-installation/"/>
     <id>https://huntertran.com/2019/04/02/latex-on-windows-step-by-step-installation/</id>
     <published>2019-04-02T06:21:51.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.994Z</updated>
     
     
     <summary type="html">&lt;p&gt;In this blog, I will instruct you on how to install and writing LaTex documents on Windows with ease.&lt;/p&gt;
@@ -416,7 +416,7 @@
     <link href="https://huntertran.com/2018/10/18/machine-learning-2-3-exercise/"/>
     <id>https://huntertran.com/2018/10/18/machine-learning-2-3-exercise/</id>
     <published>2018-10-18T09:58:06.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.994Z</updated>
     
     
     <summary type="html">&lt;p&gt;Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi bài tập trong tuần 2 của khóa học Machine Learning của giáo sư Andrew Ng.&lt;/p&gt;
@@ -434,7 +434,7 @@
     <link href="https://huntertran.com/2018/10/09/machine-learning-2-2-normal-equation/"/>
     <id>https://huntertran.com/2018/10/09/machine-learning-2-2-normal-equation/</id>
     <published>2018-10-09T09:39:28.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.994Z</updated>
     
     
     <summary type="html">&lt;p&gt;Bài 2 phần 2 trong khóa học Machine Learning của giáo sư Andrew Ng. Trong bài này, ta sẽ tìm hiểu một cách thay thế cho thuật toán &lt;code&gt;Gradient Descent&lt;/code&gt; cùng ưu nhược điểm của nó.&lt;/p&gt;</summary>
@@ -453,7 +453,7 @@
     <link href="https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/"/>
     <id>https://huntertran.com/2018/10/03/machine-learning-2-1-multiple-features/</id>
     <published>2018-10-03T09:48:42.000Z</published>
-    <updated>2020-10-17T17:15:08.817Z</updated>
+    <updated>2020-10-17T17:36:01.994Z</updated>
     
     
     <summary type="html">&lt;p&gt;Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành &lt;code&gt;multiple input features&lt;/code&gt;, và những best practices để thực hiện linear regression.&lt;/p&gt;</summary>
