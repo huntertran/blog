@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.com/msp/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/tags/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/win32console/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/internettips/</loc>
     
     <lastmod>2020-10-17</lastmod>
@@ -23,21 +44,119 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/msp/</loc>
+    <loc>https://huntertran.com/2018/01/12/asp-net-core-2-0-custom-tag-helper/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/tags/</loc>
+    <loc>https://huntertran.com/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/win32console/</loc>
+    <loc>https://huntertran.com/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/02/17/moving-to-open-source-softwares/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/22/ml-model-and-cost-function/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/09/27/machine-learning-parameter-learning/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2018/10/01/machine-learning-matrices-and-vectors/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
@@ -184,6 +303,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/about/cancel</loc>
     
     <lastmod>2020-10-17</lastmod>
@@ -233,7 +359,70 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
+    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/02/07/asp-net-mvc-debug-route-config/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/08/30/aspnet-identity-1-introduction/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
@@ -437,202 +626,6 @@
   
   <url>
     <loc>https://huntertran.com/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/02/07/asp-net-mvc-debug-route-config/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/08/30/aspnet-identity-1-introduction/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/12/asp-net-core-2-0-custom-tag-helper/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/02/17/moving-to-open-source-softwares/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/12/aspnet-core-2-middleware/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/07/10/repository-va-unit-of-work-pattern/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/14/machine-learning-introduction/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/22/ml-model-and-cost-function/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/09/27/machine-learning-parameter-learning/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/10/01/machine-learning-matrices-and-vectors/</loc>
-    
-    <lastmod>2020-10-17</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
@@ -885,6 +878,13 @@
   
   <url>
     <loc>https://huntertran.com/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
+    
+    <lastmod>2020-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2014/12/30/2014-in-review/</loc>
     
     <lastmod>2020-10-17</lastmod>
     
