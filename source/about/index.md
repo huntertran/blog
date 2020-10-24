@@ -11,11 +11,17 @@ Hi, my name is Tuan, you can call me Hunter, and welcome to my blog.
 
 If you find this blog interesting, you can buy me a coffee
 
-Via QR Code:
+Via
+
+[Buy me a Coffee](https://www.buymeacoffee.com/huntertran)
+
+**OR**
+
+QR Code:
 
 ![paypal](https://huntertran.com/images/theme/paypal.png)
 
-OR
+**OR**
 
 <form id="paypal_donate_button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 <input type="hidden" name="cmd" value="_s-xclick" />
