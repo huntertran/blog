@@ -32,7 +32,7 @@
 <meta property="og:description" content="Microsoft acquired GitHub, and every one have unlimited private repository. This reason alone make me want to move all my project and source code to GitHub.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-30T04:31:02.000Z">
-<meta property="article:modified_time" content="2020-11-04T16:11:31.521Z">
+<meta property="article:modified_time" content="2020-11-06T16:26:33.890Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="TFS">
@@ -337,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-04 11:11:31" itemprop="dateModified" datetime="2020-11-04T11:11:31-05:00">2020-11-04</time>
+        <time title="Modified: 2020-11-06 11:26:33" itemprop="dateModified" datetime="2020-11-06T11:26:33-05:00">2020-11-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -386,9 +386,11 @@
 <p>Alternatively, you can install git-tf with Chocolatey:</p>
 <p><code>choco install gittfs</code></p>
 </blockquote>
-<h1 id="3-Migration-steps"><a href="#3-Migration-steps" class="headerlink" title="3. Migration steps"></a>3. Migration steps</h1><h2 id="3-1-Clone-the-TFS-project"><a href="#3-1-Clone-the-TFS-project" class="headerlink" title="3.1. Clone the TFS project"></a>3.1. Clone the TFS project</h2><p>git-tfs clone <a target="_blank" rel="noopener" href="https://your/_organization.visualstudio.com/">https://your\_organization.visualstudio.com/</a> $/your_project_name</p>
+<h1 id="3-Migration-steps"><a href="#3-Migration-steps" class="headerlink" title="3. Migration steps"></a>3. Migration steps</h1><h2 id="3-1-Clone-the-TFS-project"><a href="#3-1-Clone-the-TFS-project" class="headerlink" title="3.1. Clone the TFS project"></a>3.1. Clone the TFS project</h2><pre class="line-numbers language-s" data-language="s"><code class="language-s">git-tfs clone https:&#x2F;&#x2F;your\_organization.visualstudio.com&#x2F; $&#x2F;your\_project\_name</code></pre>
+
 <p>If your project name contain whitespace, just put the whole name in quote mark</p>
-<p>git-tfs clone <a target="_blank" rel="noopener" href="https://your/_organization.visualstudio.com/">https://your\_organization.visualstudio.com/</a> “$/your project name”</p>
+<pre class="line-numbers language-s" data-language="s"><code class="language-s">git-tfs clone https:&#x2F;&#x2F;your\_organization.visualstudio.com&#x2F; &quot;$&#x2F;your project name&quot;</code></pre>
+
 <p>This will clone the project to the folder you run the command</p>
 <h2 id="3-2-Add-gitignore"><a href="#3-2-Add-gitignore" class="headerlink" title="3.2. Add .gitignore"></a>3.2. Add .gitignore</h2><p>Now the project is like any other git project, with a <code>.git</code> folder. You should add a <code>.gitignore</code> file to prevent commit unwanted files.</p>
 <p>A sample <code>.gitinore</code> file here: <a target="_blank" rel="noopener" href="https://www.toptal.com/developers/gitignore/api/visualstudio">Visual Studio Git Ignore</a></p>
