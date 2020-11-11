@@ -332,7 +332,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,90 +358,14 @@
 <p>Original link: <a target="_blank" rel="noopener" href="https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1">https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1</a></p>
 <p>Language: python</p>
 <h1 id="The-Goal"><a href="#The-Goal" class="headerlink" title="The Goal"></a>The Goal</h1><p>Batman will look for the hostages on a given building by jumping from one window to another using his grapnel gun. Batman’s goal is to jump to the window where the hostages are located in order to disarm the bombs. Unfortunately he has a limited number of jumps before the bombs go off…</p>
-<h1 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h1><p>Before each jump, the heat-signature device will provide Batman with the direction of the bombs based on Batman current position:</p>
-<ul>
-<li>U (Up)</li>
-<li>UR (Up-Right)</li>
-<li>R (Right)</li>
-<li>DR (Down-Right)</li>
-<li>D (Down)</li>
-<li>DL (Down-Left)</li>
-<li>L (Left)</li>
-<li>UL (Up-Left)</li>
-</ul>
-<p>Your mission is to program the device so that it indicates the location of the next window Batman should jump to in order to reach the bombs’ room as soon as possible.</p>
-<p>Buildings are represented as a rectangular array of windows, the window in the top left corner of the building is at index (0,0).</p>
-<h1 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h1><p>Batman doesn’t know where the bom is. On each iteration, the heat-signature device will tell him the <em>direction</em> of the bomb</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>We will use binary search on both x and y dimension.</p>
-<p>On each iteration, we will limit the boundary of the search</p>
-<h1 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h1><p><a target="_blank" rel="noopener" href="https://github.com/huntertran/codinggame/blob/main/shadows-of-the-knight-ep1.py">on Github</a></p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"># https:&#x2F;&#x2F;www.codingame.com&#x2F;ide&#x2F;puzzle&#x2F;shadows-of-the-knight-episode-1
-
-import sys
-import math
-
-# Auto-generated code below aims at helping you parse
-# the standard input according to the problem statement.
-
-# w: width of the building.
-# h: height of the building.
-w, h &#x3D; [int(i) for i in input().split()]
-n &#x3D; int(input())  # maximum number of turns before game over.
-x0, y0 &#x3D; [int(i) for i in input().split()]
-
-def get_middle_pos(max, current):
-    return int(abs((max-current) &#x2F; 2))
-
-def get_reversed_middle_pos(min, current):
-    result &#x3D; int(abs((min-current) &#x2F; 2))
-    if result &#x3D;&#x3D; 0:
-        result &#x3D; 1
-    return result
-
-x &#x3D; x0
-y &#x3D; y0
-
-print(&quot;W: &quot; + str(w), file&#x3D;sys.stderr, flush&#x3D;True)
-print(&quot;H: &quot; + str(h), file&#x3D;sys.stderr, flush&#x3D;True)
-
-min_x &#x3D; 0
-min_y &#x3D; 0
-
-max_x &#x3D; w
-max_y &#x3D; h
-
-# game loop
-while True:
-    bomb_dir &#x3D; input()  # the direction of the bombs from batman&#39;s current location (U, UR, R, DR, D, DL, L or UL)
-
-    # Write an action using print
-    # To debug: print(&quot;Debug messages...&quot;, file&#x3D;sys.stderr, flush&#x3D;True)
-
-    jump_x &#x3D; 0
-    jump_y &#x3D; 0
-
-    if &quot;U&quot; in bomb_dir:
-        max_y &#x3D; y
-        jump_y &#x3D; 0 - get_reversed_middle_pos(min_y, y)
-    
-    if &quot;D&quot; in bomb_dir:
-        min_y &#x3D; y
-        jump_y &#x3D; get_middle_pos(max_y, y)
-
-    if &quot;L&quot; in bomb_dir:
-        max_x &#x3D; x
-        jump_x &#x3D; 0 - get_reversed_middle_pos(min_x, x)
-
-    if &quot;R&quot; in bomb_dir:
-        min_x &#x3D; x
-        jump_x &#x3D; get_middle_pos(max_x, x)
-
-
-    x &#x3D; x + jump_x
-    y &#x3D; y + jump_y
-
-    # the location of the next window Batman should jump to.
-    print(str(x) + &quot; &quot; + str(y))</code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/11/Coding-Game-Shadow-of-the-Knight/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -499,7 +423,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -587,7 +511,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -675,7 +599,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -767,7 +691,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -859,7 +783,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -948,7 +872,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1040,7 +964,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1140,7 +1064,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1228,7 +1152,7 @@ while True:
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-10 20:59:31" itemprop="dateModified" datetime="2020-11-10T20:59:31-05:00">2020-11-10</time>
+        <time title="Modified: 2020-11-10 23:21:48" itemprop="dateModified" datetime="2020-11-10T23:21:48-05:00">2020-11-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
