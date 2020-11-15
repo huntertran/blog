@@ -27,6 +27,8 @@ Step by step instruction on how to download Windows 10 ISO.
 ## 1.1. Step 1: Download Media Creation Tool
 <a id="markdown-step-1%3A-download-media-creation-tool" name="step-1%3A-download-media-creation-tool"></a>
 
+Download the media creation tool at this [link](https://www.microsoft.com/en-us/software-download/windows10ISO)
+
 ![download the media creation tool](https://i.imgur.com/TegGnSZ.png)
 
 ## 1.2. Step 2: Run the tool

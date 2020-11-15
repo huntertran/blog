@@ -41,11 +41,15 @@ Today, 9.99 over 10 developers will choose `git` over `tfs`, and we need a way t
 
 ## 3.1. Clone the TFS project
 
+```s
 git-tfs clone https://your\_organization.visualstudio.com/ $/your\_project\_name
+```
 
 If your project name contain whitespace, just put the whole name in quote mark
 
+```s
 git-tfs clone https://your\_organization.visualstudio.com/ "$/your project name"
+```
 
 This will clone the project to the folder you run the command
 
