@@ -1,5 +1,6 @@
 ---
 title: How to download Windows 10 ISO
+hidden: true
 tags:
   - iso
   - windows
