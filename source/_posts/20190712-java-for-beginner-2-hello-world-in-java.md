@@ -62,15 +62,17 @@ Open VSCode and create the following folder structure
 
 Inside hello folder, create `Application.java`, then type the following code
 
+```java
 package main.hello;
 
 public class Application {
 
-    public static void main(String\[\] args) {
+    public static void main(String args) {
         String hello = "Hello World!";
         System.out.print(hello);
     }
 }
+```
 
 ## 2.2. Run and Debug
 
@@ -80,12 +82,13 @@ Create configuration file (VSCode will automatically do this)
 
 `.vscode` folder added to folder structure, with `launch.json` file created, the content should look like this
 
+```json
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": \[
+    "configurations": [
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
@@ -98,8 +101,9 @@ Create configuration file (VSCode will automatically do this)
             "request": "launch",
             "mainClass": "main.hello.Application"
         }
-    \]
+    ]
 }
+```
 
 Press F5 (or that green arrow button), and the word `Hello World!` will be printed on debug console
 
