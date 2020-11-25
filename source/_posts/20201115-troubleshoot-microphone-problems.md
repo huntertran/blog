@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot microphone problems
-hidden: true
 date: 2020-11-15 11:31:16
+hidden: true
 tags:
     - tips
 categories:
