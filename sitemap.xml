@@ -44,6 +44,41 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
     
     <lastmod>2020-11-25</lastmod>
@@ -422,13 +457,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/azure/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/</loc>
     
     <lastmod>2020-11-25</lastmod>
@@ -436,35 +464,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
+    <loc>https://huntertran.com/azure/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
@@ -905,21 +905,21 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
+    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
+    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
