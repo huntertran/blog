@@ -44,14 +44,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
+    <loc>https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
@@ -457,6 +450,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/azure/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/categories/</loc>
     
     <lastmod>2020-11-25</lastmod>
@@ -464,7 +464,35 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/azure/</loc>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    
+    <lastmod>2020-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
@@ -892,34 +920,6 @@
   
   <url>
     <loc>https://huntertran.com/2016/07/11/c-string-performance-tips-and-tricks/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
-    
-    <lastmod>2020-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
     
     <lastmod>2020-11-25</lastmod>
     
