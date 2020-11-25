@@ -54,11 +54,13 @@ Unlike .NET, JAVA required a specific folder structure. Each .java file should c
 
 Open VSCode and create the following folder structure
 
-<your\_project\_name>
+```
+<your_project_name>
 |-src
 | |-main
 | | |-java
 | | | |-hello
+```
 
 Inside hello folder, create `Application.java`, then type the following code
 
