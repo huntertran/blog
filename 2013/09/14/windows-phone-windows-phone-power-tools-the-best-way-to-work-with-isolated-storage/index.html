@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụn">
+<meta name="description" content="Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage">
 <meta property="og:url" content="https://huntertran.com/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/">
@@ -39,7 +40,7 @@
 <meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2013/09/14-09-2013-11-14-05-am.png">
 <meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2013/09/14-09-2013-11-15-59-am.png">
 <meta property="article:published_time" content="2013-09-14T03:02:24.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.919Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="isolated storage">
@@ -60,8 +61,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage | Tuan Tran's Blog</title>
+<title>[Windows Phone] Windows Phone Power Tools – the best way to work with Isolated Storage | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -72,8 +72,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -123,7 +121,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -151,31 +149,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -186,8 +164,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -196,7 +173,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -212,7 +189,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -230,14 +207,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cai-dat"><span class="nav-text">1. Cài đặt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Su-dung"><span class="nav-text">2. Sử dụng</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Install-Update"><span class="nav-text">2.1. Install | Update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Dev-Apps"><span class="nav-text">2.2. Dev Apps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Guild"><span class="nav-text">2.3. Guild</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Name"><span class="nav-text">2.4. Name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-Isolated-Storage"><span class="nav-text">2.5. Isolated Storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Nut-Get"><span class="nav-text">2.6. Nút Get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-Nut-Put-File"><span class="nav-text">2.7. Nút Put File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-Nut-Put-Directory"><span class="nav-text">2.8. Nút Put Directory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-Nut-Delete"><span class="nav-text">2.9. Nút Delete</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-Profile-Beta"><span class="nav-text">2.10. Profile (Beta)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-Giai-phap"><span class="nav-text">2.11. Giải pháp</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Ket-luan"><span class="nav-text">3. Kết luận</span></a></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cai-dat"><span class="nav-text">1. Cài đặt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Su-dung"><span class="nav-text">2. Sử dụng</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Install-Update"><span class="nav-text">2.1. Install | Update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Dev-Apps"><span class="nav-text">2.2. Dev Apps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Guild"><span class="nav-text">2.3. Guild</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Name"><span class="nav-text">2.4. Name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-Isolated-Storage"><span class="nav-text">2.5. Isolated Storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Nut-Get"><span class="nav-text">2.6. Nút Get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-Nut-Put-File"><span class="nav-text">2.7. Nút Put File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-Nut-Put-Directory"><span class="nav-text">2.8. Nút Put Directory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-Nut-Delete"><span class="nav-text">2.9. Nút Delete</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-Profile-Beta"><span class="nav-text">2.10. Profile (Beta)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-Giai-phap"><span class="nav-text">2.11. Giải pháp</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Ket-luan"><span class="nav-text">3. Kết luận</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -280,7 +258,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -289,7 +268,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -302,9 +281,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -345,7 +322,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -373,28 +350,25 @@
     <div class="post-body" itemprop="articleBody">
         <p>Isolated Storage là một vùng nhớ trên Windows Phone, đúng như tên gọi của nó, đã bị Isolated (Cô lập). Cô lập tức là ứng dụng khác không thể truy cập vào nó, và bạn cũng không thể truy cập vào ứng dụng khác (trừ phi bạn có quyền root, chỉ dành cho Lumia 710 cooked room)</p>
 <p>Vậy trong lúc phát triển app, làm sao để truy cập vùng nhớ này trực quan, sinh động và dễ dàng?</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Có một cách, và theo mình, cách này là hay nhất, vô cùng trực quan, sinh động và thao tác dễ dàng. Bạn không cần phải gõ bất kỳ dòng lệnh nào để chạy nó so với Isolated Storage Explorer Tool</p>
 <ul>
-<li><p><a href="#1-c%C3%A0i-%C4%91%E1%BA%B7t">1. Cài đặt</a></p>
-</li>
-<li><p><a href="#2-s%E1%BB%AD-d%E1%BB%A5ng">2. Sử dụng</a></p>
-<ul>
-<li><a href="#21-install--update">2.1. Install | Update</a></li>
-<li><a href="#22-dev-apps">2.2. Dev Apps</a></li>
-<li><a href="#23-guild">2.3. Guild</a></li>
-<li><a href="#24-name">2.4. Name</a></li>
-<li><a href="#25-isolated-storage">2.5. Isolated Storage</a></li>
-<li><a href="#26-n%C3%BAt-get">2.6. Nút Get</a></li>
-<li><a href="#27-n%C3%BAt-put-file">2.7. Nút Put File</a></li>
-<li><a href="#28-n%C3%BAt-put-directory">2.8. Nút Put Directory</a></li>
-<li><a href="#29-n%C3%BAt-delete">2.9. Nút Delete</a></li>
-<li><a href="#210-profile-beta">2.10. Profile (Beta)</a></li>
-<li><a href="#211-gi%E1%BA%A3i-ph%C3%A1p">2.11. Giải pháp</a></li>
+<li>  <a href="#1-c%C3%A0i-%C4%91%E1%BA%B7t">1. Cài đặt</a></li>
+<li><a href="#2-s%E1%BB%AD-d%E1%BB%A5ng">2. Sử dụng</a><ul>
+<li>  <a href="#21-install--update">2.1. Install | Update</a></li>
+<li>  <a href="#22-dev-apps">2.2. Dev Apps</a></li>
+<li>  <a href="#23-guild">2.3. Guild</a></li>
+<li>  <a href="#24-name">2.4. Name</a></li>
+<li>  <a href="#25-isolated-storage">2.5. Isolated Storage</a></li>
+<li>  <a href="#26-n%C3%BAt-get">2.6. Nút Get</a></li>
+<li>  <a href="#27-n%C3%BAt-put-file">2.7. Nút Put File</a></li>
+<li>  <a href="#28-n%C3%BAt-put-directory">2.8. Nút Put Directory</a></li>
+<li>  <a href="#29-n%C3%BAt-delete">2.9. Nút Delete</a></li>
+<li>  <a href="#210-profile-beta">2.10. Profile (Beta)</a></li>
+<li>  <a href="#211-gi%E1%BA%A3i-ph%C3%A1p">2.11. Giải pháp</a></li>
 </ul>
 </li>
-<li><p><a href="#3-k%E1%BA%BFt-lu%E1%BA%ADn">3. Kết luận</a></p>
-</li>
+<li>  <a href="#3-k%E1%BA%BFt-lu%E1%BA%ADn">3. Kết luận</a></li>
 </ul>
 <h1 id="1-Cai-dat"><a href="#1-Cai-dat" class="headerlink" title="1. Cài đặt"></a>1. Cài đặt</h1><p>Tải và cài tại: <a target="_blank" rel="noopener" href="http://wptools.codeplex.com/">Windows Phone Power Tools on CodePlex</a></p>
 <h1 id="2-Su-dung"><a href="#2-Su-dung" class="headerlink" title="2. Sử dụng"></a>2. Sử dụng</h1><p>Mở một project Windows Phone bất kỳ, Run with Emulator (hoặc Device)</p>
@@ -424,8 +398,8 @@
 <h2 id="2-9-Nut-Delete"><a href="#2-9-Nut-Delete" class="headerlink" title="2.9. Nút Delete"></a>2.9. Nút Delete</h2><p>Xóa một file ra khỏi Isolated Storage. Bạn không thể phục hồi nó. Hãy cân nhắc trước khi xóa. Lưu một bản sao của chúng trên máy tính</p>
 <h2 id="2-10-Profile-Beta"><a href="#2-10-Profile-Beta" class="headerlink" title="2.10. Profile (Beta)"></a>2.10. Profile (Beta)</h2><p>công cụ này, theo nhà phát triển, sẽ giúp bạn đánh giá ứng dụng của mình. Theo thử nghiệm của tôi, nó hoạt động ko được tốt lắm.</p>
 <ul>
-<li>Đòi quyền quản trị –&gt; đã cấp quyền quản trị</li>
-<li>Yêu cầu khởi động lại Power Tools –&gt; đã làm</li>
+<li>  Đòi quyền quản trị –&gt; đã cấp quyền quản trị</li>
+<li>  Yêu cầu khởi động lại Power Tools –&gt; đã làm</li>
 </ul>
 <p>Trong quá trình thử nghiệm, Power Tool bị lỗi và ko thể khởi động lại được. Khi cài lại, không có thiết bị nào trong danh sách để kết nối.</p>
 <h2 id="2-11-Giai-phap"><a href="#2-11-Giai-phap" class="headerlink" title="2.11. Giải pháp"></a>2.11. Giải pháp</h2><p>Gỡ bỏ &gt; Cài đặt lại &gt; Tắt Emulator / Ngắt kết nối thiết bị &gt; Chạy lại Emulator / Kết nối lại</p>
@@ -469,34 +443,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/windows-phone/" rel="tag"># windows phone</a>
@@ -527,7 +499,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -550,20 +521,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -576,14 +543,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -619,20 +585,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -640,20 +593,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

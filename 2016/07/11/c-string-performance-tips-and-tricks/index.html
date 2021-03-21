@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương">
+<meta name="description" content="Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C# string performance – Tips and Tricks">
 <meta property="og:url" content="https://huntertran.com/2016/07/11/c-string-performance-tips-and-tricks/">
@@ -32,7 +33,7 @@
 <meta property="og:description" content="Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2016-07-11T04:38:34.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.923Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="performance">
 <meta name="twitter:card" content="summary">
@@ -50,8 +51,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>C# string performance – Tips and Tricks | Tuan Tran's Blog</title>
+<title>C# string performance – Tips and Tricks | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -62,8 +62,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -113,7 +111,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -141,31 +139,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -176,8 +154,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -186,7 +163,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -202,7 +179,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -220,14 +197,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tai-sao-vay"><span class="nav-text">Tại sao vậy?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cac-van-de"><span class="nav-text">Các vấn đề</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-1-Cong-chuoi"><span class="nav-text">Sai lầm 1: Cộng chuỗi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Giai-quyet-string-Concat-StringBuilder-va-string-Format"><span class="nav-text">Giải quyết: string.Concat, StringBuilder và string.Format</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-2-check-null-%E2%80%93-so-sanh-chuoi-rong"><span class="nav-text">Sai lầm 2: check null – so sánh chuỗi rỗng</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ket-luan"><span class="nav-text">Kết luận</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tai-sao-vay"><span class="nav-text">Tại sao vậy?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cac-van-de"><span class="nav-text">Các vấn đề</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-1-Cong-chuoi"><span class="nav-text">Sai lầm 1: Cộng chuỗi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Giai-quyet-string-Concat-StringBuilder-va-string-Format"><span class="nav-text">Giải quyết: string.Concat, StringBuilder và string.Format</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-2-check-null-%E2%80%93-so-sanh-chuoi-rong"><span class="nav-text">Sai lầm 2: check null – so sánh chuỗi rỗng</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ket-luan"><span class="nav-text">Kết luận</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -270,7 +248,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -279,7 +258,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -292,9 +271,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -335,7 +312,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,16 +335,16 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương trình viết bằng C#. Chỉ cần search một phát, sẽ ra hàng tá kết quả khác nhau, với các lời khuyên khác nhau, đi kèm với các đoạn code bench mark khác nhau, vô cùng rối ren khiến ta bối rối.</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <ul>
-<li><a href="#t%E1%BA%A1i-sao-v%E1%BA%ADy">Tại sao vậy?</a></li>
+<li>  <a href="#t%E1%BA%A1i-sao-v%E1%BA%ADy">Tại sao vậy?</a></li>
 <li><a href="#c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81">Các vấn đề</a><ul>
-<li><a href="#sai-l%E1%BA%A7m-1-c%E1%BB%99ng-chu%E1%BB%97i">Sai lầm 1: Cộng chuỗi</a></li>
-<li><a href="#sai-l%E1%BA%A7m-2-check-null--so-s%C3%A1nh-chu%E1%BB%97i-r%E1%BB%97ng">Sai lầm 2: check null – so sánh chuỗi rỗng</a></li>
+<li>  <a href="#sai-l%E1%BA%A7m-1-c%E1%BB%99ng-chu%E1%BB%97i">Sai lầm 1: Cộng chuỗi</a></li>
+<li>  <a href="#sai-l%E1%BA%A7m-2-check-null--so-s%C3%A1nh-chu%E1%BB%97i-r%E1%BB%97ng">Sai lầm 2: check null – so sánh chuỗi rỗng</a></li>
 </ul>
 </li>
-<li><a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
+<li>  <a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
 </ul>
 <h1 id="Tai-sao-vay"><a href="#Tai-sao-vay" class="headerlink" title="Tại sao vậy?"></a>Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
 <p>Tuy nhiên, nói chung lại thì có một số vấn đề “trường tồn cùng thời gian” mà bạn có thể sẽ bắt gặp khi code một ứng dụng C#</p>
@@ -460,34 +437,32 @@ if(string.IsNullOrEmpty(s))
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/performance/" rel="tag"># performance</a>
@@ -516,7 +491,6 @@ if(string.IsNullOrEmpty(s))
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -539,20 +513,16 @@ if(string.IsNullOrEmpty(s))
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -565,14 +535,13 @@ if(string.IsNullOrEmpty(s))
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -608,20 +577,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -629,20 +585,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

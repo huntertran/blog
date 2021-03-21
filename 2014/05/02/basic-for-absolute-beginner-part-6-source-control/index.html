@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa nhữ">
+<meta name="description" content="Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa nhữ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Basic for Absolute Beginner] – [Part 6] – Source Control">
 <meta property="og:url" content="https://huntertran.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">
@@ -55,7 +56,7 @@
 <meta property="og:image" content="https://i0.wp.com/farm3.staticflickr.com/2905/14085667152_399a036b26_o.png">
 <meta property="og:image" content="https://i1.wp.com/farm3.staticflickr.com/2933/13902262929_2db6b4718f_o.png">
 <meta property="article:published_time" content="2014-05-02T13:55:19.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.923Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="source control">
 <meta property="article:tag" content="Team foundation">
@@ -75,8 +76,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>[Basic for Absolute Beginner] – [Part 6] – Source Control | Tuan Tran's Blog</title>
+<title>[Basic for Absolute Beginner] – [Part 6] – Source Control | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -87,8 +87,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -138,7 +136,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -166,31 +164,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -201,8 +179,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -211,7 +188,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -227,7 +204,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -245,14 +222,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Khai-niem"><span class="nav-text">Khái niệm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dang-ky-tai-khoan"><span class="nav-text">Đăng ký tài khoản</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tren-Service"><span class="nav-text">Trên Service</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tao-Project"><span class="nav-text">Tạo Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quan-ly-thanh-vien"><span class="nav-text">Quản lý thành viên</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trong-mot-Project"><span class="nav-text">Trong một Project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trong-toan-bo-cac-Project"><span class="nav-text">Trong toàn bộ các Project</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tren-Visual-Studio"><span class="nav-text">Trên Visual Studio</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Connect-toi-tai-khoan-cua-ban"><span class="nav-text">Connect tới tài khoản của bạn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Them-Project-vao-Source-Control"><span class="nav-text">Thêm Project vào Source Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chinh-sua-va-Check-in"><span class="nav-text">Chỉnh sửa và Check in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-Latest-Version-%E2%80%93-Get-Specific-Version-%E2%80%93-Undo-Pending-Change"><span class="nav-text">Get Latest Version – Get Specific Version – Undo Pending Change</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Khai-niem"><span class="nav-text">Khái niệm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dang-ky-tai-khoan"><span class="nav-text">Đăng ký tài khoản</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tren-Service"><span class="nav-text">Trên Service</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tao-Project"><span class="nav-text">Tạo Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quan-ly-thanh-vien"><span class="nav-text">Quản lý thành viên</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trong-mot-Project"><span class="nav-text">Trong một Project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trong-toan-bo-cac-Project"><span class="nav-text">Trong toàn bộ các Project</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tren-Visual-Studio"><span class="nav-text">Trên Visual Studio</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Connect-toi-tai-khoan-cua-ban"><span class="nav-text">Connect tới tài khoản của bạn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Them-Project-vao-Source-Control"><span class="nav-text">Thêm Project vào Source Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chinh-sua-va-Check-in"><span class="nav-text">Chỉnh sửa và Check in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-Latest-Version-%E2%80%93-Get-Specific-Version-%E2%80%93-Undo-Pending-Change"><span class="nav-text">Get Latest Version – Get Specific Version – Undo Pending Change</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -295,7 +273,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -304,7 +283,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -317,9 +296,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -360,7 +337,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -394,24 +371,24 @@
 <p>Tưởng tượng tiếp, Team của bạn đang làm một dự án nào đó, nhưng mỗi thành viên lại ở một chỗ khác nhau, và các bạn không có cách gì gặp nhau được. Làm thế nào để làm việc cùng nhau trên một dự án?</p>
 <p>Tất cả câu hỏi đó, và nhiều câu hỏi khác, được trả lời bằng một tính năng gọi là “Team Foundation Server” của Visual Studio</p>
 <p><img src="https://i2.wp.com/farm6.staticflickr.com/5032/14076910292_20d9511445_o.png"></p>
-<a id="more"></a>
+<span id="more"></span>
 <ul>
-<li><a href="#kh%C3%A1i-ni%E1%BB%87m">Khái niệm</a></li>
-<li><a href="#%C4%91%C4%83ng-k%C3%BD-t%C3%A0i-kho%E1%BA%A3n">Đăng ký tài khoản</a></li>
+<li>  <a href="#kh%C3%A1i-ni%E1%BB%87m">Khái niệm</a></li>
+<li>  <a href="#%C4%91%C4%83ng-k%C3%BD-t%C3%A0i-kho%E1%BA%A3n">Đăng ký tài khoản</a></li>
 <li><a href="#tr%C3%AAn-service">Trên Service</a><ul>
-<li><a href="#t%E1%BA%A1o-project">Tạo Project</a></li>
+<li>  <a href="#t%E1%BA%A1o-project">Tạo Project</a></li>
 <li><a href="#qu%E1%BA%A3n-l%C3%BD-th%C3%A0nh-vi%C3%AAn">Quản lý thành viên</a><ul>
-<li><a href="#trong-m%E1%BB%99t-project">Trong một Project</a></li>
-<li><a href="#trong-to%C3%A0n-b%E1%BB%99-c%C3%A1c-project">Trong toàn bộ các Project</a></li>
+<li>  <a href="#trong-m%E1%BB%99t-project">Trong một Project</a></li>
+<li>  <a href="#trong-to%C3%A0n-b%E1%BB%99-c%C3%A1c-project">Trong toàn bộ các Project</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#tr%C3%AAn-visual-studio">Trên Visual Studio</a><ul>
-<li><a href="#connect-t%E1%BB%9Bi-t%C3%A0i-kho%E1%BA%A3n-c%E1%BB%A7a-b%E1%BA%A1n">Connect tới tài khoản của bạn</a></li>
-<li><a href="#th%C3%AAm-project-v%C3%A0o-source-control">Thêm Project vào Source Control</a></li>
-<li><a href="#ch%E1%BB%89nh-s%E1%BB%ADa-v%C3%A0-check-in">Chỉnh sửa và Check in</a></li>
-<li><a href="#get-latest-version--get-specific-version--undo-pending-change">Get Latest Version – Get Specific Version – Undo Pending Change</a></li>
+<li>  <a href="#connect-t%E1%BB%9Bi-t%C3%A0i-kho%E1%BA%A3n-c%E1%BB%A7a-b%E1%BA%A1n">Connect tới tài khoản của bạn</a></li>
+<li>  <a href="#th%C3%AAm-project-v%C3%A0o-source-control">Thêm Project vào Source Control</a></li>
+<li>  <a href="#ch%E1%BB%89nh-s%E1%BB%ADa-v%C3%A0-check-in">Chỉnh sửa và Check in</a></li>
+<li>  <a href="#get-latest-version--get-specific-version--undo-pending-change">Get Latest Version – Get Specific Version – Undo Pending Change</a></li>
 </ul>
 </li>
 </ul>
@@ -426,14 +403,12 @@
 <h2 id="Chinh-sua-va-Check-in"><a href="#Chinh-sua-va-Check-in" class="headerlink" title="Chỉnh sửa và Check in"></a>Chỉnh sửa và Check in</h2><p>Khi bạn bắt đầu chỉnh sửa một file nào đó, biểu tượng chiếc khóa bị thay đổi <img src="https://i0.wp.com/farm3.staticflickr.com/2905/14085667152_399a036b26_o.png"> Để thay đổi này lưu vào Source Control, bạn nhấn chuột phải lên nó và chọn Check in. Lưu ý, khi thay đổi nhiều file trong Project, bạn có thể chọn cả Project để check in. Nếu thay đổi trong nhiều Project, bạn có thể chọn cả Solution để check in. Thông thường, chọn cả Solution sẽ đảm bảo bạn không “Check in” thiếu thứ gì. Team Foundation sẽ tự động tìm ra các file bị thay đổi của bạn</p>
 <h2 id="Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change"><a href="#Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change" class="headerlink" title="Get Latest Version – Get Specific Version – Undo Pending Change"></a>Get Latest Version – Get Specific Version – Undo Pending Change</h2><p>Nếu bạn làm trong một dự án nhiều thành viên, và các thành viên kia hoàn tất phần code của họ và Check in lên Server. Bạn sẽ phải lấy các phần code mới nhất về Nhấn chuột phải vào phần bạn muốn cập nhật &gt; Get Latest Version (Recursive) <img src="https://i1.wp.com/farm3.staticflickr.com/2933/13902262929_2db6b4718f_o.png"></p>
 <ul>
-<li>Recursive tức là đệ quy. Tất cả các file bên trong nó cũng sẽ được cập nhật theo</li>
+<li>  Recursive tức là đệ quy. Tất cả các file bên trong nó cũng sẽ được cập nhật theo</li>
 </ul>
 <p>Khi bạn dùng lệnh này mà một số file của bạn có thay đổi chưa check in, nếu Team Foundation thấy có thể xử lý, nó sẽ xử lý giúp bạn luôn bằng cách gộp chung các thay đổi này với nhau. Tuy nhiên nếu có các thay đổi xung đột nhau, bạn sẽ có tùy chọn xem các xung đột để ra quyết định</p>
 <ul>
-<li><p>Get Specific version lại là một cách khác để đưa Project hoặc file nào đó về hiện trạng y hệt như một lần check in nào đó. Bạn có thể dùng số Changeset, hoặc ngày tháng để tìm kiếm toàn bộ các lần check in và quyết định “phục hồi”</p>
-</li>
-<li><p>Undo Pending Change xóa bỏ toàn bộ các thay đổi của bạn, và đưa Project hoặc file về lần Check in gần nhất.</p>
-</li>
+<li>Get Specific version lại là một cách khác để đưa Project hoặc file nào đó về hiện trạng y hệt như một lần check in nào đó. Bạn có thể dùng số Changeset, hoặc ngày tháng để tìm kiếm toàn bộ các lần check in và quyết định “phục hồi”</li>
+<li>Undo Pending Change xóa bỏ toàn bộ các thay đổi của bạn, và đưa Project hoặc file về lần Check in gần nhất.</li>
 </ul>
 <p>Như vậy, bạn đã có trong tay một cỗ máy thời gian thần kỳ để kiểm soát Source Code của mình, đồng thời hợp tác làm Team một các hiệu quả</p>
 
@@ -475,34 +450,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/source-control/" rel="tag"># source control</a>
@@ -532,7 +505,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -555,20 +527,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -581,14 +549,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -624,20 +591,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -645,20 +599,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

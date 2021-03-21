@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng. Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.">
+<meta name="description" content="Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng. Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning - 1.4 - Matrices and Vectors">
 <meta property="og:url" content="https://huntertran.com/2018/10/01/machine-learning-matrices-and-vectors/">
@@ -32,7 +33,7 @@
 <meta property="og:description" content="Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng. Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-10-01T11:47:01.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.733Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.927Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="matrice">
 <meta property="article:tag" content="matrix">
@@ -52,8 +53,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>Machine Learning - 1.4 - Matrices and Vectors | Tuan Tran's Blog</title>
+<title>Machine Learning - 1.4 - Matrices and Vectors | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -64,8 +64,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -115,7 +113,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -143,31 +141,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -178,8 +156,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -188,7 +165,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -204,7 +181,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -222,14 +199,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cac-ky-hieu"><span class="nav-text">1. Các ký hiệu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Matrix"><span class="nav-text">1.1. Matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Vector"><span class="nav-text">1.2. Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Ky-hieu"><span class="nav-text">1.3. Ký hiệu</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Phan-mem"><span class="nav-text">2. Phần mềm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Cac-phep-tinh"><span class="nav-text">3. Các phép tính</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Phep-cong-va-phep-nhan-matrix-so-thuc"><span class="nav-text">3.1. Phép cộng và phép nhân matrix số thực</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Nhan-matrix-voi-vector"><span class="nav-text">3.2. Nhân matrix với vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Nhan-2-matrix-voi-nhau"><span class="nav-text">3.3. Nhân 2 matrix với nhau</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-Cac-tinh-chat-cua-phep-nhan-matrix"><span class="nav-text">3.4. Các tính chất của phép nhân matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-Identity-Matrix"><span class="nav-text">3.5. Identity Matrix</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Inverse-nghich-dao-va-Transpose-chuyen-vi"><span class="nav-text">4. Inverse (nghịch đảo) và Transpose (chuyển vị)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Inverse-nghich-dao"><span class="nav-text">4.1. Inverse (nghịch đảo)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Transpose-chuyen-vi"><span class="nav-text">4.2. Transpose (chuyển vị)</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cac-ky-hieu"><span class="nav-text">1. Các ký hiệu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Matrix"><span class="nav-text">1.1. Matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Vector"><span class="nav-text">1.2. Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Ky-hieu"><span class="nav-text">1.3. Ký hiệu</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Phan-mem"><span class="nav-text">2. Phần mềm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Cac-phep-tinh"><span class="nav-text">3. Các phép tính</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Phep-cong-va-phep-nhan-matrix-so-thuc"><span class="nav-text">3.1. Phép cộng và phép nhân matrix số thực</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Nhan-matrix-voi-vector"><span class="nav-text">3.2. Nhân matrix với vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Nhan-2-matrix-voi-nhau"><span class="nav-text">3.3. Nhân 2 matrix với nhau</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-Cac-tinh-chat-cua-phep-nhan-matrix"><span class="nav-text">3.4. Các tính chất của phép nhân matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-Identity-Matrix"><span class="nav-text">3.5. Identity Matrix</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Inverse-nghich-dao-va-Transpose-chuyen-vi"><span class="nav-text">4. Inverse (nghịch đảo) và Transpose (chuyển vị)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Inverse-nghich-dao"><span class="nav-text">4.1. Inverse (nghịch đảo)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Transpose-chuyen-vi"><span class="nav-text">4.2. Transpose (chuyển vị)</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -272,7 +250,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -281,7 +260,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -294,9 +273,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -337,7 +314,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -361,27 +338,27 @@
     <div class="post-body" itemprop="articleBody">
         <p>Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng.</p>
 <p>Trong bài viết này, ta sẽ nói về Matrix và Vector, cùng các phép toán của chúng.</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Xem các bài viết khác tại <a href="https://huntertran.com/machine-learning-course/">Machine Learning Course Structure</a></p>
 <ul>
 <li><a href="#1-c%C3%A1c-k%C3%BD-hi%E1%BB%87u">1. Các ký hiệu</a><ul>
-<li><a href="#11-matrix">1.1. Matrix</a></li>
-<li><a href="#12-vector">1.2. Vector</a></li>
-<li><a href="#13-k%C3%BD-hi%E1%BB%87u">1.3. Ký hiệu</a></li>
+<li>  <a href="#11-matrix">1.1. Matrix</a></li>
+<li>  <a href="#12-vector">1.2. Vector</a></li>
+<li>  <a href="#13-k%C3%BD-hi%E1%BB%87u">1.3. Ký hiệu</a></li>
 </ul>
 </li>
-<li><a href="#2-ph%E1%BA%A7n-m%E1%BB%81m">2. Phần mềm</a></li>
+<li>  <a href="#2-ph%E1%BA%A7n-m%E1%BB%81m">2. Phần mềm</a></li>
 <li><a href="#3-c%C3%A1c-ph%C3%A9p-t%C3%ADnh">3. Các phép tính</a><ul>
-<li><a href="#31-ph%C3%A9p-c%E1%BB%99ng-v%C3%A0-ph%C3%A9p-nh%C3%A2n-matrix-s%E1%BB%91-th%E1%BB%B1c">3.1. Phép cộng và phép nhân matrix số thực</a></li>
-<li><a href="#32-nh%C3%A2n-matrix-v%E1%BB%9Bi-vector">3.2. Nhân matrix với vector</a></li>
-<li><a href="#33-nh%C3%A2n-2-matrix-v%E1%BB%9Bi-nhau">3.3. Nhân 2 matrix với nhau</a></li>
-<li><a href="#34-c%C3%A1c-t%C3%ADnh-ch%E1%BA%A5t-c%E1%BB%A7a-ph%C3%A9p-nh%C3%A2n-matrix">3.4. Các tính chất của phép nhân matrix</a></li>
-<li><a href="#35-identity-matrix">3.5. Identity Matrix</a></li>
+<li>  <a href="#31-ph%C3%A9p-c%E1%BB%99ng-v%C3%A0-ph%C3%A9p-nh%C3%A2n-matrix-s%E1%BB%91-th%E1%BB%B1c">3.1. Phép cộng và phép nhân matrix số thực</a></li>
+<li>  <a href="#32-nh%C3%A2n-matrix-v%E1%BB%9Bi-vector">3.2. Nhân matrix với vector</a></li>
+<li>  <a href="#33-nh%C3%A2n-2-matrix-v%E1%BB%9Bi-nhau">3.3. Nhân 2 matrix với nhau</a></li>
+<li>  <a href="#34-c%C3%A1c-t%C3%ADnh-ch%E1%BA%A5t-c%E1%BB%A7a-ph%C3%A9p-nh%C3%A2n-matrix">3.4. Các tính chất của phép nhân matrix</a></li>
+<li>  <a href="#35-identity-matrix">3.5. Identity Matrix</a></li>
 </ul>
 </li>
 <li><a href="#4-inverse-ngh%E1%BB%8Bch-%C4%91%E1%BA%A3o-v%C3%A0-transpose-chuy%E1%BB%83n-v%E1%BB%8B">4. Inverse (nghịch đảo) và Transpose (chuyển vị)</a><ul>
-<li><a href="#41-inverse-ngh%E1%BB%8Bch-%C4%91%E1%BA%A3o">4.1. Inverse (nghịch đảo)</a></li>
-<li><a href="#42-transpose-chuy%E1%BB%83n-v%E1%BB%8B">4.2. Transpose (chuyển vị)</a></li>
+<li>  <a href="#41-inverse-ngh%E1%BB%8Bch-%C4%91%E1%BA%A3o">4.1. Inverse (nghịch đảo)</a></li>
+<li>  <a href="#42-transpose-chuy%E1%BB%83n-v%E1%BB%8B">4.2. Transpose (chuyển vị)</a></li>
 </ul>
 </li>
 </ul>
@@ -392,18 +369,18 @@
 <p>$latex \begin{bmatrix} w \\ x \\ y \\ z \end{bmatrix}$</p>
 <p>Vector trên là một matrix 4x1.</p>
 <h2 id="1-3-Ky-hieu"><a href="#1-3-Ky-hieu" class="headerlink" title="1.3. Ký hiệu"></a>1.3. Ký hiệu</h2><ul>
-<li>$latex A_{ij}$ là phần tử ở dòng i và cột j của matrix.</li>
-<li>Vector A với ‘n’ dòng sẽ là một Vector có n chiều.</li>
-<li>$latex v_{i}$ là phần tử ở dòng i của vector.</li>
+<li>  $latex A_{ij}$ là phần tử ở dòng i và cột j của matrix.</li>
+<li>  Vector A với ‘n’ dòng sẽ là một Vector có n chiều.</li>
+<li>  $latex v_{i}$ là phần tử ở dòng i của vector.</li>
 </ul>
 <blockquote>
 <p>Bình thường, vector và matrix sẽ dùng index bắt đầu từ 1. Trong đa số các ngôn ngữ lập trình, mảng thường bắt đầu từ phần tử 0.</p>
 </blockquote>
 <ul>
-<li>Matrix thường được ký hiệu bằng chữ cái in hoa, vector thường được ký hiệu bằng chữ cái in thường.</li>
-<li><code>Scalar</code> nghĩa là một vật thể là một giá trị, không phải vector hay matrix.</li>
-<li>$latex \mathbb{R}$ được ký hiệu cho tập các số thực.</li>
-<li>$latex \mathbb{R}^n$ được ký hiệu cho tập các vector số thực n chiều.</li>
+<li>  Matrix thường được ký hiệu bằng chữ cái in hoa, vector thường được ký hiệu bằng chữ cái in thường.</li>
+<li>  <code>Scalar</code> nghĩa là một vật thể là một giá trị, không phải vector hay matrix.</li>
+<li>  $latex \mathbb{R}$ được ký hiệu cho tập các số thực.</li>
+<li>  $latex \mathbb{R}^n$ được ký hiệu cho tập các vector số thực n chiều.</li>
 </ul>
 <h1 id="2-Phan-mem"><a href="#2-Phan-mem" class="headerlink" title="2. Phần mềm"></a>2. Phần mềm</h1><p>Để thử nghiệm nhanh chóng các giả thuyết - thuật toán liên quan tới toán học trong Machine Learning, ta có thể dùng một phần mềm mang tên <a target="_blank" rel="noopener" href="https://www.gnu.org/software/octave/download.html">Octave</a></p>
 <p>Bạn có thể chạy đoạn code dưới đây trong Octave hoặc Matlab</p>
@@ -445,8 +422,8 @@
 <h2 id="3-4-Cac-tinh-chat-cua-phep-nhan-matrix"><a href="#3-4-Cac-tinh-chat-cua-phep-nhan-matrix" class="headerlink" title="3.4. Các tính chất của phép nhân matrix"></a>3.4. Các tính chất của phép nhân matrix</h2><p>Phép nhân 2 số thực có một số tính chất không thể áp dụng với phép nhân 2 matrix.</p>
 <p>Gọi $latex A$ và $latex B$ là 2 matrix, ta có:</p>
 <ul>
-<li>$latex A \times B \neq B \times A$</li>
-<li>$latex A \times B \times C = A \times (B \times C) = (A \times B) \times C$</li>
+<li>  $latex A \times B \neq B \times A$</li>
+<li>  $latex A \times B \times C = A \times (B \times C) = (A \times B) \times C$</li>
 </ul>
 <h2 id="3-5-Identity-Matrix"><a href="#3-5-Identity-Matrix" class="headerlink" title="3.5. Identity Matrix"></a>3.5. Identity Matrix</h2><p>Một matrix bất kỳ khi nhân với một Identity matrix phù hợp sẽ có kết quả là chính nó.</p>
 <p>Ký hiệu: $latex I$ hoặc $latex I_{n \times n}$</p>
@@ -511,34 +488,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/matrice/" rel="tag"># matrice</a>
@@ -569,7 +544,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -592,20 +566,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -618,14 +588,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -661,20 +630,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -682,20 +638,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

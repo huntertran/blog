@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Chào các bạn, ở phần trước, các bạn đã biết cách tạo một Virtual Machine trên Azure. Phần này mình sẽ hướng dẫn cho các bạn cách thiết lập nó để đăng nhập bằng chính Microsoft Account của bạn, và biến">
+<meta name="description" content="Chào các bạn, ở phần trước, các bạn đã biết cách tạo một Virtual Machine trên Azure. Phần này mình sẽ hướng dẫn cho các bạn cách thiết lập nó để đăng nhập bằng chính Microsoft Account của bạn, và biến">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Virtual Machine in Azure Part 2: Configure to login with Microsoft Account &amp; make it FTP Server">
 <meta property="og:url" content="https://huntertran.com/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/">
@@ -62,7 +63,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7556/15948706180_d594463823_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7470/15949950969_fbd629132e_o.png">
 <meta property="article:published_time" content="2014-12-29T09:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.923Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="file">
 <meta property="article:tag" content="azure">
@@ -84,8 +85,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>Virtual Machine in Azure Part 2: Configure to login with Microsoft Account & make it FTP Server | Tuan Tran's Blog</title>
+<title>Virtual Machine in Azure Part 2: Configure to login with Microsoft Account & make it FTP Server | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -96,8 +96,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -147,7 +145,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -175,31 +173,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -210,8 +188,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -220,7 +197,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -236,7 +213,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -254,14 +231,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Login-with-MS-Account"><span class="nav-text">Login with MS Account</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FTP-Server"><span class="nav-text">FTP Server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Azure-Portal"><span class="nav-text">Cài đặt trên Azure Portal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Virtual-Machine"><span class="nav-text">Cài đặt trên Virtual Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cai-FileZilla-Server"><span class="nav-text">Cài FileZilla Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thiep-lap-Firewall"><span class="nav-text">Thiếp lập Firewall</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Local-Machine"><span class="nav-text"> Cài đặt trên Local Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cai-dat-FileZilla-Client"><span class="nav-text">Cài đặt FileZilla Client</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thu-nghiem-toc-do-cua-FTP-Server-moi-tao"><span class="nav-text">Thử nghiệm tốc độ của FTP Server mới tạo</span></a></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Login-with-MS-Account"><span class="nav-text">Login with MS Account</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FTP-Server"><span class="nav-text">FTP Server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Azure-Portal"><span class="nav-text">Cài đặt trên Azure Portal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Virtual-Machine"><span class="nav-text">Cài đặt trên Virtual Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cai-FileZilla-Server"><span class="nav-text">Cài FileZilla Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thiep-lap-Firewall"><span class="nav-text">Thiếp lập Firewall</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cai-dat-tren-Local-Machine"><span class="nav-text">Cài đặt trên Local Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cai-dat-FileZilla-Client"><span class="nav-text">Cài đặt FileZilla Client</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thu-nghiem-toc-do-cua-FTP-Server-moi-tao"><span class="nav-text">Thử nghiệm tốc độ của FTP Server mới tạo</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -304,7 +282,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -313,7 +292,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -326,9 +305,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -369,7 +346,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -392,7 +369,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>Chào các bạn, ở phần trước, các bạn đã biết cách tạo một Virtual Machine trên Azure. Phần này mình sẽ hướng dẫn cho các bạn cách thiết lập nó để đăng nhập bằng chính Microsoft Account của bạn, và biến nó thành một máy chủ FTP nhé.</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="Login-with-MS-Account"><a href="#Login-with-MS-Account" class="headerlink" title="Login with MS Account"></a>Login with MS Account</h1><p>Tạo một user mới, dùng Microsoft Account làm username (ví dụ như <a href="mailto:blahblahblah@hotmail.com">blahblahblah@hotmail.com</a> chả hạn)</p>
 <p><img src="https://farm8.staticflickr.com/7480/16133514591_b1627eeae8_o.png"></p>
 <p><img src="https://farm8.staticflickr.com/7553/16135418725_c4193f946f_o.png"></p>
@@ -443,7 +420,7 @@
 <p><img src="https://farm8.staticflickr.com/7570/15513526614_76337d6844_o.png"> <img src="https://farm9.staticflickr.com/8638/16110072306_90f3ffacf3_o.png"> <img src="https://farm8.staticflickr.com/7462/16135112792_25b507d9d3_o.png"></p>
 <p>Thiết lập cổng cho cái Inbound Rule này</p>
 <p><img src="https://farm8.staticflickr.com/7485/15513532304_2608708f49_o.png"></p>
-<h2 id="Cai-dat-tren-Local-Machine"><a href="#Cai-dat-tren-Local-Machine" class="headerlink" title=" Cài đặt trên Local Machine"></a> Cài đặt trên Local Machine</h2><h3 id="Cai-dat-FileZilla-Client"><a href="#Cai-dat-FileZilla-Client" class="headerlink" title="Cài đặt FileZilla Client"></a>Cài đặt FileZilla Client</h3><p>Tải FileZilla Client tại: <a target="_blank" rel="noopener" href="https://filezilla-project.org/download.php?type=client">https://filezilla-project.org/download.php?type=client</a></p>
+<h2 id="Cai-dat-tren-Local-Machine"><a href="#Cai-dat-tren-Local-Machine" class="headerlink" title="Cài đặt trên Local Machine"></a>Cài đặt trên Local Machine</h2><h3 id="Cai-dat-FileZilla-Client"><a href="#Cai-dat-FileZilla-Client" class="headerlink" title="Cài đặt FileZilla Client"></a>Cài đặt FileZilla Client</h3><p>Tải FileZilla Client tại: <a target="_blank" rel="noopener" href="https://filezilla-project.org/download.php?type=client">https://filezilla-project.org/download.php?type=client</a></p>
 <p>Khi khởi chạy, điền dải IP trong Public IP trên Azure của bạn</p>
 <p><img src="https://farm8.staticflickr.com/7569/16135891365_c631a0fc94_o.png"></p>
 <p>Điền các thông tin vào các ô tương ứng và nhấn quick connect</p>
@@ -497,34 +474,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/file/" rel="tag"># file</a>
@@ -556,7 +531,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -579,20 +553,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -605,14 +575,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -648,20 +617,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -669,20 +625,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Chào các bạn, Sau đợt nghỉ lễ dài, hôm nay mình giới thiệu phần 3 của loạt bài viết [Basic for Absolute Beginner] Phần 1 nói về các control cơ bản là Grid và StackPanel: [Windows Phone–Silverlight] L">
+<meta name="description" content="Chào các bạn, Sau đợt nghỉ lễ dài, hôm nay mình giới thiệu phần 3 của loạt bài viết [Basic for Absolute Beginner] Phần 1 nói về các control cơ bản là Grid và StackPanel: [Windows Phone–Silverlight] L">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it">
 <meta property="og:url" content="https://huntertran.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">
@@ -50,7 +51,7 @@
 <meta property="og:image" content="http://farm8.staticflickr.com/7422/12793098413_e19c21cbe5_o.png%22">
 <meta property="og:image" content="http://farm4.staticflickr.com/3818/12793481294_7d345a6ec2_o.png%22">
 <meta property="article:published_time" content="2014-02-26T14:19:49.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.923Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="app">
@@ -72,8 +73,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it | Tuan Tran's Blog</title>
+<title>[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -84,8 +84,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -135,7 +133,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -163,31 +161,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -198,8 +176,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -208,7 +185,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -224,7 +201,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -242,14 +219,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi"><span class="nav-text">1. Cách thức ứng dụng hoạt động trên thiết bị</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Cau-truc-cua-ung-dung"><span class="nav-text">2. Cấu trúc của ứng dụng</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Cac-thanh-phan"><span class="nav-text">2.1 Các thành phần</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Giao-dien-chinh"><span class="nav-text">2.1.1 Giao diện chính</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Properties"><span class="nav-text">2.1.2 Properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-References"><span class="nav-text">2.1.3 References</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-Assets"><span class="nav-text">2.1.4 Assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-Resource"><span class="nav-text">2.1.5 Resource</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-6-App-xaml-va-App-xaml-cs"><span class="nav-text">2.1.6 App.xaml và App.xaml.cs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-LocalizedString-cs"><span class="nav-text">2.1.7 LocalizedString.cs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-8-MainPage-xaml-va-MainPage-xaml-cs"><span class="nav-text">2.1.8 MainPage.xaml và MainPage.xaml.cs</span></a></li></ol></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi"><span class="nav-text">1. Cách thức ứng dụng hoạt động trên thiết bị</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Cau-truc-cua-ung-dung"><span class="nav-text">2. Cấu trúc của ứng dụng</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Cac-thanh-phan"><span class="nav-text">2.1 Các thành phần</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Giao-dien-chinh"><span class="nav-text">2.1.1 Giao diện chính</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Properties"><span class="nav-text">2.1.2 Properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-References"><span class="nav-text">2.1.3 References</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-Assets"><span class="nav-text">2.1.4 Assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-Resource"><span class="nav-text">2.1.5 Resource</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-6-App-xaml-va-App-xaml-cs"><span class="nav-text">2.1.6 App.xaml và App.xaml.cs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-LocalizedString-cs"><span class="nav-text">2.1.7 LocalizedString.cs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-8-MainPage-xaml-va-MainPage-xaml-cs"><span class="nav-text">2.1.8 MainPage.xaml và MainPage.xaml.cs</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -292,7 +270,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -301,7 +280,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -314,9 +293,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -357,7 +334,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,22 +366,19 @@
 <p>Phần 2 nói về thiết kế giao diện với XAML: <a target="_blank" rel="noopener" href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Windows Phone – Silverlight] Layout with XAML – Basic for Absolute Beginner – Part 2</a></p>
 <p>Tại sao tôi lại nói 2 phần này trước cả App’s Structure. Các control là điều cơ bản nhất, cho dù sau này Structure một project có thể sẽ thay đổi, nhưng bạn sẽ tìm ra cách hiểu chúng nhanh thôi. Khi mới tạo một project Windows Phone, Visual Studio đã mở sẵn cho bạn file Mainpage.xaml để bạn chỉnh sửa.</p>
 <p>Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu trúc một ứng dụng trong Windows Phone nhé</p>
-<a id="more"></a>
+<span id="more"></span>
 <ul>
-<li><p><a href="#1-c%C3%A1ch-th%E1%BB%A9c-%E1%BB%A9ng-d%E1%BB%A5ng-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-tr%C3%AAn-thi%E1%BA%BFt-b%E1%BB%8B"><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></a></p>
-</li>
-<li><p><a href="#2-c%E1%BA%A5u-tr%C3%BAc-c%E1%BB%A7a-%E1%BB%A9ng-d%E1%BB%A5ng"><strong>2. Cấu trúc của ứng dụng</strong></a></p>
-<ul>
-<li><p><a href="#21-c%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n"><strong>2.1 Các thành phần</strong></a></p>
-<ul>
-<li><a href="#211-giao-di%E1%BB%87n-ch%C3%ADnh"><strong>2.1.1 Giao diện chính</strong></a></li>
-<li><a href="#212-properties"><strong>2.1.2 Properties</strong></a></li>
-<li><a href="#213-references"><strong>2.1.3 References</strong></a></li>
-<li><a href="#214-assets"><strong>2.1.4 Assets</strong></a></li>
-<li><a href="#215-resource"><strong>2.1.5 Resource</strong></a></li>
-<li><a href="#216-appxaml-v%C3%A0-appxamlcs"><strong>2.1.6 App.xaml và App.xaml.cs</strong></a></li>
-<li><a href="#217-localizedstringcs"><strong>2.1.7 LocalizedString.cs</strong></a></li>
-<li><a href="#218-mainpagexaml-v%C3%A0-mainpagexamlcs"><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></a></li>
+<li>  <a href="#1-c%C3%A1ch-th%E1%BB%A9c-%E1%BB%A9ng-d%E1%BB%A5ng-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-tr%C3%AAn-thi%E1%BA%BFt-b%E1%BB%8B"><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></a></li>
+<li><a href="#2-c%E1%BA%A5u-tr%C3%BAc-c%E1%BB%A7a-%E1%BB%A9ng-d%E1%BB%A5ng"><strong>2. Cấu trúc của ứng dụng</strong></a><ul>
+<li><a href="#21-c%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n"><strong>2.1 Các thành phần</strong></a><ul>
+<li>  <a href="#211-giao-di%E1%BB%87n-ch%C3%ADnh"><strong>2.1.1 Giao diện chính</strong></a></li>
+<li>  <a href="#212-properties"><strong>2.1.2 Properties</strong></a></li>
+<li>  <a href="#213-references"><strong>2.1.3 References</strong></a></li>
+<li>  <a href="#214-assets"><strong>2.1.4 Assets</strong></a></li>
+<li>  <a href="#215-resource"><strong>2.1.5 Resource</strong></a></li>
+<li>  <a href="#216-appxaml-v%C3%A0-appxamlcs"><strong>2.1.6 App.xaml và App.xaml.cs</strong></a></li>
+<li>  <a href="#217-localizedstringcs"><strong>2.1.7 LocalizedString.cs</strong></a></li>
+<li>  <a href="#218-mainpagexaml-v%C3%A0-mainpagexamlcs"><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -423,12 +397,12 @@
 <p>Ở bên dưới, có 2 tùy chọn khá vui</p>
 <p><img src="http://farm4.staticflickr.com/3810/12791424864_1cb8e8fe4a_o.png%22"></p>
 <ul>
-<li>Create directory for Solution: Solution của bạn sẽ được đặt trong một folder “mẹ”, và Project sẽ được đặt trong folder “con”</li>
+<li>  Create directory for Solution: Solution của bạn sẽ được đặt trong một folder “mẹ”, và Project sẽ được đặt trong folder “con”</li>
 </ul>
 <p>Nói thêm một chút về các thể loại Project của Visual Studio: Khi tạo mới, bạn sẽ tạo một Solution (đuôi file .sln). Và toàn bộ Project của bạn sẽ nằm trong Solution đó. Một Solution có thể chứa nhiều Project.</p>
 <p>Vậy tại sao bạn lại cần nhiều Project trong 1 Solution? Vì mỗi Project sẽ tạo ra một module khác nhau của hệ thống. Có thể Project chính của bạn là một ứng dụng nghe nhạc, và Project phụ sẽ là một module cho phép cập nhật ngầm, tự động thông tin bài nhạc, hình album vân vân</p>
 <ul>
-<li>Add to source control: Source Control là một thuật ngữ cho một loại công cụ giúp bạn quản lý code của mình được hiệu quả. Microsoft có một công cụ Source Control là Team Foundation Server. Các bài viết sau sẽ nói về nó nhé</li>
+<li>  Add to source control: Source Control là một thuật ngữ cho một loại công cụ giúp bạn quản lý code của mình được hiệu quả. Microsoft có một công cụ Source Control là Team Foundation Server. Các bài viết sau sẽ nói về nó nhé</li>
 </ul>
 <p>Nhấn Ok để tạo Project</p>
 <p><img src="http://farm3.staticflickr.com/2812/12792547075_8aaa4aa9d4_o.png%22"></p>
@@ -514,34 +488,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/windows-phone/" rel="tag"># windows phone</a>
@@ -573,7 +545,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -596,20 +567,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -622,14 +589,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -665,20 +631,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -686,20 +639,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>

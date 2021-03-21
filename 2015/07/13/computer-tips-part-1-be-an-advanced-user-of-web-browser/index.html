@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -17,14 +19,13 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huntertran.com","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-
-  <meta name="description" content="Giữa một ma trận mê cung các trình duyệt, nào là edge rồi cờ rôm, cáo lửa với chả đít nhôm, bạn sẽ xài cái gì đây? Lại nghe, chrome ăn ram như uống nước, firefox chậm như con rùa bò, chỉ hận sao không">
+<meta name="description" content="Giữa một ma trận mê cung các trình duyệt, nào là edge rồi cờ rôm, cáo lửa với chả đít nhôm, bạn sẽ xài cái gì đây? Lại nghe, chrome ăn ram như uống nước, firefox chậm như con rùa bò, chỉ hận sao không">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Computer Tips] [Part 1] Be an Advanced User of Web Browser">
 <meta property="og:url" content="https://huntertran.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">
@@ -50,7 +51,7 @@
 <meta property="og:image" content="https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png">
 <meta property="og:image" content="https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png">
 <meta property="article:published_time" content="2015-07-13T11:49:53.000Z">
-<meta property="article:modified_time" content="2020-11-25T14:55:24.729Z">
+<meta property="article:modified_time" content="2021-03-21T03:35:39.923Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="chrome">
 <meta property="article:tag" content="firefox">
@@ -71,8 +72,7 @@
     lang   : 'en'
   };
 </script>
-
-  <title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser | Tuan Tran's Blog</title>
+<title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
     <script data-pjax>
@@ -83,8 +83,6 @@
         gtag('config', 'UA-174401878-1');
       }
     </script>
-
-
 
 
 
@@ -134,7 +132,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -162,31 +160,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -197,8 +175,7 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -207,7 +184,7 @@
            placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -223,7 +200,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle">
+  <div class="toggle sidebar-toggle" role="button">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -241,14 +218,15 @@
         </li>
       </ul>
 
-      <!--noindex-->
-      <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Thiet-lap-cho-may-tinh"><span class="nav-text">1. Thiết lập cho máy tính</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Quay-ve-thiet-lap-mac-dinh"><span class="nav-text">1.1 Quay về thiết lập mặc định</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong"><span class="nav-text">1.2 Gỡ bỏ các trình duyệt không chính thống</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu"><span class="nav-text">1.3 Cài đặt một trình duyệt Web chính chủ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-Mozilla-Firefox"><span class="nav-text">1.3.1 Mozilla Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-Google-Chrome"><span class="nav-text">1.3.2 Google Chrome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Toi-uu-hoa-trinh-duyet-web"><span class="nav-text">2. Tối ưu hóa trình duyệt web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Mozilla-Firefox"><span class="nav-text">2.1 Mozilla Firefox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Ve-thiet-lap-mac-dinh"><span class="nav-text">2.1.1 Về thiết lập mặc định</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Go-bo-cac-Add-on-%E2%80%93-Plug-in-vo-van"><span class="nav-text">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Cai-cac-Add-on-huu-ich"><span class="nav-text">2.1.3 Cài các Add-on hữu ích</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-1-Color-that-site"><span class="nav-text">2.1.3.1 Color that site</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-2-Grease-Monkey"><span class="nav-text">2.1.3.2 Grease Monkey</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Google-Chrome"><span class="nav-text">2.2 Google Chrome</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-Thiet-lap-mac-dinh"><span class="nav-text">2.2.1 Thiết lập mặc định</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><span class="nav-text">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-Cai-cac-add-on-huu-ich"><span class="nav-text">2.2.3 Cài các add-on hữu ích</span></a></li></ol></li></ol></li></ol></div>
-      </section>
-      <!--/noindex-->
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Thiet-lap-cho-may-tinh"><span class="nav-text">1. Thiết lập cho máy tính</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Quay-ve-thiet-lap-mac-dinh"><span class="nav-text">1.1 Quay về thiết lập mặc định</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong"><span class="nav-text">1.2 Gỡ bỏ các trình duyệt không chính thống</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu"><span class="nav-text">1.3 Cài đặt một trình duyệt Web chính chủ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-1-Mozilla-Firefox"><span class="nav-text">1.3.1 Mozilla Firefox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2-Google-Chrome"><span class="nav-text">1.3.2 Google Chrome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Toi-uu-hoa-trinh-duyet-web"><span class="nav-text">2. Tối ưu hóa trình duyệt web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Mozilla-Firefox"><span class="nav-text">2.1 Mozilla Firefox</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Ve-thiet-lap-mac-dinh"><span class="nav-text">2.1.1 Về thiết lập mặc định</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Go-bo-cac-Add-on-%E2%80%93-Plug-in-vo-van"><span class="nav-text">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Cai-cac-Add-on-huu-ich"><span class="nav-text">2.1.3 Cài các Add-on hữu ích</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-1-Color-that-site"><span class="nav-text">2.1.3.1 Color that site</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-2-Grease-Monkey"><span class="nav-text">2.1.3.2 Grease Monkey</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Google-Chrome"><span class="nav-text">2.2 Google Chrome</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-Thiet-lap-mac-dinh"><span class="nav-text">2.2.1 Thiết lập mặc định</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><span class="nav-text">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-Cai-cac-add-on-huu-ich"><span class="nav-text">2.2.3 Cài các add-on hữu ích</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
@@ -291,7 +269,8 @@
 
 
 
-      </section>
+        </div>
+      </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -300,7 +279,7 @@
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -313,9 +292,7 @@
 
 
     <div class="main-inner post posts-expand">
-      
 
-      
 
   
 
@@ -356,7 +333,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-25 09:55:24" itemprop="dateModified" datetime="2020-11-25T09:55:24-05:00">2020-11-25</time>
+        <time title="Modified: 2021-03-20 23:35:39" itemprop="dateModified" datetime="2021-03-20T23:35:39-04:00">2021-03-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -382,43 +359,33 @@
 <p>Lại nghe, chrome ăn ram như uống nước, firefox chậm như con rùa bò, chỉ hận sao không thể tăng ram, gắn SSD.</p>
 <p>Còn nghe, Add-on như thuốc tăng lực, User-script như lá đu đủ, xài thế nào đây?</p>
 <p>Bài viết này sẽ hướng dẫn các bạn cách thiết lập cho các trình duyệt phổ biến để chúng chạy trơn tru mượt mà mà không chói lóa.</p>
-<a id="more"></a>
+<span id="more"></span>
 <ul>
-<li><p><a href="#1-thi%E1%BA%BFt-l%E1%BA%ADp-cho-m%C3%A1y-t%C3%ADnh">1. Thiết lập cho máy tính</a></p>
-<ul>
-<li><p><a href="#11-quay-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">1.1 Quay về thiết lập mặc định</a></p>
-</li>
-<li><p><a href="#12-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-tr%C3%ACnh-duy%E1%BB%87t-kh%C3%B4ng-ch%C3%ADnh-th%E1%BB%91ng">1.2 Gỡ bỏ các trình duyệt không chính thống</a></p>
-</li>
-<li><p><a href="#13-c%C3%A0i-%C4%91%E1%BA%B7t-m%E1%BB%99t-tr%C3%ACnh-duy%E1%BB%87t-web-ch%C3%ADnh-ch%E1%BB%A7">1.3 Cài đặt một trình duyệt Web chính chủ</a></p>
-<ul>
-<li><a href="#131-mozilla-firefox">1.3.1 Mozilla Firefox</a></li>
-<li><a href="#132-google-chrome">1.3.2 Google Chrome</a></li>
+<li><a href="#1-thi%E1%BA%BFt-l%E1%BA%ADp-cho-m%C3%A1y-t%C3%ADnh">1. Thiết lập cho máy tính</a><ul>
+<li>  <a href="#11-quay-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">1.1 Quay về thiết lập mặc định</a></li>
+<li>  <a href="#12-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-tr%C3%ACnh-duy%E1%BB%87t-kh%C3%B4ng-ch%C3%ADnh-th%E1%BB%91ng">1.2 Gỡ bỏ các trình duyệt không chính thống</a></li>
+<li><a href="#13-c%C3%A0i-%C4%91%E1%BA%B7t-m%E1%BB%99t-tr%C3%ACnh-duy%E1%BB%87t-web-ch%C3%ADnh-ch%E1%BB%A7">1.3 Cài đặt một trình duyệt Web chính chủ</a><ul>
+<li>  <a href="#131-mozilla-firefox">1.3.1 Mozilla Firefox</a></li>
+<li>  <a href="#132-google-chrome">1.3.2 Google Chrome</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a href="#2-t%E1%BB%91i-%C6%B0u-h%C3%B3a-tr%C3%ACnh-duy%E1%BB%87t-web">2. Tối ưu hóa trình duyệt web</a></p>
-<ul>
-<li><p><a href="#21-mozilla-firefox">2.1 Mozilla Firefox</a></p>
-<ul>
-<li><p><a href="#211-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.1.1 Về thiết lập mặc định</a></p>
-</li>
-<li><p><a href="#212-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on--plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</a></p>
-</li>
-<li><p><a href="#213-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.1.3 Cài các Add-on hữu ích</a></p>
-<ul>
-<li><a href="#2131-color-that-site">2.1.3.1 Color that site</a></li>
-<li><a href="#2132-grease-monkey">2.1.3.2 Grease Monkey</a></li>
+<li><a href="#2-t%E1%BB%91i-%C6%B0u-h%C3%B3a-tr%C3%ACnh-duy%E1%BB%87t-web">2. Tối ưu hóa trình duyệt web</a><ul>
+<li><a href="#21-mozilla-firefox">2.1 Mozilla Firefox</a><ul>
+<li>  <a href="#211-v%E1%BB%81-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.1.1 Về thiết lập mặc định</a></li>
+<li>  <a href="#212-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on--plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</a></li>
+<li><a href="#213-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.1.3 Cài các Add-on hữu ích</a><ul>
+<li>  <a href="#2131-color-that-site">2.1.3.1 Color that site</a></li>
+<li>  <a href="#2132-grease-monkey">2.1.3.2 Grease Monkey</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a href="#22-google-chrome">2.2 Google Chrome</a></p>
-<ul>
-<li><a href="#221-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.2.1 Thiết lập mặc định</a></li>
-<li><a href="#222-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on-v%C3%A0-plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</a></li>
-<li><a href="#223-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.2.3 Cài các add-on hữu ích</a></li>
+<li><a href="#22-google-chrome">2.2 Google Chrome</a><ul>
+<li>  <a href="#221-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%B7c-%C4%91%E1%BB%8Bnh">2.2.1 Thiết lập mặc định</a></li>
+<li>  <a href="#222-g%E1%BB%A1-b%E1%BB%8F-c%C3%A1c-add-on-v%C3%A0-plug-in-v%E1%BB%9B-v%E1%BA%A9n">2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</a></li>
+<li>  <a href="#223-c%C3%A0i-c%C3%A1c-add-on-h%E1%BB%AFu-%C3%ADch">2.2.3 Cài các add-on hữu ích</a></li>
 </ul>
 </li>
 </ul>
@@ -434,12 +401,12 @@
 <p>Tin tui đi, các trình duyệt này hoàn toàn sẽ bị đè bẹp bởi bản gốc nếu bạn tiếp tục đọc tiếp bài blog này</p>
 <p>Các trình duyệt không chính thống là (ý kiến chủ quan):</p>
 <ul>
-<li>Cờ rôm cộng / Cờ rôm</li>
-<li>Comodo Dragon – Đi kèm khi cài Comodo Internet Security</li>
-<li>Rockmelt</li>
-<li>Waterfox</li>
-<li>Pale Moon</li>
-<li>Vân vân và vân vân</li>
+<li>  Cờ rôm cộng / Cờ rôm</li>
+<li>  Comodo Dragon – Đi kèm khi cài Comodo Internet Security</li>
+<li>  Rockmelt</li>
+<li>  Waterfox</li>
+<li>  Pale Moon</li>
+<li>  Vân vân và vân vân</li>
 </ul>
 <h2 id="1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu"><a href="#1-3-Cai-dat-mot-trinh-duyet-Web-chinh-chu" class="headerlink" title="1.3 Cài đặt một trình duyệt Web chính chủ"></a>1.3 Cài đặt một trình duyệt Web chính chủ</h2><p>Đối với các bạn đam mê tốc độ cao, ngốn ít ram, mì ăn liền, mình khuyến cáo không nên cài gì cả, mà hãy dùng Edge.</p>
 <p>Nếu bạn vẫn đang dùng Windows 7, thì bạn có thể xài Internet Explorer</p>
@@ -468,10 +435,10 @@
 <h3 id="2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van"><a href="#2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van" class="headerlink" title="2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn"></a>2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</h3><p>Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox &gt; Addon <img src="https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png"></p>
 <p>Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại những cái mà bạn biết rõ, hoặc nó có trong danh sách này:</p>
 <ul>
-<li>IDM CC</li>
-<li>Noscript</li>
-<li>uBlock origin</li>
-<li>Lastpass</li>
+<li>  IDM CC</li>
+<li>  Noscript</li>
+<li>  uBlock origin</li>
+<li>  Lastpass</li>
 </ul>
 <p>Đối với plug-in, vì là các phần mềm bên thứ 3 cài cắm vô, nên bạn không thể gỡ nó ra khỏi firefox, tuy nhiên, bạn có lựa chọn không bao giờ kích hoạt các plug-in này</p>
 <p>Chuyển sang thẻ plug-in, chọn never active đối với các plug-in khả nghi.</p>
@@ -494,29 +461,29 @@
 <p>Bạn muốn Download nó, nhưng để download một tấm hình trên flickr, bạn phải trải qua rất nhiều bước trước khi có link download. Với Grease Monkey, chỉ cần 1 click là đã download được ngay.</p>
 <p>Một vấn đề nữa, bạn không phải lập trình viên, làm sao viết được những đoạn script đó cho Grease Monkey? Câu trả lời là đã có người viết những đoạn Script đó cho bạn. Một số trang Script tiu bỉu:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en">https://greasyfork.org/en</a></li>
-<li><a target="_blank" rel="noopener" href="https://openuserjs.org/">https://openuserjs.org/</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://greasyfork.org/en">https://greasyfork.org/en</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://openuserjs.org/">https://openuserjs.org/</a></li>
 </ul>
 <p><strong>Một vài đoạn Script tiu bỉu:</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/1190-flickr-original-link">https://greasyfork.org/en/scripts/1190-flickr-original-link</a> - Cho phép bạn download hình trên flickr chỉ với 1 click</li>
-<li><a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/568-direct-google">https://greasyfork.org/en/scripts/568-direct-google</a> - Bỏ qua chế độ redirect khi search trên google, giúp bạn mở kết quả tìm kiếm nhanh hơn, đồng thời hiện link “Cached” của kết quả đó</li>
-<li>Còn rất nhìu đoạn script khác chờ bạn khám phá</li>
+<li>  <a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/1190-flickr-original-link">https://greasyfork.org/en/scripts/1190-flickr-original-link</a> - Cho phép bạn download hình trên flickr chỉ với 1 click</li>
+<li>  <a target="_blank" rel="noopener" href="https://greasyfork.org/en/scripts/568-direct-google">https://greasyfork.org/en/scripts/568-direct-google</a> - Bỏ qua chế độ redirect khi search trên google, giúp bạn mở kết quả tìm kiếm nhanh hơn, đồng thời hiện link “Cached” của kết quả đó</li>
+<li>  Còn rất nhìu đoạn script khác chờ bạn khám phá</li>
 </ul>
 <p>Một số add-on nâng cao hơn sẽ có ở phần 2 của chủ đề này nhé</p>
 <h2 id="2-2-Google-Chrome"><a href="#2-2-Google-Chrome" class="headerlink" title="2.2 Google Chrome"></a>2.2 Google Chrome</h2><h3 id="2-2-1-Thiet-lap-mac-dinh"><a href="#2-2-1-Thiet-lap-mac-dinh" class="headerlink" title="2.2.1 Thiết lập mặc định"></a>2.2.1 Thiết lập mặc định</h3><p>Bạn mở GG Chrome, chọt vào nút Menu &gt; Settings <img src="https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png"></p>
 <p>Ôi thôi, cái setting dài quá dài. Kéo xuống dưới cùng, chọn Show Advanced Settings…, rồi tiếp tục kéo xuống dưới cùng, sẽ có nút Reset settings. Bấm vào đó để reset lại (Lưu ý làm cái này thì GG Chrome của bạn sẽ như mới)</p>
 <h3 id="2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><a href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van" class="headerlink" title="2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn"></a>2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</h3><p>Cũng trong trang setting, bạn chọn mục Add-on. Ở mỗi đầu add-on sẽ có biểu tượng thùng rác. Bấm vô đó để Remove một add-on tương ứng. Chừa lại các add-on sau:</p>
 <ul>
-<li>Google Docs</li>
-<li>Google Sheets</li>
-<li>Google Slides</li>
-<li>IDM Integration Module</li>
+<li>  Google Docs</li>
+<li>  Google Sheets</li>
+<li>  Google Slides</li>
+<li>  IDM Integration Module</li>
 </ul>
 <h3 id="2-2-3-Cai-cac-add-on-huu-ich"><a href="#2-2-3-Cai-cac-add-on-huu-ich" class="headerlink" title="2.2.3 Cài các add-on hữu ích"></a>2.2.3 Cài các add-on hữu ích</h3><p>Số lượng add-on bên Google Chrome thực sự không nhiều và phong phú như bên Firefox, tuy nhiên cũng có một số Add-on tương đương</p>
 <ul>
-<li>Grease Monkey =&gt; TamperMonkey: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog">https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog</a></li>
-<li>Color that site =&gt; Stylish: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe">https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe</a></li>
+<li>  Grease Monkey =&gt; TamperMonkey: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog">https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog</a></li>
+<li>  Color that site =&gt; Stylish: <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe">https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe</a></li>
 </ul>
 <p>Phần 2 của bài viết ở đây: <a href="https://huntertran.com/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/">Phần 2</a></p>
 
@@ -558,34 +525,32 @@
 </ul>
 </div>
 
-          
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
 
-  <div class="followme">
-    <span>Welcome to my other publishing channels</span>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
           <div class="post-tags">
               <a href="/tags/chrome/" rel="tag"># chrome</a>
@@ -616,7 +581,6 @@
 
 
 
-      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -639,20 +603,16 @@
     });
   }
 </script>
-
-    </div>
+</div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      
 
-      
 
 <div class="copyright">
-  
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -665,14 +625,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/components/prism-core.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
-  <script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script>
 var pjax = new Pjax({
   selectors: [
     'head title',
@@ -708,20 +667,7 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-  <script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
+<script src="/js/local-search.js"></script>
 
 
 
@@ -729,20 +675,13 @@ document.addEventListener('pjax:success', () => {
 
 
   
-
-
-
-
-
 
 
 
     <div class="pjax">
-  
 
   
 
-  
 
     </div>
 </body>
