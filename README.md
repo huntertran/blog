@@ -1,5 +1,27 @@
-# blog
-my personal blog built with hexo and next theme
+Blog
+---
+
+My personal blog built with hexo and next theme
+
+# Setting up
+
+Install NPM
+
+```
+npm install -g npm
+```
+
+Install Hexo CLI
+
+```
+npm install hexo-cli -g
+```
+
+Install packages
+
+```
+npm i
+```
 
 # commonly uses command
 
