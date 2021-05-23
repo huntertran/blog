@@ -22,12 +22,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;huntertran.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:true,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
-<meta name="description" content="I don’t know why Google makes it so difficult to connect to it’s Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine? Anyway, here is how to connect.">
+<meta name="description" content="I don’t know why Google makes it so difficult to connect to it is Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine? Anyway, here is how to connect.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Connect with Google Cloud Compute Engine (Virtual Machine) using PuTTY">
 <meta property="og:url" content="https://huntertran.com/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/">
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
-<meta property="og:description" content="I don’t know why Google makes it so difficult to connect to it’s Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine? Anyway, here is how to connect.">
+<meta property="og:description" content="I don’t know why Google makes it so difficult to connect to it is Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine? Anyway, here is how to connect.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/8QeJ7Yz.png">
 <meta property="og:image" content="https://i.imgur.com/oGJRuPE.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://i.imgur.com/iMSGvYB.png">
 <meta property="og:image" content="https://i.imgur.com/qKuzGiy.png">
 <meta property="article:published_time" content="2020-07-20T22:28:46.000Z">
-<meta property="article:modified_time" content="2021-05-23T04:30:53.399Z">
+<meta property="article:modified_time" content="2021-05-23T04:51:25.161Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="virtual machine">
 <meta property="article:tag" content="compute engine">
@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Have-your-Compute-Engine-ready"><span class="nav-text">1. Have your Compute Engine ready</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Have-your-local-machine-ready"><span class="nav-text">2. Have your local machine ready</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Add-key-to-virtual-machine"><span class="nav-text">3. Add key to virtual machine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Connect-with-WinSCP"><span class="nav-text">4. Connect with WinSCP</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Have-your-Compute-Engine-ready"><span class="nav-text">1. Have your Compute Engine ready</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Have-your-local-machine-ready"><span class="nav-text">2. Have your local machine ready</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Add-key-to-the-virtual-machine"><span class="nav-text">3. Add key to the virtual machine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Connect-with-WinSCP"><span class="nav-text">4. Connect with WinSCP</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -279,7 +279,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-23 00:30:53" itemprop="dateModified" datetime="2021-05-23T00:30:53-04:00">2021-05-23</time>
+        <time title="Modified: 2021-05-23 00:51:25" itemprop="dateModified" datetime="2021-05-23T00:51:25-04:00">2021-05-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,7 +301,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>I don’t know why Google makes it so difficult to connect to it’s Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?</p>
+        <p>I don’t know why Google makes it so difficult to connect to it is Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?</p>
 <p>Anyway, here is how to connect.</p>
 <span id="more"></span>
 <ul>
@@ -314,34 +314,34 @@
 <p><img src="https://i.imgur.com/8QeJ7Yz.png" alt="network"></p>
 <p>On the new open site, choose Firewall and make sure <code>tcp:22</code> is allowed (so we can use ssh to connect)</p>
 <p><img src="https://i.imgur.com/oGJRuPE.png" alt="tcp22"></p>
-<h1 id="2-Have-your-local-machine-ready"><a href="#2-Have-your-local-machine-ready" class="headerlink" title="2. Have your local machine ready"></a>2. Have your local machine ready</h1><p>You will need to generate a public-private key pair on your local machine. In this tutorial, I use puttygen installed alongside with <a target="_blank" rel="noopener" href="https://chocolatey.org/packages/putty">putty</a></p>
+<h1 id="2-Have-your-local-machine-ready"><a href="#2-Have-your-local-machine-ready" class="headerlink" title="2. Have your local machine ready"></a>2. Have your local machine ready</h1><p>You will need to generate a public-private key pair on your local machine. In this tutorial, I use <code>puttygen</code> installed alongside with <a target="_blank" rel="noopener" href="https://chocolatey.org/packages/putty"><code>putty</code></a></p>
 <p>Click generate and move your mouse in the blank area until a key appeared</p>
 <p><img src="https://i.imgur.com/5xJDSzQ.png" alt="move"></p>
 <p>Enter a password for the generated key, change the <code>Key comment</code> to something easy to remember (this will be your username later), click <code>Save private key</code> to a <code>.ppk</code> file.</p>
 <p>Copy the key shown in the box.</p>
 <p><img src="https://i.imgur.com/Q0xhVqQ.png" alt="save the key"></p>
-<h1 id="3-Add-key-to-virtual-machine"><a href="#3-Add-key-to-virtual-machine" class="headerlink" title="3. Add key to virtual machine"></a>3. Add key to virtual machine</h1><p>Click the ssh button on your VM instance to open the online ssh window</p>
+<h1 id="3-Add-key-to-the-virtual-machine"><a href="#3-Add-key-to-the-virtual-machine" class="headerlink" title="3. Add key to the virtual machine"></a>3. Add key to the virtual machine</h1><p>Click the ssh button on your VM instance to open the online ssh window</p>
 <p>Call the following commands:</p>
 <p>Create .ssh folder</p>
 <p>sudo mkdir -p ~/.ssh</p>
-<p>Write the key to <code>authorized_keys</code> file</p>
+<p>Write the key to the <code>authorized_keys</code> file</p>
 <p>sudo echo your_copied_key_here &gt;&gt; ~/.ssh/authorized_keys</p>
 <p>Set permission for the file and folder</p>
 <p>sudo chmod -R go= ~/.ssh</p>
-<h1 id="4-Connect-with-WinSCP"><a href="#4-Connect-with-WinSCP" class="headerlink" title="4. Connect with WinSCP"></a>4. Connect with <a target="_blank" rel="noopener" href="https://github.com/winscp/winscp">WinSCP</a></h1><p>Wait, the title said Putty isn’t it? Hang on, we’re getting there.</p>
+<h1 id="4-Connect-with-WinSCP"><a href="#4-Connect-with-WinSCP" class="headerlink" title="4. Connect with WinSCP"></a>4. Connect with <a target="_blank" rel="noopener" href="https://github.com/winscp/winscp">WinSCP</a></h1><p>Wait, the title said Putty isn’t it? Hang on; we are getting there.</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/winscp/winscp">WinSCP</a> is a popular SFTP client and FTP client for Microsoft Windows, as they said. It’s open-source and can be installed via <a target="_blank" rel="noopener" href="https://www.microsoft.com/store/apps/9p0pq8b65n8x">MS Store</a> or <a target="_blank" rel="noopener" href="https://chocolatey.org/packages/winscp">Chocolatey</a></p>
 <p>Filled in the information you have. The username IS the key comment you set above. Then click on <code>Advanced...</code></p>
 <p><img src="https://i.imgur.com/VW4Xk88.png" alt="winscp"></p>
 <p>Choose <code>Environment</code> &gt; <code>SFTP</code>, then paste this line to the box <code>SFTP Server</code> to allow root permission on all files and folders</p>
 <blockquote>
-<p>This works with Ubuntu only. Other distribution may have different location of <code>sftp-server</code></p>
+<p>This works with Ubuntu only. Other distribution may have a different location of <code>sftp-server</code></p>
 </blockquote>
 <p>sudo su -c /usr/lib/openssh/sftp-server</p>
 <p><img src="https://i.imgur.com/dIgyNUA.png" alt="sudo"></p>
 <p>Choose SSH &gt; Authentication and browse to the private key you saved before. Click OK to go back to login screen</p>
 <p><img src="https://i.imgur.com/x9MyGPp.png" alt="private key"></p>
-<p>When logging in, you will be asked for password. This is the password you’ve set for your private key before.</p>
-<p>After connected, click Commands &gt; Open in PuTTY, and voilà, the ssh window appeared and connected, and asking for the same password.</p>
+<p>When logging in, you will be asked for the password. This is the password you’ve set for your private key before.</p>
+<p>After connecting, click Commands &gt; Open in PuTTY, and voilà, the ssh window appeared and connected, asking for the same password.</p>
 <p><img src="https://i.imgur.com/iMSGvYB.png" alt="open in putty"></p>
 <p><img src="https://i.imgur.com/qKuzGiy.png" alt="console"></p>
 <p>I don’t know why, but connect directly with PuTTY or SuperPuTTY DOES NOT WORK.</p>
