@@ -7,19 +7,19 @@ My personal blog built with hexo and next theme
 
 Install NPM
 
-```
+```s
 npm install -g npm
 ```
 
 Install Hexo CLI
 
-```
+```s
 npm install hexo-cli -g
 ```
 
 Install packages
 
-```
+```s
 npm i
 ```
 
