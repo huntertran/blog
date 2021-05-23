@@ -9,6 +9,8 @@ categories:
 
 When I'm looking for some numbers in my recent research, I need reliable surveys/market share statistics in computer technologies. So here is a list of them:
 
+<!--more-->
+
 <!-- TOC -->
 
 - [1. StackOverflow Annual Developer Surveys](#1-stackoverflow-annual-developer-surveys)
