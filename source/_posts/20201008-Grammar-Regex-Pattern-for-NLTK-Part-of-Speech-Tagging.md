@@ -38,13 +38,13 @@ This action simply _**tag**_ your tokenized words with the word type, for exampl
 ## 1.1. The tags and explanations
 <a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a>
 
-The full list of tags can be shown when running the command
+The complete list of tags can be shown when running the command
 
 ```py
 nltk.help.upenn_tagset()
 ```
 
-For the full list of explanations, scroll to the bottom of this post.
+For the complete list of explanations, scroll to the bottom of this post.
 
 ## 1.2. Tagging them
 <a id="markdown-tagging-them" name="tagging-them"></a>
@@ -69,7 +69,7 @@ tags = nltk.pos_tag(tokens)
 # 2. Regular Expression (regex) grammar
 <a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a>
 
-The regular expression with nltk tokens is quite different than normal text. The grammar treats each token as a string of text, and apply the regex pattern on that string with matched to the position of the token in the sentence.
+The regular expression with nltk tokens is quite different from standard text. The grammar treats each token as a string of text and applies the regex pattern on that string matched to the position of the token in the sentence.
 
 Below I will present a list of grammar, from the most simple to the more complex one, using the same sentence above
 
@@ -164,7 +164,7 @@ result = parser.parse(tags)
 # 3. Match multiple grammars
 <a id="markdown-match-multiple-grammars" name="match-multiple-grammars"></a>
 
-To use multiple grammars to scan your text, simply combine them with new line character `\n`
+To use multiple grammars to scan your text, simply combine them with newline character `\n`
 
 For example:
 

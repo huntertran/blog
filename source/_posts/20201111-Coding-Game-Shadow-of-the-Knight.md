@@ -16,7 +16,7 @@ Language: python
 
 # The Goal
 
-Batman will look for the hostages on a given building by jumping from one window to another using his grapnel gun. Batman's goal is to jump to the window where the hostages are located in order to disarm the bombs. Unfortunately he has a limited number of jumps before the bombs go off...
+Batman will look for the hostages on a given building by jumping from one window to another using his grapnel gun. Batman's goal is to jump to the window where the hostages are located to disarm the bombs. Unfortunately, he has a limited number of jumps before the bombs go off...
 
 <!-- more -->
 
@@ -33,17 +33,17 @@ Before each jump, the heat-signature device will provide Batman with the directi
 * L (Left)
 * UL (Up-Left)
 
-Your mission is to program the device so that it indicates the location of the next window Batman should jump to in order to reach the bombs' room as soon as possible.
+Your mission is to program the device to indicate the location of the next window Batman should jump to reach the bombs' room as soon as possible.
 
-Buildings are represented as a rectangular array of windows, the window in the top left corner of the building is at index (0,0).
+Buildings are represented as a rectangular array of windows. The window in the top left corner of the building is at index (0,0).
 
 # Explanation
 
-Batman doesn't know where the bom is. On each iteration, the heat-signature device will tell him the _direction_ of the bomb
+Batman doesn't know where the bomb is. On each iteration, the heat-signature device will tell him the _direction_ of the bomb
 
 # Solution
 
-We will use binary search on both x and y dimension.
+We will use binary search on both x and y dimensions.
 
 On each iteration, we will limit the boundary of the search
 
@@ -89,7 +89,7 @@ max_y = h
 
 # game loop
 while True:
-    bomb_dir = input()  # the direction of the bombs from batman's current location (U, UR, R, DR, D, DL, L or UL)
+    bomb_dir = input()  # the direction of the bombs from Batman's current location (U, UR, R, DR, D, DL, L or UL)
 
     # Write an action using print
     # To debug: print("Debug messages...", file=sys.stderr, flush=True)

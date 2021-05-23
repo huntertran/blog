@@ -24,7 +24,7 @@ This instruction helps you clean up temporary and unnecessary system files on yo
 # Step 1: Open disk clean up with Clean up system file enabled
 <a id="markdown-step-1%3A-open-disk-clean-up-with-clean-up-system-file-enabled" name="step-1%3A-open-disk-clean-up-with-clean-up-system-file-enabled"></a>
 
-Type `Disk Cleanup` in the search box on taskbar > click `Disk Cleanup` in the search result to open it
+Type `Disk Cleanup` in the search box on taskbar> click `Disk Cleanup` in the search result to open it
 
 ![disk cleanup](https://i.imgur.com/0eGTnfs.png)
 
@@ -62,12 +62,12 @@ Switch back to tab `Disk Cleanup` > Tick all the boxes > click Ok to start clean
 
 ![temp files](https://i.imgur.com/872Vyp6.png)
 
-> Click on each line will give you the explanation of each type of content. All the contents listed here can be delete without any affect on your machine
+> Click on each line will give you an explanation of each type of content. All the contents listed here can be deleted without any effect on your machine
 
 # Step 4: Check for your free space
 <a id="markdown-step-4%3A-check-for-your-free-space" name="step-4%3A-check-for-your-free-space"></a>
 
-Search for File Explorer in the search box on Taskbar > click `File Explorer` in the search result
+Search for File Explorer in the search box on taskbar> click `File Explorer` in the search result
 
 ![file explorer](https://i.imgur.com/Qh2Z2o8.png)
 

@@ -10,7 +10,7 @@ categories:
 
 How to reset network settings in Windows 10
 
-This can help solve connection problems you might have after upgrading from a previous version of Windows to Windows 10. It can also help to fix the problem where you can connect to the internet, but can't connect to shared network drives. Network reset removes any network adapters you have installed and the settings for them. After your PC restarts, any network adapters are reinstalled, and the settings for them are set to the defaults.
+This action can help solve connection problems you might have after upgrading from a previous version of Windows to Windows 10. It can also help fix the problem of connecting to the internet but cannot connect to shared network drives. Network reset removes any network adapters you have installed and the settings for them. After your PC restarts, any network adapters are reinstalled, and the settings for them are set to the defaults.
 
 <!-- more -->
 

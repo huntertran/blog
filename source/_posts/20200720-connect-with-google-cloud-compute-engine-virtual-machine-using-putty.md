@@ -11,7 +11,7 @@ categories:
 date: 2020-07-20 18:28:46
 ---
 
-I don't know why Google makes it so difficult to connect to it's Compute Engine cloud service. Even the name is confusing. Why don't they just call it Virtual Machine?
+I don't know why Google makes it so difficult to connect to it is Compute Engine cloud service. Even the name is confusing. Why don't they just call it Virtual Machine?
 
 Anyway, here is how to connect.
 <!-- more -->
@@ -32,7 +32,7 @@ On the new open site, choose Firewall and make sure `tcp:22` is allowed (so we c
 
 # 2. Have your local machine ready
 
-You will need to generate a public-private key pair on your local machine. In this tutorial, I use puttygen installed alongside with [putty](https://chocolatey.org/packages/putty)
+You will need to generate a public-private key pair on your local machine. In this tutorial, I use `puttygen` installed alongside with [`putty`](https://chocolatey.org/packages/putty)
 
 Click generate and move your mouse in the blank area until a key appeared
 
@@ -44,7 +44,7 @@ Copy the key shown in the box.
 
 ![save the key](https://i.imgur.com/Q0xhVqQ.png)
 
-# 3. Add key to virtual machine
+# 3. Add key to the virtual machine
 
 Click the ssh button on your VM instance to open the online ssh window
 
@@ -54,7 +54,7 @@ Create .ssh folder
 
 sudo mkdir -p ~/.ssh
 
-Write the key to `authorized_keys` file
+Write the key to the `authorized_keys` file
 
 sudo echo your\_copied\_key\_here >> ~/.ssh/authorized\_keys
 
@@ -64,7 +64,7 @@ sudo chmod -R go= ~/.ssh
 
 # 4. Connect with [WinSCP](https://github.com/winscp/winscp)
 
-Wait, the title said Putty isn't it? Hang on, we're getting there.
+Wait, the title said Putty isn't it? Hang on; we are getting there.
 
 [WinSCP](https://github.com/winscp/winscp) is a popular SFTP client and FTP client for Microsoft Windows, as they said. It's open-source and can be installed via [MS Store](https://www.microsoft.com/store/apps/9p0pq8b65n8x) or [Chocolatey](https://chocolatey.org/packages/winscp)
 
@@ -74,7 +74,7 @@ Filled in the information you have. The username IS the key comment you set abov
 
 Choose `Environment` > `SFTP`, then paste this line to the box `SFTP Server` to allow root permission on all files and folders
 
-> This works with Ubuntu only. Other distribution may have different location of `sftp-server`
+> This works with Ubuntu only. Other distribution may have a different location of `sftp-server`
 
 sudo su -c /usr/lib/openssh/sftp-server
 
@@ -84,9 +84,9 @@ Choose SSH > Authentication and browse to the private key you saved before. Clic
 
 ![private key](https://i.imgur.com/x9MyGPp.png)
 
-When logging in, you will be asked for password. This is the password you've set for your private key before.
+When logging in, you will be asked for the password. This is the password you've set for your private key before.
 
-After connected, click Commands > Open in PuTTY, and voilà, the ssh window appeared and connected, and asking for the same password.
+After connecting, click Commands > Open in PuTTY, and voilà, the ssh window appeared and connected, asking for the same password.
 
 ![open in putty](https://i.imgur.com/iMSGvYB.png)
 

@@ -9,7 +9,7 @@ categories:
 date: 2020-10-17 13:08:02
 ---
 
-Step by step instruction on how to download Windows 10 ISO.
+Step-by-step instructions on how to download Windows 10 ISO.
 
 <!-- more -->
 
@@ -51,7 +51,7 @@ Click "Use recommended options for this PC", then click Next
 
 ![options](https://i.imgur.com/c0DoUeO.png)
 
-> Note: You can choose other options (languages, editions, architectures) as well, ONLY IF you know what these options are. Other wise, just choose the default options:
+> Note: You can choose other options (languages, editions, architectures) as well, ONLY IF you know what these options are. Otherwise, just choose the default options:
 > 
 > Language: English (United States)
 > 
@@ -76,7 +76,7 @@ Then the download progress will begin. Wait for it to complete.
 
 For Mac, Linux user, download the ISO here: [https://www.microsoft.com/en-us/software-download/windows10ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 
-For Windows User, follow this instruction. It worked on both Google Chrome and Edge Chromium
+For Windows Users, follow this instruction. It worked on both Google Chrome and Edge Chromium
 
 Step 1: Open Google Chrome or Edge Chromium, then head to the site: [https://www.microsoft.com/en-us/software-download/windows10](https://www.microsoft.com/en-us/software-download/windows10)
 
@@ -84,7 +84,7 @@ Step 2: Enable Developer Tools by open the settings menu (3 little dots) > More 
 
 ![developer](https://i.imgur.com/chIvGdc.png)
 
-Step 3: Enable Network conditions menu by click the 3 little dots INSIDE the developer tools > More tools > Network Conditions
+Step 3: Enable the Network conditions menu by clicking the three little dots INSIDE the developer tools > More tools > Network Conditions
 
 ![network conditions](https://i.imgur.com/pR7KwsU.png)
 
@@ -92,13 +92,13 @@ Step 4: Under User agent, uncheck "Select automatically", then choose Safari - M
 
 ![uncheck](https://i.imgur.com/g7DjnEH.png)
 
-Step 5: Keep the developer tools open, click refresh to reload the download page. This time, when it loads, you’ll see a drop-down menu where you can select the edition of the Windows 10 ISO you want to download.
+Step 5: Keep the developer tools open, click refresh to reload the download page. This time, when it loads, you'll see a drop-down menu where you can select the edition of the Windows 10 ISO you want to download.
 
-Choose Windows 10 in the drop down list, click confirm to validate your request, then choose the language and click confirm.
+Choose Windows 10 in the drop-down list, click confirm to validate your request, then choose the language and click confirm.
 
 ![download](https://i.imgur.com/Qs2ZaVQ.png)
 
-Step 6: After validation, 2 buttons appeared. Click the 64 bit button to download the 64 bit version of Windows 10
+Step 6: After validation, two buttons appeared. Click the 64-bit button to download the 64-bit version of Windows 10
 
 ![actual download](https://i.imgur.com/AdUkNdO.png)
 

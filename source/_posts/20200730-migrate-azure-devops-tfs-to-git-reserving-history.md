@@ -11,7 +11,7 @@ categories:
 date: 2020-07-30 00:31:02
 ---
 
-Microsoft acquired GitHub, and every one have unlimited private repository. This reason alone make me want to move all my project and source code to GitHub.
+Microsoft acquired GitHub, and everyone has an unlimited number of private repositories. This reason alone makes me want to move all my project and source code to GitHub.
 
 <!-- more -->
 
@@ -24,7 +24,7 @@ Microsoft acquired GitHub, and every one have unlimited private repository. This
 
 # 1. A bit of history
 
-In around 2012, developers don't have much choices in _where_ to store their code for free. Sure you can use GitHub, but it limit the number of private repository and number of collaborators. The obvious choice at that time was `Visual Studio Online`, or today `Azure DevOps`. The only source control system it's provided is Team Foundation Server (TFS).
+In around 2012, developers don't have many choices in _where_ to store their code for free. Sure, you can use GitHub, but it limits the number of private repositories and the number of collaborators. The obvious choice at that time was `Visual Studio Online`, or today `Azure DevOps`. The only source control system it is provided is Team Foundation Server (TFS).
 
 Today, 9.99 over 10 developers will choose `git` over `tfs`, and we need a way to migrate from TFS, _with history_, to git.
 
@@ -45,13 +45,13 @@ Today, 9.99 over 10 developers will choose `git` over `tfs`, and we need a way t
 git-tfs clone https://your\_organization.visualstudio.com/ $/your\_project\_name
 ```
 
-If your project name contain whitespace, just put the whole name in quote mark
+If your project name contains whitespace, just put the whole name in the quote mark
 
 ```s
 git-tfs clone https://your\_organization.visualstudio.com/ "$/your project name"
 ```
 
-This will clone the project to the folder you run the command
+This command will clone the project to the folder you run the command
 
 ## 3.2. Add .gitignore
 

@@ -9,7 +9,7 @@ categories:
     - - Others
 ---
 
-After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long awaited features are in beta, invitation only, and it is `GitHub Codespaces`
+After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long-awaited features are in beta, invitation-only, and it is `GitHub Codespaces`.
 
 <!--more-->
 
@@ -28,50 +28,50 @@ After coming home with Microsoft, more and more good and free things come to Git
 # 1. Extremely short introduction
 <a id="markdown-extremely-short-introduction" name="extremely-short-introduction"></a>
 
-Codespaces, in short, is a linux virtual machine running `vscode` server, and allow you to access it via any web browser.
+Codespaces, in short, is a Linux virtual machine running `vscode` server and allows you to access it via any web browser.
 
-Microsoft introduce it codespaces first in [Visual Studio Online](https://azure.microsoft.com/en-us/services/visual-studio-online/), using your Azure account to charge. GitHub codespaces is in early access stage, so everything is free for now.
+Microsoft introduces its codespaces first in [Visual Studio Online](https://azure.microsoft.com/en-us/services/visual-studio-online/), using your Azure account to charge. "GitHub codespaces" is in the early access stage, so everything is free for now.
 
-To request early access GitHub codespaces, here is the link: https://github.com/features/codespaces
+To request early access to GitHub codespaces, here is the link: https://github.com/features/codespaces
 
 # 2. Using GitHub codespaces
 <a id="markdown-using-github-codespaces" name="using-github-codespaces"></a>
 
-When you're invited to use codespaces, your GitHub's repositories will have another options in open button
+When you're invited to use codespaces, your GitHub's repositories will have another option in open button
 
 ![open button](https://i.imgur.com/CB6VdCg.png)
 
 ## 2.1. Change theme
 <a id="markdown-change-theme" name="change-theme"></a>
 
-The default theme for VSCode is light. Light attracting bugs. So we need to change it dark
+The default theme for VSCode is light. Light attracting bugs. So we need to change it to dark
 
-The normal themes used by vscode is not worked, so we need to use an extension developed by GitHub called `github theme`
+The typical themes used by vscode is not working, so we need to use an extension developed by GitHub called `github theme`
 
 ![themes](https://i.imgur.com/osKi6Sl.png)
 
-Sadly, the icon theme is fixed with 1 of the 2 default set.
+Sadly, the icon theme is fixed with 1 of the two default set.
 
 ## 2.2. Settings
 <a id="markdown-settings" name="settings"></a>
 
-Except some settings related to themes and icon that have no effect, almost all other settings are the same. You can just copy and past the settings from your local `vscode` to codespaces `vscode`
+Except for some settings related to themes and icons that have no effect, almost all other settings are the same. You can just copy and paste the settings from your local `vscode` to codespaces `vscode`
 
 ## 2.3. Install your programming language extensions
 <a id="markdown-install-your-programming-language-extensions" name="install-your-programming-language-extensions"></a>
 
-I think every programming language extension worked as it should be, but first, you will need to setup the development environment in Linux.
+I think every programming language extension worked as it should be, but first, you will need to set up the development environment in Linux.
 
-For example, to use Java, you will need to install JDK on linux, then Java Extension Pack for a complete list of Java extensions in vscode.
+For example, to use Java, you will need to install JDK on Linux, then Java Extension Pack for a complete list of Java extensions in vscode.
 
-C/C++ and Python extension are pre-installed
+C/C++ and Python extensions are pre-installed
 
 When you open a project, based on the language, some language extension will be pre-installed
 
 ## 2.4. Work with multiple repository
 <a id="markdown-work-with-multiple-repository" name="work-with-multiple-repository"></a>
 
-By default, 1 codespaces can only work with 1 repository. I will use SSH key to have access to every repositories on my Github.
+By default, one codespace can only work with one repository. I will use the SSH key to have access to every repository on my Github.
 
 1. Generate SSH key
 
