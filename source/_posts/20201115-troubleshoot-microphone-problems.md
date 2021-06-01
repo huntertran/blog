@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot microphone problems
 date: 2020-11-15 11:31:16
-hidden: true
+# hidden: true
 tags:
     - tips
 categories:
@@ -13,7 +13,7 @@ Step-by-step instruction on how to:
 - Enable/Disable microphone
 - boost your Microphone volume
 - listen to your Microphone
-- fix Microphone is disabled on laptop running on battery
+- fix Microphone is disabled on a laptop running on battery
 - fix weird sounds
 
 <!-- more -->

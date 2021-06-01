@@ -45,9 +45,9 @@ wait for it a little bit
 # Step 2: Clean up System Restore and Shadow Copies
 <a id="markdown-step-2%3A-clean-up-system-restore-and-shadow-copies" name="step-2%3A-clean-up-system-restore-and-shadow-copies"></a>
 
-> This action will delete the Windows.old folder, which is the content of your previous version of Windows. Delete this will not allow you to go back to the previous version.
+> This action will delete the `Windows.old` folder, which is the content of your previous version of Windows. Delete this will not allow you to go back to the previous version.
 
-> Only old System Restore point will be deleted. The most recent one will be kept
+> Only the old System Restore point will be deleted. The most recent one will be kept
 
 Switch to tab `More Options` > Click `Clean up...` under `System Restore and Shadow Copies`
 

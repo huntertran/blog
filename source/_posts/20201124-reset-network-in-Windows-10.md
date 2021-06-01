@@ -1,7 +1,7 @@
 ---
 title: reset network in Windows 10
 date: 2020-11-24 20:21:29
-hidden: true
+# hidden: true
 tags:
     - tips
 categories:

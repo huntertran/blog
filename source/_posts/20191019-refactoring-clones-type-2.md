@@ -10,13 +10,13 @@ categories:
 date: 2019-10-19 16:10:18
 ---
 
-Removing clones in code maybe is the most difficult type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#
+Removing clones in code maybe is the most challenging type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#
 
 <!-- more -->
 
 # Type of clones
 
-There are 4 type of clones:
+There are 4 types of clones:
 
 > _**Type 1:**_ The codes cloned are identical, except the name of variables, add or remove of comment.
 > 
@@ -24,7 +24,7 @@ There are 4 type of clones:
 > 
 > _**Type 3:**_ code fragments are copies with further modifications. Statements can be changed, added, or removed in addition to Type II differences.
 > 
-> _**Type 4:**_ two or more code fragments perform the same computation, but are implemented through different syntactic variants.
+> _**Type 4:**_ two or more code fragments perform the exact computation but are implemented through different syntactic variants.
 > 
 > S. Bellon, R. Koschke, G. Antoniol, J. Krinke and E. Merlo, Comparison and Evaluation of Clone DetectionTools, Transactions on Software Engineering, 33(9):577-591 (2007)
 
@@ -32,13 +32,13 @@ There are 4 type of clones:
 
 Type 1: just remove the second fragment of code and use the first one
 
-Type 3: Based on the function of the code fragment (usually clone codes are in methods), you can perform other refactoring like break the method into smaller ones (`extract method`), then consider if you can transform type 3 clone into type 2.
+Type 3: Based on the function of the code fragment (usually clone codes are in methods), you can perform other refactors like break the method into smaller ones (`extract method`), then consider if you can transform type 3 clone into type 2.
 
-Type 4: This one is the most difficult to detect. To eliminate is easy, just use one of them.
+Type 4: This one is the most difficult to detect. To eliminate it is easy, just use one of them.
 
-I believe to detect this kind of clone, you can inspect the before and after condition of the questioned methods. If they are the same (use the same set of parameters, return the same result, verified by unit tests), then the function of these methods are identical.
+I believe to detect this kind of clone, you can inspect the before and after the condition of the questioned methods. If they are the same (use the same set of parameters, return the same result, verified by unit tests), then the function of these methods is identical.
 
-For type 2 clone, we will try to transform it to type 1, then introduce the parameter in a new common method, by using a language specific feature called `FunctionalInterface` in Java and `delegate` in C#
+For type 2 clone, we will try to transform it to type 1, then introduce the parameter in a new common method by using a language-specific feature called `FunctionalInterface` in Java and `delegate` in C#
 
 # Examples
 
@@ -54,9 +54,9 @@ public void drawHorizontalLine(int length, View currentView){
     currentView.draw(length, drawOptions);
 }
 
-In 2 method above, both of them draw line to screen, the difference is the `drawOptions` variable.
+In the 2 methods above, both draw a line to screen; the difference is the `drawOptions` variable.
 
-To introduce parameter to "transform" this type of clone to type 1, we can do as follow:
+To introduce parameters to "transform" this type of clone to type 1, we can do as follow:
 
 /\* For JAVA \*/
 
@@ -93,7 +93,7 @@ public void drawLine(int length, View currentView, Func<int> drawOption){
     currentView.draw(length, option);
 }
 
-## Using tool
+## Using a tool
 
 If you are using Eclipse, [JDeodorant](https://github.com/tsantalis/JDeodorant) plug-in by [Associate Professor Nikos Tsantalis](https://users.encs.concordia.ca/~nikolaos/) can automatically `extract` the clone into common method for you.
 

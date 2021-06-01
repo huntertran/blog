@@ -60,7 +60,7 @@ Link: [https://www.developereconomics.com/resources/graphs](https://www.develope
 
 This survey is the only survey on the list that requires an account to see the result. Good thing that there are two reports each year, in Q1 and Q3. The participants were also rewarded with points that can be used to cash out with vouchers and draw.
 
-This survey's most helpful piece of information is the most popular programming languages in technology like Web, Data Science, Machine Learning, Desktop Application, etc.
+This survey's most helpful information is the most popular programming languages in technology like Web, Data Science, Machine Learning, Desktop Application, etc.
 
 The oldest dataset was in 2010
 

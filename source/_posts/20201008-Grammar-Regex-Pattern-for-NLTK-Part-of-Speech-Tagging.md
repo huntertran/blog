@@ -33,7 +33,7 @@ NLTK has a function called `regexpparser` to parse the Part-of-Speech tagged sen
 # 1. Part-of-Speech tagging
 <a id="markdown-part-of-speech-tagging" name="part-of-speech-tagging"></a>
 
-This action simply _**tag**_ your tokenized words with the word type, for example, Verb, noun, adjective, etc.
+This action simply _**tag**_ your tokenized words with the word type, for example, verb, noun, adjective, etc.
 
 ## 1.1. The tags and explanations
 <a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a>

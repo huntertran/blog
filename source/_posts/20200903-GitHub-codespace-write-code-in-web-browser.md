@@ -46,7 +46,7 @@ When you're invited to use codespaces, your GitHub's repositories will have anot
 
 The default theme for VSCode is light. Light attracting bugs. So we need to change it to dark
 
-The typical themes used by vscode is not working, so we need to use an extension developed by GitHub called `github theme`
+The typical themes used by `vscode` is not working, so we need to use an extension developed by GitHub called `github theme`
 
 ![themes](https://i.imgur.com/osKi6Sl.png)
 
@@ -106,4 +106,4 @@ That's it
 * 4GB of RAM - `free -m`
 * Using 2 core of the Intel(R) Xeon(R) Platinum 8168 CPU @ 2.70GHz - `less /proc/cpuinfo` and `cat /proc/cpuinfo | grep processor | wc -l`
 
-The vscode version is the latest Insider version, so expect some errors and unstable features
+The `vscode` version is the latest Insider version, so expect some errors and unstable features

@@ -11,7 +11,7 @@ categories:
 date: 2020-07-20 18:28:46
 ---
 
-I don't know why Google makes it so difficult to connect to it is Compute Engine cloud service. Even the name is confusing. Why don't they just call it Virtual Machine?
+I don't know why Google makes it so challenging to connect to its Compute Engine cloud service. Even the name is confusing. Why don't they just call it Virtual Machine?
 
 Anyway, here is how to connect.
 <!-- more -->
@@ -22,7 +22,7 @@ Anyway, here is how to connect.
 
 # 1. Have your Compute Engine ready
 
-After created a VM instance, note the External IP. Click on the little 3 dot icon at the end of the VM and choose `View network details`
+After creating a VM instance, note the External IP. Click on the little three-dot icon at the end of the VM and choose `View network details`
 
 ![network](https://i.imgur.com/8QeJ7Yz.png)
 
@@ -80,7 +80,7 @@ sudo su -c /usr/lib/openssh/sftp-server
 
 ![sudo](https://i.imgur.com/dIgyNUA.png)
 
-Choose SSH > Authentication and browse to the private key you saved before. Click OK to go back to login screen
+Choose SSH > Authentication and browse to the private key you saved before. Click OK to go back to the login screen
 
 ![private key](https://i.imgur.com/x9MyGPp.png)
 
