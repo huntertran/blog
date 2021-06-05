@@ -409,14 +409,15 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host:
+  host: https://fonts.googleapis.com
 
   # Font options:
-  # `external: true` will load this font family from `host` above.
-  # `family: Times New Roman`. Without any quotes.
+  external: true
+  # will load this font family from `host` above.
+  family: Open Sans
   # `size: x.x`. Use `em` as unit. Default: 1 (16px)
 
   # Global font settings used for all elements inside <body>.
