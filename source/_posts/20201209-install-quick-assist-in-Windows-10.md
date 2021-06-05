@@ -8,6 +8,10 @@ categories:
   - - Computer Tips
 ---
 
+Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.
+
+<!--more-->
+
 ![search for optional feature](https://i.imgur.com/8o1jX1U.png)
 
 ![install new](https://i.imgur.com/DLKIkya.png)
