@@ -29,3 +29,8 @@ By the way, is there some way to remove it? (Im saying no to remove from VS CODE
 @Odayan I think something wrong with the code itself, not the vscode. You can try to run your react-native app from a command prompt without vscode. Otherwise, you can always ask a new question. – Tuan Tran Jul 28 '20 at 0:28
 
 @Tuan I could understand what you advised! I edit VS code setting, script debugger => never I could make debugger disabled!! Thank you so much! – Odayan Jul 28 '20 at 3:35
+
+![image](https://user-images.githubusercontent.com/4468525/125377147-725a1480-e35a-11eb-819c-292473d49551.png)
+
+You cannot delete the accepted answer!
+
