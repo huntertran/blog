@@ -641,6 +641,15 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
 
+# Utterances
+# For more information: https://utteranc.es
+utterances:
+  enable: true
+  repo: huntertran/huntertran-blog-comments
+  # Available values: pathname | url | title | og:title
+  issue_term: pathname
+  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+  theme: github-dark
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
