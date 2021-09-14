@@ -580,8 +580,8 @@ comments:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: huntertran-blog
   count: true
 
 # DisqusJS

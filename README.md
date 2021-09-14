@@ -1,7 +1,7 @@
 Blog
 ---
 
-My personal blog built with hexo and next theme
+My personal blog built with `hexo` and next theme
 
 # Setting up
 
@@ -26,6 +26,9 @@ npm i
 # commonly uses command
 
 ```s
+# run local
+hexo serve
+
 # new post
 hexo new post
 
