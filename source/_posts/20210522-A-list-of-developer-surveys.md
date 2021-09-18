@@ -7,7 +7,7 @@ categories:
     - - research
 ---
 
-When I'm looking for some numbers in my recent research, I need reliable surveys/market share statistics in computer technologies. So here is a list of them:
+When I'm looking for numbers in my recent research, I need reliable surveys/market share statistics in computer technologies. So here is a list of them:
 
 <!--more-->
 
@@ -45,7 +45,7 @@ By JetBrains, the company behind IntelliJ IDEA, PyCham, WebStorm, Rider, ReSharp
 
 Pretty much like the SO survey, this one provides data about the trending programming languages and operating systems.
 
-At the beginning of the result, a "Key Takeaways" section concludes the most important result. The survey also tells what languages developers plan to adopt/migrate.
+At the beginning of the result, a "Key Takeaways" section concludes the most important outcome. The survey also tells what languages developers plan to adopt/migrate.
 
 The oldest dataset was in 2017.
 
