@@ -5,6 +5,8 @@ tags:
     - tips
 categories:
     - - Life
+featured_image: https://i.imgur.com/SPBH4t0.png
+thumbnail: https://i.imgur.com/SPBH4t0.png
 ---
 
 For a long time, my reputation points on StackOverflow (SO) were just around 200. You get 100 by just registering an account. If your reputation score is high, you can brag about it in your CV, or even better, landing your next dream job. In this blog post, I will tell you the story of how I can get +10 reputations EVERY DAY.
