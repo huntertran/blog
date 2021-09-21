@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://huntertran.com/tags/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/win32console/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/internettips/</loc>
     
     <lastmod>2021-09-21</lastmod>
@@ -38,6 +24,132 @@
   
   <url>
     <loc>https://huntertran.com/msp/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/tags/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/win32console/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2020/11/25/reset-network-in-Windows-10/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2020/12/09/install-quick-assist-in-Windows-10/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2021/05/22/A-list-of-developer-surveys/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/cancel</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/thankyou</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/azure/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/02/07/asp-net-mvc-debug-route-config/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
+    
+    <lastmod>2021-09-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
@@ -345,34 +457,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2020/11/25/reset-network-in-Windows-10/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2020/12/09/install-quick-assist-in-Windows-10/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2021/05/22/A-list-of-developer-surveys/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2021-09-21</lastmod>
@@ -394,49 +478,42 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/about/cancel</loc>
+    <loc>https://huntertran.com/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/about/</loc>
+    <loc>https://huntertran.com/2013/09/18/windows-phone-input-scope/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/about/thankyou</loc>
+    <loc>https://huntertran.com/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/azure/</loc>
+    <loc>https://huntertran.com/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/categories/</loc>
+    <loc>https://huntertran.com/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
+    <loc>https://huntertran.com/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
@@ -800,41 +877,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/02/07/asp-net-mvc-debug-route-config/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
     
     <lastmod>2021-09-21</lastmod>
@@ -899,48 +941,6 @@
   
   <url>
     <loc>https://huntertran.com/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/18/windows-phone-input-scope/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</loc>
-    
-    <lastmod>2021-09-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
     
     <lastmod>2021-09-21</lastmod>
     
