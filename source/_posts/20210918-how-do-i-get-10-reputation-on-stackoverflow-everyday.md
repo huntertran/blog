@@ -24,6 +24,8 @@ For a long time, my reputation points on StackOverflow (SO) were just around 200
 
 <!-- /TOC -->
 
+![my stackoverflow](https://i.imgur.com/SPBH4t0.png)
+
 # 1. How StackOverflow works
 <a id="markdown-how-stackoverflow-works" name="how-stackoverflow-works"></a>
 
