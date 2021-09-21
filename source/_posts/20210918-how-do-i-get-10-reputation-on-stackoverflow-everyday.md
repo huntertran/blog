@@ -41,7 +41,7 @@ TL;DR: by luck.
 
 Not every day exactly. For example, one day I could get +50, while other days I didn't get any.
 
-One day, while working on one of my project, I type in commands to push my code to GitHub. Then boom, a wild error appear. The error looks like this:
+One day, while working on one of my projects, I type in commands to push my code to GitHub. Then boom, a wild error appear. The error looks like this:
 
 ```s
 From https://github.com/MY/REPO
@@ -64,7 +64,13 @@ Someone on remote delete a tag, then recreate a new tag with the same name. Then
 
 Then, a simple command line fix the problem for me. What's next? I remembered there is an unanswered StackOverflow question on the exact same error. I add my solution, then left the website.
 
+[https://stackoverflow.com/a/58438257/4506315](https://stackoverflow.com/a/58438257/4506315)
+
+![my solution](https://i.imgur.com/zburb3k.png)
+
 My luck with StackOverflow begins from that day. The next time I open SO for my next question, I saw +50 points added to my reputation. My solution was accepted as an answer. The next day, +10 reputation. Someone upvoted my answer, as they saw it helpful for their situation.
+
+![reputation change](https://i.imgur.com/GSfzylv.png)
 
 > `On that time forward, I have an average of +10 reputation points every single day.`
 
