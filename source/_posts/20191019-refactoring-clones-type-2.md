@@ -44,6 +44,7 @@ For type 2 clone, we will try to transform it to type 1, then introduce the para
 
 Consider these lines of code:
 
+```csharp
 public void drawVerticalLine(int length, View currentView){
     DrawOptions drawOptions = currentView.getVerticalOptions();
     currentView.draw(length, drawOptions);
@@ -53,6 +54,7 @@ public void drawHorizontalLine(int length, View currentView){
     DrawOptions drawOptions = currentView.getHorizontalOptions();
     currentView.draw(length, drawOptions);
 }
+```
 
 In the 2 methods above, both draw a line to screen; the difference is the `drawOptions` variable.
 
@@ -60,6 +62,7 @@ To introduce parameters to "transform" this type of clone to type 1, we can do a
 
 /\* For JAVA \*/
 
+```java
 public void drawVerticalLine(int length, View currentView){
     drawLine(length, currentView, () -> currentView.getVerticalOption());
 }
@@ -77,9 +80,11 @@ public void drawLine(int length, View currentView, DrawOption drawOption){
     int options = drawOption.getDrawOption();
     currentView.draw(length, options)
 }
+```
 
 and for C#
 
+```csharp
 public void drawVerticalLine(int length, View currentView){
     drawLine(length, currentView, () => currentView.getVerticalOption());
 }
@@ -92,6 +97,7 @@ public void drawLine(int length, View currentView, Func<int> drawOption){
     int option = drawOption();
     currentView.draw(length, option);
 }
+```
 
 ## Using a tool
 
