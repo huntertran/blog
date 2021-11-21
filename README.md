@@ -1,7 +1,7 @@
 Blog
 ---
 
-My personal blog built with `hexo` and next theme
+My blog built with `hexo` and next theme
 
 # Setting up
 
@@ -32,6 +32,6 @@ hexo serve
 # new post
 hexo new post
 
-# run local server
+# run the local server
 hexo serve
 ```
