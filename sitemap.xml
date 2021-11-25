@@ -44,48 +44,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/azure/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/categories/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
     
     <lastmod>2021-11-25</lastmod>
@@ -479,6 +437,69 @@
   
   <url>
     <loc>https://huntertran.com/about/thankyou</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/azure/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/01/31/ic04/</loc>
+    
+    <lastmod>2021-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2012/03/08/ic05/</loc>
     
     <lastmod>2021-11-25</lastmod>
     
@@ -912,35 +933,14 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    <loc>https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
     
     <lastmod>2021-11-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://huntertran.com/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/14/ic03/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/01/31/ic04/</loc>
-    
-    <lastmod>2021-11-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2012/03/08/ic05/</loc>
+    <loc>https://huntertran.com/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
     
     <lastmod>2021-11-25</lastmod>
     
@@ -2589,20 +2589,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/categories/research/</loc>
-    <lastmod>2021-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/categories/Coding-Challenges/</loc>
-    <lastmod>2021-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/categories/CSharp/Windows-10/Windows-Store-App/</loc>
     <lastmod>2021-11-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2618,6 +2604,20 @@
   
   <url>
     <loc>https://huntertran.com/categories/JavaScript-and-TypeScript/</loc>
+    <lastmod>2021-11-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/research/</loc>
+    <lastmod>2021-11-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/Coding-Challenges/</loc>
     <lastmod>2021-11-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
