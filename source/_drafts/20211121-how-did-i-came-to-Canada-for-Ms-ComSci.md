@@ -1,5 +1,5 @@
 ---
-title: draft
+title: Tôi đã đến Canada học Master of Computer Science như thế nào
 date: 2021-11-21 16:28:17
 tags:
 ---

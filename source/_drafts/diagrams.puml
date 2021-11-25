@@ -1,0 +1,9 @@
+@startuml comp
+
+component Checkout
+
+component CardProcessing
+
+
+
+@enduml
