@@ -42,3 +42,23 @@ You cannot add an unlimited amount of CPU power, RAM, or storage. Adding more se
 
 ## Database scaling
 
+A database has 4 basic operations: CREATE-READ-UPDATE-DELETE. For each operation, there are specific ways to scale.
+
+### Database Replication
+
+For example, when you need to read a lot but write sometimes, you can use Database Replication, with one master database and multiple slaves.
+
+![database replication](../out/source/uml/2022/0122/database_replication.png)
+
+### Database sharding
+
+Sharding, or partioning, is another approach to database scaling. You still use multiple database, but different from replication, each database hold a portion of the data. A sharding strategy could be use to determine which data belong to which database.
+
+> For example, you can store all record with odd id to a database, and even id to another.
+
+However, this will introduce some new problems:
+* What if all database is used up to it limit, and you need to add a new datbase?
+* What if data of a query is allocated to multiple database?
+* What if you need to remove a shard, and copy it data to all other operational shard?
+
+> There are other clever ways to scaling the database, suitable for very specific systems. The key is to split and conquer.
