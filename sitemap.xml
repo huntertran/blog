@@ -56,6 +56,15 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
     
     <lastmod>2022-01-24</lastmod>
@@ -1209,15 +1218,6 @@
   
   <url>
     <loc>https://huntertran.com/2016/07/11/c-string-performance-tips-and-tricks/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
     
     <lastmod>2022-01-24</lastmod>
     

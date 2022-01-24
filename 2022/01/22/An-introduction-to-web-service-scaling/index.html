@@ -30,14 +30,14 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you cou">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huntertran.com/2022/01/22/out/source/uml/2022/0122/database_replication.png">
-<meta property="og:image" content="https://huntertran.com/2022/01/22/out/source/uml/2022/0122/cache.png">
+<meta property="og:image" content="https://i.imgur.com/SsPICMO.png">
+<meta property="og:image" content="https://i.imgur.com/D7o4X4g.png">
 <meta property="article:published_time" content="2022-01-22T07:42:18.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:48:25.814Z">
+<meta property="article:modified_time" content="2022-01-24T22:54:25.833Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="system design">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huntertran.com/2022/01/22/out/source/uml/2022/0122/database_replication.png">
+<meta name="twitter:image" content="https://i.imgur.com/SsPICMO.png">
 
 
 <link rel="canonical" href="https://huntertran.com/2022/01/22/An-introduction-to-web-service-scaling/">
@@ -267,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:48:25" itemprop="dateModified" datetime="2022-01-24T17:48:25-05:00">2022-01-24</time>
+      <time title="Modified: 2022-01-24 17:54:25" itemprop="dateModified" datetime="2022-01-24T17:54:25-05:00">2022-01-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -327,7 +327,7 @@
 <p>You cannot add an unlimited amount of CPU power, RAM, or storage. Adding more server to a system also add new problems like data consistency, choosing the server, concurrency access, etc. They are challenging, but fear not, there are solutions.</p>
 <h1 id="Geting-scaled"><a href="#Geting-scaled" class="headerlink" title="Geting scaled"></a>Geting scaled</h1><h2 id="Database-scaling"><a href="#Database-scaling" class="headerlink" title="Database scaling"></a>Database scaling</h2><p>A database has 4 basic operations: CREATE-READ-UPDATE-DELETE. For each operation, there are specific ways to scale.</p>
 <h3 id="Database-Replication"><a href="#Database-Replication" class="headerlink" title="Database Replication"></a>Database Replication</h3><p>For example, when you need to read a lot but write sometimes, you can use Database Replication, with one master database and multiple slaves.</p>
-<p><img src="../out/source/uml/2022/0122/database_replication.png" alt="database replication"></p>
+<p><img src="https://i.imgur.com/SsPICMO.png" alt="database replication"></p>
 <h3 id="Database-sharding"><a href="#Database-sharding" class="headerlink" title="Database sharding"></a>Database sharding</h3><p>Sharding, or partitioning, is another approach to database scaling. You still use multiple databases, but different from replication, each database holds a portion of the data. A sharding strategy could be used to determine which data belong to which database.</p>
 <blockquote>
 <p>For example, you can store all records with odd id to a database and even id to another.</p>
@@ -345,7 +345,7 @@
 <p>For example, you can store all kinds of data in MongoDB and read them with extremely high performance and low cost. However, MongoDB doesn’t have join operation, Transaction, or Trigger.</p>
 <h2 id="Server-Scaling"><a href="#Server-Scaling" class="headerlink" title="Server Scaling"></a>Server Scaling</h2><p>The ultimate goal of scaling is to handle increasing traffic, or to reduce the response time of a single request. To do so, there are some solutions</p>
 <h3 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h3><p>If the data will not change for a relatively long time, we can use cache to store that data. Whenever the data is needed, server read it directly from cache without calculation or take trip to database.</p>
-<p><img src="../out/source/uml/2022/0122/cache.png" alt="cache"></p>
+<p><img src="https://i.imgur.com/D7o4X4g.png" alt="cache"></p>
 <h3 id="Stateless-and-multiple-servers"><a href="#Stateless-and-multiple-servers" class="headerlink" title="Stateless and multiple servers"></a>Stateless and multiple servers</h3><p>Stateless mean the server does not store the state of the request. Every requests are treated the same. This is important, because the servers don’t save state of the request, we can easily add more identical servers to increase the performance.</p>
 <p>However, to use multiple servers for a web service, we need a way to direct the request to the idle server. We call it the Load Balancer.</p>
 <p><strong>Load Balancer</strong></p>
