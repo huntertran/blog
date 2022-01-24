@@ -15,9 +15,29 @@ Designing a system that could serve millions of requests will always be a big ch
 >
 > This post covers a tiny part of the book. Please read the book for more information.
 
-# Some basic concepts
+<!-- TOC -->
 
-## What to scale?
+- [1. Some basic concepts](#1-some-basic-concepts)
+    - [1.1. What to scale?](#11-what-to-scale)
+    - [1.2. Scaling directions](#12-scaling-directions)
+- [2. Geting scaled](#2-geting-scaled)
+    - [2.1. Database scaling](#21-database-scaling)
+        - [2.1.1. Database Replication](#211-database-replication)
+        - [2.1.2. Database sharding](#212-database-sharding)
+        - [2.1.3. Use a different type of database technology](#213-use-a-different-type-of-database-technology)
+    - [2.2. Server Scaling](#22-server-scaling)
+        - [2.2.1. Cache](#221-cache)
+        - [2.2.2. Stateless and multiple servers](#222-stateless-and-multiple-servers)
+        - [2.2.3. Microservice Architecture](#223-microservice-architecture)
+- [3. What about the client?](#3-what-about-the-client)
+
+<!-- /TOC -->
+
+# 1. Some basic concepts
+<a id="markdown-some-basic-concepts" name="some-basic-concepts"></a>
+
+## 1.1. What to scale?
+<a id="markdown-what-to-scale%3F" name="what-to-scale%3F"></a>
 
 A web service is a composite of multiple components. In the most straightforward system, they are:
 * Database
@@ -30,7 +50,8 @@ Depending on the nature of your system and/or where the bottleneck is, you could
 
 For example, if your system stores a vast amount of data and accesses them frequently, you may want to scale up the database. However, if your system is heavy on the calculation, then you may want to scale up the server. Of course, you can scale up both components. It is always the price/performance problem.
 
-## Scaling directions
+## 1.2. Scaling directions
+<a id="markdown-scaling-directions" name="scaling-directions"></a>
 
 There are 2 ways to scale a system:
 * Scale-up: Adding more processing power (CPU, RAM, Storage)
@@ -38,19 +59,23 @@ There are 2 ways to scale a system:
 
 You cannot add an unlimited amount of CPU power, RAM, or storage. Adding more server to a system also add new problems like data consistency, choosing the server, concurrency access, etc. They are challenging, but fear not, there are solutions.
 
-# Geting scaled
+# 2. Geting scaled
+<a id="markdown-geting-scaled" name="geting-scaled"></a>
 
-## Database scaling
+## 2.1. Database scaling
+<a id="markdown-database-scaling" name="database-scaling"></a>
 
 A database has 4 basic operations: CREATE-READ-UPDATE-DELETE. For each operation, there are specific ways to scale.
 
-### Database Replication
+### 2.1.1. Database Replication
+<a id="markdown-database-replication" name="database-replication"></a>
 
 For example, when you need to read a lot but write sometimes, you can use Database Replication, with one master database and multiple slaves.
 
 ![database replication](https://i.imgur.com/SsPICMO.png)
 
-### Database sharding
+### 2.1.2. Database sharding
+<a id="markdown-database-sharding" name="database-sharding"></a>
 
 Sharding, or partitioning, is another approach to database scaling. You still use multiple databases, but different from replication, each database holds a portion of the data. A sharding strategy could be used to determine which data belong to which database.
 
@@ -63,23 +88,27 @@ However, this will introduce some new problems:
 
 > There are other clever ways to scale the database, suitable for very specific systems. The key is to split and conquer.
 
-### Use a different type of database technology
+### 2.1.3. Use a different type of database technology
+<a id="markdown-use-a-different-type-of-database-technology" name="use-a-different-type-of-database-technology"></a>
 
 To SQL or NoSQL? Graph or table? Free or commercial? There are multiple databases technology out there. Based on the project's business logic, the architect must choose the best database technology.
 
 For example, you can store all kinds of data in MongoDB and read them with extremely high performance and low cost. However, MongoDB doesn't have join operation, Transaction, or Trigger.
 
-## Server Scaling
+## 2.2. Server Scaling
+<a id="markdown-server-scaling" name="server-scaling"></a>
 
 The ultimate goal of scaling is to handle increasing traffic, or to reduce the response time of a single request. To do so, there are some solutions
 
-### Cache
+### 2.2.1. Cache
+<a id="markdown-cache" name="cache"></a>
 
 If the data will not change for a relatively long time, we can use cache to store that data. Whenever the data is needed, server read it directly from cache without calculation or take trip to database.
 
 ![cache](https://i.imgur.com/D7o4X4g.png)
 
-### Stateless and multiple servers
+### 2.2.2. Stateless and multiple servers
+<a id="markdown-stateless-and-multiple-servers" name="stateless-and-multiple-servers"></a>
 
 Stateless mean the server does not store the state of the request. Every requests are treated the same. This is important, because the servers don't save state of the request, we can easily add more identical servers to increase the performance.
 
@@ -91,7 +120,8 @@ How exactly load balancer balance the request between servers? By using some alg
 
 For example: The round robin algorithm. All server sit on a circle. The load balancer distribute one request to a server, then distribute the next request to the next server on the circle.
 
-### Microservice Architecture
+### 2.2.3. Microservice Architecture
+<a id="markdown-microservice-architecture" name="microservice-architecture"></a>
 
 What if there is only one component get extremely high traffic? Is there anyway to scale components of the system separately?
 
@@ -103,7 +133,8 @@ However, Microservice Architecture introduce some problems. If not used correctl
 
 > An excellent post about these problems: [Disasters I've seen in a microservices world](https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51)
 
-# What about the client?
+# 3. What about the client?
+<a id="markdown-what-about-the-client%3F" name="what-about-the-client%3F"></a>
 
 If we know for sure that our client is not some 1992 machine with limited CPU power and memory, then we can use the REST architecture.
 
