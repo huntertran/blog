@@ -22,8 +22,11 @@ jobs:
     #     restore-keys: |
     #       ${{ runner.os }}-node-
     - name: Install Dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: npm ci
+      # if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        rm -rf node_modules package-lock.json 
+        npm cache clean --force
+        npm ci
     
     # Deploy hexo blog website.
     - name: Deploy
