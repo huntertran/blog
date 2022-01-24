@@ -1,0 +1,18 @@
+@startuml cache
+
+Server --> Cache: request data
+activate Cache
+Cache --> Server: data existed
+deactivate Cache
+
+Server --> Cache: request data
+activate Cache
+Cache --> Database: Data not existed
+activate Database
+
+Database --> Cache: store data in cache
+deactivate Database
+Cache --> Server: return data
+deactivate Cache
+
+@enduml
