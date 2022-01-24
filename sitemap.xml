@@ -56,6 +56,195 @@
   </url>
   
   <url>
+    <loc>https://huntertran.com/2022/01/22/An-introduction-to-web-service-scaling/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/cancel</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/about/thankyou</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/azure/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/categories/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/computer-tips/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/csharp/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/12/19/notice-tach-blog/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2015/12/30/2015-in-review/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.com/2016/07/11/c-string-performance-tips-and-tricks/</loc>
+    
+    <lastmod>2022-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
     
     <lastmod>2022-01-24</lastmod>
@@ -551,15 +740,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.com/2022/01/22/An-introduction-to-web-service-scaling/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2022-01-24</lastmod>
@@ -579,69 +759,6 @@
   
   <url>
     <loc>https://huntertran.com/2020/11/23/disk-cleanup-to-free-disk-space/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/about/cancel</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/about/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/about/thankyou</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/azure/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/categories/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/computer-tips/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/csharp/</loc>
     
     <lastmod>2022-01-24</lastmod>
     
@@ -1101,123 +1218,6 @@
   
   <url>
     <loc>https://huntertran.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/12/19/notice-tach-blog/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2015/12/30/2015-in-review/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
-    
-    <lastmod>2022-01-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.com/2016/07/11/c-string-performance-tips-and-tricks/</loc>
     
     <lastmod>2022-01-24</lastmod>
     
