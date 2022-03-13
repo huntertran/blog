@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cuoilennaocacban2.files.wordpress.com/2017/01/original.jpg">
 <meta property="article:published_time" content="2017-01-06T13:30:52.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:56:55.765Z">
+<meta property="article:modified_time" content="2022-03-13T21:04:44.567Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="code first">
 <meta property="article:tag" content="database first">
@@ -158,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Giai-thich"><span class="nav-text">Giải thích</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Uu-diem-va-nhuoc-diem"><span class="nav-text">Ưu điểm và nhược điểm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tuong-lai-nao-cho-ASP-NET-Core"><span class="nav-text">Tương lai nào cho ASP.NET Core?</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Giai-thich"><span class="nav-text">1. Giải thích</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Uu-diem-va-nhuoc-diem"><span class="nav-text">2. Ưu điểm và nhược điểm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Tuong-lai-nao-cho-ASP-NET-Core"><span class="nav-text">3. Tương lai nào cho ASP.NET Core?</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -267,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:56:55" itemprop="dateModified" datetime="2022-01-24T17:56:55-05:00">2022-01-24</time>
+      <time title="Modified: 2022-03-13 17:04:44" itemprop="dateModified" datetime="2022-03-13T17:04:44-04:00">2022-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,29 +311,40 @@
 <p>Chọn cách nào đi chăng nữa, vẫn sẽ có một số sự khác biệt mà bạn cần biết để chọn cho đúng, xong rồi phóng lao để đâm theo</p>
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/original.jpg" alt="original"></p>
 <span id="more"></span>
-<h1 id="Giai-thich"><a href="#Giai-thich" class="headerlink" title="Giải thích"></a>Giải thích</h1><p><strong>Code First</strong></p>
-<p><strong>Database First</strong></p>
-<p>Viết các class Model bằng code C# Generate Database từ class Model</p>
-<p>Generate Model từ Database Các class Model sẽ ko được phép chỉnh sửa</p>
-<h1 id="Uu-diem-va-nhuoc-diem"><a href="#Uu-diem-va-nhuoc-diem" class="headerlink" title="Ưu điểm và nhược điểm"></a>Ưu điểm và nhược điểm</h1><p><strong>Code First</strong></p>
-<p><strong>Database First</strong></p>
-<p>Ưu điểm</p>
-<p>Rất phổ biến (vì các lập trình viên thường không thích thiết kế DB, nhưng thích thiết kế class)</p>
-<p>Kiểm soát hoàn toàn code model, thêm xóa sửa thuộc tính vô cùng dễ dàng</p>
-<p>Không phải nặng đầu suy nghĩ về DB. Đối với cách tiếp cận này, DB chỉ là cái “cục” data, lôi ra xài thôi</p>
-<p>Có thể version control Database</p>
-<p>Ít phổ biến hơn</p>
-<p>DB có thể được develop riêng</p>
-<p>Dùng được DB có sẵn</p>
-<p>Entity Framework sẽ tạo ra các Entity class cho bạn</p>
-<p>Nhược điểm</p>
-<p>Các thay đổi cấu trúc trực tiếp trên DB sẽ mất</p>
-<p>Khó kiểm soát những column sẽ tạo trên Db</p>
-<p>Hơi khó khi kết hợp với Db có sẵn</p>
-<p>Không thể thay đổi code đã được Generate (nó sẽ mất trong lần chỉnh sửa cấu trúc DB tiếp theo)</p>
-<p>Khó khăn khi muốn thêm các DataAttribute và DisplayAttribute cho các class model</p>
+
+<h1 id="1-Giai-thich"><a href="#1-Giai-thich" class="headerlink" title="1. Giải thích"></a>1. Giải thích</h1><table>
+<thead>
+<tr>
+<th><strong>Code First</strong></th>
+<th><strong>Database First</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Viết các class Model bằng code C#<br>Generate Database từ class Model</td>
+<td>Generate Model từ Database<br>Các class Model sẽ ko được phép chỉnh sửa</td>
+</tr>
+</tbody></table>
+<h1 id="2-Uu-diem-va-nhuoc-diem"><a href="#2-Uu-diem-va-nhuoc-diem" class="headerlink" title="2. Ưu điểm và nhược điểm"></a>2. Ưu điểm và nhược điểm</h1><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Code first</strong></th>
+<th><strong>Database first</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ưu điểm</strong></td>
+<td>Rất phổ biến (vì các lập trình viên thường không thích thiết kế DB, nhưng thích thiết kế class)<br><br>Kiểm soát hoàn toàn code model, thêm xóa sửa thuộc tính vô cùng dễ dàng<br>Không phải nặng đầu suy nghĩ về DB. Đối với cách tiếp cận này, DB chỉ là cái “cục” data, lôi ra xài thôi<br>Có thể version control Database</td>
+<td>Ít phổ biến hơn<br><br>DB có thể được develop riêng<br>Dùng được DB có sẵn<br>Entity Framework sẽ tạo ra các Entity class cho bạn</td>
+</tr>
+<tr>
+<td><strong>Nhược điểm</strong></td>
+<td>Các thay đổi cấu trúc trực tiếp trên DB sẽ mất<br><br>Khó kiểm soát những column sẽ tạo trên Db<br>Hơi khó khi kết hợp với Db có sẵn</td>
+<td>Không thể thay đổi code đã được Generate (nó sẽ mất trong lần chỉnh sửa cấu trúc DB tiếp theo)<br><br>Khó khăn khi muốn thêm các DataAttribute và DisplayAttribute cho các class model<br>Bạn phải nhức đầu suy nghĩ khi muốn biểu diễn các kiểu quan hệ cha con của class<br>Mỗi lần thay đổi cấu trúc DB, bạn sẽ phải update lại EDMX và tạo lại các class Model để phản ánh sự thay đổi đó</td>
+</tr>
+</tbody></table>
 <p>Bạn phải nhức đầu suy nghĩ khi muốn biểu diễn các kiểu quan hệ cha con của class Mỗi lần thay đổi cấu trúc DB, bạn sẽ phải update lại EDMX và tạo lại các class Model để phản ánh sự thay đổi đó</p>
-<h1 id="Tuong-lai-nao-cho-ASP-NET-Core"><a href="#Tuong-lai-nao-cho-ASP-NET-Core" class="headerlink" title="Tương lai nào cho ASP.NET Core?"></a>Tương lai nào cho ASP.NET Core?</h1><p>Tại thời điểm viết bài viết này, ASP.NET Core vẫn sẽ support Database First lâu dài, nhưng gặp một số lỗi rất khó chịu khiến bạn hơi khó khăn khi tạo Entities Class từ Database có sẵn</p>
+<h1 id="3-Tuong-lai-nao-cho-ASP-NET-Core"><a href="#3-Tuong-lai-nao-cho-ASP-NET-Core" class="headerlink" title="3. Tương lai nào cho ASP.NET Core?"></a>3. Tương lai nào cho ASP.NET Core?</h1><p>Tại thời điểm viết bài viết này, ASP.NET Core vẫn sẽ support Database First lâu dài, nhưng gặp một số lỗi rất khó chịu khiến bạn hơi khó khăn khi tạo Entities Class từ Database có sẵn</p>
 <p>Có thể tạm kết luận là: Code first là tương lai, nhưng nếu thích, bạn vẫn có thể dùng Database First nhóe</p>
 <p>Hết rồi :D</p>
 

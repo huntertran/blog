@@ -31,7 +31,7 @@
 <meta property="og:description" content="Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2016-07-11T04:38:34.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:56:55.765Z">
+<meta property="article:modified_time" content="2022-03-13T21:04:44.567Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="performance">
 <meta name="twitter:card" content="summary">
@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tai-sao-vay"><span class="nav-text">Tại sao vậy?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cac-van-de"><span class="nav-text">Các vấn đề</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-1-Cong-chuoi"><span class="nav-text">Sai lầm 1: Cộng chuỗi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Giai-quyet-string-Concat-StringBuilder-va-string-Format"><span class="nav-text">Giải quyết: string.Concat, StringBuilder và string.Format</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sai-lam-2-check-null-%E2%80%93-so-sanh-chuoi-rong"><span class="nav-text">Sai lầm 2: check null – so sánh chuỗi rỗng</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ket-luan"><span class="nav-text">Kết luận</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Tai-sao-vay"><span class="nav-text">1. Tại sao vậy?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Cac-van-de"><span class="nav-text">2. Các vấn đề</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Sai-lam-1-Cong-chuoi"><span class="nav-text">2.1. Sai lầm 1: Cộng chuỗi</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format"><span class="nav-text">2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Sai-lam-2-check-null-%E2%80%93-so-sanh-chuoi-rong"><span class="nav-text">2.2. Sai lầm 2: check null – so sánh chuỗi rỗng</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Ket-luan"><span class="nav-text">2.3. Kết luận</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,7 +264,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:56:55" itemprop="dateModified" datetime="2022-01-24T17:56:55-05:00">2022-01-24</time>
+      <time title="Modified: 2022-03-13 17:04:44" itemprop="dateModified" datetime="2022-03-13T17:04:44-04:00">2022-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -312,12 +312,12 @@
 </li>
 <li>  <a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
 </ul>
-<h1 id="Tai-sao-vay"><a href="#Tai-sao-vay" class="headerlink" title="Tại sao vậy?"></a>Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
+<h1 id="1-Tai-sao-vay"><a href="#1-Tai-sao-vay" class="headerlink" title="1. Tại sao vậy?"></a>1. Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
 <p>Tuy nhiên, nói chung lại thì có một số vấn đề “trường tồn cùng thời gian” mà bạn có thể sẽ bắt gặp khi code một ứng dụng C#</p>
 <p>Bài viết này tập trung chủ yếu vào C# 6.0 đang được sử dụng cho các ứng dụng UWP của Windows 10</p>
 <p>Project tham khảo có trong bài viết: <a target="_blank" rel="noopener" href="https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance">https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance</a></p>
-<h1 id="Cac-van-de"><a href="#Cac-van-de" class="headerlink" title="Các vấn đề"></a>Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
-<h2 id="Sai-lam-1-Cong-chuoi"><a href="#Sai-lam-1-Cong-chuoi" class="headerlink" title="Sai lầm 1: Cộng chuỗi"></a>Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
+<h1 id="2-Cac-van-de"><a href="#2-Cac-van-de" class="headerlink" title="2. Các vấn đề"></a>2. Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
+<h2 id="2-1-Sai-lam-1-Cong-chuoi"><a href="#2-1-Sai-lam-1-Cong-chuoi" class="headerlink" title="2.1. Sai lầm 1: Cộng chuỗi"></a>2.1. Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
 msg +&#x3D; &quot;Tuan Tran&quot;;
 msg +&#x3D; &quot;. Today is &quot;;
 msg +&#x3D; System.DateTime.Now.ToString();</code></pre>
@@ -337,14 +337,14 @@ string tmp3 &#x3D; new String( msg + DateTime.Now.ToString( ) );
 
 msg &#x3D; tmp3; &#x2F;&#x2F; &quot;Hello Tuan Tran. Today is &quot; is garbage.</code></pre>
 
-<h3 id="Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="Giải quyết: string.Concat, StringBuilder và string.Format"></a>Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
+<h3 id="2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format"></a>2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
 <pre class="line-numbers language-none"><code class="language-none">StringBuilder s &#x3D; new StringBuilder();
 s.Append(&quot;Tuan Tran&quot;); s.Append(&quot; Today is &quot;);
 blah blah blah</code></pre>
 
 <p>Tuy nhiên, đối với C# 6.0 như đã đề cập bên trên, compiler của nó đủ thông minh để compile ra một đoạn native code hiệu quả nhất.</p>
 <p>Như vậy, nói tóm lại, bạn có thể sử dụng <code>string.Concat</code> để cộng các chuỗi đơn giản, <code>StringBuilder</code> để xây dựng các chuỗi bự hơn, và <code>string.Format</code> khi bạn muốn cộng các chuỗi từ các kiểu dữ liệu khác, hoặc muốn format nó theo một kiểu nào đó.</p>
-<h2 id="Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="Sai lầm 2: check null – so sánh chuỗi rỗng"></a>Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
+<h2 id="2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="2.2. Sai lầm 2: check null – so sánh chuỗi rỗng"></a>2.2. Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
 <pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
 
 if(s &#x3D;&#x3D; null || s &#x3D;&#x3D; &quot;&quot;)
@@ -361,7 +361,7 @@ if(string.IsNullOrEmpty(s))
 &#125;</code></pre>
 
 <p>Và nếu bạn muốn so sánh 2 chuỗi với nhau, hãy sử dụng string.Equal</p>
-<h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
+<h2 id="2-3-Ket-luan"><a href="#2-3-Ket-luan" class="headerlink" title="2.3. Kết luận"></a>2.3. Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
 <p>Sau đây mà tài liệu MSDN về string:</p>
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2">https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2</a></p>
 

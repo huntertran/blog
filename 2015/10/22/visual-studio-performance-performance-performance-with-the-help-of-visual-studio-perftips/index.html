@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://farm6.staticflickr.com/5718/22190832080_f489be8d8a_o.png">
 <meta property="og:image" content="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png">
 <meta property="article:published_time" content="2015-10-22T07:39:19.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:56:55.761Z">
+<meta property="article:modified_time" content="2022-03-13T21:04:44.567Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="performance">
@@ -168,7 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tai-sao-lai-la-hieu-suat"><span class="nav-text">Tại sao lại là hiệu suất?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PerfTips-la-gi"><span class="nav-text">PerfTips là gì?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dung-PerfTips"><span class="nav-text">Dùng PerfTips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Best-Practices"><span class="nav-text">Best Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Do-nhieu-lan"><span class="nav-text">Đo nhiều lần</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xac-nhan-lai-luc-Release"><span class="nav-text">Xác nhận lại lúc Release</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Tai-sao-lai-la-hieu-suat"><span class="nav-text">1. Tại sao lại là hiệu suất?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-PerfTips-la-gi"><span class="nav-text">2. PerfTips là gì?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Dung-PerfTips"><span class="nav-text">3. Dùng PerfTips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Best-Practices"><span class="nav-text">4. Best Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Do-nhieu-lan"><span class="nav-text">4.1. Đo nhiều lần</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Xac-nhan-lai-luc-Release"><span class="nav-text">4.2. Xác nhận lại lúc Release</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -277,7 +277,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:56:55" itemprop="dateModified" datetime="2022-01-24T17:56:55-05:00">2022-01-24</time>
+      <time title="Modified: 2022-03-13 17:04:44" itemprop="dateModified" datetime="2022-03-13T17:04:44-04:00">2022-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -316,7 +316,8 @@
         <p>For Visual Studio 2015</p>
 <p>Từ xưa tới nay, khi debug bằng Visual Studio, hầu như ai cũng biết chọt con chuột lên trên một biến nào đó và một cái bảng nho nhỏ hiện ra hiển thị toàn bộ dữ liệu của biến đó. Bài post này sẽ hướng dẫn bạn cách sử dụng những công cụ mới của Visual Studio 2015 để cải thiện hiệu suất cho ứng dụng của bạn.</p>
 <span id="more"></span>
-<h1 id="Tai-sao-lai-la-hieu-suat"><a href="#Tai-sao-lai-la-hieu-suat" class="headerlink" title="Tại sao lại là hiệu suất?"></a>Tại sao lại là hiệu suất?</h1><p>Trong Visual Studio 2015 có khá nhiều công cụ giúp bạn cải thiện hiệu suất ứng dụng của mình, làm nó chạy nhanh hơn, chiếm ít bộ nhớ hơn, giao diện đẹp hơn, blah blah blah. Tuy nhiên, rất nhìu bạn trẻ dùng phần lớn thời gian để làm cho các tính năng của ứng dụng chạy đúng như bạn mong muốn. Bạn hiểu rằng đoạn code bạn viết có performance không cao, nhưng bạn không có thời gian để nghiên cứu, nghiền ngẫm nó hoặc chạy các công cụ hỗ trợ phân tích hiệu suất cho tới khi hiệu suất là một vấn đề lớn của bạn.</p>
+
+<h1 id="1-Tai-sao-lai-la-hieu-suat"><a href="#1-Tai-sao-lai-la-hieu-suat" class="headerlink" title="1. Tại sao lại là hiệu suất?"></a>1. Tại sao lại là hiệu suất?</h1><p>Trong Visual Studio 2015 có khá nhiều công cụ giúp bạn cải thiện hiệu suất ứng dụng của mình, làm nó chạy nhanh hơn, chiếm ít bộ nhớ hơn, giao diện đẹp hơn, blah blah blah. Tuy nhiên, rất nhìu bạn trẻ dùng phần lớn thời gian để làm cho các tính năng của ứng dụng chạy đúng như bạn mong muốn. Bạn hiểu rằng đoạn code bạn viết có performance không cao, nhưng bạn không có thời gian để nghiên cứu, nghiền ngẫm nó hoặc chạy các công cụ hỗ trợ phân tích hiệu suất cho tới khi hiệu suất là một vấn đề lớn của bạn.</p>
 <p>Ngoài ra, khi bạn cần nghiên cứu hiệu suất của một đoạn code nào đó, vì sức mạnh kinh khủng của Visual Studio, bạn lại nhét vào code của mình một cái Stopwatch để đo xem đoạn code đó chạy mất bao lâu. Nói tóm lại, developer thường làm những chuyện sau:</p>
 <ul>
 <li>  Chèn code vào trong ứng dụng (kiểu như System.Diagnostics.Stopwatch) để đo thời gian chạy. Càng lúc càng nhiều Stopwatch được chèn đi chèn lại trong nhiều khúc của code.</li>
@@ -324,11 +325,11 @@
 <li>  Nhấn “Break All” (“Pause”) để coi thử code chạy tới đâu gòi (đặc biệt là trong mấy vòng lặp)</li>
 <li>  Rút gọn code quá đà mà không để ý tới performance (giống như không xài Linq cho tất cả mọi thứ)</li>
 </ul>
-<h1 id="PerfTips-la-gi"><a href="#PerfTips-la-gi" class="headerlink" title="PerfTips là gì?"></a>PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
+<h1 id="2-PerfTips-la-gi"><a href="#2-PerfTips-la-gi" class="headerlink" title="2. PerfTips là gì?"></a>2. PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
 <p><img src="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png"></p>
 <p>Bấm vào nó (chỗ &lt;= 1ms elapsed), sẽ hiện ra công cụ phân tích</p>
 <p><img src="https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png"></p>
-<h1 id="Dung-PerfTips"><a href="#Dung-PerfTips" class="headerlink" title="Dùng PerfTips"></a>Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
+<h1 id="3-Dung-PerfTips"><a href="#3-Dung-PerfTips" class="headerlink" title="3. Dùng PerfTips"></a>3. Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
 <p>Thay vì chèn 2 đoạn code Stopwatch vào đầu và cuối của phương thức này, bạn chỉ cần đặt 2 breakpoint vào chỗ đó</p>
 <p><img src="https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png"></p>
 <p>Nhấn F5 để chạy, và Visual Studio dừng lại ngay chỗ Breakpoint đầu tiên</p>
@@ -347,8 +348,8 @@
 <p><img src="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png"></p>
 <p>Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 2079 ms, giảm cỡ 700 ms, tương đương 25%. Quá tuyệt phải không?</p>
 <p>Bây giờ, khi bạn đã biết cách xài PerfTips, chúng ta sẽ tiếp tục với một vài Best Practices khi dùng nó</p>
-<h1 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h1><h2 id="Do-nhieu-lan"><a href="#Do-nhieu-lan" class="headerlink" title="Đo nhiều lần"></a>Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>
-<h2 id="Xac-nhan-lai-luc-Release"><a href="#Xac-nhan-lai-luc-Release" class="headerlink" title="Xác nhận lại lúc Release"></a>Xác nhận lại lúc Release</h2><p>Code chạy lúc build ở chế độ Debug lúc nào cũng chậm hơn hẳn so với code build ở chế độ Release. Nếu bạn muốn tối ưu hóa các đoạn code chạy nhanh hơn 50 ms, thì nên chuyển sang chế độ release để tối ưu hóa nó. Lúc này, bạn mới thấy rõ sự khác biệt.</p>
+<h1 id="4-Best-Practices"><a href="#4-Best-Practices" class="headerlink" title="4. Best Practices"></a>4. Best Practices</h1><h2 id="4-1-Do-nhieu-lan"><a href="#4-1-Do-nhieu-lan" class="headerlink" title="4.1. Đo nhiều lần"></a>4.1. Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>
+<h2 id="4-2-Xac-nhan-lai-luc-Release"><a href="#4-2-Xac-nhan-lai-luc-Release" class="headerlink" title="4.2. Xác nhận lại lúc Release"></a>4.2. Xác nhận lại lúc Release</h2><p>Code chạy lúc build ở chế độ Debug lúc nào cũng chậm hơn hẳn so với code build ở chế độ Release. Nếu bạn muốn tối ưu hóa các đoạn code chạy nhanh hơn 50 ms, thì nên chuyển sang chế độ release để tối ưu hóa nó. Lúc này, bạn mới thấy rõ sự khác biệt.</p>
 <p>Thế là xong. Hẹn gặp lại ở các bài blog tiếp theo nhóe.</p>
 
     </div>

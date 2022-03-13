@@ -176,7 +176,6 @@ using std::endl;</code></pre>
 <p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
 <p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png" alt="1-14-2012 8-40-26 PM" title="1-14-2012 8-40-26 PM"></a></p>
 <p>Bước 2: Điền các thông tin tương tự hình dưới</p>
-<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-46-29-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-46-29-pm.png" alt="1-14-2012 8-46-29 PM" title="1-14-2012 8-46-29 PM"></a></p>
 <p>Thay đổi thông tin cho phù hợp với bạn</p>
 <p>Lưu ý mục Participant Type: Student và Attending School: Yes</p>
 <p>School Name, chọn là University of Information Technology (VNU-HCM City). Nó sẽ hiện ra cho bạn chọn khi đăng gõ</p>
@@ -221,7 +220,6 @@ using std::endl;</code></pre>
 <p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
 <p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png" alt="1-14-2012 8-40-26 PM" title="1-14-2012 8-40-26 PM"></a></p>
 <p>Bước 2: Điền các thông tin tương tự hình dưới</p>
-<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/03/3-8-2012-9-07-38-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/03/3-8-2012-9-07-38-pm.png" title="3-8-2012 9-07-38 PM"></a></p>
 <p>Thay đổi thông tin cho phù hợp với bạn</p>
 <p>Lưu ý mục Participant Type: Mentor</p>
 <p>Sau đó, bấm dấu check đồng ý với các điều khoản, điều kiện của cuộc thi</p>
@@ -569,42 +567,75 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Có 1 cách, và nó đã được tích hợp sẵn</p>
 <span id="more"></span>
 <p>Windows Phone SDK đã tích hợp sẵn rất nhiều phím tắt để bạn có thể giả lập các phím cứng. Dưới đây sẽ là danh sách</p>
-<p>Phím</p>
-<p>Phím cứng trên điện thoại</p>
-<p>Ý nghĩa</p>
-<p>F1</p>
-<p>Back</p>
-<p>Tương đương phím back. Bạn có thể nhấn giữ (hold)</p>
-<p>F2</p>
-<p>Start</p>
-<p>Tương đương phím Start. Có thể hold</p>
-<p>F3</p>
-<p>Search</p>
-<p>F6</p>
-<p>Camera Half</p>
-<p>Nhấn một nửa phím Camera. Dùng để lấy tiêu cự</p>
-<p>F7</p>
-<p>Camera Full</p>
-<p>Nhấn toàn bộ phím Camera, dùng để chụp hình</p>
-<p>F9</p>
-<p>Volumn Up</p>
-<p>F10</p>
-<p>Volumn Down</p>
-<p>F12</p>
-<p>Power</p>
-<p>Phím nguồn. Nhấn để tắt/mở màn hình</p>
-<p>ESC</p>
-<p>Back</p>
-<p>Như F1</p>
-<p>PAUSE/BREAK</p>
-<p>Toggle Keyboard</p>
-<p>Kích hoạt/Ẩn bàn phím cứng. (Cần phân biệt với bàn phím ảo)</p>
-<p>PAGE UP</p>
-<p>Keyboard Up</p>
-<p>Dùng bàn phím ảo</p>
-<p>PAGE DOWN</p>
-<p>Keyboard Down</p>
-<p>Dùng bàn phím máy tính thay cho bàn phím ảo</p>
+<table>
+<thead>
+<tr>
+<th>Phím</th>
+<th>Phím cứng trên điện thoại</th>
+<th>Ý nghĩa trên điện thoại</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F1</td>
+<td>Back</td>
+<td>Tương đương phím back. Bạn có thể nhấn giữ (hold)</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>Start</td>
+<td>Tương đương phím Start. Có thể hold</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>Search</td>
+<td></td>
+</tr>
+<tr>
+<td>F6</td>
+<td>Camera Half</td>
+<td>Nhấn một nửa phím Camera. Dùng để lấy tiêu cự</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>Camera Full</td>
+<td>Nhấn toàn bộ phím Camera, dùng để chụp hình</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>Volumn Up</td>
+<td></td>
+</tr>
+<tr>
+<td>F10</td>
+<td>Volumn Down</td>
+<td></td>
+</tr>
+<tr>
+<td>F12</td>
+<td>Power</td>
+<td>Phím nguồn. Nhấn để tắt/mở màn hình</td>
+</tr>
+<tr>
+<td>ESC</td>
+<td>Back</td>
+<td>Như F1</td>
+</tr>
+<tr>
+<td>PAUSE/BREAK</td>
+<td>Toggle Keyboard</td>
+<td>Kích hoạt/Ẩn bàn phím cứng. (Cần phân biệt với bàn phím ảo)</td>
+</tr>
+<tr>
+<td>PAGE UP</td>
+<td>Keyboard Up</td>
+<td>Dùng bàn phím ảo</td>
+</tr>
+<tr>
+<td>PAGE DOWN</td>
+<td>Keyboard Down</td>
+<td>Dùng bàn phím máy tính thay cho bàn phím ảo</td>
+</tr>
+</tbody></table>
 <p>Một số hình ảnh</p>
 <p><img src="https://farm8.staticflickr.com/7323/9950551883_09633fbdf7_o.png" alt="phone"></p>
 <p><img src="https://farm4.staticflickr.com/3820/9950411475_fa5201553c_o.png" alt="phone"></p>
@@ -885,24 +916,24 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Giả sử như data của bạn nhiều, LoadData chạy khá lâu. Lúc đó thì page của bạn sẽ chỉ xuất hiện khi toàn bộ Contructor đã chạy xong. Tức là từ page cũ, bấm sang page này, sẽ có một khoảng thời gian ứng dụng bị “đơ”, đó chính là thời gian cần thiết để chạy phương thức khởi tạo page.</p>
 <p>Windows Phone ko hoạt động theo kiểu HTML, một khi tất cả đã sẵn sàng trong RAM, nó mới vẽ page đó ra trên màn hình, trong khi HTML là có cái jì là nó vẽ cái đó :3</p>
 <p>Rất nhiều người sử dụng cách này, vì trong một số đoạn video và hầu hết các tài liệu chính thức trên MSDN, MS hướng dẫn bạn theo cách này ==’</p>
-<h1 id="Cach-1-this-Loaded-event-handler"><a href="#Cach-1-this-Loaded-event-handler" class="headerlink" title="Cách 1: this.Loaded event handler"></a>Cách 1: this.Loaded event handler</h1><h2 id="Hoat-dong"><a href="#Hoat-dong" class="headerlink" title="Hoạt động"></a>Hoạt động</h2><p>Loaded event sẽ được gọi ngay khi vẽ xong giao diện của page lên màn hình (sau khi khởi tạo xong) và khi có một sự thay đổi về giao diện (thêm bớt các element)</p>
-<h2 id="Cach-dung"><a href="#Cach-dung" class="headerlink" title="Cách dùng"></a>Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png"></p>
+<h1 id="1-Cach-1-this-Loaded-event-handler"><a href="#1-Cach-1-this-Loaded-event-handler" class="headerlink" title="1. Cách 1: this.Loaded event handler"></a>1. Cách 1: this.Loaded event handler</h1><h2 id="1-1-Hoat-dong"><a href="#1-1-Hoat-dong" class="headerlink" title="1.1. Hoạt động"></a>1.1. Hoạt động</h2><p>Loaded event sẽ được gọi ngay khi vẽ xong giao diện của page lên màn hình (sau khi khởi tạo xong) và khi có một sự thay đổi về giao diện (thêm bớt các element)</p>
+<h2 id="1-2-Cach-dung"><a href="#1-2-Cach-dung" class="headerlink" title="1.2. Cách dùng"></a>1.2. Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png"></p>
 <p>Dùng như hình trên</p>
-<h2 id="Uu-diem"><a href="#Uu-diem" class="headerlink" title="Ưu điểm"></a>Ưu điểm</h2><p>Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng.</p>
+<h2 id="1-3-Uu-diem"><a href="#1-3-Uu-diem" class="headerlink" title="1.3. Ưu điểm"></a>1.3. Ưu điểm</h2><p>Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng.</p>
 <p>Phương pháp này làm được việc đó Việc khởi tạo page vô cùng nhanh chóng, ứng dụng của bạn sẽ không bị đơ, đảm bảo tương tác với người dùng</p>
-<h2 id="Nhuoc-diem"><a href="#Nhuoc-diem" class="headerlink" title="Nhược điểm"></a>Nhược điểm</h2><p>Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại.</p>
+<h2 id="1-4-Nhuoc-diem"><a href="#1-4-Nhuoc-diem" class="headerlink" title="1.4. Nhược điểm"></a>1.4. Nhược điểm</h2><p>Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại.</p>
 <p>Như vậy, ta không thể đảm bảo được rằng trong suốt quá trình tương tác trên page, phương thức này chỉ được gọi 1 lần.</p>
 <p>Gọi nhiều lần hàm load sẽ dẫn tới những kết cục không mong muốn, chưa kể đến sự hao phí tài nguyên và năng lượng Giả sử nếu bạn cần thời gian rất lâu để load dữ liệu, mà dữ liệu của bạn chưa được binding trước khi load xong, thì sẽ có 1 hiện tượng là page đã vẽ xong, nhưng nội dung thì vẫn trống trơn. Dù vẫn phản hồi tốt, người dùng sẽ tưởng app lỗi và rate thấp :3</p>
-<h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Nếu page của bạn, bạn chắc chắn không có sự thêm bớt về giao diện, có thể dùng phương thức này. Một lưu ý nhỏ là hãy binding dữ liệu trước khi tiến hành load dữ liệu lên. Binding lên một Collection không có phần tử hoàn toàn không sao cả. (không phải collection null nhé)</p>
+<h2 id="1-5-Ket-luan"><a href="#1-5-Ket-luan" class="headerlink" title="1.5. Kết luận"></a>1.5. Kết luận</h2><p>Nếu page của bạn, bạn chắc chắn không có sự thêm bớt về giao diện, có thể dùng phương thức này. Một lưu ý nhỏ là hãy binding dữ liệu trước khi tiến hành load dữ liệu lên. Binding lên một Collection không có phần tử hoàn toàn không sao cả. (không phải collection null nhé)</p>
 <blockquote>
 <p>Nếu dùng phương thức này mà gặp một số lỗi lạ về dữ liệu, hãy nghĩ tới trường hợp event được gọi nhiều lần</p>
 </blockquote>
-<h1 id="Cach-2-OnNavigatedTo"><a href="#Cach-2-OnNavigatedTo" class="headerlink" title="Cách 2: OnNavigatedTo"></a>Cách 2: OnNavigatedTo</h1><h2 id="Hoat-dong-1"><a href="#Hoat-dong-1" class="headerlink" title="Hoạt động"></a>Hoạt động</h2><p>OnNavigatedTo được gọi khi một page trở thành page active trong frame. Như vậy có nghĩa là nó sẽ được gọi trước khi event loaded xảy ra. Thứ tự: Contructor =&gt; OnNavigatedTo =&gt; Loaded</p>
-<h2 id="Cach-dung-1"><a href="#Cach-dung-1" class="headerlink" title="Cách dùng"></a>Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3668/10620480973_e2599e3065_o.png"></p>
-<h2 id="Uu-diem-1"><a href="#Uu-diem-1" class="headerlink" title="Ưu điểm"></a>Ưu điểm</h2><p>OnNavigatedTo có một số tham số liên quan tới việc chuyển page. Bạn có thể dùng các tham số này để xác định các thành phần sẽ hiển thị lên page như thế nào</p>
-<h2 id="Nhuoc-diem-1"><a href="#Nhuoc-diem-1" class="headerlink" title="Nhược điểm"></a>Nhược điểm</h2><p>Page cũ sẽ bị đơ trước khi chuyển</p>
-<h2 id="Ket-luan-1"><a href="#Ket-luan-1" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Chỉ dùng phương thức này khi thời gian đơ là không đáng kể. Nếu bạn load 2 dòng dữ liệu thì okie, còn nếu 20000 dòng thì nên dùng Loaded</p>
-<h1 id="Tom-lai"><a href="#Tom-lai" class="headerlink" title="Tóm lại"></a>Tóm lại</h1><p>Tùy và lượng dữ liệu, cũng như thời gian mà bạn sử dụng linh hoạt 1 trong 2 phương pháp</p>
+<h1 id="2-Cach-2-OnNavigatedTo"><a href="#2-Cach-2-OnNavigatedTo" class="headerlink" title="2. Cách 2: OnNavigatedTo"></a>2. Cách 2: OnNavigatedTo</h1><h2 id="2-1-Hoat-dong"><a href="#2-1-Hoat-dong" class="headerlink" title="2.1. Hoạt động"></a>2.1. Hoạt động</h2><p>OnNavigatedTo được gọi khi một page trở thành page active trong frame. Như vậy có nghĩa là nó sẽ được gọi trước khi event loaded xảy ra. Thứ tự: Contructor =&gt; OnNavigatedTo =&gt; Loaded</p>
+<h2 id="2-2-Cach-dung"><a href="#2-2-Cach-dung" class="headerlink" title="2.2. Cách dùng"></a>2.2. Cách dùng</h2><p><img src="https://farm4.staticflickr.com/3668/10620480973_e2599e3065_o.png"></p>
+<h2 id="2-3-Uu-diem"><a href="#2-3-Uu-diem" class="headerlink" title="2.3. Ưu điểm"></a>2.3. Ưu điểm</h2><p>OnNavigatedTo có một số tham số liên quan tới việc chuyển page. Bạn có thể dùng các tham số này để xác định các thành phần sẽ hiển thị lên page như thế nào</p>
+<h2 id="2-4-Nhuoc-diem"><a href="#2-4-Nhuoc-diem" class="headerlink" title="2.4. Nhược điểm"></a>2.4. Nhược điểm</h2><p>Page cũ sẽ bị đơ trước khi chuyển</p>
+<h2 id="2-5-Ket-luan"><a href="#2-5-Ket-luan" class="headerlink" title="2.5. Kết luận"></a>2.5. Kết luận</h2><p>Chỉ dùng phương thức này khi thời gian đơ là không đáng kể. Nếu bạn load 2 dòng dữ liệu thì okie, còn nếu 20000 dòng thì nên dùng Loaded</p>
+<h1 id="3-Tom-lai"><a href="#3-Tom-lai" class="headerlink" title="3. Tóm lại"></a>3. Tóm lại</h1><p>Tùy và lượng dữ liệu, cũng như thời gian mà bạn sử dụng linh hoạt 1 trong 2 phương pháp</p>
 ]]></content>
       <categories>
         <category>CSharp</category>
@@ -1802,8 +1833,8 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><img src="http://farm8.staticflickr.com/7132/13789811995_025cfbd0bc_o.png"></p>
 <span id="more"></span>
 
-<h1 id="Cap-nhat-Visual-Studio-2013-len-Updat-2-RC"><a href="#Cap-nhat-Visual-Studio-2013-len-Updat-2-RC" class="headerlink" title="Cập nhật Visual Studio 2013 lên Updat 2 RC"></a>Cập nhật Visual Studio 2013 lên Updat 2 RC</h1><p>Ngày 13-04-2014: Link tải: <a href="http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx">http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx</a></p>
-<h1 id="Tao-Project-Universal"><a href="#Tao-Project-Universal" class="headerlink" title="Tạo Project Universal"></a>Tạo Project Universal</h1><p>Sau khi cài đặt xong, bạn sẽ có thêm một số tùy chọn mới trong Visual Studio</p>
+<h1 id="1-Cap-nhat-Visual-Studio-2013-len-Update-2-RC"><a href="#1-Cap-nhat-Visual-Studio-2013-len-Update-2-RC" class="headerlink" title="1. Cập nhật Visual Studio 2013 lên Update 2 RC"></a>1. Cập nhật Visual Studio 2013 lên Update 2 RC</h1><p>Ngày 13-04-2014: Link tải: <a href="http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx">http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx</a></p>
+<h1 id="2-Tao-Project-Universal"><a href="#2-Tao-Project-Universal" class="headerlink" title="2. Tạo Project Universal"></a>2. Tạo Project Universal</h1><p>Sau khi cài đặt xong, bạn sẽ có thêm một số tùy chọn mới trong Visual Studio</p>
 <p><img src="http://farm8.staticflickr.com/7212/13789855595_5d445495c2_o.png"></p>
 <p>Chọn New Project</p>
 <p><img src="http://farm4.staticflickr.com/3808/13790231944_a53d45556f_o.png"></p>
@@ -1813,7 +1844,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Nhìn vào là ta cũng biết ngay, Project Windows 8.1 và project Windows Phone 8.1</p>
 <p>Còn Project “Shared” sẽ chứa các file dùng chung, cụ thể là Model và View Model</p>
 <p>Ta sẽ tạo một ứng dụng đọc tin RSS đơn giản nhé</p>
-<h1 id="Xay-dung-Model-va-ViewModel"><a href="#Xay-dung-Model-va-ViewModel" class="headerlink" title="Xây dựng Model và ViewModel"></a>Xây dựng Model và ViewModel</h1><p>Tạo 2 thư mục mới tên là Model và ViewModel trong Project Shared</p>
+<h1 id="3-Xay-dung-Model-va-ViewModel"><a href="#3-Xay-dung-Model-va-ViewModel" class="headerlink" title="3. Xây dựng Model và ViewModel"></a>3. Xây dựng Model và ViewModel</h1><p>Tạo 2 thư mục mới tên là Model và ViewModel trong Project Shared</p>
 <p><img src="http://farm8.staticflickr.com/7414/13790305334_ae2e50f650_o.png"></p>
 <p>Giả sử ta lấy trang này làm nguồn tin: <a href="http://nhipsongso.tuoitre.vn/RssFeeds.aspx?ChannelID=430">http://nhipsongso.tuoitre.vn/RssFeeds.aspx?ChannelID=430</a></p>
 <p>Vậy Model sẽ bao gồm 1 title và 1 content</p>
@@ -1853,7 +1884,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><img src="http://farm6.staticflickr.com/5095/13818062924_84818d20d1_o.png"></p>
 <p>Chạy thử</p>
 <p><img src="http://farm8.staticflickr.com/7371/13817751965_3b549082de_o.png"></p>
-<h1 id="Xay-dung-Template"><a href="#Xay-dung-Template" class="headerlink" title="Xây dựng Template"></a>Xây dựng Template</h1><p>Mở file MainPage.xaml trong Project Windows 8.1</p>
+<h1 id="4-Xay-dung-Template"><a href="#4-Xay-dung-Template" class="headerlink" title="4. Xây dựng Template"></a>4. Xây dựng Template</h1><p>Mở file MainPage.xaml trong Project Windows 8.1</p>
 <p>Click chuột phải vào ListBox &gt; Edit Additional Template &gt; Create Empty</p>
 <p><img src="http://farm4.staticflickr.com/3794/13818117864_1bac953a3c_o.png"></p>
 <p>Trong hộp thoại hiện ra, đặt tên nó là DataTemplate</p>
@@ -1863,7 +1894,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Nhấn nút Local Machine để chạy thử</p>
 <p><img src="http://farm3.staticflickr.com/2844/13817864265_226b8940eb_o.png"></p>
 <p>Thật tuyệt phải không?</p>
-<h1 id="Tao-tuong-tu-ben-Windows-Phone-8-1"><a href="#Tao-tuong-tu-ben-Windows-Phone-8-1" class="headerlink" title="Tạo tương tự bên Windows Phone 8.1"></a>Tạo tương tự bên Windows Phone 8.1</h1><p>Mở file MainPage.xaml của Project Windows Phone 8.1, copy và paste những thứ tương tự nhau</p>
+<h1 id="5-Tao-tuong-tu-ben-Windows-Phone-8-1"><a href="#5-Tao-tuong-tu-ben-Windows-Phone-8-1" class="headerlink" title="5. Tạo tương tự bên Windows Phone 8.1"></a>5. Tạo tương tự bên Windows Phone 8.1</h1><p>Mở file MainPage.xaml của Project Windows Phone 8.1, copy và paste những thứ tương tự nhau</p>
 <p><img src="http://farm8.staticflickr.com/7457/13818218074_cfcbe1015f_o.png"></p>
 <p>Tiếp tục mở code behind, và làm tương tự</p>
 <p><img src="http://farm4.staticflickr.com/3802/13818261174_95d475e43e_o.png"></p>
@@ -1888,7 +1919,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Chạy thử Project WP8.1</p>
 <p><img src="http://farm3.staticflickr.com/2891/13818903143_7951e186c4_o.png"></p>
 <p>Done, bạn đã tự tạo một UniversalApp rồi đấy</p>
-<h1 id="XAML-va-CodeBehind-dung-chung"><a href="#XAML-va-CodeBehind-dung-chung" class="headerlink" title="XAML và CodeBehind dùng chung"></a>XAML và CodeBehind dùng chung</h1><p>Như bạn có thể thấy ở hình trên, XAML và CodeBehind ở cả 2 Project rất giống nhau, hầu như không thay đổi gì cả</p>
+<h1 id="6-XAML-va-CodeBehind-dung-chung"><a href="#6-XAML-va-CodeBehind-dung-chung" class="headerlink" title="6. XAML và CodeBehind dùng chung"></a>6. XAML và CodeBehind dùng chung</h1><p>Như bạn có thể thấy ở hình trên, XAML và CodeBehind ở cả 2 Project rất giống nhau, hầu như không thay đổi gì cả</p>
 <p>Cách đây rất lâu, trong một buổi training tại văn phòng Microsoft, đã có người từng hỏi “tại sao không dùng chung XAML cho cả Windows 8 và Windows Phone?”. Câu trả lời khi đó là Windows 8 và Windows Phone có bộ thư viện hơi khác nhau, nên một số control cũng khác nhau. Bây giờ, Microsoft đã đem lại khả năng “dùng chung” đó</p>
 <p>Tạo một Folder tên View trong Project Shared</p>
 <p>Add New một BlankPage, đặt tên nó là MainPage</p>
@@ -2147,16 +2178,16 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
     <title>Fix your glitch Bluetooth mouse (or any bluetooth devices)</title>
     <url>/2014/11/14/fix-your-glitch-bluetooth-mouse/</url>
     <content><![CDATA[<p><a href="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg"><img src="https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg" alt="2_5F00_77B60B43"></a></p>
-<p>You have a great bluetooth mouse. Heavy, comfort for your hand, BlueTrack Technology, etc. Everything is great, but…the mouse got freezed, or lagged sometime.</p>
+<p>You have an excellent Bluetooth mouse. Heavy, comfort for your hand, BlueTrack Technology, etc. Everything is great, but… the mouse got frozen or lagged sometimes.</p>
 <p>How to fix this?</p>
 <span id="more"></span>
 
-<h1 id="Root-cause"><a href="#Root-cause" class="headerlink" title="Root cause"></a>Root cause</h1><p>The root cause of this problem, after so many search, is because Windows is allowed to turn off some devices when they’re not active after some period of time, to save battery.</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Right click on Start button &gt; Device Manager</p>
+<h1 id="Root-cause"><a href="#Root-cause" class="headerlink" title="Root cause"></a>Root cause</h1><p>The root cause of this problem, after so many searches, is because Windows is allowed to turn off some devices when they’re not active after a while to save battery.</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Right-click on Start button &gt; Device Manager</p>
 <p><img src="https://farm9.staticflickr.com/8661/15167914553_df323bc4bd_o.png"></p>
 <p>Find <code>Bluetooth</code> category, find the devices with “Adaptor” in the name</p>
 <p><img src="https://farm6.staticflickr.com/5609/15601546119_b9cc814b86_o.png"></p>
-<p>Right click on that device &gt; Properties &gt; Power Management &gt; Uncheck “Allow the computer to turn off this device to save power”</p>
+<p>Right-click on that device &gt; Properties &gt; Power Management &gt; Uncheck “Allow the computer to turn off this device to save power.”</p>
 <p><img src="https://farm8.staticflickr.com/7513/15788949452_8f09bede17_o.png"></p>
 <p>That’s it :3</p>
 ]]></content>
@@ -2408,7 +2439,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><em>“MSP Japan Niki Matsumura”</em></p>
 <h2 id="New-Zealand-The-Microsoft-Student-Accelerator-Initiative"><a href="#New-Zealand-The-Microsoft-Student-Accelerator-Initiative" class="headerlink" title="New Zealand: The Microsoft Student Accelerator Initiative"></a>New Zealand: The Microsoft Student Accelerator Initiative</h2><p> 2014 has been a hectic but rewarding year for MSP New Zealand! The MSPs, along with Ryan Tarak (BDE, DX, Microsoft New Zealand), launched a brand new initiative called the Microsoft Student Accelerator (MSA). The MSA program aims to train students from all around the country on Microsoft technologies and better prepare them for the tech industry of today. The biggest benefit of the program is the placement of qualifying students with New Zealand’s biggest employers in the tech industry so they can gain work experience over the summer.</p>
 <p>While 600 students trained in the first phase of the program, around 200 students moved on to complete phase 2 and finally, 94 students were placed with employers after rigorous individual and group assessments. A total of 35 employers participated in the program, including the University of Auckland (largest university in New Zealand), Coca-Cola, Lazyworm Apps (developers of MetroTube), Datacom and a few government organizations.  For more information, check out <a href="http://aka.ms/MSAInfograph">http://aka.ms/MSAInfograph</a>.</p>
-<h2 id="Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards"><a href="#Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards" class="headerlink" title="Philippines: one of the top countries in the “Hour of Code” global leaderboards"></a>Philippines: one of the top countries in the “Hour of Code” global leaderboards</h2><p>In  the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines  is one of the  top countries in the  Hour of Code Global Leaderboards  for having one of the highest participation rates in Hour of Code activities, with a total of  112 events  as of today, January 11, 2015.</p>
+<h2 id="Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards"><a href="#Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards" class="headerlink" title="Philippines: one of the top countries in the “Hour of Code” global leaderboards"></a>Philippines: one of the top countries in the “Hour of Code” global leaderboards</h2><p>In the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines is one of the top countries in the  Hour of Code Global Leaderboards for having one of the highest participation rates in Hour of Code activities, with a total of  112 events as of today, January 11, 2015.</p>
 <p>Though some of the events were rescheduled due to impending Typhoon Hagupit, that didn’t stop the teams from accomplishing their goal of teaching K-12 students and others from non-tech colleges how to code.</p>
 <p>Read the rest of the article here: <a href="http://bit.ly/1sKnUkr">http://bit.ly/1sKnUkr</a></p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia2.jpg"></p>
@@ -2458,7 +2489,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#83;&#104;&#117;&#110;&#46;&#x4f;&#x6b;&#117;&#x62;&#111;&#x40;&#115;&#116;&#x75;&#100;&#x65;&#x6e;&#116;&#x70;&#x61;&#x72;&#116;&#110;&#101;&#x72;&#46;&#x63;&#111;&#109;">&#83;&#104;&#117;&#110;&#46;&#x4f;&#x6b;&#117;&#x62;&#111;&#x40;&#115;&#116;&#x75;&#100;&#x65;&#x6e;&#116;&#x70;&#x61;&#x72;&#116;&#110;&#101;&#x72;&#46;&#x63;&#111;&#109;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#83;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#x74;&#x75;&#x64;&#101;&#110;&#116;&#112;&#97;&#x72;&#x74;&#110;&#101;&#114;&#46;&#x63;&#x6f;&#x6d;">&#83;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#107;&#x75;&#x62;&#x6f;&#64;&#115;&#x74;&#x75;&#x64;&#101;&#110;&#116;&#112;&#97;&#x72;&#x74;&#110;&#101;&#114;&#46;&#x63;&#x6f;&#x6d;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2645,7 +2676,8 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <p>Việc đầu tiên các bạn cần phải làm là gỡ bỏ các thanh công cụ này</p>
 <p>Vào Start, gõ Control Panel và mở Control Panel lên</p>
 <p><img src="https://farm1.staticflickr.com/371/19468724630_4b7f3c366f_o.png"></p>
-<p>Chọn Uninstall a program <img src="https://farm4.staticflickr.com/3675/19649655092_cc74a4cb11_o.png"></p>
+<p>Chọn Uninstall a program </p>
+<p><img src="https://farm4.staticflickr.com/3675/19649655092_cc74a4cb11_o.png"></p>
 <p>Tiếp theo là tìm và gỡ bỏ tất cả các phần mềm có chữ “Toolbar” trong đó. Trust me.</p>
 <h2 id="1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong"><a href="#1-2-Go-bo-cac-trinh-duyet-khong-chinh-thong" class="headerlink" title="1.2 Gỡ bỏ các trình duyệt không chính thống"></a>1.2 Gỡ bỏ các trình duyệt không chính thống</h2><p>Một trình duyệt không chính thống là một trình duyệt dựa trên bộ mã nguồn của trình duyệt nào đó, và được quảng cáo là có các tính năng hay hơn, xịn hơn, tốt hơn so với bản gốc.</p>
 <p>Tin tui đi, các trình duyệt này hoàn toàn sẽ bị đè bẹp bởi bản gốc nếu bạn tiếp tục đọc tiếp bài blog này</p>
@@ -2676,13 +2708,19 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <h1 id="2-Toi-uu-hoa-trinh-duyet-web"><a href="#2-Toi-uu-hoa-trinh-duyet-web" class="headerlink" title="2. Tối ưu hóa trình duyệt web"></a>2. Tối ưu hóa trình duyệt web</h1><h2 id="2-1-Mozilla-Firefox"><a href="#2-1-Mozilla-Firefox" class="headerlink" title="2.1 Mozilla Firefox"></a>2.1 Mozilla Firefox</h2><h3 id="2-1-1-Ve-thiet-lap-mac-dinh"><a href="#2-1-1-Ve-thiet-lap-mac-dinh" class="headerlink" title="2.1.1 Về thiết lập mặc định"></a>2.1.1 Về thiết lập mặc định</h3><p>Mở firefox lên, vào option</p>
 <p><img src="https://farm4.staticflickr.com/3687/19470981219_b07b393f3d_o.png"></p>
 <p>Nếu như thế nào đó mà bạn bị mất cái nút mở ra menu này, trong trình duyệt firefox, nhấn Alt, sẽ thấy xuất hiện menu bar cũ, vào Tool &gt; Option</p>
-<p>Tại đây, bạn sẽ thấy chỗ chỉnh trang web mặc định mở ra khi bạn mới mở Firefox. Chỉnh nó về Default hoặc như trong hình <img src="https://farm1.staticflickr.com/298/19469617048_3c2728ba6f_o.png"></p>
-<p>Ở mục content, bạn có thể bật tùy chọn Block Popup <img src="https://farm1.staticflickr.com/396/19662150581_09c85d0245_o.png"></p>
-<p>Ở mục Privacy &gt; chọn “Tell site I do not want to be tracked”, cái này sẽ chặn một số website có lương tâm không theo dõi hành vi của bạn trên trang web đó <img src="https://farm1.staticflickr.com/544/19469724790_9a3c03752b_o.png"></p>
-<p>Bật cả 3 tùy chọn sau ở mục Security <img src="https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png"></p>
-<p>Sau cùng, chọt vô Advanced &gt; Network &gt; Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không <img src="https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png"></p>
+<p>Tại đây, bạn sẽ thấy chỗ chỉnh trang web mặc định mở ra khi bạn mới mở Firefox. Chỉnh nó về Default hoặc như trong hình </p>
+<p><img src="https://farm1.staticflickr.com/298/19469617048_3c2728ba6f_o.png"></p>
+<p>Ở mục content, bạn có thể bật tùy chọn Block Popup </p>
+<p><img src="https://farm1.staticflickr.com/396/19662150581_09c85d0245_o.png"></p>
+<p>Ở mục Privacy &gt; chọn “Tell site I do not want to be tracked”, cái này sẽ chặn một số website có lương tâm không theo dõi hành vi của bạn trên trang web đó </p>
+<p><img src="https://farm1.staticflickr.com/544/19469724790_9a3c03752b_o.png"></p>
+<p>Bật cả 3 tùy chọn sau ở mục Security </p>
+<p><img src="https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png"></p>
+<p>Sau cùng, chọt vô Advanced &gt; Network &gt; Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không </p>
+<p><img src="https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png"></p>
 <p>Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã “sạch” <img src="https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png"></p>
-<h3 id="2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van"><a href="#2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van" class="headerlink" title="2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn"></a>2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</h3><p>Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox &gt; Addon <img src="https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png"></p>
+<h3 id="2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van"><a href="#2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van" class="headerlink" title="2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn"></a>2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</h3><p>Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox &gt; Addon </p>
+<p><img src="https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png"></p>
 <p>Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại những cái mà bạn biết rõ, hoặc nó có trong danh sách này:</p>
 <ul>
 <li>  IDM CC</li>
@@ -2692,18 +2730,24 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 </ul>
 <p>Đối với plug-in, vì là các phần mềm bên thứ 3 cài cắm vô, nên bạn không thể gỡ nó ra khỏi firefox, tuy nhiên, bạn có lựa chọn không bao giờ kích hoạt các plug-in này</p>
 <p>Chuyển sang thẻ plug-in, chọn never active đối với các plug-in khả nghi.</p>
-<p>Lưu ý có một số plug-in cần thiết để Firefox chạy <img src="https://farm1.staticflickr.com/324/19658104815_7b2d4573e6_o.png"></p>
+<p>Lưu ý có một số plug-in cần thiết để Firefox chạy </p>
+<p><img src="https://farm1.staticflickr.com/324/19658104815_7b2d4573e6_o.png"></p>
 <h3 id="2-1-3-Cai-cac-Add-on-huu-ich"><a href="#2-1-3-Cai-cac-Add-on-huu-ich" class="headerlink" title="2.1.3 Cài các Add-on hữu ích"></a>2.1.3 Cài các Add-on hữu ích</h3><p>Danh sách dưới đây là kinh nghiệm của mình, cài hay không là tùy bạn</p>
 <h4 id="2-1-3-1-Color-that-site"><a href="#2-1-3-1-Color-that-site" class="headerlink" title="2.1.3.1 Color that site"></a>2.1.3.1 Color that site</h4><p>Link tải: <a href="https://addons.mozilla.org/en-us/firefox/addon/color-that-site/">https://addons.mozilla.org/en-us/firefox/addon/color-that-site/</a></p>
 <p>Là một add-on khá hay, cho phép bạn đổi màu hoàn toàn một trang web.</p>
 <p>Các web site hiện nay đa phần xài cái nền trắng bóc, rất hai mắt và tốn điện. Nhìn lâu vào nó, bạn sẽ chỉ muốn đập máy, và bạn ước chi có cách nào đó đổi tất cả màu trắng thành màu đen, và màu chữ đen thành trắng.</p>
 <p>Color that site ra đời, cho phép bạn thay đổi màu toàn bộ các thành phần trên 1 website, trừ hình ảnh ra.</p>
 <p>Cách dùng: Sau khi cài đặt xong, bạn sẽ thấy một nút nho nhỏ màu mè tùm lum nằm bên cạnh nút menu. Mở trang web bạn muốn thay đổi màu và nhấn vô nó.</p>
-<p>Mình sẽ lấy tuoitre.vn làm ví dụ <img src="https://farm1.staticflickr.com/395/19471796349_7634f4684e_o.png"></p>
-<p>Bên cạnh trái sẽ xuất hiện một thanh nhỏ. Bấm Go! <img src="https://farm4.staticflickr.com/3725/19470911848_582c1be356_o.png"></p>
-<p>Bạn sẽ thấy một thanh chạy chạy, chờ nó chạy xong, sẽ hiện ra bảng tùy chỉnh. Bạn mở mục Foreground colors, chọn Invert Colors <img src="https://farm1.staticflickr.com/512/19633625356_5b369ba1c4_o.png"></p>
-<p>Sau đó tiếp tục mở Background colors, và chọn tiếp Invert Colors. Rồi chuyển sang thẻ Settings chọn domain để áp dụng thay đổi cho toàn bộ domain của tuổi trẻ rồi nhấn nút Save <img src="https://farm1.staticflickr.com/327/19659877085_498f2d9d47_o.png"></p>
-<p>Vậy là xong, bạn có thể chiêm ngưỡng thành quả. Tuoitre.vn giờ đã dễ chịu hơn cho mắt, nhưng chữ vẫn rất rõ ràng dễ đọc. <img src="https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png"></p>
+<p>Mình sẽ lấy tuoitre.vn làm ví dụ</p>
+<p><img src="https://farm1.staticflickr.com/395/19471796349_7634f4684e_o.png"></p>
+<p>Bên cạnh trái sẽ xuất hiện một thanh nhỏ. Bấm Go! </p>
+<p><img src="https://farm4.staticflickr.com/3725/19470911848_582c1be356_o.png"></p>
+<p>Bạn sẽ thấy một thanh chạy chạy, chờ nó chạy xong, sẽ hiện ra bảng tùy chỉnh. Bạn mở mục Foreground colors, chọn Invert Colors</p>
+<p><img src="https://farm1.staticflickr.com/512/19633625356_5b369ba1c4_o.png"></p>
+<p>Sau đó tiếp tục mở Background colors, và chọn tiếp Invert Colors. Rồi chuyển sang thẻ Settings chọn domain để áp dụng thay đổi cho toàn bộ domain của tuổi trẻ rồi nhấn nút Save</p>
+<p><img src="https://farm1.staticflickr.com/327/19659877085_498f2d9d47_o.png"></p>
+<p>Vậy là xong, bạn có thể chiêm ngưỡng thành quả. Tuoitre.vn giờ đã dễ chịu hơn cho mắt, nhưng chữ vẫn rất rõ ràng dễ đọc.</p>
+<p><img src="https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png"></p>
 <h4 id="2-1-3-2-Grease-Monkey"><a href="#2-1-3-2-Grease-Monkey" class="headerlink" title="2.1.3.2 Grease Monkey"></a>2.1.3.2 Grease Monkey</h4><p>Link: <a href="https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/">https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/</a></p>
 <p>Grease Monkey là một add-on cho phép bạn chạy thêm các đoạn JavaScript của riêng mình trên một website nhất định nào đó.</p>
 <p>Vậy tại sao mình phải làm vậy?</p>
@@ -2721,7 +2765,8 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <li>  Còn rất nhìu đoạn script khác chờ bạn khám phá</li>
 </ul>
 <p>Một số add-on nâng cao hơn sẽ có ở phần 2 của chủ đề này nhé</p>
-<h2 id="2-2-Google-Chrome"><a href="#2-2-Google-Chrome" class="headerlink" title="2.2 Google Chrome"></a>2.2 Google Chrome</h2><h3 id="2-2-1-Thiet-lap-mac-dinh"><a href="#2-2-1-Thiet-lap-mac-dinh" class="headerlink" title="2.2.1 Thiết lập mặc định"></a>2.2.1 Thiết lập mặc định</h3><p>Bạn mở GG Chrome, chọt vào nút Menu &gt; Settings <img src="https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png"></p>
+<h2 id="2-2-Google-Chrome"><a href="#2-2-Google-Chrome" class="headerlink" title="2.2 Google Chrome"></a>2.2 Google Chrome</h2><h3 id="2-2-1-Thiet-lap-mac-dinh"><a href="#2-2-1-Thiet-lap-mac-dinh" class="headerlink" title="2.2.1 Thiết lập mặc định"></a>2.2.1 Thiết lập mặc định</h3><p>Bạn mở GG Chrome, chọt vào nút Menu &gt; Settings</p>
+<p><img src="https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png"></p>
 <p>Ôi thôi, cái setting dài quá dài. Kéo xuống dưới cùng, chọn Show Advanced Settings…, rồi tiếp tục kéo xuống dưới cùng, sẽ có nút Reset settings. Bấm vào đó để reset lại (Lưu ý làm cái này thì GG Chrome của bạn sẽ như mới)</p>
 <h3 id="2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van"><a href="#2-2-2-Go-bo-cac-add-on-va-plug-in-vo-van" class="headerlink" title="2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn"></a>2.2.2 Gỡ bỏ các add-on và plug-in vớ vẩn</h3><p>Cũng trong trang setting, bạn chọn mục Add-on. Ở mỗi đầu add-on sẽ có biểu tượng thùng rác. Bấm vô đó để Remove một add-on tương ứng. Chừa lại các add-on sau:</p>
 <ul>
@@ -2784,17 +2829,42 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <pre class="line-numbers language-none"><code class="language-none">
 &quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http:&#x2F;&#x2F;admicro.vn http:&#x2F;&#x2F;adtimaserver.vn http:&#x2F;&#x2F;doubleclick.net http:&#x2F;&#x2F;google-analytics.com http:&#x2F;&#x2F;googlesyndication.com http:&#x2F;&#x2F;googletagmanager.com http:&#x2F;&#x2F;googletagservices.com http:&#x2F;&#x2F;microad.net http:&#x2F;&#x2F;scorecardresearch.com https:&#x2F;&#x2F;admicro.vn https:&#x2F;&#x2F;adtimaserver.vn https:&#x2F;&#x2F;doubleclick.net https:&#x2F;&#x2F;google-analytics.com https:&#x2F;&#x2F;googlesyndication.com https:&#x2F;&#x2F;googletagmanager.com https:&#x2F;&#x2F;googletagservices.com https:&#x2F;&#x2F;microad.net https:&#x2F;&#x2F;scorecardresearch.com&quot;</code></pre>
 
-<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><p>Lợi</p>
-<p>Hại</p>
-<p>Thời gian load trang nhanh hơn</p>
-<p>Thiết lập phức tạp</p>
-<p>Trang web đỡ rối mắt hơn</p>
-<p>Phải thiết lập cho từng trang web một</p>
-<p>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</p>
-<p>Web chạy mượt mà hơn</p>
-<p>Loại bỏ theo dõi hành vi người dùng của các website</p>
-<p>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</p>
-<p>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</p>
+<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><table>
+<thead>
+<tr>
+<th>Lợi</th>
+<th>Hại</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Thời gian load trang nhanh hơn</td>
+<td>Thiết lập phức tạp</td>
+</tr>
+<tr>
+<td>Trang web đỡ rối mắt hơn</td>
+<td>Phải thiết lập cho từng trang web một</td>
+</tr>
+<tr>
+<td>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</td>
+<td></td>
+</tr>
+<tr>
+<td>Web chạy mượt mà hơn</td>
+<td></td>
+</tr>
+<tr>
+<td>Loại bỏ theo dõi hành vi người dùng của các website</td>
+<td></td>
+</tr>
+<tr>
+<td>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</td>
+<td></td>
+</tr>
+<tr>
+<td>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</td>
+<td></td>
+</tr>
+</tbody></table>
 <h2 id="uBlock-–-Firefox-va-Chrome"><a href="#uBlock-–-Firefox-va-Chrome" class="headerlink" title="uBlock – Firefox và Chrome"></a>uBlock – Firefox và Chrome</h2><p>Không khuyến khích sử dụng Add-on này, vì nó sẽ chặn quảng cáo, là cần câu cơm của các trang web Bạn có bao giờ khó chịu khi mở một website lên mà quảng cáo tràn ngập, không thấy nội dung đâu hết? Các pop up hiện ra liên tục với cường độ cao, các bẫy click mà khi click vào thì quảng cáo nhảy xổ ra tràn ngập màn hình? Đã đến lúc chấm dứt cơn ác mộng đấy, bằng một add-on gọi là uBlock Tải tại đây:</p>
 <ul>
 <li>  Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
@@ -2898,31 +2968,31 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <content><![CDATA[<p>Chào các bạn, kể từ bài blog này, mình sẽ viết bằng tiếng Anh nhé. Bạn có thể dùng Google Translate hoặc Bing Translate để dịch sang tiếng Việt nhé :3</p>
 <p>Các bài viết trước mình cũng sẽ viết lại bằng tiếng Anh.</p>
 <p>Hello guys, from this post forward, I will write in English. You can use “Google Translate” or “Bing Translate” to read it in Vietnamese</p>
-<p>In the latest release of Visual Studio (aka Visual Studio 2015), Microsoft has introduce some cutting edge features called “Live Visual Tree” and “Live Property Explorer”. Using this features, you can easily inspect and edit you XAML element on the fly.</p>
+<p>In the latest release of Visual Studio (aka Visual Studio 2015), Microsoft has introduced some cutting-edge features called “Live Visual Tree” and “Live Property Explorer.” You can easily inspect and edit your XAML element on the fly using these features.</p>
 <span id="more"></span>
-<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>For using Live Visual Tree, open any XAML project. It could be Windows 8, 8.1 App, Windows Universal App, or Universal Application Platform (UAP, aka App developed for Windows 10)</p>
-<p>Press Build (F5) to compile and deploy the app. Then come back to Visual Studio. You will see a new small toolbar called “Live Visual Tree”. Click on it to expand</p>
+<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>For using Live Visual Tree, open any XAML project. It could be Windows 8, 8.1 App, Windows Universal App, or Universal Application Platform (UAP, aka App, developed for Windows 10)</p>
+<p>Press Build (F5) to compile and deploy the app. Then come back to Visual Studio. You will see a new small toolbar called “Live Visual Tree.” Click on it to expand</p>
 <p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
 <p>Now click on the small docking icon to make it stick there, make it easier to use</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
-<p>Now in this windows, click on the small icon that have the small triangle pointed to a rectangle. This is the Inspector, just like Google Chrome element inspector. Comeback to running app, you will wherevers the pointer, there will be a dotted box around it, cover the element under the pointer</p>
+<p>Now, click on the small icon that has the small triangle pointed to a rectangle in this window. This is the Inspector, just like Google Chrome element inspector. Comeback to running app, you will see wherever the pointer is, there will be a dotted box around it, cover the element under the pointer</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
-<p>Click once, and the Live Visual Tree will jump to the exact element.</p>
+<p>Click once, and the Live Visual Tree will jump to the same element.</p>
 <p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
 <p>You can click on other elements in the Live Visual Tree, and the red dotted box will jump to that element on your running app. In this way, you can see exactly how the element is drawn on your app.</p>
 <p>You can also search for an element by its name or by type.</p>
 <p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
-<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>With the element selected in Live Visual Tree, look on the right side of Visual Studio, you will see “Live Property Explorer”, click on it to expand and click the dock button to make it stick there</p>
+<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>With the element selected in Live Visual Tree, look on the right side of Visual Studio. You will see “Live Property Explorer.” Click on it to expand and click the “dock” button to make it stick there</p>
 <p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
-<p>Now it a lot fewer property than normal, right? Expand the “Default” group and you will see the rest.</p>
-<p>The good things about this Live Property Explorer is, you can actually change the value, and observe the change in your running app</p>
-<p>I will try to change the Height to 100, and see what happened on the app</p>
+<p>Now it has a lot fewer properties than usual, right? Expand the “Default” group, and you will see the rest.</p>
+<p>The good thing about this Live Property Explorer is, you can actually change the value and observe the change in your running app</p>
+<p>I will try to change the Height to 100 and see what happened on the app</p>
 <p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
 <p>And now the app</p>
 <p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
-<p>Wonderful isn’t it? You can change almost everything, except some grey out property in the Live Property Explorer.</p>
-<p>That’s it. Now you know how to use the Live Visual Tree to inspect the XAML element on your apps, and Live Property Explorer to change the value of that element, and watch the change happened on the fly.</p>
-<p>Stay toon for other cool feature of the new Visual Studio 2015</p>
+<p>Incredible, isn’t it? You can change almost everything, except some grey-out property in the Live Property Explorer.</p>
+<p>That’s it. Now you know how to use the Live Visual Tree to inspect the XAML element on your apps, and Live Property Explorer to change the value of that element, and watch the change happen on the fly.</p>
+<p>Stay tune for other cool features of the new Visual Studio 2015</p>
 ]]></content>
       <categories>
         <category>CSharp</category>
@@ -2939,7 +3009,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <content><![CDATA[<p>Azure đã tới Việt Nam, và bạn đang phân vân không biết phải đăng ký như thế nào để sử dụng nó, hoàn toàn miễn phí?</p>
 <p>Bài viết sau sẽ hướng dẫn bạn cách đăng ký, từ đơn giản nhất cho tới những cách đăng ký khi bạn có tài khoản DreamSpark hoặc MSDN Subscription</p>
 <span id="more"></span>
-<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><ul>
+
+<h1 id="1-Muc-luc"><a href="#1-Muc-luc" class="headerlink" title="1. Mục lục"></a>1. Mục lục</h1><ul>
 <li><a href="#one">Đăng ký</a><ul>
 <li>  <a href="#oneontwo">Đăng ký thông qua chương trình DreamSpark dành cho sinh viên</a></li>
 <li>  <a href="#oneonone">Đăng ký tự do</a></li>
@@ -2947,8 +3018,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 </ul>
 </li>
 </ul>
-<h1 id="Dang-ky"><a href="#Dang-ky" class="headerlink" title="Đăng ký"></a>Đăng ký</h1><h2 id="Dang-ky-qua-chuong-trinh-DreamSpark-Azure-for-Student"><a href="#Dang-ky-qua-chuong-trinh-DreamSpark-Azure-for-Student" class="headerlink" title="Đăng ký qua chương trình DreamSpark (Azure for Student)"></a>Đăng ký qua chương trình DreamSpark (Azure for Student)</h2><p>DreamSpark là một chương trình dành cho tất cả sinh viên trên toàn cầu, (đúng rồi, tất cả sinh viên), cung cấp các sản phẩm và dịch vụ của Microsoft cho sinh viên hoàn toàn miễn phí. Có 2 cách để đăng ký DreamSpark, 1 là trường bạn có đăng ký với Microsoft, 2 là bạn có thẻ sinh viên quốc tế</p>
-<h3 id="Lay-code-kich-hoat-DreamSpark"><a href="#Lay-code-kich-hoat-DreamSpark" class="headerlink" title="Lấy code kích hoạt DreamSpark"></a>Lấy code kích hoạt DreamSpark</h3><h4 id="Truong-ban-co-dang-ky-voi-Microsoft"><a href="#Truong-ban-co-dang-ky-voi-Microsoft" class="headerlink" title="Trường bạn có đăng ký với Microsoft"></a>Trường bạn có đăng ký với Microsoft</h4><p>Truy cập vào link DreamSpark của trường bạn (thường bắt đầu bằng e5.onthehub.com)</p>
+<h1 id="2-Dang-ky"><a href="#2-Dang-ky" class="headerlink" title="2. Đăng ký"></a>2. Đăng ký</h1><h2 id="2-1-Dang-ky-qua-chuong-trinh-DreamSpark-Azure-for-Student"><a href="#2-1-Dang-ky-qua-chuong-trinh-DreamSpark-Azure-for-Student" class="headerlink" title="2.1. Đăng ký qua chương trình DreamSpark (Azure for Student)"></a>2.1. Đăng ký qua chương trình DreamSpark (Azure for Student)</h2><p>DreamSpark là một chương trình dành cho tất cả sinh viên trên toàn cầu, (đúng rồi, tất cả sinh viên), cung cấp các sản phẩm và dịch vụ của Microsoft cho sinh viên hoàn toàn miễn phí. Có 2 cách để đăng ký DreamSpark, 1 là trường bạn có đăng ký với Microsoft, 2 là bạn có thẻ sinh viên quốc tế</p>
+<h3 id="2-1-1-Lay-code-kich-hoat-DreamSpark"><a href="#2-1-1-Lay-code-kich-hoat-DreamSpark" class="headerlink" title="2.1.1. Lấy code kích hoạt DreamSpark"></a>2.1.1. Lấy code kích hoạt DreamSpark</h3><h4 id="2-1-1-1-Truong-ban-co-dang-ky-voi-Microsoft"><a href="#2-1-1-1-Truong-ban-co-dang-ky-voi-Microsoft" class="headerlink" title="2.1.1.1. Trường bạn có đăng ký với Microsoft"></a>2.1.1.1. Trường bạn có đăng ký với Microsoft</h4><p>Truy cập vào link DreamSpark của trường bạn (thường bắt đầu bằng e5.onthehub.com)</p>
 <p><img src="https://farm1.staticflickr.com/642/20345559318_6d5c17a226_o.png"></p>
 <p>Đăng nhập vào đó</p>
 <p><img src="https://farm1.staticflickr.com/759/20507379866_b3257e520e_o.png"></p>
@@ -2960,7 +3031,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p><img src="https://farm1.staticflickr.com/753/20347383998_850031fda3_o.png"></p>
 <p>Ở trang hiện ra, bạn bấm vào cái nút màu cam để đăng nhập hoặc đăng ký tài khoản DreamSpark</p>
 <p><img src="https://farm1.staticflickr.com/734/19912779474_caae638809_o.png"></p>
-<h4 id="Tao-tai-khoan-DreamSpark"><a href="#Tao-tai-khoan-DreamSpark" class="headerlink" title="Tạo tài khoản DreamSpark"></a>Tạo tài khoản DreamSpark</h4><p>Đầu tiên, bạn phải đăng nhập vào tài khoản Microsoft của mình</p>
+<h4 id="2-1-1-2-Tao-tai-khoan-DreamSpark"><a href="#2-1-1-2-Tao-tai-khoan-DreamSpark" class="headerlink" title="2.1.1.2. Tạo tài khoản DreamSpark"></a>2.1.1.2. Tạo tài khoản DreamSpark</h4><p>Đầu tiên, bạn phải đăng nhập vào tài khoản Microsoft của mình</p>
 <p><img src="https://farm1.staticflickr.com/645/20541962401_9af94aa6e8_o.png"></p>
 <p>Sau khi đăng nhập, bạn điền đầy đủ thông tin và nhấn continue to verify</p>
 <p><img src="https://farm1.staticflickr.com/733/20348905989_b11fba908b_o.png"></p>
@@ -2982,7 +3053,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p><img src="https://farm1.staticflickr.com/657/20349335989_873eb352a3_o.png"></p>
 <p>Khi đăng ký bằng DreamSpark, bạn sẽ không bị đòi thẻ tín dụng.</p>
 <p>Sau khi điền đầy đủ các thông tin, nhấn Sign up, thế là xong :3</p>
-<h2 id="Dang-ky-tu-do-khong-thong-qua-chuong-trinh-DreamSpark-hoac-MSDN-Subscription"><a href="#Dang-ky-tu-do-khong-thong-qua-chuong-trinh-DreamSpark-hoac-MSDN-Subscription" class="headerlink" title="Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)"></a>Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)</h2><p>Truy cập vào trang <a href="http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx">http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx</a> &gt; Thử ngay</p>
+<h2 id="2-2-Dang-ky-tu-do-khong-thong-qua-chuong-trinh-DreamSpark-hoac-MSDN-Subscription"><a href="#2-2-Dang-ky-tu-do-khong-thong-qua-chuong-trinh-DreamSpark-hoac-MSDN-Subscription" class="headerlink" title="2.2. Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)"></a>2.2. Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)</h2><p>Truy cập vào trang <a href="http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx">http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx</a> &gt; Thử ngay</p>
 <p><img src="https://farm1.staticflickr.com/755/20532339295_51aa69a4b8_o.png"></p>
 <p>Bạn sẽ được yêu cầu đăng nhập tài khoản Microsoft của mình. Hãy đăng nhập nhé. Trường hợp bạn chưa có tài khoản Microsoft (email có đuôi là @hotmail, @outlook, @live) thì nên đăng ký một cái để tận hưởng các dịch vụ của Microsoft nhé</p>
 <ol>
@@ -3003,7 +3074,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Sau khi đăng ký xong, bạn sẽ thấy một giao diện chào mừng như thế này là thành công nhé.</p>
 <p>Con số này là số ngày bạn được dùng Azure miễn phí, được cấp hẳn 200 USD trong 29 ngày này để xài/test tất cả các dịch vụ của Azure :3</p>
 <p><img src="https://farm1.staticflickr.com/722/20344909818_078a116683_o.png"></p>
-<h2 id="Dang-ky-qua-chuong-trinh-MSDN-Subscription"><a href="#Dang-ky-qua-chuong-trinh-MSDN-Subscription" class="headerlink" title="Đăng ký qua chương trình MSDN Subscription"></a>Đăng ký qua chương trình MSDN Subscription</h2><p>Để đăng ký thông qua MSDN Subscription, tất nhiên bạn phải có tài khoản MSDN Subscription. MSP Việt Nam có gói tài khoản này, và tên nó là MSDN Subscription with Visual Studio Ultimate, trị giá có 13.600 USD cho một năm thôi (đúng rồi, mười ba nghìn sáu trăm obama)</p>
+<h2 id="2-3-Dang-ky-qua-chuong-trinh-MSDN-Subscription"><a href="#2-3-Dang-ky-qua-chuong-trinh-MSDN-Subscription" class="headerlink" title="2.3. Đăng ký qua chương trình MSDN Subscription"></a>2.3. Đăng ký qua chương trình MSDN Subscription</h2><p>Để đăng ký thông qua MSDN Subscription, tất nhiên bạn phải có tài khoản MSDN Subscription. MSP Việt Nam có gói tài khoản này, và tên nó là MSDN Subscription with Visual Studio Ultimate, trị giá có 13.600 USD cho một năm thôi (đúng rồi, mười ba nghìn sáu trăm obama)</p>
 <p>Chẳng hiểu tại sao mà Microsoft lại để MSDN Subcription tại một chỗ rất khó kiếm, đó là <a href="https://msdn.microsoft.com/en-us/subscriptions/aa336858.aspx">https://msdn.microsoft.com/en-us/subscriptions/aa336858.aspx</a>. Truy cập vào link này và đăng nhập vài tài khoản của bạn.</p>
 <p><img src="https://farm1.staticflickr.com/619/20965398854_9cf0abcdcd_o.png" alt="Đăng nhập vài tài khoản"></p>
 <p>Chọn My Account &gt; Activate Microsoft Azure</p>
@@ -3030,18 +3101,19 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <content><![CDATA[<p>Phải rồi, bạn đọc nó đúng rồi đó. Visual Studio có sức mạnh siu nhơn, và sau đây là lý do mà tôi nói nó có.</p>
 <p>Bài viết này bao gồm các thủ thuật, tiện ích và hướng dẫn sử dụng những tính năng cực hay ho nhưng khá ít người biết tới của Visual Studio.</p>
 <span id="more"></span>
-<h1 id="Super-Power-1-JetBrains-ReSharper"><a href="#Super-Power-1-JetBrains-ReSharper" class="headerlink" title="Super Power 1: JetBrains ReSharper"></a>Super Power 1: JetBrains ReSharper</h1><p>ReSharper là một extension cực khủng của JetBrains. Nó sẽ đảm nhiệm vai trò dọn dẹp, trang điểm cho code của bạn đẹp như thơ, tăng hiệu suất làm việc, tăng khả năng maintenance, tăng tính tái sử dụng code vào nhiều project khác nhau. Bạn chưa tin ư, hãy xem phần <a href="#_C%C3%A1c_t%C3%ADnh_n%C4%83ng">1.4. Các tính năng</a></p>
-<h2 id="Neu-ban-la-sinh-vien"><a href="#Neu-ban-la-sinh-vien" class="headerlink" title="Nếu bạn là sinh viên"></a>Nếu bạn là sinh viên</h2><p>JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ các sản phẩm khác nữa). Tuy nhiên, chương trình miễn phí này được giấu khá kỹ trên trang chủ của nó.</p>
+
+<h1 id="1-Super-Power-1-JetBrains-ReSharper"><a href="#1-Super-Power-1-JetBrains-ReSharper" class="headerlink" title="1. Super Power 1: JetBrains ReSharper"></a>1. Super Power 1: JetBrains ReSharper</h1><p>ReSharper là một extension cực khủng của JetBrains. Nó sẽ đảm nhiệm vai trò dọn dẹp, trang điểm cho code của bạn đẹp như thơ, tăng hiệu suất làm việc, tăng khả năng maintenance, tăng tính tái sử dụng code vào nhiều project khác nhau. Bạn chưa tin ư, hãy xem phần <a href="#_C%C3%A1c_t%C3%ADnh_n%C4%83ng">1.4. Các tính năng</a></p>
+<h2 id="1-1-Neu-ban-la-sinh-vien"><a href="#1-1-Neu-ban-la-sinh-vien" class="headerlink" title="1.1. Nếu bạn là sinh viên"></a>1.1. Nếu bạn là sinh viên</h2><p>JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ các sản phẩm khác nữa). Tuy nhiên, chương trình miễn phí này được giấu khá kỹ trên trang chủ của nó.</p>
 <ul>
 <li>  Truy cập vào link sau: <a href="https://www.jetbrains.com/student/">https://www.jetbrains.com/student/</a></li>
 <li>  Nhấn Apply Now ở khúc dưới</li>
 <li>Bạn có nhiều tùy chọn chứng minh mình là sinh viên. Cách dễ nhất: dùng email đuôi .edu  <img src="https://farm6.staticflickr.com/5692/21937216876_1c6c37ee27_o.png">  Ngoài ra còn có thể dùng thẻ sinh viên quốc tế hoặc giấy tờ chứng minh (lâu hơn một chút)</li>
 <li>  Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo</li>
 </ul>
-<h2 id="Neu-ban-khong-con-la-sinh-vien"><a href="#Neu-ban-khong-con-la-sinh-vien" class="headerlink" title="Nếu bạn không còn là sinh viên"></a>Nếu bạn không còn là sinh viên</h2><p>Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)</p>
-<h2 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><p>Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.</p>
+<h2 id="1-2-Neu-ban-khong-con-la-sinh-vien"><a href="#1-2-Neu-ban-khong-con-la-sinh-vien" class="headerlink" title="1.2. Nếu bạn không còn là sinh viên"></a>1.2. Nếu bạn không còn là sinh viên</h2><p>Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)</p>
+<h2 id="1-3-Cai-dat"><a href="#1-3-Cai-dat" class="headerlink" title="1.3. Cài đặt"></a>1.3. Cài đặt</h2><p>Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.</p>
 <p>Sau khi cài xong, mở Visual Studio lên, và bạn sẽ thấy có nhiều khác biệt</p>
-<h2 id="Cac-tinh-nang-tuyet-zoi"><a href="#Cac-tinh-nang-tuyet-zoi" class="headerlink" title="Các tính năng tuyệt zời"></a>Các tính năng tuyệt zời</h2><h3 id="Phan-tich-code"><a href="#Phan-tich-code" class="headerlink" title="Phân tích code"></a>Phân tích code</h3><p>Khi mở một file .cs lên, ReSharper sẽ tự động phân tích code có trong file này và đưa ra các đề xuất hợp lý.</p>
+<h2 id="1-4-Cac-tinh-nang-tuyet-zoi"><a href="#1-4-Cac-tinh-nang-tuyet-zoi" class="headerlink" title="1.4. Các tính năng tuyệt zời"></a>1.4. Các tính năng tuyệt zời</h2><h3 id="1-4-1-Phan-tich-code"><a href="#1-4-1-Phan-tich-code" class="headerlink" title="1.4.1. Phân tích code"></a>1.4.1. Phân tích code</h3><p>Khi mở một file .cs lên, ReSharper sẽ tự động phân tích code có trong file này và đưa ra các đề xuất hợp lý.</p>
 <p>Nhìn bên phải, bạn sẽ thấy thanh cuộn mặc định được “tô điểm” bởi các vạch màu vàng đỏ xanh tùm lum. Đó là các điểm đánh dấu code “có vấn đề”.</p>
 <p><img src="https://farm6.staticflickr.com/5822/21974855122_55a238a346_o.png"></p>
 <p>Những vạch dọc:</p>
@@ -3055,7 +3127,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <li>  Màu đỏ: code lỗi</li>
 <li>  Màu xanh lá cây: code có thể rút gọn</li>
 </ul>
-<h3 id="Xoa-code-thua"><a href="#Xoa-code-thua" class="headerlink" title="Xóa code thừa"></a>Xóa code thừa</h3><p>Click chuột vào một trong các vạch màu cam</p>
+<h3 id="1-4-2-Xoa-code-thua"><a href="#1-4-2-Xoa-code-thua" class="headerlink" title="1.4.2. Xóa code thừa"></a>1.4.2. Xóa code thừa</h3><p>Click chuột vào một trong các vạch màu cam</p>
 <p><img src="https://farm6.staticflickr.com/5625/21799037180_ed7ddb0910_o.png"></p>
 <p>Con trỏ sẽ nhảy tới ngay vị trí code đang có vấn đề</p>
 <p>Bấm vào hình cái bóng đèn &gt; Chọn dòng đầu tiên để sửa lỗi (đối với đa số trường hợp, dòng gợi ý đầu tiên là dòng gợi ý hợp lý nhất)</p>
@@ -3072,18 +3144,18 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Trỏ chuột vào hình bóng đèn sát bên dưới code &gt; Show potential fixes</p>
 <p><img src="https://farm6.staticflickr.com/5759/21987321125_8800ff4578_o.png"></p>
 <p>Cá nhân mình thấy cách làm của ReSharper hiện đại hơn, dễ nhìn hơn.</p>
-<h3 id="Code-dung-chuan"><a href="#Code-dung-chuan" class="headerlink" title="Code đúng chuẩn"></a>Code đúng chuẩn</h3><p>ReSharper giúp bạn code theo đúng chuẩn, thu gọn code, thay thế bằng các đoạn code dễ hiểu hơn, vân vân và vân</p>
-<h3 id="Tu-hoan-thanh-code-khi-dang-go"><a href="#Tu-hoan-thanh-code-khi-dang-go" class="headerlink" title="Tự hoàn thành code khi đang gõ"></a>Tự hoàn thành code khi đang gõ</h3><p>Giả sử bạn muốn khai báo một biến string, kiểu private. Bạn chỉ cần gõ như hình dưới rồi nhấn “;”</p>
+<h3 id="1-4-3-Code-dung-chuan"><a href="#1-4-3-Code-dung-chuan" class="headerlink" title="1.4.3. Code đúng chuẩn"></a>1.4.3. Code đúng chuẩn</h3><p>ReSharper giúp bạn code theo đúng chuẩn, thu gọn code, thay thế bằng các đoạn code dễ hiểu hơn, vân vân và vân</p>
+<h3 id="1-4-4-Tu-hoan-thanh-code-khi-dang-go"><a href="#1-4-4-Tu-hoan-thanh-code-khi-dang-go" class="headerlink" title="1.4.4. Tự hoàn thành code khi đang gõ"></a>1.4.4. Tự hoàn thành code khi đang gõ</h3><p>Giả sử bạn muốn khai báo một biến string, kiểu private. Bạn chỉ cần gõ như hình dưới rồi nhấn “;”</p>
 <p><img src="https://farm6.staticflickr.com/5835/21997218621_deb4160238_o.png"></p>
 <p>Bạn muốn sử dụng một method nào đó mà chưa khai báo namespace. Đối với Visual Studio, bạn sẽ phải gõ đầy đủ tên method. Sau đó phải click chuột vài lần thì Visual mới tự thêm namespace cho bạn. Đối với ReSharper, bạn chỉ cần gõ một phần của tên method. Khi method đó đã được tô sáng lên trong danh sách gợi ý, bạn chỉ cần gõ một trong các ký tự đặc biệt như dấu chấm, khoảng trắng, enter là mọi việc còn lại sẽ được hoàn tất.</p>
 <p><img src="https://farm6.staticflickr.com/5617/21961282096_1aeb6374f4_o.png"></p>
-<h3 id="Thu-gon-code"><a href="#Thu-gon-code" class="headerlink" title="Thu gọn code"></a>Thu gọn code</h3><p>Nhấn vào một vạch ngang xanh lá cây bất kỳ trên thanh cuộn. Con trỏ sẽ nhảy tới dòng code có thể rút gọn.</p>
+<h3 id="1-4-5-Thu-gon-code"><a href="#1-4-5-Thu-gon-code" class="headerlink" title="1.4.5. Thu gọn code"></a>1.4.5. Thu gọn code</h3><p>Nhấn vào một vạch ngang xanh lá cây bất kỳ trên thanh cuộn. Con trỏ sẽ nhảy tới dòng code có thể rút gọn.</p>
 <p>Những đoạn code có thể rút gọn được gạch chân màu xanh lá cây. Click chuột vào đó &gt; Click cái bóng đèn &gt; Chọn dòng gợi ý đầu tiên</p>
 <p><img src="https://farm1.staticflickr.com/757/21799838418_c2efe59d5b_o.png"></p>
 <p><img src="https://farm6.staticflickr.com/5781/21800801089_3c639bb3b0_o.png"></p>
 <p>Kết quả</p>
 <p><img src="https://farm1.staticflickr.com/652/21975514002_75edfe0026_o.png"></p>
-<h3 id="Tu-sinh-code"><a href="#Tu-sinh-code" class="headerlink" title="Tự sinh code"></a>Tự sinh code</h3><p>Tạo một model mới như hình sau</p>
+<h3 id="1-4-6-Tu-sinh-code"><a href="#1-4-6-Tu-sinh-code" class="headerlink" title="1.4.6. Tự sinh code"></a>1.4.6. Tự sinh code</h3><p>Tạo một model mới như hình sau</p>
 <p><img src="https://farm1.staticflickr.com/677/21799893208_38cf1e1de1_o.png"></p>
 <p>Khai báo Interface cho nó là “INotifyPropertyChanged” (chỉ cần gõ “INotiyPr” rồi enter là xong)</p>
 <p><img src="https://farm6.staticflickr.com/5702/21364996524_5d4864b173_o.png"></p>
@@ -3092,7 +3164,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p><img src="https://farm6.staticflickr.com/5806/21365175364_bd9f5fd1ff_o.png"></p>
 <p>Và kết quả (trong lần thực hiện đầu tiên, ReSharper sẽ hỏi bạn cho phép nó thêm một số file vào thư mục Properties. Cứ cho phép nó nhé)</p>
 <p><img src="https://farm1.staticflickr.com/670/21975835712_8937950fbf_o.png"></p>
-<h3 id="Code-Generation"><a href="#Code-Generation" class="headerlink" title="Code Generation"></a>Code Generation</h3><p>Sử dụng TestModel, bạn hãy thêm vào vài biến lấy lệ để test tính năng Code Generation</p>
+<h3 id="1-4-7-Code-Generation"><a href="#1-4-7-Code-Generation" class="headerlink" title="1.4.7. Code Generation"></a>1.4.7. Code Generation</h3><p>Sử dụng TestModel, bạn hãy thêm vào vài biến lấy lệ để test tính năng Code Generation</p>
 <p><img src="https://farm1.staticflickr.com/608/21988308215_a65b97951d_o.png"></p>
 <p>Bạn vào menu ReSharper &gt; Edit &gt; Generate Code… (Menu này nằm ngang hàng với File – Edit – View - …)</p>
 <p>Một ô nhỏ hiện ra, bạn chọn Properties</p>
@@ -3102,14 +3174,14 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Kết quả:</p>
 <p><img src="https://farm1.staticflickr.com/592/21365674894_e92e09147e_o.png"></p>
 <p>Thật tuyệt phải ko?</p>
-<h3 id="Doi-ten-class-–-method-–-Ham-van-van-va-van-van"><a href="#Doi-ten-class-–-method-–-Ham-van-van-va-van-van" class="headerlink" title="Đổi tên class – method – Hàm, vân vân và vân vân"></a>Đổi tên class – method – Hàm, vân vân và vân vân</h3><p>ReSharper hỗ trợ bạn đổi tên bất kỳ thứ gì, và tên được đổi đó sẽ được thay đổi ở tất cả các file có sử dụng nó. Giả sử class TestModel này được sử dụng ở 3 file, và bạn muốn đổi tên nó thành NotTestModel, thì cả 3 file kia sẽ được cập nhật tên mới.</p>
+<h3 id="1-4-8-Doi-ten-class-–-method-–-Ham-van-van-va-van-van"><a href="#1-4-8-Doi-ten-class-–-method-–-Ham-van-van-va-van-van" class="headerlink" title="1.4.8. Đổi tên class – method – Hàm, vân vân và vân vân"></a>1.4.8. Đổi tên class – method – Hàm, vân vân và vân vân</h3><p>ReSharper hỗ trợ bạn đổi tên bất kỳ thứ gì, và tên được đổi đó sẽ được thay đổi ở tất cả các file có sử dụng nó. Giả sử class TestModel này được sử dụng ở 3 file, và bạn muốn đổi tên nó thành NotTestModel, thì cả 3 file kia sẽ được cập nhật tên mới.</p>
 <p>Đưa con trỏ chuột vào tên class TestModel</p>
 <p>Chọn Menu ReSharper &gt; Refactor &gt; Rename…</p>
 <p><img src="https://farm1.staticflickr.com/656/21800814760_9f5904c298_o.png"></p>
 <p>Một hộp thoại nhỏ hiện ra</p>
 <p><img src="https://farm6.staticflickr.com/5774/21367460363_e9ae701a09_o.png"></p>
 <p>Sửa tên lại. Nếu bạn muốn có tính năng Undo, tick chọn bên dưới rồi Next</p>
-<h3 id="Dua-string-vao-Resource"><a href="#Dua-string-vao-Resource" class="headerlink" title="Đưa string vào Resource"></a>Đưa string vào Resource</h3><p>Bạn này làm app có Localization (aka: dịch các string trong app ra các ngôn ngữ khác nhau cho các thị trường khác nhau), hẳn là sẽ rất khổ sở khi phải đưa từng string từng string một vào Resource để dịch. Có bạn áp dụng phương pháp cuốn chiếu, làm tới đâu thêm string vào Resource tới đó. File Resource lúc nào cũng mở sẵn. Có bạn chọn cách làm xong app rồi mới đưa từng string một vào Resource bằng cách Copy &gt; Paste rất thủ công</p>
+<h3 id="1-4-9-Dua-string-vao-Resource"><a href="#1-4-9-Dua-string-vao-Resource" class="headerlink" title="1.4.9. Đưa string vào Resource"></a>1.4.9. Đưa string vào Resource</h3><p>Bạn này làm app có Localization (aka: dịch các string trong app ra các ngôn ngữ khác nhau cho các thị trường khác nhau), hẳn là sẽ rất khổ sở khi phải đưa từng string từng string một vào Resource để dịch. Có bạn áp dụng phương pháp cuốn chiếu, làm tới đâu thêm string vào Resource tới đó. File Resource lúc nào cũng mở sẵn. Có bạn chọn cách làm xong app rồi mới đưa từng string một vào Resource bằng cách Copy &gt; Paste rất thủ công</p>
 <p>Và anh hùng ReSharper xuất hiện.</p>
 <p>Để đưa một đoạn string vào Resource, bạn đưa con trỏ chuột vào string đó, chọn menu ReSharper &gt; Refactor &gt; Move…</p>
 <p><img src="https://farm6.staticflickr.com/5683/21962745436_65d58e77a8_o.png"></p>
@@ -3123,27 +3195,27 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>tính năng này cũng dùng được cho các đoạn string trong code XAML nhé</p>
 </blockquote>
 <p>ReSharper còn hàng hàng tính năng khác chờ bạn khám phá</p>
-<h1 id="Super-Power-2-XAML-Styler"><a href="#Super-Power-2-XAML-Styler" class="headerlink" title="Super Power 2: XAML Styler"></a>Super Power 2: XAML Styler</h1><p>Có khi nào bạn cảm thấy khó chịu khi code giao diện bằng XAML, và các thuộc tính cứ nằm luôn tuồn trên một hàng, kéo wá kéo lại quá vất vả?</p>
+<h1 id="2-Super-Power-2-XAML-Styler"><a href="#2-Super-Power-2-XAML-Styler" class="headerlink" title="2. Super Power 2: XAML Styler"></a>2. Super Power 2: XAML Styler</h1><p>Có khi nào bạn cảm thấy khó chịu khi code giao diện bằng XAML, và các thuộc tính cứ nằm luôn tuồn trên một hàng, kéo wá kéo lại quá vất vả?</p>
 <p>Có khi nào bạn nhìn đống code XAML, và chẳng biết phải tìm thuộc tính mình cần ở đâu?</p>
 <p>XAML Styler đã đến. Và nó sẽ giúp bạn format code XAML tuyệt đẹp.</p>
-<h2 id="Cai-dat-1"><a href="#Cai-dat-1" class="headerlink" title="Cài đặt"></a>Cài đặt</h2><p>Vào Menu Tools &gt; Extension and Updates…</p>
+<h2 id="2-1-Cai-dat"><a href="#2-1-Cai-dat" class="headerlink" title="2.1. Cài đặt"></a>2.1. Cài đặt</h2><p>Vào Menu Tools &gt; Extension and Updates…</p>
 <p><img src="https://farm1.staticflickr.com/759/21801774968_c0b7347871_o.png"></p>
 <p>Tiếp tục chọn mục Online &gt; Visual Studio Gallery &gt; Nhập “XAML Styler” vào ô tìm kiếm và cài đặt XAML Styler</p>
 <p><img src="https://farm1.staticflickr.com/574/21989659205_849101bec2_o.png"></p>
-<h2 id="Thiet-lap-thuoc-tinh"><a href="#Thiet-lap-thuoc-tinh" class="headerlink" title="Thiết lập thuộc tính"></a>Thiết lập thuộc tính</h2><p>Vào menu Tools &gt; Option &gt; kéo xuống dưới cùng chọn XAML Styler</p>
+<h2 id="2-2-Thiet-lap-thuoc-tinh"><a href="#2-2-Thiet-lap-thuoc-tinh" class="headerlink" title="2.2. Thiết lập thuộc tính"></a>2.2. Thiết lập thuộc tính</h2><p>Vào menu Tools &gt; Option &gt; kéo xuống dưới cùng chọn XAML Styler</p>
 <p>Chỉnh các thuộc tính như hình</p>
 <p><img src="https://farm1.staticflickr.com/685/21990196465_9187c0695b_o.png"></p>
 <p>Chắc các bạn thắc mắc tại sao lại phải chỉnh như vậy :3. Đó là theo kinh nghiệm cá nhân của mình để tăng hiệu suất và giảm sai sót thôi.</p>
-<h2 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h2><p>Sử dụng rất đơn giản: bạn mở code XAML lên &gt; click chuột phải &gt; Format XAML</p>
+<h2 id="2-3-Su-dung"><a href="#2-3-Su-dung" class="headerlink" title="2.3. Sử dụng"></a>2.3. Sử dụng</h2><p>Sử dụng rất đơn giản: bạn mở code XAML lên &gt; click chuột phải &gt; Format XAML</p>
 <p>Before</p>
 <p><img src="https://farm6.staticflickr.com/5782/21367559744_f92258543e_o.png"></p>
 <p>After</p>
 <p><img src="https://farm1.staticflickr.com/754/21990346995_70aa6b546e_o.png"></p>
-<h1 id="Super-Power-3-Indent-Guide-va-C-Outline"><a href="#Super-Power-3-Indent-Guide-va-C-Outline" class="headerlink" title="Super Power 3: Indent Guide và C# Outline"></a>Super Power 3: Indent Guide và C# Outline</h1><h2 id="Indent-Guide"><a href="#Indent-Guide" class="headerlink" title="Indent Guide"></a>Indent Guide</h2><p>Qua hình chụp screenshot nãy giờ, chắc các bạn cũng thắc mắc các đường kẻ dọc trong screenshot có mà Visual Studio của bạn không có? Đó chính là Indent Guide Extension. Chức năng của nó rất đơn giản, vẽ ra các đường kẻ dọc để code bạn dễ nhìn hơn, canh theo đúng hàng đúng lối.</p>
+<h1 id="3-Super-Power-3-Indent-Guide-va-C-Outline"><a href="#3-Super-Power-3-Indent-Guide-va-C-Outline" class="headerlink" title="3. Super Power 3: Indent Guide và C# Outline"></a>3. Super Power 3: Indent Guide và C# Outline</h1><h2 id="3-1-Indent-Guide"><a href="#3-1-Indent-Guide" class="headerlink" title="3.1. Indent Guide"></a>3.1. Indent Guide</h2><p>Qua hình chụp screenshot nãy giờ, chắc các bạn cũng thắc mắc các đường kẻ dọc trong screenshot có mà Visual Studio của bạn không có? Đó chính là Indent Guide Extension. Chức năng của nó rất đơn giản, vẽ ra các đường kẻ dọc để code bạn dễ nhìn hơn, canh theo đúng hàng đúng lối.</p>
 <p><img src="https://farm1.staticflickr.com/590/21369345023_260fea1079_o.png"></p>
 <p>Ngay khi cài xong, khởi động lại Visual Studio, mở một Project bất kỳ và bạn sẽ thấy thành quả</p>
 <p><img src="https://farm6.staticflickr.com/5799/21803058558_994e9e1edc_o.png"></p>
-<h2 id="C-Outline"><a href="#C-Outline" class="headerlink" title="C# Outline"></a>C# Outline</h2><p>Nhìn hình trên, chắc bạn cũng thấy lạ là tại sao cấu trúc if cũng có một dấu “-“ nho nhỏ để đóng ra mở vô. Đó chính là khả năng của Extension C# Outline.</p>
+<h2 id="3-2-C-Outline"><a href="#3-2-C-Outline" class="headerlink" title="3.2. C# Outline"></a>3.2. C# Outline</h2><p>Nhìn hình trên, chắc bạn cũng thấy lạ là tại sao cấu trúc if cũng có một dấu “-“ nho nhỏ để đóng ra mở vô. Đó chính là khả năng của Extension C# Outline.</p>
 <p>C# Outline giúp bạn tạo một code block ở mọi dấu ngoặc nhọn. Như vậy bạn có thể đóng mở tất cả các cấu trúc khác nhau như If then else, while do, switch case, vân vân và vân vân</p>
 <blockquote>
 <p>tên chính thức của nó là C# outline 2015, dành cho Visual Studio 2015 nhé bạn</p>
@@ -3168,7 +3240,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <url>/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</url>
     <content><![CDATA[<p>Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là “Live Visual Tree” và “Live Property Explorer”. Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy [insert hình há mỏ kinh ngạc]</p>
 <span id="more"></span>
-<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
+
+<h1 id="1-Live-Visual-Tree"><a href="#1-Live-Visual-Tree" class="headerlink" title="1. Live Visual Tree"></a>1. Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
 <p>Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy một cục toolbar nhỏ gọi là “Live Visual Tree”. Nhấn zô nó để mở ra</p>
 <p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
 <p>Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn</p>
@@ -3179,7 +3252,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Bạn cũng có thể click vào các elements khác trong Live Visual Tree, và cái khung chấm đỏ sẽ nhảy tới element trên app đang chạy của bạn. Bằng cách này, bạn có thể hiểu chính xác những element nào được vẽ trên app của bạn.</p>
 <p>Bạn cũng có thể search một element bằng tên hoặc loại của nó</p>
 <p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
-<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy “Live Property Explorer”, click vô nó để mở ra, rùi click cái ghim để đó dính zô đó</p>
+<h1 id="2-Live-Property-Explorer"><a href="#2-Live-Property-Explorer" class="headerlink" title="2. Live Property Explorer"></a>2. Live Property Explorer</h1><p>Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy “Live Property Explorer”, click vô nó để mở ra, rùi click cái ghim để đó dính zô đó</p>
 <p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
 <p>Ủa mà sao có ít propery hơn bình thường nhỉ. Đừng lo, mở rộng cái group “Default” ra và bạn sẽ thấy mấy property còn lại”</p>
 <p>Một điều hay của Live Property Explorer là bạn có thể thay đổi các giá trị trong các property, và xem sự thay đổi đó ngay lập tức trên app đang chạy của bạn.</p>
@@ -3207,7 +3280,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <content><![CDATA[<p>For Visual Studio 2015</p>
 <p>Từ xưa tới nay, khi debug bằng Visual Studio, hầu như ai cũng biết chọt con chuột lên trên một biến nào đó và một cái bảng nho nhỏ hiện ra hiển thị toàn bộ dữ liệu của biến đó. Bài post này sẽ hướng dẫn bạn cách sử dụng những công cụ mới của Visual Studio 2015 để cải thiện hiệu suất cho ứng dụng của bạn.</p>
 <span id="more"></span>
-<h1 id="Tai-sao-lai-la-hieu-suat"><a href="#Tai-sao-lai-la-hieu-suat" class="headerlink" title="Tại sao lại là hiệu suất?"></a>Tại sao lại là hiệu suất?</h1><p>Trong Visual Studio 2015 có khá nhiều công cụ giúp bạn cải thiện hiệu suất ứng dụng của mình, làm nó chạy nhanh hơn, chiếm ít bộ nhớ hơn, giao diện đẹp hơn, blah blah blah. Tuy nhiên, rất nhìu bạn trẻ dùng phần lớn thời gian để làm cho các tính năng của ứng dụng chạy đúng như bạn mong muốn. Bạn hiểu rằng đoạn code bạn viết có performance không cao, nhưng bạn không có thời gian để nghiên cứu, nghiền ngẫm nó hoặc chạy các công cụ hỗ trợ phân tích hiệu suất cho tới khi hiệu suất là một vấn đề lớn của bạn.</p>
+
+<h1 id="1-Tai-sao-lai-la-hieu-suat"><a href="#1-Tai-sao-lai-la-hieu-suat" class="headerlink" title="1. Tại sao lại là hiệu suất?"></a>1. Tại sao lại là hiệu suất?</h1><p>Trong Visual Studio 2015 có khá nhiều công cụ giúp bạn cải thiện hiệu suất ứng dụng của mình, làm nó chạy nhanh hơn, chiếm ít bộ nhớ hơn, giao diện đẹp hơn, blah blah blah. Tuy nhiên, rất nhìu bạn trẻ dùng phần lớn thời gian để làm cho các tính năng của ứng dụng chạy đúng như bạn mong muốn. Bạn hiểu rằng đoạn code bạn viết có performance không cao, nhưng bạn không có thời gian để nghiên cứu, nghiền ngẫm nó hoặc chạy các công cụ hỗ trợ phân tích hiệu suất cho tới khi hiệu suất là một vấn đề lớn của bạn.</p>
 <p>Ngoài ra, khi bạn cần nghiên cứu hiệu suất của một đoạn code nào đó, vì sức mạnh kinh khủng của Visual Studio, bạn lại nhét vào code của mình một cái Stopwatch để đo xem đoạn code đó chạy mất bao lâu. Nói tóm lại, developer thường làm những chuyện sau:</p>
 <ul>
 <li>  Chèn code vào trong ứng dụng (kiểu như System.Diagnostics.Stopwatch) để đo thời gian chạy. Càng lúc càng nhiều Stopwatch được chèn đi chèn lại trong nhiều khúc của code.</li>
@@ -3215,11 +3289,11 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <li>  Nhấn “Break All” (“Pause”) để coi thử code chạy tới đâu gòi (đặc biệt là trong mấy vòng lặp)</li>
 <li>  Rút gọn code quá đà mà không để ý tới performance (giống như không xài Linq cho tất cả mọi thứ)</li>
 </ul>
-<h1 id="PerfTips-la-gi"><a href="#PerfTips-la-gi" class="headerlink" title="PerfTips là gì?"></a>PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
+<h1 id="2-PerfTips-la-gi"><a href="#2-PerfTips-la-gi" class="headerlink" title="2. PerfTips là gì?"></a>2. PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
 <p><img src="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png"></p>
 <p>Bấm vào nó (chỗ &lt;= 1ms elapsed), sẽ hiện ra công cụ phân tích</p>
 <p><img src="https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png"></p>
-<h1 id="Dung-PerfTips"><a href="#Dung-PerfTips" class="headerlink" title="Dùng PerfTips"></a>Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
+<h1 id="3-Dung-PerfTips"><a href="#3-Dung-PerfTips" class="headerlink" title="3. Dùng PerfTips"></a>3. Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
 <p>Thay vì chèn 2 đoạn code Stopwatch vào đầu và cuối của phương thức này, bạn chỉ cần đặt 2 breakpoint vào chỗ đó</p>
 <p><img src="https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png"></p>
 <p>Nhấn F5 để chạy, và Visual Studio dừng lại ngay chỗ Breakpoint đầu tiên</p>
@@ -3238,8 +3312,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p><img src="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png"></p>
 <p>Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 2079 ms, giảm cỡ 700 ms, tương đương 25%. Quá tuyệt phải không?</p>
 <p>Bây giờ, khi bạn đã biết cách xài PerfTips, chúng ta sẽ tiếp tục với một vài Best Practices khi dùng nó</p>
-<h1 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h1><h2 id="Do-nhieu-lan"><a href="#Do-nhieu-lan" class="headerlink" title="Đo nhiều lần"></a>Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>
-<h2 id="Xac-nhan-lai-luc-Release"><a href="#Xac-nhan-lai-luc-Release" class="headerlink" title="Xác nhận lại lúc Release"></a>Xác nhận lại lúc Release</h2><p>Code chạy lúc build ở chế độ Debug lúc nào cũng chậm hơn hẳn so với code build ở chế độ Release. Nếu bạn muốn tối ưu hóa các đoạn code chạy nhanh hơn 50 ms, thì nên chuyển sang chế độ release để tối ưu hóa nó. Lúc này, bạn mới thấy rõ sự khác biệt.</p>
+<h1 id="4-Best-Practices"><a href="#4-Best-Practices" class="headerlink" title="4. Best Practices"></a>4. Best Practices</h1><h2 id="4-1-Do-nhieu-lan"><a href="#4-1-Do-nhieu-lan" class="headerlink" title="4.1. Đo nhiều lần"></a>4.1. Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>
+<h2 id="4-2-Xac-nhan-lai-luc-Release"><a href="#4-2-Xac-nhan-lai-luc-Release" class="headerlink" title="4.2. Xác nhận lại lúc Release"></a>4.2. Xác nhận lại lúc Release</h2><p>Code chạy lúc build ở chế độ Debug lúc nào cũng chậm hơn hẳn so với code build ở chế độ Release. Nếu bạn muốn tối ưu hóa các đoạn code chạy nhanh hơn 50 ms, thì nên chuyển sang chế độ release để tối ưu hóa nó. Lúc này, bạn mới thấy rõ sự khác biệt.</p>
 <p>Thế là xong. Hẹn gặp lại ở các bài blog tiếp theo nhóe.</p>
 ]]></content>
       <categories>
@@ -3260,7 +3334,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Ngày hôm nay đã khác rồi, Microsoft đã toẹt zời trở lại. Tất cả Sample code bạn cần cho lập trình Windows 10 hiện đã có trên GitHub, và được UPDATE hàng ngày. Vì vậy, bạn sẽ luôn có những đoạn code mới nhất, do chính mấy ông kỹ sư viết ra tính năng đó viết.</p>
 <p>Quá chuẩn? Sau đây là cách lấy code.</p>
 <span id="more"></span>
-<h1 id="A-really-good-Git-Source-Control-software"><a href="#A-really-good-Git-Source-Control-software" class="headerlink" title="A really good Git Source Control software"></a>A really good Git Source Control software</h1><p>Vì tất cả code đều nằm trên GitHub, nên bạn sễ cần một phần mềm Source Control tốt để:</p>
+
+<h1 id="1-A-really-good-Git-Source-Control-software"><a href="#1-A-really-good-Git-Source-Control-software" class="headerlink" title="1. A really good Git Source Control software"></a>1. A really good Git Source Control software</h1><p>Vì tất cả code đều nằm trên GitHub, nên bạn sễ cần một phần mềm Source Control tốt để:</p>
 <ul>
 <li>  Download tất cả code</li>
 <li>  Update code với 1 click</li>
@@ -3270,14 +3345,14 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Vậy cái nào tốt?</p>
 <p>Of course it’s your choice. Use whatever you’re familiar with. Don’t let me tell you what to do. But if you insisted, here they are</p>
 <p>Tất nhiên là lựa chọn của bạn. Xài cái nào thấy wen là được. Nhưng mà vẫn muốn biết một cái tốt (theo ý mình), thì đọc tiếp nhé.</p>
-<h2 id="GitHub-Desktop-–-Not-that-good"><a href="#GitHub-Desktop-–-Not-that-good" class="headerlink" title="GitHub Desktop – Not that good"></a>GitHub Desktop – Not that good</h2><p>Link: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
+<h2 id="1-1-GitHub-Desktop-–-Not-that-good"><a href="#1-1-GitHub-Desktop-–-Not-that-good" class="headerlink" title="1.1. GitHub Desktop – Not that good"></a>1.1. GitHub Desktop – Not that good</h2><p>Link: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
 <p><img src="https://farm6.staticflickr.com/5663/21778229224_3e5b23876f_o.png"></p>
 <p>GitHub Desktop, phát triển bới chính dòng họ nhà mều bạch tuộc GitHub, chả tốt tẹo nào. Vì sao áh? Vì nó quá đơn giản, và thiếu nhiều nút cơ bản như Pull, Push, Fetch, Sync, blah blah blah.</p>
 <p>GitHub Desktop mong muốn mọi thứ đơn giản nhất có thể. Nhưng họ lại bỏ hết mấy từ quen thuộc trong Git rồi.</p>
-<h2 id="SourceTree-–-More-complex-have-all-the-functions"><a href="#SourceTree-–-More-complex-have-all-the-functions" class="headerlink" title="SourceTree – More complex, have all the functions"></a>SourceTree – More complex, have all the functions</h2><p>My favorite: <a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></p>
+<h2 id="1-2-SourceTree-–-More-complex-have-all-the-functions"><a href="#1-2-SourceTree-–-More-complex-have-all-the-functions" class="headerlink" title="1.2. SourceTree – More complex, have all the functions"></a>1.2. SourceTree – More complex, have all the functions</h2><p>My favorite: <a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></p>
 <p><img src="https://farm1.staticflickr.com/685/22214151369_9ae2265273_o.png"></p>
 <p>SourceTree, phát triển bởi Atlassian, là một phần mềm git source control khá tốt (theo ý cá nhân). Bạn có thể làm mọi thứ bạn muốn với nó. Thậm chí nó còn có cả Command Lind cho ai thích gõ lệnh như hacker nhé.</p>
-<h1 id="Setting-up"><a href="#Setting-up" class="headerlink" title="Setting up"></a>Setting up</h1><blockquote>
+<h1 id="2-Setting-up"><a href="#2-Setting-up" class="headerlink" title="2. Setting up"></a>2. Setting up</h1><blockquote>
 <p>Giờ, có thể bạn đã nghe thiên hạ đồn là Microsoft mở mã nguồn bộ .NET. Thực ra thì thiên hạ đồn quả nhiên ko sai, mà còn thiếu. Không chỉ .NET không, mà còn khá nhiều thứ khác cũng được “mở”. Nói bạn rồi, Microsoft đã chịu chơi trở lại.</p>
 <p>Bạn có thể tìm thấy kha khá thứ hay ho ở link sau: <a href="https://github.com/Microsoft">https://github.com/Microsoft</a></p>
 </blockquote>
@@ -3290,7 +3365,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Copy / Paste cái link HTTPS vô “Source Path / URL”, và SourceTree sẽ tự động điền mấy chỗ khác. Nếu bạn muốn customize cái gì thì cứ thoải mái chọt zô mà sửa đổi.</p>
 <p><img src="https://farm1.staticflickr.com/761/22374909436_1a8188ffc0_o.png"></p>
 <p>Cuối cùng, click Clone. Thế là xong, tất cả code Sample đã nằm trên máy tính.</p>
-<h1 id="Keep-the-code-up-to-date"><a href="#Keep-the-code-up-to-date" class="headerlink" title="Keep the code up-to-date"></a>Keep the code up-to-date</h1><p>Giờ bạn đã có code rồi, làm gì nữa?</p>
+<h1 id="3-Keep-the-code-up-to-date"><a href="#3-Keep-the-code-up-to-date" class="headerlink" title="3. Keep the code up-to-date"></a>3. Keep the code up-to-date</h1><p>Giờ bạn đã có code rồi, làm gì nữa?</p>
 <p>Để update code, đơn giản là mở SourceTree lên, rồi nhấn Fetch &gt; Pull hoặc nhấn Sync luôn từ đầu.</p>
 <p>Trong SourceTree, click Fetch</p>
 <p><img src="https://farm1.staticflickr.com/604/21779962253_cb809d0635_o.png"></p>
@@ -3321,12 +3396,13 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <url>/2015/10/26/uwp-create-image-assets-for-your-apps/</url>
     <content><![CDATA[<p>Windows 10 apps (aka Universal Windows App) yêu cầu rất nhiều kích thước hình ảnh khác nhau trong project của nó (hiện tại là 39 kích thước khác nhau). Làm thế nào để tạo ra các hình ảnh này? Mở Photoshop hay GIMP lên để crop, resize, save, rồi lập lại 39 lần hẻ? Hôm nay, bạn đã có thể làm nó dễ dàng chỉ với 1 (vài) click. Thậm chí tạo ra kích thước custom được luôn.</p>
 <span id="more"></span>
-<h1 id="The-App"><a href="#The-App" class="headerlink" title="The App"></a>The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
+
+<h1 id="1-The-App"><a href="#1-The-App" class="headerlink" title="1. The App"></a>1. The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
 <p>Link: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a></p>
 <p>Nhìn vô biết xài liền, nhưng mà dù sao cũng hướng dẫn bạn một tí nhóe.</p>
-<h1 id="Using-it"><a href="#Using-it" class="headerlink" title="Using it"></a>Using it</h1><p><img src="https://farm2.staticflickr.com/1528/25014426576_2bb0afed82_o.png"></p>
+<h1 id="2-Using-it"><a href="#2-Using-it" class="headerlink" title="2. Using it"></a>2. Using it</h1><p><img src="https://farm2.staticflickr.com/1528/25014426576_2bb0afed82_o.png"></p>
 <p>Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịch với các slider, nút này nọ để hiểu rõ hơn về app nhóe</p>
-<h1 id="Add-custom-size-and-scale"><a href="#Add-custom-size-and-scale" class="headerlink" title="Add custom size and scale"></a>Add custom size and scale</h1><p>Nhấn cái nút dấu + nhỏ nhỏ</p>
+<h1 id="3-Add-custom-size-and-scale"><a href="#3-Add-custom-size-and-scale" class="headerlink" title="3. Add custom size and scale"></a>3. Add custom size and scale</h1><p>Nhấn cái nút dấu + nhỏ nhỏ</p>
 <p><img src="https://farm6.staticflickr.com/5627/22493108391_1a6c030571_o.png"></p>
 <p>Trong trang này, bạn có thể thêm các size mới của riêng mình</p>
 <p><img src="https://farm2.staticflickr.com/1536/25014463126_d77238d3c3_o.png"></p>
@@ -3338,10 +3414,10 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Khi bạn đang gõ, nếu đúng, nó sẽ preview trước cho bạn xem cái kích thước sẽ được add vào platform đó</p>
 <p>Làm xong rồi thì nhấn Add, cái kích thước đó sẽ nằm trong platform, và platform mới sẽ được thêm vào danh sách các platform.</p>
 <p>Cái hay ho nhứt là, dần dần, danh sách các platform do bạn tạo ra sẽ được đồng bộ hóa giữa tất cả thiết bị mà bạn login bằng cùng tài khoản Microsoft Account. Kiểu như trên công ty tạo ra xài xong, về nhà mở máy lên là đã có sẵn để xài tiếp.</p>
-<h1 id="Settings"><a href="#Settings" class="headerlink" title="Settings"></a>Settings</h1><p>Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là “Update Database”</p>
+<h1 id="4-Settings"><a href="#4-Settings" class="headerlink" title="4. Settings"></a>4. Settings</h1><p>Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là “Update Database”</p>
 <p><img src="https://farm2.staticflickr.com/1590/24922870222_cf003efd5f_o.png"></p>
 <p>Bình thường, app sẽ update database tự động. Nhưng vì lý do nào đó (kiểu như bạn đang xài dữ liệu 3g, hay PC đang connect tới mạng chập chờn chả hạn), bạn có thể check update bằng tay. Cái này chỉ update cái danh sách platform default, không phải cái custom do bạn tự tạo, nên hok sao âu.</p>
-<h1 id="Rate-for-me-please-and-feedback"><a href="#Rate-for-me-please-and-feedback" class="headerlink" title="Rate for me, please, and feedback"></a>Rate for me, please, and feedback</h1><p>Cuối cùng, nếu bạn thấy app này hữu ích, rate cho nó nhá. Nếu bạn gặp lỗi hay vấn đề gì, có thể gửi email cho mềnh tại <a href="mailto:cuoilennaocacban@hotmail.com">cuoilennaocacban@hotmail.com</a></p>
+<h1 id="5-Rate-for-me-please-and-feedback"><a href="#5-Rate-for-me-please-and-feedback" class="headerlink" title="5. Rate for me, please, and feedback"></a>5. Rate for me, please, and feedback</h1><p>Cuối cùng, nếu bạn thấy app này hữu ích, rate cho nó nhá. Nếu bạn gặp lỗi hay vấn đề gì, có thể gửi email cho mềnh tại <a href="mailto:cuoilennaocacban@hotmail.com">cuoilennaocacban@hotmail.com</a></p>
 <p>Hẹn gặp lại các bạn ở những bài blog khác.</p>
 ]]></content>
       <categories>
@@ -3367,8 +3443,9 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
     <content><![CDATA[<p>Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.</p>
 <p>Visual Studio 2015 có một cải tiến đáng giá giúp lập trình viên biết chính xác chỗ code nào bị exception, và một số cải tiến vô cùng đáng giá khác khi debug một đoạn code</p>
 <span id="more"></span>
-<h1 id="Advanced-Debugging"><a href="#Advanced-Debugging" class="headerlink" title="Advanced Debugging"></a>Advanced Debugging</h1><p>Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: <a href="https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a>, bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa</p>
-<h2 id="Output-Log-with-Breakpoint"><a href="#Output-Log-with-Breakpoint" class="headerlink" title="Output Log with Breakpoint"></a>Output Log with Breakpoint</h2><p><img src="https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png"></p>
+
+<h1 id="1-Advanced-Debugging"><a href="#1-Advanced-Debugging" class="headerlink" title="1. Advanced Debugging"></a>1. Advanced Debugging</h1><p>Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: <a href="https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a>, bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa</p>
+<h2 id="1-1-Output-Log-with-Breakpoint"><a href="#1-1-Output-Log-with-Breakpoint" class="headerlink" title="1.1. Output Log with Breakpoint"></a>1.1. Output Log with Breakpoint</h2><p><img src="https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png"></p>
 <p>Trong vòng lặp trên, bạn sẽ thấy có dòng “Debug.WriteLine” dùng để xuất một thông tin gì đó ra màn hình Output. Thông tin này sẽ giúp bạn biết code đã chạy tới dòng này, và xuất ra các giá trị mà bạn mong muốn.</p>
 <p><img src="https://farm1.staticflickr.com/618/22152668514_87a33835e7_o.png"></p>
 <p>Từ giờ, bạn không cần phải làm thủ công như vậy nữa.</p>
@@ -3382,26 +3459,26 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p><img src="https://farm6.staticflickr.com/5803/22762522502_765d5041fe_o.png"></p>
 <p>Bạn thấy con số nằm trong ngoặc kép là vì nó là kiểu string, không phải int. Nên khi hiển thị, Visual Studio sẽ đưa nó vào trong ngoặc kép</p>
 <p>Bây giờ, hãy so sánh một chút</p>
-<p><strong>Breakpoint “Action”</strong></p>
-<p><strong>Debug.WriteLine()</strong></p>
-<p><strong>Lợi</strong></p>
-<p>Nhanh chóng, đơn giản</p>
-<p>Không thay đổi code</p>
-<p>Có thể chỉnh sửa khi ứng dụng đang chạy</p>
-<p>Có thể kết hợp với Condition của Breakpoint</p>
-<p>Có thể quản lý tập trung trong cửa sổ Debug</p>
-<p>Sử dụng linh hoạt</p>
-<p>Trực quan, dễ hiểu</p>
-<p>Có thể chèn nhiều dòng</p>
-<p><strong>Bất lợi</strong></p>
-<p>Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng)</p>
-<p>Phải thay đổi code</p>
-<p>Không thể chỉnh sửa khi app đang chạy</p>
-<p>Dùng Debug.WriteLineIf() để thêm điều kiện</p>
-<p>Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường</p>
-<p>Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release)</p>
-<p>Như vậy sử dụng cái nào hoàn toàn là quyền của bạn</p>
-<h2 id="Condition-Breakpoint"><a href="#Condition-Breakpoint" class="headerlink" title="Condition Breakpoint"></a>Condition Breakpoint</h2><p>Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Breakpoint “Action”</strong></th>
+<th><strong>Debug.WriteLine()</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Lợi</strong></td>
+<td>Nhanh chóng, đơn giản<br><br>Không thay đổi code<br>Có thể chỉnh sửa khi ứng dụng đang chạy<br>Có thể kết hợp với Condition của Breakpoint<br>Có thể quản lý tập trung trong cửa sổ Debug</td>
+<td>Sử dụng linh hoạt<br><br>Trực quan, dễ hiểu<br>Có thể chèn nhiều dòng</td>
+</tr>
+<tr>
+<td><strong>Bất lợi</strong></td>
+<td>Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng)</td>
+<td>Phải thay đổi code<br><br>Không thể chỉnh sửa khi app đang chạy<br>Dùng Debug.WriteLineIf() để thêm điều kiện<br>Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường<br>Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release)</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-Condition-Breakpoint"><a href="#1-2-Condition-Breakpoint" class="headerlink" title="1.2. Condition Breakpoint"></a>1.2. Condition Breakpoint</h2><p>Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn</p>
 <p><img src="https://farm1.staticflickr.com/757/22588283440_b481c716fc_o.png"></p>
 <p>Bạn có nhiều tùy chọn để quyết định xem là Visual Studio có dừng lại ở Breakpoint này hay không. Trong số đó có</p>
 <ul>
@@ -3415,7 +3492,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Đối với App Windows, bạn sẽ cần dùng 2 cái đầu tiên nhiều nhất</p>
 <p>Giả sử mình muốn dừng lại ở lần chạy thứ 9, và xuất ra màn hình biến ở lần chạy này, thì thiết lập như sau:</p>
 <p><img src="https://farm6.staticflickr.com/5675/22787742791_38aeba8663_o.png"></p>
-<h1 id="The-new-Exception-Settings"><a href="#The-new-Exception-Settings" class="headerlink" title="The new Exception Settings"></a>The new Exception Settings</h1><p>Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?</p>
+<h1 id="2-The-new-Exception-Settings"><a href="#2-The-new-Exception-Settings" class="headerlink" title="2. The new Exception Settings"></a>2. The new Exception Settings</h1><p>Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?</p>
 <p><img src="https://farm1.staticflickr.com/778/22155676943_b38eeef94c_o.png"></p>
 <p>DISABLE_XAML_BREAK_ON_UNHANDLED_EXCEPTION</p>
 <p>Global::System.Diagnostics.Debugger.Break();</p>
@@ -3446,7 +3523,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#116;&#117;&#100;&#121;&#x2e;&#110;&#103;&#111;&#x63;&#x74;&#x69;&#101;&#x6e;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#115;&#116;&#117;&#100;&#121;&#x2e;&#110;&#103;&#111;&#x63;&#x74;&#x69;&#101;&#x6e;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#116;&#x75;&#x64;&#x79;&#46;&#x6e;&#x67;&#111;&#x63;&#x74;&#x69;&#101;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#116;&#x75;&#x64;&#x79;&#46;&#x6e;&#x67;&#111;&#x63;&#x74;&#x69;&#101;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#105;&#101;&#110;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#x6f;&#99;&#116;&#105;&#101;&#110;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] =&gt; Nguyễn Ngọc Tiến [2_Email] =&gt; <a href="mailto:&#x73;&#116;&#117;&#x64;&#121;&#46;&#110;&#x67;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x73;&#116;&#117;&#x64;&#121;&#46;&#110;&#x67;&#x6f;&#99;&#116;&#x69;&#x65;&#110;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a> [3_Website] =&gt; ko có [4_Comment] =&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3455,7 +3532,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#111;&#x61;&#116;&#x72;&#x75;&#111;&#110;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#x6c;&#105;&#x76;&#101;&#46;&#99;&#111;&#x6d;">&#x6b;&#x68;&#111;&#x61;&#116;&#x72;&#x75;&#111;&#110;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#x6c;&#105;&#x76;&#101;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#x6b;&#x68;&#x6f;&#97;&#116;&#114;&#x75;&#111;&#x6e;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#111;&#109;">&#x6b;&#x68;&#x6f;&#97;&#116;&#114;&#x75;&#111;&#x6e;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#111;&#109;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#x6f;&#x61;&#x74;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#104;&#x40;&#108;&#x69;&#118;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x6b;&#x68;&#x6f;&#x61;&#x74;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#104;&#x40;&#108;&#x69;&#118;&#x65;&#x2e;&#99;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] =&gt; Khoa [2_Email] =&gt; <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#x74;&#x72;&#117;&#x6f;&#x6e;&#x67;&#98;&#97;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#107;&#x68;&#x6f;&#x61;&#x74;&#x72;&#117;&#x6f;&#x6e;&#x67;&#98;&#97;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Như mình tìm hiểu thi ứng dụng Windows 10/Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3696,26 +3773,27 @@ else
     <content><![CDATA[<p>Trong những tháng vừa rồi, Window Store đang tiến hành thanh lọc Store, bỏ các app rác, đẩy các app tốt lên feature. Tuy nhiên, theo phản ánh của khá nhiều developer tại Việt Nam, Store đang tiến hành xử trảm khá nhiều app tốt của dev VN và các nước khác. Vậy phải làm thế nào?</p>
 <p>Bài viết này cung cấp cho bạn những thông tin và các gợi ý để app của bạn mãi mãi nằm trên store, hiện trong search và leo lên tóp.</p>
 <span id="more"></span>
-<h1 id="App-cua-ban-noi-dung-cua-ban-hinh-anh-cua-ban-y-tuong-cua-ban-luon"><a href="#App-cua-ban-noi-dung-cua-ban-hinh-anh-cua-ban-y-tuong-cua-ban-luon" class="headerlink" title="App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn"></a>App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn</h1><p>App này do bạn tạo ra, và bạn sở hữu tất cả các nội dung có trong app đó, ví dụ như hình ảnh, nhạc, video, vân vân và vân vân. Việc trùng ý tưởng với một app khác cũng không quan trọng lắm trong vấn đề này, nhưng phải chắc chắn rằng app của bạn hay hơn app “con nhà người ta”, và con nhà người ta chưa đăng ký bản quyền cho cái ý tưởng đó.</p>
+
+<h1 id="1-App-cua-ban-noi-dung-cua-ban-hinh-anh-cua-ban-y-tuong-cua-ban-luon"><a href="#1-App-cua-ban-noi-dung-cua-ban-hinh-anh-cua-ban-y-tuong-cua-ban-luon" class="headerlink" title="1. App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn"></a>1. App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn</h1><p>App này do bạn tạo ra, và bạn sở hữu tất cả các nội dung có trong app đó, ví dụ như hình ảnh, nhạc, video, vân vân và vân vân. Việc trùng ý tưởng với một app khác cũng không quan trọng lắm trong vấn đề này, nhưng phải chắc chắn rằng app của bạn hay hơn app “con nhà người ta”, và con nhà người ta chưa đăng ký bản quyền cho cái ý tưởng đó.</p>
 <p>Ví dụ như bạn làm một app có tính năng quản lý Page trên facebook. Rồi bạn lấy cái logo facebook gắn vô. Có thể trước kia người xét duyệt app lên Store họ ko thèm để ý vấn đề này, nhưng ngày hôm nay đã khác rồi, app của bạn sẽ fail ngay và luôn. Và các app khác trên Store có trường hợp tương tự cũng sẽ bị gỡ bỏ.</p>
 <p>Một trường hợp khác, App của bạn bình thường, hình ảnh Free, nội dung hoàn toàn do bạn sáng tạo ra, nhưng cái tên lại có các từ dễ gây hiểu lầm. Đây là trường hợp mình gặp đối với 1 app của mình luôn. Đây là link tới App: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a>. Lúc đầu mình đặt tên app này là “Windows Universal Logo Maker”. Fail, fail và fail. Sau cùng, mình gửi message tới tester hỏi, và họ trả lời là chữ “Windows Universal” sẽ gây cho người dùng nhầm lẫn rằng app này là một app chính thức của Windows 10, do Microsoft phát hành, và họ cũng suggest mình đổi lại thành “Universal Logo Maker for Windows” -&gt; Pass ngay tắp lự.</p>
 <p>Một ghi chú nhỏ khác là không những tên app, mà tất cả các thông tin khác trong App description cũng phải mô tả tính năng của app đó, và không có các từ ngữ thuộc về các app nổi tiếng khác nhằm mục đích câu view, câu like, câu search cho app bạn.</p>
 <p>Có qua cũng phải có lại. Nếu app của bạn thực sự tốt, nội dung độc đáo, tạo ra giá trị hữu ích cho người dùng, dần dần app của bạn sẽ được xếp lên đầu các kết quả tìm kiếm, thậm chí chỉ cần gõ từ khóa là app sẽ hiện ra ngay dưới khung suggestion luôn.</p>
 <p><img src="https://farm2.staticflickr.com/1572/24579499753_e6d445c1db_o.png"></p>
 <p>Khuyến cáo: Sử dụng app Universal Logo Maker for Windows để tạo ra bộ Icon cho App của bạn trong 5 nốt nhạc.</p>
-<h1 id="App-hay-va-doc-dao"><a href="#App-hay-va-doc-dao" class="headerlink" title="App hay và độc đáo"></a>App hay và độc đáo</h1><p>Có hàng trăm ngàn app trên Store. Khi các chiêu trò câu view, câu like, câu search không còn tác dụng, thì bạn phải làm gì để người dùng tìm ra và download app của bạn?</p>
+<h1 id="2-App-hay-va-doc-dao"><a href="#2-App-hay-va-doc-dao" class="headerlink" title="2. App hay và độc đáo"></a>2. App hay và độc đáo</h1><p>Có hàng trăm ngàn app trên Store. Khi các chiêu trò câu view, câu like, câu search không còn tác dụng, thì bạn phải làm gì để người dùng tìm ra và download app của bạn?</p>
 <p>Câu trả lời đến từ logo, screenshot, và tính năng của app bạn. App đó càng đẹp, càng độc đáo, càng hữu ích cho người dùng, thì khả năng họ tìm ra nó cũng càng cao. Có một từ ngữ vui để gọi hiện tượng này, là “hiệu ứng trái banh tuyết”. App hay -&gt; người dùng xài nhiều -&gt; họ giới thiệu cho người khác -&gt; Review tích cực nhiều -&gt; lại càng dễ tìm trên Store -&gt; càng nhiều người dùng hơn</p>
 <p>Ví dụ, bạn làm một app Calculator chỉ với các tính năng cơ bản mà mấy cái app Calculator khác cũng có, thì 99% là sẽ chả có ai thèm để ý tới cái Calculator của bạn, bởi vì những cái app Calculator khác đang đứng đầu trên store và họ sẽ chọn những cái app đó.</p>
-<h1 id="Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu"><a href="#Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu" class="headerlink" title="Build 1 app hay thay vì build một chục app nhỏ tương tự"></a>Build 1 app hay thay vì build một chục app nhỏ tương tự</h1><p>Ví dụ như bạn làm một game đua xe cho một chục thị trường khác nhau. Mỗi thị trường sẽ là một ngôn ngữ khác nhau. Điều này sẽ dễ dàng dẫn tới toàn bộ app giống giống nhau như thế fail một lượt. Thay vào đó, nếu bạn làm 1 app, với ngôn ngữ thay đổi tùy thuộc vào thị trường, thì app của bạn vẫn sẽ an toàn ở lại trên store, trong search, vân vân và vân vân.</p>
+<h1 id="3-Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu"><a href="#3-Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu" class="headerlink" title="3. Build 1 app hay thay vì build một chục app nhỏ tương tự"></a>3. Build 1 app hay thay vì build một chục app nhỏ tương tự</h1><p>Ví dụ như bạn làm một game đua xe cho một chục thị trường khác nhau. Mỗi thị trường sẽ là một ngôn ngữ khác nhau. Điều này sẽ dễ dàng dẫn tới toàn bộ app giống giống nhau như thế fail một lượt. Thay vào đó, nếu bạn làm 1 app, với ngôn ngữ thay đổi tùy thuộc vào thị trường, thì app của bạn vẫn sẽ an toàn ở lại trên store, trong search, vân vân và vân vân.</p>
 <p>App nhỏ:</p>
 <p><img src="http://az648995.vo.msecnd.net/win/2016/01/2_fr.png"> <img src="http://az648995.vo.msecnd.net/win/2016/01/3_es.png"></p>
 <p>Kết hợp lại thành app bự với tính năng chọn ngôn ngữ, hoặc lấy theo ngôn ngữ hiện tại của hệ điều hành</p>
 <p><img src="http://az648995.vo.msecnd.net/win/2016/01/4_generic.png"></p>
-<h1 id="Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot"><a href="#Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot" class="headerlink" title="Giữ profile Windows Dev Center của bạn luôn luôn tốt"></a>Giữ profile Windows Dev Center của bạn luôn luôn tốt</h1><p>Điều cuối cùng mình muốn nhắn nhủ với các bạn Dev ngoài kia là hãy luôn cố gắng submit các app chất lượng cao lên Store. Trước khi làm một app gì, hãy search thử Store xem đã có app tương tự chưa để né tránh các trường hợp kể trên. Điều này giống như profile vay vốn ngân hàng vậy. Bạn càng “trong sạch” bao nhiêu, thì khả năng app của bạn lên top càng cao bấy nhiu.</p>
-<h1 id="Neu-app-khong-len-Store-sau-khi-submit-thanh-cong"><a href="#Neu-app-khong-len-Store-sau-khi-submit-thanh-cong" class="headerlink" title="Nếu app không lên Store sau khi submit thành công"></a>Nếu app không lên Store sau khi submit thành công</h1><p>Cố gắng chờ thêm 24 tiếng nữa. App thường sẽ xuất hiện trên Store bằng cách nhấn vào direct link sau khi submit thành công khoảng 24 tiếng. Và mất khoảng 8-24 tiếng để có thể hiện lên trên kết quả search.</p>
+<h1 id="4-Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot"><a href="#4-Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot" class="headerlink" title="4. Giữ profile Windows Dev Center của bạn luôn luôn tốt"></a>4. Giữ profile Windows Dev Center của bạn luôn luôn tốt</h1><p>Điều cuối cùng mình muốn nhắn nhủ với các bạn Dev ngoài kia là hãy luôn cố gắng submit các app chất lượng cao lên Store. Trước khi làm một app gì, hãy search thử Store xem đã có app tương tự chưa để né tránh các trường hợp kể trên. Điều này giống như profile vay vốn ngân hàng vậy. Bạn càng “trong sạch” bao nhiêu, thì khả năng app của bạn lên top càng cao bấy nhiu.</p>
+<h1 id="5-Neu-app-khong-len-Store-sau-khi-submit-thanh-cong"><a href="#5-Neu-app-khong-len-Store-sau-khi-submit-thanh-cong" class="headerlink" title="5. Nếu app không lên Store sau khi submit thành công"></a>5. Nếu app không lên Store sau khi submit thành công</h1><p>Cố gắng chờ thêm 24 tiếng nữa. App thường sẽ xuất hiện trên Store bằng cách nhấn vào direct link sau khi submit thành công khoảng 24 tiếng. Và mất khoảng 8-24 tiếng để có thể hiện lên trên kết quả search.</p>
 <p>Nếu chờ wài ko thấy lên, bạn có thể yêu cầu support tại: <a href="https://support.microsoft.com/en-us/getsupport?locale=EN-US&supportregion=EN-US&ccfcode=US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179&ccsid=635888242224279047">support ticket</a></p>
-<h1 id="Neu-app-bi-an-chi-co-direct-link-khong-search-duoc-tren-Store"><a href="#Neu-app-bi-an-chi-co-direct-link-khong-search-duoc-tren-Store" class="headerlink" title="Nếu app bị ẩn, chỉ có direct link, không search được trên Store"></a>Nếu app bị ẩn, chỉ có direct link, không search được trên Store</h1><p>Kiểm tra kỹ lại các gợi ý phía trên, đảm bảo rằng app của bạn không vi phạm bất kỳ điều gì, rùi gửi support ticket tại đây: <a href="https://support.microsoft.com/en-us/getsupport?locale=EN-US&supportregion=EN-US&ccfcode=US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179&ccsid=635888242224279047">support ticket</a>. Bạn có thể yêu cầu họ giải thích chi tiết lý do tại sao (sử dụng ngôn từ lịch sự, nhã nhặn)</p>
-<h1 id="Promote-app"><a href="#Promote-app" class="headerlink" title="Promote app"></a>Promote app</h1><p>Một khi app đã lên, promote nó nhìu lên cho mọi người biết, download và đánh giá tốt cho nó. App của bạn sẽ càng nặng ký hơn khi có nhiều user từ các nước khác nhau ngoài Việt Nam</p>
+<h1 id="6-Neu-app-bi-an-chi-co-direct-link-khong-search-duoc-tren-Store"><a href="#6-Neu-app-bi-an-chi-co-direct-link-khong-search-duoc-tren-Store" class="headerlink" title="6. Nếu app bị ẩn, chỉ có direct link, không search được trên Store"></a>6. Nếu app bị ẩn, chỉ có direct link, không search được trên Store</h1><p>Kiểm tra kỹ lại các gợi ý phía trên, đảm bảo rằng app của bạn không vi phạm bất kỳ điều gì, rùi gửi support ticket tại đây: <a href="https://support.microsoft.com/en-us/getsupport?locale=EN-US&supportregion=EN-US&ccfcode=US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179&ccsid=635888242224279047">support ticket</a>. Bạn có thể yêu cầu họ giải thích chi tiết lý do tại sao (sử dụng ngôn từ lịch sự, nhã nhặn)</p>
+<h1 id="7-Promote-app"><a href="#7-Promote-app" class="headerlink" title="7. Promote app"></a>7. Promote app</h1><p>Một khi app đã lên, promote nó nhìu lên cho mọi người biết, download và đánh giá tốt cho nó. App của bạn sẽ càng nặng ký hơn khi có nhiều user từ các nước khác nhau ngoài Việt Nam</p>
 <p>Chúc app bạn lên Store suôn sẻ :D</p>
 ]]></content>
       <categories>
@@ -3732,7 +3810,7 @@ else
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#x63;&#x73;&#57;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x61;&#120;&#x63;&#x73;&#57;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#120;&#99;&#115;&#x39;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#97;&#120;&#99;&#115;&#x39;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#x78;&#99;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#97;&#x78;&#99;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] =&gt; Alexandre Carvalho [2_Email] =&gt; <a href="mailto:&#97;&#120;&#x63;&#x73;&#x39;&#x30;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#97;&#120;&#x63;&#x73;&#x39;&#x30;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] =&gt; [4_Comment] =&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3746,7 +3824,8 @@ else
 <p>Ngày 27 tháng 6 năm 2016, MS ra mắt một loạt 3 sản phẩm cực khủng, hứa hẹn sẽ thay đổi cán cân quyền lực, lập lại bản đồ Server, và nó là .NET core, ASP.NET core, và Entity Framework Core. Tất cả đều mang số hiệu 1.0</p>
 <p>Vậy bạn tự hỏi, chúng nó là gì?</p>
 <span id="more"></span>
-<h1 id="Gioi-thieu"><a href="#Gioi-thieu" class="headerlink" title="Giới thiệu"></a>Giới thiệu</h1><p>Xưa kia, khi muốn làm web, bạn có vô vàn lựa chọn:</p>
+
+<h1 id="1-Gioi-thieu"><a href="#1-Gioi-thieu" class="headerlink" title="1. Giới thiệu"></a>1. Giới thiệu</h1><p>Xưa kia, khi muốn làm web, bạn có vô vàn lựa chọn:</p>
 <ul>
 <li>  Nhanh, đơn giản, miễn phí: PHP, cài thêm PHP my assmin vô, cùng Apache Tomcat hay XAMPP gì gì đấy</li>
 <li>  Bảo mật thì Java Server Page, bao chậm luôn</li>
@@ -3760,14 +3839,14 @@ else
 </li>
 </ul>
 <p>Với ASP.NET Core, bạn vẫn có các ưu điểm như code bằng C#, debug dễ dàng, IDE khủng, và các nhược điểm bị loại bỏ (chạy được trên Mac, Win, Linux, Docker, free to use, open source, blah blah blah)</p>
-<h1 id="Tai-lieu"><a href="#Tai-lieu" class="headerlink" title="Tài liệu"></a>Tài liệu</h1><p>Xưa kia, muốn học ASP.NET, bạn có khá nhiều lựa chọn, mỗi cái đều có nhược điểm. Cái thì quá ít thông tin, cái thì tốn phí, cái thì sơ sài, và đa phần tản mát trong dân gian.</p>
+<h1 id="2-Tai-lieu"><a href="#2-Tai-lieu" class="headerlink" title="2. Tài liệu"></a>2. Tài liệu</h1><p>Xưa kia, muốn học ASP.NET, bạn có khá nhiều lựa chọn, mỗi cái đều có nhược điểm. Cái thì quá ít thông tin, cái thì tốn phí, cái thì sơ sài, và đa phần tản mát trong dân gian.</p>
 <p>Giờ đây, mọi tài liệu điều quy về 1 chỗ:</p>
 <ul>
 <li>  Tài liệu chung cho tất cả sản phẩm: <a href="https://docs.microsoft.com/en-us/">https://docs.microsoft.com/en-us/</a></li>
 <li>  Tài liệu cho ASP.NET: <a href="https://docs.asp.net/en/latest/">https://docs.asp.net/en/latest/</a></li>
 </ul>
-<h1 id="Cho-dev-ko-xai-Windows"><a href="#Cho-dev-ko-xai-Windows" class="headerlink" title="Cho dev ko xài Windows"></a>Cho dev ko xài Windows</h1><p>ASP.NET core có thể code được bằng nhiều thứ khác nhau như Sublime, Visual Studio Code hoặc trình soạn thảo khoái trá của bạn.</p>
-<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><p>Bật visual studio &gt; New Project &gt; Chọn ASP.NET Core Web Application (.NET Core)</p>
+<h1 id="3-Cho-dev-ko-xai-Windows"><a href="#3-Cho-dev-ko-xai-Windows" class="headerlink" title="3. Cho dev ko xài Windows"></a>3. Cho dev ko xài Windows</h1><p>ASP.NET core có thể code được bằng nhiều thứ khác nhau như Sublime, Visual Studio Code hoặc trình soạn thảo khoái trá của bạn.</p>
+<h1 id="4-Hello-world"><a href="#4-Hello-world" class="headerlink" title="4. Hello world"></a>4. Hello world</h1><p>Bật visual studio &gt; New Project &gt; Chọn ASP.NET Core Web Application (.NET Core)</p>
 <p><img src="https://farm8.staticflickr.com/7352/28088746726_3720e218f0_o.png"></p>
 <p>Sau khi nhấn OK, chọn Empty &gt; Bỏ chọn Host in the cloud (hiện giờ thì cứ test local các kiểu đi đã) &gt; OK</p>
 <p><img src="https://farm8.staticflickr.com/7379/28122930625_bc23f52a5b_o.png"></p>
@@ -3777,7 +3856,7 @@ else
 <p>Sau cùng, nhấn nút để chạy thử và xem thành quả</p>
 <p><img src="https://farm8.staticflickr.com/7336/27843235500_3a0cfbc3af_o.png"></p>
 <p><img src="https://farm8.staticflickr.com/7574/28045741121_29641faf2f_o.png"></p>
-<h1 id="Publish-len-Azure"><a href="#Publish-len-Azure" class="headerlink" title="Publish lên Azure"></a>Publish lên Azure</h1><p>Nhấn chuột phải vô Web Application &gt; Publish</p>
+<h1 id="5-Publish-len-Azure"><a href="#5-Publish-len-Azure" class="headerlink" title="5. Publish lên Azure"></a>5. Publish lên Azure</h1><p>Nhấn chuột phải vô Web Application &gt; Publish</p>
 <p><img src="https://farm8.staticflickr.com/7442/27508633903_a7451490d9_o.png"></p>
 <p>Chọn Publish target là Azure</p>
 <p><img src="https://farm8.staticflickr.com/7328/28123967115_9334fb7a48_o.png"></p>
@@ -3815,12 +3894,12 @@ else
 </li>
 <li>  <a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
 </ul>
-<h1 id="Tai-sao-vay"><a href="#Tai-sao-vay" class="headerlink" title="Tại sao vậy?"></a>Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
+<h1 id="1-Tai-sao-vay"><a href="#1-Tai-sao-vay" class="headerlink" title="1. Tại sao vậy?"></a>1. Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
 <p>Tuy nhiên, nói chung lại thì có một số vấn đề “trường tồn cùng thời gian” mà bạn có thể sẽ bắt gặp khi code một ứng dụng C#</p>
 <p>Bài viết này tập trung chủ yếu vào C# 6.0 đang được sử dụng cho các ứng dụng UWP của Windows 10</p>
 <p>Project tham khảo có trong bài viết: <a href="https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance">https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance</a></p>
-<h1 id="Cac-van-de"><a href="#Cac-van-de" class="headerlink" title="Các vấn đề"></a>Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
-<h2 id="Sai-lam-1-Cong-chuoi"><a href="#Sai-lam-1-Cong-chuoi" class="headerlink" title="Sai lầm 1: Cộng chuỗi"></a>Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
+<h1 id="2-Cac-van-de"><a href="#2-Cac-van-de" class="headerlink" title="2. Các vấn đề"></a>2. Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
+<h2 id="2-1-Sai-lam-1-Cong-chuoi"><a href="#2-1-Sai-lam-1-Cong-chuoi" class="headerlink" title="2.1. Sai lầm 1: Cộng chuỗi"></a>2.1. Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
 msg +&#x3D; &quot;Tuan Tran&quot;;
 msg +&#x3D; &quot;. Today is &quot;;
 msg +&#x3D; System.DateTime.Now.ToString();</code></pre>
@@ -3840,14 +3919,14 @@ string tmp3 &#x3D; new String( msg + DateTime.Now.ToString( ) );
 
 msg &#x3D; tmp3; &#x2F;&#x2F; &quot;Hello Tuan Tran. Today is &quot; is garbage.</code></pre>
 
-<h3 id="Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="Giải quyết: string.Concat, StringBuilder và string.Format"></a>Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
+<h3 id="2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format"></a>2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
 <pre class="line-numbers language-none"><code class="language-none">StringBuilder s &#x3D; new StringBuilder();
 s.Append(&quot;Tuan Tran&quot;); s.Append(&quot; Today is &quot;);
 blah blah blah</code></pre>
 
 <p>Tuy nhiên, đối với C# 6.0 như đã đề cập bên trên, compiler của nó đủ thông minh để compile ra một đoạn native code hiệu quả nhất.</p>
 <p>Như vậy, nói tóm lại, bạn có thể sử dụng <code>string.Concat</code> để cộng các chuỗi đơn giản, <code>StringBuilder</code> để xây dựng các chuỗi bự hơn, và <code>string.Format</code> khi bạn muốn cộng các chuỗi từ các kiểu dữ liệu khác, hoặc muốn format nó theo một kiểu nào đó.</p>
-<h2 id="Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="Sai lầm 2: check null – so sánh chuỗi rỗng"></a>Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
+<h2 id="2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="2.2. Sai lầm 2: check null – so sánh chuỗi rỗng"></a>2.2. Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
 <pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
 
 if(s &#x3D;&#x3D; null || s &#x3D;&#x3D; &quot;&quot;)
@@ -3864,7 +3943,7 @@ if(string.IsNullOrEmpty(s))
 &#125;</code></pre>
 
 <p>Và nếu bạn muốn so sánh 2 chuỗi với nhau, hãy sử dụng string.Equal</p>
-<h2 id="Ket-luan"><a href="#Ket-luan" class="headerlink" title="Kết luận"></a>Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
+<h2 id="2-3-Ket-luan"><a href="#2-3-Ket-luan" class="headerlink" title="2.3. Kết luận"></a>2.3. Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
 <p>Sau đây mà tài liệu MSDN về string:</p>
 <p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2">https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2</a></p>
 ]]></content>
@@ -4175,7 +4254,7 @@ public void Delete(string id)
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png" alt="31716564800_af2c594490_o"></p>
 <span id="more"></span>
 
-<h1 id="Chuan-bi-trong-ViewModel-hoac-Model"><a href="#Chuan-bi-trong-ViewModel-hoac-Model" class="headerlink" title="Chuẩn bị trong ViewModel (hoặc Model)"></a>Chuẩn bị trong ViewModel (hoặc Model)</h1><p>Các properties trong ViewModel sẽ có default get set như sau</p>
+<h1 id="1-Chuan-bi-trong-ViewModel-hoac-Model"><a href="#1-Chuan-bi-trong-ViewModel-hoac-Model" class="headerlink" title="1. Chuẩn bị trong ViewModel (hoặc Model)"></a>1. Chuẩn bị trong ViewModel (hoặc Model)</h1><p>Các properties trong ViewModel sẽ có default get set như sau</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public int DistrictId &#123; get; set; &#125;</code></pre>
 
 <p>Bạn sẽ phải thêm các DisplayAttribute cho Property này như sau</p>
@@ -4184,11 +4263,10 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 
 <p>DisplayAttribute có chức năng dựng ra các thuộc tính HTML cần thiết để hiển thị ra web khi bạn dùng HtmlHelpers để tạo các tag input</p>
 <p>Thuộc tính Name sẽ được dùng cho label của input, thuộc tính Prompt sẽ được dùng cho placeholder của input</p>
-<h1 id="Code-cho-C"><a href="#Code-cho-C" class="headerlink" title="Code cho C#"></a>Code cho C#</h1><p>Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó</p>
+<h1 id="2-Code-cho-C"><a href="#2-Code-cho-C" class="headerlink" title="2. Code cho C#"></a>2. Code cho C#</h1><p>Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public static class Extensions
 &#123;
-    public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(
-                                                                      this HtmlHelper html,
+    public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(this HtmlHelper html,
                                                                       Expression&lt;Func&lt;TModel, TValue&gt;&gt; expression)
     &#123;
         var result &#x3D; ModelMetadata.FromLambdaExpression(expression, html.ViewData).Watermark;
@@ -4197,7 +4275,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 &#125;</code></pre>
 
 <p>Expression sẽ là câu truy vấn bạn truyền vô cho cái extension này</p>
-<h1 id="Code-cho-Razor"><a href="#Code-cho-Razor" class="headerlink" title="Code cho Razor"></a>Code cho Razor</h1><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F;Hiển thị label
+<h1 id="3-Code-cho-Razor"><a href="#3-Code-cho-Razor" class="headerlink" title="3. Code cho Razor"></a>3. Code cho Razor</h1><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F;Hiển thị label
 @Html.LabelFor(x &#x3D;&gt; x.DistrictId)
 &#x2F;&#x2F;Hiển thị Textbox và Placeholder
 @Html.TextBoxFor(x &#x3D;&gt; x. DistrictId,
@@ -4225,29 +4303,40 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <p>Chọn cách nào đi chăng nữa, vẫn sẽ có một số sự khác biệt mà bạn cần biết để chọn cho đúng, xong rồi phóng lao để đâm theo</p>
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/original.jpg" alt="original"></p>
 <span id="more"></span>
-<h1 id="Giai-thich"><a href="#Giai-thich" class="headerlink" title="Giải thích"></a>Giải thích</h1><p><strong>Code First</strong></p>
-<p><strong>Database First</strong></p>
-<p>Viết các class Model bằng code C# Generate Database từ class Model</p>
-<p>Generate Model từ Database Các class Model sẽ ko được phép chỉnh sửa</p>
-<h1 id="Uu-diem-va-nhuoc-diem"><a href="#Uu-diem-va-nhuoc-diem" class="headerlink" title="Ưu điểm và nhược điểm"></a>Ưu điểm và nhược điểm</h1><p><strong>Code First</strong></p>
-<p><strong>Database First</strong></p>
-<p>Ưu điểm</p>
-<p>Rất phổ biến (vì các lập trình viên thường không thích thiết kế DB, nhưng thích thiết kế class)</p>
-<p>Kiểm soát hoàn toàn code model, thêm xóa sửa thuộc tính vô cùng dễ dàng</p>
-<p>Không phải nặng đầu suy nghĩ về DB. Đối với cách tiếp cận này, DB chỉ là cái “cục” data, lôi ra xài thôi</p>
-<p>Có thể version control Database</p>
-<p>Ít phổ biến hơn</p>
-<p>DB có thể được develop riêng</p>
-<p>Dùng được DB có sẵn</p>
-<p>Entity Framework sẽ tạo ra các Entity class cho bạn</p>
-<p>Nhược điểm</p>
-<p>Các thay đổi cấu trúc trực tiếp trên DB sẽ mất</p>
-<p>Khó kiểm soát những column sẽ tạo trên Db</p>
-<p>Hơi khó khi kết hợp với Db có sẵn</p>
-<p>Không thể thay đổi code đã được Generate (nó sẽ mất trong lần chỉnh sửa cấu trúc DB tiếp theo)</p>
-<p>Khó khăn khi muốn thêm các DataAttribute và DisplayAttribute cho các class model</p>
+
+<h1 id="1-Giai-thich"><a href="#1-Giai-thich" class="headerlink" title="1. Giải thích"></a>1. Giải thích</h1><table>
+<thead>
+<tr>
+<th><strong>Code First</strong></th>
+<th><strong>Database First</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Viết các class Model bằng code C#<br>Generate Database từ class Model</td>
+<td>Generate Model từ Database<br>Các class Model sẽ ko được phép chỉnh sửa</td>
+</tr>
+</tbody></table>
+<h1 id="2-Uu-diem-va-nhuoc-diem"><a href="#2-Uu-diem-va-nhuoc-diem" class="headerlink" title="2. Ưu điểm và nhược điểm"></a>2. Ưu điểm và nhược điểm</h1><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Code first</strong></th>
+<th><strong>Database first</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ưu điểm</strong></td>
+<td>Rất phổ biến (vì các lập trình viên thường không thích thiết kế DB, nhưng thích thiết kế class)<br><br>Kiểm soát hoàn toàn code model, thêm xóa sửa thuộc tính vô cùng dễ dàng<br>Không phải nặng đầu suy nghĩ về DB. Đối với cách tiếp cận này, DB chỉ là cái “cục” data, lôi ra xài thôi<br>Có thể version control Database</td>
+<td>Ít phổ biến hơn<br><br>DB có thể được develop riêng<br>Dùng được DB có sẵn<br>Entity Framework sẽ tạo ra các Entity class cho bạn</td>
+</tr>
+<tr>
+<td><strong>Nhược điểm</strong></td>
+<td>Các thay đổi cấu trúc trực tiếp trên DB sẽ mất<br><br>Khó kiểm soát những column sẽ tạo trên Db<br>Hơi khó khi kết hợp với Db có sẵn</td>
+<td>Không thể thay đổi code đã được Generate (nó sẽ mất trong lần chỉnh sửa cấu trúc DB tiếp theo)<br><br>Khó khăn khi muốn thêm các DataAttribute và DisplayAttribute cho các class model<br>Bạn phải nhức đầu suy nghĩ khi muốn biểu diễn các kiểu quan hệ cha con của class<br>Mỗi lần thay đổi cấu trúc DB, bạn sẽ phải update lại EDMX và tạo lại các class Model để phản ánh sự thay đổi đó</td>
+</tr>
+</tbody></table>
 <p>Bạn phải nhức đầu suy nghĩ khi muốn biểu diễn các kiểu quan hệ cha con của class Mỗi lần thay đổi cấu trúc DB, bạn sẽ phải update lại EDMX và tạo lại các class Model để phản ánh sự thay đổi đó</p>
-<h1 id="Tuong-lai-nao-cho-ASP-NET-Core"><a href="#Tuong-lai-nao-cho-ASP-NET-Core" class="headerlink" title="Tương lai nào cho ASP.NET Core?"></a>Tương lai nào cho ASP.NET Core?</h1><p>Tại thời điểm viết bài viết này, ASP.NET Core vẫn sẽ support Database First lâu dài, nhưng gặp một số lỗi rất khó chịu khiến bạn hơi khó khăn khi tạo Entities Class từ Database có sẵn</p>
+<h1 id="3-Tuong-lai-nao-cho-ASP-NET-Core"><a href="#3-Tuong-lai-nao-cho-ASP-NET-Core" class="headerlink" title="3. Tương lai nào cho ASP.NET Core?"></a>3. Tương lai nào cho ASP.NET Core?</h1><p>Tại thời điểm viết bài viết này, ASP.NET Core vẫn sẽ support Database First lâu dài, nhưng gặp một số lỗi rất khó chịu khiến bạn hơi khó khăn khi tạo Entities Class từ Database có sẵn</p>
 <p>Có thể tạm kết luận là: Code first là tương lai, nhưng nếu thích, bạn vẫn có thể dùng Database First nhóe</p>
 <p>Hết rồi :D</p>
 ]]></content>
@@ -4263,7 +4352,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#x75;&#111;&#110;&#x67;&#x61;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x6c;&#x75;&#111;&#110;&#x67;&#x61;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#108;&#117;&#111;&#110;&#x67;&#x61;&#110;&#104;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#117;&#111;&#110;&#x67;&#x61;&#110;&#104;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] =&gt; Luong Anh [2_Email] =&gt; <a href="mailto:&#108;&#x75;&#111;&#110;&#x67;&#97;&#x6e;&#104;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#108;&#x75;&#111;&#110;&#x67;&#97;&#x6e;&#104;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] =&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] =&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4307,13 +4396,14 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
     <content><![CDATA[<p>Route Map là một cái bảng. Khi bạn chạy một ứng dụng ASP.NET, cái bảng này sẽ được đem ra để so sánh với URL mà bạn gõ trên địa chỉ trình duyệt</p>
 <p>Vì nó duyệt theo kiểu bảng như vậy nên rất khó để debug nó. Vỏ dừa dày có con dao nhọn. Vẫn có cách để trị nó nhóe</p>
 <span id="more"></span>
-<h1 id="Cai-nuget-package"><a href="#Cai-nuget-package" class="headerlink" title="Cài nuget package"></a>Cài nuget package</h1><p>Trước tiên bạn phải cài một package có tên là routedebugger</p>
+
+<h1 id="1-Cai-nuget-package"><a href="#1-Cai-nuget-package" class="headerlink" title="1. Cài nuget package"></a>1. Cài nuget package</h1><p>Trước tiên bạn phải cài một package có tên là routedebugger</p>
 <p><img src="https://farm1.staticflickr.com/469/31947372973_69489bcb72_o.png"></p>
 <p>Sau đó, thêm một dòng config trong Web.config</p>
 <add key="RouteDebugger:Enabled" value="true" />
 
 <p><img src="https://farm1.staticflickr.com/595/31947453593_6bbc0ddf77_o.png"></p>
-<h1 id="Debug-cai-route"><a href="#Debug-cai-route" class="headerlink" title="Debug cái route"></a>Debug cái route</h1><p>Sau khi hoàn tất 2 bước trên, nhấn Debug, kéo xuống dưới cùng của website và bạn sẽ thấy bảng phân tích route</p>
+<h1 id="2-Debug-cai-route"><a href="#2-Debug-cai-route" class="headerlink" title="2. Debug cái route"></a>2. Debug cái route</h1><p>Sau khi hoàn tất 2 bước trên, nhấn Debug, kéo xuống dưới cùng của website và bạn sẽ thấy bảng phân tích route</p>
 <p><img src="https://farm1.staticflickr.com/586/31947500953_e3538ee6b5_o.png"></p>
 <p>Bảng này sẽ cho bạn thấy route của bạn gõ trên thanh địa chỉ nó bị dinh vô cái config nào</p>
 <p>Vậy là bạn đã debug được rồi nhóe</p>

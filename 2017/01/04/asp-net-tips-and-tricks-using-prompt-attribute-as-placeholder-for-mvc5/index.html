@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png">
 <meta property="article:published_time" content="2017-01-04T13:30:57.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:56:55.765Z">
+<meta property="article:modified_time" content="2022-03-13T21:04:44.567Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="htmlhelper">
 <meta property="article:tag" content="placeholder">
@@ -159,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chuan-bi-trong-ViewModel-hoac-Model"><span class="nav-text">Chuẩn bị trong ViewModel (hoặc Model)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-cho-C"><span class="nav-text">Code cho C#</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-cho-Razor"><span class="nav-text">Code cho Razor</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Chuan-bi-trong-ViewModel-hoac-Model"><span class="nav-text">1. Chuẩn bị trong ViewModel (hoặc Model)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Code-cho-C"><span class="nav-text">2. Code cho C#</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Code-cho-Razor"><span class="nav-text">3. Code cho Razor</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:56:55" itemprop="dateModified" datetime="2022-01-24T17:56:55-05:00">2022-01-24</time>
+      <time title="Modified: 2022-03-13 17:04:44" itemprop="dateModified" datetime="2022-03-13T17:04:44-04:00">2022-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -317,7 +317,7 @@
 <p><img src="https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png" alt="31716564800_af2c594490_o"></p>
 <span id="more"></span>
 
-<h1 id="Chuan-bi-trong-ViewModel-hoac-Model"><a href="#Chuan-bi-trong-ViewModel-hoac-Model" class="headerlink" title="Chuẩn bị trong ViewModel (hoặc Model)"></a>Chuẩn bị trong ViewModel (hoặc Model)</h1><p>Các properties trong ViewModel sẽ có default get set như sau</p>
+<h1 id="1-Chuan-bi-trong-ViewModel-hoac-Model"><a href="#1-Chuan-bi-trong-ViewModel-hoac-Model" class="headerlink" title="1. Chuẩn bị trong ViewModel (hoặc Model)"></a>1. Chuẩn bị trong ViewModel (hoặc Model)</h1><p>Các properties trong ViewModel sẽ có default get set như sau</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public int DistrictId &#123; get; set; &#125;</code></pre>
 
 <p>Bạn sẽ phải thêm các DisplayAttribute cho Property này như sau</p>
@@ -326,11 +326,10 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 
 <p>DisplayAttribute có chức năng dựng ra các thuộc tính HTML cần thiết để hiển thị ra web khi bạn dùng HtmlHelpers để tạo các tag input</p>
 <p>Thuộc tính Name sẽ được dùng cho label của input, thuộc tính Prompt sẽ được dùng cho placeholder của input</p>
-<h1 id="Code-cho-C"><a href="#Code-cho-C" class="headerlink" title="Code cho C#"></a>Code cho C#</h1><p>Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó</p>
+<h1 id="2-Code-cho-C"><a href="#2-Code-cho-C" class="headerlink" title="2. Code cho C#"></a>2. Code cho C#</h1><p>Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public static class Extensions
 &#123;
-    public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(
-                                                                      this HtmlHelper html,
+    public static MvcHtmlString DisplayPlaceHolderFor&lt;TModel, TValue&gt;(this HtmlHelper html,
                                                                       Expression&lt;Func&lt;TModel, TValue&gt;&gt; expression)
     &#123;
         var result &#x3D; ModelMetadata.FromLambdaExpression(expression, html.ViewData).Watermark;
@@ -339,7 +338,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 &#125;</code></pre>
 
 <p>Expression sẽ là câu truy vấn bạn truyền vô cho cái extension này</p>
-<h1 id="Code-cho-Razor"><a href="#Code-cho-Razor" class="headerlink" title="Code cho Razor"></a>Code cho Razor</h1><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F;Hiển thị label
+<h1 id="3-Code-cho-Razor"><a href="#3-Code-cho-Razor" class="headerlink" title="3. Code cho Razor"></a>3. Code cho Razor</h1><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F;Hiển thị label
 @Html.LabelFor(x &#x3D;&gt; x.DistrictId)
 &#x2F;&#x2F;Hiển thị Textbox và Placeholder
 @Html.TextBoxFor(x &#x3D;&gt; x. DistrictId,

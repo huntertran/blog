@@ -6,7 +6,7 @@
   <link href="https://huntertran.com/atom.xml" rel="self"/>
   
   <link href="https://huntertran.com/"/>
-  <updated>2022-01-24T22:56:55.769Z</updated>
+  <updated>2022-03-13T21:04:44.571Z</updated>
   <id>https://huntertran.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://huntertran.com/2022/01/22/An-introduction-to-web-service-scaling/"/>
     <id>https://huntertran.com/2022/01/22/An-introduction-to-web-service-scaling/</id>
     <published>2022-01-22T07:42:18.000Z</published>
-    <updated>2022-01-24T22:56:55.769Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you could utilize these solutions or combine them for a better result.&lt;/p&gt;</summary>
@@ -40,7 +40,7 @@
     <link href="https://huntertran.com/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/"/>
     <id>https://huntertran.com/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</id>
     <published>2021-09-19T00:11:32.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;For a long time, my reputation points on StackOverflow (SO) were just around 200. You get 100 by just registering an account. If your reputation score is high, you can brag about it in your CV, or even better, landing your next dream job. In this blog post, I will tell you the story of how I can get +10 reputations EVERY DAY.&lt;/p&gt;</summary>
@@ -59,7 +59,7 @@
     <link href="https://huntertran.com/2021/05/22/A-list-of-developer-surveys/"/>
     <id>https://huntertran.com/2021/05/22/A-list-of-developer-surveys/</id>
     <published>2021-05-22T23:51:39.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;When I’m looking for numbers in my recent research, I need reliable surveys/market share statistics in computer technologies. So here is a list of them:&lt;/p&gt;</summary>
@@ -78,7 +78,7 @@
     <link href="https://huntertran.com/2020/12/09/install-quick-assist-in-Windows-10/"/>
     <id>https://huntertran.com/2020/12/09/install-quick-assist-in-Windows-10/</id>
     <published>2020-12-09T23:22:20.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.&lt;/p&gt;</summary>
@@ -97,7 +97,7 @@
     <link href="https://huntertran.com/2020/11/25/reset-network-in-Windows-10/"/>
     <id>https://huntertran.com/2020/11/25/reset-network-in-Windows-10/</id>
     <published>2020-11-25T01:21:29.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;How to reset network settings in Windows 10&lt;/p&gt;
@@ -117,7 +117,7 @@
     <link href="https://huntertran.com/2020/11/15/troubleshoot-microphone-problems/"/>
     <id>https://huntertran.com/2020/11/15/troubleshoot-microphone-problems/</id>
     <published>2020-11-15T16:31:16.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instruction on how to:&lt;/p&gt;
@@ -143,7 +143,7 @@
     <link href="https://huntertran.com/2020/11/11/Coding-Game-Shadow-of-the-Knight/"/>
     <id>https://huntertran.com/2020/11/11/Coding-Game-Shadow-of-the-Knight/</id>
     <published>2020-11-11T06:09:15.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Difficulty: Medium&lt;/p&gt;
@@ -167,7 +167,7 @@
     <link href="https://huntertran.com/2020/10/17/How-to-download-Windows-10-ISO/"/>
     <id>https://huntertran.com/2020/10/17/How-to-download-Windows-10-ISO/</id>
     <published>2020-10-17T17:08:02.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instructions on how to download Windows 10 ISO.&lt;/p&gt;</summary>
@@ -188,7 +188,7 @@
     <link href="https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
     <id>https://huntertran.com/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
     <published>2020-10-09T01:26:02.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;NLTK has a function called &lt;code&gt;regexpparser&lt;/code&gt; to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.&lt;/p&gt;</summary>
@@ -213,7 +213,7 @@
     <link href="https://huntertran.com/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
     <id>https://huntertran.com/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
     <published>2020-09-03T20:02:21.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long-awaited features are in beta, invitation-only, and it is &lt;code&gt;GitHub Codespaces&lt;/code&gt;.&lt;/p&gt;</summary>
@@ -236,7 +236,7 @@
     <link href="https://huntertran.com/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
     <id>https://huntertran.com/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
     <published>2020-07-30T04:31:02.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft acquired GitHub, and everyone has an unlimited number of private repositories. This reason alone makes me want to move all my project and source code to GitHub.&lt;/p&gt;</summary>
@@ -261,7 +261,7 @@
     <link href="https://huntertran.com/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
     <id>https://huntertran.com/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
     <published>2020-07-20T22:28:46.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;I don’t know why Google makes it so challenging to connect to its Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?&lt;/p&gt;
@@ -287,7 +287,7 @@
     <link href="https://huntertran.com/2019/10/19/refactoring-clones-type-2/"/>
     <id>https://huntertran.com/2019/10/19/refactoring-clones-type-2/</id>
     <published>2019-10-19T20:10:18.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Removing clones in code maybe is the most challenging type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#&lt;/p&gt;</summary>
@@ -310,7 +310,7 @@
     <link href="https://huntertran.com/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/"/>
     <id>https://huntertran.com/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</id>
     <published>2019-08-18T18:54:08.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Using Vuejs, sometime you need to publish your awesome &lt;code&gt;component&lt;/code&gt; with the world. Sure you can share the &lt;code&gt;.vue&lt;/code&gt; file, but how can you publish it to &lt;code&gt;npmjs&lt;/code&gt;, for the ease of installation and usage of others?&lt;/p&gt;</summary>
@@ -341,7 +341,7 @@
     <link href="https://huntertran.com/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/"/>
     <id>https://huntertran.com/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</id>
     <published>2019-07-14T01:15:56.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Doing C# long enough, you get yourself familiar with C# concepts and syntax. That’s fine, but sometime when you need “the same” concepts in Java, it’s quite difficult. This cheat sheet here to tackle that problem.&lt;/p&gt;</summary>
@@ -362,7 +362,7 @@
     <link href="https://huntertran.com/2019/07/12/java-for-beginner-2-hello-world-in-java/"/>
     <id>https://huntertran.com/2019/07/12/java-for-beginner-2-hello-world-in-java/</id>
     <published>2019-07-12T16:40:13.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;After getting yourself familiar with names and terms in Java in &lt;a href=&quot;https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/&quot;&gt;part 1&lt;/a&gt;, now it’s time for you to create your first program in Java.&lt;/p&gt;</summary>
@@ -383,7 +383,7 @@
     <link href="https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/"/>
     <id>https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</id>
     <published>2019-07-11T00:11:54.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Coming to Java world, from a .NET guy, is like going from a full feature-rich and comfortable car to a basic bike with a lot of space for extension and customization.&lt;br&gt;In this series, I will walk you through (hopefully) a small part of Java world, just enough for you to continue your exploration.&lt;/p&gt;</summary>
@@ -402,7 +402,7 @@
     <link href="https://huntertran.com/2019/06/16/fighting-with-unauthorized-copies-of-your-content/"/>
     <id>https://huntertran.com/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</id>
     <published>2019-06-16T04:37:17.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.&lt;/p&gt;
@@ -426,7 +426,7 @@
     <link href="https://huntertran.com/2019/06/15/machine-learning-3-2-logistic-regression-model/"/>
     <id>https://huntertran.com/2019/06/15/machine-learning-3-2-logistic-regression-model/</id>
     <published>2019-06-15T03:14:11.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng&lt;/p&gt;</summary>
@@ -443,7 +443,7 @@
     <link href="https://huntertran.com/2019/06/14/gecko-dom-logging-system/"/>
     <id>https://huntertran.com/2019/06/14/gecko-dom-logging-system/</id>
     <published>2019-06-14T04:12:17.000Z</published>
-    <updated>2022-01-24T22:56:55.765Z</updated>
+    <updated>2022-03-13T21:04:44.571Z</updated>
     
     
     <summary type="html">&lt;p&gt;The purpose of this documentation is to record all the findings and my progress while exploring Firefox source code, in order to log how many time a DOM API is called when visit a single website, or multiple common website.&lt;/p&gt;

@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://farm1.staticflickr.com/592/22588970370_394a956f21_o.png">
 <meta property="og:image" content="https://farm6.staticflickr.com/5829/22763429822_fe3f21d523_o.png">
 <meta property="article:published_time" content="2015-11-05T04:19:10.000Z">
-<meta property="article:modified_time" content="2022-01-24T22:56:55.765Z">
+<meta property="article:modified_time" content="2022-03-13T21:04:44.567Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="advanced">
@@ -172,7 +172,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Advanced-Debugging"><span class="nav-text">Advanced Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Output-Log-with-Breakpoint"><span class="nav-text">Output Log with Breakpoint</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition-Breakpoint"><span class="nav-text">Condition Breakpoint</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-new-Exception-Settings"><span class="nav-text">The new Exception Settings</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Advanced-Debugging"><span class="nav-text">1. Advanced Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Output-Log-with-Breakpoint"><span class="nav-text">1.1. Output Log with Breakpoint</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Condition-Breakpoint"><span class="nav-text">1.2. Condition Breakpoint</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-The-new-Exception-Settings"><span class="nav-text">2. The new Exception Settings</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -281,7 +281,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-24 17:56:55" itemprop="dateModified" datetime="2022-01-24T17:56:55-05:00">2022-01-24</time>
+      <time title="Modified: 2022-03-13 17:04:44" itemprop="dateModified" datetime="2022-03-13T17:04:44-04:00">2022-03-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,8 +320,9 @@
         <p>Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.</p>
 <p>Visual Studio 2015 có một cải tiến đáng giá giúp lập trình viên biết chính xác chỗ code nào bị exception, và một số cải tiến vô cùng đáng giá khác khi debug một đoạn code</p>
 <span id="more"></span>
-<h1 id="Advanced-Debugging"><a href="#Advanced-Debugging" class="headerlink" title="Advanced Debugging"></a>Advanced Debugging</h1><p>Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: <a target="_blank" rel="noopener" href="https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a>, bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa</p>
-<h2 id="Output-Log-with-Breakpoint"><a href="#Output-Log-with-Breakpoint" class="headerlink" title="Output Log with Breakpoint"></a>Output Log with Breakpoint</h2><p><img src="https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png"></p>
+
+<h1 id="1-Advanced-Debugging"><a href="#1-Advanced-Debugging" class="headerlink" title="1. Advanced Debugging"></a>1. Advanced Debugging</h1><p>Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: <a target="_blank" rel="noopener" href="https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a>, bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa</p>
+<h2 id="1-1-Output-Log-with-Breakpoint"><a href="#1-1-Output-Log-with-Breakpoint" class="headerlink" title="1.1. Output Log with Breakpoint"></a>1.1. Output Log with Breakpoint</h2><p><img src="https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png"></p>
 <p>Trong vòng lặp trên, bạn sẽ thấy có dòng “Debug.WriteLine” dùng để xuất một thông tin gì đó ra màn hình Output. Thông tin này sẽ giúp bạn biết code đã chạy tới dòng này, và xuất ra các giá trị mà bạn mong muốn.</p>
 <p><img src="https://farm1.staticflickr.com/618/22152668514_87a33835e7_o.png"></p>
 <p>Từ giờ, bạn không cần phải làm thủ công như vậy nữa.</p>
@@ -335,26 +336,26 @@
 <p><img src="https://farm6.staticflickr.com/5803/22762522502_765d5041fe_o.png"></p>
 <p>Bạn thấy con số nằm trong ngoặc kép là vì nó là kiểu string, không phải int. Nên khi hiển thị, Visual Studio sẽ đưa nó vào trong ngoặc kép</p>
 <p>Bây giờ, hãy so sánh một chút</p>
-<p><strong>Breakpoint “Action”</strong></p>
-<p><strong>Debug.WriteLine()</strong></p>
-<p><strong>Lợi</strong></p>
-<p>Nhanh chóng, đơn giản</p>
-<p>Không thay đổi code</p>
-<p>Có thể chỉnh sửa khi ứng dụng đang chạy</p>
-<p>Có thể kết hợp với Condition của Breakpoint</p>
-<p>Có thể quản lý tập trung trong cửa sổ Debug</p>
-<p>Sử dụng linh hoạt</p>
-<p>Trực quan, dễ hiểu</p>
-<p>Có thể chèn nhiều dòng</p>
-<p><strong>Bất lợi</strong></p>
-<p>Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng)</p>
-<p>Phải thay đổi code</p>
-<p>Không thể chỉnh sửa khi app đang chạy</p>
-<p>Dùng Debug.WriteLineIf() để thêm điều kiện</p>
-<p>Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường</p>
-<p>Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release)</p>
-<p>Như vậy sử dụng cái nào hoàn toàn là quyền của bạn</p>
-<h2 id="Condition-Breakpoint"><a href="#Condition-Breakpoint" class="headerlink" title="Condition Breakpoint"></a>Condition Breakpoint</h2><p>Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Breakpoint “Action”</strong></th>
+<th><strong>Debug.WriteLine()</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Lợi</strong></td>
+<td>Nhanh chóng, đơn giản<br><br>Không thay đổi code<br>Có thể chỉnh sửa khi ứng dụng đang chạy<br>Có thể kết hợp với Condition của Breakpoint<br>Có thể quản lý tập trung trong cửa sổ Debug</td>
+<td>Sử dụng linh hoạt<br><br>Trực quan, dễ hiểu<br>Có thể chèn nhiều dòng</td>
+</tr>
+<tr>
+<td><strong>Bất lợi</strong></td>
+<td>Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng)</td>
+<td>Phải thay đổi code<br><br>Không thể chỉnh sửa khi app đang chạy<br>Dùng Debug.WriteLineIf() để thêm điều kiện<br>Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường<br>Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release)</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-Condition-Breakpoint"><a href="#1-2-Condition-Breakpoint" class="headerlink" title="1.2. Condition Breakpoint"></a>1.2. Condition Breakpoint</h2><p>Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn</p>
 <p><img src="https://farm1.staticflickr.com/757/22588283440_b481c716fc_o.png"></p>
 <p>Bạn có nhiều tùy chọn để quyết định xem là Visual Studio có dừng lại ở Breakpoint này hay không. Trong số đó có</p>
 <ul>
@@ -368,7 +369,7 @@
 <p>Đối với App Windows, bạn sẽ cần dùng 2 cái đầu tiên nhiều nhất</p>
 <p>Giả sử mình muốn dừng lại ở lần chạy thứ 9, và xuất ra màn hình biến ở lần chạy này, thì thiết lập như sau:</p>
 <p><img src="https://farm6.staticflickr.com/5675/22787742791_38aeba8663_o.png"></p>
-<h1 id="The-new-Exception-Settings"><a href="#The-new-Exception-Settings" class="headerlink" title="The new Exception Settings"></a>The new Exception Settings</h1><p>Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?</p>
+<h1 id="2-The-new-Exception-Settings"><a href="#2-The-new-Exception-Settings" class="headerlink" title="2. The new Exception Settings"></a>2. The new Exception Settings</h1><p>Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?</p>
 <p><img src="https://farm1.staticflickr.com/778/22155676943_b38eeef94c_o.png"></p>
 <p>DISABLE_XAML_BREAK_ON_UNHANDLED_EXCEPTION</p>
 <p>Global::System.Diagnostics.Debugger.Break();</p>
