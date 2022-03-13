@@ -17,11 +17,12 @@ Phải rồi, bạn đọc nó đúng rồi đó. Visual Studio có sức mạnh
 
 Bài viết này bao gồm các thủ thuật, tiện ích và hướng dẫn sử dụng những tính năng cực hay ho nhưng khá ít người biết tới của Visual Studio.
 <!-- more -->
-# Super Power 1: JetBrains ReSharper
+
+# 1. Super Power 1: JetBrains ReSharper
 
 ReSharper là một extension cực khủng của JetBrains. Nó sẽ đảm nhiệm vai trò dọn dẹp, trang điểm cho code của bạn đẹp như thơ, tăng hiệu suất làm việc, tăng khả năng maintenance, tăng tính tái sử dụng code vào nhiều project khác nhau. Bạn chưa tin ư, hãy xem phần [1.4. Các tính năng](#_Các_tính_năng)
 
-## Nếu bạn là sinh viên
+## 1.1. Nếu bạn là sinh viên
 
 JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ các sản phẩm khác nữa). Tuy nhiên, chương trình miễn phí này được giấu khá kỹ trên trang chủ của nó.
 
@@ -35,19 +36,19 @@ JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ
     
 *   Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo
 
-## Nếu bạn không còn là sinh viên
+## 1.2. Nếu bạn không còn là sinh viên
 
 Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)
 
-## Cài đặt
+## 1.3. Cài đặt
 
 Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.
 
 Sau khi cài xong, mở Visual Studio lên, và bạn sẽ thấy có nhiều khác biệt
 
-## Các tính năng tuyệt zời
+## 1.4. Các tính năng tuyệt zời
 
-### Phân tích code
+### 1.4.1. Phân tích code
 
 Khi mở một file .cs lên, ReSharper sẽ tự động phân tích code có trong file này và đưa ra các đề xuất hợp lý.
 
@@ -66,7 +67,7 @@ Những vạch ngang:
 *   Màu đỏ: code lỗi
 *   Màu xanh lá cây: code có thể rút gọn
 
-### Xóa code thừa
+### 1.4.2. Xóa code thừa
 
 Click chuột vào một trong các vạch màu cam
 
@@ -94,11 +95,11 @@ Trỏ chuột vào hình bóng đèn sát bên dưới code > Show potential fix
 
 Cá nhân mình thấy cách làm của ReSharper hiện đại hơn, dễ nhìn hơn.
 
-### Code đúng chuẩn
+### 1.4.3. Code đúng chuẩn
 
 ReSharper giúp bạn code theo đúng chuẩn, thu gọn code, thay thế bằng các đoạn code dễ hiểu hơn, vân vân và vân
 
-### Tự hoàn thành code khi đang gõ
+### 1.4.4. Tự hoàn thành code khi đang gõ
 
 Giả sử bạn muốn khai báo một biến string, kiểu private. Bạn chỉ cần gõ như hình dưới rồi nhấn ";"
 
@@ -108,7 +109,7 @@ Bạn muốn sử dụng một method nào đó mà chưa khai báo namespace. �
 
 ![](https://farm6.staticflickr.com/5617/21961282096_1aeb6374f4_o.png)
 
-### Thu gọn code
+### 1.4.5. Thu gọn code
 
 Nhấn vào một vạch ngang xanh lá cây bất kỳ trên thanh cuộn. Con trỏ sẽ nhảy tới dòng code có thể rút gọn.
 
@@ -122,7 +123,7 @@ Kết quả
 
 ![](https://farm1.staticflickr.com/652/21975514002_75edfe0026_o.png)
 
-### Tự sinh code
+### 1.4.6. Tự sinh code
 
 Tạo một model mới như hình sau
 
@@ -142,7 +143,7 @@ Và kết quả (trong lần thực hiện đầu tiên, ReSharper sẽ hỏi b�
 
 ![](https://farm1.staticflickr.com/670/21975835712_8937950fbf_o.png)
 
-### Code Generation
+### 1.4.7. Code Generation
 
 Sử dụng TestModel, bạn hãy thêm vào vài biến lấy lệ để test tính năng Code Generation
 
@@ -164,7 +165,7 @@ Kết quả:
 
 Thật tuyệt phải ko?
 
-### Đổi tên class – method – Hàm, vân vân và vân vân
+### 1.4.8. Đổi tên class – method – Hàm, vân vân và vân vân
 
 ReSharper hỗ trợ bạn đổi tên bất kỳ thứ gì, và tên được đổi đó sẽ được thay đổi ở tất cả các file có sử dụng nó. Giả sử class TestModel này được sử dụng ở 3 file, và bạn muốn đổi tên nó thành NotTestModel, thì cả 3 file kia sẽ được cập nhật tên mới.
 
@@ -180,7 +181,7 @@ Một hộp thoại nhỏ hiện ra
 
 Sửa tên lại. Nếu bạn muốn có tính năng Undo, tick chọn bên dưới rồi Next
 
-### Đưa string vào Resource
+### 1.4.9. Đưa string vào Resource
 
 Bạn này làm app có Localization (aka: dịch các string trong app ra các ngôn ngữ khác nhau cho các thị trường khác nhau), hẳn là sẽ rất khổ sở khi phải đưa từng string từng string một vào Resource để dịch. Có bạn áp dụng phương pháp cuốn chiếu, làm tới đâu thêm string vào Resource tới đó. File Resource lúc nào cũng mở sẵn. Có bạn chọn cách làm xong app rồi mới đưa từng string một vào Resource bằng cách Copy > Paste rất thủ công
 
@@ -206,7 +207,7 @@ Tuy nhiên, Method GetValue này đã lỗi thời rồi, phải sửa nó một
 
 ReSharper còn hàng hàng tính năng khác chờ bạn khám phá
 
-# Super Power 2: XAML Styler
+# 2. Super Power 2: XAML Styler
 
 Có khi nào bạn cảm thấy khó chịu khi code giao diện bằng XAML, và các thuộc tính cứ nằm luôn tuồn trên một hàng, kéo wá kéo lại quá vất vả?
 
@@ -214,7 +215,7 @@ Có khi nào bạn nhìn đống code XAML, và chẳng biết phải tìm thu�
 
 XAML Styler đã đến. Và nó sẽ giúp bạn format code XAML tuyệt đẹp.
 
-## Cài đặt
+## 2.1. Cài đặt
 
 Vào Menu Tools > Extension and Updates…
 
@@ -224,7 +225,7 @@ Tiếp tục chọn mục Online > Visual Studio Gallery > Nhập "XAML Styler" 
 
 ![](https://farm1.staticflickr.com/574/21989659205_849101bec2_o.png)
 
-## Thiết lập thuộc tính
+## 2.2. Thiết lập thuộc tính
 
 Vào menu Tools > Option > kéo xuống dưới cùng chọn XAML Styler
 
@@ -234,7 +235,7 @@ Chỉnh các thuộc tính như hình
 
 Chắc các bạn thắc mắc tại sao lại phải chỉnh như vậy :3. Đó là theo kinh nghiệm cá nhân của mình để tăng hiệu suất và giảm sai sót thôi.
 
-## Sử dụng
+## 2.3. Sử dụng
 
 Sử dụng rất đơn giản: bạn mở code XAML lên > click chuột phải > Format XAML
 
@@ -246,9 +247,9 @@ After
 
 ![](https://farm1.staticflickr.com/754/21990346995_70aa6b546e_o.png)
 
-# Super Power 3: Indent Guide và C# Outline
+# 3. Super Power 3: Indent Guide và C# Outline
 
-## Indent Guide
+## 3.1. Indent Guide
 
 Qua hình chụp screenshot nãy giờ, chắc các bạn cũng thắc mắc các đường kẻ dọc trong screenshot có mà Visual Studio của bạn không có? Đó chính là Indent Guide Extension. Chức năng của nó rất đơn giản, vẽ ra các đường kẻ dọc để code bạn dễ nhìn hơn, canh theo đúng hàng đúng lối.
 
@@ -258,7 +259,7 @@ Ngay khi cài xong, khởi động lại Visual Studio, mở một Project bất
 
 ![](https://farm6.staticflickr.com/5799/21803058558_994e9e1edc_o.png)
 
-## C# Outline
+## 3.2. C# Outline
 
 Nhìn hình trên, chắc bạn cũng thấy lạ là tại sao cấu trúc if cũng có một dấu "-" nho nhỏ để đóng ra mở vô. Đó chính là khả năng của Extension C# Outline.
 

@@ -47,25 +47,25 @@ Windows Phone ko hoạt động theo kiểu HTML, một khi tất cả đã sẵ
 
 Rất nhiều người sử dụng cách này, vì trong một số đoạn video và hầu hết các tài liệu chính thức trên MSDN, MS hướng dẫn bạn theo cách này =='
 
-# Cách 1: this.Loaded event handler
+# 1. Cách 1: this.Loaded event handler
 
-## Hoạt động
+## 1.1. Hoạt động
 
 Loaded event sẽ được gọi ngay khi vẽ xong giao diện của page lên màn hình (sau khi khởi tạo xong) và khi có một sự thay đổi về giao diện (thêm bớt các element)
 
-## Cách dùng
+## 1.2. Cách dùng
 
 ![](https://farm4.staticflickr.com/3794/10619772596_db30767db0_o.png)
 
 Dùng như hình trên
 
-## Ưu điểm
+## 1.3. Ưu điểm
 
 Windows Phone sử dụng cơ chế DataBinding, giao diện sẽ tự động thay đổi khi dữ liệu thay đổi. Hãy thử tưởng tượng từng item xuất hiện trong list, và bạn có thể tương tác với chúng.
 
 Phương pháp này làm được việc đó Việc khởi tạo page vô cùng nhanh chóng, ứng dụng của bạn sẽ không bị đơ, đảm bảo tương tác với người dùng
 
-## Nhược điểm
+## 1.4. Nhược điểm
 
 Bất kỳ khi nào có một sự thay đổi về giao diện (thêm bớt các element), phương thức này sẽ được gọi lại.
 
@@ -73,34 +73,34 @@ Như vậy, ta không thể đảm bảo được rằng trong suốt quá trìn
 
 Gọi nhiều lần hàm load sẽ dẫn tới những kết cục không mong muốn, chưa kể đến sự hao phí tài nguyên và năng lượng Giả sử nếu bạn cần thời gian rất lâu để load dữ liệu, mà dữ liệu của bạn chưa được binding trước khi load xong, thì sẽ có 1 hiện tượng là page đã vẽ xong, nhưng nội dung thì vẫn trống trơn. Dù vẫn phản hồi tốt, người dùng sẽ tưởng app lỗi và rate thấp :3
 
-## Kết luận
+## 1.5. Kết luận
 
 Nếu page của bạn, bạn chắc chắn không có sự thêm bớt về giao diện, có thể dùng phương thức này. Một lưu ý nhỏ là hãy binding dữ liệu trước khi tiến hành load dữ liệu lên. Binding lên một Collection không có phần tử hoàn toàn không sao cả. (không phải collection null nhé)
 
 > Nếu dùng phương thức này mà gặp một số lỗi lạ về dữ liệu, hãy nghĩ tới trường hợp event được gọi nhiều lần
 
-# Cách 2: OnNavigatedTo
+# 2. Cách 2: OnNavigatedTo
 
-## Hoạt động
+## 2.1. Hoạt động
 
 OnNavigatedTo được gọi khi một page trở thành page active trong frame. Như vậy có nghĩa là nó sẽ được gọi trước khi event loaded xảy ra. Thứ tự: Contructor => OnNavigatedTo => Loaded
 
-## Cách dùng
+## 2.2. Cách dùng
 
 ![](https://farm4.staticflickr.com/3668/10620480973_e2599e3065_o.png)
 
-## Ưu điểm
+## 2.3. Ưu điểm
 
 OnNavigatedTo có một số tham số liên quan tới việc chuyển page. Bạn có thể dùng các tham số này để xác định các thành phần sẽ hiển thị lên page như thế nào
 
-## Nhược điểm
+## 2.4. Nhược điểm
 
 Page cũ sẽ bị đơ trước khi chuyển
 
-## Kết luận
+## 2.5. Kết luận
 
 Chỉ dùng phương thức này khi thời gian đơ là không đáng kể. Nếu bạn load 2 dòng dữ liệu thì okie, còn nếu 20000 dòng thì nên dùng Loaded
 
-# Tóm lại
+# 3. Tóm lại
 
 Tùy và lượng dữ liệu, cũng như thời gian mà bạn sử dụng linh hoạt 1 trong 2 phương pháp

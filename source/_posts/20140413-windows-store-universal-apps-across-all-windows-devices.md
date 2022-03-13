@@ -20,11 +20,11 @@ Và ngay bây giờ, từ bản cập nhật Update 2 RC của Visual Studio 201
 
 <!-- more -->
 
-# Cập nhật Visual Studio 2013 lên Updat 2 RC
+# 1. Cập nhật Visual Studio 2013 lên Update 2 RC
 
 Ngày 13-04-2014: Link tải: [http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx](http://blogs.msdn.com/b/windowsazure/archive/2014/04/09/deep-dive-visual-studio-2013-update-2-rc-and-azure-sdk-2-3.aspx)
 
-# Tạo Project Universal
+# 2. Tạo Project Universal
 
 Sau khi cài đặt xong, bạn sẽ có thêm một số tùy chọn mới trong Visual Studio
 
@@ -46,7 +46,7 @@ Còn Project “Shared” sẽ chứa các file dùng chung, cụ thể là Mode
 
 Ta sẽ tạo một ứng dụng đọc tin RSS đơn giản nhé
 
-# Xây dựng Model và ViewModel
+# 3. Xây dựng Model và ViewModel
 
 Tạo 2 thư mục mới tên là Model và ViewModel trong Project Shared
 
@@ -128,7 +128,7 @@ Chạy thử
 
 ![](http://farm8.staticflickr.com/7371/13817751965_3b549082de_o.png)
 
-# Xây dựng Template
+# 4. Xây dựng Template
 
 Mở file MainPage.xaml trong Project Windows 8.1
 
@@ -150,7 +150,7 @@ Nhấn nút Local Machine để chạy thử
 
 Thật tuyệt phải không?
 
-# Tạo tương tự bên Windows Phone 8.1
+# 5. Tạo tương tự bên Windows Phone 8.1
 
 Mở file MainPage.xaml của Project Windows Phone 8.1, copy và paste những thứ tương tự nhau
 
@@ -202,7 +202,7 @@ Chạy thử Project WP8.1
 
 Done, bạn đã tự tạo một UniversalApp rồi đấy
 
-# XAML và CodeBehind dùng chung
+# 6. XAML và CodeBehind dùng chung
 
 Như bạn có thể thấy ở hình trên, XAML và CodeBehind ở cả 2 Project rất giống nhau, hầu như không thay đổi gì cả
 

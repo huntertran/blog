@@ -20,7 +20,7 @@ Vậy làm thế nào để hiển thị placeholder, sử dụng thuộc tính 
 
 <!-- more -->
 
-# Chuẩn bị trong ViewModel (hoặc Model)
+# 1. Chuẩn bị trong ViewModel (hoặc Model)
 
 Các properties trong ViewModel sẽ có default get set như sau
 
@@ -39,15 +39,14 @@ DisplayAttribute có chức năng dựng ra các thuộc tính HTML cần thiế
 
 Thuộc tính Name sẽ được dùng cho label của input, thuộc tính Prompt sẽ được dùng cho placeholder của input
 
-# Code cho C#
+# 2. Code cho C#
 
 Placeholder không phải là một HtmlHelper có sẵn, nên bạn phải tự tạo ra nó
 
 ```csharp
 public static class Extensions
 {
-    public static MvcHtmlString DisplayPlaceHolderFor<TModel, TValue>(
-                                                                      this HtmlHelper html,
+    public static MvcHtmlString DisplayPlaceHolderFor<TModel, TValue>(this HtmlHelper html,
                                                                       Expression<Func<TModel, TValue>> expression)
     {
         var result = ModelMetadata.FromLambdaExpression(expression, html.ViewData).Watermark;
@@ -58,7 +57,7 @@ public static class Extensions
 
 Expression sẽ là câu truy vấn bạn truyền vô cho cái extension này
 
-# Code cho Razor
+# 3. Code cho Razor
 
 ```csharp
 //Hiển thị label

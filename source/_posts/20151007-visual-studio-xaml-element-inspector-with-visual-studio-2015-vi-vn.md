@@ -13,7 +13,8 @@ date: 2015-10-07 07:02:29
 
 Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là "Live Visual Tree" và "Live Property Explorer". Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy \[insert hình há mỏ kinh ngạc\]
 <!-- more -->
-# Live Visual Tree
+
+# 1. Live Visual Tree
 
 Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)
 
@@ -37,7 +38,7 @@ Bạn cũng có thể search một element bằng tên hoặc loại của nó
 
 ![](https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png)
 
-# Live Property Explorer
+# 2. Live Property Explorer
 
 Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy "Live Property Explorer", click vô nó để mở ra, rùi click cái ghim để đó dính zô đó
 

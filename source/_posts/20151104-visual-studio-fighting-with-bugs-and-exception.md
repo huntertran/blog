@@ -14,12 +14,14 @@ date: 2015-11-04 23:19:10
 Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.
 
 Visual Studio 2015 có một cải tiến đáng giá giúp lập trình viên biết chính xác chỗ code nào bị exception, và một số cải tiến vô cùng đáng giá khác khi debug một đoạn code
+
 <!-- more -->
-# Advanced Debugging
+
+# 1. Advanced Debugging
 
 Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: [\[Visual Studio\] Performance, performance, performance (with the help of Visual Studio "PerfTips")](https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/), bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa
 
-## Output Log with Breakpoint
+## 1.1. Output Log with Breakpoint
 
 ![](https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png)
 
@@ -51,45 +53,12 @@ Bây giờ, hãy so sánh một chút
 
   
 
-**Breakpoint "Action"**
+|  | **Breakpoint "Action"** | **Debug.WriteLine()** |
+|---|---|---|
+| **Lợi** | Nhanh chóng, đơn giản<br><br>Không thay đổi code<br>Có thể chỉnh sửa khi ứng dụng đang chạy<br>Có thể kết hợp với Condition của Breakpoint<br>Có thể quản lý tập trung trong cửa sổ Debug | Sử dụng linh hoạt<br><br>Trực quan, dễ hiểu<br>Có thể chèn nhiều dòng |
+| **Bất lợi** | Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng) | Phải thay đổi code<br><br>Không thể chỉnh sửa khi app đang chạy<br>Dùng Debug.WriteLineIf() để thêm điều kiện<br>Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường<br>Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release) |
 
-**Debug.WriteLine()**
-
-**Lợi**
-
-Nhanh chóng, đơn giản
-
-Không thay đổi code
-
-Có thể chỉnh sửa khi ứng dụng đang chạy
-
-Có thể kết hợp với Condition của Breakpoint
-
-Có thể quản lý tập trung trong cửa sổ Debug
-
-Sử dụng linh hoạt
-
-Trực quan, dễ hiểu
-
-Có thể chèn nhiều dòng
-
-**Bất lợi**
-
-Chỉ xuất ra được 1 dòng (mình chưa tìm được cách xuống dòng)
-
-Phải thay đổi code
-
-Không thể chỉnh sửa khi app đang chạy
-
-Dùng Debug.WriteLineIf() để thêm điều kiện
-
-Muốn tìm phải dùng Ctrl + F để tìm kiếm phrase như thông thường
-
-Giảm hiệu suất (không đáng kể, và không ảnh hưởng khi Release)
-
-Như vậy sử dụng cái nào hoàn toàn là quyền của bạn
-
-## Condition Breakpoint
+## 1.2. Condition Breakpoint
 
 Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn
 
@@ -108,7 +77,7 @@ Giả sử mình muốn dừng lại ở lần chạy thứ 9, và xuất ra mà
 
 ![](https://farm6.staticflickr.com/5675/22787742791_38aeba8663_o.png)
 
-# The new Exception Settings
+# 2. The new Exception Settings
 
 Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?
 

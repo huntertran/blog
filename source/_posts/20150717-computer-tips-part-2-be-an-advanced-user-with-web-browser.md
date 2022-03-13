@@ -66,27 +66,15 @@ Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng c
 
 ### Lợi và hại
 
-Lợi
-
-Hại
-
-Thời gian load trang nhanh hơn
-
-Thiết lập phức tạp
-
-Trang web đỡ rối mắt hơn
-
-Phải thiết lập cho từng trang web một
-
-Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)
-
-Web chạy mượt mà hơn
-
-Loại bỏ theo dõi hành vi người dùng của các website
-
-Ngăn ngừa các nguy cơ bảo mật kiểu "Click vào đây để nhận quà", click vào thì dính virus
-
-Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)
+| Lợi | Hại |
+|---|---|
+| Thời gian load trang nhanh hơn | Thiết lập phức tạp |
+| Trang web đỡ rối mắt hơn | Phải thiết lập cho từng trang web một |
+| Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu) |  |
+| Web chạy mượt mà hơn |  |
+| Loại bỏ theo dõi hành vi người dùng của các website |  |
+| Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus |  |
+| Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô) |  |
 
 ## uBlock – Firefox và Chrome
 

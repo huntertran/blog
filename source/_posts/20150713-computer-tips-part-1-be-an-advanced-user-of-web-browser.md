@@ -54,7 +54,9 @@ Vào Start, gõ Control Panel và mở Control Panel lên
 
 ![](https://farm1.staticflickr.com/371/19468724630_4b7f3c366f_o.png)
 
-Chọn Uninstall a program ![](https://farm4.staticflickr.com/3675/19649655092_cc74a4cb11_o.png)
+Chọn Uninstall a program 
+
+![](https://farm4.staticflickr.com/3675/19649655092_cc74a4cb11_o.png)
 
 Tiếp theo là tìm và gỡ bỏ tất cả các phần mềm có chữ "Toolbar" trong đó. Trust me.
 
@@ -121,21 +123,33 @@ Mở firefox lên, vào option
 
 Nếu như thế nào đó mà bạn bị mất cái nút mở ra menu này, trong trình duyệt firefox, nhấn Alt, sẽ thấy xuất hiện menu bar cũ, vào Tool > Option
 
-Tại đây, bạn sẽ thấy chỗ chỉnh trang web mặc định mở ra khi bạn mới mở Firefox. Chỉnh nó về Default hoặc như trong hình ![](https://farm1.staticflickr.com/298/19469617048_3c2728ba6f_o.png)
+Tại đây, bạn sẽ thấy chỗ chỉnh trang web mặc định mở ra khi bạn mới mở Firefox. Chỉnh nó về Default hoặc như trong hình 
 
-Ở mục content, bạn có thể bật tùy chọn Block Popup ![](https://farm1.staticflickr.com/396/19662150581_09c85d0245_o.png)
+![](https://farm1.staticflickr.com/298/19469617048_3c2728ba6f_o.png)
 
-Ở mục Privacy > chọn "Tell site I do not want to be tracked", cái này sẽ chặn một số website có lương tâm không theo dõi hành vi của bạn trên trang web đó ![](https://farm1.staticflickr.com/544/19469724790_9a3c03752b_o.png)
+Ở mục content, bạn có thể bật tùy chọn Block Popup 
 
-Bật cả 3 tùy chọn sau ở mục Security ![](https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png)
+![](https://farm1.staticflickr.com/396/19662150581_09c85d0245_o.png)
 
-Sau cùng, chọt vô Advanced > Network > Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không ![](https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png)
+Ở mục Privacy > chọn "Tell site I do not want to be tracked", cái này sẽ chặn một số website có lương tâm không theo dõi hành vi của bạn trên trang web đó 
+
+![](https://farm1.staticflickr.com/544/19469724790_9a3c03752b_o.png)
+
+Bật cả 3 tùy chọn sau ở mục Security 
+
+![](https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png)
+
+Sau cùng, chọt vô Advanced > Network > Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không 
+
+![](https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png)
 
 Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã "sạch" ![](https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png)
 
 ### 2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn
 
-Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox > Addon ![](https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png)
+Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox > Addon 
+
+![](https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png)
 
 Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại những cái mà bạn biết rõ, hoặc nó có trong danh sách này:
 
@@ -148,7 +162,9 @@ Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại 
 
 Chuyển sang thẻ plug-in, chọn never active đối với các plug-in khả nghi.
 
-Lưu ý có một số plug-in cần thiết để Firefox chạy ![](https://farm1.staticflickr.com/324/19658104815_7b2d4573e6_o.png)
+Lưu ý có một số plug-in cần thiết để Firefox chạy 
+
+![](https://farm1.staticflickr.com/324/19658104815_7b2d4573e6_o.png)
 
 ### 2.1.3 Cài các Add-on hữu ích
 
@@ -166,15 +182,25 @@ Color that site ra đời, cho phép bạn thay đổi màu toàn bộ các thà
 
 Cách dùng: Sau khi cài đặt xong, bạn sẽ thấy một nút nho nhỏ màu mè tùm lum nằm bên cạnh nút menu. Mở trang web bạn muốn thay đổi màu và nhấn vô nó.
 
-Mình sẽ lấy tuoitre.vn làm ví dụ ![](https://farm1.staticflickr.com/395/19471796349_7634f4684e_o.png)
+Mình sẽ lấy tuoitre.vn làm ví dụ
 
-Bên cạnh trái sẽ xuất hiện một thanh nhỏ. Bấm Go! ![](https://farm4.staticflickr.com/3725/19470911848_582c1be356_o.png)
+![](https://farm1.staticflickr.com/395/19471796349_7634f4684e_o.png)
 
-Bạn sẽ thấy một thanh chạy chạy, chờ nó chạy xong, sẽ hiện ra bảng tùy chỉnh. Bạn mở mục Foreground colors, chọn Invert Colors ![](https://farm1.staticflickr.com/512/19633625356_5b369ba1c4_o.png)
+Bên cạnh trái sẽ xuất hiện một thanh nhỏ. Bấm Go! 
 
-Sau đó tiếp tục mở Background colors, và chọn tiếp Invert Colors. Rồi chuyển sang thẻ Settings chọn domain để áp dụng thay đổi cho toàn bộ domain của tuổi trẻ rồi nhấn nút Save ![](https://farm1.staticflickr.com/327/19659877085_498f2d9d47_o.png)
+![](https://farm4.staticflickr.com/3725/19470911848_582c1be356_o.png)
 
-Vậy là xong, bạn có thể chiêm ngưỡng thành quả. Tuoitre.vn giờ đã dễ chịu hơn cho mắt, nhưng chữ vẫn rất rõ ràng dễ đọc. ![](https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png)
+Bạn sẽ thấy một thanh chạy chạy, chờ nó chạy xong, sẽ hiện ra bảng tùy chỉnh. Bạn mở mục Foreground colors, chọn Invert Colors
+
+![](https://farm1.staticflickr.com/512/19633625356_5b369ba1c4_o.png)
+
+Sau đó tiếp tục mở Background colors, và chọn tiếp Invert Colors. Rồi chuyển sang thẻ Settings chọn domain để áp dụng thay đổi cho toàn bộ domain của tuổi trẻ rồi nhấn nút Save
+
+![](https://farm1.staticflickr.com/327/19659877085_498f2d9d47_o.png)
+
+Vậy là xong, bạn có thể chiêm ngưỡng thành quả. Tuoitre.vn giờ đã dễ chịu hơn cho mắt, nhưng chữ vẫn rất rõ ràng dễ đọc.
+
+![](https://farm1.staticflickr.com/451/19037390234_226c6b0b15_o.png)
 
 #### 2.1.3.2 Grease Monkey
 
@@ -205,7 +231,9 @@ Một số add-on nâng cao hơn sẽ có ở phần 2 của chủ đề này nh
 
 ### 2.2.1 Thiết lập mặc định
 
-Bạn mở GG Chrome, chọt vào nút Menu > Settings ![](https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png)
+Bạn mở GG Chrome, chọt vào nút Menu > Settings
+
+![](https://farm1.staticflickr.com/460/19472379248_e600d04ab2_o.png)
 
 Ôi thôi, cái setting dài quá dài. Kéo xuống dưới cùng, chọn Show Advanced Settings…, rồi tiếp tục kéo xuống dưới cùng, sẽ có nút Reset settings. Bấm vào đó để reset lại (Lưu ý làm cái này thì GG Chrome của bạn sẽ như mới)
 

@@ -45,7 +45,7 @@ While 600 students trained in the first phase of the program, around 200 student
 
 ## Philippines: one of the top countries in the "Hour of Code" global leaderboards
 
-In  the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines  is one of the  top countries in the  Hour of Code Global Leaderboards  for having one of the highest participation rates in Hour of Code activities, with a total of  112 events  as of today, January 11, 2015.
+In the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines is one of the top countries in the  Hour of Code Global Leaderboards for having one of the highest participation rates in Hour of Code activities, with a total of  112 events as of today, January 11, 2015.
 
 Though some of the events were rescheduled due to impending Typhoon Hagupit, that didn't stop the teams from accomplishing their goal of teaching K-12 students and others from non-tech colleges how to code.
 

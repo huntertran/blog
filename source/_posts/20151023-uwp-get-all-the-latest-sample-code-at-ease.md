@@ -24,7 +24,8 @@ Ngày hôm nay đã khác rồi, Microsoft đã toẹt zời trở lại. Tất 
 
 Quá chuẩn? Sau đây là cách lấy code.
 <!-- more -->
-# A really good Git Source Control software
+
+# 1. A really good Git Source Control software
 
 Vì tất cả code đều nằm trên GitHub, nên bạn sễ cần một phần mềm Source Control tốt để:
 
@@ -40,7 +41,7 @@ Of course it's your choice. Use whatever you're familiar with. Don't let me tell
 
 Tất nhiên là lựa chọn của bạn. Xài cái nào thấy wen là được. Nhưng mà vẫn muốn biết một cái tốt (theo ý mình), thì đọc tiếp nhé.
 
-## GitHub Desktop – Not that good
+## 1.1. GitHub Desktop – Not that good
 
 Link: [https://desktop.github.com/](https://desktop.github.com/)
 
@@ -50,7 +51,7 @@ GitHub Desktop, phát triển bới chính dòng họ nhà mều bạch tuộc G
 
 GitHub Desktop mong muốn mọi thứ đơn giản nhất có thể. Nhưng họ lại bỏ hết mấy từ quen thuộc trong Git rồi.
 
-## SourceTree – More complex, have all the functions
+## 1.2. SourceTree – More complex, have all the functions
 
 My favorite: [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 
@@ -58,7 +59,7 @@ My favorite: [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 
 SourceTree, phát triển bởi Atlassian, là một phần mềm git source control khá tốt (theo ý cá nhân). Bạn có thể làm mọi thứ bạn muốn với nó. Thậm chí nó còn có cả Command Lind cho ai thích gõ lệnh như hacker nhé.
 
-# Setting up
+# 2. Setting up
 
 > Giờ, có thể bạn đã nghe thiên hạ đồn là Microsoft mở mã nguồn bộ .NET. Thực ra thì thiên hạ đồn quả nhiên ko sai, mà còn thiếu. Không chỉ .NET không, mà còn khá nhiều thứ khác cũng được "mở". Nói bạn rồi, Microsoft đã chịu chơi trở lại.
 > 
@@ -82,7 +83,7 @@ Copy / Paste cái link HTTPS vô "Source Path / URL", và SourceTree sẽ tự �
 
 Cuối cùng, click Clone. Thế là xong, tất cả code Sample đã nằm trên máy tính.
 
-# Keep the code up-to-date
+# 3. Keep the code up-to-date
 
 Giờ bạn đã có code rồi, làm gì nữa?
 

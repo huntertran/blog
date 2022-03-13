@@ -16,7 +16,8 @@ Trong những tháng vừa rồi, Window Store đang tiến hành thanh lọc St
 
 Bài viết này cung cấp cho bạn những thông tin và các gợi ý để app của bạn mãi mãi nằm trên store, hiện trong search và leo lên tóp.
 <!-- more -->
-# App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn
+
+# 1. App của bạn, nội dung của bạn, hình ảnh của bạn, ý tưởng của bạn luôn
 
 App này do bạn tạo ra, và bạn sở hữu tất cả các nội dung có trong app đó, ví dụ như hình ảnh, nhạc, video, vân vân và vân vân. Việc trùng ý tưởng với một app khác cũng không quan trọng lắm trong vấn đề này, nhưng phải chắc chắn rằng app của bạn hay hơn app "con nhà người ta", và con nhà người ta chưa đăng ký bản quyền cho cái ý tưởng đó.
 
@@ -32,7 +33,7 @@ Có qua cũng phải có lại. Nếu app của bạn thực sự tốt, nội d
 
 Khuyến cáo: Sử dụng app Universal Logo Maker for Windows để tạo ra bộ Icon cho App của bạn trong 5 nốt nhạc.
 
-# App hay và độc đáo
+# 2. App hay và độc đáo
 
 Có hàng trăm ngàn app trên Store. Khi các chiêu trò câu view, câu like, câu search không còn tác dụng, thì bạn phải làm gì để người dùng tìm ra và download app của bạn?
 
@@ -40,7 +41,7 @@ Câu trả lời đến từ logo, screenshot, và tính năng của app bạn. 
 
 Ví dụ, bạn làm một app Calculator chỉ với các tính năng cơ bản mà mấy cái app Calculator khác cũng có, thì 99% là sẽ chả có ai thèm để ý tới cái Calculator của bạn, bởi vì những cái app Calculator khác đang đứng đầu trên store và họ sẽ chọn những cái app đó.
 
-# Build 1 app hay thay vì build một chục app nhỏ tương tự
+# 3. Build 1 app hay thay vì build một chục app nhỏ tương tự
 
 Ví dụ như bạn làm một game đua xe cho một chục thị trường khác nhau. Mỗi thị trường sẽ là một ngôn ngữ khác nhau. Điều này sẽ dễ dàng dẫn tới toàn bộ app giống giống nhau như thế fail một lượt. Thay vào đó, nếu bạn làm 1 app, với ngôn ngữ thay đổi tùy thuộc vào thị trường, thì app của bạn vẫn sẽ an toàn ở lại trên store, trong search, vân vân và vân vân.
 
@@ -52,21 +53,21 @@ Kết hợp lại thành app bự với tính năng chọn ngôn ngữ, hoặc l
 
 ![](http://az648995.vo.msecnd.net/win/2016/01/4_generic.png)
 
-# Giữ profile Windows Dev Center của bạn luôn luôn tốt
+# 4. Giữ profile Windows Dev Center của bạn luôn luôn tốt
 
 Điều cuối cùng mình muốn nhắn nhủ với các bạn Dev ngoài kia là hãy luôn cố gắng submit các app chất lượng cao lên Store. Trước khi làm một app gì, hãy search thử Store xem đã có app tương tự chưa để né tránh các trường hợp kể trên. Điều này giống như profile vay vốn ngân hàng vậy. Bạn càng "trong sạch" bao nhiêu, thì khả năng app của bạn lên top càng cao bấy nhiu.
 
-# Nếu app không lên Store sau khi submit thành công
+# 5. Nếu app không lên Store sau khi submit thành công
 
 Cố gắng chờ thêm 24 tiếng nữa. App thường sẽ xuất hiện trên Store bằng cách nhấn vào direct link sau khi submit thành công khoảng 24 tiếng. Và mất khoảng 8-24 tiếng để có thể hiện lên trên kết quả search.
 
 Nếu chờ wài ko thấy lên, bạn có thể yêu cầu support tại: [support ticket](https://support.microsoft.com/en-us/getsupport?locale=EN-US&supportregion=EN-US&ccfcode=US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179&ccsid=635888242224279047)
 
-# Nếu app bị ẩn, chỉ có direct link, không search được trên Store
+# 6. Nếu app bị ẩn, chỉ có direct link, không search được trên Store
 
 Kiểm tra kỹ lại các gợi ý phía trên, đảm bảo rằng app của bạn không vi phạm bất kỳ điều gì, rùi gửi support ticket tại đây: [support ticket](https://support.microsoft.com/en-us/getsupport?locale=EN-US&supportregion=EN-US&ccfcode=US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179&ccsid=635888242224279047). Bạn có thể yêu cầu họ giải thích chi tiết lý do tại sao (sử dụng ngôn từ lịch sự, nhã nhặn)
 
-# Promote app
+# 7. Promote app
 
 Một khi app đã lên, promote nó nhìu lên cho mọi người biết, download và đánh giá tốt cho nó. App của bạn sẽ càng nặng ký hơn khi có nhiều user từ các nước khác nhau ngoài Việt Nam
 

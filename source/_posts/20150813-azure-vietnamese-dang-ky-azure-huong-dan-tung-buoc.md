@@ -13,22 +13,23 @@ Azure đã tới Việt Nam, và bạn đang phân vân không biết phải đ�
 
 Bài viết sau sẽ hướng dẫn bạn cách đăng ký, từ đơn giản nhất cho tới những cách đăng ký khi bạn có tài khoản DreamSpark hoặc MSDN Subscription
 <!-- more -->
-# Mục lục
+
+# 1. Mục lục
 
 *   [Đăng ký](#one)
     *   [Đăng ký thông qua chương trình DreamSpark dành cho sinh viên](#oneontwo)
     *   [Đăng ký tự do](#oneonone)
     *   [Đăng ký qua chương trình MSDN Subscription](#oneonthree)
 
-# Đăng ký
+# 2. Đăng ký
 
-## Đăng ký qua chương trình DreamSpark (Azure for Student)
+## 2.1. Đăng ký qua chương trình DreamSpark (Azure for Student)
 
 DreamSpark là một chương trình dành cho tất cả sinh viên trên toàn cầu, (đúng rồi, tất cả sinh viên), cung cấp các sản phẩm và dịch vụ của Microsoft cho sinh viên hoàn toàn miễn phí. Có 2 cách để đăng ký DreamSpark, 1 là trường bạn có đăng ký với Microsoft, 2 là bạn có thẻ sinh viên quốc tế
 
-### Lấy code kích hoạt DreamSpark
+### 2.1.1. Lấy code kích hoạt DreamSpark
 
-#### Trường bạn có đăng ký với Microsoft
+#### 2.1.1.1. Trường bạn có đăng ký với Microsoft
 
 Truy cập vào link DreamSpark của trường bạn (thường bắt đầu bằng e5.onthehub.com)
 
@@ -54,7 +55,7 @@ Sau khi có code rồi, bạn vào [http://dreamspark.com](http://dreamspark.com
 
 ![](https://farm1.staticflickr.com/734/19912779474_caae638809_o.png)
 
-#### Tạo tài khoản DreamSpark
+#### 2.1.1.2. Tạo tài khoản DreamSpark
 
 Đầu tiên, bạn phải đăng nhập vào tài khoản Microsoft của mình
 
@@ -92,7 +93,7 @@ Khi đăng ký bằng DreamSpark, bạn sẽ không bị đòi thẻ tín dụng
 
 Sau khi điền đầy đủ các thông tin, nhấn Sign up, thế là xong :3
 
-## Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)
+## 2.2. Đăng ký tự do (không thông qua chương trình DreamSpark hoặc MSDN Subscription)
 
 Truy cập vào trang [http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx](http://www.microsoft.com/vietnam/azure/pricing/free-trial.aspx) > Thử ngay
 
@@ -128,7 +129,7 @@ Con số này là số ngày bạn được dùng Azure miễn phí, được c�
 
 ![](https://farm1.staticflickr.com/722/20344909818_078a116683_o.png)
 
-## Đăng ký qua chương trình MSDN Subscription
+## 2.3. Đăng ký qua chương trình MSDN Subscription
 
 Để đăng ký thông qua MSDN Subscription, tất nhiên bạn phải có tài khoản MSDN Subscription. MSP Việt Nam có gói tài khoản này, và tên nó là MSDN Subscription with Visual Studio Ultimate, trị giá có 13.600 USD cho một năm thôi (đúng rồi, mười ba nghìn sáu trăm obama)
 

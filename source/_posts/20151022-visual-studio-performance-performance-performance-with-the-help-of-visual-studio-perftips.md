@@ -17,7 +17,8 @@ For Visual Studio 2015
 
 Từ xưa tới nay, khi debug bằng Visual Studio, hầu như ai cũng biết chọt con chuột lên trên một biến nào đó và một cái bảng nho nhỏ hiện ra hiển thị toàn bộ dữ liệu của biến đó. Bài post này sẽ hướng dẫn bạn cách sử dụng những công cụ mới của Visual Studio 2015 để cải thiện hiệu suất cho ứng dụng của bạn.
 <!-- more -->
-# Tại sao lại là hiệu suất?
+
+# 1. Tại sao lại là hiệu suất?
 
 Trong Visual Studio 2015 có khá nhiều công cụ giúp bạn cải thiện hiệu suất ứng dụng của mình, làm nó chạy nhanh hơn, chiếm ít bộ nhớ hơn, giao diện đẹp hơn, blah blah blah. Tuy nhiên, rất nhìu bạn trẻ dùng phần lớn thời gian để làm cho các tính năng của ứng dụng chạy đúng như bạn mong muốn. Bạn hiểu rằng đoạn code bạn viết có performance không cao, nhưng bạn không có thời gian để nghiên cứu, nghiền ngẫm nó hoặc chạy các công cụ hỗ trợ phân tích hiệu suất cho tới khi hiệu suất là một vấn đề lớn của bạn.
 
@@ -28,7 +29,7 @@ Ngoài ra, khi bạn cần nghiên cứu hiệu suất của một đoạn code 
 *   Nhấn "Break All" ("Pause") để coi thử code chạy tới đâu gòi (đặc biệt là trong mấy vòng lặp)
 *   Rút gọn code quá đà mà không để ý tới performance (giống như không xài Linq cho tất cả mọi thứ)
 
-# PerfTips là gì?
+# 2. PerfTips là gì?
 
 Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips
 
@@ -38,7 +39,7 @@ Bấm vào nó (chỗ <= 1ms elapsed), sẽ hiện ra công cụ phân tích
 
 ![](https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png)
 
-# Dùng PerfTips
+# 3. Dùng PerfTips
 
 Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình
 
@@ -78,13 +79,13 @@ Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 20
 
 Bây giờ, khi bạn đã biết cách xài PerfTips, chúng ta sẽ tiếp tục với một vài Best Practices khi dùng nó
 
-# Best Practices
+# 4. Best Practices
 
-## Đo nhiều lần
+## 4.1. Đo nhiều lần
 
 Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn
 
-## Xác nhận lại lúc Release
+## 4.2. Xác nhận lại lúc Release
 
 Code chạy lúc build ở chế độ Debug lúc nào cũng chậm hơn hẳn so với code build ở chế độ Release. Nếu bạn muốn tối ưu hóa các đoạn code chạy nhanh hơn 50 ms, thì nên chuyển sang chế độ release để tối ưu hóa nó. Lúc này, bạn mới thấy rõ sự khác biệt.
 

@@ -16,8 +16,10 @@ Microsoft is cool again
 Ngày 27 tháng 6 năm 2016, MS ra mắt một loạt 3 sản phẩm cực khủng, hứa hẹn sẽ thay đổi cán cân quyền lực, lập lại bản đồ Server, và nó là .NET core, ASP.NET core, và Entity Framework Core. Tất cả đều mang số hiệu 1.0
 
 Vậy bạn tự hỏi, chúng nó là gì?
+
 <!-- more -->
-# Giới thiệu
+
+# 1. Giới thiệu
 
 Xưa kia, khi muốn làm web, bạn có vô vàn lựa chọn:
 
@@ -33,7 +35,7 @@ Xưa kia, khi muốn làm web, bạn có vô vàn lựa chọn:
 
 Với ASP.NET Core, bạn vẫn có các ưu điểm như code bằng C#, debug dễ dàng, IDE khủng, và các nhược điểm bị loại bỏ (chạy được trên Mac, Win, Linux, Docker, free to use, open source, blah blah blah)
 
-# Tài liệu
+# 2. Tài liệu
 
 Xưa kia, muốn học ASP.NET, bạn có khá nhiều lựa chọn, mỗi cái đều có nhược điểm. Cái thì quá ít thông tin, cái thì tốn phí, cái thì sơ sài, và đa phần tản mát trong dân gian.
 
@@ -42,11 +44,11 @@ Giờ đây, mọi tài liệu điều quy về 1 chỗ:
 *   Tài liệu chung cho tất cả sản phẩm: [https://docs.microsoft.com/en-us/](https://docs.microsoft.com/en-us/)
 *   Tài liệu cho ASP.NET: [https://docs.asp.net/en/latest/](https://docs.asp.net/en/latest/)
 
-# Cho dev ko xài Windows
+# 3. Cho dev ko xài Windows
 
 ASP.NET core có thể code được bằng nhiều thứ khác nhau như Sublime, Visual Studio Code hoặc trình soạn thảo khoái trá của bạn.
 
-# Hello world
+# 4. Hello world
 
 Bật visual studio > New Project > Chọn ASP.NET Core Web Application (.NET Core)
 
@@ -68,7 +70,7 @@ Sau cùng, nhấn nút để chạy thử và xem thành quả
 
 ![](https://farm8.staticflickr.com/7574/28045741121_29641faf2f_o.png)
 
-# Publish lên Azure
+# 5. Publish lên Azure
 
 Nhấn chuột phải vô Web Application > Publish
 
