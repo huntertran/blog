@@ -8,11 +8,11 @@ date: 2022-04-17 19:50:01
 ---
 
 
-Learn how can you create a simple count-down timer for a PowerPoint presentation with Visual Basic for Application (VBA).
+Learn how you can create a simple count-down timer for a PowerPoint presentation with Visual Basic for Application (VBA).
 
 <!--more-->
 
-| Disclaimer: VBA ended its life cycle a very loooooong time ago. The alternative is [Office.js](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
+| Disclaimer: VBA ended its life cycle a very loooooong time ago. The alternative is [`Office.js`](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
 
 First, enable the `Developer` tab by right-clicking anywhere on the ribbons > Customize the Ribbon...
 
@@ -22,7 +22,7 @@ Then tick the checkbox `Developer` > OK
 
 ![developer checkbox](https://i.imgur.com/dfBmCb7.png)
 
-Now we need to add new Macros. Click the `Developer` tab on the ribbon, then click `Macros`
+Now we need to add new Macros. Click the `Developer` tab on the ribbon, then click `Macros.`
 
 ![macro](https://i.imgur.com/fJXNbzC.png)
 
@@ -30,7 +30,7 @@ Enter an easy to remember name > Create
 
 ![macro name](https://i.imgur.com/gsKwll5.png)
 
-In the above picture, there are 2 existing macros
+In the above picture, there are two existing macros
 
 A new window appears, allowing you to start writing the macro's code.
 
@@ -82,9 +82,10 @@ On the `Home` tab, near the end of the ribbon, click `Select` > `Selection Pane`
 
 ![selection pane](https://i.imgur.com/7XzG7to.png)
 
-Now draw a simple textbox, or a shape that you want, then double click its name in `Selection Pane`. Change its name to the name of the shape in the macro's code.
+Now draw a simple textbox, or a shape you want, then double click its name in `Selection Pane.` Change its name to the name of the shape in the macro's code.
 
 ![draw shape](https://i.imgur.com/kVWd4Rk.png)
 
-That's it. Now when you click on the shape, the timer will count down. Click it again will reset the timer.
+ When you click on the shape, the timer will count down, and clicking it again will reset it.
 
+ That's it.
