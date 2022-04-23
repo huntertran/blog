@@ -8,11 +8,11 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.4.0
-    - name: Setup Node 14
-      uses: actions/setup-node@v2
+      uses: actions/checkout@v3
+    - name: Setup Node 16
+      uses: actions/setup-node@v3
       with:
-          node-version: '14'
+          node-version: '16'
       # with:
       #   submodules: false # Checkout private submodules(themes or something else).
     
@@ -30,7 +30,7 @@ jobs:
       run: |
         node --version
         npm --version
-        npm ci
+        npm install
     
     # Deploy hexo blog website.
     - name: Deploy
@@ -42,18 +42,7 @@ jobs:
         # user_email: your github useremail  # (or delete this input setting to use bot account)
         # commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
     # Use the output from the `deploy` step(use for test action)
-    - name: Get the output
-      run: |
-        echo "${{ steps.deploy.outputs.notify }}"
-  dispatch:
-    runs-on: ubuntu-latest
-    steps:
-    # - run: |
-    #     curl -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" \
-    #       -H "Accept: application/vnd.github.everest-preview+json" \
-    #       -H "Content-Type: application/json" \
-    #       https://api.github.com/repos/docker-sstc/docker-notify/actions/workflows/main.yml/dispatches \
-    #       --data '{"ref": "master"}'
+    - name: Dispatch to update profile
     - uses: actions/github-script@v6
       with:
         github-token: ${{ secrets.PAT_TOKEN }}
@@ -64,3 +53,18 @@ jobs:
             workflow_id: 'blog-post-workflow.yml',
             ref: 'master'
           })
+    - name: Get the output
+      run: |
+        echo "${{ steps.deploy.outputs.notify }}"
+  # dispatch:
+  #   runs-on: ubuntu-latest
+  #   - uses: actions/github-script@v6
+  #     with:
+  #       github-token: ${{ secrets.PAT_TOKEN }}
+  #       script: |
+  #         await github.rest.actions.createWorkflowDispatch({
+  #           owner: 'huntertran',
+  #           repo: 'huntertran',
+  #           workflow_id: 'blog-post-workflow.yml',
+  #           ref: 'master'
+  #         })
