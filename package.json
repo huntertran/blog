@@ -27,15 +27,20 @@
     "hexo-generator-tag": "^1.0.0",
     "hexo-hide-posts": "^0.2.0",
     "hexo-migrator-wordpress": "^2.1.2",
+    "hexo-renderer-dartsass": "^0.1.2",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-less": "^4.0.0",
     "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-pug": "^2.0.0",
-    "hexo-renderer-dartsass": "^0.1.2",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-next": "^8.11.0",
     "prism-themes": "^1.9.0",
+    "prismjs": "^1.28.0",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.5.1",
+    "prismjs": "^1.28.0"
   }
 }
