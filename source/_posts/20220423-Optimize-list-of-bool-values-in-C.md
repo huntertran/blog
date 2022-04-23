@@ -1,12 +1,14 @@
 ---
 title: Optimize list of bool values in C#
 tags:
-    - csharp
-    - bool
-    - boolean
-    - bitwise
-    - optimize
+  - csharp
+  - bool
+  - boolean
+  - bitwise
+  - optimize
+date: 2022-04-23 20:47:44
 ---
+
 
 Boolean data type represents the `true`/`false` value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how to flatten them for display on UI.
 
