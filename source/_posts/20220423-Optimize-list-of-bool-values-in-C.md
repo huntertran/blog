@@ -70,7 +70,7 @@ AND operator
 
 OR operator
 0 | 0 => 0
-O | 1 => 1
+0 | 1 => 1
 ```
 
 We can exploit these bitwise to store our boolean values.
