@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
@@ -20,10 +19,11 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng &lt;p&gt;h">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="For English version: [ASPNET Core 2] – Middleware Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET Dễ ẹt, dotnet new mvc, rồi sửa Views&#x2F;Home&#x2F;Index.cshtml cho nó trả về 1 dòng &lt;p&gt;h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASPNET Core 2] – Middleware">
 <meta property="og:url" content="https://huntertran.com/2018/06/12/aspnet-core-2-middleware/">
@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png">
 <meta property="article:published_time" content="2018-06-12T04:18:39.000Z">
-<meta property="article:modified_time" content="2022-04-17T20:38:12.307Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.852Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -51,6 +51,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
+
 
 
 
@@ -95,12 +96,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -172,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">122</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -183,7 +179,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">218</span>
+        <span class="site-state-item-count">223</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -240,11 +236,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
       <meta itemprop="name" content="Tuan Tran">
-      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASPNET Core 2] – Middleware | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -266,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 16:38:12" itemprop="dateModified" datetime="2022-04-17T16:38:12-04:00">2022-04-17</time>
+      <time title="Modified: 2022-04-23 18:38:33" itemprop="dateModified" datetime="2022-04-23T18:38:33-04:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -381,21 +382,21 @@
 </tr>
 <tr>
 <td>Lựa chọn?</td>
-<td>HTTP Handlers =&gt; Dựa trên filename extension<br><br>HTTP Modules =&gt; Móc vào life cycle bằng cách dùng events</td>
-<td>Định nghĩa theo 1 thứ tự đặc biệt và các từ khóa<br><br>Run =&gt; kết thúc pipeline<br><br>Use =&gt; short-circuit và xử lý logic<br><br>Map =&gt; phân nhánh dựa trên path</td>
+<td>HTTP Handlers &#x3D;&gt; Dựa trên filename extension<br><br>HTTP Modules &#x3D;&gt; Móc vào life cycle bằng cách dùng events</td>
+<td>Định nghĩa theo 1 thứ tự đặc biệt và các từ khóa<br><br>Run &#x3D;&gt; kết thúc pipeline<br><br>Use &#x3D;&gt; short-circuit và xử lý logic<br><br>Map &#x3D;&gt; phân nhánh dựa trên path</td>
 </tr>
 <tr>
 <td>Dễ xài ko?</td>
 <td>Đòi hỏi hiểu sâu về ASP.NET life-cycle<br><br>Khó xài vì nhiều modules có thể móc vào cùng 1 event</td>
-<td>Yêu cầu 1 thứ tự nhất định<br><br>Chỉ có 1 dòng pipeline, dễ hiểu/xài/debug</td>
+<td>Yêu cầu 1 thứ tự nhất định<br><br>Chỉ có 1 dòng pipeline, dễ hiểu&#x2F;xài&#x2F;debug</td>
 </tr>
 </tbody></table>
 <h1 id="3-Default-middleware"><a href="#3-Default-middleware" class="headerlink" title="3. Default middleware"></a>3. Default middleware</h1><p><a id="markdown-default-middleware" name="default-middleware"></a></p>
 <p>Khi mới tạo 1 project asp.net core mới, .net cli sẽ thêm vào 1 số middleware cho bạn</p>
 <ol>
-<li> Exception Handler: handle exception từ các middleware ở dưới</li>
-<li> Static Files: trả về files trong wwwroots</li>
-<li> Mvc: Hướng request tới các action trong controller</li>
+<li>Exception Handler: handle exception từ các middleware ở dưới</li>
+<li>Static Files: trả về files trong wwwroots</li>
+<li>Mvc: Hướng request tới các action trong controller</li>
 </ol>
 <p>source code nè:</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public static void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -626,9 +627,9 @@ public void Configure(IApplicationBuilder app)
   
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-core.min.js" integrity="sha256-vlRYHThwdq55dA+n1BKQRzzLwFtH9VINdSI68+5JhpU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-cl5LNmPvcRcGFaQFjwEKIfs51AX7wBkvoByH6LTxQCs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 

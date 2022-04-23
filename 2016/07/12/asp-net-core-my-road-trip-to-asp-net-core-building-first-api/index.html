@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
@@ -20,10 +19,11 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API">
 <meta property="og:url" content="https://huntertran.com/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png">
 <meta property="og:image" content="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png">
 <meta property="article:published_time" content="2016-07-12T09:47:36.000Z">
-<meta property="article:modified_time" content="2022-04-17T20:38:12.307Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.852Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -58,6 +58,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
+
 
 
 
@@ -102,12 +103,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -179,7 +175,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">122</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -190,7 +186,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">218</span>
+        <span class="site-state-item-count">223</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -247,11 +243,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
       <meta itemprop="name" content="Tuan Tran">
-      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASP.NET CORE] – My Road trip to ASP.NET Core – Building first API | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -273,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 16:38:12" itemprop="dateModified" datetime="2022-04-17T16:38:12-04:00">2022-04-17</time>
+      <time title="Modified: 2022-04-23 18:38:33" itemprop="dateModified" datetime="2022-04-23T18:38:33-04:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -360,31 +361,31 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>GET /api/todo</td>
+<td>GET &#x2F;api&#x2F;todo</td>
 <td>Get all to-do items</td>
 <td>None</td>
 <td>Array of to-do items</td>
 </tr>
 <tr>
-<td>GET /api/todo/{id}</td>
+<td>GET &#x2F;api&#x2F;todo&#x2F;{id}</td>
 <td>Get an item by ID</td>
 <td>None</td>
 <td>To-do item</td>
 </tr>
 <tr>
-<td>POST /api/todo</td>
+<td>POST &#x2F;api&#x2F;todo</td>
 <td>Add a new item</td>
 <td>To-do item</td>
 <td>To-do item</td>
 </tr>
 <tr>
-<td>PUT /api/todo/{id}</td>
+<td>PUT &#x2F;api&#x2F;todo&#x2F;{id}</td>
 <td>Update an existing item</td>
 <td>To-do item</td>
 <td>None</td>
 </tr>
 <tr>
-<td>DELETE /api/todo/{id}</td>
+<td>DELETE &#x2F;api&#x2F;todo&#x2F;{id}</td>
 <td>Delete an item.</td>
 <td>None</td>
 <td>None</td>
@@ -393,7 +394,7 @@
 <p>Sơ đồ</p>
 <p><img src="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview/_static/mvc.png?view=aspnetcore-3.1"></p>
 <p>Chú thích</p>
-<p>View: app / web sẽ sử dụng API. Tạm thời chúng ta chưa quan tâm tới nó</p>
+<p>View: app &#x2F; web sẽ sử dụng API. Tạm thời chúng ta chưa quan tâm tới nó</p>
 <p>Model: là kiểu dữ liệu của bạn. Trong ví dụ này, Model là To-do item</p>
 <p>Controller: là thứ sẽ nhận HTTP Request, và tạo ra HTTP Responses. Ví dụ này sẽ chỉ có 1 controller duy nhất</p>
 <p>Ví dụ này cũng không sử dụng Database, mà sẽ lưu trực tiếp trên bộ nhớ. Một API hoàn chỉnh sẽ có Database đi kèm nó</p>
@@ -529,19 +530,19 @@ public IActionResult GetById(string id)
 
 <p>Phương thức này có 2 cái get</p>
 <ul>
-<li>GET /api/todo</li>
-<li>GET /api/todo/{id}</li>
+<li>GET &#x2F;api&#x2F;todo</li>
+<li>GET &#x2F;api&#x2F;todo&#x2F;{id}</li>
 </ul>
 <p>Sau đây là một ví dụ cho HTTP Response khi gọi phương thức GetAll</p>
 <blockquote>
-<p>HTTP/1.1 200 OK Content-Type: application/json; charset=utf-8 Server: Microsoft-IIS/10.0 Date: Thu, 18 Jun 2015 20:51:10 GMT Content-Length: 82</p>
+<p>HTTP&#x2F;1.1 200 OK Content-Type: application&#x2F;json; charset&#x3D;utf-8 Server: Microsoft-IIS&#x2F;10.0 Date: Thu, 18 Jun 2015 20:51:10 GMT Content-Length: 82</p>
 <p>[{“Key”:”4f67d7c5-a2a9-4aae-b030-16003dd829ae”,”Name”:”Item1”,”IsComplete”:false}]</p>
 </blockquote>
 <p>Sau này chúng ta sẽ dùng Fiddler để test các phương thức này nhóe</p>
 <h1 id="4-Routing-va-URL-Paths"><a href="#4-Routing-va-URL-Paths" class="headerlink" title="4. Routing và URL Paths"></a>4. Routing và URL Paths</h1><p><a id="markdown-routing-v%C3%A0-url-paths" name="routing-v%C3%A0-url-paths"></a></p>
 <p>Trong cái phương thức trên, bạn sẽ thấy có [HttpGet]. Cái này gọi là Attribute, và Attribute này dùng để chỉ định phương thức cho method bên dưới là Get. Đường dẫn Url thì được xây dựng như sau</p>
 <ul>
-<li>Lấy cái string trong Controller’s Route: [Route(“api/[controller]”)]</li>
+<li>Lấy cái string trong Controller’s Route: [Route(“api&#x2F;[controller]”)]</li>
 <li>Bỏ cái [controller] ra, thay bằng tên của cái controller (tất nhiên là trừ đi chữ “Controller” nhóe). Ví dụ TodoController thì sẽ thay cái chữ Todo vô thôi</li>
 <li>Nếu mà HttpGet có template string, thì thêm cái string đó vô path. Cái ví dụ trên thì ko có</li>
 </ul>
@@ -728,9 +729,9 @@ public void Delete(string id)
   
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-core.min.js" integrity="sha256-vlRYHThwdq55dA+n1BKQRzzLwFtH9VINdSI68+5JhpU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-cl5LNmPvcRcGFaQFjwEKIfs51AX7wBkvoByH6LTxQCs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 

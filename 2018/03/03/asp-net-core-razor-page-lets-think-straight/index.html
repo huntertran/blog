@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
@@ -20,10 +19,11 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Khi bạn cần tạo thật nhanh một cái website có các page cần thiết mà không cần phải quan tâm tới các vấn đề phức tạp như mô hình, bảo mật, mở rộng, thì Razor Page chính là câu trả lời">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Khi bạn cần tạo thật nhanh một cái website có các page cần thiết mà không cần phải quan tâm tới các vấn đề phức tạp như mô hình, bảo mật, mở rộng, thì Razor Page chính là câu trả lời">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASP.NET Core] - Razor Page - Let&#39;s think straight">
 <meta property="og:url" content="https://huntertran.com/2018/03/03/asp-net-core-razor-page-lets-think-straight/">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://farm1.staticflickr.com/794/39482986360_fe3ba6ff76_o.png">
 <meta property="og:image" content="https://farm1.staticflickr.com/822/40395935845_bdb4073f2f_o.png">
 <meta property="article:published_time" content="2018-03-03T10:00:24.000Z">
-<meta property="article:modified_time" content="2022-04-17T20:38:12.307Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.852Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="page">
 <meta property="article:tag" content="razor">
@@ -53,6 +53,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
+
 
 
 
@@ -97,12 +98,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -174,7 +170,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">122</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -185,7 +181,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">218</span>
+        <span class="site-state-item-count">223</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -242,11 +238,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
       <meta itemprop="name" content="Tuan Tran">
-      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASP.NET Core] - Razor Page - Let's think straight | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -268,7 +269,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 16:38:12" itemprop="dateModified" datetime="2022-04-17T16:38:12-04:00">2022-04-17</time>
+      <time title="Modified: 2022-04-23 18:38:33" itemprop="dateModified" datetime="2022-04-23T18:38:33-04:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,21 +312,26 @@
         <p>Khi bạn cần tạo thật nhanh một cái website có các page cần thiết mà không cần phải quan tâm tới các vấn đề phức tạp như mô hình, bảo mật, mở rộng, thì Razor Page chính là câu trả lời</p>
 <span id="more"></span>
 <ul>
-<li>  <a href="#1-y%C3%AAu-c%E1%BA%A7u">1. Yêu cầu</a></li>
-<li>  <a href="#2-m%C3%B4-h%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n">2. Mô hình phát triển</a></li>
-<li><a href="#3-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-c%E1%BB%A7a-mvc">3. Các vấn đề của MVC</a><ul>
-<li>  <a href="#31-fat-controller">3.1. Fat Controller</a></li>
-<li>  <a href="#32-chia-c%E1%BA%A5p">3.2. Chia cấp</a></li>
-<li>  <a href="#33-duplicate">3.3. Duplicate</a></li>
+<li><p><a href="#1-y%C3%AAu-c%E1%BA%A7u">1. Yêu cầu</a></p>
+</li>
+<li><p><a href="#2-m%C3%B4-h%C3%ACnh-ph%C3%A1t-tri%E1%BB%83n">2. Mô hình phát triển</a></p>
+</li>
+<li><p><a href="#3-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-c%E1%BB%A7a-mvc">3. Các vấn đề của MVC</a></p>
+<ul>
+<li><a href="#31-fat-controller">3.1. Fat Controller</a></li>
+<li><a href="#32-chia-c%E1%BA%A5p">3.2. Chia cấp</a></li>
+<li><a href="#33-duplicate">3.3. Duplicate</a></li>
 </ul>
 </li>
-<li>  <a href="#4-razor-page-coding-conventions">4. Razor Page Coding conventions</a></li>
-<li>  <a href="#5-the-future-is-now">5. The future is now?</a></li>
+<li><p><a href="#4-razor-page-coding-conventions">4. Razor Page Coding conventions</a></p>
+</li>
+<li><p><a href="#5-the-future-is-now">5. The future is now?</a></p>
+</li>
 </ul>
 <h1 id="1-Yeu-cau"><a href="#1-Yeu-cau" class="headerlink" title="1. Yêu cầu"></a>1. Yêu cầu</h1><ul>
-<li>  <a target="_blank" rel="noopener" href="https://www.microsoft.com/net/download">.NET Core 2.0 trở lên</a></li>
-<li>  <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
-<li>  Đọc sơ qua về <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?tabs=visual-studio">Razor Page</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/net/download">.NET Core 2.0 trở lên</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li>Đọc sơ qua về <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?tabs=visual-studio">Razor Page</a></li>
 </ul>
 <h1 id="2-Mo-hinh-phat-trien"><a href="#2-Mo-hinh-phat-trien" class="headerlink" title="2. Mô hình phát triển"></a>2. Mô hình phát triển</h1><p>Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn bạn sẽ quen thuộc với mô hình MVC, viết tắt cho Model-View-Controller. Ở Razor Page, bạn sẽ làm quen với một mô hình hoàn toàn mới và vô cùng đơn giản (đơn giản tới mức ko có gì để học luôn)</p>
 <p><strong>Mô hình MVC</strong></p>
@@ -337,7 +343,7 @@
 <p><img src="https://farm1.staticflickr.com/822/40395935845_bdb4073f2f_o.png" alt="razor page pattern"></p>
 <h1 id="3-Cac-van-de-cua-MVC"><a href="#3-Cac-van-de-cua-MVC" class="headerlink" title="3. Các vấn đề của MVC"></a>3. Các vấn đề của MVC</h1><h2 id="3-1-Fat-Controller"><a href="#3-1-Fat-Controller" class="headerlink" title="3.1. Fat Controller"></a>3.1. Fat Controller</h2><p>Giả sử bạn có một controller xử lý các tác vụ liên quan tới giao dịch chuyển tiền giữa các tài khoản, tạm gọi là <code>TransactionController</code></p>
 <p>Có 4 thao tác cơ bản đối với 1 dòng dữ liệu: Create-Read-Update-Delete, tới đây thì ok không vấn đề gì</p>
-<p>Pặc, bạn muốn xử lý thêm việc nạp thẻ điện thoại, chi trả hóa đơn điện, nước, internet =&gt; thêm các phương thức như <code>NapTheCao</code>, <code>TraTienDien</code>, <code>TraTienNuoc</code>, <code>TraTienInternet</code>. 2 tuần sau, bạn lại muốn thêm vài tính năng khác, tất cả đều liên quan tới transaction.</p>
+<p>Pặc, bạn muốn xử lý thêm việc nạp thẻ điện thoại, chi trả hóa đơn điện, nước, internet &#x3D;&gt; thêm các phương thức như <code>NapTheCao</code>, <code>TraTienDien</code>, <code>TraTienNuoc</code>, <code>TraTienInternet</code>. 2 tuần sau, bạn lại muốn thêm vài tính năng khác, tất cả đều liên quan tới transaction.</p>
 <p>Càng về sau, <code>TransactionController</code> càng dài, và nó đã chính thức được gọi tên là Fat Controller.</p>
 <h2 id="3-2-Chia-cap"><a href="#3-2-Chia-cap" class="headerlink" title="3.2. Chia cấp"></a>3.2. Chia cấp</h2><p>Mô hình MVC cho bạn một folder tên <code>Controllers</code> để chứa tất cả các controller của bạn. Điều này sd4 tương ứng với 1 cấp địa chỉ trên URL</p>
 <p>Với ví dụ transaction phía trên, URL của bạn sẽ có dạng: <code>domain/transaction/create</code></p>
@@ -364,13 +370,13 @@
 <p>Url.Page(…)</p>
 <p>multiple action for form submit</p>
 <p>Not built-in</p>
-<p>asp-page-handler=“TestHandler”<br>OnTestHandler()</p>
+<p>asp-page-handler&#x3D;“TestHandler”<br>OnTestHandler()</p>
 <h1 id="5-The-future-is-now"><a href="#5-The-future-is-now" class="headerlink" title="5. The future is now?"></a>5. The future is now?</h1><p>Razor Page, theo đánh giá của mình, chỉ phù hợp với các project vừa và nhỏ, với các view đơn giản về mật logic.</p>
 <p>Tại phiên bản .NET CORE 2.0, Razor Page vẫn chưa hỗ trợ một số tính năng mà MVC đang có như sau</p>
 <ul>
-<li>  IActionFilter</li>
-<li>  Output Cache</li>
-<li>  IgnoreAntiforgeryToken attribute (bạn có thể tham khảo thêm tại <a target="_blank" rel="noopener" href="https://github.com/aspnet/Mvc/issues/7012">github issue này</a> để biết cách tắt <strong>toàn bộ</strong>)</li>
+<li>IActionFilter</li>
+<li>Output Cache</li>
+<li>IgnoreAntiforgeryToken attribute (bạn có thể tham khảo thêm tại <a target="_blank" rel="noopener" href="https://github.com/aspnet/Mvc/issues/7012">github issue này</a> để biết cách tắt <strong>toàn bộ</strong>)</li>
 </ul>
 
     </div>
@@ -508,9 +514,9 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-core.min.js" integrity="sha256-vlRYHThwdq55dA+n1BKQRzzLwFtH9VINdSI68+5JhpU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-cl5LNmPvcRcGFaQFjwEKIfs51AX7wBkvoByH6LTxQCs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 

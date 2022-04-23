@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
@@ -20,10 +19,11 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager? Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects,">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager? Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASP.NET] - Project Structure &amp; Package Manager">
 <meta property="og:url" content="https://huntertran.com/2018/05/09/asp-net-project-structure-package-manager/">
@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm1.staticflickr.com/966/27130244167_1f468f1efa_o.png">
 <meta property="article:published_time" content="2018-05-09T17:05:37.000Z">
-<meta property="article:modified_time" content="2022-04-17T20:38:12.307Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.852Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="project">
 <meta property="article:tag" content="structure">
@@ -55,6 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
+
 
 
 
@@ -99,12 +100,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -176,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">122</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -187,7 +183,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">218</span>
+        <span class="site-state-item-count">223</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -244,11 +240,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
       <meta itemprop="name" content="Tuan Tran">
-      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASP.NET] - Project Structure & Package Manager | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -270,7 +271,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 16:38:12" itemprop="dateModified" datetime="2022-04-17T16:38:12-04:00">2022-04-17</time>
+      <time title="Modified: 2022-04-23 18:38:33" itemprop="dateModified" datetime="2022-04-23T18:38:33-04:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,23 +315,29 @@
 <p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
 <span id="more"></span>
 <ul>
-<li><a href="#1-project--solution">1. Project &amp; Solution</a><ul>
-<li><a href="#11-l%C3%BD-do">1.1. Lý do</a><ul>
-<li>  <a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
-<li>  <a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
-<li>  <a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
-<li>  <a href="#114-you-name-it">1.1.4. You name it</a></li>
+<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
+<ul>
+<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
+<ul>
+<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
+<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
+<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
+<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
 </ul>
 </li>
-<li>  <a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></li>
+<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
+</li>
 </ul>
 </li>
-<li><a href="#2-package-manager">2. Package Manager</a><ul>
-<li>  <a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></li>
-<li><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a><ul>
-<li>  <a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
-<li>  <a href="#222-sources">2.2.2. Sources</a></li>
-<li>  <a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
+<li><p><a href="#2-package-manager">2. Package Manager</a></p>
+<ul>
+<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
+</li>
+<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
+<ul>
+<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
+<li><a href="#222-sources">2.2.2. Sources</a></li>
+<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
 </ul>
 </li>
 </ul>
@@ -351,10 +358,10 @@
 </blockquote>
 <p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
 <ul>
-<li>  Unit Test -&gt; <strong>Tách</strong></li>
-<li>  Data Connection Layer -&gt; <strong>Tách</strong></li>
-<li>  Encryption / Decryption -&gt; <strong>Tách</strong></li>
-<li>  Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
+<li>Unit Test -&gt; <strong>Tách</strong></li>
+<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
+<li>Encryption &#x2F; Decryption -&gt; <strong>Tách</strong></li>
+<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
 </ul>
 <h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
 <h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
@@ -365,9 +372,9 @@
 <p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
 <p><strong>đúng rồi, NHƯNG</strong></p>
 <ul>
-<li>  nguồn không thống nhất</li>
-<li>  lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
-<li>  nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
+<li>nguồn không thống nhất</li>
+<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
+<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
 </ul>
 <p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
 <p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
@@ -516,9 +523,9 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-core.min.js" integrity="sha256-vlRYHThwdq55dA+n1BKQRzzLwFtH9VINdSI68+5JhpU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-cl5LNmPvcRcGFaQFjwEKIfs51AX7wBkvoByH6LTxQCs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 

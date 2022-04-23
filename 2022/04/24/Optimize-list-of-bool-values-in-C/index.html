@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="google-site-verification" content="N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="ce50b7d12f357ffa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Boolean data type represents the true&#x2F;false value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optimize list of bool values in C#">
+<meta property="og:url" content="https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/">
+<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:description" content="Boolean data type represents the true&#x2F;false value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-24T00:47:44.000Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.856Z">
+<meta property="article:author" content="Tuan Tran">
+<meta property="article:tag" content="csharp">
+<meta property="article:tag" content="bool">
+<meta property="article:tag" content="boolean">
+<meta property="article:tag" content="bitwise">
+<meta property="article:tag" content="optimize">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/","path":"2022/04/24/Optimize-list-of-bool-values-in-C/","title":"Optimize list of bool values in C#"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Optimize list of bool values in C# | Tuan Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Tuan Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-The-basic-Using-bit-to-store-multiple-booleans"><span class="nav-text">1. The basic - Using bit to store multiple booleans</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Hotel-example"><span class="nav-text">1.1. Hotel example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Bitwise-operation-comes-to-the-rescue"><span class="nav-text">1.2. Bitwise operation comes to the rescue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Storing-booleans"><span class="nav-text">1.3. Storing booleans</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Retrieving-booleans"><span class="nav-text">1.4. Retrieving booleans</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-FlagsAttribute-in-C-They-already-did-it-for-you"><span class="nav-text">2. FlagsAttribute in C# - They already did it for you</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Storing-data"><span class="nav-text">2.1. Storing data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Retrieving-data"><span class="nav-text">2.2. Retrieving data</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Mind-the-limit-of-int"><span class="nav-text">3. Mind the limit of int</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Flatten-the-value"><span class="nav-text">4. Flatten the value</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">223</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Tuan Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Optimize list of bool values in C# | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Optimize list of bool values in C#<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20220423-Optimize-list-of-bool-values-in-C.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-23 20:47:44 / Modified: 18:38:33" itemprop="dateCreated datePublished" datetime="2022-04-23T20:47:44-04:00">2022-04-23</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/04/24/Optimize-list-of-bool-values-in-C/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/04/24/Optimize-list-of-bool-values-in-C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Boolean data type represents the <code>true</code>&#x2F;<code>false</code> value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how to flatten them for display on UI.</p>
+<span id="more"></span>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-the-basic---using-bit-to-store-multiple-booleans">1. The basic - Using bit to store multiple booleans</a><ul>
+<li><a href="#11-hotel-example">1.1. Hotel example</a></li>
+<li><a href="#12-bitwise-operation-comes-to-the-rescue">1.2. Bitwise operation comes to the rescue</a></li>
+<li><a href="#13-storing-booleans">1.3. Storing booleans</a></li>
+<li><a href="#14-retrieving-booleans">1.4. Retrieving booleans</a></li>
+</ul>
+</li>
+<li><a href="#2-flagsattribute-in-c---they-already-did-it-for-you">2. FlagsAttribute in C# - They already did it for you</a><ul>
+<li><a href="#21-storing-data">2.1. Storing data</a></li>
+<li><a href="#22-retrieving-data">2.2. Retrieving data</a></li>
+</ul>
+</li>
+<li><a href="#3-mind-the-limit-of-int">3. Mind the limit of int</a></li>
+<li><a href="#4-flatten-the-value">4. Flatten the value</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-The-basic-Using-bit-to-store-multiple-booleans"><a href="#1-The-basic-Using-bit-to-store-multiple-booleans" class="headerlink" title="1. The basic - Using bit to store multiple booleans"></a>1. The basic - Using bit to store multiple booleans</h1><p><a id="markdown-the-basic---using-bit-to-store-multiple-booleans" name="the-basic---using-bit-to-store-multiple-booleans"></a></p>
+<h2 id="1-1-Hotel-example"><a href="#1-1-Hotel-example" class="headerlink" title="1.1. Hotel example"></a>1.1. Hotel example</h2><p><a id="markdown-hotel-example" name="hotel-example"></a></p>
+<p>Let’s jump into an example.</p>
+<p>It’s summer here in Montréal, and you want to book a hotel there for travel. The hotel’s rooms have multiple amenities. Some rooms have a TV; others have an oven, etc.</p>
+<p>Naturally, when representing these rooms in the database, we would need some boolean values (or <code>bit</code> data type in SQL). The class should look like this:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Room
+&#123;
+    public int RoomNumber &#123; get; set; &#125;
+    
+    public bool HasTV &#123; get; set; &#125;
+
+    public bool HasMicrowave &#123; get; set; &#125;
+
+    public bool HasOven &#123; get; set; &#125;
+&#125;</code></pre>
+
+<p>All good if your hotel’s room only has that three amenities. What if the room has 10, 30, or even 100 amenities? Store each of them in a new <code>bool</code> property? How about the database?</p>
+<blockquote>
+<p>Suddenly, the manager wants to add a new amenity: A face mask dispenser. How would you deal with it? Would you add a new column in the database, a new property in the class, etc?</p>
+</blockquote>
+<h2 id="1-2-Bitwise-operation-comes-to-the-rescue"><a href="#1-2-Bitwise-operation-comes-to-the-rescue" class="headerlink" title="1.2. Bitwise operation comes to the rescue"></a>1.2. Bitwise operation comes to the rescue</h2><p><a id="markdown-bitwise-operation-comes-to-the-rescue" name="bitwise-operation-comes-to-the-rescue"></a></p>
+<p>We all know that:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">AND operator
+0 &amp; 0 &#x3D;&gt; 0
+0 &amp; 1 &#x3D;&gt; 0
+
+OR operator
+0 | 0 &#x3D;&gt; 0
+0 | 1 &#x3D;&gt; 1</code></pre>
+
+<p>We can exploit these bitwise to store our boolean values.</p>
+<p>First, we set up an enum class. Notice the value of enum is the power of <strong><code>2</code></strong></p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public enum Facility
+&#123;
+    None         &#x3D; 0,
+    HasTV        &#x3D; 1,
+    HasMicrowave &#x3D; 2,
+    HasOven      &#x3D; 4,
+&#125;</code></pre>
+
+<p>By doing this, when storing enum, these values will have the binary as follow:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">None         &#x3D; 000
+HasTV        &#x3D; 001
+HasMicrowave &#x3D; 010
+HasOven      &#x3D; 100</code></pre>
+
+<p>The <strong><code>1</code></strong> character is in a different location on each value. When applying the <code>AND</code> or <code>OR</code> bitwise operator on these values, the combined value will have the <code>0</code> or <code>1</code> placed in the exact location.</p>
+<p>For example:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">    HasTV           001
+|   HasMicrowave    010  &lt;-- OR operator
+-----------------------
+                    011  &lt;-- equal to 3 in decimal</code></pre>
+
+<p>We can store all the booleans in a single <code>int</code> value using this.</p>
+<p>The <code>AND</code> operator with the targeted value will replace with <code>1</code> character with <code>0</code>:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">    value           011  &lt;-- 3 in decimal, from above
+&amp;   HasTV           001  &lt;-- AND operator
+-----------------------
+    Has TV?         001  &lt;-- equal to enum value 1: HasTV
+
+
+
+
+    value           011  &lt;-- 3 in decimal
+&amp;   HasMicrowave    010  &lt;-- AND operator
+-----------------------
+    Has microwave?  010  &lt;-- equal to enum value 2: HasMicrowave</code></pre>
+
+<p>How about <code>HasOven</code>?</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">    value           011  &lt;-- 3 in decimal
+&amp;   HasOven         100  &lt;-- AND operator
+-----------------------
+    Has oven?       000  &lt;-- equal to enum value 0: None</code></pre>
+
+<h2 id="1-3-Storing-booleans"><a href="#1-3-Storing-booleans" class="headerlink" title="1.3. Storing booleans"></a>1.3. Storing booleans</h2><p><a id="markdown-storing-booleans" name="storing-booleans"></a></p>
+<p>As you can guess, storing booleans is doing an <code>OR</code> operator on the values.</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var facilities &#x3D; Facility.HasTV | Facility.HasMicrowave;
+
+&#x2F;&#x2F; facilities &#x3D; 3</code></pre>
+
+<h2 id="1-4-Retrieving-booleans"><a href="#1-4-Retrieving-booleans" class="headerlink" title="1.4. Retrieving booleans"></a>1.4. Retrieving booleans</h2><p><a id="markdown-retrieving-booleans" name="retrieving-booleans"></a></p>
+<p>To retrieve the bool values, we can do <code>AND</code> operator with the targeted enum and test if the result &gt; 0</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var isHasTV &#x3D; (facilities &amp; Facility.HasTV) &gt; 0 ? true : false;</code></pre>
+
+<h1 id="2-FlagsAttribute-in-C-They-already-did-it-for-you"><a href="#2-FlagsAttribute-in-C-They-already-did-it-for-you" class="headerlink" title="2. FlagsAttribute in C# - They already did it for you"></a>2. FlagsAttribute in C# - They already did it for you</h1><p><a id="markdown-flagsattribute-in-c%23---they-already-did-it-for-you" name="flagsattribute-in-c%23---they-already-did-it-for-you"></a></p>
+<p>To make life easier for developers, Microsoft has a <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute"><code>FlagsAttribute</code></a> that you can decorate your enum.</p>
+<blockquote>
+<p>This will <em>indicates that an enumeration can be treated as a bit field; that is, a set of flags.</em></p>
+</blockquote>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[Flags]
+public enum Facility
+&#123;
+    None         &#x3D; 0,
+    HasTV        &#x3D; 1,
+    HasMicrowave &#x3D; 2,
+    HasOven      &#x3D; 4,
+&#125;</code></pre>
+
+<h2 id="2-1-Storing-data"><a href="#2-1-Storing-data" class="headerlink" title="2.1. Storing data"></a>2.1. Storing data</h2><p><a id="markdown-storing-data" name="storing-data"></a></p>
+<p>Using the same <code>OR</code> bitwise operator to store the data</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var roomFacility &#x3D; Facility.HasTV | Facility.HasMicrowave;</code></pre>
+
+<h2 id="2-2-Retrieving-data"><a href="#2-2-Retrieving-data" class="headerlink" title="2.2. Retrieving data"></a>2.2. Retrieving data</h2><p><a id="markdown-retrieving-data" name="retrieving-data"></a></p>
+<p>Use <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/api/system.enum.hasflag"><code>HasFlag</code></a> method to retrieve data</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var hasTV &#x3D; roomFacility.HasFlag(Facility.HasTV);
+
+&#x2F;&#x2F; hasTV &#x3D; true</code></pre>
+
+<h1 id="3-Mind-the-limit-of-int"><a href="#3-Mind-the-limit-of-int" class="headerlink" title="3. Mind the limit of int"></a>3. Mind the limit of <code>int</code></h1><p><a id="markdown-mind-the-limit-of-int" name="mind-the-limit-of-int"></a></p>
+<p>There are 4 data type you can use to store <code>int</code> value in <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql">SQL Server</a>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data type</strong></th>
+<th><strong>Range</strong></th>
+<th><strong>Storage</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bigint</code></td>
+<td>-2^63 (-9,223,372,036,854,775,808) to 2^63-1 (9,223,372,036,854,775,807)</td>
+<td>8 Bytes</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>-2^31 (-2,147,483,648) to 2^31-1 (2,147,483,647)</td>
+<td>4 Bytes</td>
+</tr>
+<tr>
+<td><code>smallint</code></td>
+<td>-2^15 (-32,768) to 2^15-1 (32,767)</td>
+<td>2 Bytes</td>
+</tr>
+<tr>
+<td><code>tinyint</code></td>
+<td>0 to 255</td>
+<td>1 Byte</td>
+</tr>
+</tbody></table>
+<p>8 bits &#x3D; 1 byte. So for 1 byte of storage, you can store up to 8 boolean values (theoretically).</p>
+<p>The default <code>int</code> primitive type in C# is 32 bits or 4 bytes</p>
+<blockquote>
+<p>What if you want to store more than 32 boolean values?</p>
+</blockquote>
+<p>In this case, I would strongly recommend you to re-design your class and data structure to split it into smaller ones</p>
+<h1 id="4-Flatten-the-value"><a href="#4-Flatten-the-value" class="headerlink" title="4. Flatten the value"></a>4. Flatten the value</h1><p><a id="markdown-flatten-the-value" name="flatten-the-value"></a></p>
+<p>What if you want to flatten the boolean values compressed into a flat class with actual <code>bool</code> properties?</p>
+<p>Of course you can do it with <code>HasFlag()</code> method, and a bunch of <code>if</code> statements. However, writing <code>if</code> 10 times in a row is not very maintainable.</p>
+<p>Luckily we have <code>reflection</code>, a way to read the class meta data.</p>
+<p>First, we need to create a new attribute class (<a target="_blank" rel="noopener" href="https://github.com/huntertran/flag-flattener/blob/master/FlattenedFlagAttribute.cs">full source code with comment here</a>):</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[AttributeUsage(AttributeTargets.Property, AllowMultiple &#x3D; false)]
+public class FlattenedFlagAttribute : Attribute
+&#123;
+    public Enum enumProperty;
+
+    public FlattenedFlagAttribute(Facility facility)
+    &#123;
+        this.enumProperty &#x3D; facility;
+    &#125;
+
+    &#x2F;&#x2F; This method allow us &quot;flatten&quot; the compacted data into the property which is decorated with the same Facility data type
+    public static void Flatten(object o, Enum enumData)
+    &#123;
+        var props &#x3D; o.GetType().GetProperties();
+
+        foreach (var prop in props)
+        &#123;
+            var attr &#x3D; prop.GetCustomAttributes(typeof(FlattenedFlagAttribute), false);
+
+            if (attr.GetLength(0) &gt; 0)
+            &#123;
+                prop.SetValue(o, enumData.HasFlag(((FlattenedFlagAttribute)attr[0]).enumProperty));
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<p>Now, we can simply decorate the flatten properties with this attribute:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class FlattenedRoom
+&#123;
+    public int RoomNumber &#123; get; set; &#125;
+
+    [FlattenedFlag(Facility.HasTV)]
+    public bool HasTV &#123; get; set; &#125;
+
+    [FlattenedFlag(Facility.HasMicrowave)]
+    public bool HasMicrowave &#123; get; set; &#125;
+
+    [FlattenedFlag(Facility.HasOven)]
+    public bool HasOven &#123; get; set; &#125;
+
+    public FlattenedRoom(int roomNumber, Facility facility)
+    &#123;
+        RoomNumber &#x3D; roomNumber;
+        FlattenedFlagAttribute.Flatten(this, facility);
+    &#125;
+&#125;</code></pre>
+
+<p>When you construct a new <code>FlattenedRoom</code>, simple feed it with the compacted <code>Facility</code> value, and everything will be correctly set.</p>
+<p>Head over here for the full source code: <a target="_blank" rel="noopener" href="https://github.com/huntertran/flag-flattener">https://github.com/huntertran/flag-flattener</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Tuan Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/" title="Optimize list of bool values in C#">https://huntertran.com/2022/04/24/Optimize-list-of-bool-values-in-C/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+
+          <span class="label">Twitter</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/csharp/" rel="tag"># csharp</a>
+              <a href="/tags/bool/" rel="tag"># bool</a>
+              <a href="/tags/boolean/" rel="tag"># boolean</a>
+              <a href="/tags/bitwise/" rel="tag"># bitwise</a>
+              <a href="/tags/optimize/" rel="tag"># optimize</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/" rel="prev" title="Count down timer with VBA in PowerPoint">
+                  <i class="fa fa-chevron-left"></i> Count down timer with VBA in PowerPoint
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

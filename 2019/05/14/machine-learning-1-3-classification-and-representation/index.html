@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
@@ -20,10 +19,11 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Machine Learning] - 3.1 - Classification and Representation">
 <meta property="og:url" content="https://huntertran.com/2019/05/14/machine-learning-1-3-classification-and-representation/">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://i.imgur.com/9IHlEt9.png">
 <meta property="og:image" content="https://i.imgur.com/VNSdsHL.png">
 <meta property="article:published_time" content="2019-05-14T09:43:52.000Z">
-<meta property="article:modified_time" content="2022-04-17T20:38:12.307Z">
+<meta property="article:modified_time" content="2022-04-23T22:38:33.852Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -52,6 +52,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
+
 
 
 
@@ -96,12 +97,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -173,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">122</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -184,7 +180,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">218</span>
+        <span class="site-state-item-count">223</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -241,11 +237,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
       <meta itemprop="name" content="Tuan Tran">
-      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[Machine Learning] - 3.1 - Classification and Representation | Tuan Tran's Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -267,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-17 16:38:12" itemprop="dateModified" datetime="2022-04-17T16:38:12-04:00">2022-04-17</time>
+      <time title="Modified: 2022-04-23 18:38:33" itemprop="dateModified" datetime="2022-04-23T18:38:33-04:00">2022-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -307,32 +308,32 @@
 <span id="more"></span>
 <ul>
 <li><a href="#1-classification-and-representation">1. Classification and Representation</a><ul>
-<li>  <a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
-<li>  <a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
+<li><a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
+<li><a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
 </ul>
 </li>
-<li>  <a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
+<li><a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
 </ul>
 <h1 id="1-Classification-and-Representation"><a href="#1-Classification-and-Representation" class="headerlink" title="1. Classification and Representation"></a><strong>1. Classification and Representation</strong></h1><h2 id="1-1-Sigmoid-Function-or-Logistic-Function"><a href="#1-1-Sigmoid-Function-or-Logistic-Function" class="headerlink" title="1.1. Sigmoid Function or Logistic Function"></a><strong>1.1. Sigmoid Function or Logistic Function</strong></h2><p>Trong bài toán phân loại (classification), mặc dù ta có thể tiếp cận nó bằng các thuật toán linear regression đã biết bằng cách tạm thời quên đi giá trị của y chỉ có thể là 0 hoặc 1.Cách tiếp cận này có vẻ không được tốt cho lắm. Giá trị của $latex h_0(x)$ phải nằm trong khoảng từ 0 tới 1.</p>
-<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;=h_\theta(x)&lt;=1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
-<p>$latex h_\theta (x) = g ( \theta^T x )$<br>$latex z = \theta^T x$<br>$latex g(z) = \dfrac{1}{1 + e^{-z}}$ </p>
+<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;&#x3D;h_\theta(x)&lt;&#x3D;1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
+<p>$latex h_\theta (x) &#x3D; g ( \theta^T x )$<br>$latex z &#x3D; \theta^T x$<br>$latex g(z) &#x3D; \dfrac{1}{1 + e^{-z}}$ </p>
 <p>biểu thức trên có biểu diễn đồ thị như sau:</p>
 <p><img src="https://i.imgur.com/9IHlEt9.png"></p>
-<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả = 1. Ví dụ như nếu $latex h_\theta(x) = 0.7$ có nghĩa là xác suất kết quả = 1 là 70%. Ngược lại, xác xuất kết quả = 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
-<p>$latex h_\theta(x) = P(y=1 | x ; \theta) = 1 - P(y=0 | x ; \theta)$<br>$latex P(y = 0 | x;\theta) + P(y = 1 | x ; \theta) = 1$ </p>
+<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả &#x3D; 1. Ví dụ như nếu $latex h_\theta(x) &#x3D; 0.7$ có nghĩa là xác suất kết quả &#x3D; 1 là 70%. Ngược lại, xác xuất kết quả &#x3D; 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
+<p>$latex h_\theta(x) &#x3D; P(y&#x3D;1 | x ; \theta) &#x3D; 1 - P(y&#x3D;0 | x ; \theta)$<br>$latex P(y &#x3D; 0 | x;\theta) + P(y &#x3D; 1 | x ; \theta) &#x3D; 1$ </p>
 <h2 id="1-2-Decision-Boundary"><a href="#1-2-Decision-Boundary" class="headerlink" title="1.2. Decision Boundary"></a><strong>1.2. Decision Boundary</strong></h2><p>Dựa vào Logistic function ở trên, ta có thể `biến đổi` hàm hypothesis của ta lại thành như sau:</p>
-<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y = 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y = 0$ </p>
+<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y &#x3D; 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y &#x3D; 0$ </p>
 <p>Function g(z) hoạt động như sau:</p>
 <p>$latex g(z) \geq 0.5$<br>when<br>$latex z \geq 0$ </p>
 <p>Nhớ rằng:</p>
-<p>$latex z=0, e^{0}=1 \Rightarrow g(z)=1/2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)=1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)=0$ </p>
+<p>$latex z&#x3D;0, e^{0}&#x3D;1 \Rightarrow g(z)&#x3D;1&#x2F;2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)&#x3D;1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)&#x3D;0$ </p>
 <p>Như vậy, ta có thể viết:</p>
-<p>$latex h_\theta(x) = g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
+<p>$latex h_\theta(x) &#x3D; g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
 <p>Từ những phát biểu trên, ta có thể viết</p>
-<p>$latex \theta^T x \geq 0 \Rightarrow y = 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y = 0$ </p>
-<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y = 0 và vùng y = 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
+<p>$latex \theta^T x \geq 0 \Rightarrow y &#x3D; 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y &#x3D; 0$ </p>
+<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y &#x3D; 0 và vùng y &#x3D; 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
 <h1 id="2-Vi-du"><a href="#2-Vi-du" class="headerlink" title="2. Ví dụ"></a><strong>2. Ví dụ</strong></h1><p>Ta có ví dụ sau:</p>
-<p>$latex \theta = \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y = 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
+<p>$latex \theta &#x3D; \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y &#x3D; 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
 <p>vậy đồ thị của chúng ta sẽ giống như sau</p>
 <p><img src="https://i.imgur.com/VNSdsHL.png"></p>
 <p>Lưu ý rằng tùy vào hàm hypothesis và các tham số theta, hình dáng boudary line có thể thay đổi tương ứng</p>
@@ -468,9 +469,9 @@
   
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-core.min.js" integrity="sha256-vlRYHThwdq55dA+n1BKQRzzLwFtH9VINdSI68+5JhpU=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-cl5LNmPvcRcGFaQFjwEKIfs51AX7wBkvoByH6LTxQCs=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
 
