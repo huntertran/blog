@@ -9,7 +9,7 @@ categories:
 date: 2019-07-12 12:40:13
 ---
 
-After getting yourself familiar with names and terms in Java in [part 1](https://huntertran.com/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/), now it's time for you to create your first program in Java.
+After getting yourself familiar with names and terms in Java in [part 1](https://huntertran.ca/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/), now it's time for you to create your first program in Java.
 
 <!-- more -->
 

@@ -466,7 +466,7 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification: N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610
+# google_site_verification: N_T7vqtVSFKHn0P1wRhK4gZypoGof-YmIxp-lWIb610
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
@@ -474,7 +474,7 @@ bing_site_verification: 1CB8DB019C58E7852A318AAB16B1ABE5
 
 # Yandex Webmaster tools verification.
 # See: https://webmaster.yandex.ru
-yandex_site_verification: "ce50b7d12f357ffa"
+yandex_site_verification: "92d8d8e521a054f7"
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site

@@ -253,4 +253,4 @@ Số lượng add-on bên Google Chrome thực sự không nhiều và phong ph�
 *   Grease Monkey => TamperMonkey: [https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm\_source=chrome-app-launcher-info-dialog](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-app-launcher-info-dialog)
 *   Color that site => Stylish: [https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe)
 
-Phần 2 của bài viết ở đây: [Phần 2](https://huntertran.com/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/)
+Phần 2 của bài viết ở đây: [Phần 2](https://huntertran.ca/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/)

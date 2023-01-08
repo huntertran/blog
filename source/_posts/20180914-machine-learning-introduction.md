@@ -9,7 +9,7 @@ date: 2018-09-14 11:22:30
 
 Bài viết mở đầu cho chuỗi tự học Machine Learning. Các khái niệm cơ bản sẽ được giới thiệu trong bài viết này.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.ca/machine-learning-course/)
 
 *   [1. Machine learning là gì](#1-machine-learning-là-gì)
 *   [2. Phân loại](#2-phân-loại)

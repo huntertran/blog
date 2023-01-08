@@ -18,10 +18,10 @@ date: 2018-03-11 12:11:47
 
 > Xem các bài viết trong series
 > 
-> * [Phần 1: Mô hình MVC](https://huntertran.com/2018/03/04/asp-net-for-beginner-part-1-mvc/)
-> * [Phần 2: Connect Database và Model Binding](https://huntertran.com/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
-> * [Phần 3: Front end framework nào](https://huntertran.com/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
-> * [Phần 4: CRUD và Data Validation](https://huntertran.com/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
+> * [Phần 1: Mô hình MVC](https://huntertran.ca/2018/03/04/asp-net-for-beginner-part-1-mvc/)
+> * [Phần 2: Connect Database và Model Binding](https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/)
+> * [Phần 3: Front end framework nào](https://huntertran.ca/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/)
+> * [Phần 4: CRUD và Data Validation](https://huntertran.ca/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/)
 
 _**Table of Contents**_
 
@@ -110,7 +110,7 @@ Có 2 cách để bắt đầu làm việc với database trong asp.net core là
 
 Ngắn gọn thì Code first cho phép bạn viết code trước (tạo các model class), rồi các model bạn tạo sẽ được cập nhật lên database thông qua các `migration`. Database first thì là cách truyền thống từ xưa tới nay: Tạo database trước, và code của bạn có nghĩa vụ 'connect' tới database đó.
 
-Bạn có thể tham khảo thêm ở đây: [Code first vs Database first](https://huntertran.com/2017/01/06/asp-net-mvc-code-first-vs-database-first/)
+Bạn có thể tham khảo thêm ở đây: [Code first vs Database first](https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/)
 
 ## 3.1. Tạo model Phone
 <a id="markdown-t%E1%BA%A1o-model-phone" name="t%E1%BA%A1o-model-phone"></a>

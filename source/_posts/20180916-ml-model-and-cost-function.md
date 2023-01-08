@@ -10,7 +10,7 @@ date: 2018-09-22 12:48:34
 
 Bài thứ 2 trong chuỗi bài viết tự học Machine Learning Trong bài này, ta sẽ tìm hiểu về cost function, một function nhằm dự đoán giá trị output với một bộ các giá trị input/output cho trước.
 <!-- more -->
-Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.ca/machine-learning-course/)
 
 *   [1. Các ký hiệu](#1-các-ký-hiệu)
 *   [2. Cost Function](#2-cost-function)

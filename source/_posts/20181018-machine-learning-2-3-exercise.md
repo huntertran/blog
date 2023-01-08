@@ -9,7 +9,7 @@ date: 2018-10-18 05:58:06
 
 Bài viết này đưa ra bài giải và chi tiết cách giải của mỗi bài tập trong tuần 2 của khóa học Machine Learning của giáo sư Andrew Ng.
 
-Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/).
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.ca/machine-learning-course/).
 <!-- more -->
 *   [1. Cài đặt Octave](#1-cài-đặt-octave)
 *   [2. Warmup](#2-warmup)

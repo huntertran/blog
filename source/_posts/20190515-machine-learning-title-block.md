@@ -8,4 +8,4 @@ comments: false
 date: 2019-05-15 00:06:14
 ---
 
-Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.com/machine-learning-course/)
+Xem các bài viết khác tại [Machine Learning Course Structure](https://huntertran.ca/machine-learning-course/)

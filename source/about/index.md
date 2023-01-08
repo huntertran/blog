@@ -19,7 +19,7 @@ Via
 
 QR Code:
 
-![paypal](https://huntertran.com/images/theme/paypal.png)
+![paypal](https://huntertran.ca/images/theme/paypal.png)
 
 **OR**
 
