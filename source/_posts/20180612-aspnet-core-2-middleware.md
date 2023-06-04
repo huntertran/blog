@@ -40,7 +40,7 @@ Thế là xong, phải ko? Có cách khác :D
 
 Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses
 
-![middleware](https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png)
+![middleware](/images/flickr/1751/27794903017_13f284ce64_o.jpg)
 
 > middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là `short-circuit`
 

@@ -112,7 +112,7 @@ bằng cách thêm vào dòng code sau `services.AddScoped();` bạn đã khai b
 
 Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là _tiêm - inject_ nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó
 
-![inject to controller](https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png)
+![inject to controller](/images/flickr/1753/42012713695_56fcb2b4a5_o.jpg)
 
 ## 4.3. Action Injection
 

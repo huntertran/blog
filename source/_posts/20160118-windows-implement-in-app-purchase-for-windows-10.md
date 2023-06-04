@@ -50,7 +50,7 @@ Phần này chứa các keywords mà bạn hay nhầm lẫn khi implement tính 
 
 *   Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng)
 
-![](https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png)
+![](/images/flickr/1479/24372150901_025d567d60_o.jpg)
     
 *   Durables: User mua thể loại này một lần rồi là sẽ sở hữu nó mãi mãi. Ví dụ như level mới, màn chơi mới, vật phẩm
     

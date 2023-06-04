@@ -34,7 +34,7 @@ def process_text_file(file_path, destination_folder):
             url = match.group(1)
             if 'staticflickr' in url:
                 if file_existed(url):
-                    lines[i] = re.sub(r'(http:\/\/farm\d+\.staticflickr\.com\/(\d+)\/(\d+)_([a-zA-Z0-9_]+)\.jpg)', line)
+                    lines[i] = re.sub(r'(https?:\/\/farm\d+\.staticflickr\.com\/(\d+)\/(\d+)_([a-zA-Z0-9_]+)\.(jpg|png))', r'/images/flickr/\2/\3_\4.jpg', line)
                     modified = True
                 ## downloaded in step 1
                 #     continue
