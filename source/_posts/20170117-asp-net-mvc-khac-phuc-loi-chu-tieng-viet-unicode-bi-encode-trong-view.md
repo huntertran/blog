@@ -11,7 +11,7 @@ categories:
 date: 2017-01-17 03:14:03
 ---
 
-![](https://farm1.staticflickr.com/420/31984906310_6b01d5c873_o.png)
+![](/images/flickr/420/31984906310_6b01d5c873_o.png)
 
 Làm web mà có tiếng Việt thì khổ nhất là chữ tiếng Việt nó cứ bị encode thành mấy ký tự vô nghĩa
 
@@ -39,7 +39,7 @@ ASP.NET convert chuỗi đó sang một dạng code gọi là "Unicode Decimal C
 
 Thành quả:
 
-![](https://farm1.staticflickr.com/436/32241635761_2b342942b1_o.png)
+![](/images/flickr/436/32241635761_2b342942b1_o.png)
 
 Thế là xong :D
 

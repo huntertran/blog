@@ -35,7 +35,7 @@ Gọi $latex J(\\theta\_{0},\\theta\_{1})$ là kết quả của cost function. 
 *   $latex \\theta\_{1}$ là trục y.
 *   $latex J(\\theta\_{0},\\theta\_{1})$ là trục z.
 
-![gradient descent graph](https://farm2.staticflickr.com/1899/44863403391_91a4cf87aa_o.png)
+![gradient descent graph](/images/flickr/1899/44863403391_91a4cf87aa_o.png)
 
 Các mũi tên đỏ chỉ những điểm thấp nhất của đồ thị này, đó là các điểm mà ta tìm kiếm (nhằm mục đích tối thiểu giá trị của cost function).
 

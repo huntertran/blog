@@ -90,11 +90,11 @@ Google Chrome thì khá tốt trong chuyện test tiếc các kiểu
 
 Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi > OK
 
-![](https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png)
+![](/images/flickr/7671/27642365454_2fb370b186_o.png)
 
 Chọn template là Web API > OK
 
-![](https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png)
+![](/images/flickr/7699/27976818140_4bfdcc1961_o.png)
 
 ## 3.2. Thêm model
 <a id="markdown-th%C3%AAm-model" name="th%C3%AAm-model"></a>
@@ -105,11 +105,11 @@ Tips: bạn nên đặt toàn bộ model trong một folder riêng, tương tự
 
 Chuột phải vào Project > Add > New Folder
 
-![](https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png)
+![](/images/flickr/7302/28153979252_5efe49a850_o.png)
 
 Tiếp tục chuột phải vào Folder Models > Add > Class, đặt tên class là TodoItem > Ok
 
-![](https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png)
+![](/images/flickr/7451/27976883070_1c07f475c2_o.png)
 
 Thêm 3 Property vô
 
@@ -190,11 +190,11 @@ public class TodoRepository : ITodoRepository
 
 Xong xuôi thì build nó phát để coi có lỗi gì hok
 
-![](https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png)
+![](/images/flickr/7704/28154355492_f4120179dd_o.png)
 
 Build xong nó lên dư lày là okie
 
-![](https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png)
+![](/images/flickr/7654/27977529060_f3fe9e74aa_o.png)
 
 ## 3.4. Register cái Repository
 <a id="markdown-register-c%C3%A1i-repository" name="register-c%C3%A1i-repository"></a>
@@ -223,7 +223,7 @@ Chuột phải lên thư mục Controller > Add > New Item
 
 Chọn Web API Controller Class, đặt tên TodoController
 
-![](https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png)
+![](/images/flickr/7416/27643155223_70a57c877b_o.png)
 
 Xóa hết code trong class đi, thay bằng cái lày
 

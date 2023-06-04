@@ -45,7 +45,7 @@ Tất nhiên là lựa chọn của bạn. Xài cái nào thấy wen là đượ
 
 Link: [https://desktop.github.com/](https://desktop.github.com/)
 
-![](https://farm6.staticflickr.com/5663/21778229224_3e5b23876f_o.png)
+![](/images/flickr/5663/21778229224_3e5b23876f_o.png)
 
 GitHub Desktop, phát triển bới chính dòng họ nhà mều bạch tuộc GitHub, chả tốt tẹo nào. Vì sao áh? Vì nó quá đơn giản, và thiếu nhiều nút cơ bản như Pull, Push, Fetch, Sync, blah blah blah.
 
@@ -55,7 +55,7 @@ GitHub Desktop mong muốn mọi thứ đơn giản nhất có thể. Nhưng h�
 
 My favorite: [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 
-![](https://farm1.staticflickr.com/685/22214151369_9ae2265273_o.png)
+![](/images/flickr/685/22214151369_9ae2265273_o.png)
 
 SourceTree, phát triển bởi Atlassian, là một phần mềm git source control khá tốt (theo ý cá nhân). Bạn có thể làm mọi thứ bạn muốn với nó. Thậm chí nó còn có cả Command Lind cho ai thích gõ lệnh như hacker nhé.
 
@@ -75,11 +75,11 @@ Subversion: [https://github.com/Microsoft/Windows-universal-samples](https://git
 
 Mở SourceTree (hoặc phần mềm mà bạn thích) > Clone/New
 
-![](https://farm1.staticflickr.com/747/22214019219_1e3d2d0867_o.png)
+![](/images/flickr/747/22214019219_1e3d2d0867_o.png)
 
 Copy / Paste cái link HTTPS vô "Source Path / URL", và SourceTree sẽ tự động điền mấy chỗ khác. Nếu bạn muốn customize cái gì thì cứ thoải mái chọt zô mà sửa đổi.
 
-![](https://farm1.staticflickr.com/761/22374909436_1a8188ffc0_o.png)
+![](/images/flickr/761/22374909436_1a8188ffc0_o.png)
 
 Cuối cùng, click Clone. Thế là xong, tất cả code Sample đã nằm trên máy tính.
 
@@ -91,7 +91,7 @@ Giờ bạn đã có code rồi, làm gì nữa?
 
 Trong SourceTree, click Fetch
 
-![](https://farm1.staticflickr.com/604/21779962253_cb809d0635_o.png)
+![](/images/flickr/604/21779962253_cb809d0635_o.png)
 
 Bạn có thấy con số đỏ lấp ló trên đầu nút Pull không? Đó chính là số lượng phiên bản mới (commit) đã có trên server của GitHub, nhưng chưa có trên máy của bạn. Nhấn Pull để lôi cổ tụi nó về máy.
 

@@ -198,7 +198,7 @@ dotnet ef migrations add InitialCreate
 
 VSCode sẽ tự động tạo ra một thư mục tên Migrations, và thêm cơ số file vào đấy
 
-[new files](https://farm5.staticflickr.com/4784/40748059781_d2b5740095_o.png)
+[new files](/images/flickr/4784/40748059781_d2b5740095_o.png)
 
 Tiếp tục, gõ
 
@@ -208,7 +208,7 @@ dotnet ef database update
 
 thì những migration này sẽ được thực thi, và database sẽ được tạo ra
 
-![database created](https://farm5.staticflickr.com/4774/38937566770_e203e7c169_o.png)
+![database created](/images/flickr/4774/38937566770_e203e7c169_o.png)
 
 > Để kiểm tra, bạn có thể dùng Microsoft SQL Server Management Studio với các thông số sau
 > 
@@ -292,11 +292,11 @@ Nhìn vào câu lệnh trên, chắc bạn cũng sẽ đoán được nó làm g
 
 2 câu lệnh đầu tiên giúp bạn thực sự cài nuget, và build project một phát để đảm bảo ko có lỗi phát sinh, và clear các file tạm ko còn cần thiết
 
-![create new controller](https://farm5.staticflickr.com/4782/40705936652_1e3d6b551d_o.png)
+![create new controller](/images/flickr/4782/40705936652_1e3d6b551d_o.png)
 
 gõ tiếp `dotnet run` để chạy thử app
 
-![app with phone controller](https://farm5.staticflickr.com/4779/25877724937_7bfed1c8d7_o.png)
+![app with phone controller](/images/flickr/4779/25877724937_7bfed1c8d7_o.png)
 
 bạn có thể vọc vạch các kiểu với các link mà asp.net core tạo sẵn cho bạn, create new, edit, delete, details gì đấy thì tùy
 

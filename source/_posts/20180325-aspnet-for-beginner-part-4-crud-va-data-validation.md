@@ -327,7 +327,7 @@ và trong form, bạn thêm đoạn code sau để hiển thị thông báo lỗ
 
 Lỗi hiển thị như sau
 
-![bug](https://farm5.staticflickr.com/4783/41003265721_c53a2103d8_o.png)
+![bug](/images/flickr/4783/41003265721_c53a2103d8_o.png)
 
 > Bạn có thể xem toàn bộ các annotation ở đây: [Data Annotation on docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0)
 

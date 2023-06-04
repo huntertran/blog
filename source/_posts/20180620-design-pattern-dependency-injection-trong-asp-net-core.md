@@ -96,7 +96,7 @@ Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằ
 
 Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn
 
-![method in startup.cs](https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png)
+![method in startup.cs](/images/flickr/1750/42864104992_c6bcdb3276_o.png)
 
 bằng cách thêm vào dòng code sau `services.AddScoped();` bạn đã khai báo cho tất cả các class có dùng phương thức `BuyDrink` sẽ mua nước ngọt ở CircleK
 

@@ -59,13 +59,13 @@ Supervised learning được chia làm 2 loại là **regression** và **classif
 
 Dựa vào mối liên hệ giữa input và output, ta dự đoán được kết quả
 
-![bieu do](https://farm2.staticflickr.com/1856/42867061930_e41c2f94c0_o.png)
+![bieu do](/images/flickr/1856/42867061930_e41c2f94c0_o.png)
 
 ### 2.1.2. Classification
 
 Dựa vào đặc điểm của input, ta đặt được nó vào một loại cụ thể
 
-![classification](https://farm2.staticflickr.com/1879/43958802164_a713ef73dc_o.png)
+![classification](/images/flickr/1879/43958802164_a713ef73dc_o.png)
 
 ## 2.2. Unsupervised Learning
 

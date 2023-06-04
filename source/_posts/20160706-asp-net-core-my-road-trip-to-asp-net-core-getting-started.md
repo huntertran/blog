@@ -52,50 +52,50 @@ ASP.NET core có thể code được bằng nhiều thứ khác nhau như Sublim
 
 Bật visual studio > New Project > Chọn ASP.NET Core Web Application (.NET Core)
 
-![](https://farm8.staticflickr.com/7352/28088746726_3720e218f0_o.png)
+![](/images/flickr/7352/28088746726_3720e218f0_o.png)
 
 Sau khi nhấn OK, chọn Empty > Bỏ chọn Host in the cloud (hiện giờ thì cứ test local các kiểu đi đã) > OK
 
-![](https://farm8.staticflickr.com/7379/28122930625_bc23f52a5b_o.png)
+![](/images/flickr/7379/28122930625_bc23f52a5b_o.png)
 
 Sau khi nhấn OK, Visual Studio sẽ bắt đầu tạo project. Project tạo xong, nó sẽ bắt đầu restore các NuGet Package.
 
 Điểm hay ở ASP.NET Core là nó ko còn dựa trên 1 library nhất định như các phiên bản ASP.NET cũ nữa, mà hoàn toàn dựa trên Nuget Package.
 
-![](https://farm8.staticflickr.com/7431/28088835376_acf5813b9c_o.png)
+![](/images/flickr/7431/28088835376_acf5813b9c_o.png)
 
 Sau cùng, nhấn nút để chạy thử và xem thành quả
 
-![](https://farm8.staticflickr.com/7336/27843235500_3a0cfbc3af_o.png)
+![](/images/flickr/7336/27843235500_3a0cfbc3af_o.png)
 
-![](https://farm8.staticflickr.com/7574/28045741121_29641faf2f_o.png)
+![](/images/flickr/7574/28045741121_29641faf2f_o.png)
 
 # 5. Publish lên Azure
 
 Nhấn chuột phải vô Web Application > Publish
 
-![](https://farm8.staticflickr.com/7442/27508633903_a7451490d9_o.png)
+![](/images/flickr/7442/27508633903_a7451490d9_o.png)
 
 Chọn Publish target là Azure
 
-![](https://farm8.staticflickr.com/7328/28123967115_9334fb7a48_o.png)
+![](/images/flickr/7328/28123967115_9334fb7a48_o.png)
 
 Nếu bạn muốn có riêng một Resource Group nào đó, thì tạo mới 1 cái
 
-![](https://farm8.staticflickr.com/7389/28089848636_3a27dcdc72_o.png)
+![](/images/flickr/7389/28089848636_3a27dcdc72_o.png)
 
 Nhớ chọn các thông số cần thiết
 
-![](https://farm8.staticflickr.com/7350/27509151714_dcde6a8641_o.png)
+![](/images/flickr/7350/27509151714_dcde6a8641_o.png)
 
 App Service Plan thì free được rồi
 
-![](https://farm8.staticflickr.com/7342/28021061142_26fe033b23_o.png)
+![](/images/flickr/7342/28021061142_26fe033b23_o.png)
 
 Ra được cái màn hình này thì cứ nhấn publish thôi
 
-![](https://farm8.staticflickr.com/7379/28021077182_9ced5d2930_o.png)
+![](/images/flickr/7379/28021077182_9ced5d2930_o.png)
 
 Chiêm ngưỡng thành quả
 
-![](https://farm8.staticflickr.com/7321/27509194014_95f55d6dbd_o.png)
+![](/images/flickr/7321/27509194014_95f55d6dbd_o.png)

@@ -60,7 +60,7 @@ To fix: edit `apache2.conf`
 > Recommended: Map network drive to easily config or copy file to container [Download](https://github.com/dokan-dev/dokany/releases) 
 > + install Dolkan [Download](https://github.com/Foreveryone-cz/win-sshfs/releases)
 > + install win-sshfs follow the step to map
-> ![mapping instruction](http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png)
+> ![mapping instruction](/images/flickr/4344/36326087365_4a8b8a7418_o.png)
 
 open `/etc/apache2/apache2.conf` in your favorite editor
 
@@ -101,7 +101,7 @@ nano /etc/apache2/mods-enabled/dir.conf
 
 It should look like this
 
-![dir.conf](http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png)
+![dir.conf](/images/flickr/4403/36326087315_f9a2a593a3_o.png)
 
 Type `Ctrl + X` to exit nano, type y to save
 
@@ -123,7 +123,7 @@ Insert some PHP code
 
 Then you can access [http://your\_domain\_name/info](http://your_domain_name/info)
 
-![phpinfo](http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png)
+![phpinfo](/images/flickr/4426/36326087275_5e74efdb8a_o.png)
 
 # 4. Setup Wordpress
 <a id="markdown-setup-wordpress" name="setup-wordpress"></a>
@@ -191,7 +191,7 @@ nano /etc/apache2/apache2.conf
 
 Network Drive
 
-![network drive edit file](http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png)
+![network drive edit file](/images/flickr/4323/36326087335_f70a215f0f_o.png)
 
 Search for this part and change
 
@@ -240,23 +240,23 @@ Permission and .htaccess Show hidden files and folder on WinSCP
 Open WinSCP > Option > References…
 ```
 
-![show hidden file](http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png)
+![show hidden file](/images/flickr/4300/36326087085_a8c29ef11e_o.png)
 
 Create `.htaccess` file
 
 Right click on an empty space > New File > enter `.htaccess`
 
-![create .htaccess](http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png)
+![create .htaccess](/images/flickr/4441/36326087035_022f35bffa_o.png)
 
 Set Read / Write permission for .htaccess
 
 Right click on .htaccess > Properties
 
-![permissions for .htaccess](http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png)
+![permissions for .htaccess](/images/flickr/4325/35517228003_73383a8bcc_o.png)
 
 Set permission recursively for all 3 folders
 
-![permissions for all 3 folders](http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png)
+![permissions for all 3 folders](/images/flickr/4409/35490057164_0d1ff22807_o.png)
 
 ## 4.3. Config
 <a id="markdown-config" name="config"></a>
@@ -286,7 +286,7 @@ define('DB_COLLATE', '');
 
 Open link and copy the code show up then replace them
 
-![salt](http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png)
+![salt](/images/flickr/4388/36326086765_8627dd85cc_o.png)
 
 Add this line (to enable wordpress can modify files and folder directly
 

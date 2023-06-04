@@ -34,7 +34,7 @@ Lưu ý là cách này chỉ hoạt động trên windows nhé
 
 >
 
-![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png)
+![](/images/flickr/4531/24089620797_59f8abe75b_o.png)
 
 NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense
 
@@ -87,13 +87,13 @@ Trong thư mục gốc của project mới tạo, mở file `YourProjectName.csp
 
 1.  Debug > Settings
 
-![](https://farm5.staticflickr.com/4563/38068269685_37649c8f9e_o.png)
+![](/images/flickr/4563/38068269685_37649c8f9e_o.png)
 
 1. Chọn `.NET Core` trong danh sách
     
 2. Sửa file `launch.json` trong thư mục `.vscode` thành như sau
 
-![](https://farm5.staticflickr.com/4683/27177480069_ee651b8559_o.png)
+![](/images/flickr/4683/27177480069_ee651b8559_o.png)
 
 3.  Tạo một file mới cũng trong thư mục đó, với tên là `tasks.json` với đoạn code sau
 
@@ -119,12 +119,12 @@ Trong thư mục gốc của project mới tạo, mở file `YourProjectName.csp
 
 To run the application
 
-![](https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png)
+![](/images/flickr/4583/38918103882_b12ebfb671_o.png)
 
 Bạn cũng có thể chạy project bằng nút Run trên status bar
 
-![](https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png)
+![](/images/flickr/4594/38068348135_e554c5e5ca_o.png)
 
 Để debug thì chỉ cần đặt break point ngay tại nơi cần debug
 
-![](https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png)
+![](/images/flickr/4599/38238463834_bf8bc671b6_o.png)

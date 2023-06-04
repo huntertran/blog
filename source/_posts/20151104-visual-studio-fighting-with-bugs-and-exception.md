@@ -23,29 +23,29 @@ Tất cả mọi người đều biết, để debug một đoạn code, bạn t
 
 ## 1.1. Output Log with Breakpoint
 
-![](https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png)
+![](/images/flickr/5628/22152610574_b5e8c867c4_o.png)
 
 Trong vòng lặp trên, bạn sẽ thấy có dòng "Debug.WriteLine" dùng để xuất một thông tin gì đó ra màn hình Output. Thông tin này sẽ giúp bạn biết code đã chạy tới dòng này, và xuất ra các giá trị mà bạn mong muốn.
 
-![](https://farm1.staticflickr.com/618/22152668514_87a33835e7_o.png)
+![](/images/flickr/618/22152668514_87a33835e7_o.png)
 
 Từ giờ, bạn không cần phải làm thủ công như vậy nữa.
 
 Đưa chuột lại gần Breakpoint, một menu nhỏ xíu hiện ra, nhấn vào dấu răng cưa
 
-![](https://farm1.staticflickr.com/706/22775443405_64dfbcf543_o.png)
+![](/images/flickr/706/22775443405_64dfbcf543_o.png)
 
 Một cái cửa sổ hiện ra, chèn vào giữa đoạn code đặt breakpoint của bạn. Tick chọn ô Action. Bạn sẽ thấy tính năng "Log a message to output Windows"
 
-![](https://farm6.staticflickr.com/5649/22761956172_d042077119_o.png)
+![](/images/flickr/5649/22761956172_d042077119_o.png)
 
 Gõ vào trong ô đó những thứ bạn muốn xuất ra cửa sổ output. Biến thì để trong dấu ngoặc nhọn. Thế là xong
 
-![](https://farm6.staticflickr.com/5813/22154779113_ab9acf18e1_o.png)
+![](/images/flickr/5813/22154779113_ab9acf18e1_o.png)
 
 Khi chạy lại app, cửa sổ output sẽ là
 
-![](https://farm6.staticflickr.com/5803/22762522502_765d5041fe_o.png)
+![](/images/flickr/5803/22762522502_765d5041fe_o.png)
 
 Bạn thấy con số nằm trong ngoặc kép là vì nó là kiểu string, không phải int. Nên khi hiển thị, Visual Studio sẽ đưa nó vào trong ngoặc kép
 
@@ -62,7 +62,7 @@ Bây giờ, hãy so sánh một chút
 
 Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn
 
-![](https://farm1.staticflickr.com/757/22588283440_b481c716fc_o.png)
+![](/images/flickr/757/22588283440_b481c716fc_o.png)
 
 Bạn có nhiều tùy chọn để quyết định xem là Visual Studio có dừng lại ở Breakpoint này hay không. Trong số đó có
 
@@ -75,13 +75,13 @@ Bạn có nhiều tùy chọn để quyết định xem là Visual Studio có d�
 
 Giả sử mình muốn dừng lại ở lần chạy thứ 9, và xuất ra màn hình biến ở lần chạy này, thì thiết lập như sau:
 
-![](https://farm6.staticflickr.com/5675/22787742791_38aeba8663_o.png)
+![](/images/flickr/5675/22787742791_38aeba8663_o.png)
 
 # 2. The new Exception Settings
 
 Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?
 
-![](https://farm1.staticflickr.com/778/22155676943_b38eeef94c_o.png)
+![](/images/flickr/778/22155676943_b38eeef94c_o.png)
 
 DISABLE\_XAML\_BREAK\_ON\_UNHANDLED\_EXCEPTION
 
@@ -91,7 +91,7 @@ Cái này là gì
 
 Hoặc lỗi như vầy
 
-![](https://farm6.staticflickr.com/5810/22776832185_80b555ab2f_o.png)
+![](/images/flickr/5810/22776832185_80b555ab2f_o.png)
 
 "An exception of type "Blah blah blah" occurred in Yourappname.exe but was not handled in user code", và kèm theo đó là Visual Studio dừng ở một dòng lạ hoắc, và bạn biết chắc chắn là lỗi xảy ra ở chỗ khác, không phải dòng này.
 
@@ -99,15 +99,15 @@ Hoặc lỗi như vầy
 
 Bạn vào Debug > Windows > Exception Settings…
 
-![](https://farm1.staticflickr.com/750/22788116721_a7e75bc800_o.png)
+![](/images/flickr/750/22788116721_a7e75bc800_o.png)
 
 Copy tên của Exception, trong trường hợp trên là "System.Exception" và paste nó vào ô tìm kiếm. Tíck chọn kết quả hiện ra
 
-![](https://farm1.staticflickr.com/592/22588970370_394a956f21_o.png)
+![](/images/flickr/592/22588970370_394a956f21_o.png)
 
 Chạy lại app. Và bây giờ, Visual Studio sẽ nhảy tới đúng dòng bị lỗi
 
-![](https://farm6.staticflickr.com/5829/22763429822_fe3f21d523_o.png)
+![](/images/flickr/5829/22763429822_fe3f21d523_o.png)
 
 Quá tuyệt, phải không
 

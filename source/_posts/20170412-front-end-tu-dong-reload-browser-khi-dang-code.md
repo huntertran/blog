@@ -39,7 +39,7 @@ Sẽ có một số phần mềm cần bạn cài đặt. Những phần mềm n
 
 _Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt_
 
-![Chọn LTS cho ít lỗi lặt vặt](https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png)
+![Chọn LTS cho ít lỗi lặt vặt](/images/flickr/2894/33833478232_a59cce160b_o.png)
 
 # Bước 2: Cài đặt các nodejs package
 
@@ -49,7 +49,7 @@ _Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đ�
 
 Bật Terminal Windows trong Visual Studio Code bằng cách nhấn Ctrl + \` hoặc View > Integrated Terminal
 
-![](https://farm3.staticflickr.com/2814/33234696593_9fcee9f965_o.png)
+![](/images/flickr/2814/33234696593_9fcee9f965_o.png)
 
 **Cài đặt trình biên dịch SASS/LESS**
 
@@ -59,7 +59,7 @@ npm install -g node-sass less
 
 Tham số -g là để cài đặt trên môi trường global
 
-![](https://farm3.staticflickr.com/2873/33889703622_3cbc71f1cc_o.png)
+![](/images/flickr/2873/33889703622_3cbc71f1cc_o.png)
 
 _Sau khi cài đặt SASS/LESS compiler_
 
@@ -71,7 +71,7 @@ Cài đặt gulp toolkit để tự động hóa quá trình biên dịch
 npm install -g gulp
 ```
 
-![](https://farm3.staticflickr.com/2885/33234839763_71ffba8cfd_o.png)
+![](/images/flickr/2885/33234839763_71ffba8cfd_o.png)
 
 _Bạn có thể bỏ qua các warning khi cài đặt gulp_
 
@@ -79,7 +79,7 @@ _Bạn có thể bỏ qua các warning khi cài đặt gulp_
 
 Nếu trước đó, bạn chưa bao giờ cài đặt NodeJs package manager, bạn sẽ gặp lỗi như sau
 
-![](https://farm3.staticflickr.com/2829/33662078970_a1aaf77d2c_o.png)
+![](/images/flickr/2829/33662078970_a1aaf77d2c_o.png)
 
 Gõ lệnh
 
@@ -91,7 +91,7 @@ npm init
 
 Nếu bạn không nhập gì cả và nhấn enter, npm sẽ dùng tham số default
 
-![](https://farm3.staticflickr.com/2902/33235009203_a69320020e_o.png)
+![](/images/flickr/2902/33235009203_a69320020e_o.png)
 
 # Bước 3: Cài đặt ở local folder
 
@@ -117,7 +117,7 @@ npm install browser-sync gulp --save-dev
 
 Tương tự, bạn cũng có thể bỏ qua các đoạn warning, thông báo
 
-![](https://farm4.staticflickr.com/3703/33662203760_71636d02d3_o.png)
+![](/images/flickr/3703/33662203760_71636d02d3_o.png)
 
 # Bước 5: Tạo gulp task
 

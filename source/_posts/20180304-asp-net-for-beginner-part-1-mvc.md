@@ -277,13 +277,13 @@ ASP.NET có kha khá phiên bản, `MVC1`, `MVC2`, `MVC3`, `MVC4`, và gần đ�
 
 Mở VSCode lên, nhấn Ctrl + \` để hiện Terminal, hoặc làm như hình
 
-![show termial](https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png)
+![show termial](/images/flickr/4710/39714628535_591c6163e7_o.png)
 
 dùng các lệnh `cd` để trỏ tới thư mục mong muốn tạo project của bạn
 
 hoặc
 
-![open in vscode](https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png)
+![open in vscode](/images/flickr/4712/39898696364_c24a372543_o.png)
 
 gõ
 
@@ -295,7 +295,7 @@ Bấm F5 > Chọn .NET Core
 
 Nếu bạn được hỏi "Required assets to build and debug are missing from blah blah blah", thì bấm Yes nhé
 
-![yes to build](https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png)
+![yes to build](/images/flickr/4800/38800136200_57afdcf698_o.png)
 
 Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET Core rồi nhé. Bạn có thể mở class HomeController để hiểu rõ hơn về mô hình MVC mình vừa nói ở trên.
 

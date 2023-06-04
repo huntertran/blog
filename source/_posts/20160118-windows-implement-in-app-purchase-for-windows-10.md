@@ -68,7 +68,7 @@ Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Stor
 
 Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.
 
-![](https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png)
+![](/images/flickr/1563/24454812865_46046851ea_o.png)
 
 Hide this app in the Store
 
@@ -77,7 +77,7 @@ Hide this app in the Store
 
 In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được
 
-![](https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png)
+![](/images/flickr/1538/24087084229_5b67cc60ea_o.png)
 
 Tạo một In-App Purchase
 
@@ -169,7 +169,7 @@ else
 
 Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật
 
-![](https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png)
+![](/images/flickr/1616/23825747414_ddb694db19_o.png)
 
 Có vẻ tốt rồi. Tới bước cuối cùng nhé
 
@@ -178,6 +178,6 @@ Có vẻ tốt rồi. Tới bước cuối cùng nhé
 
 Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công
 
-![](https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png)
+![](/images/flickr/1461/23829331723_6f852496b8_o.png)
 
 > Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center =.=)

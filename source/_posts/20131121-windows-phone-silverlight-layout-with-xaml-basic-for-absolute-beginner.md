@@ -19,7 +19,7 @@ Trong thời gian qua, nhất là khi Nokia tổ chức nhiều cuộc thi với
 
 Bài viết này sẽ giúp các bạn có một khái niệm chung về giao diện và biết cách sử dụng nó trong lập trình Windows Phone nhé
 
-![xaml](https://farm1.staticflickr.com/819/40941396061_a7abc65129_o.png)
+![xaml](/images/flickr/819/40941396061_a7abc65129_o.png)
 
 Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn những điều cơ bản nhất về giao diện trong XAML
 <!-- more -->

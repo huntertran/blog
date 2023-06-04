@@ -11,7 +11,7 @@ Lưu ý: chỉ dành cho sinh viên UIT
 <!-- more -->
 > **_Chinh phục Lumia cùng WP Competition._**
 >
-> ![](http://farm3.staticflickr.com/2819/10642027536_ed0a9a6c2a_z.jpg)
+> ![](/images/flickr/2819/10642027536_ed0a9a6c2a_z.jpg)
 
 **_Giải thưởng_**
 > 

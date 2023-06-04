@@ -46,7 +46,7 @@ Khi đưa ra một bộ dữ liệu training (`training set`), mục tiêu của
 
 Như vậy, process của chúng ta sẽ như sau:
 
-![process](https://farm2.staticflickr.com/1844/43995414074_2c530b4cb8_o.png)
+![process](/images/flickr/1844/43995414074_2c530b4cb8_o.png)
 
 Khi y là một giá trị liên tục, ví dụ như giá nhà, giá cổ phiếu, thì đây là một `regression problem`.
 
@@ -120,7 +120,7 @@ $latex \\frac{\\text{d}}{\\text{d}t}h=0+14-5(2t)=14-10t$
 
 Hàm số trên biểu thị _mức độ thay đổi_ của độ cao h tại thời điểm t. Như vậy, tại độ cao lớn nhất, \_mức độ thay đổi độ cao h = 0 (vì trái banh không tiếp tục bay cao lên nữa mà bắt đầu rơi xuống).
 
-![hypolic function](https://farm2.staticflickr.com/1972/43929799745_140b61938a_o.png)
+![hypolic function](/images/flickr/1972/43929799745_140b61938a_o.png)
 
 Vậy ta có:
 

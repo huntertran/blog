@@ -77,7 +77,7 @@ Resharper là một sản phẩm hỗ trợ dev kha khá của JetBrains
 
 Đặt con trỏ tại một string bất kỳ -> Resharper -> Refactor -> Move...
 
-![resharper move to resource](https://farm5.staticflickr.com/4750/39647359142_98791bd35d_o.png)
+![resharper move to resource](/images/flickr/4750/39647359142_98791bd35d_o.png)
 
 Resharper tính phí bản quyền
 
@@ -91,7 +91,7 @@ Visual Studio có một extension rất hay là [RestXManager](https://github.co
 
 Bạn có thể tìm và tải trực tiếp trong Visual Studio: `Tools &gt; Extensions and Updates &gt; Online &gt; search "ResXManager"`
 
-![ResXManager](https://farm5.staticflickr.com/4616/38972346614_45410a6157_o.png)
+![ResXManager](/images/flickr/4616/38972346614_45410a6157_o.png)
 
 hoặc
 
@@ -99,6 +99,6 @@ tại link sau: [https://marketplace.visualstudio.com/items?itemName=TomEnglert.
 
 Sau đó, tương tự như Resharper, đặt con trỏ tại một string bất kỳ > Chuột phải > Move to Resource
 
-![Move to Resource](https://farm5.staticflickr.com/4704/38783776745_f94606e40c_o.png)
+![Move to Resource](/images/flickr/4704/38783776745_f94606e40c_o.png)
 
 Còn một số chiêu khác với những loại DataAnnotation khác nữa bạn nhé

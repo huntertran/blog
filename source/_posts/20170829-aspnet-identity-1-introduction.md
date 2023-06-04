@@ -78,11 +78,11 @@ Bắt đầu nhảy vô nhé
 
 Để hiểu rõ hơn, bạn có thể tạo một Sample Project bằng ASP.NET, chọn Identity là Individual nhé File > New > Project...
 
-![New Project](https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png)
+![New Project](/images/flickr/4408/36631193821_b2fea13a5c_o.png)
 
 Ngay khi tạo xong, bạn có thể nhấn chạy luôn
 
-![Run Project](https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png)
+![Run Project](/images/flickr/4402/35961354023_95481c7d6a_o.png)
 
 # 3. Break-down
 <a id="markdown-break-down" name="break-down"></a>
@@ -123,7 +123,7 @@ Mở Web.config, kiếm `DefaultConnection`, bạn sẽ thấy connection string
 
 Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó
 
-![Database trong LocalDb](https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png)
+![Database trong LocalDb](/images/flickr/4337/36631439311_5da8d15c1a_o.png)
 
 Vậy bạn có tự hỏi làm sao mà mới chỉ chạy project thôi mà Identity đã tạo được database?
 
@@ -139,7 +139,7 @@ Một flow cơ bản là Dev viết các model và class -> Nhấn F5 -> EF tạ
 
 Identity tạo ra 5 bảng trong DB, và mỗi bảng đều liên hệ với nhau
 
-![Db Structure](https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png)
+![Db Structure](/images/flickr/4381/35961946823_1e233cd9ef_o.png)
 
 Tất cả các trường Id đều dùng nvarchar(128), giá trị lưu trữ là code GUID
 

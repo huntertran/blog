@@ -32,7 +32,7 @@ Nhìn vô biết xài liền, nhưng mà dù sao cũng hướng dẫn bạn mộ
 
 # 2. Using it
 
-![](https://farm2.staticflickr.com/1528/25014426576_2bb0afed82_o.png)
+![](/images/flickr/1528/25014426576_2bb0afed82_o.png)
 
 Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịch với các slider, nút này nọ để hiểu rõ hơn về app nhóe
 
@@ -40,11 +40,11 @@ Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịc
 
 Nhấn cái nút dấu + nhỏ nhỏ
 
-![](https://farm6.staticflickr.com/5627/22493108391_1a6c030571_o.png)
+![](/images/flickr/5627/22493108391_1a6c030571_o.png)
 
 Trong trang này, bạn có thể thêm các size mới của riêng mình
 
-![](https://farm2.staticflickr.com/1536/25014463126_d77238d3c3_o.png)
+![](/images/flickr/1536/25014463126_d77238d3c3_o.png)
 
 Platform name is the name of your custom collection. By this way, you can create many platforms that match your need, and choose to generate images for these custom platform or not.
 
@@ -66,7 +66,7 @@ Cái hay ho nhứt là, dần dần, danh sách các platform do bạn tạo ra 
 
 Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là "Update Database"
 
-![](https://farm2.staticflickr.com/1590/24922870222_cf003efd5f_o.png)
+![](/images/flickr/1590/24922870222_cf003efd5f_o.png)
 
 Bình thường, app sẽ update database tự động. Nhưng vì lý do nào đó (kiểu như bạn đang xài dữ liệu 3g, hay PC đang connect tới mạng chập chờn chả hạn), bạn có thể check update bằng tay. Cái này chỉ update cái danh sách platform default, không phải cái custom do bạn tự tạo, nên hok sao âu.
 

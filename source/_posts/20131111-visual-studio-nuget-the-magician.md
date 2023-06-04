@@ -12,7 +12,7 @@ date: 2013-11-11 09:20:58
 
 Khi sử dụng Visual Studio để lập trình, chắc hẳn sẽ có lúc bạn cần thêm các thư viện từ bên ngoài. Cách cũ là lên Google search (Bing search), rồi tìm thư viện, tải về và add thủ công vào Project. Từ bây giờ, bạn không cần phải làm như thế nữa.
 
-![nuget](https://farm1.staticflickr.com/819/40232598394_27c397f3e4_o.png)
+![nuget](/images/flickr/819/40232598394_27c397f3e4_o.png)
 
 Nuget là một công cụ giúp bạn thêm các thư viện ngoài vào Project của mình. Sử dụng Nuget rất đơn giản và dễ dàng
 <!-- more -->

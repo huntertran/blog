@@ -29,7 +29,7 @@ Một ghi chú nhỏ khác là không những tên app, mà tất cả các thô
 
 Có qua cũng phải có lại. Nếu app của bạn thực sự tốt, nội dung độc đáo, tạo ra giá trị hữu ích cho người dùng, dần dần app của bạn sẽ được xếp lên đầu các kết quả tìm kiếm, thậm chí chỉ cần gõ từ khóa là app sẽ hiện ra ngay dưới khung suggestion luôn.
 
-![](https://farm2.staticflickr.com/1572/24579499753_e6d445c1db_o.png)
+![](/images/flickr/1572/24579499753_e6d445c1db_o.png)
 
 Khuyến cáo: Sử dụng app Universal Logo Maker for Windows để tạo ra bộ Icon cho App của bạn trong 5 nốt nhạc.
 

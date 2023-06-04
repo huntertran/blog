@@ -91,7 +91,7 @@ FDM khắc phục một số nhược điểm mà IDM gặp phải: \* Không ph
 
 > Alternative: [GIMP](https://www.gimp.org/) + [VirtualDub](http://www.virtualdub.org/) + [Capture One for Sony](https://www.phaseone.com/en/Products/Software/Capture-One-for-Sony/Sony-Pro.aspx)
 
-![capture one](https://farm5.staticflickr.com/4672/39605316274_a9efbb2b0e_o.png)
+![capture one](/images/flickr/4672/39605316274_a9efbb2b0e_o.png)
 
 Adobe Photoshop thì không cần phải nói nhiều. Để tìm được tool thay thế cho nó, mình đã phải tốn kha khá thời gian và công sức, nhưng vẫn chưa thật sự hài lòng.
 
@@ -105,7 +105,7 @@ GIMP là bộ phần mềm chính thay thế cho Photoshop, điểm mạnh của
 
 > Alternative: [Visual Studio Code](https://code.visualstudio.com/)
 
-![vscode](https://farm5.staticflickr.com/4648/25445632457_8ef1831933_o.png)
+![vscode](/images/flickr/4648/25445632457_8ef1831933_o.png)
 
 Sublime Text là một dạng phần mềm như kiểu WinRar, bạn có thể 'evaluate' nó mãi mãi, nhưng nhìn chung, nó vẫn là một phần mềm có tính phí bản quyền
 

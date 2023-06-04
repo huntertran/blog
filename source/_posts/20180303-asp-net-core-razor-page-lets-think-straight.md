@@ -34,13 +34,13 @@ Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn b�
 
 **Mô hình MVC**
 
-![mvc pattern](https://farm1.staticflickr.com/794/39482986360_fe3ba6ff76_o.png)
+![mvc pattern](/images/flickr/794/39482986360_fe3ba6ff76_o.png)
 
 > Nếu bạn muốn làm quen với mô hình MVC, có thể đọc bài viết [\[ASP.NET for Beginner\] – Part 1 – MVC](https://huntertran.ca/2018/03/04/asp-net-for-beginner-part-1-mvc/)
 
 **'Mô hình' Razor Page**
 
-![razor page pattern](https://farm1.staticflickr.com/822/40395935845_bdb4073f2f_o.png)
+![razor page pattern](/images/flickr/822/40395935845_bdb4073f2f_o.png)
 
 # 3. Các vấn đề của MVC
 

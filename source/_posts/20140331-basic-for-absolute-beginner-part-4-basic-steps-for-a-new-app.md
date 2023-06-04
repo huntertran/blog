@@ -148,7 +148,7 @@ Model là cấu trúc dữ liệu của bạn. Thường thì công việc này,
 
 Tuy nhiên, nếu bạn nhận dữ liệu dạng Json, thì có một các vui hơn để tự động hóa việc này: [JsonUtils](https://jsonutils.com/)
 
-![](https://farm5.staticflickr.com/4590/25062147588_bdc3372aa0_o.png)
+![](/images/flickr/4590/25062147588_bdc3372aa0_o.png)
 
 > 1.  Chọn ngôn ngữ là C#
 > 2.  Sử dụng Pascal Case cho tên các thuộc tính

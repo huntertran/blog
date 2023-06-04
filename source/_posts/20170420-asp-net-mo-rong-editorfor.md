@@ -112,7 +112,7 @@ public TextBoxWithCheck FancyBox { get; set; }
 
 Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy
 
-![textbox with checkbox](https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png)
+![textbox with checkbox](/images/flickr/2897/33308184454_8240d60dd1_o.png)
 
 Rõ ràng là chả có cái default control nào có thể làm được trò này, mà EditorFor cũng không biết chọn cái gì để render cái property "FancyBox" của kiểu "TextBoxWithCheck".
 
@@ -122,7 +122,7 @@ Vì thế, bạn sẽ **_dạy_** nó cách render nhóe.
 
 *   Tạo folder "EditorTemplates" trong Views > Shared
 
-![folder structure](https://farm3.staticflickr.com/2855/34151179025_3e849d7d2c_o.png)
+![folder structure](/images/flickr/2855/34151179025_3e849d7d2c_o.png)
 
 *   Thêm View mới vào folder đó, đặt tên là "TextBoxWithCheck.cshtml" (phải trùng tên với cái custom class)
 

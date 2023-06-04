@@ -33,11 +33,11 @@ Ngoài ra, khi bạn cần nghiên cứu hiệu suất của một đoạn code 
 
 Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips
 
-![](https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png)
+![](/images/flickr/5643/22190175850_d39fa83775_o.png)
 
 Bấm vào nó (chỗ <= 1ms elapsed), sẽ hiện ra công cụ phân tích
 
-![](https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png)
+![](/images/flickr/5816/22190283100_3900ce5068_o.png)
 
 # 3. Dùng PerfTips
 
@@ -45,35 +45,35 @@ Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng �
 
 Thay vì chèn 2 đoạn code Stopwatch vào đầu và cuối của phương thức này, bạn chỉ cần đặt 2 breakpoint vào chỗ đó
 
-![](https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png)
+![](/images/flickr/5713/22378430175_006386fcd1_o.png)
 
 Nhấn F5 để chạy, và Visual Studio dừng lại ngay chỗ Breakpoint đầu tiên
 
-![](https://farm1.staticflickr.com/570/22190464430_6f893119e5_o.png)
+![](/images/flickr/570/22190464430_6f893119e5_o.png)
 
 Nhấn F5 (hoặc continue) để Visual Studio chạy tiếp tới breakpoint thứ 2, và bạn sẽ thấy PerfTips hiện ra
 
-![](https://farm1.staticflickr.com/683/22190602900_3927a739c8_o.png)
+![](/images/flickr/683/22190602900_3927a739c8_o.png)
 
 Như vậy ta có thể thấy, method LoadImages chạy mất 2780 milisecond. Bây giờ chạy lại toàn bộ một lần nữa, nhưng dừng lại ở từng dòng code một để xem dòng nào tốn nhiều thời gian nhất.
 
 Nhấn F10 để chạy từng dòng code một. Vài dòng đầu tiên, mỗi dòng không quá 20 ms, quá tốt.
 
-![](https://farm1.staticflickr.com/688/22352672686_50a793488b_o.png)
+![](/images/flickr/688/22352672686_50a793488b_o.png)
 
 Thế như tới dòng GetImageFromCloud tốn tới 1391 ms
 
-![](https://farm6.staticflickr.com/5791/22352751386_5a52119746_o.png)
+![](/images/flickr/5791/22352751386_5a52119746_o.png)
 
 Và dòng LoadImagesFromDisk tốn tới 1361 ms
 
-![](https://farm6.staticflickr.com/5718/22190832080_f489be8d8a_o.png)
+![](/images/flickr/5718/22190832080_f489be8d8a_o.png)
 
 Vậy tại sao ta không cho 2 method này chạy song song với nhau nhỉ?
 
 Đổi code thành như sau
 
-![](https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png)
+![](/images/flickr/5624/22378857485_c2d338a7d3_o.png)
 
 Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 2079 ms, giảm cỡ 700 ms, tương đương 25%. Quá tuyệt phải không?
 

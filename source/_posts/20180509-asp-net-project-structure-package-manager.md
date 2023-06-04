@@ -118,6 +118,6 @@ Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn l�
 
 Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy
 
-![worked on my machine](https://farm1.staticflickr.com/966/27130244167_1f468f1efa_o.png)
+![worked on my machine](/images/flickr/966/27130244167_1f468f1efa_o.png)
 
 Thế nhé bạn ;)
