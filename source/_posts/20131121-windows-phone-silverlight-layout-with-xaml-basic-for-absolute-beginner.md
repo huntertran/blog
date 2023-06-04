@@ -56,21 +56,11 @@ Trong XAML, bạn có 2 control chính dùng để "chứa" các control khác, 
 
 2 control này khá khác nhau, ở bảng dưới
 
-**Grid**
-
-**StackPanel**
-
-Các control con có thể đè lên nhau
-
-Các control con xếp theo hàng dọc hoặc ngang, không đè lên nhau
-
-Có thể chia thành dòng và cột
-
-Không có
-
-Tự động mở rộng theo control chứa nó
-
-Mở rộng theo nội dung bên trong nó
+| Grid                                 	| StackPanel                                                        	|
+|--------------------------------------	|-------------------------------------------------------------------	|
+| Các control con có thể đè lên nhau   	| Các   control con xếp theo hàng dọc hoặc ngang, không đè lên nhau 	|
+| Có thể chia thành dòng và cột        	| Không có                                                          	|
+| Tự động mở rộng theo control chứa nó 	| Mở rộng   theo nội dung bên trong nó                              	|
 
 Hãy tạo một Project Windows Phone mới và thử nghiệm những gì Grid có thể làm được
 
