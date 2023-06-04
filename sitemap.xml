@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.ca/win32console/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/internettips/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -39,60 +48,6 @@
   
   <url>
     <loc>https://huntertran.ca/tags/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/win32console/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/14/gecko-dom-logging-system/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/07/12/java-for-beginner-2-hello-world-in-java/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -281,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/about/</loc>
+    <loc>https://huntertran.ca/about/thankyou</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -290,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/about/thankyou</loc>
+    <loc>https://huntertran.ca/about/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -327,24 +282,6 @@
   
   <url>
     <loc>https://huntertran.ca/csharp/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -857,6 +794,51 @@
   </url>
   
   <url>
+    <loc>https://huntertran.ca/2019/06/14/gecko-dom-logging-system/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/07/12/java-for-beginner-2-hello-world-in-java/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -902,7 +884,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
+    <loc>https://huntertran.ca/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -911,7 +893,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
+    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -1227,6 +1209,24 @@
   
   <url>
     <loc>https://huntertran.ca/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
     
     <lastmod>2023-06-04</lastmod>
     

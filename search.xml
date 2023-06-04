@@ -213,25 +213,6 @@ using std::endl;</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>[IC05] Đăng ký tài khoản Mentor</title>
-    <url>/2012/03/08/ic05/</url>
-    <content><![CDATA[<p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
-<span id="more"></span>
-<p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
-<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png" alt="1-14-2012 8-40-26 PM" title="1-14-2012 8-40-26 PM"></a></p>
-<p>Bước 2: Điền các thông tin tương tự hình dưới</p>
-<p>Thay đổi thông tin cho phù hợp với bạn</p>
-<p>Lưu ý mục Participant Type: Mentor</p>
-<p>Sau đó, bấm dấu check đồng ý với các điều khoản, điều kiện của cuộc thi</p>
-<p>Nhấn nút Register</p>
-<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-49-10-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-49-10-pm.png" alt="1-14-2012 8-49-10 PM" title="1-14-2012 8-49-10 PM"></a></p>
-<p>Vậy là xong.</p>
-]]></content>
-      <categories>
-        <category>Imagine Cup</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Microsoft Student Partner [MSP] – for life</title>
     <url>/2013/08/29/microsoft-student-partner-msp-for-life-2/</url>
     <content><![CDATA[<p>Passionate about Computer Science, since high school, I was fortunate to learn about the Microsoft Student Partner program by Microsoft for students worldwide.</p>
@@ -259,6 +240,25 @@ using std::endl;</code></pre>
       <tags>
         <tag>-- msp</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>[IC05] Đăng ký tài khoản Mentor</title>
+    <url>/2012/03/08/ic05/</url>
+    <content><![CDATA[<p>Các bước đăng ký một tài khoản đúng tiêu chuẩn cho Imagine Cup 2012</p>
+<span id="more"></span>
+<p>Bước 1: Truy cập trang Imagine Cup: <a href="http://www.imaginecup.com/">www.imaginecup.com</a>, bấm nút Sign Up</p>
+<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-40-26-pm.png" alt="1-14-2012 8-40-26 PM" title="1-14-2012 8-40-26 PM"></a></p>
+<p>Bước 2: Điền các thông tin tương tự hình dưới</p>
+<p>Thay đổi thông tin cho phù hợp với bạn</p>
+<p>Lưu ý mục Participant Type: Mentor</p>
+<p>Sau đó, bấm dấu check đồng ý với các điều khoản, điều kiện của cuộc thi</p>
+<p>Nhấn nút Register</p>
+<p><a href="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-49-10-pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/1-14-2012-8-49-10-pm.png" alt="1-14-2012 8-49-10 PM" title="1-14-2012 8-49-10 PM"></a></p>
+<p>Vậy là xong.</p>
+]]></content>
+      <categories>
+        <category>Imagine Cup</category>
+      </categories>
   </entry>
   <entry>
     <title>Windows Phone 7 Chooser</title>
@@ -686,7 +686,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 </li>
 <li><p>Rất có khả năng các bạn sẽ được gặp gỡ những lãnh đạo cao cấp nhất của Microsoft</p>
 </li>
-<li><p>Giải thưởng lại tăng <img src="http://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-flirtmale.png" alt="Flirt male"></p>
+<li><p>Giải thưởng lại tăng ;)</p>
 </li>
 <li><p>Nếu ý tưởng tốt, bạn có thể sẽ được tài trợ một khoản tiền để lập một Start Up</p>
 </li>
@@ -707,7 +707,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>tiếp theo đó, anh Toàn đã giới thiệu về mô hình thác nước truyền thống, rồi tới Agile, Scrum và sự hỗ trợ của Microsoft đối với các mô hình này bằng Team Foundation Service.</p>
 <p>Từng chức vụ trong một dự án phát triển phần mềm được anh giới thiệu khá kỹ lưỡng và chi tiết. Anh cũng chia sẻ một số kinh nghiệm làm việc của mình cho các bạn.</p>
 <blockquote>
-<p>Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” &#x3D;&gt; kết quả là bạn được tặng một cái áo Microsoft cực cool <img src="/images/2013/10/wlemoticon-partysmile.png" alt="smile"></p>
+<p>Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” &#x3D;&gt; kết quả là bạn được tặng một cái áo Microsoft cực cool :D</p>
 </blockquote>
 <h1 id="4-Ket-thuc"><a href="#4-Ket-thuc" class="headerlink" title="4. Kết thúc"></a>4. Kết thúc</h1><p>kết thúc chương trình, anh Lương Thanh Thế nói về chương trình tuyển chọn MSP năm 2014</p>
 <ul>
@@ -747,7 +747,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Đây là một textblock bình thường</p>
 <p>Vấn đề được đặt ra: Làm thế nào để có thể hiển thị 2 dòng trong Textblock này?</p>
 <p><img src="https://farm8.staticflickr.com/7386/10136108785_5fe51d5aa7_o.png"></p>
-<p>Problem Solved <img src="/images/2013/10/wlemoticon-partysmile1.png" alt="Party smile"></p>
+<p>Problem Solved :D</p>
 <p>Vậy còn trong Code C# thì sao?</p>
 <p><img src="https://farm8.staticflickr.com/7316/10136204654_88cfbb6b67_o.png"></p>
 <h1 id="2-Canh-deu-2-ben-cho-Textblock"><a href="#2-Canh-deu-2-ben-cho-Textblock" class="headerlink" title="2. Canh đều 2 bên cho Textblock"></a>2. Canh đều 2 bên cho Textblock</h1><p>chờ chút đã, canh đều 2 bên thì có gì khó. Justify là xong</p>
@@ -977,10 +977,21 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
     <content><![CDATA[<p>Lưu ý: chỉ dành cho sinh viên UIT</p>
 <span id="more"></span>
 <blockquote>
-<p><strong><em>Chinh phục Lumia cùng WP Competition.</em></strong> <img src="http://farm3.staticflickr.com/2819/10642027536_ed0a9a6c2a_z.jpg"> <strong><em>Giải thưởng</em></strong> <img src="http://farm3.staticflickr.com/2821/10642032485_8e23de30db_b.jpg"> <img src="http://farm3.staticflickr.com/2808/10642040315_da77331be4_b.jpg"> <strong><em>Quy trình tham gia</em></strong> <img src="http://farm3.staticflickr.com/2868/10642011045_8a0847a1f6_b.jpg"> <img src="http://farm8.staticflickr.com/7343/10642268783_f97e191b4c_b.jpg"></p>
-<p><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"><img src="http://forum.uit.edu.vn/emo/dribble.gif" title="Dribble"> <img src="http://farm6.staticflickr.com/5500/10642293243_21e53de8fb_z.jpg"></p>
-<p><img src="http://forum.uit.edu.vn/emo/Funny.gif" title="Funny"><img src="http://forum.uit.edu.vn/emo/Funny.gif" title="Funny"> <strong><em>Chỉ dành riêng UIT SV</em></strong> <img src="http://forum.uit.edu.vn/emo/brick.png" title="Brick"><img src="http://forum.uit.edu.vn/emo/brick.png" title="Brick"><img src="http://forum.uit.edu.vn/emo/brick.png" title="Brick"><img src="http://forum.uit.edu.vn/emo/brick.png" title="Brick"></p>
+<p><strong><em>Chinh phục Lumia cùng WP Competition.</em></strong></p>
+<p><img src="http://farm3.staticflickr.com/2819/10642027536_ed0a9a6c2a_z.jpg"></p>
 </blockquote>
+<p><strong><em>Giải thưởng</em></strong></p>
+<blockquote>
+<p><img src="http://farm3.staticflickr.com/2821/10642032485_8e23de30db_b.jpg"></p>
+<p><img src="http://farm3.staticflickr.com/2808/10642040315_da77331be4_b.jpg"></p>
+</blockquote>
+<p><strong><em>Quy trình tham gia</em></strong></p>
+<blockquote>
+<p><img src="http://farm3.staticflickr.com/2868/10642011045_8a0847a1f6_b.jpg"></p>
+<p><img src="http://farm8.staticflickr.com/7343/10642268783_f97e191b4c_b.jpg"></p>
+<p><img src="http://farm6.staticflickr.com/5500/10642293243_21e53de8fb_z.jpg"></p>
+</blockquote>
+<p><strong><em>Chỉ dành riêng UIT SV</em></strong></p>
 ]]></content>
       <categories>
         <category>Event</category>
@@ -1187,16 +1198,24 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Nếu bạn chưa tham gia, hãy tham gia ngay</p>
 <p>Đăng nhập <a href="https://www.imaginecup.com/">www.imaginecup.com</a></p>
 <p>Chọn Competitions &gt; Braingame : <a href="https://www.imaginecup.com/Competition/1005">https://www.imaginecup.com/Competition/1005</a></p>
-<p>Tại đây, bạn sẽ được hướng dẫn các bước làm bài thi Braingame Vào Dashboard <img src="https://farm6.staticflickr.com/5478/11364526066_596ba840fe_o.png"></p>
-<p>Tìm mục My Individual Challenge <img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/2-challenges.png"></p>
-<p>Click vào ô Register để đăng ký, quá trình đăng ký diễn ra tự động, mất khoảng 2s <img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/3-register.png"></p>
-<p>Sau đó, click vào ô Compete để mở khóa bài Quiz <img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/4-compete.png"></p>
-<p>Bấm vào đường link Take the Quiz <img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/5-start.png"></p>
+<p>Tại đây, bạn sẽ được hướng dẫn các bước làm bài thi Braingame Vào Dashboard</p>
+<p><img src="https://farm6.staticflickr.com/5478/11364526066_596ba840fe_o.png"></p>
+<p>Tìm mục My Individual Challenge</p>
+<p><img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/2-challenges.png"></p>
+<p>Click vào ô Register để đăng ký, quá trình đăng ký diễn ra tự động, mất khoảng 2s</p>
+<p><img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/3-register.png"></p>
+<p>Sau đó, click vào ô Compete để mở khóa bài Quiz</p>
+<p><img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/4-compete.png"></p>
+<p>Bấm vào đường link Take the Quiz</p>
+<p><img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/5-start.png"></p>
 <p>Bắt đầu làm bài khi bấm vào đường Link như hình trên</p>
 <p><strong>QUAN TRỌNG:</strong></p>
-<p>Sau khi làm bài xong, sẽ có một bảng hiện ra, bạn bấm vào chữ click here như hình dưới thì điểm của bạn mới được ghi nhận <img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/6-return.png"></p>
-<h1 id="3-Project-Blueprint"><a href="#3-Project-Blueprint" class="headerlink" title="3. Project Blueprint"></a>3. Project Blueprint</h1><p>Project Blueprint là một minigame thú vị dành cho tất cả các đội tham gia Imagine Cup 2014 Trong Project Blueprint, bạn có cơ hội thể hiện ý tưởng của mình và nhận được giải thưởng lên tới $3000 của ban tổ chức. Để tham gia được minigame này, bạn làm theo các bước sau Vào Dashboard của bạn <img src="https://farm4.staticflickr.com/3765/11364718153_e5f7c29580_o.png"></p>
-<p>Đăng ký tên Team, thành viên trong Team. Bước này là bắt buộc. Sau đó, quay trở lại Dashboard, click vào tên team của bạn <img src="https://farm8.staticflickr.com/7360/11364637476_15e8cf2bac_o.png"></p>
+<p>Sau khi làm bài xong, sẽ có một bảng hiện ra, bạn bấm vào chữ click here như hình dưới thì điểm của bạn mới được ghi nhận</p>
+<p><img src="https://cms.imaginecup.com/images/default-source/GetStarted/braingames/6-return.png"></p>
+<h1 id="3-Project-Blueprint"><a href="#3-Project-Blueprint" class="headerlink" title="3. Project Blueprint"></a>3. Project Blueprint</h1><p>Project Blueprint là một minigame thú vị dành cho tất cả các đội tham gia Imagine Cup 2014 Trong Project Blueprint, bạn có cơ hội thể hiện ý tưởng của mình và nhận được giải thưởng lên tới $3000 của ban tổ chức. Để tham gia được minigame này, bạn làm theo các bước sau Vào Dashboard của bạn</p>
+<p><img src="https://farm4.staticflickr.com/3765/11364718153_e5f7c29580_o.png"></p>
+<p>Đăng ký tên Team, thành viên trong Team. Bước này là bắt buộc. Sau đó, quay trở lại Dashboard, click vào tên team của bạn</p>
+<p><img src="https://farm8.staticflickr.com/7360/11364637476_15e8cf2bac_o.png"></p>
 <p>Bạn sẽ thấy có nhiều Challenge đang diễn ra, bên cạnh là thời gian biểu của nó. Cũng tương tự như Braingame, bạn đánh dấu vào 2 ô Registered và Competing để bắt đầu nộp bài Sau khi đánh dấu, đường Link Assign Roles hiện ra, bạn đăng ký vai trò của các thành viên trong nhóm mình.</p>
 <p>Đăng ký xong, link Submission sẽ xuất hiện Hỗ trợ cho các bạn tham gia Braingame, Imagine Cup có một số tài liệu</p>
 <p>Mẫu bài nộp: <a href="https://cms.imaginecup.com/docs/default-source/rules/imagine-cup-project-blueprint-challenge-template.doc?sfvrsn=2">https://cms.imaginecup.com/docs/default-source/rules/imagine-cup-project-blueprint-challenge-template.doc?sfvrsn=2</a></p>
@@ -1351,7 +1370,8 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 </li>
 </ul>
 <h1 id="1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi"><a href="#1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi" class="headerlink" title="1. Cách thức ứng dụng hoạt động trên thiết bị"></a><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></h1><p>Khi cài ứng dụng lên thiết bị, bạn sẽ có một mô hình như sau:</p>
-<p>Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1 <img src="http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png"></p>
+<p>Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1</p>
+<p><img src="http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png"></p>
 <p>Các mũi tên màu vàng biểu thị cho khả năng truy xuất</p>
 <p>Nhìn hình trên, bạn sẽ thấy Ứng dụng của bạn chỉ được phép truy cập vào Isolated Storage của chính nó mà thôi (Cái tên Isolated tức là “Cô lập”)</p>
 <p>Ngoài ra, nếu muốn truy cập vào thẻ nhớ, ứng dụng của bạn bắt buộc phải thông qua API của hệ điều hành. Hiện tại thì Windows Phone chỉ mới cho phép đọc ghi các file media (nhạc, hình, video) lên thẻ nhớ mà thôi.</p>
@@ -1817,14 +1837,54 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
 <p><a href="https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] - [Part 6] - Source Control</a></p>
 <h1 id="Khai-niem"><a href="#Khai-niem" class="headerlink" title="Khái niệm"></a>Khái niệm</h1><p>Source Control là một cách để quản lý source code của bạn. Quản lý có nghĩa là bạn có thể xem các phiên bản, lưu trữ, phục hồi, chia sẻ, vân vân và vân vân. Khi code nhầm một cái gì đó, bạn có thể phục hồi lại đoạn code trước đó. Bạn có thể tạo một project mới từ source có sẵn, bạn có thể cho phép một thành viên mới tải toàn bộ source code về để làm việc chung trên một dự án, và người này cũng có thể xem, xóa, lưu phiên bản, vân vân đối với các phần code của họ Ở mức cơ bản nhất, bài blog này sẽ hướng dẫn bạn sử dụng Team Foundation Server để quản lý phiên bản source code của bạn</p>
-<h1 id="Dang-ky-tai-khoan"><a href="#Dang-ky-tai-khoan" class="headerlink" title="Đăng ký tài khoản"></a>Đăng ký tài khoản</h1><p>Team Foundation Server của Microsoft, hiện tại đã được đổi tên thành Visual Studio Online, là một dịch vụ miễn phí. Bạn có thể tạo bao nhiêu Project tùy thích, nhưng tất cả các Project, bạn chỉ được thêm tối đa 5 thành viên miễn phí. Như vậy, khi đăng ký tài khoản Visual Studio Online (VSO), bạn sẽ được cấp một vùng lưu trữ không giới hạn (đúng rồi, không giới hạn), tối đa 5 thành viên, không giới hạn số project, và nhiều công cụ khác đòi hỏi phải có kiến thức chuyên sâu để sử dụng <a href="http://www.visualstudio.com/">http://www.visualstudio.com/</a> Vào trang trên, bấm nút Get Started for Free màu tím <img src="https://i2.wp.com/farm8.staticflickr.com/7423/14077027941_131d9fe8b9_o.png"> Bạn sẽ được đưa đến một trang, dùng tài khoản Microsoft để đăng nhập trang này <img src="https://i0.wp.com/farm8.staticflickr.com/7042/14077110182_67ddb90db7_o.png"> Bạn điền thêm một số thông tin cần thiết, hoặc trả lời bất kỳ câu hỏi nào mà nó đưa ra <img src="https://i1.wp.com/farm8.staticflickr.com/7426/14057171186_c1f58d0d92_o.png"> Sau khi đăng nhập, bạn đã có thể tạo Project đầu tiên của mình</p>
-<h1 id="Tren-Service"><a href="#Tren-Service" class="headerlink" title="Trên Service"></a>Trên Service</h1><h2 id="Tao-Project"><a href="#Tao-Project" class="headerlink" title="Tạo Project"></a>Tạo Project</h2><p><img src="https://i1.wp.com/farm3.staticflickr.com/2939/14077138942_7fc7d459e9_o.png"> Bấm vào nút New để tạo một Project mới <img src="https://i1.wp.com/farm8.staticflickr.com/7337/13893692388_453e4325a5_o.png"> Điền vào các thông tin cần thiết và bấm nút Create Project Sau khi tạo xong, bấm nút Navigate to Project để tới trang quản lý Project của bạn Trang này chứa nhiều thông tin, hiện tại bạn chỉ cần quan tâm tới mục Member <img src="https://i0.wp.com/farm8.staticflickr.com/7306/14100357193_a79e22a996_o.png"> Tại đây sẽ hiển thị toàn bộ thành viên có trong project của bạn. Bấm nút Manage… để thêm hoặc bớt các thành viên</p>
-<h2 id="Quan-ly-thanh-vien"><a href="#Quan-ly-thanh-vien" class="headerlink" title="Quản lý thành viên"></a>Quản lý thành viên</h2><h3 id="Trong-mot-Project"><a href="#Trong-mot-Project" class="headerlink" title="Trong một Project"></a>Trong một Project</h3><p><img src="https://i0.wp.com/farm3.staticflickr.com/2937/13893748200_d0b2bfd795_o.png"> Ở tên mỗi người có một nút Remove. Bấm vào đây để xóa một thành viên. Bấm nút Add để thêm mới Thành viên bắt buộc phải sử dụng một tài khoản Microsoft để sử dụng dịch vụ này</p>
-<h3 id="Trong-toan-bo-cac-Project"><a href="#Trong-toan-bo-cac-Project" class="headerlink" title="Trong toàn bộ các Project"></a>Trong toàn bộ các Project</h3><p>Ở trang đầu tiên, nhấn vào nút Users để xem danh sách toàn bộ thành viên có trong tài khoản của bạn <img src="https://i0.wp.com/farm8.staticflickr.com/7426/14077207562_e677848f77_o.png"> Hiện tại có nhiều loại tài khoản, VS Utimate with MSDN là tài khoản của các bạn Microsoft Student Parter, Early Adopter là tài khoản miễn phí, sau này sẽ được đổi thành Basic <img src="https://i2.wp.com/farm8.staticflickr.com/7420/14080365235_3f8073d7a7_o.png"> Nếu bạn là một MSP, bạn có thể dùng MSDN Subscription của mình để đăng ký VSO. Bạn có thể thêm không giới hạn các tài khoản VS Ultimate with MSDN. Nhưng bạn chỉ được thêm tối đa 5 tài khoản Basic thôi. Hình dưới đây sẽ thể hiện điều đó <img src="https://i1.wp.com/farm6.staticflickr.com/5455/13893764527_924181318e_o.png"> Vậy là xong, Bây giờ, hãy mở Visual Studio lên để thiết lập nhé</p>
-<h1 id="Tren-Visual-Studio"><a href="#Tren-Visual-Studio" class="headerlink" title="Trên Visual Studio"></a>Trên Visual Studio</h1><h2 id="Connect-toi-tai-khoan-cua-ban"><a href="#Connect-toi-tai-khoan-cua-ban" class="headerlink" title="Connect tới tài khoản của bạn"></a>Connect tới tài khoản của bạn</h2><p>Chọn Menu &gt; Team &gt; Connect to Team Foudation Server Đăng nhập bằng chính tài khoản Microsoft bạn đã dùng để tạo Online <img src="https://i2.wp.com/farm8.staticflickr.com/7181/14080415865_cea0f2115b_o.png"> Server có dạng: <a href="https://nickname.visualstudio.com/">https://nickname.visualstudio.com</a> Sau khi đăng nhập, tất cả các Project có sẵn trên Server sẽ được hiện ra. Tick vào các Project bạn muốn connect (các project bạn đang làm việc) và nhấn Connect</p>
-<h2 id="Them-Project-vao-Source-Control"><a href="#Them-Project-vao-Source-Control" class="headerlink" title="Thêm Project vào Source Control"></a>Thêm Project vào Source Control</h2><p>Bạn mở Solution của mình lên <img src="https://i0.wp.com/farm8.staticflickr.com/7386/13893812187_43fc27c6e2_o.png"> Sau khi mở ra, nhấn chuột phải vào Solution &gt; Add Solution to Source Control…, bạn sẽ được hỏi sử dụng dịch vụ nào. <img src="https://i0.wp.com/farm3.staticflickr.com/2928/14065466846_0be4d81154_o.png"> Git là một dịch vụ miễn phí, và khó sử dụng hơn so với Team Foundation. Một bản hiện ra, bạn chọn Project bạn vừa tạo trên Web, rồi nhấn OK <img src="https://i1.wp.com/farm6.staticflickr.com/5443/13902073928_3a5166bb42_o.png"> Quá trình thêm vào diễn ra âm thầm. Có thể bạn sẽ cảm nhận được Visual Studio bị đơ 2-3 giây. Sau đó, trước mỗi file trong Solution, sẽ có 1 biểu tượng dấu + <img src="https://i1.wp.com/farm8.staticflickr.com/7400/13902049219_54c1ce6b04_o.png"> Lúc này, Project của bạn đã được quản lý bởi Source Control Team Foundation Server. Tuy nhiên, đây mới chỉ là “thay đổi”. Bạn cần phải Check in để các thay đổi này được lưu lại. Bấm chuột phải vào Solution &gt; Check In… <img src="https://i1.wp.com/farm8.staticflickr.com/7068/14065573286_3388d5ff11_o.png"> Trong ô Comment, bạn nhập vào chú thích của lần check in này <img src="https://i2.wp.com/farm8.staticflickr.com/7451/13902095378_6c8b207a01_o.png"> Mục Included Changes (number) là nơi liệt kê các tập tin trong Solution đã bị thay đổi và sẽ được lưu lại Source Control trong lần check in này Sau khi kiểm tra tất cả các chi tiết, bạn nhấn Check in <img src="https://i2.wp.com/farm6.staticflickr.com/5527/14085562102_33c66105e1_o.png"> Sau khi check in thành công, một thông báo nhỏ xuất hiện, thông báo số changeset. Bạn sẽ cần con số này để phục hồi về sau <img src="https://i0.wp.com/farm6.staticflickr.com/5488/13902099877_0f0a7e14ab_o.png"> Quay trở lại Solution Explorer, bạn sẽ thấy trước mỗi file có hình một chiếc khóa, biểu hiện cho việc file này từ lần check in trước chưa bị thay đổi <img src="https://i1.wp.com/farm6.staticflickr.com/5484/14108858123_8884d622d9_o.png"></p>
-<h2 id="Chinh-sua-va-Check-in"><a href="#Chinh-sua-va-Check-in" class="headerlink" title="Chỉnh sửa và Check in"></a>Chỉnh sửa và Check in</h2><p>Khi bạn bắt đầu chỉnh sửa một file nào đó, biểu tượng chiếc khóa bị thay đổi <img src="https://i0.wp.com/farm3.staticflickr.com/2905/14085667152_399a036b26_o.png"> Để thay đổi này lưu vào Source Control, bạn nhấn chuột phải lên nó và chọn Check in. Lưu ý, khi thay đổi nhiều file trong Project, bạn có thể chọn cả Project để check in. Nếu thay đổi trong nhiều Project, bạn có thể chọn cả Solution để check in. Thông thường, chọn cả Solution sẽ đảm bảo bạn không “Check in” thiếu thứ gì. Team Foundation sẽ tự động tìm ra các file bị thay đổi của bạn</p>
-<h2 id="Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change"><a href="#Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change" class="headerlink" title="Get Latest Version – Get Specific Version – Undo Pending Change"></a>Get Latest Version – Get Specific Version – Undo Pending Change</h2><p>Nếu bạn làm trong một dự án nhiều thành viên, và các thành viên kia hoàn tất phần code của họ và Check in lên Server. Bạn sẽ phải lấy các phần code mới nhất về Nhấn chuột phải vào phần bạn muốn cập nhật &gt; Get Latest Version (Recursive) <img src="https://i1.wp.com/farm3.staticflickr.com/2933/13902262929_2db6b4718f_o.png"></p>
+<h1 id="Dang-ky-tai-khoan"><a href="#Dang-ky-tai-khoan" class="headerlink" title="Đăng ký tài khoản"></a>Đăng ký tài khoản</h1><p>Team Foundation Server của Microsoft, hiện tại đã được đổi tên thành Visual Studio Online, là một dịch vụ miễn phí. Bạn có thể tạo bao nhiêu Project tùy thích, nhưng tất cả các Project, bạn chỉ được thêm tối đa 5 thành viên miễn phí. Như vậy, khi đăng ký tài khoản Visual Studio Online (VSO), bạn sẽ được cấp một vùng lưu trữ không giới hạn (đúng rồi, không giới hạn), tối đa 5 thành viên, không giới hạn số project, và nhiều công cụ khác đòi hỏi phải có kiến thức chuyên sâu để sử dụng <a href="http://www.visualstudio.com/">http://www.visualstudio.com/</a> Vào trang trên, bấm nút Get Started for Free màu tím</p>
+<p><img src="https://i2.wp.com/farm8.staticflickr.com/7423/14077027941_131d9fe8b9_o.png"></p>
+<p>Bạn sẽ được đưa đến một trang, dùng tài khoản Microsoft để đăng nhập trang này</p>
+<p><img src="https://i0.wp.com/farm8.staticflickr.com/7042/14077110182_67ddb90db7_o.png"></p>
+<p>Bạn điền thêm một số thông tin cần thiết, hoặc trả lời bất kỳ câu hỏi nào mà nó đưa ra</p>
+<p><img src="https://i1.wp.com/farm8.staticflickr.com/7426/14057171186_c1f58d0d92_o.png"></p>
+<p>Sau khi đăng nhập, bạn đã có thể tạo Project đầu tiên của mình</p>
+<h1 id="Tren-Service"><a href="#Tren-Service" class="headerlink" title="Trên Service"></a>Trên Service</h1><h2 id="Tao-Project"><a href="#Tao-Project" class="headerlink" title="Tạo Project"></a>Tạo Project</h2><p><img src="https://i1.wp.com/farm3.staticflickr.com/2939/14077138942_7fc7d459e9_o.png"></p>
+<p>Bấm vào nút New để tạo một Project mới</p>
+<p><img src="https://i1.wp.com/farm8.staticflickr.com/7337/13893692388_453e4325a5_o.png"></p>
+<p>Điền vào các thông tin cần thiết và bấm nút Create Project Sau khi tạo xong, bấm nút Navigate to Project để tới trang quản lý Project của bạn Trang này chứa nhiều thông tin, hiện tại bạn chỉ cần quan tâm tới mục Member</p>
+<p><img src="https://i0.wp.com/farm8.staticflickr.com/7306/14100357193_a79e22a996_o.png"></p>
+<p>Tại đây sẽ hiển thị toàn bộ thành viên có trong project của bạn. Bấm nút Manage… để thêm hoặc bớt các thành viên</p>
+<h2 id="Quan-ly-thanh-vien"><a href="#Quan-ly-thanh-vien" class="headerlink" title="Quản lý thành viên"></a>Quản lý thành viên</h2><h3 id="Trong-mot-Project"><a href="#Trong-mot-Project" class="headerlink" title="Trong một Project"></a>Trong một Project</h3><p><img src="https://i0.wp.com/farm3.staticflickr.com/2937/13893748200_d0b2bfd795_o.png"></p>
+<p>Ở tên mỗi người có một nút Remove. Bấm vào đây để xóa một thành viên. Bấm nút Add để thêm mới Thành viên bắt buộc phải sử dụng một tài khoản Microsoft để sử dụng dịch vụ này</p>
+<h3 id="Trong-toan-bo-cac-Project"><a href="#Trong-toan-bo-cac-Project" class="headerlink" title="Trong toàn bộ các Project"></a>Trong toàn bộ các Project</h3><p>Ở trang đầu tiên, nhấn vào nút Users để xem danh sách toàn bộ thành viên có trong tài khoản của bạn</p>
+<p><img src="https://i0.wp.com/farm8.staticflickr.com/7426/14077207562_e677848f77_o.png"></p>
+<p>Hiện tại có nhiều loại tài khoản, VS Utimate with MSDN là tài khoản của các bạn Microsoft Student Parter, Early Adopter là tài khoản miễn phí, sau này sẽ được đổi thành Basic</p>
+<p><img src="https://i2.wp.com/farm8.staticflickr.com/7420/14080365235_3f8073d7a7_o.png"></p>
+<p>Nếu bạn là một MSP, bạn có thể dùng MSDN Subscription của mình để đăng ký VSO. Bạn có thể thêm không giới hạn các tài khoản VS Ultimate with MSDN. Nhưng bạn chỉ được thêm tối đa 5 tài khoản Basic thôi. Hình dưới đây sẽ thể hiện điều đó</p>
+<p><img src="https://i1.wp.com/farm6.staticflickr.com/5455/13893764527_924181318e_o.png"></p>
+<p>Vậy là xong, Bây giờ, hãy mở Visual Studio lên để thiết lập nhé</p>
+<h1 id="Tren-Visual-Studio"><a href="#Tren-Visual-Studio" class="headerlink" title="Trên Visual Studio"></a>Trên Visual Studio</h1><h2 id="Connect-toi-tai-khoan-cua-ban"><a href="#Connect-toi-tai-khoan-cua-ban" class="headerlink" title="Connect tới tài khoản của bạn"></a>Connect tới tài khoản của bạn</h2><p>Chọn Menu &gt; Team &gt; Connect to Team Foudation Server Đăng nhập bằng chính tài khoản Microsoft bạn đã dùng để tạo Online</p>
+<p><img src="https://i2.wp.com/farm8.staticflickr.com/7181/14080415865_cea0f2115b_o.png"></p>
+<p>Server có dạng: <a href="https://nickname.visualstudio.com/">https://nickname.visualstudio.com</a> Sau khi đăng nhập, tất cả các Project có sẵn trên Server sẽ được hiện ra. Tick vào các Project bạn muốn connect (các project bạn đang làm việc) và nhấn Connect</p>
+<h2 id="Them-Project-vao-Source-Control"><a href="#Them-Project-vao-Source-Control" class="headerlink" title="Thêm Project vào Source Control"></a>Thêm Project vào Source Control</h2><p>Bạn mở Solution của mình lên</p>
+<p><img src="https://i0.wp.com/farm8.staticflickr.com/7386/13893812187_43fc27c6e2_o.png"></p>
+<p>Sau khi mở ra, nhấn chuột phải vào Solution &gt; Add Solution to Source Control…, bạn sẽ được hỏi sử dụng dịch vụ nào.</p>
+<p><img src="https://i0.wp.com/farm3.staticflickr.com/2928/14065466846_0be4d81154_o.png"></p>
+<p>Git là một dịch vụ miễn phí, và khó sử dụng hơn so với Team Foundation. Một bản hiện ra, bạn chọn Project bạn vừa tạo trên Web, rồi nhấn OK</p>
+<p><img src="https://i1.wp.com/farm6.staticflickr.com/5443/13902073928_3a5166bb42_o.png"></p>
+<p>Quá trình thêm vào diễn ra âm thầm. Có thể bạn sẽ cảm nhận được Visual Studio bị đơ 2-3 giây. Sau đó, trước mỗi file trong Solution, sẽ có 1 biểu tượng dấu +</p>
+<p><img src="https://i1.wp.com/farm8.staticflickr.com/7400/13902049219_54c1ce6b04_o.png"></p>
+<p>Lúc này, Project của bạn đã được quản lý bởi Source Control Team Foundation Server. Tuy nhiên, đây mới chỉ là “thay đổi”. Bạn cần phải Check in để các thay đổi này được lưu lại. Bấm chuột phải vào Solution &gt; Check In…</p>
+<p><img src="https://i1.wp.com/farm8.staticflickr.com/7068/14065573286_3388d5ff11_o.png"></p>
+<p>Trong ô Comment, bạn nhập vào chú thích của lần check in này</p>
+<p><img src="https://i2.wp.com/farm8.staticflickr.com/7451/13902095378_6c8b207a01_o.png"></p>
+<p>Mục Included Changes (number) là nơi liệt kê các tập tin trong Solution đã bị thay đổi và sẽ được lưu lại Source Control trong lần check in này Sau khi kiểm tra tất cả các chi tiết, bạn nhấn Check in</p>
+<p><img src="https://i2.wp.com/farm6.staticflickr.com/5527/14085562102_33c66105e1_o.png"></p>
+<p>Sau khi check in thành công, một thông báo nhỏ xuất hiện, thông báo số changeset. Bạn sẽ cần con số này để phục hồi về sau</p>
+<p><img src="https://i0.wp.com/farm6.staticflickr.com/5488/13902099877_0f0a7e14ab_o.png"></p>
+<p>Quay trở lại Solution Explorer, bạn sẽ thấy trước mỗi file có hình một chiếc khóa, biểu hiện cho việc file này từ lần check in trước chưa bị thay đổi</p>
+<p><img src="https://i1.wp.com/farm6.staticflickr.com/5484/14108858123_8884d622d9_o.png"></p>
+<h2 id="Chinh-sua-va-Check-in"><a href="#Chinh-sua-va-Check-in" class="headerlink" title="Chỉnh sửa và Check in"></a>Chỉnh sửa và Check in</h2><p>Khi bạn bắt đầu chỉnh sửa một file nào đó, biểu tượng chiếc khóa bị thay đổi</p>
+<p><img src="https://i0.wp.com/farm3.staticflickr.com/2905/14085667152_399a036b26_o.png"></p>
+<p>Để thay đổi này lưu vào Source Control, bạn nhấn chuột phải lên nó và chọn Check in. Lưu ý, khi thay đổi nhiều file trong Project, bạn có thể chọn cả Project để check in. Nếu thay đổi trong nhiều Project, bạn có thể chọn cả Solution để check in. Thông thường, chọn cả Solution sẽ đảm bảo bạn không “Check in” thiếu thứ gì. Team Foundation sẽ tự động tìm ra các file bị thay đổi của bạn</p>
+<h2 id="Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change"><a href="#Get-Latest-Version-–-Get-Specific-Version-–-Undo-Pending-Change" class="headerlink" title="Get Latest Version – Get Specific Version – Undo Pending Change"></a>Get Latest Version – Get Specific Version – Undo Pending Change</h2><p>Nếu bạn làm trong một dự án nhiều thành viên, và các thành viên kia hoàn tất phần code của họ và Check in lên Server. Bạn sẽ phải lấy các phần code mới nhất về Nhấn chuột phải vào phần bạn muốn cập nhật &gt; Get Latest Version (Recursive)</p>
+<p><img src="https://i1.wp.com/farm3.staticflickr.com/2933/13902262929_2db6b4718f_o.png"></p>
 <ul>
 <li>Recursive tức là đệ quy. Tất cả các file bên trong nó cũng sẽ được cập nhật theo</li>
 </ul>
@@ -2153,7 +2213,8 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Mở FileZilla Server lên, chọn Edit &gt; Users</p>
 <p><img src="https://farm8.staticflickr.com/7558/15948351778_1d23368c73_o.png"></p>
 <p>Thêm một User mới với tên tùy chọn. Đây là tên bạn sẽ dùng để đăng nhập vào FTP Server của mình sau này</p>
-<p><img src="https://farm8.staticflickr.com/7509/15948353428_0c2804bfc0_o.png"> <img src="https://farm9.staticflickr.com/8655/16110010396_2ff5e90b5b_o.png"></p>
+<p><img src="https://farm8.staticflickr.com/7509/15948353428_0c2804bfc0_o.png"></p>
+<p><img src="https://farm9.staticflickr.com/8655/16110010396_2ff5e90b5b_o.png"></p>
 <p>Thêm password cho tài khoản này. Nếu không thì Man-in-the-middle sẽ truy cập được và server của bạn và tiến hành phá hoại</p>
 <p><img src="https://farm8.staticflickr.com/7547/16135806475_92b2f1c975_o.png"></p>
 <p>Tiếp theo, chọn Shared Folders và thêm vào Folder mà bạn sẽ kết nối để download hoặc upload dữ liệu</p>
@@ -2175,7 +2236,9 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Tiếp theo, ở Control Panel &gt; Windows Firewall, chọn Advanced Settings</p>
 <p><img src="https://farm9.staticflickr.com/8644/16133948991_6f9fb96a8d_o.png"></p>
 <p>Chọn Inbound Rules, và thêm cái custom Port của bạn hồi nãy mới thiếp lập trong FileZilla Server</p>
-<p><img src="https://farm8.staticflickr.com/7570/15513526614_76337d6844_o.png"> <img src="https://farm9.staticflickr.com/8638/16110072306_90f3ffacf3_o.png"> <img src="https://farm8.staticflickr.com/7462/16135112792_25b507d9d3_o.png"></p>
+<p><img src="https://farm8.staticflickr.com/7570/15513526614_76337d6844_o.png"></p>
+<p><img src="https://farm9.staticflickr.com/8638/16110072306_90f3ffacf3_o.png"></p>
+<p><img src="https://farm8.staticflickr.com/7462/16135112792_25b507d9d3_o.png"></p>
 <p>Thiết lập cổng cho cái Inbound Rule này</p>
 <p><img src="https://farm8.staticflickr.com/7485/15513532304_2608708f49_o.png"></p>
 <h2 id="Cai-dat-tren-Local-Machine"><a href="#Cai-dat-tren-Local-Machine" class="headerlink" title="Cài đặt trên Local Machine"></a>Cài đặt trên Local Machine</h2><h3 id="Cai-dat-FileZilla-Client"><a href="#Cai-dat-FileZilla-Client" class="headerlink" title="Cài đặt FileZilla Client"></a>Cài đặt FileZilla Client</h3><p>Tải FileZilla Client tại: <a href="https://filezilla-project.org/download.php?type=client">https://filezilla-project.org/download.php?type=client</a></p>
@@ -2287,10 +2350,11 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia4.jpg"><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia5.jpg"></p>
 <h1 id="2-Super-MSP"><a href="#2-Super-MSP" class="headerlink" title="2. Super MSP"></a>2. Super MSP</h1><h2 id="・New-Zealand"><a href="#・New-Zealand" class="headerlink" title="・New Zealand"></a>・New Zealand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia6.jpg"></p>
 <p> <strong>Vishesh Oberoi:</strong> Vishesh has been a key player in making the MSA program a success. Equipped with his experience and strong technical knowledge in Azure, he organized and executed many of the MSP run workshops during the program. The workshops were very well received and the students found them very useful. Great work Vishesh!</p>
-<h2 id="・Thailand"><a href="#・Thailand" class="headerlink" title="・Thailand"></a>・Thailand</h2><p> <img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg"> </p>
+<h2 id="・Thailand"><a href="#・Thailand" class="headerlink" title="・Thailand"></a>・Thailand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg"> </p>
 <p> <strong>Supatporn Posoknistakul:</strong> Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.</p>
 <h1 id="3-Highlights-amp-Upcoming-Events"><a href="#3-Highlights-amp-Upcoming-Events" class="headerlink" title="3. Highlights &amp; Upcoming Events"></a>3. Highlights &amp; Upcoming Events</h1><h2 id="Japan"><a href="#Japan" class="headerlink" title="Japan"></a>Japan</h2><h3 id="・Regular-Meeting-and-Presentation-Workshop"><a href="#・Regular-Meeting-and-Presentation-Workshop" class="headerlink" title="・Regular Meeting and Presentation Workshop"></a>・Regular Meeting and Presentation Workshop</h3><p>Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: “I’d like to appeal about…” After the presentation, they were able to receive feedback on how to be more effective in their presentation.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg"> <img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg"> </p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg"> </p>
 <h3 id="・Imagine-Cup-2015-Kick-off"><a href="#・Imagine-Cup-2015-Kick-off" class="headerlink" title="・Imagine Cup 2015 Kick-off"></a>・Imagine Cup 2015 Kick-off</h3><p> On Jan 18th, 2015, we introduced Imagine Cup to approximately 30 students as part of our Top Gun project. The aim was to motivate them create great apps and to challenge the world competition.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia10.jpg"></p>
 <h3 id="・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan"><a href="#・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan" class="headerlink" title="・MSPs from Indonesia and Nepal visit Microsoft Japan"></a>・MSPs from Indonesia and Nepal visit Microsoft Japan</h3><p> As 2014 ended, MSPs from Indonesia and Nepal visited Japan and had lunch with MSPs from Japan on Christmas Eve. The guests were also treated to a tour of Microsoft Japan. It was then followed by a dialogue of the participants, sharing the different activities and interesting styles of each country.</p>
@@ -2312,13 +2376,15 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <h3 id="–Upcoming-Events—"><a href="#–Upcoming-Events—" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Hour-of-Code-Central-of-Thailand"><a href="#・Hour-of-Code-Central-of-Thailand" class="headerlink" title="・Hour of Code: Central of Thailand"></a>・Hour of Code: Central of Thailand</h4><p> From January to March 2015, MSPs in the central area of Thailand are planning to organize the Hour of Code event for high school students. This 2015, Microsoft Thailand has special category for high school students called the “Windows AppStudio Jr. Challenge.” Hour of Code training from MSP will help high school students learn how to develop Windows platform application together with their preparation for the ImagineCup special category in Thailand. </p>
 <h4 id="・MSP-Quarterly-Meeting-and-New-Year-Party"><a href="#・MSP-Quarterly-Meeting-and-New-Year-Party" class="headerlink" title="・MSP Quarterly Meeting and New Year Party"></a>・MSP Quarterly Meeting and New Year Party</h4><p> Microsoft Thailand is planning to have the quarterly meeting and New Year Party on 30th of January 2015 for MSP from each university. This meeting will give everyone a chance to share their experiences and exchange information about activities they have done in Q2 and their plans for Q3. </p>
 <h2 id="Vietnam"><a href="#Vietnam" class="headerlink" title="Vietnam"></a>Vietnam</h2><h3 id="・New-MSP-Recruitment"><a href="#・New-MSP-Recruitment" class="headerlink" title="・New MSP Recruitment"></a>・New MSP Recruitment</h3><p> To expand the activities of MSPs in Vietnam, more MSPs are being recruited. The recruitment attracted the cream of the crop from the best universities in the country. Undoubtedly, this will be a successful FY year for MSPs in Vietnam.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg"> <img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg"> </p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg"> </p>
 <p><em>The interview</em></p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia20.jpg"></p>
 <p><em>Welcoming the new MSPs</em></p>
 <h3 id="・-MSP-Internal-Training"><a href="#・-MSP-Internal-Training" class="headerlink" title="・ MSP Internal Training"></a>・ MSP Internal Training</h3><p> The objective of the Internal Training was how to use Windows and Office Online in the most useful way. Moreover, many tips and tricks were shared during the training. Most of the participants installed Windows 10 Preview after.</p>
 <p>Later that day, the participants were introduced to the Microsoft YouthSpark Program. Everyone got very excited upon learning about the program.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg"> <img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg"> </p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg"> </p>
 <h3 id="・”Special-Christmas-for-You”-Contest"><a href="#・”Special-Christmas-for-You”-Contest" class="headerlink" title="・”Special Christmas for You” Contest"></a>・”Special Christmas for You” Contest</h3><p> Hundreds of students have started to learn how to use App Studio to make apps. Many IT students signed up for the MVA to learn how to code. This resulted to the publication of hundreds of apps in the store. Each one of them have been tested. Good apps (quantified by the number of downloads and rating) will be rewarded with Lumia, T-shirt and bags.</p>
 <p> </p>
 <h3 id="–Upcoming-Events—-1"><a href="#–Upcoming-Events—-1" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Microsoft-Imagine-Camp"><a href="#・Microsoft-Imagine-Camp" class="headerlink" title="・Microsoft Imagine Camp"></a>・Microsoft Imagine Camp</h4><p> January of every year, the Imagine Camp is held to help teams and students get started with their projects for Imagine Cup. For this event, participants are supported on which technology they should use, how to improve their ideas, and so on.</p>
@@ -2327,7 +2393,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#117;&#110;&#46;&#79;&#107;&#x75;&#98;&#111;&#64;&#115;&#116;&#117;&#x64;&#x65;&#x6e;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#101;&#114;&#x2e;&#99;&#111;&#x6d;">&#x53;&#x68;&#117;&#110;&#46;&#79;&#107;&#x75;&#98;&#111;&#64;&#115;&#116;&#117;&#x64;&#x65;&#x6e;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#101;&#114;&#x2e;&#99;&#111;&#x6d;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#117;&#110;&#46;&#79;&#107;&#x75;&#x62;&#x6f;&#64;&#x73;&#x74;&#117;&#100;&#x65;&#110;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#x65;&#114;&#x2e;&#99;&#111;&#109;">&#x53;&#x68;&#117;&#110;&#46;&#79;&#107;&#x75;&#x62;&#x6f;&#64;&#x73;&#x74;&#117;&#100;&#x65;&#110;&#116;&#x70;&#x61;&#114;&#116;&#x6e;&#x65;&#114;&#x2e;&#99;&#111;&#109;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2566,7 +2632,8 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <p><img src="https://farm4.staticflickr.com/3747/19035161974_03bf7acef3_o.png"></p>
 <p>Sau cùng, chọt vô Advanced &gt; Network &gt; Settings để kiểm tra xem Firefox có đang dùng một cái proxy ất ơ nào đấy không </p>
 <p><img src="https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png"></p>
-<p>Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã “sạch” <img src="https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png"></p>
+<p>Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã “sạch”</p>
+<p><img src="https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png"></p>
 <h3 id="2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van"><a href="#2-1-2-Go-bo-cac-Add-on-–-Plug-in-vo-van" class="headerlink" title="2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn"></a>2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn</h3><p>Để gỡ bỏ một Add-on, bạn nhấn vào cái nút bên hông firefox &gt; Addon </p>
 <p><img src="https://farm1.staticflickr.com/287/19650862522_2982de93f6_o.png"></p>
 <p>Sau đó chọn dòng Extension, và Remove toàn bộ add-on đi, chừa lại những cái mà bạn biết rõ, hoặc nó có trong danh sách này:</p>
@@ -2663,10 +2730,32 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 </ul>
 </li>
 </ul>
-<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko? <img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
-<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option <img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"> Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên <img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"> Vậy là xong bước thiết lập</p>
-<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích <img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"> Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript <img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"> Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại <img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"> Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử <img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"> Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt <img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"> Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì? <img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"> Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt <img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"> Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
-<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist <img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"> Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này <img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
+<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko?</p>
+<p><img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
+<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option</p>
+<p><img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"></p>
+<p>Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên</p>
+<p><img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"></p>
+<p>Vậy là xong bước thiết lập</p>
+<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích</p>
+<p><img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"></p>
+<p>Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript</p>
+<p><img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"></p>
+<p>Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại</p>
+<p><img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"></p>
+<p>Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử</p>
+<p><img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"></p>
+<p>Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt</p>
+<p><img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"></p>
+<p>Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì?</p>
+<p><img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"></p>
+<p>Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt</p>
+<p><img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"></p>
+<p>Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
+<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist</p>
+<p><img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"></p>
+<p>Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này</p>
+<p><img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
 <h3 id="Tips-and-Tricks"><a href="#Tips-and-Tricks" class="headerlink" title="Tips and Tricks"></a>Tips and Tricks</h3><ul>
 <li><p>Để tạm thời cho phép toàn bộ script của một trang, bạn có thể chọn Temporarily allow all on this page</p>
 </li>
@@ -2723,7 +2812,12 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <li>Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
 <li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></li>
 </ul>
-<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật &#x2F; tắt cái nút xanh to đùng để bật &#x2F; tắt quảng cáo Trước khi cài &#x2F; khi bật quảng cáo <img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"> Sau khi cài &#x2F; Khi tắt quảng cáo bằng cách kích hoạt uBlock <img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"> Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a> Happy surfing the Internet</p>
+<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật &#x2F; tắt cái nút xanh to đùng để bật &#x2F; tắt quảng cáo Trước khi cài &#x2F; khi bật quảng cáo</p>
+<p><img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"></p>
+<p>Sau khi cài &#x2F; Khi tắt quảng cáo bằng cách kích hoạt uBlock</p>
+<p><img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"></p>
+<p>Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a></p>
+<p>Happy surfing the Internet</p>
 ]]></content>
       <categories>
         <category>Computer Tips</category>
@@ -2958,16 +3052,15 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <h1 id="1-Super-Power-1-JetBrains-ReSharper"><a href="#1-Super-Power-1-JetBrains-ReSharper" class="headerlink" title="1. Super Power 1: JetBrains ReSharper"></a>1. Super Power 1: JetBrains ReSharper</h1><p>ReSharper là một extension cực khủng của JetBrains. Nó sẽ đảm nhiệm vai trò dọn dẹp, trang điểm cho code của bạn đẹp như thơ, tăng hiệu suất làm việc, tăng khả năng maintenance, tăng tính tái sử dụng code vào nhiều project khác nhau. Bạn chưa tin ư, hãy xem phần <a href="#_C%C3%A1c_t%C3%ADnh_n%C4%83ng">1.4. Các tính năng</a></p>
 <h2 id="1-1-Neu-ban-la-sinh-vien"><a href="#1-1-Neu-ban-la-sinh-vien" class="headerlink" title="1.1. Nếu bạn là sinh viên"></a>1.1. Nếu bạn là sinh viên</h2><p>JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ các sản phẩm khác nữa). Tuy nhiên, chương trình miễn phí này được giấu khá kỹ trên trang chủ của nó.</p>
 <ul>
-<li><p>Truy cập vào link sau: <a href="https://www.jetbrains.com/student/">https://www.jetbrains.com/student/</a></p>
-</li>
-<li><p>Nhấn Apply Now ở khúc dưới</p>
-</li>
-<li><p>Bạn có nhiều tùy chọn chứng minh mình là sinh viên. Cách dễ nhất: dùng email đuôi .edu</p>
+<li>Truy cập vào link sau: <a href="https://www.jetbrains.com/student/">https://www.jetbrains.com/student/</a></li>
+<li>Nhấn Apply Now ở khúc dưới</li>
+<li>Bạn có nhiều tùy chọn chứng minh mình là sinh viên. Cách dễ nhất: dùng email đuôi .edu</li>
+</ul>
 <p><img src="https://farm6.staticflickr.com/5692/21937216876_1c6c37ee27_o.png"></p>
-<p>Ngoài ra còn có thể dùng thẻ sinh viên quốc tế hoặc giấy tờ chứng minh (lâu hơn một chút)</p>
-</li>
-<li><p>Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo</p>
-</li>
+<pre><code>Ngoài ra còn có thể dùng thẻ sinh viên quốc tế hoặc giấy tờ chứng minh (lâu hơn một chút)
+</code></pre>
+<ul>
+<li>Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo</li>
 </ul>
 <h2 id="1-2-Neu-ban-khong-con-la-sinh-vien"><a href="#1-2-Neu-ban-khong-con-la-sinh-vien" class="headerlink" title="1.2. Nếu bạn không còn là sinh viên"></a>1.2. Nếu bạn không còn là sinh viên</h2><p>Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)</p>
 <h2 id="1-3-Cai-dat"><a href="#1-3-Cai-dat" class="headerlink" title="1.3. Cài đặt"></a>1.3. Cài đặt</h2><p>Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.</p>
@@ -3104,7 +3197,8 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy một cục toolbar nhỏ gọi là “Live Visual Tree”. Nhấn zô nó để mở ra</p>
 <p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
 <p>Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"> Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
+<p>Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
 <p>Click một phát, và Live Visual Tree sẽ nhảy tới vị trí chính xác của element đó</p>
 <p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
@@ -3382,7 +3476,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#x75;&#100;&#x79;&#x2e;&#110;&#x67;&#111;&#99;&#116;&#105;&#x65;&#x6e;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x73;&#116;&#x75;&#100;&#x79;&#x2e;&#110;&#x67;&#111;&#99;&#116;&#105;&#x65;&#x6e;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#x73;&#116;&#x75;&#100;&#121;&#x2e;&#x6e;&#103;&#111;&#99;&#x74;&#x69;&#101;&#110;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x73;&#116;&#x75;&#100;&#121;&#x2e;&#x6e;&#103;&#111;&#99;&#x74;&#x69;&#101;&#110;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#117;&#x64;&#121;&#46;&#110;&#x67;&#x6f;&#99;&#116;&#x69;&#101;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x73;&#x74;&#117;&#x64;&#121;&#46;&#110;&#x67;&#x6f;&#99;&#116;&#x69;&#101;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#117;&#x64;&#x79;&#46;&#110;&#103;&#111;&#x63;&#x74;&#105;&#101;&#110;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#115;&#x74;&#117;&#x64;&#x79;&#46;&#110;&#103;&#111;&#x63;&#x74;&#105;&#101;&#110;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3391,7 +3485,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#104;&#111;&#97;&#x74;&#114;&#x75;&#x6f;&#x6e;&#103;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#118;&#101;&#x2e;&#x63;&#x6f;&#109;">&#x6b;&#104;&#111;&#97;&#x74;&#114;&#x75;&#x6f;&#x6e;&#103;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#118;&#101;&#x2e;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#104;&#111;&#97;&#x74;&#x72;&#117;&#111;&#110;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#x69;&#118;&#x65;&#46;&#99;&#x6f;&#x6d;">&#107;&#104;&#111;&#97;&#x74;&#x72;&#117;&#111;&#110;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#x69;&#118;&#x65;&#46;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#104;&#111;&#97;&#x74;&#114;&#x75;&#111;&#110;&#103;&#x62;&#x61;&#99;&#x68;&#64;&#x6c;&#x69;&#x76;&#x65;&#46;&#99;&#111;&#x6d;">&#107;&#104;&#111;&#97;&#x74;&#114;&#x75;&#111;&#110;&#103;&#x62;&#x61;&#99;&#x68;&#64;&#x6c;&#x69;&#x76;&#x65;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#104;&#x6f;&#97;&#x74;&#114;&#x75;&#x6f;&#x6e;&#103;&#x62;&#97;&#99;&#x68;&#64;&#x6c;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#109;">&#107;&#104;&#x6f;&#97;&#x74;&#114;&#x75;&#x6f;&#x6e;&#103;&#x62;&#97;&#99;&#x68;&#64;&#x6c;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3532,8 +3626,10 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <h1 id="2-Keywords"><a href="#2-Keywords" class="headerlink" title="2. Keywords"></a>2. Keywords</h1><p><a id="markdown-keywords" name="keywords"></a></p>
 <p>Phần này chứa các keywords mà bạn hay nhầm lẫn khi implement tính năng này</p>
 <ul>
-<li><p>Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng) <img src="https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png"></p>
-</li>
+<li>Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng)</li>
+</ul>
+<p><img src="https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png"></p>
+<ul>
 <li><p>Durables: User mua thể loại này một lần rồi là sẽ sở hữu nó mãi mãi. Ví dụ như level mới, màn chơi mới, vật phẩm</p>
 </li>
 <li><p>ProductID: chính là ID của product của bạn. Đây sẽ là thông số đầu tiên khi tạo một In-App Purchase mới trên Dev Center</p>
@@ -3544,10 +3640,12 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Store.</p>
 <p>“Nhưng app vẫn đang trong giai đoạn dev, chưa publish được” – “App chưa có gì cả” – “App vẫn chưa hoàn thiện hết các tính năng”</p>
 <p>Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.</p>
-<p><img src="https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png"> Hide this app in the Store</p>
+<p><img src="https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png"></p>
+<p>Hide this app in the Store</p>
 <h2 id="3-2-Step-2-Create-IAP-aka-In-App-Purchase"><a href="#3-2-Step-2-Create-IAP-aka-In-App-Purchase" class="headerlink" title="3.2. Step 2: Create IAP (aka In-App Purchase)"></a>3.2. Step 2: Create IAP (aka In-App Purchase)</h2><p><a id="markdown-step-2%3A-create-iap-aka-in-app-purchase" name="step-2%3A-create-iap-aka-in-app-purchase"></a></p>
 <p>In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được</p>
-<p><img src="https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png"> Tạo một In-App Purchase</p>
+<p><img src="https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png"></p>
+<p>Tạo một In-App Purchase</p>
 <h2 id="3-3-Step-3-The-tricky"><a href="#3-3-Step-3-The-tricky" class="headerlink" title="3.3. Step 3: The tricky"></a>3.3. Step 3: The tricky</h2><p><a id="markdown-step-3%3A-the-tricky" name="step-3%3A-the-tricky"></a></p>
 <p>In-App Purchase sẽ ko chạy khi bạn có 1 trong các điều kiện sau</p>
 <ul>
@@ -3610,9 +3708,12 @@ else
   &#x2F;&#x2F; Đã mua cái này rồi, tiếp tục trò mèo 
 &#125;</code></pre>
 
-<p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật <img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"> Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
+<p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật</p>
+<p><img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"></p>
+<p>Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
 <h2 id="3-4-Step-4-Change-the-test-code-to-actual-code"><a href="#3-4-Step-4-Change-the-test-code-to-actual-code" class="headerlink" title="3.4. Step 4: Change the test code to actual code"></a>3.4. Step 4: Change the test code to actual code</h2><p><a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a></p>
-<p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công <img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>
+<p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công</p>
+<p><img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>
 <blockquote>
 <p>Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center &#x3D;.&#x3D;)</p>
 </blockquote>
@@ -3648,7 +3749,8 @@ else
 <p>Ví dụ, bạn làm một app Calculator chỉ với các tính năng cơ bản mà mấy cái app Calculator khác cũng có, thì 99% là sẽ chả có ai thèm để ý tới cái Calculator của bạn, bởi vì những cái app Calculator khác đang đứng đầu trên store và họ sẽ chọn những cái app đó.</p>
 <h1 id="3-Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu"><a href="#3-Build-1-app-hay-thay-vi-build-mot-chuc-app-nho-tuong-tu" class="headerlink" title="3. Build 1 app hay thay vì build một chục app nhỏ tương tự"></a>3. Build 1 app hay thay vì build một chục app nhỏ tương tự</h1><p>Ví dụ như bạn làm một game đua xe cho một chục thị trường khác nhau. Mỗi thị trường sẽ là một ngôn ngữ khác nhau. Điều này sẽ dễ dàng dẫn tới toàn bộ app giống giống nhau như thế fail một lượt. Thay vào đó, nếu bạn làm 1 app, với ngôn ngữ thay đổi tùy thuộc vào thị trường, thì app của bạn vẫn sẽ an toàn ở lại trên store, trong search, vân vân và vân vân.</p>
 <p>App nhỏ:</p>
-<p><img src="http://az648995.vo.msecnd.net/win/2016/01/2_fr.png"> <img src="http://az648995.vo.msecnd.net/win/2016/01/3_es.png"></p>
+<p><img src="http://az648995.vo.msecnd.net/win/2016/01/2_fr.png"></p>
+<p><img src="http://az648995.vo.msecnd.net/win/2016/01/3_es.png"></p>
 <p>Kết hợp lại thành app bự với tính năng chọn ngôn ngữ, hoặc lấy theo ngôn ngữ hiện tại của hệ điều hành</p>
 <p><img src="http://az648995.vo.msecnd.net/win/2016/01/4_generic.png"></p>
 <h1 id="4-Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot"><a href="#4-Giu-profile-Windows-Dev-Center-cua-ban-luon-luon-tot" class="headerlink" title="4. Giữ profile Windows Dev Center của bạn luôn luôn tốt"></a>4. Giữ profile Windows Dev Center của bạn luôn luôn tốt</h1><p>Điều cuối cùng mình muốn nhắn nhủ với các bạn Dev ngoài kia là hãy luôn cố gắng submit các app chất lượng cao lên Store. Trước khi làm một app gì, hãy search thử Store xem đã có app tương tự chưa để né tránh các trường hợp kể trên. Điều này giống như profile vay vốn ngân hàng vậy. Bạn càng “trong sạch” bao nhiêu, thì khả năng app của bạn lên top càng cao bấy nhiu.</p>
@@ -3672,7 +3774,7 @@ else
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#99;&#x73;&#57;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#120;&#99;&#x73;&#57;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#99;&#115;&#57;&#48;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#97;&#120;&#99;&#115;&#57;&#48;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#x78;&#99;&#115;&#57;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x78;&#99;&#115;&#57;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4218,7 +4320,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#x75;&#111;&#110;&#103;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x6c;&#x75;&#111;&#110;&#103;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#x75;&#x6f;&#110;&#103;&#x61;&#110;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#108;&#x75;&#x6f;&#110;&#103;&#x61;&#110;&#x68;&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#117;&#111;&#x6e;&#x67;&#97;&#110;&#x68;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x6c;&#117;&#111;&#x6e;&#x67;&#97;&#110;&#x68;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#x6c;&#x75;&#111;&#110;&#103;&#x61;&#x6e;&#104;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x6c;&#x75;&#111;&#110;&#103;&#x61;&#x6e;&#104;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4304,7 +4406,8 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <li><a href="https://nodejs.org/">https://nodejs.org</a></li>
 <li><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
 </ul>
-<p><em>Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt</em> <img src="https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png" alt="Chọn LTS cho ít lỗi lặt vặt"></p>
+<p><em>Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt</em></p>
+<p><img src="https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png" alt="Chọn LTS cho ít lỗi lặt vặt"></p>
 <h1 id="Buoc-2-Cai-dat-cac-nodejs-package"><a href="#Buoc-2-Cai-dat-cac-nodejs-package" class="headerlink" title="Bước 2: Cài đặt các nodejs package"></a>Bước 2: Cài đặt các nodejs package</h1><p><strong>Mở Visual Studio Code</strong></p>
 <p><strong>Mở Terminal Windows</strong></p>
 <p>Bật Terminal Windows trong Visual Studio Code bằng cách nhấn Ctrl + ` hoặc View &gt; Integrated Terminal</p>
@@ -4801,7 +4904,8 @@ function AssignAddMoreButton() &#123;
 
 <p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
 <h1 id="4-Ket-qua"><a href="#4-Ket-qua" class="headerlink" title="4. Kết quả"></a>4. Kết quả</h1><p><a id="markdown-k%E1%BA%BFt-qu%E1%BA%A3" name="k%E1%BA%BFt-qu%E1%BA%A3"></a></p>
-<p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) <img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
+<p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha)</p>
+<p><img src="https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png" alt="demo image"></p>
 <h1 id="5-Cach-hoat-dong"><a href="#5-Cach-hoat-dong" class="headerlink" title="5. Cách hoạt động"></a>5. Cách hoạt động</h1><p><a id="markdown-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng" name="c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng"></a></p>
 <p>HtmlHelperExtensions chính là chỗ mà điều kỳ diệu xảy ra. Keyword Extensions sẽ “đăng ký” nó thành một extension của HtmlHelper</p>
 <h2 id="5-1-Cac-buoc"><a href="#5-1-Cac-buoc" class="headerlink" title="5.1. Các bước"></a>5.1. Các bước</h2><p><a id="markdown-c%C3%A1c-b%C6%B0%E1%BB%9Bc" name="c%C3%A1c-b%C6%B0%E1%BB%9Bc"></a></p>
@@ -5210,8 +5314,8 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <li>Build Tools for Visual Studio 2017 (MSBuild is licensed under the MIT license): <a href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15">https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15</a></li>
 </ul>
 <blockquote>
-<p><img src="https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png"></p>
 </blockquote>
+<p><img src="https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png"></p>
 <p>NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01</code></pre>
 
@@ -6713,7 +6817,8 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 <!-- /TOC -->
 
 <h1 id="1-Middleware-la-gie"><a href="#1-Middleware-la-gie" class="headerlink" title="1. Middleware là giề"></a>1. Middleware là giề</h1><p><a id="markdown-middleware-l%C3%A0-gi%E1%BB%81" name="middleware-l%C3%A0-gi%E1%BB%81"></a></p>
-<p>Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses <img src="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png" alt="middleware"></p>
+<p>Tưởng tượng rằng ứng dụng asp.net của bạn là 1 đường ống nước. Data chính là nước. Nước ở đầu ống (request) thì bẩn như kênh nhiêu lộc. Bạn mong muốn rằng nước ở cuối ống (response) phải sạch như nước khoáng Lavie. Chắc phải có lọc gì đó ở giữa ống nhể? Middleware chính là loại lọc đó. Nó gắn vào ứng dụng để xử lý requests và responses</p>
+<p><img src="https://farm2.staticflickr.com/1751/27794903017_13f284ce64_o.png" alt="middleware"></p>
 <blockquote>
 <p>middleware có thể quyết định là nó có tiếp tục truyền cái request nó đã xử lý cho 1 middleware tiếp theo hay ko. Trong trường hợp nó ngắt luôn ko truyền, thì ta gọi đó là <code>short-circuit</code></p>
 </blockquote>
@@ -6949,14 +7054,17 @@ public class VinmartDrinkBuyer: IDrinkBuyer
 &#125;</code></pre>
 
 <p>Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống</p>
-<h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn <img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"> bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
+<h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn</p>
+<p><img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"></p>
+<p>bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
 <h2 id="4-1-Lifetime"><a href="#4-1-Lifetime" class="headerlink" title="4.1. Lifetime"></a>4.1. Lifetime</h2><p><code>AddScoped</code> dùng để chỉ định <em>thời gian sống</em> của service này, có 3 loại:</p>
 <ul>
 <li>Transient: mỗi lần gọi tới nó sẽ là 1 biến thể mới hoàn toàn. Cái này chỉ phù hợp cho các loại service siu nhẹ nhàng và ko có lưu trữ trạng thái</li>
 <li>Scoped: Trong cùng 1 request, nó sẽ chỉ được tạo 1 lần duy nhất</li>
 <li>Singleton: Nó sẽ được tạo lần đầu tiên khi được gọi, và sẽ sống quài cho tới khi app bạn chết</li>
 </ul>
-<h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó <img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
+<h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó</p>
+<p><img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
 <h2 id="4-3-Action-Injection"><a href="#4-3-Action-Injection" class="headerlink" title="4.3. Action Injection"></a>4.3. Action Injection</h2><p>Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác </p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public IActionResult About([FromServices] IDrinkBuyer drinkBuyer) 
 &#123;
@@ -7060,7 +7168,8 @@ public class CarTransport: ITransport
 <p>Cho tới khi bạn đã thực hiện tất cả các thay đổi cần thiết, rồi gọi <code>yourDbContext.SaveChanges()</code>, thì lúc này, những thay đổi được track sẽ được <em>ship</em> xuống database.</p>
 <p>Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application</p>
 <h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p><a id="markdown-repository" name="repository"></a></p>
-<p>Có cái sơ đồ hay ho sau <img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
+<p>Có cái sơ đồ hay ho sau</p>
+<p><img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
 <p>Bạn có thể đọc thêm về các services được inject tại bài viết <a href="https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">Dependency Injection trong ASP.NET Core</a></p>
 <p>Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)</p>
 <h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><p><a id="markdown-l%C3%BD-do" name="l%C3%BD-do"></a></p>
@@ -7814,7 +7923,8 @@ unitOfWork.Dispose();</code></pre>
 <p>Ví dụ ta có 2 feature là <code>diện tích nhà</code> và <code>số phòng ngủ</code>:</p>
 <p>[code lang&#x3D;text] 200 &lt; Diện tích nhà &lt; 2000 1 &lt; Số phòng ngủ &lt; 5 [&#x2F;code]</p>
 <p>Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.</p>
-<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"> <em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
+<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"></p>
+<p><em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
 <p>Ta có thể tăng tốc gradient descent bằng cách <code>biến đổi</code> các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.</p>
 <p>Nhìn chung, ta sẽ biến đổi sao cho:</p>
 <p>$latex -1 \leq x_{(i)} \leq 1$</p>

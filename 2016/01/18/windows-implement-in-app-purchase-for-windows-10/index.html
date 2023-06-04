@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png">
 <meta property="og:image" content="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png">
 <meta property="article:published_time" content="2016-01-18T10:05:10.000Z">
-<meta property="article:modified_time" content="2023-06-04T20:49:37.768Z">
+<meta property="article:modified_time" content="2023-06-04T21:21:17.662Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows 10">
 <meta property="article:tag" content="iap">
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 16:49:37" itemprop="dateModified" datetime="2023-06-04T16:49:37-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:21:17" itemprop="dateModified" datetime="2023-06-04T17:21:17-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -332,8 +332,10 @@
 <h1 id="2-Keywords"><a href="#2-Keywords" class="headerlink" title="2. Keywords"></a>2. Keywords</h1><p><a id="markdown-keywords" name="keywords"></a></p>
 <p>Phần này chứa các keywords mà bạn hay nhầm lẫn khi implement tính năng này</p>
 <ul>
-<li><p>Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng) <img src="https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png"></p>
-</li>
+<li>Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng)</li>
+</ul>
+<p><img src="https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png"></p>
+<ul>
 <li><p>Durables: User mua thể loại này một lần rồi là sẽ sở hữu nó mãi mãi. Ví dụ như level mới, màn chơi mới, vật phẩm</p>
 </li>
 <li><p>ProductID: chính là ID của product của bạn. Đây sẽ là thông số đầu tiên khi tạo một In-App Purchase mới trên Dev Center</p>
@@ -344,10 +346,12 @@
 <p>Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Store.</p>
 <p>“Nhưng app vẫn đang trong giai đoạn dev, chưa publish được” – “App chưa có gì cả” – “App vẫn chưa hoàn thiện hết các tính năng”</p>
 <p>Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.</p>
-<p><img src="https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png"> Hide this app in the Store</p>
+<p><img src="https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png"></p>
+<p>Hide this app in the Store</p>
 <h2 id="3-2-Step-2-Create-IAP-aka-In-App-Purchase"><a href="#3-2-Step-2-Create-IAP-aka-In-App-Purchase" class="headerlink" title="3.2. Step 2: Create IAP (aka In-App Purchase)"></a>3.2. Step 2: Create IAP (aka In-App Purchase)</h2><p><a id="markdown-step-2%3A-create-iap-aka-in-app-purchase" name="step-2%3A-create-iap-aka-in-app-purchase"></a></p>
 <p>In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được</p>
-<p><img src="https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png"> Tạo một In-App Purchase</p>
+<p><img src="https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png"></p>
+<p>Tạo một In-App Purchase</p>
 <h2 id="3-3-Step-3-The-tricky"><a href="#3-3-Step-3-The-tricky" class="headerlink" title="3.3. Step 3: The tricky"></a>3.3. Step 3: The tricky</h2><p><a id="markdown-step-3%3A-the-tricky" name="step-3%3A-the-tricky"></a></p>
 <p>In-App Purchase sẽ ko chạy khi bạn có 1 trong các điều kiện sau</p>
 <ul>
@@ -410,9 +414,12 @@ else
   &#x2F;&#x2F; Đã mua cái này rồi, tiếp tục trò mèo 
 &#125;</code></pre>
 
-<p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật <img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"> Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
+<p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật</p>
+<p><img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"></p>
+<p>Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
 <h2 id="3-4-Step-4-Change-the-test-code-to-actual-code"><a href="#3-4-Step-4-Change-the-test-code-to-actual-code" class="headerlink" title="3.4. Step 4: Change the test code to actual code"></a>3.4. Step 4: Change the test code to actual code</h2><p><a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a></p>
-<p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công <img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>
+<p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công</p>
+<p><img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>
 <blockquote>
 <p>Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center &#x3D;.&#x3D;)</p>
 </blockquote>

@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png">
 <meta property="og:image" content="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png">
 <meta property="article:published_time" content="2018-06-20T12:30:55.000Z">
-<meta property="article:modified_time" content="2023-06-04T20:49:37.768Z">
+<meta property="article:modified_time" content="2023-06-04T21:21:17.662Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="ASP.NET">
 <meta property="article:tag" content="dependency injection">
@@ -250,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 16:49:37" itemprop="dateModified" datetime="2023-06-04T16:49:37-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:21:17" itemprop="dateModified" datetime="2023-06-04T17:21:17-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -351,14 +351,17 @@ public class VinmartDrinkBuyer: IDrinkBuyer
 &#125;</code></pre>
 
 <p>Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống</p>
-<h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn <img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"> bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
+<h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn</p>
+<p><img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"></p>
+<p>bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
 <h2 id="4-1-Lifetime"><a href="#4-1-Lifetime" class="headerlink" title="4.1. Lifetime"></a>4.1. Lifetime</h2><p><code>AddScoped</code> dùng để chỉ định <em>thời gian sống</em> của service này, có 3 loại:</p>
 <ul>
 <li>Transient: mỗi lần gọi tới nó sẽ là 1 biến thể mới hoàn toàn. Cái này chỉ phù hợp cho các loại service siu nhẹ nhàng và ko có lưu trữ trạng thái</li>
 <li>Scoped: Trong cùng 1 request, nó sẽ chỉ được tạo 1 lần duy nhất</li>
 <li>Singleton: Nó sẽ được tạo lần đầu tiên khi được gọi, và sẽ sống quài cho tới khi app bạn chết</li>
 </ul>
-<h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó <img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
+<h2 id="4-2-Contructor-Injection"><a href="#4-2-Contructor-Injection" class="headerlink" title="4.2. Contructor Injection"></a>4.2. Contructor Injection</h2><p>Sau khi đã register service của bạn với 1 lifetime phù hợp, việc tiếp theo chính là <em>tiêm - inject</em> nó vào chỗ cần dùng (thường sẽ là controller) ASP.NET Core 2 hỗ trợ bạn inject service vào controller thông qua contructor của controller đó</p>
+<p><img src="https://farm2.staticflickr.com/1753/42012713695_56fcb2b4a5_o.png" alt="inject to controller"></p>
 <h2 id="4-3-Action-Injection"><a href="#4-3-Action-Injection" class="headerlink" title="4.3. Action Injection"></a>4.3. Action Injection</h2><p>Đôi khi bạn chỉ cần cái service này trong 1 action cụ thể nào đó của controller thôi, thì sẽ có cách hơi khác </p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public IActionResult About([FromServices] IDrinkBuyer drinkBuyer) 
 &#123;
