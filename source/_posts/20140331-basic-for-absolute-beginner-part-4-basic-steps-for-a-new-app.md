@@ -22,6 +22,23 @@ Vậy là bạn đã biết cách bố cục giao diện với XAML, cấu trúc
 
 Khoan đã, trong 2 part kia, bạn đã tạo kha khá "New Project" rồi phải ko. Bây giờ, bạn sẽ biết tới nó một cách bài bản
 <!-- more -->
+
+# Trong cùng series:
+
+[\[Basic for Absolute Beginner\] – \[Part 1\] – Layout with XAML 1](https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/)
+
+[\[Basic for Absolute Beginner\] – \[Part 2\] – Layout with XAML 2](https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/) 
+
+[\[Basic for Absolute Beginner\] – \[Part 3\] – App’s Structure and how to customize it](https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/)
+
+[\[Basic for Absolute Beginner\] – \[Part 4\] – Basic Steps for a new app](https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/)
+
+[\[Basic for Absolute Beginner\] – \[Part 5\] – Analytics for your apps](https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/)
+
+[\[Basic for Absolute Beginner\] - \[Part 6\] - Source Control](https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/)
+
+# Mục lục
+
 *   [**1 Hình thành ý tưởng**](#1-hình-thành-ý-tưởng)
     
     *   [**1.1 Tinh gọt ý tưởng của bạn**](#11-tinh-gọt-ý-tưởng-của-bạn)

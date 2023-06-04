@@ -34,7 +34,7 @@
     "hexo-renderer-pug": "^2.0.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-next": "^8.11.0",
+    "hexo-theme-next": "^8.17.0",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.28.0",
     "pug": "^3.0.2"

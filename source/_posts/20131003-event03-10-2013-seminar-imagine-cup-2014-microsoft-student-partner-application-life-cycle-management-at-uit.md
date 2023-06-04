@@ -65,7 +65,7 @@ tiếp theo đó, anh Toàn đã giới thiệu về mô hình thác nước tru
 
 Từng chức vụ trong một dự án phát triển phần mềm được anh giới thiệu khá kỹ lưỡng và chi tiết. Anh cũng chia sẻ một số kinh nghiệm làm việc của mình cho các bạn.
 
-> Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool ![smile](https://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-partysmile.png)
+> Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool ![smile](/images/2013/10/wlemoticon-partysmile.png)
 
 # 4. Kết thúc
 

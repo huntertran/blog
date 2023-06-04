@@ -16,7 +16,7 @@ Khi bạn làm một cái form trong ASP.NET MVC5, chắc bạn sẽ dùng HtmlH
 
 Vậy làm thế nào để hiển thị placeholder, sử dụng thuộc tính prompt?
 
-![31716564800_af2c594490_o](https://cuoilennaocacban2.files.wordpress.com/2017/01/31716564800_af2c594490_o.png)
+![31716564800_af2c594490_o](/images/2017/01/31716564800_af2c594490_o.png)
 
 <!-- more -->
 

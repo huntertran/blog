@@ -25,23 +25,43 @@ Trong phạm vi bài viết này, mình sẽ đề cập tới ListBox cùng cá
 
 <!-- more -->
 
+# Trong cùng series:
+<a id="markdown-trong-c%C3%B9ng-series%3A" name="trong-c%C3%B9ng-series%3A"></a>
+
+[\[Basic for Absolute Beginner\] – \[Part 1\] – Layout with XAML 1](https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/)
+
+[\[Basic for Absolute Beginner\] – \[Part 2\] – Layout with XAML 2](https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/) 
+
+[\[Basic for Absolute Beginner\] – \[Part 3\] – App’s Structure and how to customize it](https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/)
+
+[\[Basic for Absolute Beginner\] – \[Part 4\] – Basic Steps for a new app](https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/)
+
+[\[Basic for Absolute Beginner\] – \[Part 5\] – Analytics for your apps](https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/)
+
+[\[Basic for Absolute Beginner\] - \[Part 6\] - Source Control](https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/)
+
+# Mục lục
+<a id="markdown-m%E1%BB%A5c-l%E1%BB%A5c" name="m%E1%BB%A5c-l%E1%BB%A5c"></a>
+
 <!-- TOC -->
 
-- [1. LISTBOX CONTROL](#1-listbox-control)
-    - [1.1. Các thuộc tính quan trọng](#11-c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng)
-        - [1.1.1. ItemsSource](#111-itemssource)
-        - [1.1.2. SelectedIndex](#112-selectedindex)
-        - [1.1.3. SelectedItem](#113-selecteditem)
-        - [1.1.4. DataConext – ngữ cảnh dữ liệu](#114-dataconext--ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u)
-    - [1.2. Thử nghiệm](#12-th%E1%BB%AD-nghi%E1%BB%87m)
-- [2. DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu](#2-databinding--ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u)
-    - [2.1. Chuẩn bị](#21-chu%E1%BA%A9n-b%E1%BB%8B)
-    - [2.2. Kiểu dữ liệu](#22-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u)
-    - [2.3. Nguồn dữ liệu](#23-ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u)
-    - [2.4. Nạp dữ liệu](#24-n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u)
-    - [2.5. Binding](#25-binding)
-    - [2.6. DataTemplate](#26-datatemplate)
-- [3. Event Handling](#3-event-handling)
+- [1. Trong cùng series:](#1-trong-c%C3%B9ng-series)
+- [2. Mục lục](#2-m%E1%BB%A5c-l%E1%BB%A5c)
+- [3. LISTBOX CONTROL](#3-listbox-control)
+    - [3.1. Các thuộc tính quan trọng](#31-c%C3%A1c-thu%E1%BB%99c-t%C3%ADnh-quan-tr%E1%BB%8Dng)
+        - [3.1.1. ItemsSource](#311-itemssource)
+        - [3.1.2. SelectedIndex](#312-selectedindex)
+        - [3.1.3. SelectedItem](#313-selecteditem)
+        - [3.1.4. DataConext – ngữ cảnh dữ liệu](#314-dataconext--ng%E1%BB%AF-c%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87u)
+    - [3.2. Thử nghiệm](#32-th%E1%BB%AD-nghi%E1%BB%87m)
+- [4. DataBinding – Phương pháp tuyệt vời để hiển thị dữ liệu](#4-databinding--ph%C6%B0%C6%A1ng-ph%C3%A1p-tuy%E1%BB%87t-v%E1%BB%9Di-%C4%91%E1%BB%83-hi%E1%BB%83n-th%E1%BB%8B-d%E1%BB%AF-li%E1%BB%87u)
+    - [4.1. Chuẩn bị](#41-chu%E1%BA%A9n-b%E1%BB%8B)
+    - [4.2. Kiểu dữ liệu](#42-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u)
+    - [4.3. Nguồn dữ liệu](#43-ngu%E1%BB%93n-d%E1%BB%AF-li%E1%BB%87u)
+    - [4.4. Nạp dữ liệu](#44-n%E1%BA%A1p-d%E1%BB%AF-li%E1%BB%87u)
+    - [4.5. Binding](#45-binding)
+    - [4.6. DataTemplate](#46-datatemplate)
+- [5. Event Handling](#5-event-handling)
 
 <!-- /TOC -->
 

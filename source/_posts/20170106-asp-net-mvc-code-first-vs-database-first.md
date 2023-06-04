@@ -14,7 +14,7 @@ Lúc mới làm ASP.NET, chắc bạn nào cũng sẽ hỏi câu hỏi này. Nh�
 
 Chọn cách nào đi chăng nữa, vẫn sẽ có một số sự khác biệt mà bạn cần biết để chọn cho đúng, xong rồi phóng lao để đâm theo
 
-![original](https://cuoilennaocacban2.files.wordpress.com/2017/01/original.jpg)
+![original](/images/2017/01/original.jpg)
 <!-- more -->
 
 # 1. Giải thích

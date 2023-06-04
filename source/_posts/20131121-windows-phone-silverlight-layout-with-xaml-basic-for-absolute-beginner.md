@@ -23,16 +23,30 @@ Bài viết này sẽ giúp các bạn có một khái niệm chung về giao di
 
 Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn những điều cơ bản nhất về giao diện trong XAML
 <!-- more -->
+
+# Trong cùng series:
+
+[\[Basic for Absolute Beginner\] – \[Part 1\] – Layout with XAML 1](https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/)
+
+[\[Basic for Absolute Beginner\] – \[Part 2\] – Layout with XAML 2](https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/) 
+
+[\[Basic for Absolute Beginner\] – \[Part 3\] – App’s Structure and how to customize it](https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/)
+
+[\[Basic for Absolute Beginner\] – \[Part 4\] – Basic Steps for a new app](https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/)
+
+[\[Basic for Absolute Beginner\] – \[Part 5\] – Analytics for your apps](https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/)
+
+[\[Basic for Absolute Beginner\] - \[Part 6\] - Source Control](https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/)
+
+# Mục lục
+
 *   [1. Basic Control – Nest Control](#1-basic-control--nest-control)
-    
     *   [1.1. Grid.ColumnDefinition and Grid.RowDefinition](#11-gridcolumndefinition-and-gridrowdefinition)
-        
         *   [1.1.1. Fixed Size](#111-fixed-size)
         *   [1.1.2. Auto Size](#112-auto-size)
         *   [1.1.3. Star Size](#113-star-size)
     *   [1.2. Nested Grid – A "Gridception" :3](#12-nested-grid -a-gridception-3)
 *   [2. StackPanel](#2-stackpanel)
-    
     *   [2.1. Bản chất của StackPanel](#21-bản-chất-của-stackpanel)
     *   [2.2. Hiển thị StackPanel vượt quá màn hình](#22-hiển-thị-stackpanel-vượt-quá-màn-hình)
 
@@ -62,21 +76,21 @@ Hãy tạo một Project Windows Phone mới và thử nghiệm những gì Grid
 
 Trong MainPage.xaml, hãy để ý giao diện mở đầu của nó.
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon2.png)
+![](/images/2013/11/112213_0144_windowsphon2.png)
 
 Bây giờ, hãy mạnh dạn Delete hết, chỉ chừa lại cái "LayoutRoot" Grid thôi nhé
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon3.png)
+![](/images/2013/11/112213_0144_windowsphon3.png)
 
 Đây là Grid Control, nó có thể chứa các control khác bên trong, và các control này mặc định sẽ nằm đè lên nhau.
 
 Thêm những dòng sau đây vào LayoutRoot Grid
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon4.png)
+![](/images/2013/11/112213_0144_windowsphon4.png)
 
 Và để ý sự thay đổi ở giao diện
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon5.png)
+![](/images/2013/11/112213_0144_windowsphon5.png)
 
 Như bạn có thể thấy, 2 dòng TextBlock với FontSize khác nhau này nằm đè lên nhau trong giao diện
 
@@ -84,7 +98,7 @@ Khoan đã, tại sao tôi lại cần tới khả năng này của Grid? Tôi k
 
 Có đấy bạn: Hãy xem hình dưới đây
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon6.png)
+![](/images/2013/11/112213_0144_windowsphon6.png)
 
 Logo Windows nằm chìm bên dưới, dòng chữ Hello world nổi lên trên, cũng khá hay phải không. Tôi tin chắc rằng bạn sẽ tìm ra nhiều cách hay ho hơn để tận dụng khả năng này của Grid
 
@@ -92,7 +106,7 @@ Logo Windows nằm chìm bên dưới, dòng chữ Hello world nổi lên trên,
 
 Như trong bảng so sánh ở trên, Grid Control có thể chia không gian bên trong nó ra thành nhiều dòng và cột
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon7.png)
+![](/images/2013/11/112213_0144_windowsphon7.png)
 
 Grid.RowDefinition là một tag định nghĩa chia dòng cho Grid RowDefintion đi liền với thuộc tính Height Các con số trong thuộc tính Height là số Pixel mà Row đó được định nghĩa Danh sách các Row được đánh số thứ tự, bắt đầu từ 0
 
@@ -100,11 +114,11 @@ Trong các control con bên trong Grid, ta khai báo nó thuộc về dòng nào
 
 Và đây là giao diện
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon8.png)
+![](/images/2013/11/112213_0144_windowsphon8.png)
 
 Tương tự như vậy với ColumnDefintion
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon9.png)
+![](/images/2013/11/112213_0144_windowsphon9.png)
 
 Cùng điểm lại một chút. Trong thuộc tính Width của ColumnDefinition hoặc thuộc tính Height của RowDefinition, bạn sẽ thấy ngoài việc xác lập một con số, ta còn có thể xác lập nó thành "Auto" hoặc "\*". Đâu là điểm khác biệt giữa các xác lập này?
 
@@ -148,7 +162,7 @@ Một con số trước dấu \* mang ý nghĩa phần. 1 + 2 + 3 + 4 = 10 phầ
 
 Hãy thử vui một chút, tạo thật nhiều Grid con bên trong một grid lớn và xem chuyện gì xảy ra nhé
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon10.png)
+![](/images/2013/11/112213_0144_windowsphon10.png)
 
 Màu sắc chói lóa. Như vận bạn có thể thấy, trong một Grid có thể chứa thêm nhiều Grid khác nữa, và trong các Grid con lại có thể chứa thêm các Grid con. Điều này là vô hạn miễn là máy bạn đủ khả năng render ra hình ảnh. Nhưng tôi đoán chắc các bạn không cần nhiều hơn 5 lớp Grid đâu
 
@@ -158,7 +172,7 @@ StackPanel khá giống với Grid ở mặt chứa được nhiều control kh�
 
 Sửa lại như sau
 
-![](https://cuoilennaocacban2.files.wordpress.com/2013/11/112213_0144_windowsphon11.png)
+![](/images/2013/11/112213_0144_windowsphon11.png)
 
 Khoan, tất cả các Grid màu đi đâu hết rồi :(
 

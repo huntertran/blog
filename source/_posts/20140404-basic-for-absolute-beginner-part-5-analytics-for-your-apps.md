@@ -22,15 +22,35 @@ Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người 
 
 <!-- more -->
 
+# Trong cùng series:
+<a id="markdown-trong-c%C3%B9ng-series%3A" name="trong-c%C3%B9ng-series%3A"></a>
+
+[\[Basic for Absolute Beginner\] – \[Part 1\] – Layout with XAML 1](https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/)
+
+[\[Basic for Absolute Beginner\] – \[Part 2\] – Layout with XAML 2](https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/) 
+
+[\[Basic for Absolute Beginner\] – \[Part 3\] – App’s Structure and how to customize it](https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/)
+
+[\[Basic for Absolute Beginner\] – \[Part 4\] – Basic Steps for a new app](https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/)
+
+[\[Basic for Absolute Beginner\] – \[Part 5\] – Analytics for your apps](https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/)
+
+[\[Basic for Absolute Beginner\] - \[Part 6\] - Source Control](https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/)
+
+# Mục lục
+<a id="markdown-m%E1%BB%A5c-l%E1%BB%A5c" name="m%E1%BB%A5c-l%E1%BB%A5c"></a>
+
 <!-- TOC -->
 
-- [1. Trên Project](#1-tr%C3%AAn-project)
-    - [1.1. Cài SDK](#11-c%C3%A0i-sdk)
-    - [1.2. Khai báo thông tin](#12-khai-b%C3%A1o-th%C3%B4ng-tin)
-- [2. Trên Google Analytics](#2-tr%C3%AAn-google-analytics)
-- [3. Thiết lập theo dõi](#3-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i)
-    - [3.1. Coding](#31-coding)
-- [4. Xem Analytics](#4-xem-analytics)
+- [1. Trong cùng series:](#1-trong-c%C3%B9ng-series)
+- [2. Mục lục](#2-m%E1%BB%A5c-l%E1%BB%A5c)
+- [3. Trên Project](#3-tr%C3%AAn-project)
+    - [3.1. Cài SDK](#31-c%C3%A0i-sdk)
+    - [3.2. Khai báo thông tin](#32-khai-b%C3%A1o-th%C3%B4ng-tin)
+- [4. Trên Google Analytics](#4-tr%C3%AAn-google-analytics)
+- [5. Thiết lập theo dõi](#5-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i)
+    - [5.1. Coding](#51-coding)
+- [6. Xem Analytics](#6-xem-analytics)
 
 <!-- /TOC -->
 

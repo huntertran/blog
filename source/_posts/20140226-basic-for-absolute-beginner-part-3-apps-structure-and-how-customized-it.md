@@ -26,6 +26,23 @@ Tại sao tôi lại nói 2 phần này trước cả App's Structure. Các cont
 
 Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu trúc một ứng dụng trong Windows Phone nhé
 <!-- more -->
+
+# Trong cùng series:
+
+[\[Basic for Absolute Beginner\] – \[Part 1\] – Layout with XAML 1](https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/)
+
+[\[Basic for Absolute Beginner\] – \[Part 2\] – Layout with XAML 2](https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/) 
+
+[\[Basic for Absolute Beginner\] – \[Part 3\] – App’s Structure and how to customize it](https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/)
+
+[\[Basic for Absolute Beginner\] – \[Part 4\] – Basic Steps for a new app](https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/)
+
+[\[Basic for Absolute Beginner\] – \[Part 5\] – Analytics for your apps](https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/)
+
+[\[Basic for Absolute Beginner\] - \[Part 6\] - Source Control](https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/)
+
+# Mục lục
+
 *   [**1. Cách thức ứng dụng hoạt động trên thiết bị**](#1-cách-thức-ứng-dụng-hoạt-động-trên-thiết-bị)
 *   [**2. Cấu trúc của ứng dụng**](#2-cấu-trúc-của-ứng-dụng)
     

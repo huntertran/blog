@@ -8,7 +8,7 @@ categories:
 date: 2014-11-14 09:46:24
 ---
 
-[![2_5F00_77B60B43](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg)](https://cuoilennaocacban2.files.wordpress.com/2014/11/2_5f00_77b60b43.jpg)
+[![2_5F00_77B60B43](/images/2014/11/2_5f00_77b60b43.jpg)](/images/2014/11/2_5f00_77b60b43.jpg)
 
 You have an excellent Bluetooth mouse. Heavy, comfort for your hand, BlueTrack Technology, etc. Everything is great, but... the mouse got frozen or lagged sometimes.
 
