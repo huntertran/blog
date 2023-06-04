@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://huntertran.ca/win32console/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.ca/internettips/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -56,502 +47,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/10/19/refactoring-clones-type-2/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/23/disk-cleanup-to-free-disk-space/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/cancel</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/thankyou</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/azure/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/categories/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/computer-tips/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/csharp/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/19/notice-tach-blog/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/30/2015-in-review/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/11/c-string-performance-tips-and-tricks/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/02/07/asp-net-mvc-debug-route-config/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
+    <loc>https://huntertran.ca/win32console/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -839,6 +335,159 @@
   </url>
   
   <url>
+    <loc>https://huntertran.ca/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/10/19/refactoring-clones-type-2/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -848,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    <loc>https://huntertran.ca/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -857,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    <loc>https://huntertran.ca/2020/11/23/disk-cleanup-to-free-disk-space/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -866,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/01/14/ic03/</loc>
+    <loc>https://huntertran.ca/about/cancel</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -875,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/01/31/ic04/</loc>
+    <loc>https://huntertran.ca/about/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -884,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
+    <loc>https://huntertran.ca/about/thankyou</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -893,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
+    <loc>https://huntertran.ca/azure/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -902,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2013/09/02/windows-phone-7-chooser/</loc>
+    <loc>https://huntertran.ca/categories/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -911,7 +560,16 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
+    <loc>https://huntertran.ca/computer-tips/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/csharp/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -1235,7 +893,349 @@
   </url>
   
   <url>
+    <loc>https://huntertran.ca/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/19/notice-tach-blog/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/30/2015-in-review/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/11/c-string-performance-tips-and-tricks/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/02/07/asp-net-mvc-debug-route-config/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/20/asp-net-mo-rong-editorfor/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/14/ic03/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/31/ic04/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/02/windows-phone-7-chooser/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
