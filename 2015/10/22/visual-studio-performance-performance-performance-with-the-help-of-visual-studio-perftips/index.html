@@ -28,24 +28,24 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="For Visual Studio 2015 Từ xưa tới nay, khi debug bằng Visual Studio, hầu như ai cũng biết chọt con chuột lên trên một biến nào đó và một cái bảng nho nhỏ hiện ra hiển thị toàn bộ dữ liệu của biến đó.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png">
-<meta property="og:image" content="https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png">
-<meta property="og:image" content="https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png">
-<meta property="og:image" content="https://farm1.staticflickr.com/570/22190464430_6f893119e5_o.png">
-<meta property="og:image" content="https://farm1.staticflickr.com/683/22190602900_3927a739c8_o.png">
-<meta property="og:image" content="https://farm1.staticflickr.com/688/22352672686_50a793488b_o.png">
-<meta property="og:image" content="https://farm6.staticflickr.com/5791/22352751386_5a52119746_o.png">
-<meta property="og:image" content="https://farm6.staticflickr.com/5718/22190832080_f489be8d8a_o.png">
-<meta property="og:image" content="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5643/22190175850_d39fa83775_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5816/22190283100_3900ce5068_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5713/22378430175_006386fcd1_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/570/22190464430_6f893119e5_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/683/22190602900_3927a739c8_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/688/22352672686_50a793488b_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5791/22352751386_5a52119746_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5718/22190832080_f489be8d8a_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/5624/22378857485_c2d338a7d3_o.png">
 <meta property="article:published_time" content="2015-10-22T07:39:19.000Z">
-<meta property="article:modified_time" content="2023-06-04T21:38:11.652Z">
+<meta property="article:modified_time" content="2023-06-04T21:43:25.670Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="performance">
 <meta property="article:tag" content="perftips">
 <meta property="article:tag" content="stopwatch">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/flickr/5643/22190175850_d39fa83775_o.png">
 
 
 <link rel="canonical" href="https://huntertran.ca/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 17:38:11" itemprop="dateModified" datetime="2023-06-04T17:38:11-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:43:25" itemprop="dateModified" datetime="2023-06-04T17:43:25-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -307,26 +307,26 @@
 <li>Rút gọn code quá đà mà không để ý tới performance (giống như không xài Linq cho tất cả mọi thứ)</li>
 </ul>
 <h1 id="2-PerfTips-la-gi"><a href="#2-PerfTips-la-gi" class="headerlink" title="2. PerfTips là gì?"></a>2. PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
-<p><img src="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png"></p>
+<p><img src="/images/flickr/5643/22190175850_d39fa83775_o.png"></p>
 <p>Bấm vào nó (chỗ &lt;&#x3D; 1ms elapsed), sẽ hiện ra công cụ phân tích</p>
-<p><img src="https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png"></p>
+<p><img src="/images/flickr/5816/22190283100_3900ce5068_o.png"></p>
 <h1 id="3-Dung-PerfTips"><a href="#3-Dung-PerfTips" class="headerlink" title="3. Dùng PerfTips"></a>3. Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
 <p>Thay vì chèn 2 đoạn code Stopwatch vào đầu và cuối của phương thức này, bạn chỉ cần đặt 2 breakpoint vào chỗ đó</p>
-<p><img src="https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png"></p>
+<p><img src="/images/flickr/5713/22378430175_006386fcd1_o.png"></p>
 <p>Nhấn F5 để chạy, và Visual Studio dừng lại ngay chỗ Breakpoint đầu tiên</p>
-<p><img src="https://farm1.staticflickr.com/570/22190464430_6f893119e5_o.png"></p>
+<p><img src="/images/flickr/570/22190464430_6f893119e5_o.png"></p>
 <p>Nhấn F5 (hoặc continue) để Visual Studio chạy tiếp tới breakpoint thứ 2, và bạn sẽ thấy PerfTips hiện ra</p>
-<p><img src="https://farm1.staticflickr.com/683/22190602900_3927a739c8_o.png"></p>
+<p><img src="/images/flickr/683/22190602900_3927a739c8_o.png"></p>
 <p>Như vậy ta có thể thấy, method LoadImages chạy mất 2780 milisecond. Bây giờ chạy lại toàn bộ một lần nữa, nhưng dừng lại ở từng dòng code một để xem dòng nào tốn nhiều thời gian nhất.</p>
 <p>Nhấn F10 để chạy từng dòng code một. Vài dòng đầu tiên, mỗi dòng không quá 20 ms, quá tốt.</p>
-<p><img src="https://farm1.staticflickr.com/688/22352672686_50a793488b_o.png"></p>
+<p><img src="/images/flickr/688/22352672686_50a793488b_o.png"></p>
 <p>Thế như tới dòng GetImageFromCloud tốn tới 1391 ms</p>
-<p><img src="https://farm6.staticflickr.com/5791/22352751386_5a52119746_o.png"></p>
+<p><img src="/images/flickr/5791/22352751386_5a52119746_o.png"></p>
 <p>Và dòng LoadImagesFromDisk tốn tới 1361 ms</p>
-<p><img src="https://farm6.staticflickr.com/5718/22190832080_f489be8d8a_o.png"></p>
+<p><img src="/images/flickr/5718/22190832080_f489be8d8a_o.png"></p>
 <p>Vậy tại sao ta không cho 2 method này chạy song song với nhau nhỉ?</p>
 <p>Đổi code thành như sau</p>
-<p><img src="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png"></p>
+<p><img src="/images/flickr/5624/22378857485_c2d338a7d3_o.png"></p>
 <p>Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 2079 ms, giảm cỡ 700 ms, tương đương 25%. Quá tuyệt phải không?</p>
 <p>Bây giờ, khi bạn đã biết cách xài PerfTips, chúng ta sẽ tiếp tục với một vài Best Practices khi dùng nó</p>
 <h1 id="4-Best-Practices"><a href="#4-Best-Practices" class="headerlink" title="4. Best Practices"></a>4. Best Practices</h1><h2 id="4-1-Do-nhieu-lan"><a href="#4-1-Do-nhieu-lan" class="headerlink" title="4.1. Đo nhiều lần"></a>4.1. Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>

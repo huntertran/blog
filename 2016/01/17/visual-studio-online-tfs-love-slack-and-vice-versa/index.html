@@ -28,28 +28,28 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Bài viết này sẽ hướng dẫn bạn tích hợp TFS vào slack. Mỗi khi có hoạt động gì đó xảy ra trên TFS, sẽ có message gửi trong slack cho các thành viên cùng biết Nghe cũng hay nhỉ? Sau đây sẽ là các bước t">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://farm2.staticflickr.com/1547/23806986773_398ba374e6_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1693/24351380141_2d15dd5529_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1679/23807096673_7118fe4dcd_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1454/23805672984_a6c39c2d54_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1443/24325627642_f43b136bc1_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1467/24066128509_c91f25dd35_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1558/23811662364_c3b2482408_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1458/24439861585_ac197f5bc0_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1639/24357442781_27f266d7fe_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1505/24439921085_f4480688db_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1636/24413747666_afd642068f_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1570/24144370770_a32341cdef_o.png">
-<meta property="og:image" content="https://farm2.staticflickr.com/1545/24440021705_020a7008bf_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1547/23806986773_398ba374e6_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1693/24351380141_2d15dd5529_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1679/23807096673_7118fe4dcd_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1454/23805672984_a6c39c2d54_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1443/24325627642_f43b136bc1_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1467/24066128509_c91f25dd35_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1558/23811662364_c3b2482408_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1458/24439861585_ac197f5bc0_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1639/24357442781_27f266d7fe_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1505/24439921085_f4480688db_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1636/24413747666_afd642068f_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1570/24144370770_a32341cdef_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/1545/24440021705_020a7008bf_o.png">
 <meta property="article:published_time" content="2016-01-17T16:57:07.000Z">
-<meta property="article:modified_time" content="2023-06-04T21:38:11.652Z">
+<meta property="article:modified_time" content="2023-06-04T21:43:25.670Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="online">
 <meta property="article:tag" content="slack">
 <meta property="article:tag" content="TFS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://farm2.staticflickr.com/1547/23806986773_398ba374e6_o.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/flickr/1547/23806986773_398ba374e6_o.png">
 
 
 <link rel="canonical" href="https://huntertran.ca/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/">
@@ -263,7 +263,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 17:38:11" itemprop="dateModified" datetime="2023-06-04T17:38:11-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:43:25" itemprop="dateModified" datetime="2023-06-04T17:43:25-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,31 +304,31 @@
 <span id="more"></span>
 <h1 id="Kich-hoat-trong-TFS"><a href="#Kich-hoat-trong-TFS" class="headerlink" title="Kích hoạt trong TFS"></a>Kích hoạt trong TFS</h1><p>Mở project của bạn trong TFS ra. Thông thường sẽ có địa chỉ là “blahblahblah.visualstudio.com”. Bạn sẽ phải đăng nhập, và chỉ có admin có quyền này</p>
 <p>Chọn 1 Project mà bạn muốn tích hợp</p>
-<p><img src="https://farm2.staticflickr.com/1547/23806986773_398ba374e6_o.png"></p>
+<p><img src="/images/flickr/1547/23806986773_398ba374e6_o.png"></p>
 <p>Ở trong Project đó, click Settings để vào phần thiết lập</p>
-<p><img src="https://farm2.staticflickr.com/1693/24351380141_2d15dd5529_o.png"></p>
+<p><img src="/images/flickr/1693/24351380141_2d15dd5529_o.png"></p>
 <p>Trong Settings &gt; Service Hooks &gt; Create the first subscription for this project</p>
-<p><img src="https://farm2.staticflickr.com/1679/23807096673_7118fe4dcd_o.png"></p>
+<p><img src="/images/flickr/1679/23807096673_7118fe4dcd_o.png"></p>
 <p>Kéo xuống chọn Slack rồi Next</p>
-<p><img src="https://farm2.staticflickr.com/1454/23805672984_a6c39c2d54_o.png"></p>
+<p><img src="/images/flickr/1454/23805672984_a6c39c2d54_o.png"></p>
 <p>Ở mục Trigger, bạn có thể chọn các sự kiện muốn thông báo. Ở đây mình sẽ chọn là code checked in. Sau khi chọn xong, nhớ kiểm tra lại đường dẫn tới project của bạn nhé</p>
-<p><img src="https://farm2.staticflickr.com/1443/24325627642_f43b136bc1_o.png"></p>
+<p><img src="/images/flickr/1443/24325627642_f43b136bc1_o.png"></p>
 <p>Ở bước tiếp theo, bạn sẽ cần một thông số là Slack Webhook URL. Cái này phải vô slack mới có nhóe.</p>
-<p><img src="https://farm2.staticflickr.com/1467/24066128509_c91f25dd35_o.png"></p>
+<p><img src="/images/flickr/1467/24066128509_c91f25dd35_o.png"></p>
 <h1 id="Lay-Slack-Webhook-URL"><a href="#Lay-Slack-Webhook-URL" class="headerlink" title="Lấy Slack Webhook URL"></a>Lấy Slack Webhook URL</h1><p>Mở slack lên, nhấn chuột vô cái dấu mũi tên đằng sau tên team &gt; Apps and Custom Integrations</p>
-<p><img src="https://farm2.staticflickr.com/1558/23811662364_c3b2482408_o.png"></p>
+<p><img src="/images/flickr/1558/23811662364_c3b2482408_o.png"></p>
 <p>Trong trang web vừa xuất hiện, tìm app Incoming Webhook</p>
-<p><img src="https://farm2.staticflickr.com/1458/24439861585_ac197f5bc0_o.png"></p>
+<p><img src="/images/flickr/1458/24439861585_ac197f5bc0_o.png"></p>
 <p>Bạn có thể đăng nhập nhiều team slack và install cho những team đó luôn một lúc.</p>
-<p><img src="https://farm2.staticflickr.com/1639/24357442781_27f266d7fe_o.png"></p>
+<p><img src="/images/flickr/1639/24357442781_27f266d7fe_o.png"></p>
 <p>Sau đó, chọn channel sẽ post các thông báo, rồi nhấn nút thôi</p>
-<p><img src="https://farm2.staticflickr.com/1505/24439921085_f4480688db_o.png"></p>
+<p><img src="/images/flickr/1505/24439921085_f4480688db_o.png"></p>
 <p>Ở trang tiếp theo, bạn sẽ thấy Webhook URL. Copy nó và paste vào trong mục điền ở bước 1 nhóe</p>
-<p><img src="https://farm2.staticflickr.com/1636/24413747666_afd642068f_o.png"></p>
+<p><img src="/images/flickr/1636/24413747666_afd642068f_o.png"></p>
 <p>Nhấn Test để test thử</p>
-<p><img src="https://farm2.staticflickr.com/1570/24144370770_a32341cdef_o.png"></p>
+<p><img src="/images/flickr/1570/24144370770_a32341cdef_o.png"></p>
 <p>Sau cùng, nhấn nút Finish, và thế là bạn đã tích hợp được TFS vào Slack nhóe</p>
-<p><img src="https://farm2.staticflickr.com/1545/24440021705_020a7008bf_o.png"></p>
+<p><img src="/images/flickr/1545/24440021705_020a7008bf_o.png"></p>
 <blockquote>
 <p>Tips: Bạn có thể add thêm nhiều loại Trigger khác</p>
 </blockquote>

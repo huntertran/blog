@@ -29,15 +29,15 @@
 <meta property="og:description" content="Như vậy là các bạn đã bắt tay vào một project Asp.net core thật sự. Bài blog này sẽ hướng dẫn các bạn cách tự build một To-do list API đơn giản nhóe">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview/_static/mvc.png?view=aspnetcore-3.1">
-<meta property="og:image" content="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png">
-<meta property="og:image" content="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7671/27642365454_2fb370b186_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7699/27976818140_4bfdcc1961_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7302/28153979252_5efe49a850_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7451/27976883070_1c07f475c2_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7704/28154355492_f4120179dd_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7654/27977529060_f3fe9e74aa_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/7416/27643155223_70a57c877b_o.png">
 <meta property="article:published_time" content="2016-07-12T09:47:36.000Z">
-<meta property="article:modified_time" content="2023-06-04T21:38:11.652Z">
+<meta property="article:modified_time" content="2023-06-04T21:43:25.670Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="programming, tech, computer tips, asp.net, c#">
 <meta name="twitter:card" content="summary">
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 17:38:11" itemprop="dateModified" datetime="2023-06-04T17:38:11-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:43:25" itemprop="dateModified" datetime="2023-06-04T17:43:25-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -387,16 +387,16 @@
 <h1 id="3-Start"><a href="#3-Start" class="headerlink" title="3. Start"></a>3. Start</h1><p><a id="markdown-start" name="start"></a></p>
 <h2 id="3-1-Khoi-tao-Project"><a href="#3-1-Khoi-tao-Project" class="headerlink" title="3.1. Khởi tạo Project"></a>3.1. Khởi tạo Project</h2><p><a id="markdown-kh%E1%BB%9Fi-t%E1%BA%A1o-project" name="kh%E1%BB%9Fi-t%E1%BA%A1o-project"></a></p>
 <p>Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi &gt; OK</p>
-<p><img src="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png"></p>
+<p><img src="/images/flickr/7671/27642365454_2fb370b186_o.png"></p>
 <p>Chọn template là Web API &gt; OK</p>
-<p><img src="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png"></p>
+<p><img src="/images/flickr/7699/27976818140_4bfdcc1961_o.png"></p>
 <h2 id="3-2-Them-model"><a href="#3-2-Them-model" class="headerlink" title="3.2. Thêm model"></a>3.2. Thêm model</h2><p><a id="markdown-th%C3%AAm-model" name="th%C3%AAm-model"></a></p>
 <p>Model là một object đại diện cho dữ liệu của bạn trong ứng dụng. Trong ví dụ này thì model duy nhất chỉ là một to-do item thôi.</p>
 <p>Tips: bạn nên đặt toàn bộ model trong một folder riêng, tương tự với view và controller (đã có sẵn folder cho controller)</p>
 <p>Chuột phải vào Project &gt; Add &gt; New Folder</p>
-<p><img src="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png"></p>
+<p><img src="/images/flickr/7302/28153979252_5efe49a850_o.png"></p>
 <p>Tiếp tục chuột phải vào Folder Models &gt; Add &gt; Class, đặt tên class là TodoItem &gt; Ok</p>
-<p><img src="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png"></p>
+<p><img src="/images/flickr/7451/27976883070_1c07f475c2_o.png"></p>
 <p>Thêm 3 Property vô</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public string Key &#123; get; set; &#125;
 public string Name &#123; get; set; &#125;
@@ -461,9 +461,9 @@ public bool IsComplete &#123; get; set; &#125;</code></pre>
 &#125;</code></pre>
 
 <p>Xong xuôi thì build nó phát để coi có lỗi gì hok</p>
-<p><img src="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png"></p>
+<p><img src="/images/flickr/7704/28154355492_f4120179dd_o.png"></p>
 <p>Build xong nó lên dư lày là okie</p>
-<p><img src="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png"></p>
+<p><img src="/images/flickr/7654/27977529060_f3fe9e74aa_o.png"></p>
 <h2 id="3-4-Register-cai-Repository"><a href="#3-4-Register-cai-Repository" class="headerlink" title="3.4. Register cái Repository"></a>3.4. Register cái Repository</h2><p><a id="markdown-register-c%C3%A1i-repository" name="register-c%C3%A1i-repository"></a></p>
 <p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a target="_blank" rel="noopener" href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
 <p>Cách này giúp bạn dễ dàng viết Unit Test hơn. Test sẽ thu hẹp lại xuống logic của controller, chứ không test cái truy xuất dữ liệu.</p>
@@ -477,7 +477,7 @@ services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
 <h2 id="3-5-Them-controller"><a href="#3-5-Them-controller" class="headerlink" title="3.5. Thêm controller"></a>3.5. Thêm controller</h2><p><a id="markdown-th%C3%AAm-controller" name="th%C3%AAm-controller"></a></p>
 <p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
 <p>Chọn Web API Controller Class, đặt tên TodoController</p>
-<p><img src="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png"></p>
+<p><img src="/images/flickr/7416/27643155223_70a57c877b_o.png"></p>
 <p>Xóa hết code trong class đi, thay bằng cái lày</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TodoController : Controller
 &#123;

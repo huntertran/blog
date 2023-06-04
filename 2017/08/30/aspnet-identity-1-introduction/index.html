@@ -28,16 +28,16 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity ph">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png">
-<meta property="og:image" content="https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png">
-<meta property="og:image" content="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png">
-<meta property="og:image" content="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4408/36631193821_b2fea13a5c_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4402/35961354023_95481c7d6a_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4337/36631439311_5da8d15c1a_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4381/35961946823_1e233cd9ef_o.png">
 <meta property="article:published_time" content="2017-08-30T02:54:40.000Z">
-<meta property="article:modified_time" content="2023-06-04T21:38:11.656Z">
+<meta property="article:modified_time" content="2023-06-04T21:43:25.670Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="identity">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/flickr/4408/36631193821_b2fea13a5c_o.png">
 
 
 <link rel="canonical" href="https://huntertran.ca/2017/08/30/aspnet-identity-1-introduction/">
@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 17:38:11" itemprop="dateModified" datetime="2023-06-04T17:38:11-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:43:25" itemprop="dateModified" datetime="2023-06-04T17:43:25-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -349,9 +349,9 @@
 <p>Xem code ở đây: <a target="_blank" rel="noopener" href="https://github.com/cuoilennaocacban/ASP.NETIdentty2">ASP.NET Identity 2 clone on GitHub</a></p>
 </blockquote>
 <p>Để hiểu rõ hơn, bạn có thể tạo một Sample Project bằng ASP.NET, chọn Identity là Individual nhé File &gt; New &gt; Project…</p>
-<p><img src="https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png" alt="New Project"></p>
+<p><img src="/images/flickr/4408/36631193821_b2fea13a5c_o.png" alt="New Project"></p>
 <p>Ngay khi tạo xong, bạn có thể nhấn chạy luôn</p>
-<p><img src="https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png" alt="Run Project"></p>
+<p><img src="/images/flickr/4402/35961354023_95481c7d6a_o.png" alt="Run Project"></p>
 <h1 id="3-Break-down"><a href="#3-Break-down" class="headerlink" title="3. Break-down"></a>3. Break-down</h1><p><a id="markdown-break-down" name="break-down"></a></p>
 <p>Bây giờ mình sẽ tìm hiểu từng phần một của Identity nhé</p>
 <h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
@@ -377,14 +377,14 @@
 &lt;&#x2F;connectionStrings&gt;</code></pre>
 
 <p>Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó</p>
-<p><img src="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
+<p><img src="/images/flickr/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
 <p>Vậy bạn có tự hỏi làm sao mà mới chỉ chạy project thôi mà Identity đã tạo được database?</p>
 <h3 id="3-1-2-Code-first"><a href="#3-1-2-Code-first" class="headerlink" title="3.1.2. Code first"></a>3.1.2. Code first</h3><p><a id="markdown-code-first" name="code-first"></a></p>
 <p>Để trả lời cho câu hỏi đó, từ EF4, MS đã giới thiệu một hướng tiếp cận hoàn toàn mới gọi là Code first, bên cạnh hướng tiếp cận truyền thống là Database First như xưa nay. Với hướng tiếp cận này, Dev chỉ cần tập trung vào code của mình, db sẽ do EF tạo ra ứng với code của dev</p>
 <p>Một flow cơ bản là Dev viết các model và class -&gt; Nhấn F5 -&gt; EF tạo &#x2F; map database -&gt; Ứng dụng khởi chạy với datbase được tạo &#x2F; map</p>
 <h3 id="3-1-3-Cau-truc"><a href="#3-1-3-Cau-truc" class="headerlink" title="3.1.3. Cấu trúc"></a>3.1.3. Cấu trúc</h3><p><a id="markdown-c%E1%BA%A5u-tr%C3%BAc" name="c%E1%BA%A5u-tr%C3%BAc"></a></p>
 <p>Identity tạo ra 5 bảng trong DB, và mỗi bảng đều liên hệ với nhau</p>
-<p><img src="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png" alt="Db Structure"></p>
+<p><img src="/images/flickr/4381/35961946823_1e233cd9ef_o.png" alt="Db Structure"></p>
 <p>Tất cả các trường Id đều dùng nvarchar(128), giá trị lưu trữ là code GUID</p>
 <h2 id="3-2-Kien-truc-va-cac-khai-niem"><a href="#3-2-Kien-truc-va-cac-khai-niem" class="headerlink" title="3.2. Kiến trúc và các khái niệm"></a>3.2. Kiến trúc và các khái niệm</h2><p><a id="markdown-ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m" name="ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m"></a></p>
 <h3 id="3-2-1-AspNetUsers"><a href="#3-2-1-AspNetUsers" class="headerlink" title="3.2.1. AspNetUsers"></a>3.2.1. AspNetUsers</h3><p><a id="markdown-aspnetusers" name="aspnetusers"></a></p>

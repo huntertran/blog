@@ -56,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2017/08/30/aspnet-identity-1-introduction/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.ca/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -570,33 +561,6 @@
   
   <url>
     <loc>https://huntertran.ca/csharp/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2013/09/07/wp-sl-khac-nhau-resource-content/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</loc>
-    
-    <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
     
     <lastmod>2023-06-04</lastmod>
     
@@ -1163,6 +1127,15 @@
   </url>
   
   <url>
+    <loc>https://huntertran.ca/2017/08/30/aspnet-identity-1-introduction/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
     
     <lastmod>2023-06-04</lastmod>
@@ -1236,6 +1209,33 @@
   
   <url>
     <loc>https://huntertran.ca/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/07/wp-sl-khac-nhau-resource-content/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</loc>
+    
+    <lastmod>2023-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
     
     <lastmod>2023-06-04</lastmod>
     

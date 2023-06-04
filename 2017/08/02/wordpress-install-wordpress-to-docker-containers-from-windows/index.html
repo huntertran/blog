@@ -28,17 +28,17 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png">
-<meta property="og:image" content="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4344/36326087365_4a8b8a7418_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4403/36326087315_f9a2a593a3_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4426/36326087275_5e74efdb8a_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4323/36326087335_f70a215f0f_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4300/36326087085_a8c29ef11e_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4441/36326087035_022f35bffa_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4325/35517228003_73383a8bcc_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4409/35490057164_0d1ff22807_o.png">
+<meta property="og:image" content="https://huntertran.ca/images/flickr/4388/36326086765_8627dd85cc_o.png">
 <meta property="article:published_time" content="2017-08-02T04:18:56.000Z">
-<meta property="article:modified_time" content="2023-06-04T21:38:11.652Z">
+<meta property="article:modified_time" content="2023-06-04T21:43:25.670Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="apache">
 <meta property="article:tag" content="container">
@@ -47,7 +47,7 @@
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="wordpress">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/flickr/4344/36326087365_4a8b8a7418_o.png">
 
 
 <link rel="canonical" href="https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
@@ -261,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-04 17:38:11" itemprop="dateModified" datetime="2023-06-04T17:38:11-04:00">2023-06-04</time>
+      <time title="Modified: 2023-06-04 17:43:25" itemprop="dateModified" datetime="2023-06-04T17:43:25-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -335,7 +335,7 @@ apt-get install apache2</code></pre>
 <p>Recommended: Map network drive to easily config or copy file to container <a target="_blank" rel="noopener" href="https://github.com/dokan-dev/dokany/releases">Download</a> </p>
 <ul>
 <li>install Dolkan <a target="_blank" rel="noopener" href="https://github.com/Foreveryone-cz/win-sshfs/releases">Download</a></li>
-<li>install win-sshfs follow the step to map<br><img src="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></li>
+<li>install win-sshfs follow the step to map<br><img src="/images/flickr/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></li>
 </ul>
 </blockquote>
 <p>open <code>/etc/apache2/apache2.conf</code> in your favorite editor</p>
@@ -356,7 +356,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">nano &#x2F;etc&#x2F;apache2&#x2F;mods-enabled&#x2F;dir.conf</code></pre>
 
 <p>It should look like this</p>
-<p><img src="http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
+<p><img src="/images/flickr/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
 <p>Type <code>Ctrl + X</code> to exit nano, type y to save</p>
 <p>Restart Apache2 server</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">service apache2 restart</code></pre>
@@ -367,7 +367,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">&lt;?php phpinfo(); ?&gt;</code></pre>
 
 <p>Then you can access <a target="_blank" rel="noopener" href="http://your_domain_name/info">http://your_domain_name&#x2F;info</a></p>
-<p><img src="http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
+<p><img src="/images/flickr/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
 <h1 id="4-Setup-Wordpress"><a href="#4-Setup-Wordpress" class="headerlink" title="4. Setup Wordpress"></a>4. Setup Wordpress</h1><p><a id="markdown-setup-wordpress" name="setup-wordpress"></a></p>
 <h2 id="4-1-Create-MySQL-database-and-user"><a href="#4-1-Create-MySQL-database-and-user" class="headerlink" title="4.1. Create MySQL database and user"></a>4.1. Create MySQL database and user</h2><p><a id="markdown-create-mysql-database-and-user" name="create-mysql-database-and-user"></a></p>
 <p>Start MySQL server</p>
@@ -400,7 +400,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">nano &#x2F;etc&#x2F;apache2&#x2F;apache2.conf</code></pre>
 
 <p>Network Drive</p>
-<p><img src="http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
+<p><img src="/images/flickr/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
 <p>Search for this part and change</p>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">. . .
  
@@ -427,15 +427,15 @@ apt-get install apache2</code></pre>
 <p>Permission and .htaccess Show hidden files and folder on WinSCP</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">Open WinSCP &gt; Option &gt; References…</code></pre>
 
-<p><img src="http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
+<p><img src="/images/flickr/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
 <p>Create <code>.htaccess</code> file</p>
 <p>Right click on an empty space &gt; New File &gt; enter <code>.htaccess</code></p>
-<p><img src="http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
+<p><img src="/images/flickr/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
 <p>Set Read &#x2F; Write permission for .htaccess</p>
 <p>Right click on .htaccess &gt; Properties</p>
-<p><img src="http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
+<p><img src="/images/flickr/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
 <p>Set permission recursively for all 3 folders</p>
-<p><img src="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
+<p><img src="/images/flickr/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
 <h2 id="4-3-Config"><a href="#4-3-Config" class="headerlink" title="4.3. Config"></a>4.3. Config</h2><p><a id="markdown-config" name="config"></a></p>
 <p>Open <code>wp-config.php</code> and fill in these info</p>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">&#x2F;&#x2F; ** MySQL settings - You can get this info from your web host ** &#x2F;&#x2F;
@@ -458,7 +458,7 @@ define(&#39;DB_CHARSET&#39;, &#39;utf8&#39;);
 define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 
 <p>Open link and copy the code show up then replace them</p>
-<p><img src="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
+<p><img src="/images/flickr/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
 <p>Add this line (to enable wordpress can modify files and folder directly</p>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">define(&#39;FS_METHOD&#39;, &#39;direct&#39;);</code></pre>
 

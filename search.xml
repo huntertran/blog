@@ -978,7 +978,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <span id="more"></span>
 <blockquote>
 <p><strong><em>Chinh phục Lumia cùng WP Competition.</em></strong></p>
-<p><img src="http://farm3.staticflickr.com/2819/10642027536_ed0a9a6c2a_z.jpg"></p>
+<p><img src="/images/flickr/2819/10642027536_ed0a9a6c2a_z.jpg"></p>
 </blockquote>
 <p><strong><em>Giải thưởng</em></strong></p>
 <blockquote>
@@ -1001,7 +1001,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
     <title>[Visual Studio] NUGET the Magician</title>
     <url>/2013/11/11/visual-studio-nuget-the-magician/</url>
     <content><![CDATA[<p>Khi sử dụng Visual Studio để lập trình, chắc hẳn sẽ có lúc bạn cần thêm các thư viện từ bên ngoài. Cách cũ là lên Google search (Bing search), rồi tìm thư viện, tải về và add thủ công vào Project. Từ bây giờ, bạn không cần phải làm như thế nữa.</p>
-<p><img src="https://farm1.staticflickr.com/819/40232598394_27c397f3e4_o.png" alt="nuget"></p>
+<p><img src="/images/flickr/819/40232598394_27c397f3e4_o.png" alt="nuget"></p>
 <p>Nuget là một công cụ giúp bạn thêm các thư viện ngoài vào Project của mình. Sử dụng Nuget rất đơn giản và dễ dàng</p>
 <span id="more"></span>
 <ul>
@@ -1060,7 +1060,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
     <url>/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</url>
     <content><![CDATA[<p>Trong thời gian qua, nhất là khi Nokia tổ chức nhiều cuộc thi với giải thưởng là những cái điện thoại hấp dẫn, rất nhiều bạn đã PM mình để hỏi một số vấn đề cơ bản về các control hiển thị giao diện trong Windows Phone.</p>
 <p>Bài viết này sẽ giúp các bạn có một khái niệm chung về giao diện và biết cách sử dụng nó trong lập trình Windows Phone nhé</p>
-<p><img src="https://farm1.staticflickr.com/819/40941396061_a7abc65129_o.png" alt="xaml"></p>
+<p><img src="/images/flickr/819/40941396061_a7abc65129_o.png" alt="xaml"></p>
 <p>Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn những điều cơ bản nhất về giao diện trong XAML</p>
 <span id="more"></span>
 
@@ -1535,7 +1535,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Nếu ứng dụng của bạn ko có gì để setting cả, thì page này cũng không cần thiết. Nhưng hãy cân nhắc kỹ, các ứng dụng viết vội vàng thường kém chất lượng và không có các tùy chọn</p>
 <h1 id="4-Chuan-bi-du-lieu"><a href="#4-Chuan-bi-du-lieu" class="headerlink" title="4 Chuẩn bị dữ liệu"></a><strong>4 Chuẩn bị dữ liệu</strong></h1><h2 id="4-1-Tao-Model"><a href="#4-1-Tao-Model" class="headerlink" title="4.1 Tạo Model"></a><strong>4.1 Tạo Model</strong></h2><p>Model là cấu trúc dữ liệu của bạn. Thường thì công việc này, bạn phải tạo bằng tay.</p>
 <p>Tuy nhiên, nếu bạn nhận dữ liệu dạng Json, thì có một các vui hơn để tự động hóa việc này: <a href="https://jsonutils.com/">JsonUtils</a></p>
-<p><img src="https://farm5.staticflickr.com/4590/25062147588_bdc3372aa0_o.png"></p>
+<p><img src="/images/flickr/4590/25062147588_bdc3372aa0_o.png"></p>
 <blockquote>
 <ol>
 <li>Chọn ngôn ngữ là C#</li>
@@ -2393,7 +2393,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#83;&#104;&#x75;&#x6e;&#x2e;&#79;&#107;&#117;&#98;&#111;&#64;&#x73;&#116;&#117;&#100;&#x65;&#110;&#116;&#112;&#x61;&#114;&#x74;&#x6e;&#101;&#114;&#46;&#x63;&#111;&#109;">&#83;&#104;&#x75;&#x6e;&#x2e;&#79;&#107;&#117;&#98;&#111;&#64;&#x73;&#116;&#117;&#100;&#x65;&#110;&#116;&#112;&#x61;&#114;&#x74;&#x6e;&#101;&#114;&#46;&#x63;&#111;&#109;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#x6b;&#x75;&#x62;&#111;&#x40;&#x73;&#x74;&#x75;&#100;&#101;&#110;&#x74;&#112;&#x61;&#x72;&#x74;&#x6e;&#x65;&#x72;&#x2e;&#99;&#x6f;&#x6d;">&#x53;&#x68;&#x75;&#x6e;&#46;&#x4f;&#x6b;&#x75;&#x62;&#111;&#x40;&#x73;&#x74;&#x75;&#100;&#101;&#110;&#x74;&#112;&#x61;&#x72;&#x74;&#x6e;&#x65;&#x72;&#x2e;&#99;&#x6f;&#x6d;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -3056,7 +3056,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <li>Nhấn Apply Now ở khúc dưới</li>
 <li>Bạn có nhiều tùy chọn chứng minh mình là sinh viên. Cách dễ nhất: dùng email đuôi .edu</li>
 </ul>
-<p><img src="https://farm6.staticflickr.com/5692/21937216876_1c6c37ee27_o.png"></p>
+<p><img src="/images/flickr/5692/21937216876_1c6c37ee27_o.png"></p>
 <pre><code>Ngoài ra còn có thể dùng thẻ sinh viên quốc tế hoặc giấy tờ chứng minh (lâu hơn một chút)
 </code></pre>
 <ul>
@@ -3067,7 +3067,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Sau khi cài xong, mở Visual Studio lên, và bạn sẽ thấy có nhiều khác biệt</p>
 <h2 id="1-4-Cac-tinh-nang-tuyet-zoi"><a href="#1-4-Cac-tinh-nang-tuyet-zoi" class="headerlink" title="1.4. Các tính năng tuyệt zời"></a>1.4. Các tính năng tuyệt zời</h2><h3 id="1-4-1-Phan-tich-code"><a href="#1-4-1-Phan-tich-code" class="headerlink" title="1.4.1. Phân tích code"></a>1.4.1. Phân tích code</h3><p>Khi mở một file .cs lên, ReSharper sẽ tự động phân tích code có trong file này và đưa ra các đề xuất hợp lý.</p>
 <p>Nhìn bên phải, bạn sẽ thấy thanh cuộn mặc định được “tô điểm” bởi các vạch màu vàng đỏ xanh tùm lum. Đó là các điểm đánh dấu code “có vấn đề”.</p>
-<p><img src="https://farm6.staticflickr.com/5822/21974855122_55a238a346_o.png"></p>
+<p><img src="/images/flickr/5822/21974855122_55a238a346_o.png"></p>
 <p>Những vạch dọc:</p>
 <ul>
 <li>Màu xanh lá cây: Những đoạn code đã được lưu</li>
@@ -3080,69 +3080,69 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <li>Màu xanh lá cây: code có thể rút gọn</li>
 </ul>
 <h3 id="1-4-2-Xoa-code-thua"><a href="#1-4-2-Xoa-code-thua" class="headerlink" title="1.4.2. Xóa code thừa"></a>1.4.2. Xóa code thừa</h3><p>Click chuột vào một trong các vạch màu cam</p>
-<p><img src="https://farm6.staticflickr.com/5625/21799037180_ed7ddb0910_o.png"></p>
+<p><img src="/images/flickr/5625/21799037180_ed7ddb0910_o.png"></p>
 <p>Con trỏ sẽ nhảy tới ngay vị trí code đang có vấn đề</p>
 <p>Bấm vào hình cái bóng đèn &gt; Chọn dòng đầu tiên để sửa lỗi (đối với đa số trường hợp, dòng gợi ý đầu tiên là dòng gợi ý hợp lý nhất)</p>
-<p><img src="https://farm1.staticflickr.com/756/21975015462_1b21541615_o.png"></p>
+<p><img src="/images/flickr/756/21975015462_1b21541615_o.png"></p>
 <p>Như hình trên, khai báo “this.” bị thừa. ReSharper sẽ giúp bạn loại bỏ chữ “this” bị thừa này.</p>
 <blockquote>
 <p>Bạn cũng có thể thực hiện việc xóa bỏ này hàng loạt. Nhấn dấu mũi tên nhỏ bên cạnh dòng đầu tiên để thấy nhiều tùy chọn hơn.</p>
 </blockquote>
-<p><img src="https://farm1.staticflickr.com/568/21799451878_dcd4f58000_o.png"></p>
+<p><img src="/images/flickr/568/21799451878_dcd4f58000_o.png"></p>
 <blockquote>
 <p>Bạn cũng có thể thử dòng gợi ý thứ 2: Xóa bỏ toàn bộ code thừa trong file này. Bạn có thể bấm dấu mũi tên bên cạnh để thấy nhiều tùy chọn hơn</p>
 <p>Visual Studio từ phiên bản 2015 cũng có một vài gợi ý tương tự.</p>
 </blockquote>
 <p>Trỏ chuột vào hình bóng đèn sát bên dưới code &gt; Show potential fixes</p>
-<p><img src="https://farm6.staticflickr.com/5759/21987321125_8800ff4578_o.png"></p>
+<p><img src="/images/flickr/5759/21987321125_8800ff4578_o.png"></p>
 <p>Cá nhân mình thấy cách làm của ReSharper hiện đại hơn, dễ nhìn hơn.</p>
 <h3 id="1-4-3-Code-dung-chuan"><a href="#1-4-3-Code-dung-chuan" class="headerlink" title="1.4.3. Code đúng chuẩn"></a>1.4.3. Code đúng chuẩn</h3><p>ReSharper giúp bạn code theo đúng chuẩn, thu gọn code, thay thế bằng các đoạn code dễ hiểu hơn, vân vân và vân</p>
 <h3 id="1-4-4-Tu-hoan-thanh-code-khi-dang-go"><a href="#1-4-4-Tu-hoan-thanh-code-khi-dang-go" class="headerlink" title="1.4.4. Tự hoàn thành code khi đang gõ"></a>1.4.4. Tự hoàn thành code khi đang gõ</h3><p>Giả sử bạn muốn khai báo một biến string, kiểu private. Bạn chỉ cần gõ như hình dưới rồi nhấn “;”</p>
-<p><img src="https://farm6.staticflickr.com/5835/21997218621_deb4160238_o.png"></p>
+<p><img src="/images/flickr/5835/21997218621_deb4160238_o.png"></p>
 <p>Bạn muốn sử dụng một method nào đó mà chưa khai báo namespace. Đối với Visual Studio, bạn sẽ phải gõ đầy đủ tên method. Sau đó phải click chuột vài lần thì Visual mới tự thêm namespace cho bạn. Đối với ReSharper, bạn chỉ cần gõ một phần của tên method. Khi method đó đã được tô sáng lên trong danh sách gợi ý, bạn chỉ cần gõ một trong các ký tự đặc biệt như dấu chấm, khoảng trắng, enter là mọi việc còn lại sẽ được hoàn tất.</p>
-<p><img src="https://farm6.staticflickr.com/5617/21961282096_1aeb6374f4_o.png"></p>
+<p><img src="/images/flickr/5617/21961282096_1aeb6374f4_o.png"></p>
 <h3 id="1-4-5-Thu-gon-code"><a href="#1-4-5-Thu-gon-code" class="headerlink" title="1.4.5. Thu gọn code"></a>1.4.5. Thu gọn code</h3><p>Nhấn vào một vạch ngang xanh lá cây bất kỳ trên thanh cuộn. Con trỏ sẽ nhảy tới dòng code có thể rút gọn.</p>
 <p>Những đoạn code có thể rút gọn được gạch chân màu xanh lá cây. Click chuột vào đó &gt; Click cái bóng đèn &gt; Chọn dòng gợi ý đầu tiên</p>
-<p><img src="https://farm1.staticflickr.com/757/21799838418_c2efe59d5b_o.png"></p>
-<p><img src="https://farm6.staticflickr.com/5781/21800801089_3c639bb3b0_o.png"></p>
+<p><img src="/images/flickr/757/21799838418_c2efe59d5b_o.png"></p>
+<p><img src="/images/flickr/5781/21800801089_3c639bb3b0_o.png"></p>
 <p>Kết quả</p>
-<p><img src="https://farm1.staticflickr.com/652/21975514002_75edfe0026_o.png"></p>
+<p><img src="/images/flickr/652/21975514002_75edfe0026_o.png"></p>
 <h3 id="1-4-6-Tu-sinh-code"><a href="#1-4-6-Tu-sinh-code" class="headerlink" title="1.4.6. Tự sinh code"></a>1.4.6. Tự sinh code</h3><p>Tạo một model mới như hình sau</p>
-<p><img src="https://farm1.staticflickr.com/677/21799893208_38cf1e1de1_o.png"></p>
+<p><img src="/images/flickr/677/21799893208_38cf1e1de1_o.png"></p>
 <p>Khai báo Interface cho nó là “INotifyPropertyChanged” (chỉ cần gõ “INotiyPr” rồi enter là xong)</p>
-<p><img src="https://farm6.staticflickr.com/5702/21364996524_5d4864b173_o.png"></p>
+<p><img src="/images/flickr/5702/21364996524_5d4864b173_o.png"></p>
 <p>Sau khi nhấn enter, rõ rang model đã bị thiếu nhìu thứ quan trọng của INotifyPropertyChanged.</p>
 <p>Nhấn chuột vào cái bóng đèn màu đỏ &gt; Implement INotifyPropertyChanged</p>
-<p><img src="https://farm6.staticflickr.com/5806/21365175364_bd9f5fd1ff_o.png"></p>
+<p><img src="/images/flickr/5806/21365175364_bd9f5fd1ff_o.png"></p>
 <p>Và kết quả (trong lần thực hiện đầu tiên, ReSharper sẽ hỏi bạn cho phép nó thêm một số file vào thư mục Properties. Cứ cho phép nó nhé)</p>
-<p><img src="https://farm1.staticflickr.com/670/21975835712_8937950fbf_o.png"></p>
+<p><img src="/images/flickr/670/21975835712_8937950fbf_o.png"></p>
 <h3 id="1-4-7-Code-Generation"><a href="#1-4-7-Code-Generation" class="headerlink" title="1.4.7. Code Generation"></a>1.4.7. Code Generation</h3><p>Sử dụng TestModel, bạn hãy thêm vào vài biến lấy lệ để test tính năng Code Generation</p>
-<p><img src="https://farm1.staticflickr.com/608/21988308215_a65b97951d_o.png"></p>
+<p><img src="/images/flickr/608/21988308215_a65b97951d_o.png"></p>
 <p>Bạn vào menu ReSharper &gt; Edit &gt; Generate Code… (Menu này nằm ngang hàng với File – Edit – View - …)</p>
 <p>Một ô nhỏ hiện ra, bạn chọn Properties</p>
-<p><img src="https://farm6.staticflickr.com/5747/21367253303_a2908587db_o.png"></p>
+<p><img src="/images/flickr/5747/21367253303_a2908587db_o.png"></p>
 <p>Bạn chọn tất cả các trường muốn tạo Property &gt; Tick luôn khai báo Notify On Property Changed (để tiện cho mô hình MVVM) rồi nhấn Finish</p>
-<p><img src="https://farm6.staticflickr.com/5673/21365647334_beb81dc63a_o.png"></p>
+<p><img src="/images/flickr/5673/21365647334_beb81dc63a_o.png"></p>
 <p>Kết quả:</p>
-<p><img src="https://farm1.staticflickr.com/592/21365674894_e92e09147e_o.png"></p>
+<p><img src="/images/flickr/592/21365674894_e92e09147e_o.png"></p>
 <p>Thật tuyệt phải ko?</p>
 <h3 id="1-4-8-Doi-ten-class-–-method-–-Ham-van-van-va-van-van"><a href="#1-4-8-Doi-ten-class-–-method-–-Ham-van-van-va-van-van" class="headerlink" title="1.4.8. Đổi tên class – method – Hàm, vân vân và vân vân"></a>1.4.8. Đổi tên class – method – Hàm, vân vân và vân vân</h3><p>ReSharper hỗ trợ bạn đổi tên bất kỳ thứ gì, và tên được đổi đó sẽ được thay đổi ở tất cả các file có sử dụng nó. Giả sử class TestModel này được sử dụng ở 3 file, và bạn muốn đổi tên nó thành NotTestModel, thì cả 3 file kia sẽ được cập nhật tên mới.</p>
 <p>Đưa con trỏ chuột vào tên class TestModel</p>
 <p>Chọn Menu ReSharper &gt; Refactor &gt; Rename…</p>
-<p><img src="https://farm1.staticflickr.com/656/21800814760_9f5904c298_o.png"></p>
+<p><img src="/images/flickr/656/21800814760_9f5904c298_o.png"></p>
 <p>Một hộp thoại nhỏ hiện ra</p>
-<p><img src="https://farm6.staticflickr.com/5774/21367460363_e9ae701a09_o.png"></p>
+<p><img src="/images/flickr/5774/21367460363_e9ae701a09_o.png"></p>
 <p>Sửa tên lại. Nếu bạn muốn có tính năng Undo, tick chọn bên dưới rồi Next</p>
 <h3 id="1-4-9-Dua-string-vao-Resource"><a href="#1-4-9-Dua-string-vao-Resource" class="headerlink" title="1.4.9. Đưa string vào Resource"></a>1.4.9. Đưa string vào Resource</h3><p>Bạn này làm app có Localization (aka: dịch các string trong app ra các ngôn ngữ khác nhau cho các thị trường khác nhau), hẳn là sẽ rất khổ sở khi phải đưa từng string từng string một vào Resource để dịch. Có bạn áp dụng phương pháp cuốn chiếu, làm tới đâu thêm string vào Resource tới đó. File Resource lúc nào cũng mở sẵn. Có bạn chọn cách làm xong app rồi mới đưa từng string một vào Resource bằng cách Copy &gt; Paste rất thủ công</p>
 <p>Và anh hùng ReSharper xuất hiện.</p>
 <p>Để đưa một đoạn string vào Resource, bạn đưa con trỏ chuột vào string đó, chọn menu ReSharper &gt; Refactor &gt; Move…</p>
-<p><img src="https://farm6.staticflickr.com/5683/21962745436_65d58e77a8_o.png"></p>
+<p><img src="/images/flickr/5683/21962745436_65d58e77a8_o.png"></p>
 <p>Một hộp thoại nhỏ hiện ra. Tại đây bạn có thể lựa chọn, thay đổi các thông số</p>
-<p><img src="https://farm1.staticflickr.com/708/21976791272_ee5c4dda71_o.png"></p>
+<p><img src="/images/flickr/708/21976791272_ee5c4dda71_o.png"></p>
 <p>Nhấn Next và chiêm ngưỡng thành quả</p>
-<p><img src="https://farm6.staticflickr.com/5683/21963312926_2d5fb88a26_o.png"></p>
+<p><img src="/images/flickr/5683/21963312926_2d5fb88a26_o.png"></p>
 <p>Tuy nhiên, Method GetValue này đã lỗi thời rồi, phải sửa nó một chút như hình sau</p>
-<p><img src="https://farm6.staticflickr.com/5750/21801691668_e341198c6a_o.png"></p>
+<p><img src="/images/flickr/5750/21801691668_e341198c6a_o.png"></p>
 <blockquote>
 <p>tính năng này cũng dùng được cho các đoạn string trong code XAML nhé</p>
 </blockquote>
@@ -3151,28 +3151,28 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Có khi nào bạn nhìn đống code XAML, và chẳng biết phải tìm thuộc tính mình cần ở đâu?</p>
 <p>XAML Styler đã đến. Và nó sẽ giúp bạn format code XAML tuyệt đẹp.</p>
 <h2 id="2-1-Cai-dat"><a href="#2-1-Cai-dat" class="headerlink" title="2.1. Cài đặt"></a>2.1. Cài đặt</h2><p>Vào Menu Tools &gt; Extension and Updates…</p>
-<p><img src="https://farm1.staticflickr.com/759/21801774968_c0b7347871_o.png"></p>
+<p><img src="/images/flickr/759/21801774968_c0b7347871_o.png"></p>
 <p>Tiếp tục chọn mục Online &gt; Visual Studio Gallery &gt; Nhập “XAML Styler” vào ô tìm kiếm và cài đặt XAML Styler</p>
-<p><img src="https://farm1.staticflickr.com/574/21989659205_849101bec2_o.png"></p>
+<p><img src="/images/flickr/574/21989659205_849101bec2_o.png"></p>
 <h2 id="2-2-Thiet-lap-thuoc-tinh"><a href="#2-2-Thiet-lap-thuoc-tinh" class="headerlink" title="2.2. Thiết lập thuộc tính"></a>2.2. Thiết lập thuộc tính</h2><p>Vào menu Tools &gt; Option &gt; kéo xuống dưới cùng chọn XAML Styler</p>
 <p>Chỉnh các thuộc tính như hình</p>
-<p><img src="https://farm1.staticflickr.com/685/21990196465_9187c0695b_o.png"></p>
+<p><img src="/images/flickr/685/21990196465_9187c0695b_o.png"></p>
 <p>Chắc các bạn thắc mắc tại sao lại phải chỉnh như vậy :3. Đó là theo kinh nghiệm cá nhân của mình để tăng hiệu suất và giảm sai sót thôi.</p>
 <h2 id="2-3-Su-dung"><a href="#2-3-Su-dung" class="headerlink" title="2.3. Sử dụng"></a>2.3. Sử dụng</h2><p>Sử dụng rất đơn giản: bạn mở code XAML lên &gt; click chuột phải &gt; Format XAML</p>
 <p>Before</p>
-<p><img src="https://farm6.staticflickr.com/5782/21367559744_f92258543e_o.png"></p>
+<p><img src="/images/flickr/5782/21367559744_f92258543e_o.png"></p>
 <p>After</p>
-<p><img src="https://farm1.staticflickr.com/754/21990346995_70aa6b546e_o.png"></p>
+<p><img src="/images/flickr/754/21990346995_70aa6b546e_o.png"></p>
 <h1 id="3-Super-Power-3-Indent-Guide-va-C-Outline"><a href="#3-Super-Power-3-Indent-Guide-va-C-Outline" class="headerlink" title="3. Super Power 3: Indent Guide và C# Outline"></a>3. Super Power 3: Indent Guide và C# Outline</h1><h2 id="3-1-Indent-Guide"><a href="#3-1-Indent-Guide" class="headerlink" title="3.1. Indent Guide"></a>3.1. Indent Guide</h2><p>Qua hình chụp screenshot nãy giờ, chắc các bạn cũng thắc mắc các đường kẻ dọc trong screenshot có mà Visual Studio của bạn không có? Đó chính là Indent Guide Extension. Chức năng của nó rất đơn giản, vẽ ra các đường kẻ dọc để code bạn dễ nhìn hơn, canh theo đúng hàng đúng lối.</p>
-<p><img src="https://farm1.staticflickr.com/590/21369345023_260fea1079_o.png"></p>
+<p><img src="/images/flickr/590/21369345023_260fea1079_o.png"></p>
 <p>Ngay khi cài xong, khởi động lại Visual Studio, mở một Project bất kỳ và bạn sẽ thấy thành quả</p>
-<p><img src="https://farm6.staticflickr.com/5799/21803058558_994e9e1edc_o.png"></p>
+<p><img src="/images/flickr/5799/21803058558_994e9e1edc_o.png"></p>
 <h2 id="3-2-C-Outline"><a href="#3-2-C-Outline" class="headerlink" title="3.2. C# Outline"></a>3.2. C# Outline</h2><p>Nhìn hình trên, chắc bạn cũng thấy lạ là tại sao cấu trúc if cũng có một dấu “-“ nho nhỏ để đóng ra mở vô. Đó chính là khả năng của Extension C# Outline.</p>
 <p>C# Outline giúp bạn tạo một code block ở mọi dấu ngoặc nhọn. Như vậy bạn có thể đóng mở tất cả các cấu trúc khác nhau như If then else, while do, switch case, vân vân và vân vân</p>
 <blockquote>
 <p>tên chính thức của nó là C# outline 2015, dành cho Visual Studio 2015 nhé bạn</p>
 </blockquote>
-<p><img src="https://farm6.staticflickr.com/5724/21804181309_0c316434c3_o.png"></p>
+<p><img src="/images/flickr/5724/21804181309_0c316434c3_o.png"></p>
 <p>Hết gòi, hẹn gặp lại bạn ở bài sau</p>
 ]]></content>
       <categories>
@@ -3243,26 +3243,26 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <li>Rút gọn code quá đà mà không để ý tới performance (giống như không xài Linq cho tất cả mọi thứ)</li>
 </ul>
 <h1 id="2-PerfTips-la-gi"><a href="#2-PerfTips-la-gi" class="headerlink" title="2. PerfTips là gì?"></a>2. PerfTips là gì?</h1><p>Khi bạn đặt breakpoint cho một dòng code nào đó, và app chạy tới breakpoint này, Visual Studio sẽ hiện một đoạn chữ nhỏ nhỏ, mờ mờ ngay cuối dòng, và nó chính là PerfTips</p>
-<p><img src="https://farm6.staticflickr.com/5643/22190175850_d39fa83775_o.png"></p>
+<p><img src="/images/flickr/5643/22190175850_d39fa83775_o.png"></p>
 <p>Bấm vào nó (chỗ &lt;&#x3D; 1ms elapsed), sẽ hiện ra công cụ phân tích</p>
-<p><img src="https://farm6.staticflickr.com/5816/22190283100_3900ce5068_o.png"></p>
+<p><img src="/images/flickr/5816/22190283100_3900ce5068_o.png"></p>
 <h1 id="3-Dung-PerfTips"><a href="#3-Dung-PerfTips" class="headerlink" title="3. Dùng PerfTips"></a>3. Dùng PerfTips</h1><p>Chúng ta sẽ sử dụng một sample đơn giản, một đoạn code dùng để load hình</p>
 <p>Thay vì chèn 2 đoạn code Stopwatch vào đầu và cuối của phương thức này, bạn chỉ cần đặt 2 breakpoint vào chỗ đó</p>
-<p><img src="https://farm6.staticflickr.com/5713/22378430175_006386fcd1_o.png"></p>
+<p><img src="/images/flickr/5713/22378430175_006386fcd1_o.png"></p>
 <p>Nhấn F5 để chạy, và Visual Studio dừng lại ngay chỗ Breakpoint đầu tiên</p>
-<p><img src="https://farm1.staticflickr.com/570/22190464430_6f893119e5_o.png"></p>
+<p><img src="/images/flickr/570/22190464430_6f893119e5_o.png"></p>
 <p>Nhấn F5 (hoặc continue) để Visual Studio chạy tiếp tới breakpoint thứ 2, và bạn sẽ thấy PerfTips hiện ra</p>
-<p><img src="https://farm1.staticflickr.com/683/22190602900_3927a739c8_o.png"></p>
+<p><img src="/images/flickr/683/22190602900_3927a739c8_o.png"></p>
 <p>Như vậy ta có thể thấy, method LoadImages chạy mất 2780 milisecond. Bây giờ chạy lại toàn bộ một lần nữa, nhưng dừng lại ở từng dòng code một để xem dòng nào tốn nhiều thời gian nhất.</p>
 <p>Nhấn F10 để chạy từng dòng code một. Vài dòng đầu tiên, mỗi dòng không quá 20 ms, quá tốt.</p>
-<p><img src="https://farm1.staticflickr.com/688/22352672686_50a793488b_o.png"></p>
+<p><img src="/images/flickr/688/22352672686_50a793488b_o.png"></p>
 <p>Thế như tới dòng GetImageFromCloud tốn tới 1391 ms</p>
-<p><img src="https://farm6.staticflickr.com/5791/22352751386_5a52119746_o.png"></p>
+<p><img src="/images/flickr/5791/22352751386_5a52119746_o.png"></p>
 <p>Và dòng LoadImagesFromDisk tốn tới 1361 ms</p>
-<p><img src="https://farm6.staticflickr.com/5718/22190832080_f489be8d8a_o.png"></p>
+<p><img src="/images/flickr/5718/22190832080_f489be8d8a_o.png"></p>
 <p>Vậy tại sao ta không cho 2 method này chạy song song với nhau nhỉ?</p>
 <p>Đổi code thành như sau</p>
-<p><img src="https://farm6.staticflickr.com/5624/22378857485_c2d338a7d3_o.png"></p>
+<p><img src="/images/flickr/5624/22378857485_c2d338a7d3_o.png"></p>
 <p>Trong hình trên, bạn có thể thấy cả method LoadImages chạy mất 2079 ms, giảm cỡ 700 ms, tương đương 25%. Quá tuyệt phải không?</p>
 <p>Bây giờ, khi bạn đã biết cách xài PerfTips, chúng ta sẽ tiếp tục với một vài Best Practices khi dùng nó</p>
 <h1 id="4-Best-Practices"><a href="#4-Best-Practices" class="headerlink" title="4. Best Practices"></a>4. Best Practices</h1><h2 id="4-1-Do-nhieu-lan"><a href="#4-1-Do-nhieu-lan" class="headerlink" title="4.1. Đo nhiều lần"></a>4.1. Đo nhiều lần</h2><p>Thời gian chạy, hiệu suất code có thể khác nhau cho mỗi lần chạy. Thông thường một đoạn code chạy lần đầu tiên lúc nào cũng chậm hơn khi chạy lần 2, 3, n. Lý do là ở lần đầu tiên, nó phải load các dll, khởi tạo bộ nhớ đệm. Đo nhiều lần sẽ cho bạn một khoảng thời gian chính xác hơn</p>
@@ -3299,11 +3299,11 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Of course it’s your choice. Use whatever you’re familiar with. Don’t let me tell you what to do. But if you insisted, here they are</p>
 <p>Tất nhiên là lựa chọn của bạn. Xài cái nào thấy wen là được. Nhưng mà vẫn muốn biết một cái tốt (theo ý mình), thì đọc tiếp nhé.</p>
 <h2 id="1-1-GitHub-Desktop-–-Not-that-good"><a href="#1-1-GitHub-Desktop-–-Not-that-good" class="headerlink" title="1.1. GitHub Desktop – Not that good"></a>1.1. GitHub Desktop – Not that good</h2><p>Link: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
-<p><img src="https://farm6.staticflickr.com/5663/21778229224_3e5b23876f_o.png"></p>
+<p><img src="/images/flickr/5663/21778229224_3e5b23876f_o.png"></p>
 <p>GitHub Desktop, phát triển bới chính dòng họ nhà mều bạch tuộc GitHub, chả tốt tẹo nào. Vì sao áh? Vì nó quá đơn giản, và thiếu nhiều nút cơ bản như Pull, Push, Fetch, Sync, blah blah blah.</p>
 <p>GitHub Desktop mong muốn mọi thứ đơn giản nhất có thể. Nhưng họ lại bỏ hết mấy từ quen thuộc trong Git rồi.</p>
 <h2 id="1-2-SourceTree-–-More-complex-have-all-the-functions"><a href="#1-2-SourceTree-–-More-complex-have-all-the-functions" class="headerlink" title="1.2. SourceTree – More complex, have all the functions"></a>1.2. SourceTree – More complex, have all the functions</h2><p>My favorite: <a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></p>
-<p><img src="https://farm1.staticflickr.com/685/22214151369_9ae2265273_o.png"></p>
+<p><img src="/images/flickr/685/22214151369_9ae2265273_o.png"></p>
 <p>SourceTree, phát triển bởi Atlassian, là một phần mềm git source control khá tốt (theo ý cá nhân). Bạn có thể làm mọi thứ bạn muốn với nó. Thậm chí nó còn có cả Command Lind cho ai thích gõ lệnh như hacker nhé.</p>
 <h1 id="2-Setting-up"><a href="#2-Setting-up" class="headerlink" title="2. Setting up"></a>2. Setting up</h1><blockquote>
 <p>Giờ, có thể bạn đã nghe thiên hạ đồn là Microsoft mở mã nguồn bộ .NET. Thực ra thì thiên hạ đồn quả nhiên ko sai, mà còn thiếu. Không chỉ .NET không, mà còn khá nhiều thứ khác cũng được “mở”. Nói bạn rồi, Microsoft đã chịu chơi trở lại.</p>
@@ -3314,14 +3314,14 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>SSH: <a href="mailto:git@github.com:Microsoft/Windows-universal-samples.git">git@github.com:Microsoft/Windows-universal-samples.git</a></p>
 <p>Subversion: <a href="https://github.com/Microsoft/Windows-universal-samples">https://github.com/Microsoft/Windows-universal-samples</a></p>
 <p>Mở SourceTree (hoặc phần mềm mà bạn thích) &gt; Clone&#x2F;New</p>
-<p><img src="https://farm1.staticflickr.com/747/22214019219_1e3d2d0867_o.png"></p>
+<p><img src="/images/flickr/747/22214019219_1e3d2d0867_o.png"></p>
 <p>Copy &#x2F; Paste cái link HTTPS vô “Source Path &#x2F; URL”, và SourceTree sẽ tự động điền mấy chỗ khác. Nếu bạn muốn customize cái gì thì cứ thoải mái chọt zô mà sửa đổi.</p>
-<p><img src="https://farm1.staticflickr.com/761/22374909436_1a8188ffc0_o.png"></p>
+<p><img src="/images/flickr/761/22374909436_1a8188ffc0_o.png"></p>
 <p>Cuối cùng, click Clone. Thế là xong, tất cả code Sample đã nằm trên máy tính.</p>
 <h1 id="3-Keep-the-code-up-to-date"><a href="#3-Keep-the-code-up-to-date" class="headerlink" title="3. Keep the code up-to-date"></a>3. Keep the code up-to-date</h1><p>Giờ bạn đã có code rồi, làm gì nữa?</p>
 <p>Để update code, đơn giản là mở SourceTree lên, rồi nhấn Fetch &gt; Pull hoặc nhấn Sync luôn từ đầu.</p>
 <p>Trong SourceTree, click Fetch</p>
-<p><img src="https://farm1.staticflickr.com/604/21779962253_cb809d0635_o.png"></p>
+<p><img src="/images/flickr/604/21779962253_cb809d0635_o.png"></p>
 <p>Bạn có thấy con số đỏ lấp ló trên đầu nút Pull không? Đó chính là số lượng phiên bản mới (commit) đã có trên server của GitHub, nhưng chưa có trên máy của bạn. Nhấn Pull để lôi cổ tụi nó về máy.</p>
 <p>và bạn lại tiếp tục có code mới</p>
 <blockquote>
@@ -3353,12 +3353,12 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <h1 id="1-The-App"><a href="#1-The-App" class="headerlink" title="1. The App"></a>1. The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
 <p>Link: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a></p>
 <p>Nhìn vô biết xài liền, nhưng mà dù sao cũng hướng dẫn bạn một tí nhóe.</p>
-<h1 id="2-Using-it"><a href="#2-Using-it" class="headerlink" title="2. Using it"></a>2. Using it</h1><p><img src="https://farm2.staticflickr.com/1528/25014426576_2bb0afed82_o.png"></p>
+<h1 id="2-Using-it"><a href="#2-Using-it" class="headerlink" title="2. Using it"></a>2. Using it</h1><p><img src="/images/flickr/1528/25014426576_2bb0afed82_o.png"></p>
 <p>Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịch với các slider, nút này nọ để hiểu rõ hơn về app nhóe</p>
 <h1 id="3-Add-custom-size-and-scale"><a href="#3-Add-custom-size-and-scale" class="headerlink" title="3. Add custom size and scale"></a>3. Add custom size and scale</h1><p>Nhấn cái nút dấu + nhỏ nhỏ</p>
-<p><img src="https://farm6.staticflickr.com/5627/22493108391_1a6c030571_o.png"></p>
+<p><img src="/images/flickr/5627/22493108391_1a6c030571_o.png"></p>
 <p>Trong trang này, bạn có thể thêm các size mới của riêng mình</p>
-<p><img src="https://farm2.staticflickr.com/1536/25014463126_d77238d3c3_o.png"></p>
+<p><img src="/images/flickr/1536/25014463126_d77238d3c3_o.png"></p>
 <p>Platform name is the name of your custom collection. By this way, you can create many platforms that match your need, and choose to generate images for these custom platform or not.</p>
 <p>Platform name là tên của danh sách những cái kích thước khác nhau của bạn. Bằng cách này, bạn có thể tạo bao nhiêu platforms cũng được. Nên đặt tên khác nhau cho dễ nhớ.</p>
 <p>Cái text box bự bự bên dưới là chỗ bạn nhập các thông số kích thước.</p>
@@ -3368,7 +3368,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Làm xong rồi thì nhấn Add, cái kích thước đó sẽ nằm trong platform, và platform mới sẽ được thêm vào danh sách các platform.</p>
 <p>Cái hay ho nhứt là, dần dần, danh sách các platform do bạn tạo ra sẽ được đồng bộ hóa giữa tất cả thiết bị mà bạn login bằng cùng tài khoản Microsoft Account. Kiểu như trên công ty tạo ra xài xong, về nhà mở máy lên là đã có sẵn để xài tiếp.</p>
 <h1 id="4-Settings"><a href="#4-Settings" class="headerlink" title="4. Settings"></a>4. Settings</h1><p>Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là “Update Database”</p>
-<p><img src="https://farm2.staticflickr.com/1590/24922870222_cf003efd5f_o.png"></p>
+<p><img src="/images/flickr/1590/24922870222_cf003efd5f_o.png"></p>
 <p>Bình thường, app sẽ update database tự động. Nhưng vì lý do nào đó (kiểu như bạn đang xài dữ liệu 3g, hay PC đang connect tới mạng chập chờn chả hạn), bạn có thể check update bằng tay. Cái này chỉ update cái danh sách platform default, không phải cái custom do bạn tự tạo, nên hok sao âu.</p>
 <h1 id="5-Rate-for-me-please-and-feedback"><a href="#5-Rate-for-me-please-and-feedback" class="headerlink" title="5. Rate for me, please, and feedback"></a>5. Rate for me, please, and feedback</h1><p>Cuối cùng, nếu bạn thấy app này hữu ích, rate cho nó nhá. Nếu bạn gặp lỗi hay vấn đề gì, có thể gửi email cho mềnh tại <a href="mailto:cuoilennaocacban@hotmail.com">cuoilennaocacban@hotmail.com</a></p>
 <p>Hẹn gặp lại các bạn ở những bài blog khác.</p>
@@ -3398,18 +3398,18 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <span id="more"></span>
 
 <h1 id="1-Advanced-Debugging"><a href="#1-Advanced-Debugging" class="headerlink" title="1. Advanced Debugging"></a>1. Advanced Debugging</h1><p>Tất cả mọi người đều biết, để debug một đoạn code, bạn thường đặt một break point. Khi code chạy tới đó, nó sẽ dừng ngay tại Breakpoint đó. The end. Hết phim. Tuy nhiên, nếu bạn đọc bài blog này: <a href="https://cuoilennaocacban2.wordpress.com/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/">[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</a>, bạn sẽ thấy một công dụng nữa của Breakpoint dành cho việc đo đạc thời gian chạy một đoạn code. Ngoài ra, Breakpoint còn có một số công dụng khác nữa</p>
-<h2 id="1-1-Output-Log-with-Breakpoint"><a href="#1-1-Output-Log-with-Breakpoint" class="headerlink" title="1.1. Output Log with Breakpoint"></a>1.1. Output Log with Breakpoint</h2><p><img src="https://farm6.staticflickr.com/5628/22152610574_b5e8c867c4_o.png"></p>
+<h2 id="1-1-Output-Log-with-Breakpoint"><a href="#1-1-Output-Log-with-Breakpoint" class="headerlink" title="1.1. Output Log with Breakpoint"></a>1.1. Output Log with Breakpoint</h2><p><img src="/images/flickr/5628/22152610574_b5e8c867c4_o.png"></p>
 <p>Trong vòng lặp trên, bạn sẽ thấy có dòng “Debug.WriteLine” dùng để xuất một thông tin gì đó ra màn hình Output. Thông tin này sẽ giúp bạn biết code đã chạy tới dòng này, và xuất ra các giá trị mà bạn mong muốn.</p>
-<p><img src="https://farm1.staticflickr.com/618/22152668514_87a33835e7_o.png"></p>
+<p><img src="/images/flickr/618/22152668514_87a33835e7_o.png"></p>
 <p>Từ giờ, bạn không cần phải làm thủ công như vậy nữa.</p>
 <p>Đưa chuột lại gần Breakpoint, một menu nhỏ xíu hiện ra, nhấn vào dấu răng cưa</p>
-<p><img src="https://farm1.staticflickr.com/706/22775443405_64dfbcf543_o.png"></p>
+<p><img src="/images/flickr/706/22775443405_64dfbcf543_o.png"></p>
 <p>Một cái cửa sổ hiện ra, chèn vào giữa đoạn code đặt breakpoint của bạn. Tick chọn ô Action. Bạn sẽ thấy tính năng “Log a message to output Windows”</p>
-<p><img src="https://farm6.staticflickr.com/5649/22761956172_d042077119_o.png"></p>
+<p><img src="/images/flickr/5649/22761956172_d042077119_o.png"></p>
 <p>Gõ vào trong ô đó những thứ bạn muốn xuất ra cửa sổ output. Biến thì để trong dấu ngoặc nhọn. Thế là xong</p>
-<p><img src="https://farm6.staticflickr.com/5813/22154779113_ab9acf18e1_o.png"></p>
+<p><img src="/images/flickr/5813/22154779113_ab9acf18e1_o.png"></p>
 <p>Khi chạy lại app, cửa sổ output sẽ là</p>
-<p><img src="https://farm6.staticflickr.com/5803/22762522502_765d5041fe_o.png"></p>
+<p><img src="/images/flickr/5803/22762522502_765d5041fe_o.png"></p>
 <p>Bạn thấy con số nằm trong ngoặc kép là vì nó là kiểu string, không phải int. Nên khi hiển thị, Visual Studio sẽ đưa nó vào trong ngoặc kép</p>
 <p>Bây giờ, hãy so sánh một chút</p>
 <table>
@@ -3432,7 +3432,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 </tr>
 </tbody></table>
 <h2 id="1-2-Condition-Breakpoint"><a href="#1-2-Condition-Breakpoint" class="headerlink" title="1.2. Condition Breakpoint"></a>1.2. Condition Breakpoint</h2><p>Tiếp tục tick chọn ô Condition, cửa sổ được mở rộng ra để lộ nhiều tùy chọn hơn cho bạn</p>
-<p><img src="https://farm1.staticflickr.com/757/22588283440_b481c716fc_o.png"></p>
+<p><img src="/images/flickr/757/22588283440_b481c716fc_o.png"></p>
 <p>Bạn có nhiều tùy chọn để quyết định xem là Visual Studio có dừng lại ở Breakpoint này hay không. Trong số đó có</p>
 <ul>
 <li><p>Conditional Expression: Biểu thức điều kiện: Sẽ dừng ở breakpoint khi điều kiện đúng</p>
@@ -3444,22 +3444,22 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 </ul>
 <p>Đối với App Windows, bạn sẽ cần dùng 2 cái đầu tiên nhiều nhất</p>
 <p>Giả sử mình muốn dừng lại ở lần chạy thứ 9, và xuất ra màn hình biến ở lần chạy này, thì thiết lập như sau:</p>
-<p><img src="https://farm6.staticflickr.com/5675/22787742791_38aeba8663_o.png"></p>
+<p><img src="/images/flickr/5675/22787742791_38aeba8663_o.png"></p>
 <h1 id="2-The-new-Exception-Settings"><a href="#2-The-new-Exception-Settings" class="headerlink" title="2. The new Exception Settings"></a>2. The new Exception Settings</h1><p>Đã bao giờ bạn gặp phải cái lỗi ở cái dòng lạ hoắc như vầy chưa?</p>
-<p><img src="https://farm1.staticflickr.com/778/22155676943_b38eeef94c_o.png"></p>
+<p><img src="/images/flickr/778/22155676943_b38eeef94c_o.png"></p>
 <p>DISABLE_XAML_BREAK_ON_UNHANDLED_EXCEPTION</p>
 <p>Global::System.Diagnostics.Debugger.Break();</p>
 <p>Cái này là gì</p>
 <p>Hoặc lỗi như vầy</p>
-<p><img src="https://farm6.staticflickr.com/5810/22776832185_80b555ab2f_o.png"></p>
+<p><img src="/images/flickr/5810/22776832185_80b555ab2f_o.png"></p>
 <p>“An exception of type “Blah blah blah” occurred in Yourappname.exe but was not handled in user code”, và kèm theo đó là Visual Studio dừng ở một dòng lạ hoắc, và bạn biết chắc chắn là lỗi xảy ra ở chỗ khác, không phải dòng này.</p>
 <p>Đó là lý do ta sẽ dùng Exception Setting để nhảy tới đúng chỗ code sinh ra lỗi</p>
 <p>Bạn vào Debug &gt; Windows &gt; Exception Settings…</p>
-<p><img src="https://farm1.staticflickr.com/750/22788116721_a7e75bc800_o.png"></p>
+<p><img src="/images/flickr/750/22788116721_a7e75bc800_o.png"></p>
 <p>Copy tên của Exception, trong trường hợp trên là “System.Exception” và paste nó vào ô tìm kiếm. Tíck chọn kết quả hiện ra</p>
-<p><img src="https://farm1.staticflickr.com/592/22588970370_394a956f21_o.png"></p>
+<p><img src="/images/flickr/592/22588970370_394a956f21_o.png"></p>
 <p>Chạy lại app. Và bây giờ, Visual Studio sẽ nhảy tới đúng dòng bị lỗi</p>
-<p><img src="https://farm6.staticflickr.com/5829/22763429822_fe3f21d523_o.png"></p>
+<p><img src="/images/flickr/5829/22763429822_fe3f21d523_o.png"></p>
 <p>Quá tuyệt, phải không</p>
 <p>Đón xem các bài blog tiếp theo về các tính năng cực kute của Visual Studio nhé.</p>
 ]]></content>
@@ -3476,7 +3476,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#x75;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#99;&#x74;&#x69;&#101;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x73;&#x74;&#x75;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#99;&#x74;&#x69;&#101;&#110;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#x67;&#x6f;&#x63;&#116;&#105;&#x65;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x74;&#117;&#100;&#x79;&#x2e;&#110;&#x67;&#x6f;&#x63;&#116;&#105;&#x65;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#117;&#100;&#121;&#46;&#x6e;&#x67;&#x6f;&#x63;&#x74;&#105;&#x65;&#110;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x73;&#116;&#117;&#100;&#121;&#46;&#x6e;&#x67;&#x6f;&#x63;&#x74;&#105;&#x65;&#110;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#x73;&#116;&#117;&#x64;&#121;&#x2e;&#110;&#x67;&#111;&#x63;&#116;&#x69;&#101;&#x6e;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#x73;&#116;&#117;&#x64;&#121;&#x2e;&#110;&#x67;&#111;&#x63;&#116;&#x69;&#101;&#x6e;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3485,7 +3485,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#111;&#x61;&#x74;&#114;&#x75;&#x6f;&#110;&#103;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#111;&#109;">&#x6b;&#x68;&#111;&#x61;&#x74;&#114;&#x75;&#x6f;&#110;&#103;&#x62;&#x61;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#111;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#x68;&#x6f;&#97;&#116;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#x61;&#99;&#x68;&#x40;&#x6c;&#105;&#118;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#107;&#x68;&#x6f;&#97;&#116;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#x61;&#99;&#x68;&#x40;&#x6c;&#105;&#118;&#101;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#104;&#111;&#x61;&#116;&#x72;&#117;&#111;&#110;&#x67;&#98;&#x61;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x6b;&#104;&#111;&#x61;&#116;&#x72;&#117;&#111;&#110;&#x67;&#98;&#x61;&#x63;&#104;&#64;&#108;&#105;&#x76;&#x65;&#x2e;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#104;&#x6f;&#97;&#x74;&#x72;&#117;&#x6f;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#64;&#x6c;&#105;&#118;&#101;&#46;&#x63;&#x6f;&#109;">&#107;&#104;&#x6f;&#97;&#x74;&#x72;&#117;&#x6f;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#64;&#x6c;&#105;&#118;&#101;&#46;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3549,31 +3549,31 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <span id="more"></span>
 <h1 id="Kich-hoat-trong-TFS"><a href="#Kich-hoat-trong-TFS" class="headerlink" title="Kích hoạt trong TFS"></a>Kích hoạt trong TFS</h1><p>Mở project của bạn trong TFS ra. Thông thường sẽ có địa chỉ là “blahblahblah.visualstudio.com”. Bạn sẽ phải đăng nhập, và chỉ có admin có quyền này</p>
 <p>Chọn 1 Project mà bạn muốn tích hợp</p>
-<p><img src="https://farm2.staticflickr.com/1547/23806986773_398ba374e6_o.png"></p>
+<p><img src="/images/flickr/1547/23806986773_398ba374e6_o.png"></p>
 <p>Ở trong Project đó, click Settings để vào phần thiết lập</p>
-<p><img src="https://farm2.staticflickr.com/1693/24351380141_2d15dd5529_o.png"></p>
+<p><img src="/images/flickr/1693/24351380141_2d15dd5529_o.png"></p>
 <p>Trong Settings &gt; Service Hooks &gt; Create the first subscription for this project</p>
-<p><img src="https://farm2.staticflickr.com/1679/23807096673_7118fe4dcd_o.png"></p>
+<p><img src="/images/flickr/1679/23807096673_7118fe4dcd_o.png"></p>
 <p>Kéo xuống chọn Slack rồi Next</p>
-<p><img src="https://farm2.staticflickr.com/1454/23805672984_a6c39c2d54_o.png"></p>
+<p><img src="/images/flickr/1454/23805672984_a6c39c2d54_o.png"></p>
 <p>Ở mục Trigger, bạn có thể chọn các sự kiện muốn thông báo. Ở đây mình sẽ chọn là code checked in. Sau khi chọn xong, nhớ kiểm tra lại đường dẫn tới project của bạn nhé</p>
-<p><img src="https://farm2.staticflickr.com/1443/24325627642_f43b136bc1_o.png"></p>
+<p><img src="/images/flickr/1443/24325627642_f43b136bc1_o.png"></p>
 <p>Ở bước tiếp theo, bạn sẽ cần một thông số là Slack Webhook URL. Cái này phải vô slack mới có nhóe.</p>
-<p><img src="https://farm2.staticflickr.com/1467/24066128509_c91f25dd35_o.png"></p>
+<p><img src="/images/flickr/1467/24066128509_c91f25dd35_o.png"></p>
 <h1 id="Lay-Slack-Webhook-URL"><a href="#Lay-Slack-Webhook-URL" class="headerlink" title="Lấy Slack Webhook URL"></a>Lấy Slack Webhook URL</h1><p>Mở slack lên, nhấn chuột vô cái dấu mũi tên đằng sau tên team &gt; Apps and Custom Integrations</p>
-<p><img src="https://farm2.staticflickr.com/1558/23811662364_c3b2482408_o.png"></p>
+<p><img src="/images/flickr/1558/23811662364_c3b2482408_o.png"></p>
 <p>Trong trang web vừa xuất hiện, tìm app Incoming Webhook</p>
-<p><img src="https://farm2.staticflickr.com/1458/24439861585_ac197f5bc0_o.png"></p>
+<p><img src="/images/flickr/1458/24439861585_ac197f5bc0_o.png"></p>
 <p>Bạn có thể đăng nhập nhiều team slack và install cho những team đó luôn một lúc.</p>
-<p><img src="https://farm2.staticflickr.com/1639/24357442781_27f266d7fe_o.png"></p>
+<p><img src="/images/flickr/1639/24357442781_27f266d7fe_o.png"></p>
 <p>Sau đó, chọn channel sẽ post các thông báo, rồi nhấn nút thôi</p>
-<p><img src="https://farm2.staticflickr.com/1505/24439921085_f4480688db_o.png"></p>
+<p><img src="/images/flickr/1505/24439921085_f4480688db_o.png"></p>
 <p>Ở trang tiếp theo, bạn sẽ thấy Webhook URL. Copy nó và paste vào trong mục điền ở bước 1 nhóe</p>
-<p><img src="https://farm2.staticflickr.com/1636/24413747666_afd642068f_o.png"></p>
+<p><img src="/images/flickr/1636/24413747666_afd642068f_o.png"></p>
 <p>Nhấn Test để test thử</p>
-<p><img src="https://farm2.staticflickr.com/1570/24144370770_a32341cdef_o.png"></p>
+<p><img src="/images/flickr/1570/24144370770_a32341cdef_o.png"></p>
 <p>Sau cùng, nhấn nút Finish, và thế là bạn đã tích hợp được TFS vào Slack nhóe</p>
-<p><img src="https://farm2.staticflickr.com/1545/24440021705_020a7008bf_o.png"></p>
+<p><img src="/images/flickr/1545/24440021705_020a7008bf_o.png"></p>
 <blockquote>
 <p>Tips: Bạn có thể add thêm nhiều loại Trigger khác</p>
 </blockquote>
@@ -3640,11 +3640,11 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 <p>Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Store.</p>
 <p>“Nhưng app vẫn đang trong giai đoạn dev, chưa publish được” – “App chưa có gì cả” – “App vẫn chưa hoàn thiện hết các tính năng”</p>
 <p>Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.</p>
-<p><img src="https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png"></p>
+<p><img src="/images/flickr/1563/24454812865_46046851ea_o.png"></p>
 <p>Hide this app in the Store</p>
 <h2 id="3-2-Step-2-Create-IAP-aka-In-App-Purchase"><a href="#3-2-Step-2-Create-IAP-aka-In-App-Purchase" class="headerlink" title="3.2. Step 2: Create IAP (aka In-App Purchase)"></a>3.2. Step 2: Create IAP (aka In-App Purchase)</h2><p><a id="markdown-step-2%3A-create-iap-aka-in-app-purchase" name="step-2%3A-create-iap-aka-in-app-purchase"></a></p>
 <p>In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được</p>
-<p><img src="https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png"></p>
+<p><img src="/images/flickr/1538/24087084229_5b67cc60ea_o.png"></p>
 <p>Tạo một In-App Purchase</p>
 <h2 id="3-3-Step-3-The-tricky"><a href="#3-3-Step-3-The-tricky" class="headerlink" title="3.3. Step 3: The tricky"></a>3.3. Step 3: The tricky</h2><p><a id="markdown-step-3%3A-the-tricky" name="step-3%3A-the-tricky"></a></p>
 <p>In-App Purchase sẽ ko chạy khi bạn có 1 trong các điều kiện sau</p>
@@ -3709,11 +3709,11 @@ else
 &#125;</code></pre>
 
 <p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật</p>
-<p><img src="https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png"></p>
+<p><img src="/images/flickr/1616/23825747414_ddb694db19_o.png"></p>
 <p>Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
 <h2 id="3-4-Step-4-Change-the-test-code-to-actual-code"><a href="#3-4-Step-4-Change-the-test-code-to-actual-code" class="headerlink" title="3.4. Step 4: Change the test code to actual code"></a>3.4. Step 4: Change the test code to actual code</h2><p><a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a></p>
 <p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công</p>
-<p><img src="https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png"></p>
+<p><img src="/images/flickr/1461/23829331723_6f852496b8_o.png"></p>
 <blockquote>
 <p>Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center &#x3D;.&#x3D;)</p>
 </blockquote>
@@ -3742,7 +3742,7 @@ else
 <p>Một trường hợp khác, App của bạn bình thường, hình ảnh Free, nội dung hoàn toàn do bạn sáng tạo ra, nhưng cái tên lại có các từ dễ gây hiểu lầm. Đây là trường hợp mình gặp đối với 1 app của mình luôn. Đây là link tới App: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a>. Lúc đầu mình đặt tên app này là “Windows Universal Logo Maker”. Fail, fail và fail. Sau cùng, mình gửi message tới tester hỏi, và họ trả lời là chữ “Windows Universal” sẽ gây cho người dùng nhầm lẫn rằng app này là một app chính thức của Windows 10, do Microsoft phát hành, và họ cũng suggest mình đổi lại thành “Universal Logo Maker for Windows” -&gt; Pass ngay tắp lự.</p>
 <p>Một ghi chú nhỏ khác là không những tên app, mà tất cả các thông tin khác trong App description cũng phải mô tả tính năng của app đó, và không có các từ ngữ thuộc về các app nổi tiếng khác nhằm mục đích câu view, câu like, câu search cho app bạn.</p>
 <p>Có qua cũng phải có lại. Nếu app của bạn thực sự tốt, nội dung độc đáo, tạo ra giá trị hữu ích cho người dùng, dần dần app của bạn sẽ được xếp lên đầu các kết quả tìm kiếm, thậm chí chỉ cần gõ từ khóa là app sẽ hiện ra ngay dưới khung suggestion luôn.</p>
-<p><img src="https://farm2.staticflickr.com/1572/24579499753_e6d445c1db_o.png"></p>
+<p><img src="/images/flickr/1572/24579499753_e6d445c1db_o.png"></p>
 <p>Khuyến cáo: Sử dụng app Universal Logo Maker for Windows để tạo ra bộ Icon cho App của bạn trong 5 nốt nhạc.</p>
 <h1 id="2-App-hay-va-doc-dao"><a href="#2-App-hay-va-doc-dao" class="headerlink" title="2. App hay và độc đáo"></a>2. App hay và độc đáo</h1><p>Có hàng trăm ngàn app trên Store. Khi các chiêu trò câu view, câu like, câu search không còn tác dụng, thì bạn phải làm gì để người dùng tìm ra và download app của bạn?</p>
 <p>Câu trả lời đến từ logo, screenshot, và tính năng của app bạn. App đó càng đẹp, càng độc đáo, càng hữu ích cho người dùng, thì khả năng họ tìm ra nó cũng càng cao. Có một từ ngữ vui để gọi hiện tượng này, là “hiệu ứng trái banh tuyết”. App hay -&gt; người dùng xài nhiều -&gt; họ giới thiệu cho người khác -&gt; Review tích cực nhiều -&gt; lại càng dễ tìm trên Store -&gt; càng nhiều người dùng hơn</p>
@@ -3774,7 +3774,7 @@ else
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#99;&#x73;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#97;&#120;&#99;&#x73;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#120;&#99;&#x73;&#57;&#48;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#97;&#120;&#99;&#x73;&#57;&#48;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#x63;&#x73;&#x39;&#48;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x61;&#120;&#x63;&#x73;&#x39;&#48;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#120;&#x63;&#x73;&#57;&#48;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#97;&#120;&#x63;&#x73;&#57;&#48;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3815,29 +3815,29 @@ else
 </ul>
 <h1 id="3-Cho-dev-ko-xai-Windows"><a href="#3-Cho-dev-ko-xai-Windows" class="headerlink" title="3. Cho dev ko xài Windows"></a>3. Cho dev ko xài Windows</h1><p>ASP.NET core có thể code được bằng nhiều thứ khác nhau như Sublime, Visual Studio Code hoặc trình soạn thảo khoái trá của bạn.</p>
 <h1 id="4-Hello-world"><a href="#4-Hello-world" class="headerlink" title="4. Hello world"></a>4. Hello world</h1><p>Bật visual studio &gt; New Project &gt; Chọn ASP.NET Core Web Application (.NET Core)</p>
-<p><img src="https://farm8.staticflickr.com/7352/28088746726_3720e218f0_o.png"></p>
+<p><img src="/images/flickr/7352/28088746726_3720e218f0_o.png"></p>
 <p>Sau khi nhấn OK, chọn Empty &gt; Bỏ chọn Host in the cloud (hiện giờ thì cứ test local các kiểu đi đã) &gt; OK</p>
-<p><img src="https://farm8.staticflickr.com/7379/28122930625_bc23f52a5b_o.png"></p>
+<p><img src="/images/flickr/7379/28122930625_bc23f52a5b_o.png"></p>
 <p>Sau khi nhấn OK, Visual Studio sẽ bắt đầu tạo project. Project tạo xong, nó sẽ bắt đầu restore các NuGet Package.</p>
 <p>Điểm hay ở ASP.NET Core là nó ko còn dựa trên 1 library nhất định như các phiên bản ASP.NET cũ nữa, mà hoàn toàn dựa trên Nuget Package.</p>
-<p><img src="https://farm8.staticflickr.com/7431/28088835376_acf5813b9c_o.png"></p>
+<p><img src="/images/flickr/7431/28088835376_acf5813b9c_o.png"></p>
 <p>Sau cùng, nhấn nút để chạy thử và xem thành quả</p>
-<p><img src="https://farm8.staticflickr.com/7336/27843235500_3a0cfbc3af_o.png"></p>
-<p><img src="https://farm8.staticflickr.com/7574/28045741121_29641faf2f_o.png"></p>
+<p><img src="/images/flickr/7336/27843235500_3a0cfbc3af_o.png"></p>
+<p><img src="/images/flickr/7574/28045741121_29641faf2f_o.png"></p>
 <h1 id="5-Publish-len-Azure"><a href="#5-Publish-len-Azure" class="headerlink" title="5. Publish lên Azure"></a>5. Publish lên Azure</h1><p>Nhấn chuột phải vô Web Application &gt; Publish</p>
-<p><img src="https://farm8.staticflickr.com/7442/27508633903_a7451490d9_o.png"></p>
+<p><img src="/images/flickr/7442/27508633903_a7451490d9_o.png"></p>
 <p>Chọn Publish target là Azure</p>
-<p><img src="https://farm8.staticflickr.com/7328/28123967115_9334fb7a48_o.png"></p>
+<p><img src="/images/flickr/7328/28123967115_9334fb7a48_o.png"></p>
 <p>Nếu bạn muốn có riêng một Resource Group nào đó, thì tạo mới 1 cái</p>
-<p><img src="https://farm8.staticflickr.com/7389/28089848636_3a27dcdc72_o.png"></p>
+<p><img src="/images/flickr/7389/28089848636_3a27dcdc72_o.png"></p>
 <p>Nhớ chọn các thông số cần thiết</p>
-<p><img src="https://farm8.staticflickr.com/7350/27509151714_dcde6a8641_o.png"></p>
+<p><img src="/images/flickr/7350/27509151714_dcde6a8641_o.png"></p>
 <p>App Service Plan thì free được rồi</p>
-<p><img src="https://farm8.staticflickr.com/7342/28021061142_26fe033b23_o.png"></p>
+<p><img src="/images/flickr/7342/28021061142_26fe033b23_o.png"></p>
 <p>Ra được cái màn hình này thì cứ nhấn publish thôi</p>
-<p><img src="https://farm8.staticflickr.com/7379/28021077182_9ced5d2930_o.png"></p>
+<p><img src="/images/flickr/7379/28021077182_9ced5d2930_o.png"></p>
 <p>Chiêm ngưỡng thành quả</p>
-<p><img src="https://farm8.staticflickr.com/7321/27509194014_95f55d6dbd_o.png"></p>
+<p><img src="/images/flickr/7321/27509194014_95f55d6dbd_o.png"></p>
 ]]></content>
       <categories>
         <category>CSharp</category>
@@ -4018,16 +4018,16 @@ if(string.IsNullOrEmpty(s))
 <h1 id="3-Start"><a href="#3-Start" class="headerlink" title="3. Start"></a>3. Start</h1><p><a id="markdown-start" name="start"></a></p>
 <h2 id="3-1-Khoi-tao-Project"><a href="#3-1-Khoi-tao-Project" class="headerlink" title="3.1. Khởi tạo Project"></a>3.1. Khởi tạo Project</h2><p><a id="markdown-kh%E1%BB%9Fi-t%E1%BA%A1o-project" name="kh%E1%BB%9Fi-t%E1%BA%A1o-project"></a></p>
 <p>Tạo mới 1 project, chọn template là ASP.NET Core Web Application (.NET Core), đặt tên là todoapi &gt; OK</p>
-<p><img src="https://farm8.staticflickr.com/7671/27642365454_2fb370b186_o.png"></p>
+<p><img src="/images/flickr/7671/27642365454_2fb370b186_o.png"></p>
 <p>Chọn template là Web API &gt; OK</p>
-<p><img src="https://farm8.staticflickr.com/7699/27976818140_4bfdcc1961_o.png"></p>
+<p><img src="/images/flickr/7699/27976818140_4bfdcc1961_o.png"></p>
 <h2 id="3-2-Them-model"><a href="#3-2-Them-model" class="headerlink" title="3.2. Thêm model"></a>3.2. Thêm model</h2><p><a id="markdown-th%C3%AAm-model" name="th%C3%AAm-model"></a></p>
 <p>Model là một object đại diện cho dữ liệu của bạn trong ứng dụng. Trong ví dụ này thì model duy nhất chỉ là một to-do item thôi.</p>
 <p>Tips: bạn nên đặt toàn bộ model trong một folder riêng, tương tự với view và controller (đã có sẵn folder cho controller)</p>
 <p>Chuột phải vào Project &gt; Add &gt; New Folder</p>
-<p><img src="https://farm8.staticflickr.com/7302/28153979252_5efe49a850_o.png"></p>
+<p><img src="/images/flickr/7302/28153979252_5efe49a850_o.png"></p>
 <p>Tiếp tục chuột phải vào Folder Models &gt; Add &gt; Class, đặt tên class là TodoItem &gt; Ok</p>
-<p><img src="https://farm8.staticflickr.com/7451/27976883070_1c07f475c2_o.png"></p>
+<p><img src="/images/flickr/7451/27976883070_1c07f475c2_o.png"></p>
 <p>Thêm 3 Property vô</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public string Key &#123; get; set; &#125;
 public string Name &#123; get; set; &#125;
@@ -4092,9 +4092,9 @@ public bool IsComplete &#123; get; set; &#125;</code></pre>
 &#125;</code></pre>
 
 <p>Xong xuôi thì build nó phát để coi có lỗi gì hok</p>
-<p><img src="https://farm8.staticflickr.com/7704/28154355492_f4120179dd_o.png"></p>
+<p><img src="/images/flickr/7704/28154355492_f4120179dd_o.png"></p>
 <p>Build xong nó lên dư lày là okie</p>
-<p><img src="https://farm8.staticflickr.com/7654/27977529060_f3fe9e74aa_o.png"></p>
+<p><img src="/images/flickr/7654/27977529060_f3fe9e74aa_o.png"></p>
 <h2 id="3-4-Register-cai-Repository"><a href="#3-4-Register-cai-Repository" class="headerlink" title="3.4. Register cái Repository"></a>3.4. Register cái Repository</h2><p><a id="markdown-register-c%C3%A1i-repository" name="register-c%C3%A1i-repository"></a></p>
 <p>Bằng cách khai báo Interface repository, ta có thể tách biệt class repository ra khỏi controller xài nó. Thay vì tạo ra một instance của TodoRepository trong controller, ta có thể chọt cái ITodoRepository vào thẳng ASP.NET để sau này xài Depenency Injection (chưa biết nó là gì, tài liệu ở đây: <a href="https://docs.asp.net/en/latest/fundamentals/dependency-injection.html">https://docs.asp.net/en/latest/fundamentals/dependency-injection.html</a>)</p>
 <p>Cách này giúp bạn dễ dàng viết Unit Test hơn. Test sẽ thu hẹp lại xuống logic của controller, chứ không test cái truy xuất dữ liệu.</p>
@@ -4108,7 +4108,7 @@ services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
 <h2 id="3-5-Them-controller"><a href="#3-5-Them-controller" class="headerlink" title="3.5. Thêm controller"></a>3.5. Thêm controller</h2><p><a id="markdown-th%C3%AAm-controller" name="th%C3%AAm-controller"></a></p>
 <p>Chuột phải lên thư mục Controller &gt; Add &gt; New Item</p>
 <p>Chọn Web API Controller Class, đặt tên TodoController</p>
-<p><img src="https://farm8.staticflickr.com/7416/27643155223_70a57c877b_o.png"></p>
+<p><img src="/images/flickr/7416/27643155223_70a57c877b_o.png"></p>
 <p>Xóa hết code trong class đi, thay bằng cái lày</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TodoController : Controller
 &#123;
@@ -4320,7 +4320,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#117;&#111;&#x6e;&#x67;&#97;&#x6e;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x6c;&#117;&#111;&#x6e;&#x67;&#97;&#x6e;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#104;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#x6e;&#104;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#117;&#x6f;&#110;&#103;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#108;&#117;&#x6f;&#110;&#103;&#97;&#110;&#104;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#x75;&#x6f;&#x6e;&#103;&#97;&#110;&#x68;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#108;&#x75;&#x6f;&#x6e;&#103;&#97;&#110;&#x68;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4329,7 +4329,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
   <entry>
     <title>[ASP.NET MVC] Khắc phục lỗi chữ tiếng việt Unicode bị encode trong View</title>
     <url>/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</url>
-    <content><![CDATA[<p><img src="https://farm1.staticflickr.com/420/31984906310_6b01d5c873_o.png"></p>
+    <content><![CDATA[<p><img src="/images/flickr/420/31984906310_6b01d5c873_o.png"></p>
 <p>Làm web mà có tiếng Việt thì khổ nhất là chữ tiếng Việt nó cứ bị encode thành mấy ký tự vô nghĩa</p>
 <p>Điều này ảnh hưởng đến nhìu thứ, đặc biệt là SEO, lưu trữ data lên DB, vân vân và vân vân.</p>
 <p>Vậy khắc phục làm sao?</p>
@@ -4344,7 +4344,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <li>Thêm vào: <code>&lt;globalization fileEncoding=&quot;utf-8&quot; /&gt;</code></li>
 </ol>
 <p>Thành quả:</p>
-<p><img src="https://farm1.staticflickr.com/436/32241635761_2b342942b1_o.png"></p>
+<p><img src="/images/flickr/436/32241635761_2b342942b1_o.png"></p>
 <p>Thế là xong :D</p>
 <p>Bạn nào có cách khắc phục khác hay hơn thì nói cho mình biết với nhóe</p>
 ]]></content>
@@ -4366,13 +4366,13 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <span id="more"></span>
 
 <h1 id="1-Cai-nuget-package"><a href="#1-Cai-nuget-package" class="headerlink" title="1. Cài nuget package"></a>1. Cài nuget package</h1><p>Trước tiên bạn phải cài một package có tên là routedebugger</p>
-<p><img src="https://farm1.staticflickr.com/469/31947372973_69489bcb72_o.png"></p>
+<p><img src="/images/flickr/469/31947372973_69489bcb72_o.png"></p>
 <p>Sau đó, thêm một dòng config trong Web.config</p>
 <add key="RouteDebugger:Enabled" value="true" />
 
-<p><img src="https://farm1.staticflickr.com/595/31947453593_6bbc0ddf77_o.png"></p>
+<p><img src="/images/flickr/595/31947453593_6bbc0ddf77_o.png"></p>
 <h1 id="2-Debug-cai-route"><a href="#2-Debug-cai-route" class="headerlink" title="2. Debug cái route"></a>2. Debug cái route</h1><p>Sau khi hoàn tất 2 bước trên, nhấn Debug, kéo xuống dưới cùng của website và bạn sẽ thấy bảng phân tích route</p>
-<p><img src="https://farm1.staticflickr.com/586/31947500953_e3538ee6b5_o.png"></p>
+<p><img src="/images/flickr/586/31947500953_e3538ee6b5_o.png"></p>
 <p>Bảng này sẽ cho bạn thấy route của bạn gõ trên thanh địa chỉ nó bị dinh vô cái config nào</p>
 <p>Vậy là bạn đã debug được rồi nhóe</p>
 ]]></content>
@@ -4407,32 +4407,32 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <li><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
 </ul>
 <p><em>Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt</em></p>
-<p><img src="https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png" alt="Chọn LTS cho ít lỗi lặt vặt"></p>
+<p><img src="/images/flickr/2894/33833478232_a59cce160b_o.png" alt="Chọn LTS cho ít lỗi lặt vặt"></p>
 <h1 id="Buoc-2-Cai-dat-cac-nodejs-package"><a href="#Buoc-2-Cai-dat-cac-nodejs-package" class="headerlink" title="Bước 2: Cài đặt các nodejs package"></a>Bước 2: Cài đặt các nodejs package</h1><p><strong>Mở Visual Studio Code</strong></p>
 <p><strong>Mở Terminal Windows</strong></p>
 <p>Bật Terminal Windows trong Visual Studio Code bằng cách nhấn Ctrl + ` hoặc View &gt; Integrated Terminal</p>
-<p><img src="https://farm3.staticflickr.com/2814/33234696593_9fcee9f965_o.png"></p>
+<p><img src="/images/flickr/2814/33234696593_9fcee9f965_o.png"></p>
 <p><strong>Cài đặt trình biên dịch SASS&#x2F;LESS</strong></p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">npm install -g node-sass less</code></pre>
 
 <p>Tham số -g là để cài đặt trên môi trường global</p>
-<p><img src="https://farm3.staticflickr.com/2873/33889703622_3cbc71f1cc_o.png"></p>
+<p><img src="/images/flickr/2873/33889703622_3cbc71f1cc_o.png"></p>
 <p><em>Sau khi cài đặt SASS&#x2F;LESS compiler</em></p>
 <p><strong>Cài đặt gulp toolkit</strong></p>
 <p>Cài đặt gulp toolkit để tự động hóa quá trình biên dịch</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">npm install -g gulp</code></pre>
 
-<p><img src="https://farm3.staticflickr.com/2885/33234839763_71ffba8cfd_o.png"></p>
+<p><img src="/images/flickr/2885/33234839763_71ffba8cfd_o.png"></p>
 <p><em>Bạn có thể bỏ qua các warning khi cài đặt gulp</em></p>
 <p><strong>Initialize Node.Js</strong></p>
 <p>Nếu trước đó, bạn chưa bao giờ cài đặt NodeJs package manager, bạn sẽ gặp lỗi như sau</p>
-<p><img src="https://farm3.staticflickr.com/2829/33662078970_a1aaf77d2c_o.png"></p>
+<p><img src="/images/flickr/2829/33662078970_a1aaf77d2c_o.png"></p>
 <p>Gõ lệnh</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">npm init</code></pre>
 
 <p>để init các tham số cần thiết cho npm và làm theo hướng dẫn trên màn hình.</p>
 <p>Nếu bạn không nhập gì cả và nhấn enter, npm sẽ dùng tham số default</p>
-<p><img src="https://farm3.staticflickr.com/2902/33235009203_a69320020e_o.png"></p>
+<p><img src="/images/flickr/2902/33235009203_a69320020e_o.png"></p>
 <h1 id="Buoc-3-Cai-dat-o-local-folder"><a href="#Buoc-3-Cai-dat-o-local-folder" class="headerlink" title="Bước 3: Cài đặt ở local folder"></a>Bước 3: Cài đặt ở local folder</h1><p>Mặc dù bạn đã cài gulp ở global, nhưng bạn vẫn sẽ cần gulp được “copy” vào folder có chứa project của bạn. Lý do là khi gulp global được upgrade, hoặc bị xóa mất, gulp local của bạn vẫn chạy bình thường với một bản sao ổn định trong project folder của bạn Cài đặt gulp local</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">npm install gulp --save-dev</code></pre>
 
@@ -4443,7 +4443,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">npm install browser-sync gulp --save-dev</code></pre>
 
 <p>Tương tự, bạn cũng có thể bỏ qua các đoạn warning, thông báo</p>
-<p><img src="https://farm4.staticflickr.com/3703/33662203760_71636d02d3_o.png"></p>
+<p><img src="/images/flickr/3703/33662203760_71636d02d3_o.png"></p>
 <h1 id="Buoc-5-Tao-gulp-task"><a href="#Buoc-5-Tao-gulp-task" class="headerlink" title="Bước 5: Tạo gulp task"></a>Bước 5: Tạo gulp task</h1><p>Gulp task là một file .json có chứa các lệnh, tham số cần thiết để thiết lập cho gulp</p>
 <ul>
 <li>Trong Visual Studio Code, mở folder có chứa project HTML&#x2F;CSS&#x2F;JavaScript của bạn</li>
@@ -4617,13 +4617,13 @@ function swallowError(error) &#123;
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public TextBoxWithCheck FancyBox &#123; get; set; &#125;</code></pre>
 
 <p>Rồi giờ nếu bạn muốn một cái textbox có kèm checkbox giống vầy</p>
-<p><img src="https://farm3.staticflickr.com/2897/33308184454_8240d60dd1_o.png" alt="textbox with checkbox"></p>
+<p><img src="/images/flickr/2897/33308184454_8240d60dd1_o.png" alt="textbox with checkbox"></p>
 <p>Rõ ràng là chả có cái default control nào có thể làm được trò này, mà EditorFor cũng không biết chọn cái gì để render cái property “FancyBox” của kiểu “TextBoxWithCheck”.</p>
 <p>Vì thế, bạn sẽ <strong><em>dạy</em></strong> nó cách render nhóe.</p>
 <h2 id="2-1-Tao-EditorTemplates"><a href="#2-1-Tao-EditorTemplates" class="headerlink" title="2.1 Tạo EditorTemplates"></a>2.1 Tạo EditorTemplates</h2><ul>
 <li>Tạo folder “EditorTemplates” trong Views &gt; Shared</li>
 </ul>
-<p><img src="https://farm3.staticflickr.com/2855/34151179025_3e849d7d2c_o.png" alt="folder structure"></p>
+<p><img src="/images/flickr/2855/34151179025_3e849d7d2c_o.png" alt="folder structure"></p>
 <ul>
 <li>Thêm View mới vào folder đó, đặt tên là “TextBoxWithCheck.cshtml” (phải trùng tên với cái custom class)</li>
 </ul>
@@ -5003,7 +5003,7 @@ apt-get install apache2</code></pre>
 <p>Recommended: Map network drive to easily config or copy file to container <a href="https://github.com/dokan-dev/dokany/releases">Download</a> </p>
 <ul>
 <li>install Dolkan <a href="https://github.com/Foreveryone-cz/win-sshfs/releases">Download</a></li>
-<li>install win-sshfs follow the step to map<br><img src="http://farm5.staticflickr.com/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></li>
+<li>install win-sshfs follow the step to map<br><img src="/images/flickr/4344/36326087365_4a8b8a7418_o.png" alt="mapping instruction"></li>
 </ul>
 </blockquote>
 <p>open <code>/etc/apache2/apache2.conf</code> in your favorite editor</p>
@@ -5024,7 +5024,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">nano &#x2F;etc&#x2F;apache2&#x2F;mods-enabled&#x2F;dir.conf</code></pre>
 
 <p>It should look like this</p>
-<p><img src="http://farm5.staticflickr.com/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
+<p><img src="/images/flickr/4403/36326087315_f9a2a593a3_o.png" alt="dir.conf"></p>
 <p>Type <code>Ctrl + X</code> to exit nano, type y to save</p>
 <p>Restart Apache2 server</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">service apache2 restart</code></pre>
@@ -5035,7 +5035,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">&lt;?php phpinfo(); ?&gt;</code></pre>
 
 <p>Then you can access <a href="http://your_domain_name/info">http://your_domain_name&#x2F;info</a></p>
-<p><img src="http://farm5.staticflickr.com/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
+<p><img src="/images/flickr/4426/36326087275_5e74efdb8a_o.png" alt="phpinfo"></p>
 <h1 id="4-Setup-Wordpress"><a href="#4-Setup-Wordpress" class="headerlink" title="4. Setup Wordpress"></a>4. Setup Wordpress</h1><p><a id="markdown-setup-wordpress" name="setup-wordpress"></a></p>
 <h2 id="4-1-Create-MySQL-database-and-user"><a href="#4-1-Create-MySQL-database-and-user" class="headerlink" title="4.1. Create MySQL database and user"></a>4.1. Create MySQL database and user</h2><p><a id="markdown-create-mysql-database-and-user" name="create-mysql-database-and-user"></a></p>
 <p>Start MySQL server</p>
@@ -5068,7 +5068,7 @@ apt-get install apache2</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">nano &#x2F;etc&#x2F;apache2&#x2F;apache2.conf</code></pre>
 
 <p>Network Drive</p>
-<p><img src="http://farm5.staticflickr.com/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
+<p><img src="/images/flickr/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
 <p>Search for this part and change</p>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">. . .
  
@@ -5095,15 +5095,15 @@ apt-get install apache2</code></pre>
 <p>Permission and .htaccess Show hidden files and folder on WinSCP</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">Open WinSCP &gt; Option &gt; References…</code></pre>
 
-<p><img src="http://farm5.staticflickr.com/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
+<p><img src="/images/flickr/4300/36326087085_a8c29ef11e_o.png" alt="show hidden file"></p>
 <p>Create <code>.htaccess</code> file</p>
 <p>Right click on an empty space &gt; New File &gt; enter <code>.htaccess</code></p>
-<p><img src="http://farm5.staticflickr.com/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
+<p><img src="/images/flickr/4441/36326087035_022f35bffa_o.png" alt="create .htaccess"></p>
 <p>Set Read &#x2F; Write permission for .htaccess</p>
 <p>Right click on .htaccess &gt; Properties</p>
-<p><img src="http://farm5.staticflickr.com/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
+<p><img src="/images/flickr/4325/35517228003_73383a8bcc_o.png" alt="permissions for .htaccess"></p>
 <p>Set permission recursively for all 3 folders</p>
-<p><img src="http://farm5.staticflickr.com/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
+<p><img src="/images/flickr/4409/35490057164_0d1ff22807_o.png" alt="permissions for all 3 folders"></p>
 <h2 id="4-3-Config"><a href="#4-3-Config" class="headerlink" title="4.3. Config"></a>4.3. Config</h2><p><a id="markdown-config" name="config"></a></p>
 <p>Open <code>wp-config.php</code> and fill in these info</p>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">&#x2F;&#x2F; ** MySQL settings - You can get this info from your web host ** &#x2F;&#x2F;
@@ -5126,7 +5126,7 @@ define(&#39;DB_CHARSET&#39;, &#39;utf8&#39;);
 define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 
 <p>Open link and copy the code show up then replace them</p>
-<p><img src="http://farm5.staticflickr.com/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
+<p><img src="/images/flickr/4388/36326086765_8627dd85cc_o.png" alt="salt"></p>
 <p>Add this line (to enable wordpress can modify files and folder directly</p>
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">define(&#39;FS_METHOD&#39;, &#39;direct&#39;);</code></pre>
 
@@ -5206,9 +5206,9 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <p>Xem code ở đây: <a href="https://github.com/cuoilennaocacban/ASP.NETIdentty2">ASP.NET Identity 2 clone on GitHub</a></p>
 </blockquote>
 <p>Để hiểu rõ hơn, bạn có thể tạo một Sample Project bằng ASP.NET, chọn Identity là Individual nhé File &gt; New &gt; Project…</p>
-<p><img src="https://farm5.staticflickr.com/4408/36631193821_b2fea13a5c_o.png" alt="New Project"></p>
+<p><img src="/images/flickr/4408/36631193821_b2fea13a5c_o.png" alt="New Project"></p>
 <p>Ngay khi tạo xong, bạn có thể nhấn chạy luôn</p>
-<p><img src="https://farm5.staticflickr.com/4402/35961354023_95481c7d6a_o.png" alt="Run Project"></p>
+<p><img src="/images/flickr/4402/35961354023_95481c7d6a_o.png" alt="Run Project"></p>
 <h1 id="3-Break-down"><a href="#3-Break-down" class="headerlink" title="3. Break-down"></a>3. Break-down</h1><p><a id="markdown-break-down" name="break-down"></a></p>
 <p>Bây giờ mình sẽ tìm hiểu từng phần một của Identity nhé</p>
 <h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
@@ -5234,14 +5234,14 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 &lt;&#x2F;connectionStrings&gt;</code></pre>
 
 <p>Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó</p>
-<p><img src="https://farm5.staticflickr.com/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
+<p><img src="/images/flickr/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
 <p>Vậy bạn có tự hỏi làm sao mà mới chỉ chạy project thôi mà Identity đã tạo được database?</p>
 <h3 id="3-1-2-Code-first"><a href="#3-1-2-Code-first" class="headerlink" title="3.1.2. Code first"></a>3.1.2. Code first</h3><p><a id="markdown-code-first" name="code-first"></a></p>
 <p>Để trả lời cho câu hỏi đó, từ EF4, MS đã giới thiệu một hướng tiếp cận hoàn toàn mới gọi là Code first, bên cạnh hướng tiếp cận truyền thống là Database First như xưa nay. Với hướng tiếp cận này, Dev chỉ cần tập trung vào code của mình, db sẽ do EF tạo ra ứng với code của dev</p>
 <p>Một flow cơ bản là Dev viết các model và class -&gt; Nhấn F5 -&gt; EF tạo &#x2F; map database -&gt; Ứng dụng khởi chạy với datbase được tạo &#x2F; map</p>
 <h3 id="3-1-3-Cau-truc"><a href="#3-1-3-Cau-truc" class="headerlink" title="3.1.3. Cấu trúc"></a>3.1.3. Cấu trúc</h3><p><a id="markdown-c%E1%BA%A5u-tr%C3%BAc" name="c%E1%BA%A5u-tr%C3%BAc"></a></p>
 <p>Identity tạo ra 5 bảng trong DB, và mỗi bảng đều liên hệ với nhau</p>
-<p><img src="https://farm5.staticflickr.com/4381/35961946823_1e233cd9ef_o.png" alt="Db Structure"></p>
+<p><img src="/images/flickr/4381/35961946823_1e233cd9ef_o.png" alt="Db Structure"></p>
 <p>Tất cả các trường Id đều dùng nvarchar(128), giá trị lưu trữ là code GUID</p>
 <h2 id="3-2-Kien-truc-va-cac-khai-niem"><a href="#3-2-Kien-truc-va-cac-khai-niem" class="headerlink" title="3.2. Kiến trúc và các khái niệm"></a>3.2. Kiến trúc và các khái niệm</h2><p><a id="markdown-ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m" name="ki%E1%BA%BFn-tr%C3%BAc-v%C3%A0-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m"></a></p>
 <h3 id="3-2-1-AspNetUsers"><a href="#3-2-1-AspNetUsers" class="headerlink" title="3.2.1. AspNetUsers"></a>3.2.1. AspNetUsers</h3><p><a id="markdown-aspnetusers" name="aspnetusers"></a></p>
@@ -5315,7 +5315,7 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 </ul>
 <blockquote>
 </blockquote>
-<p><img src="https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png"></p>
+<p><img src="/images/flickr/4531/24089620797_59f8abe75b_o.png"></p>
 <p>NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package NETStandard.Library.NETFramework --version 2.0.0-preview2-25405-01</code></pre>
 
@@ -5350,14 +5350,14 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <h2 id="2-3-Compile-Run-va-Debug"><a href="#2-3-Compile-Run-va-Debug" class="headerlink" title="2.3. Compile, Run và Debug"></a>2.3. Compile, Run và Debug</h2><ol>
 <li>Debug &gt; Settings</li>
 </ol>
-<p><img src="https://farm5.staticflickr.com/4563/38068269685_37649c8f9e_o.png"></p>
+<p><img src="/images/flickr/4563/38068269685_37649c8f9e_o.png"></p>
 <ol>
 <li><p>Chọn <code>.NET Core</code> trong danh sách</p>
 </li>
 <li><p>Sửa file <code>launch.json</code> trong thư mục <code>.vscode</code> thành như sau</p>
 </li>
 </ol>
-<p><img src="https://farm5.staticflickr.com/4683/27177480069_ee651b8559_o.png"></p>
+<p><img src="/images/flickr/4683/27177480069_ee651b8559_o.png"></p>
 <ol start="3">
 <li>Tạo một file mới cũng trong thư mục đó, với tên là <code>tasks.json</code> với đoạn code sau</li>
 </ol>
@@ -5378,11 +5378,11 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 &#125;</code></pre>
 
 <h2 id="2-4-Run-and-Debug"><a href="#2-4-Run-and-Debug" class="headerlink" title="2.4. Run and Debug"></a>2.4. Run and Debug</h2><p>To run the application</p>
-<p><img src="https://farm5.staticflickr.com/4583/38918103882_b12ebfb671_o.png"></p>
+<p><img src="/images/flickr/4583/38918103882_b12ebfb671_o.png"></p>
 <p>Bạn cũng có thể chạy project bằng nút Run trên status bar</p>
-<p><img src="https://farm5.staticflickr.com/4594/38068348135_e554c5e5ca_o.png"></p>
+<p><img src="/images/flickr/4594/38068348135_e554c5e5ca_o.png"></p>
 <p>Để debug thì chỉ cần đặt break point ngay tại nơi cần debug</p>
-<p><img src="https://farm5.staticflickr.com/4599/38238463834_bf8bc671b6_o.png"></p>
+<p><img src="/images/flickr/4599/38238463834_bf8bc671b6_o.png"></p>
 ]]></content>
       <categories>
         <category>CSharp</category>
@@ -5647,7 +5647,7 @@ public string Name &#123; get; set; &#125;</code></pre>
 <h2 id="2-1-Neu-ban-co-Resharper"><a href="#2-1-Neu-ban-co-Resharper" class="headerlink" title="2.1. Nếu bạn có Resharper"></a>2.1. Nếu bạn có Resharper</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-c%C3%B3-resharper" name="n%E1%BA%BFu-b%E1%BA%A1n-c%C3%B3-resharper"></a></p>
 <p>Resharper là một sản phẩm hỗ trợ dev kha khá của JetBrains</p>
 <p>Đặt con trỏ tại một string bất kỳ -&gt; Resharper -&gt; Refactor -&gt; Move…</p>
-<p><img src="https://farm5.staticflickr.com/4750/39647359142_98791bd35d_o.png" alt="resharper move to resource"></p>
+<p><img src="/images/flickr/4750/39647359142_98791bd35d_o.png" alt="resharper move to resource"></p>
 <p>Resharper tính phí bản quyền</p>
 <h2 id="2-2-Neu-ban-muon-dung-hang-mien-phi"><a href="#2-2-Neu-ban-muon-dung-hang-mien-phi" class="headerlink" title="2.2. Nếu bạn muốn dùng hàng miễn phí"></a>2.2. Nếu bạn muốn dùng hàng miễn phí</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-d%C3%B9ng-h%C3%A0ng-mi%E1%BB%85n-ph%C3%AD" name="n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-d%C3%B9ng-h%C3%A0ng-mi%E1%BB%85n-ph%C3%AD"></a></p>
 <p>Visual Studio có một extension rất hay là <a href="https://github.com/tom-englert/ResXResourceManager">RestXManager</a>. Chức năng của nó thì tương tự như Resharper, thậm chí còn nhỉnh hơn một tí</p>
@@ -5657,11 +5657,11 @@ public string Name &#123; get; set; &#125;</code></pre>
 <li>Hỗ trợ dịch text</li>
 </ul>
 <p>Bạn có thể tìm và tải trực tiếp trong Visual Studio: <code>Tools &amp;gt; Extensions and Updates &amp;gt; Online &amp;gt; search &quot;ResXManager&quot;</code></p>
-<p><img src="https://farm5.staticflickr.com/4616/38972346614_45410a6157_o.png" alt="ResXManager"></p>
+<p><img src="/images/flickr/4616/38972346614_45410a6157_o.png" alt="ResXManager"></p>
 <p>hoặc</p>
 <p>tại link sau: <a href="https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager">https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager</a></p>
 <p>Sau đó, tương tự như Resharper, đặt con trỏ tại một string bất kỳ &gt; Chuột phải &gt; Move to Resource</p>
-<p><img src="https://farm5.staticflickr.com/4704/38783776745_f94606e40c_o.png" alt="Move to Resource"></p>
+<p><img src="/images/flickr/4704/38783776745_f94606e40c_o.png" alt="Move to Resource"></p>
 <p>Còn một số chiêu khác với những loại DataAnnotation khác nữa bạn nhé</p>
 ]]></content>
       <categories>
@@ -5870,7 +5870,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <h2 id="3-2-Adobe-Photoshop"><a href="#3-2-Adobe-Photoshop" class="headerlink" title="3.2. Adobe Photoshop"></a>3.2. Adobe Photoshop</h2><blockquote>
 <p>Alternative: <a href="https://www.gimp.org/">GIMP</a> + <a href="http://www.virtualdub.org/">VirtualDub</a> + <a href="https://www.phaseone.com/en/Products/Software/Capture-One-for-Sony/Sony-Pro.aspx">Capture One for Sony</a></p>
 </blockquote>
-<p><img src="https://farm5.staticflickr.com/4672/39605316274_a9efbb2b0e_o.png" alt="capture one"></p>
+<p><img src="/images/flickr/4672/39605316274_a9efbb2b0e_o.png" alt="capture one"></p>
 <p>Adobe Photoshop thì không cần phải nói nhiều. Để tìm được tool thay thế cho nó, mình đã phải tốn kha khá thời gian và công sức, nhưng vẫn chưa thật sự hài lòng.</p>
 <p>Xưa kia mình dùng chủ yếu Camera Raw của Adobe Photoshop để chỉnh ảnh Raw từ cái máy Sony của mình. Sony cũng cung cấp một bộ phần mềm giúp chỉnh ảnh raw luôn là Capture One Express, nhưng thiết kế của nó không tiện như Camera Raw, và tốc độ của nó cũng có vẻ không bằng.</p>
 <p>Máy Sony của mình có thể chụp 11 tấm &#x2F; 1 giây, ghép lại thành một cái ảnh động. Photoshop hỗ trợ cái này rất tự nhiên luôn. Thay thế cho nó là Virtual Dub, xuất ra file AVI nhưng với một bộ codec khá lạ lùng và khá khó xài</p>
@@ -5878,7 +5878,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <h2 id="3-3-Sublime-Text"><a href="#3-3-Sublime-Text" class="headerlink" title="3.3. Sublime Text"></a>3.3. Sublime Text</h2><blockquote>
 <p>Alternative: <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
 </blockquote>
-<p><img src="https://farm5.staticflickr.com/4648/25445632457_8ef1831933_o.png" alt="vscode"></p>
+<p><img src="/images/flickr/4648/25445632457_8ef1831933_o.png" alt="vscode"></p>
 <p>Sublime Text là một dạng phần mềm như kiểu WinRar, bạn có thể ‘evaluate’ nó mãi mãi, nhưng nhìn chung, nó vẫn là một phần mềm có tính phí bản quyền</p>
 <p>Về cơ bản, nó là một Text Editor mạnh mẽ với các tính năng như multi cursor, hỗ trợ extension, tốc độ cực nhanh, có Command Pallete giúp bạn kha khá các tác vụ thủ công lặp đi lặp lại. Tuy nhiên, tất cả những cái đó đều đã và đang bị VS Code dần dần lấn lướt (trừ cái tốc độ ra)</p>
 <h2 id="3-4-SourceTree-hay-Git-Client-noi-chung"><a href="#3-4-SourceTree-hay-Git-Client-noi-chung" class="headerlink" title="3.4. SourceTree, hay Git Client nói chung"></a>3.4. SourceTree, hay Git Client nói chung</h2><blockquote>
@@ -6016,12 +6016,12 @@ public class ManageController : Controller
 </ul>
 <h1 id="2-Mo-hinh-phat-trien"><a href="#2-Mo-hinh-phat-trien" class="headerlink" title="2. Mô hình phát triển"></a>2. Mô hình phát triển</h1><p>Nếu bạn đã là một chiến binh ASP.NET lâu năm, thì chắc hẳn bạn sẽ quen thuộc với mô hình MVC, viết tắt cho Model-View-Controller. Ở Razor Page, bạn sẽ làm quen với một mô hình hoàn toàn mới và vô cùng đơn giản (đơn giản tới mức ko có gì để học luôn)</p>
 <p><strong>Mô hình MVC</strong></p>
-<p><img src="https://farm1.staticflickr.com/794/39482986360_fe3ba6ff76_o.png" alt="mvc pattern"></p>
+<p><img src="/images/flickr/794/39482986360_fe3ba6ff76_o.png" alt="mvc pattern"></p>
 <blockquote>
 <p>Nếu bạn muốn làm quen với mô hình MVC, có thể đọc bài viết <a href="https://huntertran.ca/2018/03/04/asp-net-for-beginner-part-1-mvc/">[ASP.NET for Beginner] – Part 1 – MVC</a></p>
 </blockquote>
 <p><strong>‘Mô hình’ Razor Page</strong></p>
-<p><img src="https://farm1.staticflickr.com/822/40395935845_bdb4073f2f_o.png" alt="razor page pattern"></p>
+<p><img src="/images/flickr/822/40395935845_bdb4073f2f_o.png" alt="razor page pattern"></p>
 <h1 id="3-Cac-van-de-cua-MVC"><a href="#3-Cac-van-de-cua-MVC" class="headerlink" title="3. Các vấn đề của MVC"></a>3. Các vấn đề của MVC</h1><h2 id="3-1-Fat-Controller"><a href="#3-1-Fat-Controller" class="headerlink" title="3.1. Fat Controller"></a>3.1. Fat Controller</h2><p>Giả sử bạn có một controller xử lý các tác vụ liên quan tới giao dịch chuyển tiền giữa các tài khoản, tạm gọi là <code>TransactionController</code></p>
 <p>Có 4 thao tác cơ bản đối với 1 dòng dữ liệu: Create-Read-Update-Delete, tới đây thì ok không vấn đề gì</p>
 <p>Pặc, bạn muốn xử lý thêm việc nạp thẻ điện thoại, chi trả hóa đơn điện, nước, internet &#x3D;&gt; thêm các phương thức như <code>NapTheCao</code>, <code>TraTienDien</code>, <code>TraTienNuoc</code>, <code>TraTienInternet</code>. 2 tuần sau, bạn lại muốn thêm vài tính năng khác, tất cả đều liên quan tới transaction.</p>
@@ -6282,16 +6282,16 @@ public class User
 </ul>
 <h2 id="3-2-Trien"><a href="#3-2-Trien" class="headerlink" title="3.2. Triển"></a>3.2. Triển</h2><p><a id="markdown-tri%E1%BB%83n" name="tri%E1%BB%83n"></a></p>
 <p>Mở VSCode lên, nhấn Ctrl + ` để hiện Terminal, hoặc làm như hình</p>
-<p><img src="https://farm5.staticflickr.com/4710/39714628535_591c6163e7_o.png" alt="show termial"></p>
+<p><img src="/images/flickr/4710/39714628535_591c6163e7_o.png" alt="show termial"></p>
 <p>dùng các lệnh <code>cd</code> để trỏ tới thư mục mong muốn tạo project của bạn</p>
 <p>hoặc</p>
-<p><img src="https://farm5.staticflickr.com/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
+<p><img src="/images/flickr/4712/39898696364_c24a372543_o.png" alt="open in vscode"></p>
 <p>gõ</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet new mvc</code></pre>
 
 <p>Bấm F5 &gt; Chọn .NET Core</p>
 <p>Nếu bạn được hỏi “Required assets to build and debug are missing from blah blah blah”, thì bấm Yes nhé</p>
-<p><img src="https://farm5.staticflickr.com/4800/38800136200_57afdcf698_o.png" alt="yes to build"></p>
+<p><img src="/images/flickr/4800/38800136200_57afdcf698_o.png" alt="yes to build"></p>
 <p>Vậy là bạn đã tạo project MVC đầu tiên của mình, dùng ASP.NET Core rồi nhé. Bạn có thể mở class HomeController để hiểu rõ hơn về mô hình MVC mình vừa nói ở trên.</p>
 <h2 id="3-3-ASP-NET-Convention"><a href="#3-3-ASP-NET-Convention" class="headerlink" title="3.3. ASP.NET Convention"></a>3.3. ASP.NET Convention</h2><p><a id="markdown-asp.net-convention" name="asp.net-convention"></a></p>
 <p>ở trên mình có nhắc tới MobilePhoneController, thì đường dẫn của nó sẽ là &#x2F;MobilePhone, hay ở project bạn mới tạo, HomeController sẽ có đường dẫn là &#x2F;Home .ASP.NET tự hiểu controller của bạn, và sẽ có đường dẫn tương ứng.</p>
@@ -6686,7 +6686,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 &lt;&#x2F;form&gt;</code></pre>
 
 <p>Lỗi hiển thị như sau</p>
-<p><img src="https://farm5.staticflickr.com/4783/41003265721_c53a2103d8_o.png" alt="bug"></p>
+<p><img src="/images/flickr/4783/41003265721_c53a2103d8_o.png" alt="bug"></p>
 <blockquote>
 <p>Bạn có thể xem toàn bộ các annotation ở đây: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0">Data Annotation on docs.microsoft.com</a></p>
 </blockquote>
@@ -6772,7 +6772,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 <p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
 <h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
 <h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
-<p><img src="https://farm1.staticflickr.com/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
+<p><img src="/images/flickr/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
 <p>Thế nhé bạn ;)</p>
 ]]></content>
       <categories>
@@ -7055,7 +7055,7 @@ public class VinmartDrinkBuyer: IDrinkBuyer
 
 <p>Thế là xong Khi nhà bạn gần Vinmart, người quản lý sẽ cử thằng nhóc B - VinmartDrinkBuyer canh trước cổng nhà bạn. Bất kể khi nào bạn có nhu cầu mua nước ngọt, bạn sẽ gọi nó. Bạn đâu có biết là thằng nhóc B đó nó chỉ biết mua nước ngọt ở Vinmart thôi. Bạn chỉ quan tâm là bạn gọi nó, và bạn có nước ngọt uống</p>
 <h1 id="4-Register"><a href="#4-Register" class="headerlink" title="4. Register"></a>4. Register</h1><p>Như vậy, khai báo như thế nào trong ứng dụng của bạn? khi tạo mới một ứng dụng asp.net core 2, đã có sẵn 1 số phương thức giúp bạn bắt đầu ngay và luôn</p>
-<p><img src="https://farm2.staticflickr.com/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"></p>
+<p><img src="/images/flickr/1750/42864104992_c6bcdb3276_o.png" alt="method in startup.cs"></p>
 <p>bằng cách thêm vào dòng code sau <code>services.AddScoped();</code> bạn đã khai báo cho tất cả các class có dùng phương thức <code>BuyDrink</code> sẽ mua nước ngọt ở CircleK</p>
 <h2 id="4-1-Lifetime"><a href="#4-1-Lifetime" class="headerlink" title="4.1. Lifetime"></a>4.1. Lifetime</h2><p><code>AddScoped</code> dùng để chỉ định <em>thời gian sống</em> của service này, có 3 loại:</p>
 <ul>
@@ -7169,7 +7169,7 @@ public class CarTransport: ITransport
 <p>Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application</p>
 <h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p><a id="markdown-repository" name="repository"></a></p>
 <p>Có cái sơ đồ hay ho sau</p>
-<p><img src="https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
+<p><img src="/images/flickr/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
 <p>Bạn có thể đọc thêm về các services được inject tại bài viết <a href="https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">Dependency Injection trong ASP.NET Core</a></p>
 <p>Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)</p>
 <h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><p><a id="markdown-l%C3%BD-do" name="l%C3%BD-do"></a></p>
@@ -7541,9 +7541,9 @@ unitOfWork.Dispose();</code></pre>
 <p>Dựa vào biểu đồ này, ta có thể dự đoán mối quan hệ giữa input và output. Khi đó, khi đưa một input bất kỳ, ta có thể tính ra được output.</p>
 <p>Supervised learning được chia làm 2 loại là <strong>regression</strong> và <strong>classification</strong>.</p>
 <h3 id="2-1-1-Regression"><a href="#2-1-1-Regression" class="headerlink" title="2.1.1. Regression"></a>2.1.1. Regression</h3><p>Dựa vào mối liên hệ giữa input và output, ta dự đoán được kết quả</p>
-<p><img src="https://farm2.staticflickr.com/1856/42867061930_e41c2f94c0_o.png" alt="bieu do"></p>
+<p><img src="/images/flickr/1856/42867061930_e41c2f94c0_o.png" alt="bieu do"></p>
 <h3 id="2-1-2-Classification"><a href="#2-1-2-Classification" class="headerlink" title="2.1.2. Classification"></a>2.1.2. Classification</h3><p>Dựa vào đặc điểm của input, ta đặt được nó vào một loại cụ thể</p>
-<p><img src="https://farm2.staticflickr.com/1879/43958802164_a713ef73dc_o.png" alt="classification"></p>
+<p><img src="/images/flickr/1879/43958802164_a713ef73dc_o.png" alt="classification"></p>
 <h2 id="2-2-Unsupervised-Learning"><a href="#2-2-Unsupervised-Learning" class="headerlink" title="2.2. Unsupervised Learning"></a>2.2. Unsupervised Learning</h2><p>Trong “thể loại” machine learning này, ta hoàn toàn ko biết trước được kết quả sẽ như thế nào.</p>
 <p>Ví dụ:</p>
 <ol>
@@ -7597,7 +7597,7 @@ unitOfWork.Dispose();</code></pre>
 <p><code>h</code> là viết tắt cho từ <em>Hypothesis</em>, lý do cho tên gọi này chỉ đơn thuần là vì xưa kia, người ta đặt tên cho nó như vậy, và nó chết tên luôn.</p>
 </blockquote>
 <p>Như vậy, process của chúng ta sẽ như sau:</p>
-<p><img src="https://farm2.staticflickr.com/1844/43995414074_2c530b4cb8_o.png" alt="process"></p>
+<p><img src="/images/flickr/1844/43995414074_2c530b4cb8_o.png" alt="process"></p>
 <p>Khi y là một giá trị liên tục, ví dụ như giá nhà, giá cổ phiếu, thì đây là một <code>regression problem</code>.</p>
 <p>Khi y chỉ là một số lượng nhỏ các giá trị nhất định (true&#x2F;false - yes&#x2F;no), thì đây là một <code>classification problem</code>.</p>
 <h1 id="2-Cost-Function"><a href="#2-Cost-Function" class="headerlink" title="2. Cost Function"></a>2. Cost Function</h1><p>Chúng ta “tính toán” sự chính xác của hàm hypothesis bằng cách sử dụng 1 hàm số. Hàm số đó gọi là <em><code>cost function</code></em>.</p>
@@ -7636,7 +7636,7 @@ unitOfWork.Dispose();</code></pre>
 <p>Ứng dụng đạo hàm, ta giải bài toán này như sau:</p>
 <p>$latex \frac{\text{d}}{\text{d}t}h&#x3D;0+14-5(2t)&#x3D;14-10t$</p>
 <p>Hàm số trên biểu thị <em>mức độ thay đổi</em> của độ cao h tại thời điểm t. Như vậy, tại độ cao lớn nhất, _mức độ thay đổi độ cao h &#x3D; 0 (vì trái banh không tiếp tục bay cao lên nữa mà bắt đầu rơi xuống).</p>
-<p><img src="https://farm2.staticflickr.com/1972/43929799745_140b61938a_o.png" alt="hypolic function"></p>
+<p><img src="/images/flickr/1972/43929799745_140b61938a_o.png" alt="hypolic function"></p>
 <p>Vậy ta có:</p>
 <p>[code lang&#x3D;text] 14-10t &#x3D; 0</p>
 <p>=&gt; t &#x3D; 1.4 [&#x2F;code]</p>
@@ -7693,7 +7693,7 @@ unitOfWork.Dispose();</code></pre>
 <li>$latex \theta_{1}$ là trục y.</li>
 <li>$latex J(\theta_{0},\theta_{1})$ là trục z.</li>
 </ul>
-<p><img src="https://farm2.staticflickr.com/1899/44863403391_91a4cf87aa_o.png" alt="gradient descent graph"></p>
+<p><img src="/images/flickr/1899/44863403391_91a4cf87aa_o.png" alt="gradient descent graph"></p>
 <p>Các mũi tên đỏ chỉ những điểm thấp nhất của đồ thị này, đó là các điểm mà ta tìm kiếm (nhằm mục đích tối thiểu giá trị của cost function).</p>
 <h2 id="1-2-Mo-ta-thuat-toan"><a href="#1-2-Mo-ta-thuat-toan" class="headerlink" title="1.2. Mô tả thuật toán"></a>1.2. Mô tả thuật toán</h2><p>Chọn 1 điểm bất kỳ, sau đó di chuyển từng bước nhỏ về vùng trũng nhất của đồ thị.</p>
 <p>Cách làm là lấy đạo hàm của cost function. Đối với một hàm số, đạo hàm của nó chính là đường tiếp tuyến của nó. Độ dốc của đường tiếp tuyến tại một điểm chính là giá trị của hàm đạo hàm tại điểm đó. Độ dốc này cho ta biết hướng đi để chọn điểm tiếp theo.</p>
@@ -11089,12 +11089,12 @@ using mvcbasic.Data;</code></pre>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef migrations add InitialCreate</code></pre>
 
 <p>VSCode sẽ tự động tạo ra một thư mục tên Migrations, và thêm cơ số file vào đấy</p>
-<p><a href="https://farm5.staticflickr.com/4784/40748059781_d2b5740095_o.png">new files</a></p>
+<p><a href="/images/flickr/4784/40748059781_d2b5740095_o.png">new files</a></p>
 <p>Tiếp tục, gõ</p>
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef database update</code></pre>
 
 <p>thì những migration này sẽ được thực thi, và database sẽ được tạo ra</p>
-<p><img src="https://farm5.staticflickr.com/4774/38937566770_e203e7c169_o.png" alt="database created"></p>
+<p><img src="/images/flickr/4774/38937566770_e203e7c169_o.png" alt="database created"></p>
 <blockquote>
 <p>Để kiểm tra, bạn có thể dùng Microsoft SQL Server Management Studio với các thông số sau</p>
 <ul>
@@ -11159,9 +11159,9 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
 
 <p>Nhìn vào câu lệnh trên, chắc bạn cũng sẽ đoán được nó làm gì: “Này dotnet, tạo cho tao 1 controller mới tên là <code>PhoneController</code>, dùng model là <code>Phone</code>, Data Context là <code>MvcBasicDbContext</code>, trong folder tên là <code>Controllers</code>, dùng default layout, à có scripts đi kèm nhá”</p>
 <p>2 câu lệnh đầu tiên giúp bạn thực sự cài nuget, và build project một phát để đảm bảo ko có lỗi phát sinh, và clear các file tạm ko còn cần thiết</p>
-<p><img src="https://farm5.staticflickr.com/4782/40705936652_1e3d6b551d_o.png" alt="create new controller"></p>
+<p><img src="/images/flickr/4782/40705936652_1e3d6b551d_o.png" alt="create new controller"></p>
 <p>gõ tiếp <code>dotnet run</code> để chạy thử app</p>
-<p><img src="https://farm5.staticflickr.com/4779/25877724937_7bfed1c8d7_o.png" alt="app with phone controller"></p>
+<p><img src="/images/flickr/4779/25877724937_7bfed1c8d7_o.png" alt="app with phone controller"></p>
 <p>bạn có thể vọc vạch các kiểu với các link mà asp.net core tạo sẵn cho bạn, create new, edit, delete, details gì đấy thì tùy</p>
 <h1 id="5-Model-Binding"><a href="#5-Model-Binding" class="headerlink" title="5. Model Binding"></a>5. Model Binding</h1><p><a id="markdown-model-binding" name="model-binding"></a></p>
 <p>Mở file PhoneController ra, bạn sẽ thấy có sẵn code trong đấy rồi, tuy ko đẹp lắm, nhưng nhìn chung là nó chạy tốt</p>
