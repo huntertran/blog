@@ -27,22 +27,24 @@ def process_text_file(file_path, destination_folder):
     with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
-    modified_lines = []
-    for line in lines:
+    modified = False
+    for i, line in enumerate(lines):
         line = line.strip()
         match = re.search(r'\((.*?)\)', line)
         if match:
             url = match.group(1)
             if 'staticflickr' in url:
-                if(file_existed(url)):
-                    modified_line = re.sub(r'(http://farm\d+\.staticflickr\.com/(\d+)/(\d+)_([a-zA-Z0-9_]+)\.jpg)', r'/images/flickr/\2/\3_\4.jpg', line)
-                    modified_lines.append(modified_line)
-                # downloaded in step 1
-                # else:
-                #     download_file(url, destination_folder)
+                if file_existed(url):
+                    # lines[i] = re.sub(r'(http://farm\d+\.staticflickr\.com/(\d+)/(\d+)_([a-zA-Z0-9_]+)\.jpg)', r'/images/flickr/\2/\3_\4.jpg', line)
+                    # modified = True
+                    # downloaded in step 1
+                    continue
+                else:
+                    download_file(url, destination_folder)
 
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.writelines(modified_lines)
+    # if modified:
+    #     with open(file_path, 'w', encoding='utf-8') as file:
+    #         file.writelines(lines)
 
 def main(folder_path, destination_folder):
     # Create destination folder if it doesn't exist

@@ -34,7 +34,7 @@ Vấn đề được đặt ra: Làm thế nào để có thể hiển thị 2 d
 
 ![](https://farm8.staticflickr.com/7386/10136108785_5fe51d5aa7_o.png)
 
-Problem Solved ![Party smile](/images/2013/10/wlemoticon-partysmile1.png)
+Problem Solved :D
 
 Vậy còn trong Code C# thì sao?
 

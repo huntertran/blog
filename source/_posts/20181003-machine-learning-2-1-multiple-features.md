@@ -78,7 +78,9 @@ Ví dụ ta có 2 feature là `diện tích nhà` và `số phòng ngủ`:
 
 Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.
 
-![plot](https://i.imgur.com/DA49vil.png) _hình ảnh chỉ mang tính chất minh họa ;)_
+![plot](https://i.imgur.com/DA49vil.png)
+
+_hình ảnh chỉ mang tính chất minh họa ;)_
 
 Ta có thể tăng tốc gradient descent bằng cách `biến đổi` các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \\theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.
 

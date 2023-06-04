@@ -58,7 +58,9 @@ Vậy tất cả những điều này liên quan gì tới Repository và Unit o
 # 2. Repository
 <a id="markdown-repository" name="repository"></a>
 
-Có cái sơ đồ hay ho sau ![repository diagram](https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png)
+Có cái sơ đồ hay ho sau
+
+![repository diagram](https://farm2.staticflickr.com/1724/42213219384_ec3b0b1b3e_o.png)
 
 Bạn có thể đọc thêm về các services được inject tại bài viết [Dependency Injection trong ASP.NET Core](https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/)
 

@@ -75,7 +75,9 @@ Mở FileZilla Server lên, chọn Edit > Users
 
 Thêm một User mới với tên tùy chọn. Đây là tên bạn sẽ dùng để đăng nhập vào FTP Server của mình sau này
 
-![](https://farm8.staticflickr.com/7509/15948353428_0c2804bfc0_o.png) ![](https://farm9.staticflickr.com/8655/16110010396_2ff5e90b5b_o.png)
+![](https://farm8.staticflickr.com/7509/15948353428_0c2804bfc0_o.png)
+
+![](https://farm9.staticflickr.com/8655/16110010396_2ff5e90b5b_o.png)
 
 Thêm password cho tài khoản này. Nếu không thì Man-in-the-middle sẽ truy cập được và server của bạn và tiến hành phá hoại
 
@@ -121,7 +123,11 @@ Tiếp theo, ở Control Panel > Windows Firewall, chọn Advanced Settings
 
 Chọn Inbound Rules, và thêm cái custom Port của bạn hồi nãy mới thiếp lập trong FileZilla Server
 
-![](https://farm8.staticflickr.com/7570/15513526614_76337d6844_o.png) ![](https://farm9.staticflickr.com/8638/16110072306_90f3ffacf3_o.png) ![](https://farm8.staticflickr.com/7462/16135112792_25b507d9d3_o.png)
+![](https://farm8.staticflickr.com/7570/15513526614_76337d6844_o.png)
+
+![](https://farm9.staticflickr.com/8638/16110072306_90f3ffacf3_o.png)
+
+![](https://farm8.staticflickr.com/7462/16135112792_25b507d9d3_o.png)
 
 Thiết lập cổng cho cái Inbound Rule này
 

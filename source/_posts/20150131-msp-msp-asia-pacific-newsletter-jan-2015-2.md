@@ -75,7 +75,9 @@ The Hour of Code in Vietnam was held successfully after attracting about 200 sec
 
 ## ・Thailand
 
- ![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg) 
+
+
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg) 
 
  **Supatporn Posoknistakul:** Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.
 
@@ -87,7 +89,9 @@ The Hour of Code in Vietnam was held successfully after attracting about 200 sec
 
 Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: "I'd like to appeal about..." After the presentation, they were able to receive feedback on how to be more effective in their presentation.
 
-![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg) ![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg) 
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg)
+
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg) 
 
 ### ・Imagine Cup 2015 Kick-off
 
@@ -169,7 +173,9 @@ After the judges have watched all the videos, reviewed the judging criteria, and
 
  To expand the activities of MSPs in Vietnam, more MSPs are being recruited. The recruitment attracted the cream of the crop from the best universities in the country. Undoubtedly, this will be a successful FY year for MSPs in Vietnam.
 
-![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg) ![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg) 
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg)
+
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg) 
 
 _The interview_
 
@@ -183,7 +189,9 @@ _Welcoming the new MSPs_
 
 Later that day, the participants were introduced to the Microsoft YouthSpark Program. Everyone got very excited upon learning about the program.
 
-![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg) ![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg) 
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg)
+
+![](http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg) 
 
 ### ・"Special Christmas for You" Contest
 

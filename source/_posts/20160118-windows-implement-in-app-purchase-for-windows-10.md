@@ -48,7 +48,9 @@ Microsoft có tài liệu cho vụ này, thậm chí có cả sample code, nhưn
 
 Phần này chứa các keywords mà bạn hay nhầm lẫn khi implement tính năng này
 
-*   Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng) ![](https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png)
+*   Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng)
+
+![](https://farm2.staticflickr.com/1479/24372150901_025d567d60_o.png)
     
 *   Durables: User mua thể loại này một lần rồi là sẽ sở hữu nó mãi mãi. Ví dụ như level mới, màn chơi mới, vật phẩm
     
@@ -66,14 +68,18 @@ Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Stor
 
 Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.
 
-![](https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png) Hide this app in the Store
+![](https://farm2.staticflickr.com/1563/24454812865_46046851ea_o.png)
+
+Hide this app in the Store
 
 ## 3.2. Step 2: Create IAP (aka In-App Purchase)
 <a id="markdown-step-2%3A-create-iap-aka-in-app-purchase" name="step-2%3A-create-iap-aka-in-app-purchase"></a>
 
 In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được
 
-![](https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png) Tạo một In-App Purchase
+![](https://farm2.staticflickr.com/1538/24087084229_5b67cc60ea_o.png)
+
+Tạo một In-App Purchase
 
 ## 3.3. Step 3: The tricky
 <a id="markdown-step-3%3A-the-tricky" name="step-3%3A-the-tricky"></a>
@@ -161,11 +167,17 @@ else
 }
 ```
 
-Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật ![](https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png) Có vẻ tốt rồi. Tới bước cuối cùng nhé
+Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật
+
+![](https://farm2.staticflickr.com/1616/23825747414_ddb694db19_o.png)
+
+Có vẻ tốt rồi. Tới bước cuối cùng nhé
 
 ## 3.4. Step 4: Change the test code to actual code
 <a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a>
 
-Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công ![](https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png)
+Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công
+
+![](https://farm2.staticflickr.com/1461/23829331723_6f852496b8_o.png)
 
 > Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center =.=)

@@ -30,7 +30,9 @@ JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ
 *   Nhấn Apply Now ở khúc dưới
 *   Bạn có nhiều tùy chọn chứng minh mình là sinh viên. Cách dễ nhất: dùng email đuôi .edu
     
-    ![](https://farm6.staticflickr.com/5692/21937216876_1c6c37ee27_o.png)
+   
+
+![](https://farm6.staticflickr.com/5692/21937216876_1c6c37ee27_o.png)
     
     Ngoài ra còn có thể dùng thẻ sinh viên quốc tế hoặc giấy tờ chứng minh (lâu hơn một chút)
     

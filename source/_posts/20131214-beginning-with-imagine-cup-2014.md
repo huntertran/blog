@@ -51,27 +51,43 @@ Nếu bạn chưa tham gia, hãy tham gia ngay
 
 Chọn Competitions > Braingame : [https://www.imaginecup.com/Competition/1005](https://www.imaginecup.com/Competition/1005)
 
-Tại đây, bạn sẽ được hướng dẫn các bước làm bài thi Braingame Vào Dashboard ![](https://farm6.staticflickr.com/5478/11364526066_596ba840fe_o.png)
+Tại đây, bạn sẽ được hướng dẫn các bước làm bài thi Braingame Vào Dashboard
 
-Tìm mục My Individual Challenge ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/2-challenges.png)
+![](https://farm6.staticflickr.com/5478/11364526066_596ba840fe_o.png)
 
-Click vào ô Register để đăng ký, quá trình đăng ký diễn ra tự động, mất khoảng 2s ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/3-register.png)
+Tìm mục My Individual Challenge
 
-Sau đó, click vào ô Compete để mở khóa bài Quiz ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/4-compete.png)
+![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/2-challenges.png)
 
-Bấm vào đường link Take the Quiz ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/5-start.png)
+Click vào ô Register để đăng ký, quá trình đăng ký diễn ra tự động, mất khoảng 2s
+
+![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/3-register.png)
+
+Sau đó, click vào ô Compete để mở khóa bài Quiz
+
+![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/4-compete.png)
+
+Bấm vào đường link Take the Quiz
+
+![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/5-start.png)
 
 Bắt đầu làm bài khi bấm vào đường Link như hình trên
 
 **QUAN TRỌNG:**
 
-Sau khi làm bài xong, sẽ có một bảng hiện ra, bạn bấm vào chữ click here như hình dưới thì điểm của bạn mới được ghi nhận ![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/6-return.png)
+Sau khi làm bài xong, sẽ có một bảng hiện ra, bạn bấm vào chữ click here như hình dưới thì điểm của bạn mới được ghi nhận
+
+![](https://cms.imaginecup.com/images/default-source/GetStarted/braingames/6-return.png)
 
 # 3. Project Blueprint
 
-Project Blueprint là một minigame thú vị dành cho tất cả các đội tham gia Imagine Cup 2014 Trong Project Blueprint, bạn có cơ hội thể hiện ý tưởng của mình và nhận được giải thưởng lên tới $3000 của ban tổ chức. Để tham gia được minigame này, bạn làm theo các bước sau Vào Dashboard của bạn ![](https://farm4.staticflickr.com/3765/11364718153_e5f7c29580_o.png)
+Project Blueprint là một minigame thú vị dành cho tất cả các đội tham gia Imagine Cup 2014 Trong Project Blueprint, bạn có cơ hội thể hiện ý tưởng của mình và nhận được giải thưởng lên tới $3000 của ban tổ chức. Để tham gia được minigame này, bạn làm theo các bước sau Vào Dashboard của bạn
 
-Đăng ký tên Team, thành viên trong Team. Bước này là bắt buộc. Sau đó, quay trở lại Dashboard, click vào tên team của bạn ![](https://farm8.staticflickr.com/7360/11364637476_15e8cf2bac_o.png)
+![](https://farm4.staticflickr.com/3765/11364718153_e5f7c29580_o.png)
+
+Đăng ký tên Team, thành viên trong Team. Bước này là bắt buộc. Sau đó, quay trở lại Dashboard, click vào tên team của bạn
+
+![](https://farm8.staticflickr.com/7360/11364637476_15e8cf2bac_o.png)
 
 Bạn sẽ thấy có nhiều Challenge đang diễn ra, bên cạnh là thời gian biểu của nó. Cũng tương tự như Braingame, bạn đánh dấu vào 2 ô Registered và Competing để bắt đầu nộp bài Sau khi đánh dấu, đường Link Assign Roles hiện ra, bạn đăng ký vai trò của các thành viên trong nhóm mình.
 

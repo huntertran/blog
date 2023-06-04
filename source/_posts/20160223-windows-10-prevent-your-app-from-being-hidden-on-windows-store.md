@@ -47,7 +47,9 @@ Ví dụ như bạn làm một game đua xe cho một chục thị trường kh�
 
 App nhỏ:
 
-![](http://az648995.vo.msecnd.net/win/2016/01/2_fr.png) ![](http://az648995.vo.msecnd.net/win/2016/01/3_es.png)
+![](http://az648995.vo.msecnd.net/win/2016/01/2_fr.png)
+
+![](http://az648995.vo.msecnd.net/win/2016/01/3_es.png)
 
 Kết hợp lại thành app bự với tính năng chọn ngôn ngữ, hoặc lấy theo ngôn ngữ hiện tại của hệ điều hành
 

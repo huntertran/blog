@@ -143,7 +143,9 @@ Sau cùng, chọt vô Advanced > Network > Settings để kiểm tra xem Firefox
 
 ![](https://farm4.staticflickr.com/3802/19662238941_c9f5dbc798_o.png)
 
-Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã "sạch" ![](https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png)
+Nếu bạn thấy Use system proxy, hoặc No proxy, vậy là xong, Firefox của bạn đã "sạch"
+
+![](https://farm1.staticflickr.com/530/19469763078_6a680a8ba1_o.png)
 
 ### 2.1.2 Gỡ bỏ các Add-on – Plug-in vớ vẩn
 

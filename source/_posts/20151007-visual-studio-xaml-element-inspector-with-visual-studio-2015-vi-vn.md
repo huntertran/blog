@@ -24,7 +24,9 @@ Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy
 
 Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn
 
-![](http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png) Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.
+![](http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png)
+
+Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.
 
 ![](http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png)
 

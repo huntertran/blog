@@ -40,7 +40,7 @@ Anh Nguyễn Thiên Ca – Microsoft Developer Evengelist – bắt đầu giớ
 
 *   Cuộc thi sẽ diễn ra tại Seatle – trụ sở chính của Microsoft Toàn cầu
 *   Rất có khả năng các bạn sẽ được gặp gỡ những lãnh đạo cao cấp nhất của Microsoft
-*   Giải thưởng lại tăng ![Flirt male](http://cuoilennaocacban2.files.wordpress.com/2013/10/wlemoticon-flirtmale.png)
+*   Giải thưởng lại tăng ;)
 *   Nếu ý tưởng tốt, bạn có thể sẽ được tài trợ một khoản tiền để lập một Start Up
 *   Có 4 lĩnh vực bạn có thể tham gia
     
@@ -65,7 +65,7 @@ tiếp theo đó, anh Toàn đã giới thiệu về mô hình thác nước tru
 
 Từng chức vụ trong một dự án phát triển phần mềm được anh giới thiệu khá kỹ lưỡng và chi tiết. Anh cũng chia sẻ một số kinh nghiệm làm việc của mình cho các bạn.
 
-> Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool ![smile](/images/2013/10/wlemoticon-partysmile.png)
+> Fun fact: Bạn Đinh Thúy An – khoa CNTN06, đứng lên có ý kiến: “Anh nói nhanh quá” => kết quả là bạn được tặng một cái áo Microsoft cực cool :D
 
 # 4. Kết thúc
 

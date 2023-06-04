@@ -37,7 +37,9 @@ Sẽ có một số phần mềm cần bạn cài đặt. Những phần mềm n
 *   [https://nodejs.org](https://nodejs.org)
 *   [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-_Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt_ ![Chọn LTS cho ít lỗi lặt vặt](https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png)
+_Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt_
+
+![Chọn LTS cho ít lỗi lặt vặt](https://farm3.staticflickr.com/2894/33833478232_a59cce160b_o.png)
 
 # Bước 2: Cài đặt các nodejs package
 

@@ -61,7 +61,9 @@ Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu tr�
 
 Khi cài ứng dụng lên thiết bị, bạn sẽ có một mô hình như sau:
 
-Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1 ![](http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png)
+Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1
+
+![](http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png)
 
 Các mũi tên màu vàng biểu thị cho khả năng truy xuất
 

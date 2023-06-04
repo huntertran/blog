@@ -32,7 +32,9 @@ Lưu ý là cách này chỉ hoạt động trên windows nhé
 *   .NET Framework 4.7.1 developer pack: [https://www.microsoft.com/net/download/thank-you/net471-developer-pack](https://www.microsoft.com/net/download/thank-you/net471-developer-pack)
 *   Build Tools for Visual Studio 2017 (MSBuild is licensed under the MIT license): [https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15)
 
-> ![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png)
+>
+
+![](https://farm5.staticflickr.com/4531/24089620797_59f8abe75b_o.png)
 
 NẾU BẠN SỬ DỤNG .NET FRAMEWORK 4.6.1 Cài thêm nuget package sau vào project để bỏ các lỗi liên quan tới intellisense
 

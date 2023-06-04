@@ -291,7 +291,9 @@ Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ 
 # 4. Kết quả
 <a id="markdown-k%E1%BA%BFt-qu%E1%BA%A3" name="k%E1%BA%BFt-qu%E1%BA%A3"></a>
 
-Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha) ![demo image](https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png)
+Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha)
+
+![demo image](https://farm5.staticflickr.com/4169/34124808091_f4c2130fd2_o.png)
 
 # 5. Cách hoạt động
 <a id="markdown-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng" name="c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng"></a>
