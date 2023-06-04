@@ -6,7 +6,6 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
@@ -18,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn. Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng">
 <meta property="og:type" content="article">
@@ -39,7 +38,7 @@
 <meta property="og:image" content="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png">
 <meta property="og:image" content="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png">
 <meta property="article:published_time" content="2014-04-04T14:28:33.000Z">
-<meta property="article:modified_time" content="2023-01-08T16:29:10.962Z">
+<meta property="article:modified_time" content="2023-06-04T16:08:17.515Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="windows phone">
 <meta property="article:tag" content="windows store">
@@ -65,6 +64,9 @@
 
 
 
+
+
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -75,8 +77,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -96,7 +98,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -138,15 +140,9 @@
     </div>
   </div>
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -162,18 +158,18 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Tren-Project"><span class="nav-text">1. Trên Project</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Cai-SDK"><span class="nav-text">1.1. Cài SDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Khai-bao-thong-tin"><span class="nav-text">1.2. Khai báo thông tin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Tren-Google-Analytics"><span class="nav-text">2. Trên Google Analytics</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Thiet-lap-theo-doi"><span class="nav-text">3. Thiết lập theo dõi</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Coding"><span class="nav-text">3.1. Coding</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Xem-Analytics"><span class="nav-text">4. Xem Analytics</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Trong-cung-series"><span class="nav-text">Trong cùng series:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Muc-luc"><span class="nav-text">Mục lục</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Tren-Project"><span class="nav-text">1. Trên Project</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Cai-SDK"><span class="nav-text">1.1. Cài SDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Khai-bao-thong-tin"><span class="nav-text">1.2. Khai báo thông tin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Tren-Google-Analytics"><span class="nav-text">2. Trên Google Analytics</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Thiet-lap-theo-doi"><span class="nav-text">3. Thiết lập theo dõi</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Coding"><span class="nav-text">3.1. Coding</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Xem-Analytics"><span class="nav-text">4. Xem Analytics</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tuan Tran"
       src="/images/theme/avatar.png">
   <p class="site-author-name" itemprop="name">Tuan Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
@@ -183,51 +179,37 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">223</span>
+        <span class="site-state-item-count">224</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
       </span>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -276,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-08 11:29:10" itemprop="dateModified" datetime="2023-01-08T11:29:10-05:00">2023-01-08</time>
+      <time title="Modified: 2023-06-04 12:08:17" itemprop="dateModified" datetime="2023-06-04T12:08:17-04:00">2023-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -319,27 +301,36 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
+    <div class="post-body" itemprop="articleBody"><p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
 <p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
 <p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
 <p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
 <span id="more"></span>
 
+<h1 id="Trong-cung-series"><a href="#Trong-cung-series" class="headerlink" title="Trong cùng series:"></a>Trong cùng series:</h1><p><a id="markdown-trong-c%C3%B9ng-series%3A" name="trong-c%C3%B9ng-series%3A"></a></p>
+<p><a href="https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML 1</a></p>
+<p><a href="https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML 2</a> </p>
+<p><a href="https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how to customize it</a></p>
+<p><a href="https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
+<p><a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
+<p><a href="https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] - [Part 6] - Source Control</a></p>
+<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><p><a id="markdown-m%E1%BB%A5c-l%E1%BB%A5c" name="m%E1%BB%A5c-l%E1%BB%A5c"></a></p>
 <!-- TOC -->
 
 <ul>
-<li><a href="#1-tr%C3%AAn-project">1. Trên Project</a><ul>
-<li><a href="#11-c%C3%A0i-sdk">1.1. Cài SDK</a></li>
-<li><a href="#12-khai-b%C3%A1o-th%C3%B4ng-tin">1.2. Khai báo thông tin</a></li>
+<li><a href="#1-trong-c%C3%B9ng-series">1. Trong cùng series:</a></li>
+<li><a href="#2-m%E1%BB%A5c-l%E1%BB%A5c">2. Mục lục</a></li>
+<li><a href="#3-tr%C3%AAn-project">3. Trên Project</a><ul>
+<li><a href="#31-c%C3%A0i-sdk">3.1. Cài SDK</a></li>
+<li><a href="#32-khai-b%C3%A1o-th%C3%B4ng-tin">3.2. Khai báo thông tin</a></li>
 </ul>
 </li>
-<li><a href="#2-tr%C3%AAn-google-analytics">2. Trên Google Analytics</a></li>
-<li><a href="#3-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">3. Thiết lập theo dõi</a><ul>
-<li><a href="#31-coding">3.1. Coding</a></li>
+<li><a href="#4-tr%C3%AAn-google-analytics">4. Trên Google Analytics</a></li>
+<li><a href="#5-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">5. Thiết lập theo dõi</a><ul>
+<li><a href="#51-coding">5.1. Coding</a></li>
 </ul>
 </li>
-<li><a href="#4-xem-analytics">4. Xem Analytics</a></li>
+<li><a href="#6-xem-analytics">6. Xem Analytics</a></li>
 </ul>
 <!-- /TOC -->
 
@@ -417,7 +408,7 @@
 
     <footer class="post-footer">
           <div class="reward-container">
-  <div></div>
+  <div>Buy me a coffee</div>
   <button>
     Donate
   </button>
@@ -442,7 +433,7 @@
       <a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/" title="[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps">https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
   </li>
 </ul>
 </div>
@@ -453,23 +444,23 @@
   <div class="social-list">
 
       <div class="social-item">
-        <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
-          <span class="icon">
-            <i class="fab fa-twitter"></i>
-          </span>
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
 
-          <span class="label">Twitter</span>
-        </a>
+            <span class="label">Twitter</span>
+          </a>
       </div>
 
       <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
-          <span class="label">RSS</span>
-        </a>
+            <span class="label">RSS</span>
+          </a>
       </div>
   </div>
 </div>
@@ -543,30 +534,44 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha256-c9n/9oG7sBeCouNZfRg5tO8VCCQXGPLiDPJNaF5Qgic=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-RtKI23ujTCOg3jNK74NK61WGNYbtBWcqh6UKebC2AQo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-K837BwIyiXo5k/9fCYgqUyA14bN4/Ve9P2SIT0KmZD0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js" integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
 
 
 
 
 
-  
-
-
 
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
