@@ -14,7 +14,7 @@ In this post, I will introduce the most basic concept of XAML layout, as well as
 
 <!-- more -->
 
-# 1. lines on History of XAML
+# 1. Two lines on History of XAML
 
 XAML, aka Extensible Application Markup Language, was a nice replacement for Windows Form. Later, it was used for Windows Phone, Universal Windows Platform apps (the apps that run on Windows 8 and above).
 
