@@ -72,7 +72,7 @@ A database has 4 basic operations: CREATE-READ-UPDATE-DELETE. For each operation
 
 For example, when you need to read a lot but write sometimes, you can use Database Replication, with one master database and multiple slaves.
 
-![database replication](https://i.imgur.com/SsPICMO.png)
+![database replication](/images/2022/01/database_replication.png)
 
 ### 2.1.2. Database sharding
 <a id="markdown-database-sharding" name="database-sharding"></a>
@@ -105,7 +105,7 @@ The ultimate goal of scaling is to handle increasing traffic, or to reduce the r
 
 If the data will not change for a relatively long time, we can use cache to store that data. Whenever the data is needed, server read it directly from cache without calculation or take trip to database.
 
-![cache](https://i.imgur.com/D7o4X4g.png)
+![cache](/images/2022/01/cache.png)
 
 ### 2.2.2. Stateless and multiple servers
 <a id="markdown-stateless-and-multiple-servers" name="stateless-and-multiple-servers"></a>

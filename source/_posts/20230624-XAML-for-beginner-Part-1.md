@@ -20,7 +20,7 @@ XAML, aka Extensible Application Markup Language, was a nice replacement for Win
 
 # 2. Basic controls - `Grid`
 
-In XAML, there are 2 basic controls that was use as a container for other controls, which is `Grid` and `StackPanel`
+In XAML, there are some basic controls that was use as a container for other controls, which is `Grid`, `StackPanel`, and `ScrollViewer`. I will cover the `ScrollViewer` at the end of this post.
 
 A comparison as follow:
 
