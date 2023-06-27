@@ -21,37 +21,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML.  In this post, I will introduce the most basic">
+    <meta name="description" content="This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: ListBox, GridView. Also included a super short introduction to MVVM and data binding in XAML.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XAML for beginner - Part 1">
-<meta property="og:url" content="https://huntertran.ca/2023/06/24/XAML-for-beginner/">
+<meta property="og:title" content="XAML for beginner - Part 2">
+<meta property="og:url" content="https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/">
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
-<meta property="og:description" content="A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML.  In this post, I will introduce the most basic">
+<meta property="og:description" content="This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: ListBox, GridView. Also included a super short introduction to MVVM and data binding in XAML.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/ieNDg54OjR.png">
-<meta property="og:image" content="https://huntertran.ca/images/2013/11/112213_0144_windowsphon6.png">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/4kJL6V84m0.png">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/3.png">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/4.png">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/5.png">
-<meta property="og:image" content="https://huntertran.ca/images/2023/06/6.png">
-<meta property="article:published_time" content="2023-06-24T21:46:07.000Z">
-<meta property="article:modified_time" content="2023-06-25T03:54:15.550Z">
+<meta property="og:image" content="https://huntertran.ca/images/2023/06/7.png">
+<meta property="og:image" content="https://huntertran.ca/images/2023/06/8.png">
+<meta property="og:image" content="https://huntertran.ca/images/2023/06/9.png">
+<meta property="article:published_time" content="2023-06-25T14:31:36.000Z">
+<meta property="article:modified_time" content="2023-06-27T04:04:58.080Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="XAML">
 <meta property="article:tag" content="Windows Store App">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huntertran.ca/images/2023/06/ieNDg54OjR.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/2023/06/7.png">
 
 
-<link rel="canonical" href="https://huntertran.ca/2023/06/24/XAML-for-beginner/">
+<link rel="canonical" href="https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2023/06/24/XAML-for-beginner/","path":"2023/06/24/XAML-for-beginner/","title":"XAML for beginner - Part 1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/","path":"2023/06/25/XAML-for-beginner-Part-2/","title":"XAML for beginner - Part 2"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>XAML for beginner - Part 1 | Tuan Tran's Blog</title>
+<title>XAML for beginner - Part 2 | Tuan Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
@@ -155,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Two-lines-on-History-of-XAML"><span class="nav-text">1. Two lines on History of XAML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Basic-controls-Grid"><span class="nav-text">2. Basic controls - Grid</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Grid%E2%80%99s-column-and-row"><span class="nav-text">2.1. Grid’s column and row</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Row-and-column-size"><span class="nav-text">2.2. Row and column size</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Basic-control-StackPanel"><span class="nav-text">3. Basic control - StackPanel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Basic-control-ScrollViewer"><span class="nav-text">4. Basic control - ScrollViewer</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-ListBox-control"><span class="nav-text">1. ListBox control</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-ListBox-property-ItemsSource"><span class="nav-text">1.1. ListBox property: ItemsSource</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-ListBox-property-SelectedIndex-and-SelectedItem"><span class="nav-text">1.2. ListBox property: SelectedIndex and SelectedItem</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-DataBinding"><span class="nav-text">2. DataBinding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Design-Pattern-for-DataBinding-MVVM"><span class="nav-text">2.1. Design Pattern for DataBinding - MVVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-DataContext"><span class="nav-text">2.2. DataContext</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-ItemTemplate-of-ListBox"><span class="nav-text">2.3. ItemTemplate of ListBox</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GridView-view-mode"><span class="nav-text">GridView view mode</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Code"><span class="nav-text">Source Code</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,7 +166,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">124</span>
+          <span class="site-state-item-count">125</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -219,7 +215,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2023/06/24/XAML-for-beginner/">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
@@ -232,12 +228,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="XAML for beginner - Part 1 | Tuan Tran's Blog">
+      <meta itemprop="name" content="XAML for beginner - Part 2 | Tuan Tran's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          XAML for beginner - Part 1<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20230624-XAML-for-beginner.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+          XAML for beginner - Part 2<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20230625-XAML-for-beginner-Part-2.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
         </h1>
 
         <div class="post-meta-container">
@@ -247,9 +243,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-06-24 17:46:07 / Modified: 23:54:15" itemprop="dateCreated datePublished" datetime="2023-06-24T17:46:07-04:00">2023-06-24</time>
+      <time title="Created: 2023-06-25 10:31:36" itemprop="dateCreated datePublished" datetime="2023-06-25T10:31:36-04:00">2023-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-27 00:04:58" itemprop="dateModified" datetime="2023-06-27T00:04:58-04:00">2023-06-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,8 +272,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2023/06/24/XAML-for-beginner/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/06/24/XAML-for-beginner/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/06/25/XAML-for-beginner-Part-2/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/06/25/XAML-for-beginner-Part-2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -284,141 +286,119 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. </p>
-<p>In this post, I will introduce the most basic concept of XAML layout, as well as how to use them in your personal project.</p>
+    <div class="post-body" itemprop="articleBody"><p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>
 <span id="more"></span>
 
-<h1 id="1-Two-lines-on-History-of-XAML"><a href="#1-Two-lines-on-History-of-XAML" class="headerlink" title="1. Two lines on History of XAML"></a>1. Two lines on History of XAML</h1><p>XAML, aka Extensible Application Markup Language, was a nice replacement for Windows Form. Later, it was used for Windows Phone, Universal Windows Platform apps (the apps that run on Windows 8 and above).</p>
-<h1 id="2-Basic-controls-Grid"><a href="#2-Basic-controls-Grid" class="headerlink" title="2. Basic controls - Grid"></a>2. Basic controls - <code>Grid</code></h1><p>In XAML, there are 2 basic controls that was use as a container for other controls, which is <code>Grid</code> and <code>StackPanel</code></p>
-<p>A comparison as follow:</p>
-<table>
-<thead>
-<tr>
-<th>Grid</th>
-<th>StackPanel</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>The inner controls can overlap with each other</td>
-<td>Inner controls stack horizontally or vertically</td>
-</tr>
-<tr>
-<td>Inner controls can be arranged based on row and columns</td>
-<td>N&#x2F;A</td>
-</tr>
-<tr>
-<td>The grid can be expanded to parent control</td>
-<td>The StackPanel expands based on the inner content&#x2F;controls</td>
-</tr>
-</tbody></table>
-<p>Let’s start with a sample WPF application.</p>
-<p>Open the file <code>Window.xaml</code> in your Visual Studio. Inside the outer <code>Grid</code>, add two <code>TextBlock</code> as follow:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Window x:Class&#x3D;&quot;WpfApp1.Window1&quot;
-        xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&#x2F;presentation&quot;
-        xmlns:x&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&quot;
-        xmlns:d&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;expression&#x2F;blend&#x2F;2008&quot;
-        xmlns:mc&#x3D;&quot;http:&#x2F;&#x2F;schemas.openxmlformats.org&#x2F;markup-compatibility&#x2F;2006&quot;
-        xmlns:local&#x3D;&quot;clr-namespace:WpfApp1&quot;
-        mc:Ignorable&#x3D;&quot;d&quot;
-        Title&#x3D;&quot;Window1&quot; Height&#x3D;&quot;800&quot; Width&#x3D;&quot;480&quot;&gt;
-    &lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-        &lt;TextBlock Text&#x3D;&quot;Hello world&quot; FontSize&#x3D;&quot;50&quot;&#x2F;&gt;
-        &lt;TextBlock Text&#x3D;&quot;Hello WPF&quot;  FontSize&#x3D;&quot;80&quot;&#x2F;&gt; 
-    &lt;&#x2F;Grid&gt;
-&lt;&#x2F;Window&gt;</code></pre>
-
-<p>You will receive a layout with overlapped texts like this</p>
-<p><img src="/images/2023/06/ieNDg54OjR.png" alt="overlap text"></p>
-<p>Overlapping contents allow you to design more sophisticated&#x2F;beautiful app, for example:</p>
-<p><img src="/images/2013/11/112213_0144_windowsphon6.png" alt="advanced layout"></p>
-<h2 id="2-1-Grid’s-column-and-row"><a href="#2-1-Grid’s-column-and-row" class="headerlink" title="2.1. Grid’s column and row"></a>2.1. Grid’s column and row</h2><p><code>Grid</code> allows you to arrange the content into columns and row. You can declare column definitions and row definitions. After that, for each child control, you can set column or row property.</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;Grid.RowDefinitions&gt;
-        &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;80&quot; &#x2F;&gt;
-    &lt;&#x2F;Grid.RowDefinitions&gt;
-
-    &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-               FontSize&#x3D;&quot;50&quot;
-               Text&#x3D;&quot;Hello world&quot; &#x2F;&gt;
-    &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
-               FontSize&#x3D;&quot;80&quot;
-               Text&#x3D;&quot;Hello WPF&quot; &#x2F;&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
-
-<p>The textblocks are now arranged to rows accordingly</p>
-<p><img src="/images/2023/06/4kJL6V84m0.png" alt="rows"></p>
-<p>You can do the same for columns, or combine the rows and columns to have a table like layout</p>
-<h2 id="2-2-Row-and-column-size"><a href="#2-2-Row-and-column-size" class="headerlink" title="2.2. Row and column size"></a>2.2. Row and column size</h2><p>If you’re a web developers, at some point, you would need to scratch your head on how to make this <code>div</code> take up the whole space, or make it fit the contents, etc. TBH, it was never an easy task, consider that you might have a dozen of nested elements acts as the containers for the <code>div</code> element that you want to display on the screen.</p>
-<p>Luckily, <code>XAML</code> solved this problem by 3 simple concept for height of rows and width of columns:</p>
+<h1 id="1-ListBox-control"><a href="#1-ListBox-control" class="headerlink" title="1. ListBox control"></a>1. <code>ListBox</code> control</h1><p><code>ListBox</code> allows you to display a list of item. Each item in the list box would have the same type, with the same UI.</p>
+<p>For example, “top 30 most stream songs on Spotify” is a kind of data that we could use <code>ListBox</code> to display.</p>
+<p><img src="/images/2023/06/7.png" alt="listbox"></p>
+<h2 id="1-1-ListBox-property-ItemsSource"><a href="#1-1-ListBox-property-ItemsSource" class="headerlink" title="1.1. ListBox property: ItemsSource"></a>1.1. <code>ListBox</code> property: <code>ItemsSource</code></h2><p><code>ItemsSource</code> is the source for the items that you want to display on the UI. <code>ItemsSource</code> can be a object of type <code>List</code>, or type <code>ObservableCollection</code>. We will talk a bit about this property in DataBinding section</p>
+<h2 id="1-2-ListBox-property-SelectedIndex-and-SelectedItem"><a href="#1-2-ListBox-property-SelectedIndex-and-SelectedItem" class="headerlink" title="1.2. ListBox property: SelectedIndex and SelectedItem"></a>1.2. <code>ListBox</code> property: <code>SelectedIndex</code> and <code>SelectedItem</code></h2><p>When user select an item on the list box, both <code>SelectedIndex</code> and <code>SelectedItem</code> property will be updated with the corresponding data. The index is start from 0.</p>
+<h1 id="2-DataBinding"><a href="#2-DataBinding" class="headerlink" title="2. DataBinding"></a>2. DataBinding</h1><p>If you familiar with Angular, React, or Vuejs, you probably know what is data binding. In short, the data you have in memory will automatically displayed on UI. If the data got updated (by calculation, replaced from a call to API, user changed it), the UI will update the view as well.</p>
+<p>There are 3 types of <code>DataBinding</code>, which is <code>One time binding</code>, <code>One way binding</code> and <code>Two way binding</code></p>
 <ul>
-<li>Fixed size: The width&#x2F;height is exactly what you declared</li>
-<li>Auto: The width&#x2F;height is equal to the width&#x2F;height of the content inside it</li>
-<li>Star: The width&#x2F;height is expand to fit the remaining space of the parent control</li>
-<li>Number with star: Act as percentage. Useful for scaling</li>
+<li>In <code>One time binding</code>, the data got prepared, then send to the UI one time only, usually when you load the view.</li>
+<li>In <code>One way binding</code>, whenever the data updated in memory, the UI will update it view too. But when the data on UI updated (think of the user modify the data in a text box), the data in memory is not getting updated.</li>
+<li>In <code>Two way binding</code>, the data between UI and memory are kept in sync.</li>
 </ul>
-<p>Let’s see them in action. The following code will give this layout</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;Grid.RowDefinitions&gt;
-        &lt;RowDefinition Height&#x3D;&quot;Auto&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;3*&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;7*&quot; &#x2F;&gt;
-    &lt;&#x2F;Grid.RowDefinitions&gt;
-
-    &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-               FontSize&#x3D;&quot;15&quot;
-               Text&#x3D;&quot;Hello world&quot; &#x2F;&gt;
-    &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
-               FontSize&#x3D;&quot;80&quot;
-               Text&#x3D;&quot;Hello WPF&quot; &#x2F;&gt;
-    &lt;Grid Grid.Row&#x3D;&quot;2&quot;
-          Background&#x3D;&quot;Green&quot; &#x2F;&gt;
-    &lt;Grid Grid.Row&#x3D;&quot;3&quot;
-          Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
-
-<p><img src="/images/2023/06/3.png" alt="size styles"></p>
-<blockquote>
-<p>Obviously, you can nest multiple <code>Grid</code> in a parent <code>Grid</code></p>
+<h2 id="2-1-Design-Pattern-for-DataBinding-MVVM"><a href="#2-1-Design-Pattern-for-DataBinding-MVVM" class="headerlink" title="2.1. Design Pattern for DataBinding - MVVM"></a>2.1. Design Pattern for DataBinding - MVVM</h2><blockquote>
+<p>This is optional, there are multiple way for you to “bind” the data with UI.</p>
 </blockquote>
-<h1 id="3-Basic-control-StackPanel"><a href="#3-Basic-control-StackPanel" class="headerlink" title="3. Basic control - StackPanel"></a>3. Basic control - <code>StackPanel</code></h1><p><code>StackPanel</code>, as the name of the control, stack the content horizontally or vertically.</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;StackPanel Margin&#x3D;&quot;16&quot;&gt;
-        &lt;Grid Width&#x3D;&quot;80&quot;
-              Height&#x3D;&quot;40&quot;
-              Background&#x3D;&quot;Red&quot; &#x2F;&gt;
-        &lt;Grid Width&#x3D;&quot;160&quot;
-              Height&#x3D;&quot;40&quot;
-              Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-    &lt;&#x2F;StackPanel&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+<p>Microsoft invented and advocated for the MVVM pattern. They support this pattern and use it everywhere in there newer first-party applications, especially the one that you can download from Windows Store (WPF, UWP apps)</p>
+<blockquote>
+<p>MVVM stands for Model-View-ViewModel. This pattern is a variation of Martin Flower’s Presentation design pattern.</p>
+</blockquote>
+<p>In short, <code>Model</code> is the model classes that define your data. In the Spotify example above, the model class could be like this:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Song
+&#123;
+    &#x2F;&#x2F; simplified for the blog post
+    public int Id &#123; get; set; &#125;
+    public string Name &#123; get; set; &#125;
+    public DateTime DatePublished &#123; get; set; &#125;
+&#125;</code></pre>
 
-<p>By default, <code>StackPanel</code> is vertical</p>
-<p><img src="/images/2023/06/4.png" alt="StackPanel vertical"></p>
-<p>You can make it Horizontal by set the <code>Orientation=&quot;Horizontal&quot;</code></p>
-<p><img src="/images/2023/06/5.png" alt="StackPanel horizontal"></p>
-<h1 id="4-Basic-control-ScrollViewer"><a href="#4-Basic-control-ScrollViewer" class="headerlink" title="4. Basic control - ScrollViewer"></a>4. Basic control - <code>ScrollViewer</code></h1><p><code>ScrollViewer</code> allow you to scroll the content that overflow the screensize. This apply to both horizontal and vertical size</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;ScrollViewer&gt;
-        &lt;StackPanel&gt;
-            &lt;Grid Width&#x3D;&quot;80&quot;
-                  Height&#x3D;&quot;40&quot;
-                  Background&#x3D;&quot;Red&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;40&quot;
-                  Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;400&quot;
-                  Background&#x3D;&quot;Green&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;800&quot;
-                  Background&#x3D;&quot;Violet&quot; &#x2F;&gt;
-        &lt;&#x2F;StackPanel&gt;
-    &lt;&#x2F;ScrollViewer&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+<p><code>ViewModel</code> is a special class that was use as a converter. It converts the data in model into something that can be displayed on screen. On the <code>ViewModel</code> class, you would need to handle the update mechanism of the data you have in <code>Model</code> to <code>View</code>.</p>
+<p>In other to do this, the <code>ViewModel</code> would need to implement the interface <code>INotifyPropertyChanged</code></p>
+<p>Using the same Spotify example, the <code>ViewModel</code> would be something like this</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MainViewModel
+&#123;
+    public ObservableCollection&lt;Song&gt; SongList &#123; get; set; &#125;
+&#125;</code></pre>
 
-<p><img src="/images/2023/06/6.png" alt="ScrollViewer"></p>
+<p>Now you just need to populate the data for your song list, and put that in <code>DataContext</code> of the <code>MainWindow.xaml</code> page</p>
+<h2 id="2-2-DataContext"><a href="#2-2-DataContext" class="headerlink" title="2.2. DataContext"></a>2.2. <code>DataContext</code></h2><p><code>DataContext</code> is the way you tell the page which data to display on UI. You can set the data context by assigning the <code>DataContext</code> property of <code>Window</code> or <code>Page</code>. </p>
+<p>The code for the <code>MainWindow.xaml.cs</code> should look like this:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public partial class MainWindow : Window
+&#123;
+    public MainViewModel MainVm &#x3D; new MainViewModel();
+    public MainWindow()
+    &#123;
+        &#x2F;&#x2F; Here I set the Window&#39;s data context
+        DataContext &#x3D; MainVm;
+        MainVm.SongList &#x3D; new ObservableCollection&lt;Song&gt;
+        &#123;
+            new Song(1, &quot;Test 1&quot;, DateTime.UtcNow.AddDays(1)),
+            new Song(2, &quot;Test 2&quot;, DateTime.UtcNow.AddDays(2)),
+            new Song(3, &quot;Test 3&quot;, DateTime.UtcNow.AddDays(3)),
+            new Song(4, &quot;Test 4&quot;, DateTime.UtcNow.AddDays(4))
+        &#125;;
+
+        InitializeComponent();
+    &#125;
+&#125;</code></pre>
+
+<h2 id="2-3-ItemTemplate-of-ListBox"><a href="#2-3-ItemTemplate-of-ListBox" class="headerlink" title="2.3. ItemTemplate of ListBox"></a>2.3. <code>ItemTemplate</code> of ListBox</h2><p>You would need to declare a “template” for your data in <code>ListBox</code>. This is called <code>ItemTemplate</code>.</p>
+<p>Modify your XAML code as follow:</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ListBox ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
+    &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Grid&gt;
+                &lt;Grid.ColumnDefinitions&gt;
+                    &lt;ColumnDefinition Width&#x3D;&quot;20&quot; &#x2F;&gt;
+                    &lt;ColumnDefinition Width&#x3D;&quot;*&quot; &#x2F;&gt;
+                &lt;&#x2F;Grid.ColumnDefinitions&gt;
+                &lt;Grid.RowDefinitions&gt;
+                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
+                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
+                &lt;&#x2F;Grid.RowDefinitions&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
+                           Grid.RowSpan&#x3D;&quot;2&quot;
+                           Grid.Column&#x3D;&quot;0&quot;
+                           Text&#x3D;&quot;&#123;Binding Id&#125;&quot; &#x2F;&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
+                           Grid.Column&#x3D;&quot;1&quot;
+                           Text&#x3D;&quot;&#123;Binding Name&#125;&quot; &#x2F;&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
+                           Grid.Column&#x3D;&quot;1&quot;
+                           Text&#x3D;&quot;&#123;Binding DatePublished&#125;&quot; &#x2F;&gt;
+            &lt;&#x2F;Grid&gt;
+        &lt;&#x2F;DataTemplate&gt;
+    &lt;&#x2F;ListBox.ItemTemplate&gt;
+&lt;&#x2F;ListBox&gt;</code></pre>
+
+<p>In this xaml, we set <code>ItemsSource=&#123;Binding SongList&#125;</code>, which is the name of the property in the <code>MainViewModel</code> class. Later, we bind each <code>TextBlock</code> to the property of <code>Song</code> class.</p>
+<p>Now if you run the application, you should see something like this:</p>
+<p><img src="/images/2023/06/8.png" alt="wpf listbox"></p>
+<p>It’s ugly, but hey it worked ;)</p>
+<h1 id="GridView-view-mode"><a href="#GridView-view-mode" class="headerlink" title="GridView view mode"></a><code>GridView</code> view mode</h1><p><code>GridView</code> displays data as a table, with headers and rows. You would need to use <code>GridView</code> with <code>ListView</code> control, in <code>View</code> property</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ListView ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
+    &lt;ListView.View&gt;
+        &lt;GridView AllowsColumnReorder&#x3D;&quot;true&quot;
+                  ColumnHeaderToolTip&#x3D;&quot;Song list&quot;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Id&#125;&quot;
+                            Header&#x3D;&quot;ID&quot; &#x2F;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Name&#125;&quot;
+                            Header&#x3D;&quot;Name&quot; &#x2F;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding DatePublished&#125;&quot;
+                            Header&#x3D;&quot;Published date&quot; &#x2F;&gt;
+        &lt;&#x2F;GridView&gt;
+    &lt;&#x2F;ListView.View&gt;
+&lt;&#x2F;ListView&gt;</code></pre>
+
+<p>Run the application, then you will see something like this:</p>
+<p><img src="/images/2023/06/9.png" alt="wpf gridview"></p>
+<h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><p>Source code for this whole sample is available at: <a target="_blank" rel="noopener" href="https://github.com/huntertran/SampleWPF">SampleWPF on Github</a></p>
+<p>I hope you can learn something new about XAML today. See you in next post</p>
 
     </div>
 
@@ -450,7 +430,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://huntertran.ca/2023/06/24/XAML-for-beginner/" title="XAML for beginner - Part 1">https://huntertran.ca/2023/06/24/XAML-for-beginner/</a>
+      <a href="https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/" title="XAML for beginner - Part 2">https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/</a>
   </li>
   <li class="post-copyright-license">
       <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -494,8 +474,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/04/24/Optimize-list-of-bool-values-in-C/" rel="prev" title="Optimize list of bool values in C#">
-                  <i class="fa fa-chevron-left"></i> Optimize list of bool values in C#
+                <a href="/2023/06/24/XAML-for-beginner-Part-1/" rel="prev" title="XAML for beginner - Part 1">
+                  <i class="fa fa-chevron-left"></i> XAML for beginner - Part 1
                 </a>
             </div>
             <div class="post-nav-item">

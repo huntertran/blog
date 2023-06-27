@@ -28,14 +28,14 @@
 <meta property="og:site_name" content="Tuan Tran&#39;s Blog">
 <meta property="og:description" content="Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you cou">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.imgur.com/SsPICMO.png">
-<meta property="og:image" content="https://i.imgur.com/D7o4X4g.png">
+<meta property="og:image" content="https://huntertran.ca/images/2022/01/database_replication.png">
+<meta property="og:image" content="https://huntertran.ca/images/2022/01/cache.png">
 <meta property="article:published_time" content="2022-01-22T07:42:18.000Z">
-<meta property="article:modified_time" content="2023-06-25T03:54:15.550Z">
+<meta property="article:modified_time" content="2023-06-27T04:04:58.080Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="system design">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/SsPICMO.png">
+<meta name="twitter:image" content="https://huntertran.ca/images/2022/01/database_replication.png">
 
 
 <link rel="canonical" href="https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/">
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">124</span>
+          <span class="site-state-item-count">125</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-24 23:54:15" itemprop="dateModified" datetime="2023-06-24T23:54:15-04:00">2023-06-24</time>
+      <time title="Modified: 2023-06-27 00:04:58" itemprop="dateModified" datetime="2023-06-27T00:04:58-04:00">2023-06-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -341,7 +341,7 @@
 <p>A database has 4 basic operations: CREATE-READ-UPDATE-DELETE. For each operation, there are specific ways to scale.</p>
 <h3 id="2-1-1-Database-Replication"><a href="#2-1-1-Database-Replication" class="headerlink" title="2.1.1. Database Replication"></a>2.1.1. Database Replication</h3><p><a id="markdown-database-replication" name="database-replication"></a></p>
 <p>For example, when you need to read a lot but write sometimes, you can use Database Replication, with one master database and multiple slaves.</p>
-<p><img src="https://i.imgur.com/SsPICMO.png" alt="database replication"></p>
+<p><img src="/images/2022/01/database_replication.png" alt="database replication"></p>
 <h3 id="2-1-2-Database-sharding"><a href="#2-1-2-Database-sharding" class="headerlink" title="2.1.2. Database sharding"></a>2.1.2. Database sharding</h3><p><a id="markdown-database-sharding" name="database-sharding"></a></p>
 <p>Sharding, or partitioning, is another approach to database scaling. You still use multiple databases, but different from replication, each database holds a portion of the data. A sharding strategy could be used to determine which data belong to which database.</p>
 <blockquote>
@@ -363,7 +363,7 @@
 <p>The ultimate goal of scaling is to handle increasing traffic, or to reduce the response time of a single request. To do so, there are some solutions</p>
 <h3 id="2-2-1-Cache"><a href="#2-2-1-Cache" class="headerlink" title="2.2.1. Cache"></a>2.2.1. Cache</h3><p><a id="markdown-cache" name="cache"></a></p>
 <p>If the data will not change for a relatively long time, we can use cache to store that data. Whenever the data is needed, server read it directly from cache without calculation or take trip to database.</p>
-<p><img src="https://i.imgur.com/D7o4X4g.png" alt="cache"></p>
+<p><img src="/images/2022/01/cache.png" alt="cache"></p>
 <h3 id="2-2-2-Stateless-and-multiple-servers"><a href="#2-2-2-Stateless-and-multiple-servers" class="headerlink" title="2.2.2. Stateless and multiple servers"></a>2.2.2. Stateless and multiple servers</h3><p><a id="markdown-stateless-and-multiple-servers" name="stateless-and-multiple-servers"></a></p>
 <p>Stateless mean the server does not store the state of the request. Every requests are treated the same. This is important, because the servers don’t save state of the request, we can easily add more identical servers to increase the performance.</p>
 <p>However, to use multiple servers for a web service, we need a way to direct the request to the idle server. We call it the Load Balancer.</p>
