@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://huntertran.ca/images/2023/06/8.png">
 <meta property="og:image" content="https://huntertran.ca/images/2023/06/9.png">
 <meta property="article:published_time" content="2023-06-25T14:31:36.000Z">
-<meta property="article:modified_time" content="2023-06-27T04:04:58.080Z">
+<meta property="article:modified_time" content="2023-07-14T01:56:31.158Z">
 <meta property="article:author" content="Tuan Tran">
 <meta property="article:tag" content="XAML">
 <meta property="article:tag" content="Windows Store App">
@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-06-27 00:04:58" itemprop="dateModified" datetime="2023-06-27T00:04:58-04:00">2023-06-27</time>
+      <time title="Modified: 2023-07-13 21:56:31" itemprop="dateModified" datetime="2023-07-13T21:56:31-04:00">2023-07-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -318,7 +318,8 @@
 &#125;</code></pre>
 
 <p><code>ViewModel</code> is a special class that was use as a converter. It converts the data in model into something that can be displayed on screen. On the <code>ViewModel</code> class, you would need to handle the update mechanism of the data you have in <code>Model</code> to <code>View</code>.</p>
-<p>In other to do this, the <code>ViewModel</code> would need to implement the interface <code>INotifyPropertyChanged</code></p>
+<p>In other to do this, the <code>Model</code> would need to implement the interface <code>INotifyPropertyChanged</code>, or <code>INotifyCollectionChanged</code>.</p>
+<p><code>INotifyPropertyChanged</code> is for update the property of the model. <code>INotifyCollectionChanged</code> is for update the list if you add&#x2F;remove&#x2F;re-arrange the item in the list. <code>ObservableCollection</code> already implemented the <code>INotifyCollectionChanged</code> for you.</p>
 <p>Using the same Spotify example, the <code>ViewModel</code> would be something like this</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MainViewModel
 &#123;
@@ -331,6 +332,7 @@
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public partial class MainWindow : Window
 &#123;
     public MainViewModel MainVm &#x3D; new MainViewModel();
+
     public MainWindow()
     &#123;
         &#x2F;&#x2F; Here I set the Window&#39;s data context
