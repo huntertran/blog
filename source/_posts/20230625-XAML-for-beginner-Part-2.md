@@ -60,7 +60,9 @@ public class Song
 
 `ViewModel` is a special class that was use as a converter. It converts the data in model into something that can be displayed on screen. On the `ViewModel` class, you would need to handle the update mechanism of the data you have in `Model` to `View`.
 
-In other to do this, the `ViewModel` would need to implement the interface `INotifyPropertyChanged`
+In other to do this, the `Model` would need to implement the interface `INotifyPropertyChanged`, or `INotifyCollectionChanged`.
+
+`INotifyPropertyChanged` is for update the property of the model. `INotifyCollectionChanged` is for update the list if you add/remove/re-arrange the item in the list. `ObservableCollection` already implemented the `INotifyCollectionChanged` for you.
 
 Using the same Spotify example, the `ViewModel` would be something like this
 
@@ -83,6 +85,7 @@ The code for the `MainWindow.xaml.cs` should look like this:
 public partial class MainWindow : Window
 {
     public MainViewModel MainVm = new MainViewModel();
+
     public MainWindow()
     {
         // Here I set the Window's data context
