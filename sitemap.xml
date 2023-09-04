@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huntertran.ca/win32console/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.ca/internettips/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,7 @@
   <url>
     <loc>https://huntertran.ca/machine-learning-course/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +31,7 @@
   <url>
     <loc>https://huntertran.ca/microsoft/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,7 @@
   <url>
     <loc>https://huntertran.ca/msp/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,862 +49,7 @@
   <url>
     <loc>https://huntertran.ca/tags/</loc>
     
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/win32console/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2023/06/24/XAML-for-beginner-Part-1/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/cancel</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/about/thankyou</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/azure/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/categories/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/computer-tips/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/csharp/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/06/12/aspnet-core-2-middleware/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/07/10/repository-va-unit-of-work-pattern/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/09/14/machine-learning-introduction/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/09/22/ml-model-and-cost-function/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/09/27/machine-learning-parameter-learning/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/10/01/machine-learning-matrices-and-vectors/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/10/03/machine-learning-2-1-multiple-features/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/10/09/machine-learning-2-2-normal-equation/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/10/18/machine-learning-2-3-exercise/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/04/02/latex-on-windows-step-by-step-installation/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/05/01/transportation-in-europe/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/05/14/machine-learning-1-3-classification-and-representation/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/05/15/machine-learning-title-block/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/14/gecko-dom-logging-system/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/07/12/java-for-beginner-2-hello-world-in-java/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2019/10/19/refactoring-clones-type-2/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2020/11/23/disk-cleanup-to-free-disk-space/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/11/17/xaml-styler-bug-and-fixes/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/12/30/2014-in-review/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/19/notice-tach-blog/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2015/12/30/2015-in-review/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/11/c-string-performance-tips-and-tricks/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/02/07/asp-net-mvc-debug-route-config/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/20/asp-net-mo-rong-editorfor/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -904,7 +58,7 @@
   <url>
     <loc>https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -913,7 +67,7 @@
   <url>
     <loc>https://huntertran.ca/2017/08/30/aspnet-identity-1-introduction/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -922,7 +76,7 @@
   <url>
     <loc>https://huntertran.ca/2017/12/10/asp-net-core-2-0-dung-vscode-va-target-net-framework/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -931,7 +85,7 @@
   <url>
     <loc>https://huntertran.ca/2018/01/12/asp-net-core-2-0-custom-tag-helper/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -940,7 +94,7 @@
   <url>
     <loc>https://huntertran.ca/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -949,7 +103,7 @@
   <url>
     <loc>https://huntertran.ca/2018/01/14/asp-net-query-tren-cac-computed-property-khong-ho-tro-linq/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -958,7 +112,7 @@
   <url>
     <loc>https://huntertran.ca/2018/02/17/moving-to-open-source-softwares/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -967,7 +121,7 @@
   <url>
     <loc>https://huntertran.ca/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -976,7 +130,7 @@
   <url>
     <loc>https://huntertran.ca/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -985,61 +139,475 @@
   <url>
     <loc>https://huntertran.ca/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    <loc>https://huntertran.ca/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/</loc>
     
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/01/14/ic03/</loc>
+    <loc>https://huntertran.ca/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
     
-    <lastmod>2023-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/2012/01/31/ic04/</loc>
-    
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
+    <loc>https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://huntertran.ca/2013/09/02/windows-phone-7-chooser/</loc>
+    <loc>https://huntertran.ca/2018/06/12/aspnet-core-2-middleware/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/07/10/repository-va-unit-of-work-pattern/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/09/14/machine-learning-introduction/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/09/22/ml-model-and-cost-function/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/09/27/machine-learning-parameter-learning/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/10/01/machine-learning-matrices-and-vectors/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/10/03/machine-learning-2-1-multiple-features/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/10/09/machine-learning-2-2-normal-equation/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/10/18/machine-learning-2-3-exercise/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/04/02/latex-on-windows-step-by-step-installation/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/05/01/transportation-in-europe/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/05/14/machine-learning-1-3-classification-and-representation/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/05/15/machine-learning-title-block/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/06/14/gecko-dom-logging-system/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/07/11/java-for-beginner-1-introduction-to-java-from-a-net-guy/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/07/12/java-for-beginner-2-hello-world-in-java/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/07/14/java-for-beginner-3-java-from-c-cheats-sheet/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2019/10/19/refactoring-clones-type-2/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2023/06/24/XAML-for-beginner-Part-1/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2023/09/04/The-problem-with-Select-All-option/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2020/11/23/disk-cleanup-to-free-disk-space/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/about/cancel</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/about/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/about/thankyou</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/azure/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/categories/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/computer-tips/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/csharp/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1048,7 +616,16 @@
   <url>
     <loc>https://huntertran.ca/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2013/09/02/windows-phone-7-chooser/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1057,7 +634,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1066,7 +643,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/07/wp-sl-khac-nhau-resource-content/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1075,7 +652,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/12/windows-phone-silverlight-uniform-to-fill-centered/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1084,7 +661,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/14/windows-phone-windows-phone-power-tools-the-best-way-to-work-with-isolated-storage/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1093,7 +670,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/18/windows-phone-input-scope/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1102,7 +679,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1111,7 +688,7 @@
   <url>
     <loc>https://huntertran.ca/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1120,7 +697,7 @@
   <url>
     <loc>https://huntertran.ca/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1129,7 +706,7 @@
   <url>
     <loc>https://huntertran.ca/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1138,7 +715,7 @@
   <url>
     <loc>https://huntertran.ca/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1147,7 +724,7 @@
   <url>
     <loc>https://huntertran.ca/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1156,7 +733,7 @@
   <url>
     <loc>https://huntertran.ca/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1165,7 +742,7 @@
   <url>
     <loc>https://huntertran.ca/2013/11/11/visual-studio-nuget-the-magician/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1174,7 +751,7 @@
   <url>
     <loc>https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1183,7 +760,7 @@
   <url>
     <loc>https://huntertran.ca/2013/12/14/beginning-with-imagine-cup-2014/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1192,7 +769,7 @@
   <url>
     <loc>https://huntertran.ca/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1201,7 +778,7 @@
   <url>
     <loc>https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1210,7 +787,7 @@
   <url>
     <loc>https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1219,7 +796,7 @@
   <url>
     <loc>https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1228,7 +805,7 @@
   <url>
     <loc>https://huntertran.ca/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1237,7 +814,7 @@
   <url>
     <loc>https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1246,7 +823,394 @@
   <url>
     <loc>https://huntertran.ca/2014/06/27/not-so-basic-solve-your-problems/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/07/14/how-to-make-yourself-work-when-you-just-dont-want-to/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/10/10/windows-phone-when-the-design-pallet-not-working/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/10/20/upgrade-your-apps-to-windows-8-1-tips-and-tricks/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/11/14/fix-your-glitch-bluetooth-mouse/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/11/17/xaml-styler-bug-and-fixes/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/12/30/2014-in-review/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/23/uwp-get-all-the-latest-sample-code-at-ease/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/10/26/uwp-create-image-assets-for-your-apps/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/19/notice-tach-blog/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2015/12/30/2015-in-review/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/06/asp-net-core-my-road-trip-to-asp-net-core-getting-started/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/11/c-string-performance-tips-and-tricks/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2016/07/12/asp-net-core-my-road-trip-to-asp-net-core-building-first-api/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/01/17/asp-net-mvc-khac-phuc-loi-chu-tieng-viet-unicode-bi-encode-trong-view/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/02/07/asp-net-mvc-debug-route-config/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/20/asp-net-mo-rong-editorfor/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1255,7 +1219,52 @@
   <url>
     <loc>https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
     
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/14/ic03/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/01/31/ic04/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/2012/03/08/ic05/</loc>
+    
+    <lastmod>2023-09-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1264,7 +1273,7 @@
 
   <url>
     <loc>https://huntertran.ca/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1272,1582 +1281,1589 @@
   
   <url>
     <loc>https://huntertran.ca/tags/class/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Header-computing/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Separate-class/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Source/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Visual-Studio/</loc>
-    <lastmod>2023-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/tags/chooser/</loc>
-    <lastmod>2023-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/tags/windows-phone/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/msp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/tags/chooser/</loc>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/tags/windows-phone/</loc>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/account/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/dev-center/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/store/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/content/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/file/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/project/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/resource/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/centered-image/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/stretch/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/uniform/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/uniformtofill/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/isolated-storage/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/power-tools/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/input/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/input-scope/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/scope/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/textbox/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/deploy/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/no-device/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/emulator/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/keyboard-shotcuts/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Application-Life-cycle/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Imagine-Cup/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/MSP/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/richtextbox/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/textblock/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tip/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tips/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/trick/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tricks/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/data/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/loaded/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/onnavigatedto/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/nuget/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/auto/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/column/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/columndefinition/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/grid/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/stackpanel/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/star-size/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/brain/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/game/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/app/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/beginner/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/structure/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/windows-store/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/analytics/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/universal/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/source-control/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Team-foundation/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/problem/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/solve/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/retarget/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/upgrade/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/windows-8-1/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/extension/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/azure/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/virtual-machine/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/ftp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/proxy/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/dut-cap/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/chrome/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/firefox/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/web-browser/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/add-on/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/noscript/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/ublock/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/xaml/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tutorial/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/CSharp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/hero/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/indent/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/resharper/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/live-visual-tree/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/on-the-fly/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/property/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/performance/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/perftips/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/stopwatch/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/code/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/git/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/github/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/sample/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/sourcetree/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/uwa/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/uwp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/windows-10/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/assets/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/automatically/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/generate/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/images/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/logo/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/maker/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/advanced/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/bugs/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/exception/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/blog/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tach/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/online/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/slack/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/TFS/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/iap/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/in-app-purchase/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/monetization/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/hidden/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/search/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/windows/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/core/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/htmlhelper/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/placeholder/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/prompt/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/code-first/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/database-first/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/encode/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/loi/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/unicode/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/route/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/browsersync/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/css/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/html/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/live-reload/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/visual-studio-code/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/custom/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/editorfor/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/extend/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/mo-rong/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/ajax/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/editorformany/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/list/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/apache/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/container/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/docker/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/php/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/ubuntu/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/wordpress/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/identity/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/net-core/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/net-framework/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/label/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/tag-helper/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/error-message/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Computed-Property/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/LINQ/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Query/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/free/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/open-source/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/software/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/attack/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/cross-site/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/forgery/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/forgery-token/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/request/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/page/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/razor/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/mvc/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/framework/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/frontend/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/jquery/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/scss/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/architech/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/manager/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/package/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/ASP-NET/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/dependency-injection/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/repository/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/unit-of-work/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/cost-function/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/gradient-descent/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/hypothesis/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/matrice/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/matrix/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/vector/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/normal-equation/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/bus/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/europe/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/train/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/travel/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/DOM-API/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Log/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/DMCA/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/original/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/violation/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/java-for-beginner/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/hello-world/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/cheats-sheet/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/component/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/vue/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/vue-cli/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/vuejs/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/clone/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/refactor/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/compute-engine/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/google-cloud/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/putty/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/devops/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/vscode/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/python/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/nlp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/nltk/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/research/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/iso/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/coding/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/challenge/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/system-design/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/office/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/csharp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/bool/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/boolean/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/bitwise/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/optimize/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/XAML/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/Windows-Store-App/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/tags/ui/</loc>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/layout/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/listbox/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/template/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/database/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/entity-framework/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/tags/model/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -2856,182 +2872,189 @@
   
   <url>
     <loc>https://huntertran.ca/categories/Others/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Imagine-Cup/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CPlusPlus/</loc>
-    <lastmod>2023-07-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.ca/categories/CSharp/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/MSP/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/categories/CSharp/</loc>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Event/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/Windows-Phone/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/Windows-Store-App/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Life/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Computer-Tips/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Azure/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/Windows-10/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/uncategorized/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/Windows-Phone/Windows-Store-App/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/ASP-NET/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Design-Pattern/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Machine-Learning/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Java/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/research/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Coding-Challenges/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/system-design/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/Office/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/XAML/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.ca/categories/UI/</loc>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/CSharp/Windows-10/Windows-Store-App/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/VSCode/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huntertran.ca/categories/JavaScript-and-TypeScript/</loc>
-    <lastmod>2023-07-14</lastmod>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
