@@ -73,7 +73,7 @@ Cons:
 * Extra noise/pollution in the model class
 * May not be able to use the built-in interation to loop through items
 
-## Approach 2: Select All as an special option in the view
+## 4.2. Approach 2: Select All as an special option in the view
 
 Meaning that when render the view, you "inject" the `select all` option and it's logic
 
