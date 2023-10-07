@@ -84,6 +84,7 @@ creative_commons:
 menu:
   home: / || fa fa-home
   about: /about/ || fa fa-user
+  Power BI Reports: /power-bi-reports/ || fa fa-chart-simple
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
