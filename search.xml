@@ -358,7 +358,7 @@ using std::endl;</code></pre>
 <h1 id="2-Truy-xuat"><a href="#2-Truy-xuat" class="headerlink" title="2. Truy xuất"></a>2. Truy xuất</h1><p>Truy xuất tới các file resource và content khác nhau một tí</p>
 <h2 id="2-1-Hinh-anh-thuoc-tinh-Content"><a href="#2-1-Hinh-anh-thuoc-tinh-Content" class="headerlink" title="2.1. Hình ảnh thuộc tính Content"></a>2.1. Hình ảnh thuộc tính Content</h2><p>Content là một file nằm riêng biệt, nên truy xuất dễ dàng:</p>
 <p>XAML:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Image Stretch&#x3D;&quot;None&quot; Source&#x3D;&quot;&#x2F;images&#x2F;yourImage.png&quot;&#x2F;&gt;</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Image Stretch&#x3D;&quot;None&quot; Source&#x3D;&quot;&#x2F;images&#x2F;yourImage.png&quot;&#x2F;&gt;</code></pre>
 
 <p>C#:</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">Uri uri &#x3D; new Uri(&quot;&#x2F;images&#x2F;yourImage.png&quot;, UriKind.Relative);
@@ -366,7 +366,7 @@ BitmapImage imgSource &#x3D; new BitmapImage(uri);</code></pre>
 
 <h2 id="2-2-Hinh-anh-thuoc-tinh-Resource"><a href="#2-2-Hinh-anh-thuoc-tinh-Resource" class="headerlink" title="2.2. Hình ảnh thuộc tính Resource"></a>2.2. Hình ảnh thuộc tính Resource</h2><p>Resource, vì nằm trong một file dll, nên truy xuất nó khó khăn hơn nhiều</p>
 <p>XAML:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Image Source&#x3D;&quot;&#x2F;TestProjet;component&#x2F;images&#x2F;yourImage.png&quot;&#x2F;&gt;</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Image Source&#x3D;&quot;&#x2F;TestProjet;component&#x2F;images&#x2F;yourImage.png&quot;&#x2F;&gt;</code></pre>
 
 <p>C#:</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">Uri uri &#x3D; new Uri(&quot;&#x2F;TestProjet;component&#x2F;images&#x2F;yourImage.png&quot;, UriKind.Relative);
@@ -405,7 +405,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <li><strong>Uniform To Fill:</strong> Hình bị scale, giữ nguyên tỷ lệ và fill đầy control. Nếu control có tỷ lệ khác với Image, một phần góc trái và góc phải sẽ bị cắt mất</li>
 </ul>
 <h1 id="Giai-phap"><a href="#Giai-phap" class="headerlink" title="Giải pháp"></a>Giải pháp</h1><p>Thêm một Border bọc ngoài Image Control</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;border Width&#x3D;&quot;200&quot; Height&#x3D;&quot;200&quot;&gt; 
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;border Width&#x3D;&quot;200&quot; Height&#x3D;&quot;200&quot;&gt; 
   &lt;Image Source&#x3D;&quot;&#x2F;your_source&quot; Stretch&#x3D;&quot;UniformToFill&quot;&gt; 
 &lt;&#x2F;border&gt;</code></pre>
 
@@ -532,51 +532,6 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[Windows Phone 8] No Windows Phone 8 Device connected – Why and How to fix this?</title>
-    <url>/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</url>
-    <content><![CDATA[<p>Nhiều tính năng của Windows Phone đòi hỏi ta phải có 1 cái máy thiệt để test (NFC, Pinch Zoom). Hoặc là sau cùng, ta cũng cần 1 cái máy thiệt để xem ứng dụng hoạt động như thế nào.</p>
-<p>Cắm điện thoại vào cổng USB, chọn Device trong Visual Studio. Nhấn chạy. Nhưng:</p>
-<p><img src="http://www.f5debug.net/image.axd?picture=image_620.png" alt="bug"></p>
-<span id="more"></span>
-<ul>
-<li><a href="#1-nguy%C3%AAn-nh%C3%A2n">1. Nguyên nhân</a></li>
-<li><a href="#2-tri%E1%BB%87u-ch%E1%BB%A9ng">2. Triệu chứng</a></li>
-<li><a href="#3-kh%E1%BA%AFc-ph%E1%BB%A5c">3. Khắc phục</a></li>
-</ul>
-<p>Rõ ràng đã kết nối. Check lại trong Device Manager nào:</p>
-<p><img src="http://farm4.staticflickr.com/3711/9867408893_b658aee6fb_o.png" alt="lumia"></p>
-<p>Bình thường. Vậy nguyên nhân do đâu?</p>
-<h1 id="1-Nguyen-nhan"><a href="#1-Nguyen-nhan" class="headerlink" title="1. Nguyên nhân"></a>1. Nguyên nhân</h1><ol>
-<li><strong>Không đúng ngày giờ:</strong> Ngày giờ trên điện thoại của bạn khác xa so với ngày giờ trên máy tính</li>
-<li><strong>Chưa bật các kết nối:</strong> Thường xảy ra với máy chưa dev unlock. Khi Unlock, điện thoại phải bật các kết nối có sẵn (Wifi &#x2F; 3G hoặc cả hai) để nó yêu cầu unlock từ phía Microsoft. Nếu không bật các kết nối này, nó sẽ không kết nối được và tất nhiên là không unlock được.</li>
-<li><strong>Sử dụng Windows 8 trên các laptop hoặc Desktop hơi cổ:</strong> Các thể loại Laptop này dùng Intel Chipset 6 Series, hiện tại đang gặp vấn đề về tương thích với Windows 8 trở lên. Các chipset này điều khiển các kết nối USB. Máy hay bị lỗi nhất là các máy có cả cổng USB 3.0 Native và USB 2.0 cũ</li>
-<li><strong>Hư cáp USB:</strong> Cáp USB nếu bị đứt một thành phần nào đó bên trong thì thường dẫn tới kết nối im re không có hiện tượng gì xảy ra. Còn không, có thể cáp bị nhiễu tín hiệu</li>
-</ol>
-<h1 id="2-Trieu-chung"><a href="#2-Trieu-chung" class="headerlink" title="2. Triệu chứng"></a>2. Triệu chứng</h1><p>Mọi thứ đều bình thường. Bạn có thể thấy thư mục hình ảnh, nhạc, video trong điện thoại. Có thể đồng bộ hóa, copy thêm vào, nhưng tuyệt nhiên không thể deploy một file XAP lên được</p>
-<h1 id="3-Khac-phuc"><a href="#3-Khac-phuc" class="headerlink" title="3. Khắc phục"></a>3. Khắc phục</h1><ol>
-<li>Cài đặt lại đúng ngày giờ cho trùng với trên máy tính. Máy tính bạn nên bật chức năng tự động cập nhật thời gian để có thời gian chính xác</li>
-<li>Mở các kết nối</li>
-<li>Disable&#x2F;Enable các driver bị lỗi của Intel Chipset 6. Nó sẽ hoạt động bình thường trở lại.</li>
-</ol>
-<p>Sau khi thực hiện các bước trên. Bạn tiếp tục vào Device Manager, uninstall các driver liên quan tới điện thoại của mình (Portable Devices và Unversal Serial Bus devices). Mục đích của bước này là xóa các Registry Key bị lỗi. Nếu không, máy bạn sẽ không bao giờ Deploy được, cho dù có thử như thế nào đi nữa, vì nó sẽ không ghi đè các Registry Key</p>
-<ol>
-<li>Tiếp tục chuyển sang một cổng USB 2.0 (phòng ngừa tình trạng tính năng Legacy trên USB 3.0 không hoạt động)</li>
-<li>Cắm điện thoại vào và chờ nó cài đặt driver</li>
-<li>Thử lại vận may của bạn</li>
-</ol>
-<p>Tôi đã thử, và thành công. Còn bạn?</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows Phone</category>
-      </categories>
-      <tags>
-        <tag>windows phone</tag>
-        <tag>deploy</tag>
-        <tag>no device</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Windows Phone] Simulate the hard key on Emulator</title>
     <url>/2013/09/26/windows-phone-simulate-the-hard-key-on-emulator/</url>
     <content><![CDATA[<p>Windows Phone SDK đi kèm với một chiếc máy ảo tiện lợi: Windows Phone Emulator.</p>
@@ -654,7 +609,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <td>Dùng bàn phím máy tính thay cho bàn phím ảo</td>
 </tr>
 </tbody></table>
-<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=MprFcKyrTAA&amp;w=448&amp;h=252&amp;hd=1%5C%5D">http://www.youtube.com/watch?v=MprFcKyrTAA&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
+<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=MprFcKyrTAA&w=448&h=252&hd=1%5C%5D">http://www.youtube.com/watch?v=MprFcKyrTAA&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
 ]]></content>
       <categories>
         <category>CSharp</category>
@@ -667,16 +622,61 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[Windows Phone 8] No Windows Phone 8 Device connected – Why and How to fix this?</title>
+    <url>/2013/09/22/windows-phone-8-no-windows-phone-8-device-connected-why-and-how-to-fix-this/</url>
+    <content><![CDATA[<p>Nhiều tính năng của Windows Phone đòi hỏi ta phải có 1 cái máy thiệt để test (NFC, Pinch Zoom). Hoặc là sau cùng, ta cũng cần 1 cái máy thiệt để xem ứng dụng hoạt động như thế nào.</p>
+<p>Cắm điện thoại vào cổng USB, chọn Device trong Visual Studio. Nhấn chạy. Nhưng:</p>
+<p><img src="http://www.f5debug.net/image.axd?picture=image_620.png" alt="bug"></p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-nguy%C3%AAn-nh%C3%A2n">1. Nguyên nhân</a></li>
+<li><a href="#2-tri%E1%BB%87u-ch%E1%BB%A9ng">2. Triệu chứng</a></li>
+<li><a href="#3-kh%E1%BA%AFc-ph%E1%BB%A5c">3. Khắc phục</a></li>
+</ul>
+<p>Rõ ràng đã kết nối. Check lại trong Device Manager nào:</p>
+<p><img src="http://farm4.staticflickr.com/3711/9867408893_b658aee6fb_o.png" alt="lumia"></p>
+<p>Bình thường. Vậy nguyên nhân do đâu?</p>
+<h1 id="1-Nguyen-nhan"><a href="#1-Nguyen-nhan" class="headerlink" title="1. Nguyên nhân"></a>1. Nguyên nhân</h1><ol>
+<li><strong>Không đúng ngày giờ:</strong> Ngày giờ trên điện thoại của bạn khác xa so với ngày giờ trên máy tính</li>
+<li><strong>Chưa bật các kết nối:</strong> Thường xảy ra với máy chưa dev unlock. Khi Unlock, điện thoại phải bật các kết nối có sẵn (Wifi &#x2F; 3G hoặc cả hai) để nó yêu cầu unlock từ phía Microsoft. Nếu không bật các kết nối này, nó sẽ không kết nối được và tất nhiên là không unlock được.</li>
+<li><strong>Sử dụng Windows 8 trên các laptop hoặc Desktop hơi cổ:</strong> Các thể loại Laptop này dùng Intel Chipset 6 Series, hiện tại đang gặp vấn đề về tương thích với Windows 8 trở lên. Các chipset này điều khiển các kết nối USB. Máy hay bị lỗi nhất là các máy có cả cổng USB 3.0 Native và USB 2.0 cũ</li>
+<li><strong>Hư cáp USB:</strong> Cáp USB nếu bị đứt một thành phần nào đó bên trong thì thường dẫn tới kết nối im re không có hiện tượng gì xảy ra. Còn không, có thể cáp bị nhiễu tín hiệu</li>
+</ol>
+<h1 id="2-Trieu-chung"><a href="#2-Trieu-chung" class="headerlink" title="2. Triệu chứng"></a>2. Triệu chứng</h1><p>Mọi thứ đều bình thường. Bạn có thể thấy thư mục hình ảnh, nhạc, video trong điện thoại. Có thể đồng bộ hóa, copy thêm vào, nhưng tuyệt nhiên không thể deploy một file XAP lên được</p>
+<h1 id="3-Khac-phuc"><a href="#3-Khac-phuc" class="headerlink" title="3. Khắc phục"></a>3. Khắc phục</h1><ol>
+<li>Cài đặt lại đúng ngày giờ cho trùng với trên máy tính. Máy tính bạn nên bật chức năng tự động cập nhật thời gian để có thời gian chính xác</li>
+<li>Mở các kết nối</li>
+<li>Disable&#x2F;Enable các driver bị lỗi của Intel Chipset 6. Nó sẽ hoạt động bình thường trở lại.</li>
+</ol>
+<p>Sau khi thực hiện các bước trên. Bạn tiếp tục vào Device Manager, uninstall các driver liên quan tới điện thoại của mình (Portable Devices và Unversal Serial Bus devices). Mục đích của bước này là xóa các Registry Key bị lỗi. Nếu không, máy bạn sẽ không bao giờ Deploy được, cho dù có thử như thế nào đi nữa, vì nó sẽ không ghi đè các Registry Key</p>
+<ol>
+<li>Tiếp tục chuyển sang một cổng USB 2.0 (phòng ngừa tình trạng tính năng Legacy trên USB 3.0 không hoạt động)</li>
+<li>Cắm điện thoại vào và chờ nó cài đặt driver</li>
+<li>Thử lại vận may của bạn</li>
+</ol>
+<p>Tôi đã thử, và thành công. Còn bạn?</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows Phone</category>
+      </categories>
+      <tags>
+        <tag>windows phone</tag>
+        <tag>deploy</tag>
+        <tag>no device</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Event][03-10-2013] Seminar Imagine Cup 2014, Microsoft Student Partner, Application Life-Cycle Management at UIT</title>
     <url>/2013/10/03/event03-10-2013-seminar-imagine-cup-2014-microsoft-student-partner-application-life-cycle-management-at-uit/</url>
     <content><![CDATA[<p>Sáng nay, tại phòng A106, trường Đại học Công nghệ thông tin – Đại học Quốc gia Tp.HCM đã diễn ra buổi Seminar đầy tính cởi mở và thân mật giữa các Developer Evengelist của Microsoft Việt Nam và sinh viên của trường</p>
 <span id="more"></span>
 <h1 id="1-Mo-dau"><a href="#1-Mo-dau" class="headerlink" title="1. Mở đầu"></a>1. Mở đầu</h1><p>Bắt đầu sự kiện, ITIClub đã cho các bạn xem một số đoạn Video đầy thú vị về Microsoft và chương trình MSP, cũng như cuộc thi Imagine Cup các năm</p>
 <p>Chương trình Microsoft Student Partner</p>
-<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=fYhn7-vWbuI&amp;w=448&amp;h=252&amp;hd=1%5C%5D">http://www.youtube.com/watch?v=fYhn7-vWbuI&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
+<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=fYhn7-vWbuI&w=448&h=252&hd=1%5C%5D">http://www.youtube.com/watch?v=fYhn7-vWbuI&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
 <p>Chương trình Microsoft Student Partner toàn cầu</p>
 <p>Cuộc thi Imagine Cup 2012 – Úc</p>
-<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=PHGReiaTdbA&amp;w=448&amp;h=252&amp;hd=1%5C%5D">http://www.youtube.com/watch?v=PHGReiaTdbA&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
+<p>[youtube&#x3D;<a href="http://www.youtube.com/watch?v=PHGReiaTdbA&w=448&h=252&hd=1%5C%5D">http://www.youtube.com/watch?v=PHGReiaTdbA&amp;w=448&amp;h=252&amp;hd=1\]</a></p>
 <p>Imagine Cup 2012 Kick off</p>
 <p>Cuộc thi Imagine Cup 2013 – Nga</p>
 <p>Vì giới hạn của Wordpress, bạn vui lòng bấm vào link sau để xem: <a href="http://www.youtube.com/watch?v=-WEwQsTbxC0">Imagine Cup 2013 - Kick off Video</a></p>
@@ -804,7 +804,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <h1 id="2-Selectable-TextBlock"><a href="#2-Selectable-TextBlock" class="headerlink" title="2. Selectable TextBlock"></a>2. Selectable TextBlock</h1><p>Textblock, dĩ nhiên là không select được rồi.</p>
 <p>Vậy ta sẽ chỉnh một chút cho TextBox giống với TextBlock, để lợi dụng tính “Selectable” của nó</p>
 <p>add code sau vào resource</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Style x:Key&#x3D;&quot;TextBoxStyle1&quot; TargetType&#x3D;&quot;TextBox&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Style x:Key&#x3D;&quot;TextBoxStyle1&quot; TargetType&#x3D;&quot;TextBox&quot;&gt;
     &lt;Setter Property&#x3D;&quot;Background&quot; Value&#x3D;&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; &#x2F;&gt;
     &lt;Setter Property&#x3D;&quot;Foreground&quot; Value&#x3D;&quot;&#123;StaticResource PhoneForegroundBrush&#125;&quot; &#x2F;&gt;
     &lt;Setter Property&#x3D;&quot;BorderBrush&quot; Value&#x3D;&quot;&#123;StaticResource PhoneBackgroundBrush&#125;&quot; &#x2F;&gt;
@@ -885,7 +885,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 &lt;&#x2F;Style&gt;</code></pre>
 
 <p>Khi dùng, chỉ cần</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;TextBox x:Name&#x3D;&quot;testTextBox&quot;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;TextBox x:Name&#x3D;&quot;testTextBox&quot;
          IsReadOnly&#x3D;&quot;True&quot;
          Style&#x3D;&quot;&#123;StaticResource TextBoxStyle1&#125;&quot;
          Text&#x3D;&quot;Hello world&quot;
@@ -1603,7 +1603,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
 <p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
 <p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Install-Package GoogleAnalyticsSDK</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Install-Package GoogleAnalyticsSDK</code></pre>
 
 <p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
 <p>Chờ một chút cho nó chạy</p>
@@ -2307,9 +2307,9 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>string:              4.80x as fast     258.5ms +&#x2F;- 14.7%    53.8ms +&#x2F;- 10.1%     significant base64:            5.52x as fast      16.0ms +&#x2F;- 22.6%     2.9ms +&#x2F;- 47.1%     significant fasta:             4.59x as fast      36.7ms +&#x2F;- 29.8%     8.0ms +&#x2F;- 12.6%     significant tagcloud:          4.97x as fast      97.0ms +&#x2F;- 21.9%    19.5ms +&#x2F;- 5.8%      significant unpack-code:       4.55x as fast      76.0ms +&#x2F;- 15.1%    16.7ms +&#x2F;- 7.8%      significant validate-input:    4.90x as fast      32.8ms +&#x2F;- 40.9%     6.7ms +&#x2F;- 13.4%     significant</p>
 <p>HTML  Test:</p>
 <p>For HTML5, I don’t have any reliable test. I use PeaceKeeper</p>
-<p>IE: <a href="http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056">http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056</a> - 1992</p>
-<p>Chrome: <a href="http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119">http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119</a> - 1490</p>
-<p>Firefox: <a href="http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118">http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118</a> - 850</p>
+<p>IE: <a href="http://peacekeeper.futuremark.com/results?key=AHJR&resultId=5664056">http://peacekeeper.futuremark.com/results?key=AHJR&amp;resultId=5664056</a> - 1992</p>
+<p>Chrome: <a href="http://peacekeeper.futuremark.com/results?key=AHJp&resultId=5664119">http://peacekeeper.futuremark.com/results?key=AHJp&amp;resultId=5664119</a> - 1490</p>
+<p>Firefox: <a href="http://peacekeeper.futuremark.com/results?key=AHJq&resultId=5664118">http://peacekeeper.futuremark.com/results?key=AHJq&amp;resultId=5664118</a> - 850</p>
 <p>CSS3 Test</p>
 <p>For CSS3: I use <a href="http://css3test.com/">http://css3test.com/</a></p>
 <p>IE: 50%, “Determined by passing <strong>614</strong> tests out of <strong>1416</strong> total for <strong>293</strong> features”</p>
@@ -2352,7 +2352,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p> <strong>Vishesh Oberoi:</strong> Vishesh has been a key player in making the MSA program a success. Equipped with his experience and strong technical knowledge in Azure, he organized and executed many of the MSP run workshops during the program. The workshops were very well received and the students found them very useful. Great work Vishesh!</p>
 <h2 id="・Thailand"><a href="#・Thailand" class="headerlink" title="・Thailand"></a>・Thailand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg"> </p>
 <p> <strong>Supatporn Posoknistakul:</strong> Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.</p>
-<h1 id="3-Highlights-amp-Upcoming-Events"><a href="#3-Highlights-amp-Upcoming-Events" class="headerlink" title="3. Highlights &amp; Upcoming Events"></a>3. Highlights &amp; Upcoming Events</h1><h2 id="Japan"><a href="#Japan" class="headerlink" title="Japan"></a>Japan</h2><h3 id="・Regular-Meeting-and-Presentation-Workshop"><a href="#・Regular-Meeting-and-Presentation-Workshop" class="headerlink" title="・Regular Meeting and Presentation Workshop"></a>・Regular Meeting and Presentation Workshop</h3><p>Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: “I’d like to appeal about…” After the presentation, they were able to receive feedback on how to be more effective in their presentation.</p>
+<h1 id="3-Highlights-Upcoming-Events"><a href="#3-Highlights-Upcoming-Events" class="headerlink" title="3. Highlights &amp; Upcoming Events"></a>3. Highlights &amp; Upcoming Events</h1><h2 id="Japan"><a href="#Japan" class="headerlink" title="Japan"></a>Japan</h2><h3 id="・Regular-Meeting-and-Presentation-Workshop"><a href="#・Regular-Meeting-and-Presentation-Workshop" class="headerlink" title="・Regular Meeting and Presentation Workshop"></a>・Regular Meeting and Presentation Workshop</h3><p>Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: “I’d like to appeal about…” After the presentation, they were able to receive feedback on how to be more effective in their presentation.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg"></p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg"> </p>
 <h3 id="・Imagine-Cup-2015-Kick-off"><a href="#・Imagine-Cup-2015-Kick-off" class="headerlink" title="・Imagine Cup 2015 Kick-off"></a>・Imagine Cup 2015 Kick-off</h3><p> On Jan 18th, 2015, we introduced Imagine Cup to approximately 30 students as part of our Top Gun project. The aim was to motivate them create great apps and to challenge the world competition.</p>
@@ -2369,7 +2369,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia14.jpg"></p>
 <h2 id="Thailand"><a href="#Thailand" class="headerlink" title="Thailand"></a>Thailand</h2><h3 id="・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn"><a href="#・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn" class="headerlink" title="・Audience with H.R.H Princess Maha Chakri Sirindhorn"></a>・Audience with H.R.H Princess Maha Chakri Sirindhorn</h3><p> Representative of MSP Thailand team had an audience with H.R.H Princess Maha Chakri Sirindhorn of Thailand to show applications on Windows Platform to students who joined the workshop at Chitralada Vocational School. The workshop at Chitralada Vocational School is a part of project that MSP in Thailand focusing on development of high school students to improve their computer science skills for a career in the future.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia15.jpg"></p>
-<h3 id="・Microsoft-Technology-Roadshow-and-Dream-Spark-x2F-Office365-Workshop"><a href="#・Microsoft-Technology-Roadshow-and-Dream-Spark-x2F-Office365-Workshop" class="headerlink" title="・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop"></a>・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop</h3><p> MSP Thailand team from Chulalongkorn University, Mahidol University and King Mongkut’s Institute of Technology Ladkrabang teamed-up to organize Microsoft Technology Roadshow and DreamSpark&#x2F;Office365 workshop at their universities to update and educate students and lecturers about Microsoft Technology, DreamSpark Premium and Office 365 for Education. These group of events drew more than 500 students.</p>
+<h3 id="・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop"><a href="#・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop" class="headerlink" title="・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop"></a>・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop</h3><p> MSP Thailand team from Chulalongkorn University, Mahidol University and King Mongkut’s Institute of Technology Ladkrabang teamed-up to organize Microsoft Technology Roadshow and DreamSpark&#x2F;Office365 workshop at their universities to update and educate students and lecturers about Microsoft Technology, DreamSpark Premium and Office 365 for Education. These group of events drew more than 500 students.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia16.jpg"></p>
 <h3 id="・ImagineCup-2015-BootCamp-in-Thailand"><a href="#・ImagineCup-2015-BootCamp-in-Thailand" class="headerlink" title="・ImagineCup 2015 BootCamp in Thailand"></a>・ImagineCup 2015 BootCamp in Thailand</h3><p> On 10 Jan 2015, Microsoft Thailand held the ImagineCup Thailand 2015 BootCamp for students who are interested in joining the ImagineCup competition this year. The objective of the event was to promote and explain about ImagineCup’s local round and global round information. Aside from that, students were also given the chance to discuss with international organizations like USAID (United States Agency for International Development) to find the stories or inspiration for their project.</p>
 <p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia17.jpg"></p>
@@ -2393,7 +2393,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#104;&#x75;&#110;&#46;&#79;&#x6b;&#x75;&#x62;&#x6f;&#x40;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#116;&#x70;&#97;&#x72;&#x74;&#110;&#x65;&#x72;&#x2e;&#x63;&#111;&#x6d;">&#x53;&#104;&#x75;&#110;&#46;&#79;&#x6b;&#x75;&#x62;&#x6f;&#x40;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#116;&#x70;&#97;&#x72;&#x74;&#110;&#x65;&#x72;&#x2e;&#x63;&#111;&#x6d;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#104;&#x75;&#110;&#x2e;&#x4f;&#x6b;&#x75;&#98;&#111;&#x40;&#115;&#116;&#x75;&#x64;&#101;&#x6e;&#116;&#112;&#97;&#x72;&#x74;&#x6e;&#x65;&#x72;&#46;&#99;&#111;&#109;">&#x53;&#104;&#x75;&#110;&#x2e;&#x4f;&#x6b;&#x75;&#98;&#111;&#x40;&#115;&#116;&#x75;&#x64;&#101;&#x6e;&#116;&#112;&#97;&#x72;&#x74;&#x6e;&#x65;&#x72;&#46;&#99;&#111;&#109;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2447,7 +2447,7 @@ this.Image.Source &#x3D; new BitmapImage(uri);</code></pre>
 <p><img src="https://farm8.staticflickr.com/7706/17484960575_5d4f494465_o.png"></p>
 <p>Putty nhớ để port là 22 để đăng nhập vô nhé</p>
 <p>Sau khi đăng nhập xong, lần lượt gõ các dòng lệnh sau</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt-get install squid
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sudo apt-get install squid
 
 cd &#x2F;etc&#x2F;squid
 
@@ -2461,7 +2461,7 @@ sudo vim squid.conf</code></pre>
 
 <p>sau đó gõ “a” &gt; Enter để edit file này</p>
 <p>gõ</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">http_access allow all
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">http_access allow all
 
 http_port [port bạn đã tạo ở trên]
 
@@ -2470,7 +2470,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <p>sau đó gõ ESC để way zề command line</p>
 <p>gõ “:wq” để save và thoát</p>
 <p>Xong rồi restart squid service:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo service squid3 restart</code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sudo service squid3 restart</code></pre>
 
 <p>Restart xong, bạn sẽ thấy process của squid</p>
 <p>Vậy là xong, Proxy của bạn đã chạy, test bằng cách mở firefox và thiết lập proxy rồi kết nối thử tới google nha</p>
@@ -2510,7 +2510,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
 <p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
 <p>Code của cái trên rất đơn giản:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;SplitView&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;SplitView&gt;
     &lt;SplitView.Pane&gt;
         &lt;Grid&gt;
             &lt;Grid.RowDefinitions&gt;
@@ -2526,7 +2526,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 
 <h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
 <p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Button x:Name&#x3D;&quot;HamburgerButton&quot; FontFamily&#x3D;&quot;Segoe MDL2 Assets&quot; Content&#x3D;&quot;&quot; &#x2F;&gt;</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Button x:Name&#x3D;&quot;HamburgerButton&quot; FontFamily&#x3D;&quot;Segoe MDL2 Assets&quot; Content&#x3D;&quot;&quot; &#x2F;&gt;</code></pre>
 
 <p>Mục Content sẽ là đoạn code trong bảng mã sau: <a href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
 <p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
@@ -2867,7 +2867,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 
 
 <p>Vậy là xong, bạn có thể sử dụng nó ngay</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Page x:Class&#x3D;&quot;IsVisibleSample.MainPage&quot;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Page x:Class&#x3D;&quot;IsVisibleSample.MainPage&quot;
       xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&#x2F;presentation&quot;
       xmlns:x&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&quot;
       xmlns:d&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;expression&#x2F;blend&#x2F;2008&quot;
@@ -2883,7 +2883,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 
 
 <p>Hoặc dùng Binding với nó</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;CheckBox x:Name&#x3D;&quot;MyCheckBox&quot;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;CheckBox x:Name&#x3D;&quot;MyCheckBox&quot;
           IsChecked&#x3D;&quot;True&quot;
           Content&#x3D;&quot;show rectangle&quot;&#x2F;&gt;
 &lt;Rectangle Height&#x3D;&quot;100&quot;
@@ -2894,7 +2894,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 
 
 <p>Hoặc dùng nó như một Binding Source</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;CheckBox IsChecked&#x3D;&quot;&#123;Binding (ext:Extension.IsVisible),ElementName&#x3D;Rectangle&#125;&quot;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;CheckBox IsChecked&#x3D;&quot;&#123;Binding (ext:Extension.IsVisible),ElementName&#x3D;Rectangle&#125;&quot;
           IsEnabled&#x3D;&quot;False&quot;
           Content&#x3D;&quot;rectangle is visible?&quot;&#x2F;&gt;</code></pre>
 
@@ -3476,7 +3476,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#117;&#100;&#x79;&#46;&#110;&#103;&#x6f;&#99;&#x74;&#x69;&#x65;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x73;&#x74;&#117;&#100;&#x79;&#46;&#110;&#103;&#x6f;&#99;&#x74;&#x69;&#x65;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#117;&#x64;&#x79;&#x2e;&#x6e;&#x67;&#111;&#x63;&#116;&#x69;&#x65;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#115;&#x74;&#117;&#x64;&#x79;&#x2e;&#x6e;&#x67;&#111;&#x63;&#116;&#x69;&#x65;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#x74;&#x75;&#100;&#x79;&#x2e;&#x6e;&#x67;&#x6f;&#99;&#116;&#105;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#115;&#x74;&#x75;&#100;&#x79;&#x2e;&#x6e;&#x67;&#x6f;&#99;&#116;&#105;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#x75;&#x64;&#121;&#x2e;&#x6e;&#x67;&#x6f;&#x63;&#116;&#x69;&#101;&#x6e;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#115;&#x74;&#x75;&#x64;&#121;&#x2e;&#x6e;&#x67;&#x6f;&#x63;&#116;&#x69;&#101;&#x6e;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3485,7 +3485,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#x74;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#x63;&#104;&#64;&#x6c;&#105;&#x76;&#x65;&#x2e;&#99;&#x6f;&#109;">&#107;&#x68;&#x6f;&#x61;&#x74;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#x63;&#104;&#64;&#x6c;&#105;&#x76;&#x65;&#x2e;&#99;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#99;&#104;&#x40;&#108;&#105;&#118;&#101;&#x2e;&#99;&#111;&#109;">&#107;&#x68;&#x6f;&#x61;&#116;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#99;&#104;&#x40;&#108;&#105;&#118;&#101;&#x2e;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#x68;&#x6f;&#x61;&#116;&#114;&#x75;&#x6f;&#110;&#103;&#98;&#97;&#99;&#104;&#x40;&#x6c;&#x69;&#x76;&#101;&#x2e;&#99;&#x6f;&#109;">&#x6b;&#x68;&#x6f;&#x61;&#116;&#114;&#x75;&#x6f;&#110;&#103;&#98;&#97;&#99;&#104;&#x40;&#x6c;&#x69;&#x76;&#101;&#x2e;&#99;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#x68;&#x6f;&#x61;&#116;&#114;&#117;&#x6f;&#110;&#103;&#98;&#97;&#x63;&#x68;&#x40;&#108;&#x69;&#x76;&#x65;&#46;&#x63;&#x6f;&#109;">&#107;&#x68;&#x6f;&#x61;&#116;&#114;&#117;&#x6f;&#110;&#103;&#98;&#97;&#x63;&#x68;&#x40;&#108;&#x69;&#x76;&#x65;&#46;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3664,7 +3664,7 @@ Extension.SetIsVisible(Rectangle,true);</code></pre>
 
 <p>StaticData là một class chứa các biến Static, có thể truy cập ở mọi class khác Ngay sau khi chạy đoạn code này, Visual Studio sẽ tạo ra 1 file XML giả ở C:UsersAppDataLocalPackagesLocalStateMicrosoftWindows StoreApiDataWindowsStoreProxy.xml</p>
 <p>Bạn mở nó lên, và sửa các giá trị sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;App&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;App&gt;
  &lt;IsActive&gt;true&lt;&#x2F;IsActive&gt;
  &lt;IsTrial&gt;false&lt;&#x2F;IsTrial&gt;
 &lt;&#x2F;App&gt;</code></pre>
@@ -3774,7 +3774,7 @@ else
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#x63;&#x73;&#x39;&#x30;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#x61;&#120;&#x63;&#x73;&#x39;&#x30;&#64;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#x78;&#x63;&#x73;&#57;&#48;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#x78;&#x63;&#x73;&#57;&#48;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3845,81 +3845,6 @@ else
       </categories>
       <tags>
         <tag>core</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C# string performance – Tips and Tricks</title>
-    <url>/2016/07/11/c-string-performance-tips-and-tricks/</url>
-    <content><![CDATA[<p>Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương trình viết bằng C#. Chỉ cần search một phát, sẽ ra hàng tá kết quả khác nhau, với các lời khuyên khác nhau, đi kèm với các đoạn code bench mark khác nhau, vô cùng rối ren khiến ta bối rối.</p>
-<span id="more"></span>
-
-<ul>
-<li><a href="#t%E1%BA%A1i-sao-v%E1%BA%ADy">Tại sao vậy?</a></li>
-<li><a href="#c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81">Các vấn đề</a><ul>
-<li><a href="#sai-l%E1%BA%A7m-1-c%E1%BB%99ng-chu%E1%BB%97i">Sai lầm 1: Cộng chuỗi</a></li>
-<li><a href="#sai-l%E1%BA%A7m-2-check-null--so-s%C3%A1nh-chu%E1%BB%97i-r%E1%BB%97ng">Sai lầm 2: check null – so sánh chuỗi rỗng</a></li>
-</ul>
-</li>
-<li><a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
-</ul>
-<h1 id="1-Tai-sao-vay"><a href="#1-Tai-sao-vay" class="headerlink" title="1. Tại sao vậy?"></a>1. Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
-<p>Tuy nhiên, nói chung lại thì có một số vấn đề “trường tồn cùng thời gian” mà bạn có thể sẽ bắt gặp khi code một ứng dụng C#</p>
-<p>Bài viết này tập trung chủ yếu vào C# 6.0 đang được sử dụng cho các ứng dụng UWP của Windows 10</p>
-<p>Project tham khảo có trong bài viết: <a href="https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance">https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance</a></p>
-<h1 id="2-Cac-van-de"><a href="#2-Cac-van-de" class="headerlink" title="2. Các vấn đề"></a>2. Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
-<h2 id="2-1-Sai-lam-1-Cong-chuoi"><a href="#2-1-Sai-lam-1-Cong-chuoi" class="headerlink" title="2.1. Sai lầm 1: Cộng chuỗi"></a>2.1. Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
-msg +&#x3D; &quot;Tuan Tran&quot;;
-msg +&#x3D; &quot;. Today is &quot;;
-msg +&#x3D; System.DateTime.Now.ToString();</code></pre>
-
-<p>Đoạn code trên quá bình thường, bình thường như cân đường hộp sữa. Tuy nhiên, đây sẽ là những gì mà compiler nhìn thấy</p>
-<pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
-
-string tmp1 &#x3D; new String( msg + &quot;Tuan Tran&quot; );
-
-string msg &#x3D; tmp1; &#x2F;&#x2F; &quot;Hello &quot; is garbage.
-
-string tmp2 &#x3D; new String( msg + &quot;. Today is &quot; );
-
-msg &#x3D; tmp2; &#x2F;&#x2F; &quot;Hello Tuan Tran&quot; is garbage.
-
-string tmp3 &#x3D; new String( msg + DateTime.Now.ToString( ) );
-
-msg &#x3D; tmp3; &#x2F;&#x2F; &quot;Hello Tuan Tran. Today is &quot; is garbage.</code></pre>
-
-<h3 id="2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format"></a>2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
-<pre class="line-numbers language-none"><code class="language-none">StringBuilder s &#x3D; new StringBuilder();
-s.Append(&quot;Tuan Tran&quot;); s.Append(&quot; Today is &quot;);
-blah blah blah</code></pre>
-
-<p>Tuy nhiên, đối với C# 6.0 như đã đề cập bên trên, compiler của nó đủ thông minh để compile ra một đoạn native code hiệu quả nhất.</p>
-<p>Như vậy, nói tóm lại, bạn có thể sử dụng <code>string.Concat</code> để cộng các chuỗi đơn giản, <code>StringBuilder</code> để xây dựng các chuỗi bự hơn, và <code>string.Format</code> khi bạn muốn cộng các chuỗi từ các kiểu dữ liệu khác, hoặc muốn format nó theo một kiểu nào đó.</p>
-<h2 id="2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="2.2. Sai lầm 2: check null – so sánh chuỗi rỗng"></a>2.2. Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
-<pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
-
-if(s &#x3D;&#x3D; null || s &#x3D;&#x3D; &quot;&quot;)
-&#123;
-    &#x2F;&#x2F;do something here; 
-&#125;</code></pre>
-
-<p>Có một cách khác hiện đại hơn</p>
-<pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
-
-if(string.IsNullOrEmpty(s))
-&#123;
-    &#x2F;&#x2F;do something here;
-&#125;</code></pre>
-
-<p>Và nếu bạn muốn so sánh 2 chuỗi với nhau, hãy sử dụng string.Equal</p>
-<h2 id="2-3-Ket-luan"><a href="#2-3-Ket-luan" class="headerlink" title="2.3. Kết luận"></a>2.3. Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
-<p>Sau đây mà tài liệu MSDN về string:</p>
-<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2">https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2</a></p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-      </categories>
-      <tags>
-        <tag>performance</tag>
       </tags>
   </entry>
   <entry>
@@ -4215,6 +4140,81 @@ public void Delete(string id)
       </categories>
   </entry>
   <entry>
+    <title>C# string performance – Tips and Tricks</title>
+    <url>/2016/07/11/c-string-performance-tips-and-tricks/</url>
+    <content><![CDATA[<p>Sau nhiều năm phát triển, C# trở thành một managed code vô cùng phổ biến và dễ sử dụng. Ai ai cũng có thể học C#, và điều này làm nảy sinh ra nhiều thói quen tai hại ảnh hưởng tới hiệu suất của chương trình viết bằng C#. Chỉ cần search một phát, sẽ ra hàng tá kết quả khác nhau, với các lời khuyên khác nhau, đi kèm với các đoạn code bench mark khác nhau, vô cùng rối ren khiến ta bối rối.</p>
+<span id="more"></span>
+
+<ul>
+<li><a href="#t%E1%BA%A1i-sao-v%E1%BA%ADy">Tại sao vậy?</a></li>
+<li><a href="#c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81">Các vấn đề</a><ul>
+<li><a href="#sai-l%E1%BA%A7m-1-c%E1%BB%99ng-chu%E1%BB%97i">Sai lầm 1: Cộng chuỗi</a></li>
+<li><a href="#sai-l%E1%BA%A7m-2-check-null--so-s%C3%A1nh-chu%E1%BB%97i-r%E1%BB%97ng">Sai lầm 2: check null – so sánh chuỗi rỗng</a></li>
+</ul>
+</li>
+<li><a href="#k%E1%BA%BFt-lu%E1%BA%ADn">Kết luận</a></li>
+</ul>
+<h1 id="1-Tai-sao-vay"><a href="#1-Tai-sao-vay" class="headerlink" title="1. Tại sao vậy?"></a>1. Tại sao vậy?</h1><p>Rất đơn giản, là do các đoạn code bench mark này, mặc dù sử dụng cùng ngôn ngữ là C#, nhưng lại chạy trên các phiên bản .NET Framework khác nhau. Không cần đoán cũng biết rằng phiên bản càng về sau, compiler hoạt động càng hiệu quả, code bạn viết ra có hiệu suất càng cao. Thậm chí nó còn thông minh tới mức phát hiện ra các thói quen code xấu xí mà tự compile ra đoạn code hiệu quả nhất dùm bạn.</p>
+<p>Tuy nhiên, nói chung lại thì có một số vấn đề “trường tồn cùng thời gian” mà bạn có thể sẽ bắt gặp khi code một ứng dụng C#</p>
+<p>Bài viết này tập trung chủ yếu vào C# 6.0 đang được sử dụng cho các ứng dụng UWP của Windows 10</p>
+<p>Project tham khảo có trong bài viết: <a href="https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance">https://github.com/huntertran/00-Multi-Utilities/tree/master/09%20-%20Test%20Peformance/TestPerformance</a></p>
+<h1 id="2-Cac-van-de"><a href="#2-Cac-van-de" class="headerlink" title="2. Các vấn đề"></a>2. Các vấn đề</h1><p>String là một biến phức tạp của C#. Nếu như trong SQL, bạn khai báo varchar, nvarchar kèm theo một độ dài nhất định, thì trong C#, string có thể có độ dài cực lớn. Do đó, compiler sẽ rất là vất vả khi xử lý các biến string này.</p>
+<h2 id="2-1-Sai-lam-1-Cong-chuoi"><a href="#2-1-Sai-lam-1-Cong-chuoi" class="headerlink" title="2.1. Sai lầm 1: Cộng chuỗi"></a>2.1. Sai lầm 1: Cộng chuỗi</h2><pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
+msg +&#x3D; &quot;Tuan Tran&quot;;
+msg +&#x3D; &quot;. Today is &quot;;
+msg +&#x3D; System.DateTime.Now.ToString();</code></pre>
+
+<p>Đoạn code trên quá bình thường, bình thường như cân đường hộp sữa. Tuy nhiên, đây sẽ là những gì mà compiler nhìn thấy</p>
+<pre class="line-numbers language-none"><code class="language-none">string msg &#x3D; &quot;Hello, &quot;;
+
+string tmp1 &#x3D; new String( msg + &quot;Tuan Tran&quot; );
+
+string msg &#x3D; tmp1; &#x2F;&#x2F; &quot;Hello &quot; is garbage.
+
+string tmp2 &#x3D; new String( msg + &quot;. Today is &quot; );
+
+msg &#x3D; tmp2; &#x2F;&#x2F; &quot;Hello Tuan Tran&quot; is garbage.
+
+string tmp3 &#x3D; new String( msg + DateTime.Now.ToString( ) );
+
+msg &#x3D; tmp3; &#x2F;&#x2F; &quot;Hello Tuan Tran. Today is &quot; is garbage.</code></pre>
+
+<h3 id="2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format"><a href="#2-1-1-Giai-quyet-string-Concat-StringBuilder-va-string-Format" class="headerlink" title="2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format"></a>2.1.1. Giải quyết: string.Concat, StringBuilder và string.Format</h3><p>Về tổng quan, <code>StringBuilder</code> luôn là cái chạy nhay nhất.</p>
+<pre class="line-numbers language-none"><code class="language-none">StringBuilder s &#x3D; new StringBuilder();
+s.Append(&quot;Tuan Tran&quot;); s.Append(&quot; Today is &quot;);
+blah blah blah</code></pre>
+
+<p>Tuy nhiên, đối với C# 6.0 như đã đề cập bên trên, compiler của nó đủ thông minh để compile ra một đoạn native code hiệu quả nhất.</p>
+<p>Như vậy, nói tóm lại, bạn có thể sử dụng <code>string.Concat</code> để cộng các chuỗi đơn giản, <code>StringBuilder</code> để xây dựng các chuỗi bự hơn, và <code>string.Format</code> khi bạn muốn cộng các chuỗi từ các kiểu dữ liệu khác, hoặc muốn format nó theo một kiểu nào đó.</p>
+<h2 id="2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong"><a href="#2-2-Sai-lam-2-check-null-–-so-sanh-chuoi-rong" class="headerlink" title="2.2. Sai lầm 2: check null – so sánh chuỗi rỗng"></a>2.2. Sai lầm 2: check null – so sánh chuỗi rỗng</h2><p>Quá đơn giản phải Không?</p>
+<pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
+
+if(s &#x3D;&#x3D; null || s &#x3D;&#x3D; &quot;&quot;)
+&#123;
+    &#x2F;&#x2F;do something here; 
+&#125;</code></pre>
+
+<p>Có một cách khác hiện đại hơn</p>
+<pre class="line-numbers language-none"><code class="language-none">string s &#x3D; &quot;&quot;;
+
+if(string.IsNullOrEmpty(s))
+&#123;
+    &#x2F;&#x2F;do something here;
+&#125;</code></pre>
+
+<p>Và nếu bạn muốn so sánh 2 chuỗi với nhau, hãy sử dụng string.Equal</p>
+<h2 id="2-3-Ket-luan"><a href="#2-3-Ket-luan" class="headerlink" title="2.3. Kết luận"></a>2.3. Kết luận</h2><p>Hãy bỏ thời gian tìm hiểu các method được viết sẵn cho <code>string</code>, và sử dụng chúng trong các tình huống phù hợp. Microsof đã viết sẵn cho bạn, và họ cũng đã tối ưu hiệu suất cho các method đó, tại sao lại Không xài chúng chứ.</p>
+<p>Sau đây mà tài liệu MSDN về string:</p>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2">https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netcore-2.2</a></p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+      </categories>
+      <tags>
+        <tag>performance</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[ASP.NET Tips and Tricks] Using Prompt Attribute as Placeholder for MVC5</title>
     <url>/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</url>
     <content><![CDATA[<p>Khi bạn làm một cái form trong ASP.NET MVC5, chắc bạn sẽ dùng HtmlHelpers chứ nhỉ.</p>
@@ -4320,11 +4320,37 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#x75;&#x6f;&#x6e;&#x67;&#97;&#x6e;&#104;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x6c;&#x75;&#x6f;&#x6e;&#x67;&#97;&#x6e;&#104;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#x6c;&#117;&#111;&#110;&#103;&#97;&#110;&#x68;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x6c;&#117;&#111;&#110;&#103;&#97;&#110;&#x68;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#x6f;&#110;&#103;&#x61;&#x6e;&#x68;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#x75;&#x6f;&#110;&#103;&#x61;&#x6e;&#x68;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#x6c;&#x75;&#111;&#110;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x6c;&#x75;&#111;&#110;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
       </categories>
+  </entry>
+  <entry>
+    <title>[ASP.NET MVC] Debug Route Config</title>
+    <url>/2017/02/07/asp-net-mvc-debug-route-config/</url>
+    <content><![CDATA[<p>Route Map là một cái bảng. Khi bạn chạy một ứng dụng ASP.NET, cái bảng này sẽ được đem ra để so sánh với URL mà bạn gõ trên địa chỉ trình duyệt</p>
+<p>Vì nó duyệt theo kiểu bảng như vậy nên rất khó để debug nó. Vỏ dừa dày có con dao nhọn. Vẫn có cách để trị nó nhóe</p>
+<span id="more"></span>
+
+<h1 id="1-Cai-nuget-package"><a href="#1-Cai-nuget-package" class="headerlink" title="1. Cài nuget package"></a>1. Cài nuget package</h1><p>Trước tiên bạn phải cài một package có tên là routedebugger</p>
+<p><img src="/images/flickr/469/31947372973_69489bcb72_o.png"></p>
+<p>Sau đó, thêm một dòng config trong Web.config</p>
+<add key="RouteDebugger:Enabled" value="true" />
+
+<p><img src="/images/flickr/595/31947453593_6bbc0ddf77_o.png"></p>
+<h1 id="2-Debug-cai-route"><a href="#2-Debug-cai-route" class="headerlink" title="2. Debug cái route"></a>2. Debug cái route</h1><p>Sau khi hoàn tất 2 bước trên, nhấn Debug, kéo xuống dưới cùng của website và bạn sẽ thấy bảng phân tích route</p>
+<p><img src="/images/flickr/586/31947500953_e3538ee6b5_o.png"></p>
+<p>Bảng này sẽ cho bạn thấy route của bạn gõ trên thanh địa chỉ nó bị dinh vô cái config nào</p>
+<p>Vậy là bạn đã debug được rồi nhóe</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>ASP.NET</category>
+      </categories>
+      <tags>
+        <tag>route</tag>
+      </tags>
   </entry>
   <entry>
     <title>[ASP.NET MVC] Khắc phục lỗi chữ tiếng việt Unicode bị encode trong View</title>
@@ -4356,32 +4382,6 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
         <tag>encode</tag>
         <tag>lỗi</tag>
         <tag>unicode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[ASP.NET MVC] Debug Route Config</title>
-    <url>/2017/02/07/asp-net-mvc-debug-route-config/</url>
-    <content><![CDATA[<p>Route Map là một cái bảng. Khi bạn chạy một ứng dụng ASP.NET, cái bảng này sẽ được đem ra để so sánh với URL mà bạn gõ trên địa chỉ trình duyệt</p>
-<p>Vì nó duyệt theo kiểu bảng như vậy nên rất khó để debug nó. Vỏ dừa dày có con dao nhọn. Vẫn có cách để trị nó nhóe</p>
-<span id="more"></span>
-
-<h1 id="1-Cai-nuget-package"><a href="#1-Cai-nuget-package" class="headerlink" title="1. Cài nuget package"></a>1. Cài nuget package</h1><p>Trước tiên bạn phải cài một package có tên là routedebugger</p>
-<p><img src="/images/flickr/469/31947372973_69489bcb72_o.png"></p>
-<p>Sau đó, thêm một dòng config trong Web.config</p>
-<add key="RouteDebugger:Enabled" value="true" />
-
-<p><img src="/images/flickr/595/31947453593_6bbc0ddf77_o.png"></p>
-<h1 id="2-Debug-cai-route"><a href="#2-Debug-cai-route" class="headerlink" title="2. Debug cái route"></a>2. Debug cái route</h1><p>Sau khi hoàn tất 2 bước trên, nhấn Debug, kéo xuống dưới cùng của website và bạn sẽ thấy bảng phân tích route</p>
-<p><img src="/images/flickr/586/31947500953_e3538ee6b5_o.png"></p>
-<p>Bảng này sẽ cho bạn thấy route của bạn gõ trên thanh địa chỉ nó bị dinh vô cái config nào</p>
-<p>Vậy là bạn đã debug được rồi nhóe</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>ASP.NET</category>
-      </categories>
-      <tags>
-        <tag>route</tag>
       </tags>
   </entry>
   <entry>
@@ -4454,7 +4454,7 @@ public int DistrictId &#123; get; set; &#125;</code></pre>
 <li>Tạo một file tên “gulpfile.js” trong root folder của project</li>
 <li>Gõ nội dung sau:</li>
 </ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">var gulp &#x3D; require(&#39;gulp&#39;);
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">var gulp &#x3D; require(&#39;gulp&#39;);
  
 var sass &#x3D; require(&#39;gulp-sass&#39;);
  
@@ -4627,7 +4627,7 @@ function swallowError(error) &#123;
 <ul>
 <li>Thêm View mới vào folder đó, đặt tên là “TextBoxWithCheck.cshtml” (phải trùng tên với cái custom class)</li>
 </ul>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model TextBoxWithCheck
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">@model TextBoxWithCheck
  
 @Html.LabelFor(x &#x3D;&gt; x.MyText)
 &lt;div class&#x3D;&quot;input-group&quot;&gt;
@@ -4692,7 +4692,7 @@ function swallowError(error) &#123;
 <p>Từ một bài viết thú vị từ Matt Lunn <a href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
 <h1 id="2-Class"><a href="#2-Class" class="headerlink" title="2. Class"></a>2. Class</h1><p><a id="markdown-class" name="class"></a></p>
 <h2 id="2-1-C-code"><a href="#2-1-C-code" class="headerlink" title="2.1. C# code"></a>2.1. C# code</h2><p><a id="markdown-c%23-code" name="c%23-code"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace Yournamespace.Utilities
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace Yournamespace.Utilities
 &#123;
     using System;
     using System.Collections.Generic;
@@ -4852,7 +4852,7 @@ function swallowError(error) &#123;
 
 <h2 id="2-2-JavaScript-Code"><a href="#2-2-JavaScript-Code" class="headerlink" title="2.2. JavaScript Code"></a>2.2. JavaScript Code</h2><p><a id="markdown-javascript-code" name="javascript-code"></a></p>
 <p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">function GenerateGuid() &#123;
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">function GenerateGuid() &#123;
     function s4() &#123;
         return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
@@ -4881,7 +4881,7 @@ function AssignAddMoreButton() &#123;
 <h2 id="3-1-Chuan-bi-model"><a href="#3-1-Chuan-bi-model" class="headerlink" title="3.1. Chuẩn bị model"></a>3.1. Chuẩn bị model</h2><p><a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B-model" name="chu%E1%BA%A9n-b%E1%BB%8B-model"></a></p>
 <p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
 <p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class Model
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Model
 &#123;
     &#x2F;&#x2F; Your normal, already existed properties
  
@@ -4892,7 +4892,7 @@ function AssignAddMoreButton() &#123;
 &#125;</code></pre>
 
 <h2 id="3-2-Razor-code"><a href="#3-2-Razor-code" class="headerlink" title="3.2. Razor code"></a>3.2. Razor code</h2><p><a id="markdown-razor-code" name="razor-code"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;,FormMethod.Post, new &#123;@class&#x3D;&quot;CssClassName&quot;&#125;))
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;,FormMethod.Post, new &#123;@class&#x3D;&quot;CssClassName&quot;&#125;))
 &#123;
     &#x2F;&#x2F; the last parameter &quot;true&quot; is to generate a default item
     @Html.EditorForMany(x &#x3D;&gt; x.Model, x &#x3D;&gt; x.Index, true)
@@ -4916,7 +4916,7 @@ function AssignAddMoreButton() &#123;
 <li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
 <li>Dựng code HTML</li>
 </ol>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
     &lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;
 &lt;&#x2F;div&gt;</code></pre>
 
@@ -4930,7 +4930,7 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[0].Data&quot;&#x2F;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[0].Data&quot;&#x2F;&gt;
 &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[1].Data&quot;&#x2F;&gt;</code></pre>
 
 <ul>
@@ -4940,7 +4940,7 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;YourList.Index&quot; value&#x3D;&quot;radomGuid1&quot;&#x2F;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;YourList.Index&quot; value&#x3D;&quot;radomGuid1&quot;&#x2F;&gt;
 &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[randomGuid1].Data&quot;&#x2F;&gt;
  
 &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;YourList.Index&quot; value&#x3D;&quot;anotherGuid2&quot;&#x2F;&gt;
@@ -5070,7 +5070,7 @@ apt-get install apache2</code></pre>
 <p>Network Drive</p>
 <p><img src="/images/flickr/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
 <p>Search for this part and change</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">. . .
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">. . .
  
 &lt;Directory &#x2F;var&#x2F;www&#x2F;html&#x2F;&gt;
     AllowOverride All
@@ -5214,7 +5214,7 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
 <h3 id="3-1-1-Ket-noi-toi-database"><a href="#3-1-1-Ket-noi-toi-database" class="headerlink" title="3.1.1. Kết nối tới database"></a>3.1.1. Kết nối tới database</h3><p><a id="markdown-k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database" name="k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database"></a></p>
 <p>Mặc định, Identity dùng connection string có tên “DefaultConnection” Mở <code>Models/IdentityModels</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class ApplicationDbContext : IdentityDbContext&lt;ApplicationUser&gt;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class ApplicationDbContext : IdentityDbContext&lt;ApplicationUser&gt;
 &#123; 
     public ApplicationDbContext() : base(&quot;DefaultConnection&quot;, throwIfV1Schema: false)
     &#123;
@@ -5227,7 +5227,7 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 &#125;</code></pre>
 
 <p>Mở Web.config, kiếm <code>DefaultConnection</code>, bạn sẽ thấy connection string của nó nối tới Database</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;connectionStrings&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;connectionStrings&gt;
   &lt;add name&#x3D;&quot;DefaultConnection&quot;
        connectionString&#x3D;&quot;Data Source&#x3D;(LocalDb)\\MSSQLLocalDB;AttachDbFilename&#x3D;|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog&#x3D;aspnet-LearnIdentity2-20170824112720;Integrated Security&#x3D;True&quot;
        providerName&#x3D;&quot;System.Data.SqlClient&quot; &#x2F;&gt;
@@ -5324,7 +5324,7 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 
 <p>SDK sẽ tạo ra toàn bộ folders và files cần thiết cho bạn Các lựa chọn khác khi tạo một project: <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x">‘dotnet new’ command at docs.microsoft.com</a></p>
 <h2 id="2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1"><a href="#2-2-chinh-sua-project-de-target-NET-Framework-4-7-1-or-4-6-1" class="headerlink" title="2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)"></a>2.2. chỉnh sửa project để target .NET Framework 4.7.1 (or 4.6.1)</h2><p>Trong thư mục gốc của project mới tạo, mở file <code>YourProjectName.csproj</code> và sửa như sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
  
   &lt;PropertyGroup&gt;
     &lt;TargetFramework&gt;net471&lt;&#x2F;TargetFramework&gt;
@@ -5446,24 +5446,24 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <p><code>label</code> là cái tag mà bạn sẽ customize hơi nhiều trong ứng dụng asp.net core của mình. Lý do là vì bạn muốn nó có thêm một dấu <code>*</code> màu đỏ đối với các input yêu cầu bắt buộc, bạn cũng muốn nó có thêm <code>(500 ký tự)</code> khi ô input chỉ cho phép nhập 500 ký tự.</p>
 <p>Tất nhiên, tất cả những cái đó đều có thể thêm vào dễ dàng bằng cách … add tay</p>
 <p>ASP.NET MVC, và sau này là ASP.NET CORE, cho phép bạn xây dựng <code>model</code> với các <code>DataAnnotation</code> nhằm khai báo cho cơ sở dữ liệu biết các giới hạn hoặc định nghĩa của một column trên database, đồng thời giúp bạn validate input field của nó ở client-side code</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">[Required]
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[Required]
 [Display(Name &#x3D; &quot;User name&quot;)]
 [StringLenght(15)]
 public string Username &#123; get; set; &#125;</code></pre>
 
 <p>Tuy nhiên, khi tạo input field cho property <code>username</code> này, bạn vẫn phải tự tạo tay các dấu <code>*</code> và dòng chữ <code>tối đa 15 ký tự</code> kia</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;label asp-for&#x3D;&quot;Username&quot;&gt;&lt;&#x2F;label&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;label asp-for&#x3D;&quot;Username&quot;&gt;&lt;&#x2F;label&gt;
 &lt;input asp-for&#x3D;&quot;Username&quot;&#x2F;&gt;
 &lt;span asp-validation-for&#x3D;&quot;Username&quot;&gt;&lt;&#x2F;span&gt;</code></pre>
 
 <p>đoạn code trên sẽ generate ra các dòng html sau</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;label for&#x3D;&quot;Username&quot;&gt;User name&lt;&#x2F;label&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;label for&#x3D;&quot;Username&quot;&gt;User name&lt;&#x2F;label&gt;
 ....các dòng khác...</code></pre>
 
 <h1 id="3-Customize-Label-tag-helper"><a href="#3-Customize-Label-tag-helper" class="headerlink" title="3. Customize Label tag helper"></a>3. Customize Label tag helper</h1><p><a id="markdown-customize-label-tag-helper" name="customize-label-tag-helper"></a></p>
 <p>Chúng ta sẽ tạo ra một custom tag helper với tên là <code>requiredlabel</code></p>
 <h2 id="3-1-Code"><a href="#3-1-Code" class="headerlink" title="3.1. Code"></a>3.1. Code</h2><p><a id="markdown-code" name="code"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace YourNamespace.Extensions.TagHelpers
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace YourNamespace.Extensions.TagHelpers
 &#123;
     using System;
     using System.IO;
@@ -5551,7 +5551,7 @@ public string Username &#123; get; set; &#125;</code></pre>
 
 <h2 id="3-2-Khai-bao"><a href="#3-2-Khai-bao" class="headerlink" title="3.2. Khai báo"></a>3.2. Khai báo</h2><p><a id="markdown-khai-b%C3%A1o" name="khai-b%C3%A1o"></a></p>
 <p>Mở <code>View/_ViewImports.cshtml</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
  
 @* Thêm dòng sau *@
 @addTagHelper *, YourNamespace.Extensions</code></pre>
@@ -5562,10 +5562,10 @@ public string Username &#123; get; set; &#125;</code></pre>
 </blockquote>
 <h1 id="4-Su-dung"><a href="#4-Su-dung" class="headerlink" title="4. Sử dụng"></a>4. Sử dụng</h1><p><a id="markdown-s%E1%BB%AD-d%E1%BB%A5ng" name="s%E1%BB%AD-d%E1%BB%A5ng"></a></p>
 <p>Vô cùng đơn giản</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;requiredlabel asp-for&#x3D;&quot;Username&quot; highlight-class&#x3D;&quot;red bold&quot;&gt;&lt;&#x2F;requiredlabel&gt;</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;requiredlabel asp-for&#x3D;&quot;Username&quot; highlight-class&#x3D;&quot;red bold&quot;&gt;&lt;&#x2F;requiredlabel&gt;</code></pre>
 
 <p>sẽ render ra đoạn code html sau</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;label for&#x3D;&quot;Username&quot;&gt;User name&lt;span class&#x3D;&quot;red bold&quot;&gt; *&lt;&#x2F;span&gt;&lt;&#x2F;label&gt;</code></pre>]]></content>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;label for&#x3D;&quot;Username&quot;&gt;User name&lt;span class&#x3D;&quot;red bold&quot;&gt; *&lt;&#x2F;span&gt;&lt;&#x2F;label&gt;</code></pre>]]></content>
       <categories>
         <category>CSharp</category>
         <category>ASP.NET</category>
@@ -5635,7 +5635,7 @@ public string Username &#123; get; set; &#125;</code></pre>
 </tbody></table>
 <p>Như vậy, thay vì ta phải viết thẳng từng câu error message, ta chỉ cần dùng string.Format với thứ tự chính xác của các tham số</p>
 <p>Ví dụ với trường hợp StringLength</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">[StringLength(70, ErrorMessage &#x3D; &quot;&#123;0&#125; phải chứa ít hơn &#123;1&#125; ký tự&quot;)]
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[StringLength(70, ErrorMessage &#x3D; &quot;&#123;0&#125; phải chứa ít hơn &#123;1&#125; ký tự&quot;)]
 public string Name &#123; get; set; &#125;</code></pre>
 
 <h1 id="2-Error-Message-Localization"><a href="#2-Error-Message-Localization" class="headerlink" title="2. Error Message Localization"></a>2. Error Message Localization</h1><p><a id="markdown-error-message-localization" name="error-message-localization"></a></p>
@@ -5700,7 +5700,7 @@ public string Name &#123; get; set; &#125;</code></pre>
 
 <h1 id="1-Computed-Property"><a href="#1-Computed-Property" class="headerlink" title="1. Computed Property"></a>1. Computed Property</h1><p><a id="markdown-computed-property" name="computed-property"></a></p>
 <p>Là một property chỉ có hàm get, và trong get đó, giá trị trả về được tính toán dựa trên các property khác</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class TestViewModel
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TestViewModel
 &#123;
     [Required]
     [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
@@ -5718,12 +5718,12 @@ public string Name &#123; get; set; &#125;</code></pre>
 <p>Theo các chuẩn thiết kế database, một column phải chứa dữ liệu mà không thể được suy ra từ các dữ liệu khác. Đoạn Attribute <code>[NotMapped]</code> phục vụ cho việc đó. EF sẽ không sinh ra code generate column <code>FullName</code> nếu bạn dùng code first, không cố gắng tìm column <code>FullName</code> trong table nếu bạn dùng database first</p>
 <h1 id="2-Simple-LINQ"><a href="#2-Simple-LINQ" class="headerlink" title="2. Simple LINQ"></a>2. Simple LINQ</h1><p><a id="markdown-simple-linq" name="simple-linq"></a></p>
 <p>Để query một giá trị nào đó trong Database dùng Entity Framework, bạn có thể dùng LINQ rất đơn giản như sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; TableNameWithS is your table name in plural
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; TableNameWithS is your table name in plural
  
 var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FirstName.Contains(&quot;test&quot;));</code></pre>
 
 <p>Nhưng cũng đoạn code đó sẽ gây lỗi nếu bạn cố gắn dùng nó với Property <code>FullName</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; BUG BUG BUG
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; BUG BUG BUG
 
 var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
 
@@ -5732,13 +5732,13 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <p>TL;DR: <a href="#4-the-best-solution">The best solution</a></p>
 </blockquote>
 <h2 id="3-1-Slow-performance-Goi-ToList"><a href="#3-1-Slow-performance-Goi-ToList" class="headerlink" title="3.1. [Slow performance] Gọi ToList"></a>3.1. [Slow performance] Gọi ToList</h2><p><a id="markdown-%5Bslow-performance%5D-g%E1%BB%8Di-tolist" name="%5Bslow-performance%5D-g%E1%BB%8Di-tolist"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS.ToList().Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS.ToList().Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
 
 <p>Gọi ToList sẽ làm Entity Framework gọi tới database, thực thi bất kỳ đoạn query nào trước đó, rồi mới thực thi tới đoạn LINQ có computed property của bạn</p>
 <p>Nhược điểm của nó là EF sẽ query ra kết quả nhiều hơn so với cần thiết, làm giảm performance của ứng dụng</p>
 <h2 id="3-2-DRY-Principle-violated-Viet-bieu-thuc"><a href="#3-2-DRY-Principle-violated-Viet-bieu-thuc" class="headerlink" title="3.2. [DRY Principle violated] Viết biểu thức"></a>3.2. [DRY Principle violated] Viết biểu thức</h2><p><a id="markdown-%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c" name="%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c"></a></p>
 <p>Một cách khác là thay vì sử dụng computed property, ta có thể viết thẳng biểu thức của property đó vào câu query</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; (x.FirstName + x.LastName).Contains(&quot;test&quot;));</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; (x.FirstName + x.LastName).Contains(&quot;test&quot;));</code></pre>
 
 <p>Nhược điểm của cách này là bạn đã vi phạm nguyên tắc “DRY” - Don’t repeat yourself. Một biểu thức mà phải code tới 2 lần. Nếu sau này bạn thay đổi biểu thức đó ở 1 chỗ, thì ở chỗ còn lại bạn cũng sẽ phải đổi theo. Nếu bạn quên -&gt; BUG ngay và luôn</p>
 <blockquote>
@@ -5753,7 +5753,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <pre class="line-numbers language-s" data-language="s"><code class="language-s">Install-Package DelegateDecompiler</code></pre>
 
 <p>Bước 2: Trang trí property với attribute <code>[Computed]</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class TestViewModel
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TestViewModel
 &#123;
     [Required]
     [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
@@ -5770,7 +5770,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 &#125;</code></pre>
 
 <p>Bước 3: Gọi method Decompile</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">var names &#x3D; dbContext.TableNameWithS
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS
                      .ToList()
                      .Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;)).Decompile();
 </code></pre>
@@ -5781,7 +5781,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <h1 id="5-Make-life-easier"><a href="#5-Make-life-easier" class="headerlink" title="5. Make life easier"></a>5. Make life easier</h1><p><a id="markdown-make-life-easier" name="make-life-easier"></a></p>
 <p>Bạn cũng có thể cấu hình cho asp tự xử lý các property có [NotMapped]</p>
 <p>Tạo một class <code>Configuration</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class DelegateDecompilerConfiguration : DefaultConfiguration
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class DelegateDecompilerConfiguration : DefaultConfiguration
 &#123;
     public override bool ShouldDecompile(MemberInfo memberInfo)
     &#123;
@@ -5791,7 +5791,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 &#125;</code></pre>
 
 <p>Rồi đăng ký nó trong method Startup như sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">DelegateDecompiler.Configuration
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">DelegateDecompiler.Configuration
                   .Configure(new DelegateDecompilerConfiguration());</code></pre>]]></content>
       <categories>
         <category>CSharp</category>
@@ -5838,7 +5838,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 </blockquote>
 <p><img src="https://ncmedia.azureedge.net/ncmedia/2014/10/Ofc_rgb_Orng166_D-1024x473.png" alt="Office 365 logo"></p>
 <p>Bộ này thì khỏi nói, dù có một số giải pháp thay thế như <a href="https://www.libreoffice.org/">Libre Office</a> hay <a href="https://www.openoffice.org/">Open Office</a>, nhưng về cơ bản, các tính năng quá mạnh mẽ của MS Office đã thuyết phục được mình bỏ tiền ra mua nó hàng năm (dạng thuê bao Home Subscription có thể chia sẻ cho 5 user)</p>
-<h1 id="2-Phan-mem-co-duoc-do-cac-chuong-trinh-ho-tro-x2F-hop-tac"><a href="#2-Phan-mem-co-duoc-do-cac-chuong-trinh-ho-tro-x2F-hop-tac" class="headerlink" title="2. Phần mềm có được do các chương trình hỗ trợ &#x2F; hợp tác"></a>2. Phần mềm có được do các chương trình hỗ trợ &#x2F; hợp tác</h1><p>Các chương trình này đa phần nhắm tới sinh viên. Nếu trường của bạn cung cấp địa chỉ có đuôi edu thì bạn sẽ được tham gia các chương trình này và sử dụng các bộ phần mềm bản quyền hoàn toàn miễn phí</p>
+<h1 id="2-Phan-mem-co-duoc-do-cac-chuong-trinh-ho-tro-hop-tac"><a href="#2-Phan-mem-co-duoc-do-cac-chuong-trinh-ho-tro-hop-tac" class="headerlink" title="2. Phần mềm có được do các chương trình hỗ trợ &#x2F; hợp tác"></a>2. Phần mềm có được do các chương trình hỗ trợ &#x2F; hợp tác</h1><p>Các chương trình này đa phần nhắm tới sinh viên. Nếu trường của bạn cung cấp địa chỉ có đuôi edu thì bạn sẽ được tham gia các chương trình này và sử dụng các bộ phần mềm bản quyền hoàn toàn miễn phí</p>
 <h2 id="2-1-Microsoft-Windows"><a href="#2-1-Microsoft-Windows" class="headerlink" title="2.1. Microsoft Windows"></a>2.1. Microsoft Windows</h2><blockquote>
 <p>Alternative: <a href="https://www.ubuntu.com/">Ubuntu</a> - và các hệ điều hành linux nói chung</p>
 </blockquote>
@@ -5943,7 +5943,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 </ul>
 </blockquote>
 <p>Tiếp tục, bạn phải thêm attribute <code>[ValidateAntiForgeryToken]</code> và action nhận data post lên</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">[HttpPost]
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[HttpPost]
 [ValidateAntiForgeryToken]
 public async Task&lt;IActionResult&gt; RemoveLogin(RemoveLoginViewModel account)
 &#123;
@@ -5954,7 +5954,7 @@ public async Task&lt;IActionResult&gt; RemoveLogin(RemoveLoginViewModel account)
 <p>Ở cách trên, với mỗi Action nhận Post request, bạn đều phải thêm <code>[ValidationAntiForgeryToken]</code> thủ công</p>
 <p>Asp.net Core giới thiệu 1 class mới, giúp bạn tự động hóa quá trình này</p>
 <h2 id="Neu-ban-muon-tu-dong-cho-tung-Controller"><a href="#Neu-ban-muon-tu-dong-cho-tung-Controller" class="headerlink" title="Nếu bạn muốn tự động cho từng Controller"></a>Nếu bạn muốn tự động cho từng Controller</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-t%E1%BB%B1-%C4%91%E1%BB%99ng-cho-t%E1%BB%ABng-controller" name="n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-t%E1%BB%B1-%C4%91%E1%BB%99ng-cho-t%E1%BB%ABng-controller"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">[Authorize]
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">[Authorize]
 [AutoValidateAntiforgeryToken]
 public class ManageController : Controller
 &#123;
@@ -5962,7 +5962,7 @@ public class ManageController : Controller
 &#125;</code></pre>
 
 <h2 id="Neu-ban-muon-ap-dung-cho-toan-bo-app"><a href="#Neu-ban-muon-ap-dung-cho-toan-bo-app" class="headerlink" title="Nếu bạn muốn áp dụng cho toàn bộ app"></a>Nếu bạn muốn áp dụng cho toàn bộ app</h2><p><a id="markdown-n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-%C3%A1p-d%E1%BB%A5ng-cho-to%C3%A0n-b%E1%BB%99-app" name="n%E1%BA%BFu-b%E1%BA%A1n-mu%E1%BB%91n-%C3%A1p-d%E1%BB%A5ng-cho-to%C3%A0n-b%E1%BB%99-app"></a></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class Startup  
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Startup  
 &#123;
     public void ConfigureServices(IServiceCollection services)
     &#123;
@@ -6121,7 +6121,7 @@ public class ManageController : Controller
 </blockquote>
 <h2 id="1-1-Model"><a href="#1-1-Model" class="headerlink" title="1.1. Model"></a>1.1. Model</h2><p><a id="markdown-model" name="model"></a></p>
 <p>Model là cách mà bạn thể hiện data trong code của mình. Giả sử trong cơ sở dữ liệu của bạn có table Users, mỗi user đều có tên tuổi địa chỉ, thì model của bạn sẽ là</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; A basic model
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; A basic model
 public class User
 &#123;
     public string Name &#123; get; set; &#125;
@@ -6132,7 +6132,7 @@ public class User
 <h2 id="1-2-View"><a href="#1-2-View" class="headerlink" title="1.2. View"></a>1.2. View</h2><p><a id="markdown-view" name="view"></a></p>
 <p>View chỉ đóng 1 vai trò duy nhất: Render ra giao diện cho người dùng. Textbox (ô để điền text), dropdown list (chọn giá trị từ 1 danh sách), checkbox (ô chọn có&#x2F;không) là những thứ thường thấy trên View.</p>
 <p>Ví dụ, để hiển thị 1 user ra màn hình, thì code asp.net như sau</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model User
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">@model User
 &lt;div&gt;
     @Model.Name
     @Model.Age
@@ -6150,7 +6150,7 @@ public class User
 <h2 id="2-3-Trien-khai"><a href="#2-3-Trien-khai" class="headerlink" title="2.3. Triển khai"></a>2.3. Triển khai</h2><p><a id="markdown-tri%E1%BB%83n-khai" name="tri%E1%BB%83n-khai"></a></p>
 <h3 id="2-3-1-Tinh-nang-xem-danh-sach"><a href="#2-3-1-Tinh-nang-xem-danh-sach" class="headerlink" title="2.3.1. Tính năng xem danh sách"></a>2.3.1. Tính năng xem danh sách</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch" name="t%C3%ADnh-n%C4%83ng-xem-danh-s%C3%A1ch"></a></p>
 <p><strong>Model</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhone
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MobilePhone
 &#123;
     &#x2F;&#x2F; To identify which phones
     &#x2F;&#x2F; Dùng để xác định cái điện thoại nào
@@ -6160,7 +6160,7 @@ public class User
 &#125;</code></pre>
 
 <p><strong>Controller</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhoneController
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MobilePhoneController
 &#123;
     public void List()
     &#123;
@@ -6173,7 +6173,7 @@ public class User
 &#125;</code></pre>
 
 <p><strong>View</strong></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model List&lt;MobilePhone&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">@model List&lt;MobilePhone&gt;
 &lt;div&gt;
     &lt;table&gt;
         &lt;!--Table headers--&gt;
@@ -6202,7 +6202,7 @@ public class User
 <h3 id="2-3-2-Tinh-nang-them"><a href="#2-3-2-Tinh-nang-them" class="headerlink" title="2.3.2. Tính năng thêm"></a>2.3.2. Tính năng thêm</h3><p><a id="markdown-t%C3%ADnh-n%C4%83ng-th%C3%AAm" name="t%C3%ADnh-n%C4%83ng-th%C3%AAm"></a></p>
 <p>Dùng lại model cũ, ta chỉ cần thêm code cho View và Controller</p>
 <p><strong>Controller</strong></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">public class MobilePhoneController
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MobilePhoneController
 &#123;
     public void List()
     &#123;
@@ -6248,10 +6248,10 @@ public class User
 <p>Tại sao lại có 2 method Add? Ở method đầu tiên, ASP.NET sẽ trả về cái form rỗng cho người dùng tự nhập vào giá trị. Method thứ 2 có chứa parameter là newPhone. Method có trách nhiệm nhận thông tin được post lên từ phía người dùng. ASP.NET đủ thông minh để có thể tự hiểu nó là object kiểu MobilePhone, và nó gọi là <code>Model Binding</code>. Ta sẽ tìm hiểu về chủ đề này sau.</p>
 </blockquote>
 <p><strong>View</strong></p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">thêm file Add.cshtml</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">thêm file Add.cshtml</code></pre>
 
 <p>Đối với ASP.NET Core</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">@model MobilePhone
  
 &lt;form asp-action&#x3D;&quot;Add&quot; asp-controller&#x3D;&quot;MobilePhone&quot;&gt;
     &lt;label&gt;Id&lt;&#x2F;label&gt;
@@ -6261,7 +6261,7 @@ public class User
 &lt;&#x2F;form&gt;</code></pre>
 
 <p>Đối với ASP.NET MVC cũ</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">@model MobilePhone
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">@model MobilePhone
  
 @using(Html.BeginForm(&quot;Add&quot;,&quot;MobilePhone&quot;,Method.Post))
 &#123;
@@ -6409,7 +6409,7 @@ public class User
 <h2 id="2-1-jQuery"><a href="#2-1-jQuery" class="headerlink" title="2.1. jQuery"></a>2.1. jQuery</h2><p><a id="markdown-jquery" name="jquery"></a></p>
 <p>jQuery giống như 1 thư viện “phải có” vậy. Nó giúp cho việc sử dụng cả tá css framework khác trở nên đơn giản và hiệu quả.</p>
 <p>Ví dụ: Để đổi đoạn value của thẻ input có id là “test” thành chữ khác</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">&#x2F;&#x2F; Before jquery
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">&#x2F;&#x2F; Before jquery
 document.getElementById(&quot;test&quot;).value &#x3D; &quot;Test Value&quot;;
 
 &#x2F;&#x2F; After jquery
@@ -6664,14 +6664,14 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 <h2 id="3-2-Client-side-validation"><a href="#3-2-Client-side-validation" class="headerlink" title="3.2. Client side validation"></a>3.2. Client side validation</h2><p><a id="markdown-client-side-validation" name="client-side-validation"></a></p>
 <p>Client side validation cho phép user thấy các lỗi dữ liệu ngay khi họ nhập mà chưa cần gửi data lên server của bạn</p>
 <p>Việc bạn cần làm là thêm các dòng sau vào code View của mình</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;!--dòng này có thể đã nằm trong file View&#x2F;Shared&#x2F;_Layout.cshtml của bạn rồi--&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;!--dòng này có thể đã nằm trong file View&#x2F;Shared&#x2F;_Layout.cshtml của bạn rồi--&gt;
 &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jQuery&#x2F;jquery-2.2.0.min.js&quot;&gt;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jQuery&#x2F;jquery-2.2.0.min.js&lt;&#x2F;a&gt;
  
 &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jquery.validate&#x2F;1.16.0&#x2F;jquery.validate.min.js&quot;&gt;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jquery.validate&#x2F;1.16.0&#x2F;jquery.validate.min.js&lt;&#x2F;a&gt;
 &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jquery.validation.unobtrusive&#x2F;3.2.6&#x2F;jquery.validate.unobtrusive.min.js&quot;&gt;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jquery.validation.unobtrusive&#x2F;3.2.6&#x2F;jquery.validate.unobtrusive.min.js&lt;&#x2F;a&gt;</code></pre>
 
 <p>và trong form, bạn thêm đoạn code sau để hiển thị thông báo lỗi (nếu có)</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;form asp-action&#x3D;&quot;Create&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;form asp-action&#x3D;&quot;Create&quot;&gt;
     &lt;!--dòng này hiển thị một thông báo tổng hợp tất cả các lỗi--&gt;
     &lt;div class&#x3D;&quot;text-danger&quot;&gt;&lt;&#x2F;div&gt;
     &lt;div class&#x3D;&quot;form-group&quot;&gt;
@@ -6733,7 +6733,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 </ul>
 </li>
 </ul>
-<h1 id="1-Project-amp-Solution"><a href="#1-Project-amp-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
+<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
 <p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
 <p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
 <h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
@@ -6793,7 +6793,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
     <content><![CDATA[<p>For English version: <a href="https://tuanmsp.wordpress.com/2018/06/08/aspnet-core-2-middleware/">[ASPNET Core 2] – Middleware</a></p>
 <p>Đôi khi bạn có một yêu cầu éo le: Viết Hello world bằng ASP.NET</p>
 <p>Dễ ẹt, <code>dotnet new mvc</code>, rồi sửa <code>Views/Home/Index.cshtml</code> cho nó trả về 1 dòng</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;p&gt;hello world&lt;&#x2F;p&gt;</code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;p&gt;hello world&lt;&#x2F;p&gt;</code></pre>
 
 <p>Thế là xong, phải ko? Có cách khác :D</p>
 <span id="more"></span>
@@ -8126,12 +8126,11 @@ end</code></pre>
 <li><a href="#41-vscode-live-share">4.1 VSCode Live Share</a></li>
 <li><a href="#42-start-collaboration">4.2 Start Collaboration</a></li>
 <li><a href="#43-join-a-shared-collaboration-session">4.3 Join a shared collaboration session</a></li>
-<li><a href="#44-live-share-maximum-collaborators">4.4 Live Share Maximum collaborators</a><span id="more"></span>
-<h1 id="1-Requirement"><a href="#1-Requirement" class="headerlink" title="1. Requirement"></a>1. Requirement</h1></li>
+<li><a href="#44-live-share-maximum-collaborators">4.4 Live Share Maximum collaborators</a><span id="more"></span></li>
 </ul>
 </li>
 </ul>
-<h2 id="1-1-List-of-software"><a href="#1-1-List-of-software" class="headerlink" title="1.1 List of software"></a>1.1 List of software</h2><p>First thing first, you would need to download and install a series of software.</p>
+<h1 id="1-Requirement"><a href="#1-Requirement" class="headerlink" title="1. Requirement"></a>1. Requirement</h1><h2 id="1-1-List-of-software"><a href="#1-1-List-of-software" class="headerlink" title="1.1 List of software"></a>1.1 List of software</h2><p>First thing first, you would need to download and install a series of software.</p>
 <blockquote>
 <p>Choose the correct version with your windows (x86&#x2F;x64)</p>
 </blockquote>
@@ -9315,7 +9314,7 @@ $ ssh-add ~&#x2F;.ssh&#x2F;id_rsa</code></pre>
 <p>This action simply <em><strong>tag</strong></em> your tokenized words with the word type, for example, verb, noun, adjective, etc.</p>
 <h2 id="1-1-The-tags-and-explanations"><a href="#1-1-The-tags-and-explanations" class="headerlink" title="1.1. The tags and explanations"></a>1.1. The tags and explanations</h2><p><a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a></p>
 <p>The complete list of tags can be shown when running the command</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">nltk.help.upenn_tagset()</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nltk.help.upenn_tagset()</code></pre>
 
 <p>For the complete list of explanations, scroll to the bottom of this post.</p>
 <h2 id="1-2-Tagging-them"><a href="#1-2-Tagging-them" class="headerlink" title="1.2. Tagging them"></a>1.2. Tagging them</h2><p><a id="markdown-tagging-them" name="tagging-them"></a></p>
@@ -9323,7 +9322,7 @@ $ ssh-add ~&#x2F;.ssh&#x2F;id_rsa</code></pre>
 <pre class="line-numbers language-none"><code class="language-none">The quick brown fox jumps over the lazy dog</code></pre>
 
 <p>The process should be something like this</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
 tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
 tags &#x3D; nltk.pos_tag(tokens)
 
@@ -9334,7 +9333,7 @@ tags &#x3D; nltk.pos_tag(tokens)
 <p>The regular expression with nltk tokens is quite different from standard text. The grammar treats each token as a string of text and applies the regex pattern on that string matched to the position of the token in the sentence.</p>
 <p>Below I will present a list of grammar, from the most simple to the more complex one, using the same sentence above</p>
 <h2 id="2-1-Exact-match"><a href="#2-1-Exact-match" class="headerlink" title="2.1. Exact match"></a>2.1. Exact match</h2><p><a id="markdown-exact-match" name="exact-match"></a></p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
 tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
 tags &#x3D; nltk.pos_tag(tokens)
 
@@ -9356,7 +9355,7 @@ result &#x3D; parser.parse(tags)
 
 <h2 id="2-2-Skip-some-tags"><a href="#2-2-Skip-some-tags" class="headerlink" title="2.2. Skip some tags"></a>2.2. Skip some tags</h2><p><a id="markdown-skip-some-tags" name="skip-some-tags"></a></p>
 <p>We will skip all tags between <code>The</code> and <code>fox</code> (between DT and NN tags)</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
 tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
 tags &#x3D; nltk.pos_tag(tokens)
 
@@ -9380,7 +9379,7 @@ result &#x3D; parser.parse(tags)
 <p>The next asterisk (*) right behind it means repeat the matching tags from 0 to unlimited time.</p>
 <h2 id="2-3-Match-all-tags-start-with-a-character"><a href="#2-3-Match-all-tags-start-with-a-character" class="headerlink" title="2.3. Match all tags start with a character"></a>2.3. Match all tags start with a character</h2><p><a id="markdown-match-all-tags-start-with-a-character" name="match-all-tags-start-with-a-character"></a></p>
 <p>We will match all tag starting with ‘N’, this is including ‘NN’, ‘NNP’, ‘NNPS’, ‘NNS’ tags</p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
 tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
 tags &#x3D; nltk.pos_tag(tokens)
 
@@ -10011,7 +10010,7 @@ result &#x3D; parser.parse(tags)
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>We will use binary search on both x and y dimensions.</p>
 <p>On each iteration, we will limit the boundary of the search</p>
 <h1 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h1><p><a href="https://github.com/huntertran/codinggame/blob/main/shadows-of-the-knight-ep1.py">on Github</a></p>
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"># https:&#x2F;&#x2F;www.codingame.com&#x2F;ide&#x2F;puzzle&#x2F;shadows-of-the-knight-episode-1
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># https:&#x2F;&#x2F;www.codingame.com&#x2F;ide&#x2F;puzzle&#x2F;shadows-of-the-knight-episode-1
 
 import sys
 import math
@@ -10111,7 +10110,7 @@ while True:
 <p><img src="https://i.imgur.com/DUxVRNz.png" alt="open sound settings"></p>
 <p>In sound settings, under the input section, click Device Property</p>
 <p><img src="https://i.imgur.com/8EoZfR8.png" alt="device property"></p>
-<h1 id="Step-2-Disable-x2F-Enable-microphone"><a href="#Step-2-Disable-x2F-Enable-microphone" class="headerlink" title="Step 2: Disable &#x2F; Enable microphone"></a>Step 2: Disable &#x2F; Enable microphone</h1><p>In the “Device Property” setting window, check&#x2F;uncheck the Disable checkbox to enable&#x2F;disable the Microphone</p>
+<h1 id="Step-2-Disable-Enable-microphone"><a href="#Step-2-Disable-Enable-microphone" class="headerlink" title="Step 2: Disable &#x2F; Enable microphone"></a>Step 2: Disable &#x2F; Enable microphone</h1><p>In the “Device Property” setting window, check&#x2F;uncheck the Disable checkbox to enable&#x2F;disable the Microphone</p>
 <p><img src="https://i.imgur.com/9MXvyw7.png" alt="disable"></p>
 <h1 id="Step-3-Adjust-the-Boost-levels"><a href="#Step-3-Adjust-the-Boost-levels" class="headerlink" title="Step 3: Adjust the Boost levels"></a>Step 3: Adjust the Boost levels</h1><p>Click Additional device properties in Related Settings</p>
 <p><img src="https://i.imgur.com/cXYq9Va.png" alt="additional"></p>
@@ -10272,7 +10271,7 @@ while True:
 <p>Half an hour later (okay 1 hour later), I finally know what happened and how can I fix it.</p>
 <h2 id="2-2-What’s-happened"><a href="#2-2-What’s-happened" class="headerlink" title="2.2. What’s happened?"></a>2.2. What’s happened?</h2><p><a id="markdown-what's-happened%3F" name="what's-happened%3F"></a></p>
 <p>Someone on remote delete a tag, then recreate a new tag with the same name. Then when you try to Push or Pull, this error&#x2F;warning will happened on your local copy.</p>
-<h2 id="2-3-Fix-and-answer-the-StackOverflow’s-question-lt-lt-–-here-is-my-luck"><a href="#2-3-Fix-and-answer-the-StackOverflow’s-question-lt-lt-–-here-is-my-luck" class="headerlink" title="2.3. Fix and answer the StackOverflow’s question &lt;&lt;– here is my luck"></a>2.3. Fix and answer the StackOverflow’s question &lt;&lt;– here is my luck</h2><p><a id="markdown-fix-and-answer-the-stackoverflow's-question-%3C%3C---here-is-my-luck" name="fix-and-answer-the-stackoverflow's-question-%3C%3C---here-is-my-luck"></a></p>
+<h2 id="2-3-Fix-and-answer-the-StackOverflow’s-question"><a href="#2-3-Fix-and-answer-the-StackOverflow’s-question" class="headerlink" title="2.3. Fix and answer the StackOverflow’s question &lt;&lt;– here is my luck"></a>2.3. Fix and answer the StackOverflow’s question &lt;&lt;– here is my luck</h2><p><a id="markdown-fix-and-answer-the-stackoverflow's-question-%3C%3C---here-is-my-luck" name="fix-and-answer-the-stackoverflow's-question-%3C%3C---here-is-my-luck"></a></p>
 <p>Then, a simple command line fix the problem for me. What’s next? I remembered there is an unanswered StackOverflow question on the exact same error. I add my solution, then left the website.</p>
 <p><a href="https://stackoverflow.com/a/58438257/4506315">https://stackoverflow.com/a/58438257/4506315</a></p>
 <p><img src="https://i.imgur.com/zburb3k.png" alt="my solution"></p>
@@ -10430,7 +10429,7 @@ while True:
 <p>In the above picture, there are two existing macros</p>
 <p>A new window appears, allowing you to start writing the macro’s code.</p>
 <p>Enter the following code, then click save</p>
-<pre class="line-numbers language-vb" data-language="vb"><code class="language-vb">Sub TwoMinCountDown()
+<pre class="line-numbers language-visual-basic" data-language="visual-basic"><code class="language-visual-basic">Sub TwoMinCountDown()
     Dim time As Date
     time &#x3D; Now()
     
@@ -10461,7 +10460,7 @@ Sub TenMinCountDown()
 End Sub</code></pre>
 
 <p>Now a few things to notice here. In this line:</p>
-<pre class="line-numbers language-vb" data-language="vb"><code class="language-vb">ActivePresentation.SlideShowWindow.View.Slide.Shapes(&quot;TenMinCountDown&quot;).TextFrame.TextRange &#x3D; Format((time - Now()), &quot;hh:mm:ss&quot;)</code></pre>
+<pre class="line-numbers language-visual-basic" data-language="visual-basic"><code class="language-visual-basic">ActivePresentation.SlideShowWindow.View.Slide.Shapes(&quot;TenMinCountDown&quot;).TextFrame.TextRange &#x3D; Format((time - Now()), &quot;hh:mm:ss&quot;)</code></pre>
 
 <p>The text <code>TenMinCountDown</code> is the name of the shape that this macro affects.</p>
 <p>Now to apply this macro, head back to your slide.</p>
@@ -10746,7 +10745,7 @@ public class FlattenedFlagAttribute : Attribute
 </tbody></table>
 <p>Let’s start with a sample WPF application.</p>
 <p>Open the file <code>Window.xaml</code> in your Visual Studio. Inside the outer <code>Grid</code>, add two <code>TextBlock</code> as follow:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Window x:Class&#x3D;&quot;WpfApp1.Window1&quot;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Window x:Class&#x3D;&quot;WpfApp1.Window1&quot;
         xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&#x2F;presentation&quot;
         xmlns:x&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&quot;
         xmlns:d&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;expression&#x2F;blend&#x2F;2008&quot;
@@ -10765,7 +10764,7 @@ public class FlattenedFlagAttribute : Attribute
 <p>Overlapping contents allow you to design more sophisticated&#x2F;beautiful app, for example:</p>
 <p><img src="/images/2013/11/112213_0144_windowsphon6.png" alt="advanced layout"></p>
 <h2 id="2-1-Grid’s-column-and-row"><a href="#2-1-Grid’s-column-and-row" class="headerlink" title="2.1. Grid’s column and row"></a>2.1. Grid’s column and row</h2><p><code>Grid</code> allows you to arrange the content into columns and row. You can declare column definitions and row definitions. After that, for each child control, you can set column or row property.</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
     &lt;Grid.RowDefinitions&gt;
         &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
         &lt;RowDefinition Height&#x3D;&quot;80&quot; &#x2F;&gt;
@@ -10791,7 +10790,7 @@ public class FlattenedFlagAttribute : Attribute
 <li>Number with star: Act as percentage. Useful for scaling</li>
 </ul>
 <p>Let’s see them in action. The following code will give this layout</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
     &lt;Grid.RowDefinitions&gt;
         &lt;RowDefinition Height&#x3D;&quot;Auto&quot; &#x2F;&gt;
         &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
@@ -10816,7 +10815,7 @@ public class FlattenedFlagAttribute : Attribute
 <p>Obviously, you can nest multiple <code>Grid</code> in a parent <code>Grid</code></p>
 </blockquote>
 <h1 id="3-Basic-control-StackPanel"><a href="#3-Basic-control-StackPanel" class="headerlink" title="3. Basic control - StackPanel"></a>3. Basic control - <code>StackPanel</code></h1><p><code>StackPanel</code>, as the name of the control, stack the content horizontally or vertically.</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
     &lt;StackPanel Margin&#x3D;&quot;16&quot;&gt;
         &lt;Grid Width&#x3D;&quot;80&quot;
               Height&#x3D;&quot;40&quot;
@@ -10832,7 +10831,7 @@ public class FlattenedFlagAttribute : Attribute
 <p>You can make it Horizontal by set the <code>Orientation=&quot;Horizontal&quot;</code></p>
 <p><img src="/images/2023/06/5.png" alt="StackPanel horizontal"></p>
 <h1 id="4-Basic-control-ScrollViewer"><a href="#4-Basic-control-ScrollViewer" class="headerlink" title="4. Basic control - ScrollViewer"></a>4. Basic control - <code>ScrollViewer</code></h1><p><code>ScrollViewer</code> allow you to scroll the content that overflow the screensize. This apply to both horizontal and vertical size</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
     &lt;ScrollViewer&gt;
         &lt;StackPanel&gt;
             &lt;Grid Width&#x3D;&quot;80&quot;
@@ -10852,133 +10851,6 @@ public class FlattenedFlagAttribute : Attribute
 &lt;&#x2F;Grid&gt;</code></pre>
 
 <p><img src="/images/2023/06/6.png" alt="ScrollViewer"></p>
-]]></content>
-      <categories>
-        <category>XAML</category>
-      </categories>
-      <tags>
-        <tag>XAML</tag>
-        <tag>Windows Store App</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XAML for beginner - Part 2</title>
-    <url>/2023/06/25/XAML-for-beginner-Part-2/</url>
-    <content><![CDATA[<p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>
-<span id="more"></span>
-
-<h1 id="1-ListBox-control"><a href="#1-ListBox-control" class="headerlink" title="1. ListBox control"></a>1. <code>ListBox</code> control</h1><p><code>ListBox</code> allows you to display a list of item. Each item in the list box would have the same type, with the same UI.</p>
-<p>For example, “top 30 most stream songs on Spotify” is a kind of data that we could use <code>ListBox</code> to display.</p>
-<p><img src="/images/2023/06/7.png" alt="listbox"></p>
-<h2 id="1-1-ListBox-property-ItemsSource"><a href="#1-1-ListBox-property-ItemsSource" class="headerlink" title="1.1. ListBox property: ItemsSource"></a>1.1. <code>ListBox</code> property: <code>ItemsSource</code></h2><p><code>ItemsSource</code> is the source for the items that you want to display on the UI. <code>ItemsSource</code> can be a object of type <code>List</code>, or type <code>ObservableCollection</code>. We will talk a bit about this property in DataBinding section</p>
-<h2 id="1-2-ListBox-property-SelectedIndex-and-SelectedItem"><a href="#1-2-ListBox-property-SelectedIndex-and-SelectedItem" class="headerlink" title="1.2. ListBox property: SelectedIndex and SelectedItem"></a>1.2. <code>ListBox</code> property: <code>SelectedIndex</code> and <code>SelectedItem</code></h2><p>When user select an item on the list box, both <code>SelectedIndex</code> and <code>SelectedItem</code> property will be updated with the corresponding data. The index is start from 0.</p>
-<h1 id="2-DataBinding"><a href="#2-DataBinding" class="headerlink" title="2. DataBinding"></a>2. DataBinding</h1><p>If you familiar with Angular, React, or Vuejs, you probably know what is data binding. In short, the data you have in memory will automatically displayed on UI. If the data got updated (by calculation, replaced from a call to API, user changed it), the UI will update the view as well.</p>
-<p>There are 3 types of <code>DataBinding</code>, which is <code>One time binding</code>, <code>One way binding</code> and <code>Two way binding</code></p>
-<ul>
-<li>In <code>One time binding</code>, the data got prepared, then send to the UI one time only, usually when you load the view.</li>
-<li>In <code>One way binding</code>, whenever the data updated in memory, the UI will update it view too. But when the data on UI updated (think of the user modify the data in a text box), the data in memory is not getting updated.</li>
-<li>In <code>Two way binding</code>, the data between UI and memory are kept in sync.</li>
-</ul>
-<h2 id="2-1-Design-Pattern-for-DataBinding-MVVM"><a href="#2-1-Design-Pattern-for-DataBinding-MVVM" class="headerlink" title="2.1. Design Pattern for DataBinding - MVVM"></a>2.1. Design Pattern for DataBinding - MVVM</h2><blockquote>
-<p>This is optional, there are multiple way for you to “bind” the data with UI.</p>
-</blockquote>
-<p>Microsoft invented and advocated for the MVVM pattern. They support this pattern and use it everywhere in there newer first-party applications, especially the one that you can download from Windows Store (WPF, UWP apps)</p>
-<blockquote>
-<p>MVVM stands for Model-View-ViewModel. This pattern is a variation of Martin Flower’s Presentation design pattern.</p>
-</blockquote>
-<p>In short, <code>Model</code> is the model classes that define your data. In the Spotify example above, the model class could be like this:</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Song
-&#123;
-    &#x2F;&#x2F; simplified for the blog post
-    public int Id &#123; get; set; &#125;
-    public string Name &#123; get; set; &#125;
-    public DateTime DatePublished &#123; get; set; &#125;
-&#125;</code></pre>
-
-<p><code>ViewModel</code> is a special class that was use as a converter. It converts the data in model into something that can be displayed on screen. On the <code>ViewModel</code> class, you would need to handle the update mechanism of the data you have in <code>Model</code> to <code>View</code>.</p>
-<p>In other to do this, the <code>Model</code> would need to implement the interface <code>INotifyPropertyChanged</code>, or <code>INotifyCollectionChanged</code>.</p>
-<p><code>INotifyPropertyChanged</code> is for update the property of the model. <code>INotifyCollectionChanged</code> is for update the list if you add&#x2F;remove&#x2F;re-arrange the item in the list. <code>ObservableCollection</code> already implemented the <code>INotifyCollectionChanged</code> for you.</p>
-<p>Using the same Spotify example, the <code>ViewModel</code> would be something like this</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MainViewModel
-&#123;
-    public ObservableCollection&lt;Song&gt; SongList &#123; get; set; &#125;
-&#125;</code></pre>
-
-<p>Now you just need to populate the data for your song list, and put that in <code>DataContext</code> of the <code>MainWindow.xaml</code> page</p>
-<h2 id="2-2-DataContext"><a href="#2-2-DataContext" class="headerlink" title="2.2. DataContext"></a>2.2. <code>DataContext</code></h2><p><code>DataContext</code> is the way you tell the page which data to display on UI. You can set the data context by assigning the <code>DataContext</code> property of <code>Window</code> or <code>Page</code>. </p>
-<p>The code for the <code>MainWindow.xaml.cs</code> should look like this:</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public partial class MainWindow : Window
-&#123;
-    public MainViewModel MainVm &#x3D; new MainViewModel();
-
-    public MainWindow()
-    &#123;
-        &#x2F;&#x2F; Here I set the Window&#39;s data context
-        DataContext &#x3D; MainVm;
-        MainVm.SongList &#x3D; new ObservableCollection&lt;Song&gt;
-        &#123;
-            new Song(1, &quot;Test 1&quot;, DateTime.UtcNow.AddDays(1)),
-            new Song(2, &quot;Test 2&quot;, DateTime.UtcNow.AddDays(2)),
-            new Song(3, &quot;Test 3&quot;, DateTime.UtcNow.AddDays(3)),
-            new Song(4, &quot;Test 4&quot;, DateTime.UtcNow.AddDays(4))
-        &#125;;
-
-        InitializeComponent();
-    &#125;
-&#125;</code></pre>
-
-<h2 id="2-3-ItemTemplate-of-ListBox"><a href="#2-3-ItemTemplate-of-ListBox" class="headerlink" title="2.3. ItemTemplate of ListBox"></a>2.3. <code>ItemTemplate</code> of ListBox</h2><p>You would need to declare a “template” for your data in <code>ListBox</code>. This is called <code>ItemTemplate</code>.</p>
-<p>Modify your XAML code as follow:</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ListBox ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
-    &lt;ListBox.ItemTemplate&gt;
-        &lt;DataTemplate&gt;
-            &lt;Grid&gt;
-                &lt;Grid.ColumnDefinitions&gt;
-                    &lt;ColumnDefinition Width&#x3D;&quot;20&quot; &#x2F;&gt;
-                    &lt;ColumnDefinition Width&#x3D;&quot;*&quot; &#x2F;&gt;
-                &lt;&#x2F;Grid.ColumnDefinitions&gt;
-                &lt;Grid.RowDefinitions&gt;
-                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
-                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
-                &lt;&#x2F;Grid.RowDefinitions&gt;
-                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-                           Grid.RowSpan&#x3D;&quot;2&quot;
-                           Grid.Column&#x3D;&quot;0&quot;
-                           Text&#x3D;&quot;&#123;Binding Id&#125;&quot; &#x2F;&gt;
-                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-                           Grid.Column&#x3D;&quot;1&quot;
-                           Text&#x3D;&quot;&#123;Binding Name&#125;&quot; &#x2F;&gt;
-                &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
-                           Grid.Column&#x3D;&quot;1&quot;
-                           Text&#x3D;&quot;&#123;Binding DatePublished&#125;&quot; &#x2F;&gt;
-            &lt;&#x2F;Grid&gt;
-        &lt;&#x2F;DataTemplate&gt;
-    &lt;&#x2F;ListBox.ItemTemplate&gt;
-&lt;&#x2F;ListBox&gt;</code></pre>
-
-<p>In this xaml, we set <code>ItemsSource=&#123;Binding SongList&#125;</code>, which is the name of the property in the <code>MainViewModel</code> class. Later, we bind each <code>TextBlock</code> to the property of <code>Song</code> class.</p>
-<p>Now if you run the application, you should see something like this:</p>
-<p><img src="/images/2023/06/8.png" alt="wpf listbox"></p>
-<p>It’s ugly, but hey it worked ;)</p>
-<h1 id="GridView-view-mode"><a href="#GridView-view-mode" class="headerlink" title="GridView view mode"></a><code>GridView</code> view mode</h1><p><code>GridView</code> displays data as a table, with headers and rows. You would need to use <code>GridView</code> with <code>ListView</code> control, in <code>View</code> property</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ListView ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
-    &lt;ListView.View&gt;
-        &lt;GridView AllowsColumnReorder&#x3D;&quot;true&quot;
-                  ColumnHeaderToolTip&#x3D;&quot;Song list&quot;&gt;
-            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Id&#125;&quot;
-                            Header&#x3D;&quot;ID&quot; &#x2F;&gt;
-            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Name&#125;&quot;
-                            Header&#x3D;&quot;Name&quot; &#x2F;&gt;
-            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding DatePublished&#125;&quot;
-                            Header&#x3D;&quot;Published date&quot; &#x2F;&gt;
-        &lt;&#x2F;GridView&gt;
-    &lt;&#x2F;ListView.View&gt;
-&lt;&#x2F;ListView&gt;</code></pre>
-
-<p>Run the application, then you will see something like this:</p>
-<p><img src="/images/2023/06/9.png" alt="wpf gridview"></p>
-<h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><p>Source code for this whole sample is available at: <a href="https://github.com/huntertran/SampleWPF">SampleWPF on Github</a></p>
-<p>I hope you can learn something new about XAML today. See you in next post</p>
 ]]></content>
       <categories>
         <category>XAML</category>
@@ -11081,6 +10953,133 @@ public class FlattenedFlagAttribute : Attribute
         <tag>data</tag>
         <tag>powerbi</tag>
         <tag>reports</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XAML for beginner - Part 2</title>
+    <url>/2023/06/25/XAML-for-beginner-Part-2/</url>
+    <content><![CDATA[<p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>
+<span id="more"></span>
+
+<h1 id="1-ListBox-control"><a href="#1-ListBox-control" class="headerlink" title="1. ListBox control"></a>1. <code>ListBox</code> control</h1><p><code>ListBox</code> allows you to display a list of item. Each item in the list box would have the same type, with the same UI.</p>
+<p>For example, “top 30 most stream songs on Spotify” is a kind of data that we could use <code>ListBox</code> to display.</p>
+<p><img src="/images/2023/06/7.png" alt="listbox"></p>
+<h2 id="1-1-ListBox-property-ItemsSource"><a href="#1-1-ListBox-property-ItemsSource" class="headerlink" title="1.1. ListBox property: ItemsSource"></a>1.1. <code>ListBox</code> property: <code>ItemsSource</code></h2><p><code>ItemsSource</code> is the source for the items that you want to display on the UI. <code>ItemsSource</code> can be a object of type <code>List</code>, or type <code>ObservableCollection</code>. We will talk a bit about this property in DataBinding section</p>
+<h2 id="1-2-ListBox-property-SelectedIndex-and-SelectedItem"><a href="#1-2-ListBox-property-SelectedIndex-and-SelectedItem" class="headerlink" title="1.2. ListBox property: SelectedIndex and SelectedItem"></a>1.2. <code>ListBox</code> property: <code>SelectedIndex</code> and <code>SelectedItem</code></h2><p>When user select an item on the list box, both <code>SelectedIndex</code> and <code>SelectedItem</code> property will be updated with the corresponding data. The index is start from 0.</p>
+<h1 id="2-DataBinding"><a href="#2-DataBinding" class="headerlink" title="2. DataBinding"></a>2. DataBinding</h1><p>If you familiar with Angular, React, or Vuejs, you probably know what is data binding. In short, the data you have in memory will automatically displayed on UI. If the data got updated (by calculation, replaced from a call to API, user changed it), the UI will update the view as well.</p>
+<p>There are 3 types of <code>DataBinding</code>, which is <code>One time binding</code>, <code>One way binding</code> and <code>Two way binding</code></p>
+<ul>
+<li>In <code>One time binding</code>, the data got prepared, then send to the UI one time only, usually when you load the view.</li>
+<li>In <code>One way binding</code>, whenever the data updated in memory, the UI will update it view too. But when the data on UI updated (think of the user modify the data in a text box), the data in memory is not getting updated.</li>
+<li>In <code>Two way binding</code>, the data between UI and memory are kept in sync.</li>
+</ul>
+<h2 id="2-1-Design-Pattern-for-DataBinding-MVVM"><a href="#2-1-Design-Pattern-for-DataBinding-MVVM" class="headerlink" title="2.1. Design Pattern for DataBinding - MVVM"></a>2.1. Design Pattern for DataBinding - MVVM</h2><blockquote>
+<p>This is optional, there are multiple way for you to “bind” the data with UI.</p>
+</blockquote>
+<p>Microsoft invented and advocated for the MVVM pattern. They support this pattern and use it everywhere in there newer first-party applications, especially the one that you can download from Windows Store (WPF, UWP apps)</p>
+<blockquote>
+<p>MVVM stands for Model-View-ViewModel. This pattern is a variation of Martin Flower’s Presentation design pattern.</p>
+</blockquote>
+<p>In short, <code>Model</code> is the model classes that define your data. In the Spotify example above, the model class could be like this:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Song
+&#123;
+    &#x2F;&#x2F; simplified for the blog post
+    public int Id &#123; get; set; &#125;
+    public string Name &#123; get; set; &#125;
+    public DateTime DatePublished &#123; get; set; &#125;
+&#125;</code></pre>
+
+<p><code>ViewModel</code> is a special class that was use as a converter. It converts the data in model into something that can be displayed on screen. On the <code>ViewModel</code> class, you would need to handle the update mechanism of the data you have in <code>Model</code> to <code>View</code>.</p>
+<p>In other to do this, the <code>Model</code> would need to implement the interface <code>INotifyPropertyChanged</code>, or <code>INotifyCollectionChanged</code>.</p>
+<p><code>INotifyPropertyChanged</code> is for update the property of the model. <code>INotifyCollectionChanged</code> is for update the list if you add&#x2F;remove&#x2F;re-arrange the item in the list. <code>ObservableCollection</code> already implemented the <code>INotifyCollectionChanged</code> for you.</p>
+<p>Using the same Spotify example, the <code>ViewModel</code> would be something like this</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class MainViewModel
+&#123;
+    public ObservableCollection&lt;Song&gt; SongList &#123; get; set; &#125;
+&#125;</code></pre>
+
+<p>Now you just need to populate the data for your song list, and put that in <code>DataContext</code> of the <code>MainWindow.xaml</code> page</p>
+<h2 id="2-2-DataContext"><a href="#2-2-DataContext" class="headerlink" title="2.2. DataContext"></a>2.2. <code>DataContext</code></h2><p><code>DataContext</code> is the way you tell the page which data to display on UI. You can set the data context by assigning the <code>DataContext</code> property of <code>Window</code> or <code>Page</code>. </p>
+<p>The code for the <code>MainWindow.xaml.cs</code> should look like this:</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public partial class MainWindow : Window
+&#123;
+    public MainViewModel MainVm &#x3D; new MainViewModel();
+
+    public MainWindow()
+    &#123;
+        &#x2F;&#x2F; Here I set the Window&#39;s data context
+        DataContext &#x3D; MainVm;
+        MainVm.SongList &#x3D; new ObservableCollection&lt;Song&gt;
+        &#123;
+            new Song(1, &quot;Test 1&quot;, DateTime.UtcNow.AddDays(1)),
+            new Song(2, &quot;Test 2&quot;, DateTime.UtcNow.AddDays(2)),
+            new Song(3, &quot;Test 3&quot;, DateTime.UtcNow.AddDays(3)),
+            new Song(4, &quot;Test 4&quot;, DateTime.UtcNow.AddDays(4))
+        &#125;;
+
+        InitializeComponent();
+    &#125;
+&#125;</code></pre>
+
+<h2 id="2-3-ItemTemplate-of-ListBox"><a href="#2-3-ItemTemplate-of-ListBox" class="headerlink" title="2.3. ItemTemplate of ListBox"></a>2.3. <code>ItemTemplate</code> of ListBox</h2><p>You would need to declare a “template” for your data in <code>ListBox</code>. This is called <code>ItemTemplate</code>.</p>
+<p>Modify your XAML code as follow:</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;ListBox ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
+    &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Grid&gt;
+                &lt;Grid.ColumnDefinitions&gt;
+                    &lt;ColumnDefinition Width&#x3D;&quot;20&quot; &#x2F;&gt;
+                    &lt;ColumnDefinition Width&#x3D;&quot;*&quot; &#x2F;&gt;
+                &lt;&#x2F;Grid.ColumnDefinitions&gt;
+                &lt;Grid.RowDefinitions&gt;
+                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
+                    &lt;RowDefinition Height&#x3D;&quot;5*&quot; &#x2F;&gt;
+                &lt;&#x2F;Grid.RowDefinitions&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
+                           Grid.RowSpan&#x3D;&quot;2&quot;
+                           Grid.Column&#x3D;&quot;0&quot;
+                           Text&#x3D;&quot;&#123;Binding Id&#125;&quot; &#x2F;&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
+                           Grid.Column&#x3D;&quot;1&quot;
+                           Text&#x3D;&quot;&#123;Binding Name&#125;&quot; &#x2F;&gt;
+                &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
+                           Grid.Column&#x3D;&quot;1&quot;
+                           Text&#x3D;&quot;&#123;Binding DatePublished&#125;&quot; &#x2F;&gt;
+            &lt;&#x2F;Grid&gt;
+        &lt;&#x2F;DataTemplate&gt;
+    &lt;&#x2F;ListBox.ItemTemplate&gt;
+&lt;&#x2F;ListBox&gt;</code></pre>
+
+<p>In this xaml, we set <code>ItemsSource=&#123;Binding SongList&#125;</code>, which is the name of the property in the <code>MainViewModel</code> class. Later, we bind each <code>TextBlock</code> to the property of <code>Song</code> class.</p>
+<p>Now if you run the application, you should see something like this:</p>
+<p><img src="/images/2023/06/8.png" alt="wpf listbox"></p>
+<p>It’s ugly, but hey it worked ;)</p>
+<h1 id="GridView-view-mode"><a href="#GridView-view-mode" class="headerlink" title="GridView view mode"></a><code>GridView</code> view mode</h1><p><code>GridView</code> displays data as a table, with headers and rows. You would need to use <code>GridView</code> with <code>ListView</code> control, in <code>View</code> property</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;ListView ItemsSource&#x3D;&quot;&#123;Binding SongList&#125;&quot;&gt;
+    &lt;ListView.View&gt;
+        &lt;GridView AllowsColumnReorder&#x3D;&quot;true&quot;
+                  ColumnHeaderToolTip&#x3D;&quot;Song list&quot;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Id&#125;&quot;
+                            Header&#x3D;&quot;ID&quot; &#x2F;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding Name&#125;&quot;
+                            Header&#x3D;&quot;Name&quot; &#x2F;&gt;
+            &lt;GridViewColumn DisplayMemberBinding&#x3D;&quot;&#123;Binding DatePublished&#125;&quot;
+                            Header&#x3D;&quot;Published date&quot; &#x2F;&gt;
+        &lt;&#x2F;GridView&gt;
+    &lt;&#x2F;ListView.View&gt;
+&lt;&#x2F;ListView&gt;</code></pre>
+
+<p>Run the application, then you will see something like this:</p>
+<p><img src="/images/2023/06/9.png" alt="wpf gridview"></p>
+<h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><p>Source code for this whole sample is available at: <a href="https://github.com/huntertran/SampleWPF">SampleWPF on Github</a></p>
+<p>I hope you can learn something new about XAML today. See you in next post</p>
+]]></content>
+      <categories>
+        <category>XAML</category>
+      </categories>
+      <tags>
+        <tag>XAML</tag>
+        <tag>Windows Store App</tag>
       </tags>
   </entry>
   <entry>
@@ -11394,7 +11393,7 @@ public class FlattenedFlagAttribute : Attribute
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 
 <p>Sau đó, mở file mvcbasic.csproj và thêm dòng sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;ItemGroup&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;ItemGroup&gt;
   &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version&#x3D;&quot;2.0.0&quot; &#x2F;&gt;
 &lt;&#x2F;ItemGroup&gt;</code></pre>
 
@@ -11407,7 +11406,7 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Bạn có thể tham khảo thêm ở đây: <a href="https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/">Code first vs Database first</a></p>
 <h2 id="3-1-Tao-model-Phone"><a href="#3-1-Tao-model-Phone" class="headerlink" title="3.1. Tạo model Phone"></a>3.1. Tạo model Phone</h2><p><a id="markdown-t%E1%BA%A1o-model-phone" name="t%E1%BA%A1o-model-phone"></a></p>
 <p>chuột phải vào folder Models &gt; new file &gt; Phone.cs</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace mvcbasic.Models
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace mvcbasic.Models
 &#123;
     public class Phone
     &#123;
@@ -11420,7 +11419,7 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Database Context có thể hiểu như một công cụ cho phép ứng dụng của bạn kết nối tới Database và thực hiện các tác vụ thêm xóa sửa.</p>
 <p>Tạo 1 folder mới ở thư mục gốc với tên ‘Data’</p>
 <p>Chuột phải vào folder Data &gt; new file &gt; MvcBasicDbContext.cs</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">namespace mvcbasic.Data
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace mvcbasic.Data
 &#123;
     using Models;
     using Microsoft.EntityFrameworkCore;
@@ -11446,10 +11445,10 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Bạn có thể sẽ phải config lại đoạn connection string này cho đúng với môi trường làm việc của bạn</p>
 <h2 id="3-4-Cai-dat-ket-noi"><a href="#3-4-Cai-dat-ket-noi" class="headerlink" title="3.4. Cài đặt kết nối"></a>3.4. Cài đặt kết nối</h2><p><a id="markdown-c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i" name="c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i"></a></p>
 <p>Mở file Startup.cs, tìm method <code>ConfigureServices</code> và thêm vào dòng sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">services.AddDbContext&lt;MvcBasicDbContext&gt;(options &#x3D;&gt; options.UseSqlServer(Configuration.GetConnectionString(&quot;PhoneDbConnectionString&quot;)));</code></pre>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">services.AddDbContext&lt;MvcBasicDbContext&gt;(options &#x3D;&gt; options.UseSqlServer(Configuration.GetConnectionString(&quot;PhoneDbConnectionString&quot;)));</code></pre>
 
 <p>và nhớ add thêm 2 dòng using</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">using Microsoft.EntityFrameworkCore;
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">using Microsoft.EntityFrameworkCore;
 using mvcbasic.Data;</code></pre>
 
 <h2 id="3-5-Tao-Migration-dau-tien"><a href="#3-5-Tao-Migration-dau-tien" class="headerlink" title="3.5. Tạo Migration đầu tiên"></a>3.5. Tạo Migration đầu tiên</h2><p><a id="markdown-t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn" name="t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn"></a></p>
@@ -11492,14 +11491,14 @@ using mvcbasic.Data;</code></pre>
 <h2 id="4-2-Cac-nuget-can-thiet"><a href="#4-2-Cac-nuget-can-thiet" class="headerlink" title="4.2. Các nuget cần thiết"></a>4.2. Các nuget cần thiết</h2><p><a id="markdown-c%C3%A1c-nuget-c%E1%BA%A7n-thi%E1%BA%BFt" name="c%C3%A1c-nuget-c%E1%BA%A7n-thi%E1%BA%BFt"></a></p>
 <p>Để có thể tạo controller, bạn sẽ cần thêm một số tool nữa</p>
 <p>Mở mvcbasic.csproj và thêm các dòng sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">...
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">...
 &lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
 ...
 &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
 ...</code></pre>
 
 <p>Tổng quan, file csproj sẽ giống như sau</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
  
   &lt;PropertyGroup&gt;
     &lt;TargetFramework&gt;netcoreapp2.0&lt;&#x2F;TargetFramework&gt;
@@ -11535,7 +11534,7 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
 <h1 id="5-Model-Binding"><a href="#5-Model-Binding" class="headerlink" title="5. Model Binding"></a>5. Model Binding</h1><p><a id="markdown-model-binding" name="model-binding"></a></p>
 <p>Mở file PhoneController ra, bạn sẽ thấy có sẵn code trong đấy rồi, tuy ko đẹp lắm, nhưng nhìn chung là nó chạy tốt</p>
 <p>Hãy nhìn vào method Details</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; GET: Phone&#x2F;Details&#x2F;5
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; GET: Phone&#x2F;Details&#x2F;5
 public async Task&lt;IActionResult&gt; Details(int? id)
 &#123;
     if (id &#x3D;&#x3D; null)
@@ -11555,7 +11554,7 @@ public async Task&lt;IActionResult&gt; Details(int? id)
 
 <p>Method này nhận một tham số là nullable int có tên là id, khi bạn gọi tới url Phone&#x2F;Details&#x2F;5 (như dòng comment ở bên trên), thì số 5 đó sẽ được hiểu là Id. Đó chính là model binding</p>
 <p>Tiếp tục, nhìn vào class Create có attribute <code>[HttpPost]</code></p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">&#x2F;&#x2F; POST: Phone&#x2F;Create
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; POST: Phone&#x2F;Create
 &#x2F;&#x2F; To protect from overposting attacks, please enable the specific properties you want to bind to, for 
 &#x2F;&#x2F; more details see http:&#x2F;&#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkId&#x3D;317598.
 [HttpPost]
@@ -11574,7 +11573,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 <p>Model binding còn vi diệu ở chỗ, nếu bạn dùng hẳn 1 class làm parameter, thì ASP.NET sẽ tự hiểu các property trong class đó, và gắn đúng từng giá trị một</p>
 <p>Bạn có thể xóa <code>[Bind(&quot;Id,Name&quot;)]</code> đi và code vẫn chạy tốt, nhưng như Microsoft đã cảnh báo, để bảo vệ bạn khỏi chuyện orver posting attack, thì bạn phải chỉ định luôn là property nào sẽ được gắn</p>
 <p>Method này tương ứng với Views &gt; Phone &gt; Create.cshtml</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;!--dòng 17--&gt;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;!--dòng 17--&gt;
 &lt;input asp-for&#x3D;&quot;Name&quot; class&#x3D;&quot;form-control&quot; &#x2F;&gt;</code></pre>
 
 <p>từ khóa <code>asp-for</code> thông báo rằng Name là property sẽ được truyền lên server, và server sẽ “gắn” nó vào model phone của method Create</p>
@@ -11582,7 +11581,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 <p>Tại sao lại ko có Id? Vì Id mặc định được coi như Key của bảng Phone, và key thì ko cần phải có khi tạo mới, vì database sẽ tự sinh ra nó</p>
 </blockquote>
 <p>Tiếp tục, mở Views &gt; Phone &gt; Index.cshtml bạn sẽ thấy đoạn code sau</p>
-<pre class="line-numbers language-cs" data-language="cs"><code class="language-cs">@foreach (var item in Model)
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">@foreach (var item in Model)
 &#123;
     &lt;tr&gt;
         &lt;td&gt;

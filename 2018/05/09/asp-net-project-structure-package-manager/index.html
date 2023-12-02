@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,38 +17,38 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager? Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ASP.NET] - Project Structure &amp; Package Manager">
-<meta property="og:url" content="https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/">
-<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:url" content="https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
 <meta property="og:description" content="Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager? Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects,">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/966/27130244167_1f468f1efa_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/966/27130244167_1f468f1efa_o.png">
 <meta property="article:published_time" content="2018-05-09T17:05:37.000Z">
-<meta property="article:modified_time" content="2023-10-07T20:24:15.202Z">
-<meta property="article:author" content="Tuan Tran">
+<meta property="article:modified_time" content="2023-12-02T02:48:49.546Z">
+<meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="project">
 <meta property="article:tag" content="structure">
 <meta property="article:tag" content="architech">
 <meta property="article:tag" content="manager">
 <meta property="article:tag" content="package">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huntertran.ca/images/flickr/966/27130244167_1f468f1efa_o.png">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/966/27130244167_1f468f1efa_o.png">
 
 
-<link rel="canonical" href="https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/">
+<link rel="canonical" href="https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/","path":"2018/05/09/asp-net-project-structure-package-manager/","title":"[ASP.NET] - Project Structure & Package Manager"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/","path":"2018/05/09/asp-net-project-structure-package-manager/","title":"[ASP.NET] - Project Structure & Package Manager"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[ASP.NET] - Project Structure & Package Manager | Tuan Tran's Blog</title>
+<title>[ASP.NET] - Project Structure & Package Manager | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
@@ -64,7 +64,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -85,7 +85,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Tuan Tran's Blog</p>
+      <p class="site-title">Hunter Tran's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share to be shared</p>
@@ -152,15 +152,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Project-amp-Solution"><span class="nav-text">1. Project &amp; Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Ly-do"><span class="nav-text">1.1. Lý do</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Dung-lai"><span class="nav-text">1.1.1. Dùng lại</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Phan-phoi"><span class="nav-text">1.1.2. Phân phối</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-Trien-khai"><span class="nav-text">1.1.3. Triển khai</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-You-name-it"><span class="nav-text">1.1.4. You name it</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Phan-chia-projects"><span class="nav-text">1.2. Phân chia projects</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Package-Manager"><span class="nav-text">2. Package Manager</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-For-backend-NUGET"><span class="nav-text">2.1. For backend - NUGET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-For-front-end-Yarn"><span class="nav-text">2.2. For front-end - Yarn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-Tinh-phu-thuoc"><span class="nav-text">2.2.1. Tính phụ thuộc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-Sources"><span class="nav-text">2.2.2. Sources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-Tai-tao"><span class="nav-text">2.2.3. Tái tạo</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Project-Solution"><span class="nav-text">1. Project &amp; Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Ly-do"><span class="nav-text">1.1. Lý do</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Dung-lai"><span class="nav-text">1.1.1. Dùng lại</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Phan-phoi"><span class="nav-text">1.1.2. Phân phối</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-Trien-khai"><span class="nav-text">1.1.3. Triển khai</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-You-name-it"><span class="nav-text">1.1.4. You name it</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Phan-chia-projects"><span class="nav-text">1.2. Phân chia projects</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Package-Manager"><span class="nav-text">2. Package Manager</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-For-backend-NUGET"><span class="nav-text">2.1. For backend - NUGET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-For-front-end-Yarn"><span class="nav-text">2.2. For front-end - Yarn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-Tinh-phu-thuoc"><span class="nav-text">2.2.1. Tính phụ thuộc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-Sources"><span class="nav-text">2.2.2. Sources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-Tai-tao"><span class="nav-text">2.2.3. Tái tạo</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
       src="/images/theme/avatar.png">
-  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
 <div class="site-state-wrap animated">
@@ -216,20 +216,20 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
-      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="name" content="Hunter Tran">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="name" content="Hunter Tran's Blog">
       <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[ASP.NET] - Project Structure & Package Manager | Tuan Tran's Blog">
+      <meta itemprop="name" content="[ASP.NET] - Project Structure & Package Manager | Hunter Tran's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -252,7 +252,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-07 16:24:15" itemprop="dateModified" datetime="2023-10-07T16:24:15-04:00">2023-10-07</time>
+      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -323,7 +323,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="1-Project-amp-Solution"><a href="#1-Project-amp-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
+<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
 <p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
 <p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
 <h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
@@ -379,7 +379,7 @@
   </button>
   <div class="post-reward">
       <div>
-        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
         <span>PayPal</span>
       </div>
 
@@ -391,11 +391,11 @@
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>Post author:  </strong>Tuan Tran
+      <strong>Post author:  </strong>Hunter Tran
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/" title="[ASP.NET] - Project Structure &amp; Package Manager">https://huntertran.ca/2018/05/09/asp-net-project-structure-package-manager/</a>
+      <a href="https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/" title="[ASP.NET] - Project Structure &amp; Package Manager">https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/</a>
   </li>
   <li class="post-copyright-license">
       <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -443,12 +443,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/" rel="prev" title="[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation">
-                  <i class="fa fa-chevron-left"></i> [ASP.NET for Beginner] - Part 4 - CRUD và Data Validation
+                  <i class="fa fa-angle-left"></i> [ASP.NET for Beginner] - Part 4 - CRUD và Data Validation
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2018/06/12/aspnet-core-2-middleware/" rel="next" title="[ASPNET Core 2] – Middleware">
-                  [ASPNET Core 2] – Middleware <i class="fa fa-chevron-right"></i>
+                  [ASPNET Core 2] – Middleware <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -485,15 +485,14 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2011 – 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
-</div>
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 

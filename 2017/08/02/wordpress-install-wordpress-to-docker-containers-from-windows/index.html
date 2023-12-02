@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,29 +17,29 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wordpress - Install Wordpress to Docker containers from Windows">
-<meta property="og:url" content="https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
-<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:url" content="https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
 <meta property="og:description" content="In this tutorial, I will guide your through on how to install wordpress on a container of docker. The same step can be use to install wordpress on an acture Ubuntu machine, with some small changes">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4344/36326087365_4a8b8a7418_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4403/36326087315_f9a2a593a3_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4426/36326087275_5e74efdb8a_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4323/36326087335_f70a215f0f_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4300/36326087085_a8c29ef11e_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4441/36326087035_022f35bffa_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4325/35517228003_73383a8bcc_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4409/35490057164_0d1ff22807_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/4388/36326086765_8627dd85cc_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4344/36326087365_4a8b8a7418_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4403/36326087315_f9a2a593a3_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4426/36326087275_5e74efdb8a_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4323/36326087335_f70a215f0f_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4300/36326087085_a8c29ef11e_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4441/36326087035_022f35bffa_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4325/35517228003_73383a8bcc_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4409/35490057164_0d1ff22807_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4388/36326086765_8627dd85cc_o.png">
 <meta property="article:published_time" content="2017-08-02T04:18:56.000Z">
-<meta property="article:modified_time" content="2023-10-07T20:24:15.202Z">
-<meta property="article:author" content="Tuan Tran">
+<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="apache">
 <meta property="article:tag" content="container">
 <meta property="article:tag" content="docker">
@@ -47,17 +47,17 @@
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="wordpress">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huntertran.ca/images/flickr/4344/36326087365_4a8b8a7418_o.png">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/4344/36326087365_4a8b8a7418_o.png">
 
 
-<link rel="canonical" href="https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
+<link rel="canonical" href="https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/","path":"2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/","title":"Wordpress - Install Wordpress to Docker containers from Windows"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/","path":"2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/","title":"Wordpress - Install Wordpress to Docker containers from Windows"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Wordpress - Install Wordpress to Docker containers from Windows | Tuan Tran's Blog</title>
+<title>Wordpress - Install Wordpress to Docker containers from Windows | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
@@ -73,7 +73,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -94,7 +94,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Tuan Tran's Blog</p>
+      <p class="site-title">Hunter Tran's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share to be shared</p>
@@ -167,9 +167,9 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
       src="/images/theme/avatar.png">
-  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
 <div class="site-state-wrap animated">
@@ -225,20 +225,20 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
-      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="name" content="Hunter Tran">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="name" content="Hunter Tran's Blog">
       <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Wordpress - Install Wordpress to Docker containers from Windows | Tuan Tran's Blog">
+      <meta itemprop="name" content="Wordpress - Install Wordpress to Docker containers from Windows | Hunter Tran's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -261,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-07 16:24:15" itemprop="dateModified" datetime="2023-10-07T16:24:15-04:00">2023-10-07</time>
+      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -402,7 +402,7 @@ apt-get install apache2</code></pre>
 <p>Network Drive</p>
 <p><img src="/images/flickr/4323/36326087335_f70a215f0f_o.png" alt="network drive edit file"></p>
 <p>Search for this part and change</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml">. . .
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">. . .
  
 &lt;Directory &#x2F;var&#x2F;www&#x2F;html&#x2F;&gt;
     AllowOverride All
@@ -478,7 +478,7 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
   </button>
   <div class="post-reward">
       <div>
-        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
         <span>PayPal</span>
       </div>
 
@@ -490,11 +490,11 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>Post author:  </strong>Tuan Tran
+      <strong>Post author:  </strong>Hunter Tran
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/" title="Wordpress - Install Wordpress to Docker containers from Windows">https://huntertran.ca/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</a>
+      <a href="https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/" title="Wordpress - Install Wordpress to Docker containers from Windows">https://huntertran.github.io/blog/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/</a>
   </li>
   <li class="post-copyright-license">
       <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -543,12 +543,12 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/" rel="prev" title="[ASPNET] Editor for với List và thêm mới item dùng AJAX">
-                  <i class="fa fa-chevron-left"></i> [ASPNET] Editor for với List và thêm mới item dùng AJAX
+                  <i class="fa fa-angle-left"></i> [ASPNET] Editor for với List và thêm mới item dùng AJAX
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2017/08/30/aspnet-identity-1-introduction/" rel="next" title="[ASP.NET Identity] - 1 - Introduction">
-                  [ASP.NET Identity] - 1 - Introduction <i class="fa fa-chevron-right"></i>
+                  [ASP.NET Identity] - 1 - Introduction <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -585,15 +585,14 @@ define(&#39;DB_COLLATE&#39;, &#39;&#39;);</code></pre>
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2011 – 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
-</div>
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 

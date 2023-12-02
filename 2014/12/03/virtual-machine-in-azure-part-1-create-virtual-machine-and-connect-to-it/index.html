@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,15 +17,15 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam. Và 1 dịch vụ rất hay của Azure đó là máy ảo. Bạn được phép tạo một cái máy ảo như máy thật, chạy Windows Server 2012 hoặc 2014, thậm ch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Virtual Machine in Azure Part 1: Create virtual machine and connect to it">
-<meta property="og:url" content="https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
-<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:url" content="https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
 <meta property="og:description" content="Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam. Và 1 dịch vụ rất hay của Azure đó là máy ảo. Bạn được phép tạo một cái máy ảo như máy thật, chạy Windows Server 2012 hoặc 2014, thậm ch">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farm8.staticflickr.com/7490/15316844594_6ea298d7d3_o.png">
@@ -35,22 +35,22 @@
 <meta property="og:image" content="https://farm9.staticflickr.com/8668/15319517683_95abc6ee6a_o.png">
 <meta property="og:image" content="https://farm9.staticflickr.com/8646/15938501022_5b036859a4_o.png">
 <meta property="article:published_time" content="2014-12-03T17:30:51.000Z">
-<meta property="article:modified_time" content="2023-10-07T20:24:15.198Z">
-<meta property="article:author" content="Tuan Tran">
+<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="azure">
 <meta property="article:tag" content="virtual machine">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://farm8.staticflickr.com/7490/15316844594_6ea298d7d3_o.png">
 
 
-<link rel="canonical" href="https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
+<link rel="canonical" href="https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/","path":"2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/","title":"Virtual Machine in Azure Part 1: Create virtual machine and connect to it"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/","path":"2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/","title":"Virtual Machine in Azure Part 1: Create virtual machine and connect to it"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it | Tuan Tran's Blog</title>
+<title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
@@ -66,7 +66,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -87,7 +87,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Tuan Tran's Blog</p>
+      <p class="site-title">Hunter Tran's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share to be shared</p>
@@ -160,9 +160,9 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
       src="/images/theme/avatar.png">
-  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
 <div class="site-state-wrap animated">
@@ -218,20 +218,20 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
-      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="name" content="Hunter Tran">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="name" content="Hunter Tran's Blog">
       <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Virtual Machine in Azure Part 1: Create virtual machine and connect to it | Tuan Tran's Blog">
+      <meta itemprop="name" content="Virtual Machine in Azure Part 1: Create virtual machine and connect to it | Hunter Tran's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -254,7 +254,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-07 16:24:15" itemprop="dateModified" datetime="2023-10-07T16:24:15-04:00">2023-10-07</time>
+      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -326,7 +326,7 @@
   </button>
   <div class="post-reward">
       <div>
-        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
         <span>PayPal</span>
       </div>
 
@@ -338,11 +338,11 @@
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>Post author:  </strong>Tuan Tran
+      <strong>Post author:  </strong>Hunter Tran
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/" title="Virtual Machine in Azure Part 1: Create virtual machine and connect to it">https://huntertran.ca/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</a>
+      <a href="https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/" title="Virtual Machine in Azure Part 1: Create virtual machine and connect to it">https://huntertran.github.io/blog/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</a>
   </li>
   <li class="post-copyright-license">
       <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -387,12 +387,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2014/11/17/xaml-styler-bug-and-fixes/" rel="prev" title="XAML Styler – Bug and fixes">
-                  <i class="fa fa-chevron-left"></i> XAML Styler – Bug and fixes
+                  <i class="fa fa-angle-left"></i> XAML Styler – Bug and fixes
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/" rel="next" title="Virtual Machine in Azure Part 2: Configure to login with Microsoft Account & make it FTP Server">
-                  Virtual Machine in Azure Part 2: Configure to login with Microsoft Account & make it FTP Server <i class="fa fa-chevron-right"></i>
+                  Virtual Machine in Azure Part 2: Configure to login with Microsoft Account & make it FTP Server <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -429,15 +429,14 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2011 – 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
-</div>
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,49 +17,49 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.ca","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception k">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Visual Studio] Fighting with Bugs and Exceptions">
-<meta property="og:url" content="https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
-<meta property="og:site_name" content="Tuan Tran&#39;s Blog">
+<meta property="og:url" content="https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
 <meta property="og:description" content="Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception k">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5628/22152610574_b5e8c867c4_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/618/22152668514_87a33835e7_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/706/22775443405_64dfbcf543_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5649/22761956172_d042077119_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5813/22154779113_ab9acf18e1_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5803/22762522502_765d5041fe_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/757/22588283440_b481c716fc_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5675/22787742791_38aeba8663_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/778/22155676943_b38eeef94c_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5810/22776832185_80b555ab2f_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/750/22788116721_a7e75bc800_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/592/22588970370_394a956f21_o.png">
-<meta property="og:image" content="https://huntertran.ca/images/flickr/5829/22763429822_fe3f21d523_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5628/22152610574_b5e8c867c4_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/618/22152668514_87a33835e7_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/706/22775443405_64dfbcf543_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5649/22761956172_d042077119_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5813/22154779113_ab9acf18e1_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5803/22762522502_765d5041fe_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/757/22588283440_b481c716fc_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5675/22787742791_38aeba8663_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/778/22155676943_b38eeef94c_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5810/22776832185_80b555ab2f_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/750/22788116721_a7e75bc800_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/592/22588970370_394a956f21_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/5829/22763429822_fe3f21d523_o.png">
 <meta property="article:published_time" content="2015-11-05T04:19:10.000Z">
-<meta property="article:modified_time" content="2023-10-07T20:24:15.202Z">
-<meta property="article:author" content="Tuan Tran">
+<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="advanced">
 <meta property="article:tag" content="bugs">
 <meta property="article:tag" content="exception">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huntertran.ca/images/flickr/5628/22152610574_b5e8c867c4_o.png">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/5628/22152610574_b5e8c867c4_o.png">
 
 
-<link rel="canonical" href="https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
+<link rel="canonical" href="https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/","path":"2015/11/05/visual-studio-fighting-with-bugs-and-exception/","title":"[Visual Studio] Fighting with Bugs and Exceptions"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/","path":"2015/11/05/visual-studio-fighting-with-bugs-and-exception/","title":"[Visual Studio] Fighting with Bugs and Exceptions"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[Visual Studio] Fighting with Bugs and Exceptions | Tuan Tran's Blog</title>
+<title>[Visual Studio] Fighting with Bugs and Exceptions | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
@@ -75,7 +75,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-<link rel="alternate" href="/atom.xml" title="Tuan Tran's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -96,7 +96,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Tuan Tran's Blog</p>
+      <p class="site-title">Hunter Tran's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Share to be shared</p>
@@ -169,9 +169,9 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Tuan Tran"
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
       src="/images/theme/avatar.png">
-  <p class="site-author-name" itemprop="name">Tuan Tran</p>
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
   <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
 </div>
 <div class="site-state-wrap animated">
@@ -227,20 +227,20 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/theme/avatar.png">
-      <meta itemprop="name" content="Tuan Tran">
+      <meta itemprop="name" content="Hunter Tran">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tuan Tran's Blog">
+      <meta itemprop="name" content="Hunter Tran's Blog">
       <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[Visual Studio] Fighting with Bugs and Exceptions | Tuan Tran's Blog">
+      <meta itemprop="name" content="[Visual Studio] Fighting with Bugs and Exceptions | Hunter Tran's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -263,7 +263,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-07 16:24:15" itemprop="dateModified" datetime="2023-10-07T16:24:15-04:00">2023-10-07</time>
+      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -382,7 +382,7 @@
   </button>
   <div class="post-reward">
       <div>
-        <img src="/images/theme/paypal.png" alt="Tuan Tran PayPal">
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
         <span>PayPal</span>
       </div>
 
@@ -394,11 +394,11 @@
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>Post author:  </strong>Tuan Tran
+      <strong>Post author:  </strong>Hunter Tran
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/" title="[Visual Studio] Fighting with Bugs and Exceptions">https://huntertran.ca/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</a>
+      <a href="https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/" title="[Visual Studio] Fighting with Bugs and Exceptions">https://huntertran.github.io/blog/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</a>
   </li>
   <li class="post-copyright-license">
       <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -445,12 +445,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/2015/10/26/uwp-create-image-assets-for-your-apps/" rel="prev" title="[UWP] Create image assets for your apps">
-                  <i class="fa fa-chevron-left"></i> [UWP] Create image assets for your apps
+                  <i class="fa fa-angle-left"></i> [UWP] Create image assets for your apps
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/" rel="next" title="Nguyễn Ngọc Tiến - 2015-11-13 15:03:02">
-                  Nguyễn Ngọc Tiến - 2015-11-13 15:03:02 <i class="fa fa-chevron-right"></i>
+                  Nguyễn Ngọc Tiến - 2015-11-13 15:03:02 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -487,15 +487,14 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 2011 – 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Tuan Tran</span>
-</div>
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 

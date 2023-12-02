@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Tuan Tran&#39;s Blog</title>
-  <icon>https://huntertran.ca/icon.png</icon>
+  <title>Hunter Tran&#39;s Blog</title>
+  <icon>https://huntertran.github.io/blog/icon.png</icon>
   <subtitle>Share to be shared</subtitle>
-  <link href="https://huntertran.ca/atom.xml" rel="self"/>
+  <link href="https://huntertran.github.io/blog/atom.xml" rel="self"/>
   
-  <link href="https://huntertran.ca/"/>
-  <updated>2023-10-07T20:24:15.206Z</updated>
-  <id>https://huntertran.ca/</id>
+  <link href="https://huntertran.github.io/blog/"/>
+  <updated>2023-12-02T02:48:49.546Z</updated>
+  <id>https://huntertran.github.io/blog/</id>
   
   <author>
-    <name>Tuan Tran</name>
+    <name>Hunter Tran</name>
     
   </author>
   
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Canada Express Entry Summary</title>
-    <link href="https://huntertran.ca/2023/10/07/Canada-Express-Entry-Summary/"/>
-    <id>https://huntertran.ca/2023/10/07/Canada-Express-Entry-Summary/</id>
+    <link href="https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/"/>
+    <id>https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/</id>
     <published>2023-10-07T20:04:50.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
       
@@ -35,63 +35,63 @@
     
     
     
-    <category term="reports" scheme="https://huntertran.ca/categories/reports/"/>
+    <category term="reports" scheme="https://huntertran.github.io/blog/categories/reports/"/>
     
     
-    <category term="data" scheme="https://huntertran.ca/tags/data/"/>
+    <category term="data" scheme="https://huntertran.github.io/blog/tags/data/"/>
     
-    <category term="powerbi" scheme="https://huntertran.ca/tags/powerbi/"/>
+    <category term="powerbi" scheme="https://huntertran.github.io/blog/tags/powerbi/"/>
     
-    <category term="reports" scheme="https://huntertran.ca/tags/reports/"/>
+    <category term="reports" scheme="https://huntertran.github.io/blog/tags/reports/"/>
     
   </entry>
   
   <entry>
     <title>The problem with Select All option</title>
-    <link href="https://huntertran.ca/2023/09/04/The-problem-with-Select-All-option/"/>
-    <id>https://huntertran.ca/2023/09/04/The-problem-with-Select-All-option/</id>
+    <link href="https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/"/>
+    <id>https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/</id>
     <published>2023-09-04T20:59:10.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;In a list of checkbox, it’s convenient to have a &lt;code&gt;Select all&lt;/code&gt; option at the top. But this option is not as simple as it seems. Let’s walk through the ideas, and the logic behind it.&lt;/p&gt;</summary>
     
     
     
-    <category term="UI" scheme="https://huntertran.ca/categories/UI/"/>
+    <category term="UI" scheme="https://huntertran.github.io/blog/categories/UI/"/>
     
     
-    <category term="ui" scheme="https://huntertran.ca/tags/ui/"/>
+    <category term="ui" scheme="https://huntertran.github.io/blog/tags/ui/"/>
     
   </entry>
   
   <entry>
     <title>XAML for beginner - Part 2</title>
-    <link href="https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/"/>
-    <id>https://huntertran.ca/2023/06/25/XAML-for-beginner-Part-2/</id>
+    <link href="https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/"/>
+    <id>https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/</id>
     <published>2023-06-25T14:31:36.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: &lt;code&gt;ListBox&lt;/code&gt;, &lt;code&gt;GridView&lt;/code&gt;. Also included a super short introduction to MVVM and data binding in XAML.&lt;/p&gt;</summary>
     
     
     
-    <category term="XAML" scheme="https://huntertran.ca/categories/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/categories/XAML/"/>
     
     
-    <category term="XAML" scheme="https://huntertran.ca/tags/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/tags/XAML/"/>
     
-    <category term="Windows Store App" scheme="https://huntertran.ca/tags/Windows-Store-App/"/>
+    <category term="Windows Store App" scheme="https://huntertran.github.io/blog/tags/Windows-Store-App/"/>
     
   </entry>
   
   <entry>
     <title>XAML for beginner - Part 1</title>
-    <link href="https://huntertran.ca/2023/06/24/XAML-for-beginner-Part-1/"/>
-    <id>https://huntertran.ca/2023/06/24/XAML-for-beginner-Part-1/</id>
+    <link href="https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/"/>
+    <id>https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/</id>
     <published>2023-06-24T21:46:07.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. &lt;/p&gt;
@@ -99,21 +99,21 @@
     
     
     
-    <category term="XAML" scheme="https://huntertran.ca/categories/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/categories/XAML/"/>
     
     
-    <category term="XAML" scheme="https://huntertran.ca/tags/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/tags/XAML/"/>
     
-    <category term="Windows Store App" scheme="https://huntertran.ca/tags/Windows-Store-App/"/>
+    <category term="Windows Store App" scheme="https://huntertran.github.io/blog/tags/Windows-Store-App/"/>
     
   </entry>
   
   <entry>
     <title>Optimize list of bool values in C#</title>
-    <link href="https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/"/>
-    <id>https://huntertran.ca/2022/04/24/Optimize-list-of-bool-values-in-C/</id>
+    <link href="https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/"/>
+    <id>https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/</id>
     <published>2022-04-24T00:47:44.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Boolean data type represents the &lt;code&gt;true&lt;/code&gt;&amp;#x2F;&lt;code&gt;false&lt;/code&gt; value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how to flatten them for display on UI.&lt;/p&gt;</summary>
@@ -121,119 +121,119 @@
     
     
     
-    <category term="csharp" scheme="https://huntertran.ca/tags/csharp/"/>
+    <category term="csharp" scheme="https://huntertran.github.io/blog/tags/csharp/"/>
     
-    <category term="bool" scheme="https://huntertran.ca/tags/bool/"/>
+    <category term="bool" scheme="https://huntertran.github.io/blog/tags/bool/"/>
     
-    <category term="boolean" scheme="https://huntertran.ca/tags/boolean/"/>
+    <category term="boolean" scheme="https://huntertran.github.io/blog/tags/boolean/"/>
     
-    <category term="bitwise" scheme="https://huntertran.ca/tags/bitwise/"/>
+    <category term="bitwise" scheme="https://huntertran.github.io/blog/tags/bitwise/"/>
     
-    <category term="optimize" scheme="https://huntertran.ca/tags/optimize/"/>
+    <category term="optimize" scheme="https://huntertran.github.io/blog/tags/optimize/"/>
     
   </entry>
   
   <entry>
     <title>Count down timer with VBA in PowerPoint</title>
-    <link href="https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/"/>
-    <id>https://huntertran.ca/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</id>
+    <link href="https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/"/>
+    <id>https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</id>
     <published>2022-04-17T23:50:01.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Learn how you can create a simple count-down timer for a PowerPoint presentation with Visual Basic for Application (VBA).&lt;/p&gt;</summary>
     
     
     
-    <category term="Office" scheme="https://huntertran.ca/categories/Office/"/>
+    <category term="Office" scheme="https://huntertran.github.io/blog/categories/Office/"/>
     
     
-    <category term="office" scheme="https://huntertran.ca/tags/office/"/>
+    <category term="office" scheme="https://huntertran.github.io/blog/tags/office/"/>
     
   </entry>
   
   <entry>
     <title>An introduction to web service scaling</title>
-    <link href="https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/"/>
-    <id>https://huntertran.ca/2022/01/22/An-introduction-to-web-service-scaling/</id>
+    <link href="https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/"/>
+    <id>https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/</id>
     <published>2022-01-22T07:42:18.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you could utilize these solutions or combine them for a better result.&lt;/p&gt;</summary>
     
     
     
-    <category term="system design" scheme="https://huntertran.ca/categories/system-design/"/>
+    <category term="system design" scheme="https://huntertran.github.io/blog/categories/system-design/"/>
     
     
-    <category term="system design" scheme="https://huntertran.ca/tags/system-design/"/>
+    <category term="system design" scheme="https://huntertran.github.io/blog/tags/system-design/"/>
     
   </entry>
   
   <entry>
     <title>How do I get +10 reputations on StackOverflow everyday</title>
-    <link href="https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/"/>
-    <id>https://huntertran.ca/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</id>
+    <link href="https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/"/>
+    <id>https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</id>
     <published>2021-09-19T00:11:32.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;For a long time, my reputation points on StackOverflow (SO) were just around 200. You get 100 by just registering an account. If your reputation score is high, you can brag about it in your CV, or even better, landing your next dream job. In this blog post, I will tell you the story of how I can get +10 reputations EVERY DAY.&lt;/p&gt;</summary>
     
     
     
-    <category term="Life" scheme="https://huntertran.ca/categories/Life/"/>
+    <category term="Life" scheme="https://huntertran.github.io/blog/categories/Life/"/>
     
     
-    <category term="tips" scheme="https://huntertran.ca/tags/tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>A list of developer surveys</title>
-    <link href="https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/"/>
-    <id>https://huntertran.ca/2021/05/22/A-list-of-developer-surveys/</id>
+    <link href="https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/"/>
+    <id>https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/</id>
     <published>2021-05-22T23:51:39.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;When I’m looking for numbers in my recent research, I need reliable surveys&amp;#x2F;market share statistics in computer technologies. So here is a list of them:&lt;/p&gt;</summary>
     
     
     
-    <category term="research" scheme="https://huntertran.ca/categories/research/"/>
+    <category term="research" scheme="https://huntertran.github.io/blog/categories/research/"/>
     
     
-    <category term="tips" scheme="https://huntertran.ca/tags/tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>install quick assist in Windows 10</title>
-    <link href="https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/"/>
-    <id>https://huntertran.ca/2020/12/09/install-quick-assist-in-Windows-10/</id>
+    <link href="https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/"/>
+    <id>https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/</id>
     <published>2020-12-09T23:22:20.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.&lt;/p&gt;</summary>
     
     
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="tips" scheme="https://huntertran.ca/tags/tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>reset network in Windows 10</title>
-    <link href="https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/"/>
-    <id>https://huntertran.ca/2020/11/25/reset-network-in-Windows-10/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/"/>
+    <id>https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/</id>
     <published>2020-11-25T01:21:29.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;How to reset network settings in Windows 10&lt;/p&gt;
@@ -241,19 +241,19 @@
     
     
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="tips" scheme="https://huntertran.ca/tags/tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>Troubleshoot microphone problems</title>
-    <link href="https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/"/>
-    <id>https://huntertran.ca/2020/11/15/troubleshoot-microphone-problems/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/"/>
+    <id>https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/</id>
     <published>2020-11-15T16:31:16.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instruction on how to:&lt;/p&gt;
@@ -267,19 +267,19 @@
     
     
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="tips" scheme="https://huntertran.ca/tags/tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>Coding Game: Shadow of the Knight - Episode 1</title>
-    <link href="https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/"/>
-    <id>https://huntertran.ca/2020/11/11/Coding-Game-Shadow-of-the-Knight/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/"/>
+    <id>https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/</id>
     <published>2020-11-11T06:09:15.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Difficulty: Medium&lt;/p&gt;
@@ -289,115 +289,115 @@
     
     
     
-    <category term="Coding Challenges" scheme="https://huntertran.ca/categories/Coding-Challenges/"/>
+    <category term="Coding Challenges" scheme="https://huntertran.github.io/blog/categories/Coding-Challenges/"/>
     
     
-    <category term="coding" scheme="https://huntertran.ca/tags/coding/"/>
+    <category term="coding" scheme="https://huntertran.github.io/blog/tags/coding/"/>
     
-    <category term="challenge" scheme="https://huntertran.ca/tags/challenge/"/>
+    <category term="challenge" scheme="https://huntertran.github.io/blog/tags/challenge/"/>
     
   </entry>
   
   <entry>
     <title>How to download Windows 10 ISO</title>
-    <link href="https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/"/>
-    <id>https://huntertran.ca/2020/10/17/How-to-download-Windows-10-ISO/</id>
+    <link href="https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/"/>
+    <id>https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/</id>
     <published>2020-10-17T17:08:02.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instructions on how to download Windows 10 ISO.&lt;/p&gt;</summary>
     
     
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="windows" scheme="https://huntertran.ca/tags/windows/"/>
+    <category term="windows" scheme="https://huntertran.github.io/blog/tags/windows/"/>
     
-    <category term="iso" scheme="https://huntertran.ca/tags/iso/"/>
+    <category term="iso" scheme="https://huntertran.github.io/blog/tags/iso/"/>
     
   </entry>
   
   <entry>
     <title>Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging</title>
-    <link href="https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
-    <id>https://huntertran.ca/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
+    <link href="https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
+    <id>https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
     <published>2020-10-09T01:26:02.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;NLTK has a function called &lt;code&gt;regexpparser&lt;/code&gt; to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.&lt;/p&gt;</summary>
     
     
     
-    <category term="research" scheme="https://huntertran.ca/categories/research/"/>
+    <category term="research" scheme="https://huntertran.github.io/blog/categories/research/"/>
     
     
-    <category term="python" scheme="https://huntertran.ca/tags/python/"/>
+    <category term="python" scheme="https://huntertran.github.io/blog/tags/python/"/>
     
-    <category term="nlp" scheme="https://huntertran.ca/tags/nlp/"/>
+    <category term="nlp" scheme="https://huntertran.github.io/blog/tags/nlp/"/>
     
-    <category term="nltk" scheme="https://huntertran.ca/tags/nltk/"/>
+    <category term="nltk" scheme="https://huntertran.github.io/blog/tags/nltk/"/>
     
-    <category term="research" scheme="https://huntertran.ca/tags/research/"/>
+    <category term="research" scheme="https://huntertran.github.io/blog/tags/research/"/>
     
   </entry>
   
   <entry>
     <title>GitHub codespaces - write code in web browser</title>
-    <link href="https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
-    <id>https://huntertran.ca/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
+    <link href="https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
+    <id>https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
     <published>2020-09-03T20:02:21.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long-awaited features are in beta, invitation-only, and it is &lt;code&gt;GitHub Codespaces&lt;/code&gt;.&lt;/p&gt;</summary>
     
     
     
-    <category term="Others" scheme="https://huntertran.ca/categories/Others/"/>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="github" scheme="https://huntertran.ca/tags/github/"/>
+    <category term="github" scheme="https://huntertran.github.io/blog/tags/github/"/>
     
-    <category term="vscode" scheme="https://huntertran.ca/tags/vscode/"/>
+    <category term="vscode" scheme="https://huntertran.github.io/blog/tags/vscode/"/>
     
   </entry>
   
   <entry>
     <title>Migrate Azure DevOps TFS to Git reserving history</title>
-    <link href="https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
-    <id>https://huntertran.ca/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
+    <link href="https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
+    <id>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
     <published>2020-07-30T04:31:02.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft acquired GitHub, and everyone has an unlimited number of private repositories. This reason alone makes me want to move all my project and source code to GitHub.&lt;/p&gt;</summary>
     
     
     
-    <category term="Others" scheme="https://huntertran.ca/categories/Others/"/>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
     
-    <category term="Computer Tips" scheme="https://huntertran.ca/categories/Computer-Tips/"/>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
     
     
-    <category term="git" scheme="https://huntertran.ca/tags/git/"/>
+    <category term="git" scheme="https://huntertran.github.io/blog/tags/git/"/>
     
-    <category term="TFS" scheme="https://huntertran.ca/tags/TFS/"/>
+    <category term="TFS" scheme="https://huntertran.github.io/blog/tags/TFS/"/>
     
-    <category term="devops" scheme="https://huntertran.ca/tags/devops/"/>
+    <category term="devops" scheme="https://huntertran.github.io/blog/tags/devops/"/>
     
   </entry>
   
   <entry>
     <title>Connect with Google Cloud Compute Engine (Virtual Machine) using PuTTY</title>
-    <link href="https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
-    <id>https://huntertran.ca/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
+    <link href="https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
+    <id>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
     <published>2020-07-20T22:28:46.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;I don’t know why Google makes it so challenging to connect to its Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?&lt;/p&gt;
@@ -405,70 +405,70 @@
     
     
     
-    <category term="Others" scheme="https://huntertran.ca/categories/Others/"/>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
     
     
-    <category term="virtual machine" scheme="https://huntertran.ca/tags/virtual-machine/"/>
+    <category term="virtual machine" scheme="https://huntertran.github.io/blog/tags/virtual-machine/"/>
     
-    <category term="compute engine" scheme="https://huntertran.ca/tags/compute-engine/"/>
+    <category term="compute engine" scheme="https://huntertran.github.io/blog/tags/compute-engine/"/>
     
-    <category term="google cloud" scheme="https://huntertran.ca/tags/google-cloud/"/>
+    <category term="google cloud" scheme="https://huntertran.github.io/blog/tags/google-cloud/"/>
     
-    <category term="putty" scheme="https://huntertran.ca/tags/putty/"/>
+    <category term="putty" scheme="https://huntertran.github.io/blog/tags/putty/"/>
     
   </entry>
   
   <entry>
     <title>[java] Refactoring Clones type 2</title>
-    <link href="https://huntertran.ca/2019/10/19/refactoring-clones-type-2/"/>
-    <id>https://huntertran.ca/2019/10/19/refactoring-clones-type-2/</id>
+    <link href="https://huntertran.github.io/blog/2019/10/19/refactoring-clones-type-2/"/>
+    <id>https://huntertran.github.io/blog/2019/10/19/refactoring-clones-type-2/</id>
     <published>2019-10-19T20:10:18.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Removing clones in code maybe is the most challenging type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#&lt;/p&gt;</summary>
     
     
     
-    <category term="CSharp" scheme="https://huntertran.ca/categories/CSharp/"/>
+    <category term="CSharp" scheme="https://huntertran.github.io/blog/categories/CSharp/"/>
     
-    <category term="Java" scheme="https://huntertran.ca/categories/Java/"/>
+    <category term="Java" scheme="https://huntertran.github.io/blog/categories/Java/"/>
     
     
-    <category term="clone" scheme="https://huntertran.ca/tags/clone/"/>
+    <category term="clone" scheme="https://huntertran.github.io/blog/tags/clone/"/>
     
-    <category term="refactor" scheme="https://huntertran.ca/tags/refactor/"/>
+    <category term="refactor" scheme="https://huntertran.github.io/blog/tags/refactor/"/>
     
   </entry>
   
   <entry>
     <title>[vuejs] - Publish your vue component to npmjs using vue-cli 3</title>
-    <link href="https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/"/>
-    <id>https://huntertran.ca/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</id>
+    <link href="https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/"/>
+    <id>https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</id>
     <published>2019-08-18T18:54:08.000Z</published>
-    <updated>2023-10-07T20:24:15.206Z</updated>
+    <updated>2023-12-02T02:48:49.546Z</updated>
     
     
     <summary type="html">&lt;p&gt;Using Vuejs, sometime you need to publish your awesome &lt;code&gt;component&lt;/code&gt; with the world. Sure you can share the &lt;code&gt;.vue&lt;/code&gt; file, but how can you publish it to &lt;code&gt;npmjs&lt;/code&gt;, for the ease of installation and usage of others?&lt;/p&gt;</summary>
     
     
     
-    <category term="CSharp" scheme="https://huntertran.ca/categories/CSharp/"/>
+    <category term="CSharp" scheme="https://huntertran.github.io/blog/categories/CSharp/"/>
     
-    <category term="ASP.NET" scheme="https://huntertran.ca/categories/CSharp/ASP-NET/"/>
+    <category term="ASP.NET" scheme="https://huntertran.github.io/blog/categories/CSharp/ASP-NET/"/>
     
-    <category term="VSCode" scheme="https://huntertran.ca/categories/VSCode/"/>
+    <category term="VSCode" scheme="https://huntertran.github.io/blog/categories/VSCode/"/>
     
-    <category term="JavaScript and TypeScript" scheme="https://huntertran.ca/categories/JavaScript-and-TypeScript/"/>
+    <category term="JavaScript and TypeScript" scheme="https://huntertran.github.io/blog/categories/JavaScript-and-TypeScript/"/>
     
     
-    <category term="component" scheme="https://huntertran.ca/tags/component/"/>
+    <category term="component" scheme="https://huntertran.github.io/blog/tags/component/"/>
     
-    <category term="vue" scheme="https://huntertran.ca/tags/vue/"/>
+    <category term="vue" scheme="https://huntertran.github.io/blog/tags/vue/"/>
     
-    <category term="vue-cli" scheme="https://huntertran.ca/tags/vue-cli/"/>
+    <category term="vue-cli" scheme="https://huntertran.github.io/blog/tags/vue-cli/"/>
     
-    <category term="vuejs" scheme="https://huntertran.ca/tags/vuejs/"/>
+    <category term="vuejs" scheme="https://huntertran.github.io/blog/tags/vuejs/"/>
     
   </entry>
   
