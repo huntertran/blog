@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Tưởng tượng bạn có list các item trong ViewModel Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao? Đọc xong bài này, bạn sẽ biết cách làm nhóe">
 <meta property="og:type" content="article">
@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/4169/34124808091_f4c2130fd2_o.jpg">
 <meta property="article:published_time" content="2017-04-25T07:32:39.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="editorfor">
 <meta property="article:tag" content="ajax">
@@ -50,7 +50,7 @@
 <title>[ASPNET] Editor for với List và thêm mới item dùng AJAX | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -327,188 +327,188 @@
 <p>Từ một bài viết thú vị từ Matt Lunn <a target="_blank" rel="noopener" href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
 <h1 id="2-Class"><a href="#2-Class" class="headerlink" title="2. Class"></a>2. Class</h1><p><a id="markdown-class" name="class"></a></p>
 <h2 id="2-1-C-code"><a href="#2-1-C-code" class="headerlink" title="2.1. C# code"></a>2.1. C# code</h2><p><a id="markdown-c%23-code" name="c%23-code"></a></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace Yournamespace.Utilities
+<pre><code class="highlight cs"><span class="keyword">namespace</span> <span class="title">Yournamespace.Utilities</span>
 &#123;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Text;
-    using System.Web.Mvc;
-    using System.Web.Mvc.Html;
+    <span class="keyword">using</span> System;
+    <span class="keyword">using</span> System.Collections.Generic;
+    <span class="keyword">using</span> System.Linq;
+    <span class="keyword">using</span> System.Linq.Expressions;
+    <span class="keyword">using</span> System.Text;
+    <span class="keyword">using</span> System.Web.Mvc;
+    <span class="keyword">using</span> System.Web.Mvc.Html;
  
-    public static class HtmlHelperExtensions
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">HtmlHelperExtensions</span>
     &#123;
-        &#x2F;&#x2F;&#x2F; &lt;summary&gt;
-        &#x2F;&#x2F;&#x2F; Generate appropriate control for a list of data
-        &#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;
-        &#x2F;&#x2F;&#x2F; &lt;typeparam name&#x3D;&quot;TModel&quot;&gt;The Model contain the list&lt;&#x2F;typeparam&gt;
-        &#x2F;&#x2F;&#x2F; &lt;typeparam name&#x3D;&quot;TValue&quot;&gt;The Model of list of items&lt;&#x2F;typeparam&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;html&quot;&gt;&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;propertyExpression&quot;&gt;Which property&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;indexResolverExpression&quot;&gt;Select the property to be the index&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;isIncludeNewItem&quot;&gt;Set to true to include a default new item&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;includeIndexField&quot;&gt;Set to true to include Index in values sent to server&lt;&#x2F;param&gt;
-        &#x2F;&#x2F;&#x2F; &lt;returns&gt;HTML codes of editorfor a list of items&lt;&#x2F;returns&gt;
-        public static MvcHtmlString EditorForMany&lt;TModel, TValue&gt;(
-            this HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TModel, IEnumerable&lt;TValue&gt;&gt;&gt; propertyExpression,
-            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression &#x3D; null,
-            bool isIncludeNewItem &#x3D; false,
-            bool includeIndexField &#x3D; true)
-            where TModel 
-                : class where TValue 
-                : new()
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> Generate appropriate control for a list of data</span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;TModel&quot;&gt;</span>The Model contain the list<span class="doctag">&lt;/typeparam&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;TValue&quot;&gt;</span>The Model of list of items<span class="doctag">&lt;/typeparam&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;html&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;propertyExpression&quot;&gt;</span>Which property<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;indexResolverExpression&quot;&gt;</span>Select the property to be the index<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;isIncludeNewItem&quot;&gt;</span>Set to true to include a default new item<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;includeIndexField&quot;&gt;</span>Set to true to include Index in values sent to server<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>HTML codes of editorfor a list of items<span class="doctag">&lt;/returns&gt;</span></span>
+        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MvcHtmlString <span class="title">EditorForMany</span>&lt;<span class="title">TModel</span>, <span class="title">TValue</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            <span class="keyword">this</span> HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, IEnumerable&lt;TValue&gt;&gt;&gt; propertyExpression,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression = <span class="literal">null</span>,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> isIncludeNewItem = <span class="literal">false</span>,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> includeIndexField = <span class="literal">true</span></span>)</span>
+<span class="function">            <span class="keyword">where</span> TModel </span>
+<span class="function">                : <span class="keyword">class</span> <span class="keyword">where</span> TValue </span>
+<span class="function">                : <span class="keyword">new</span>()</span>
         &#123;
-            var items &#x3D; propertyExpression.Compile()(html.ViewData.Model);
-            var htmlBuilder &#x3D; new StringBuilder();
-            var htmlFieldName &#x3D; ExpressionHelper.GetExpressionText(propertyExpression);
-            var htmlFieldNameWithPrefix &#x3D; html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName);
-            var indexResolver &#x3D; GetIndexResolver(indexResolverExpression);
-            items &#x3D; AddDefaultNewItem(isIncludeNewItem, items);
+            <span class="keyword">var</span> items = propertyExpression.Compile()(html.ViewData.Model);
+            <span class="keyword">var</span> htmlBuilder = <span class="keyword">new</span> StringBuilder();
+            <span class="keyword">var</span> htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression);
+            <span class="keyword">var</span> htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName);
+            <span class="keyword">var</span> indexResolver = GetIndexResolver(indexResolverExpression);
+            items = AddDefaultNewItem(isIncludeNewItem, items);
  
-            foreach (var item in items)
+            <span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> items)
             &#123;
-                var dummy &#x3D; new
+                <span class="keyword">var</span> dummy = <span class="keyword">new</span>
                 &#123;
-                    Item &#x3D; item
+                    Item = item
                 &#125;;
  
-                var guid &#x3D; indexResolver(item);
+                <span class="keyword">var</span> guid = indexResolver(item);
  
-                var memberExp &#x3D; Expression.MakeMemberAccess(
+                <span class="keyword">var</span> memberExp = Expression.MakeMemberAccess(
                     Expression.Constant(dummy),
-                    dummy.GetType().GetProperty(&quot;Item&quot;));
+                    dummy.GetType().GetProperty(<span class="string">&quot;Item&quot;</span>));
  
-                var singleItemExp &#x3D; Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);
+                <span class="keyword">var</span> singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);
  
-                guid &#x3D; string.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid);
+                guid = <span class="built_in">string</span>.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid);
                 BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp);
             &#125;
  
-            return new MvcHtmlString(htmlBuilder.ToString());
+            <span class="keyword">return</span> <span class="keyword">new</span> MvcHtmlString(htmlBuilder.ToString());
         &#125;
  
-        private static void BuildHtmlString&lt;TModel, TValue&gt;(
-            HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression,
-            bool includeIndexField,
-            StringBuilder htmlBuilder,
-            string htmlFieldName,
-            string htmlFieldNameWithPrefix,
-            string guid,
-            Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp)
-            where TModel : class
-            where TValue : new()
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">BuildHtmlString</span>&lt;<span class="title">TModel</span>, <span class="title">TValue</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> includeIndexField,</span></span>
+<span class="params"><span class="function">            StringBuilder htmlBuilder,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> htmlFieldName,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> htmlFieldNameWithPrefix,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> guid,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp</span>)</span>
+<span class="function">            <span class="keyword">where</span> TModel : <span class="keyword">class</span></span>
+<span class="function">            <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
         &#123;
-            htmlBuilder.Append(@&quot;&lt;div&gt;&quot;);
+            htmlBuilder.Append(<span class="string">@&quot;&lt;div&gt;&quot;</span>);
  
-            if (includeIndexField)
+            <span class="keyword">if</span> (includeIndexField)
             &#123;
                 htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression));
             &#125;
  
-            htmlBuilder.Append(html.EditorFor(singleItemExp, null, $&quot;&#123;htmlFieldName&#125;[&#123;guid&#125;]&quot;));
+            htmlBuilder.Append(html.EditorFor(singleItemExp, <span class="literal">null</span>, <span class="string">$&quot;<span class="subst">&#123;htmlFieldName&#125;</span>[<span class="subst">&#123;guid&#125;</span>]&quot;</span>));
  
-            htmlBuilder.Append(@&quot;&lt;&#x2F;div&gt;&quot;);
+            htmlBuilder.Append(<span class="string">@&quot;&lt;/div&gt;&quot;</span>);
         &#125;
  
-        private static IEnumerable&lt;TValue&gt; AddDefaultNewItem&lt;TValue&gt;(bool isIncludeNewItem, IEnumerable&lt;TValue&gt; items) where TValue : new()
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">IEnumerable</span>&lt;<span class="title">TValue</span>&gt; <span class="title">AddDefaultNewItem</span>&lt;<span class="title">TValue</span>&gt;(<span class="params"><span class="built_in">bool</span> isIncludeNewItem, IEnumerable&lt;TValue&gt; items</span>) <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
         &#123;
-            if (isIncludeNewItem)
+            <span class="keyword">if</span> (isIncludeNewItem)
             &#123;
-                items &#x3D; items.Concat(new[]
+                items = items.Concat(<span class="keyword">new</span>[]
                 &#123;
-                    new TValue()
+                    <span class="keyword">new</span> TValue()
                 &#125;);
             &#125;
  
-            return items;
+            <span class="keyword">return</span> items;
         &#125;
  
-        private static Func&lt;TValue, string&gt; GetIndexResolver&lt;TValue&gt;(Expression&lt;Func&lt;TValue, string&gt;&gt; indexResolverExpression) where TValue : new()
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">Func</span>&lt;<span class="title">TValue</span>, <span class="title">string</span>&gt; <span class="title">GetIndexResolver</span>&lt;<span class="title">TValue</span>&gt;(<span class="params">Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression</span>) <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
         &#123;
-            Func&lt;TValue, string&gt; indexResolver;
-            if (indexResolverExpression &#x3D;&#x3D; null)
+            Func&lt;TValue, <span class="built_in">string</span>&gt; indexResolver;
+            <span class="keyword">if</span> (indexResolverExpression == <span class="literal">null</span>)
             &#123;
-                indexResolver &#x3D; x &#x3D;&gt; null;
+                indexResolver = x =&gt; <span class="literal">null</span>;
             &#125;
-            else
+            <span class="keyword">else</span>
             &#123;
-                indexResolver &#x3D; indexResolverExpression.Compile();
+                indexResolver = indexResolverExpression.Compile();
             &#125;
  
-            return indexResolver;
+            <span class="keyword">return</span> indexResolver;
         &#125;
  
-        public static MvcHtmlString EditorForManyIndexField&lt;TModel&gt;(
-            this HtmlHelper&lt;TModel&gt; html,
-            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression &#x3D; null)
+        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MvcHtmlString <span class="title">EditorForManyIndexField</span>&lt;<span class="title">TModel</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            <span class="keyword">this</span> HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, <span class="built_in">string</span>&gt;&gt; indexResolverExpression = <span class="literal">null</span></span>)</span>
         &#123;
-            var htmlPrefix &#x3D; html.ViewData.TemplateInfo.HtmlFieldPrefix;
-            var first &#x3D; htmlPrefix.LastIndexOf(&#39;[&#39;);
-            var last &#x3D; htmlPrefix.IndexOf(&#39;]&#39;, first + 1);
+            <span class="keyword">var</span> htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix;
+            <span class="keyword">var</span> first = htmlPrefix.LastIndexOf(<span class="string">&#x27;[&#x27;</span>);
+            <span class="keyword">var</span> last = htmlPrefix.IndexOf(<span class="string">&#x27;]&#x27;</span>, first + <span class="number">1</span>);
  
-            if (first &#x3D;&#x3D; -1 || last &#x3D;&#x3D; -1)
+            <span class="keyword">if</span> (first == <span class="number">-1</span> || last == <span class="number">-1</span>)
             &#123;
-                throw new InvalidOperationException(&quot;EditorForManyIndexField called when not in a EditorForMany context&quot;);
+                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">&quot;EditorForManyIndexField called when not in a EditorForMany context&quot;</span>);
             &#125;
  
-            var htmlFieldNameWithPrefix &#x3D; htmlPrefix.Substring(0, first);
-            var guid &#x3D; htmlPrefix.Substring(first + 1, last - first - 1);
+            <span class="keyword">var</span> htmlFieldNameWithPrefix = htmlPrefix.Substring(<span class="number">0</span>, first);
+            <span class="keyword">var</span> guid = htmlPrefix.Substring(first + <span class="number">1</span>, last - first - <span class="number">1</span>);
  
-            return _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression);
+            <span class="keyword">return</span> _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression);
         &#125;
  
-        private static MvcHtmlString _EditorForManyIndexField&lt;TModel&gt;(
-            string htmlFieldNameWithPrefix,
-            string guid,
-            Expression&lt;Func&lt;TModel, string&gt;&gt; indexResolverExpression)
+        <span class="keyword">private</span> <span class="keyword">static</span> MvcHtmlString _EditorForManyIndexField&lt;TModel&gt;(
+            <span class="built_in">string</span> htmlFieldNameWithPrefix,
+            <span class="built_in">string</span> guid,
+            Expression&lt;Func&lt;TModel, <span class="built_in">string</span>&gt;&gt; indexResolverExpression)
         &#123;
-            var htmlBuilder &#x3D; new StringBuilder();
+            <span class="keyword">var</span> htmlBuilder = <span class="keyword">new</span> StringBuilder();
             htmlBuilder.AppendFormat(
-                @&quot;&lt;input type&#x3D;&quot;&quot;hidden&quot;&quot; name&#x3D;&quot;&quot;&#123;0&#125;.Index&quot;&quot; value&#x3D;&quot;&quot;&#123;1&#125;&quot;&quot; &#x2F;&gt;&quot;,
+                <span class="string">@&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;.Index&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;</span>,
                 htmlFieldNameWithPrefix,
                 guid);
  
-            if (indexResolverExpression !&#x3D; null)
+            <span class="keyword">if</span> (indexResolverExpression != <span class="literal">null</span>)
             &#123;
                 htmlBuilder.AppendFormat(
-                    @&quot;&lt;input type&#x3D;&quot;&quot;hidden&quot;&quot; name&#x3D;&quot;&quot;&#123;0&#125;[&#123;1&#125;].&#123;2&#125;&quot;&quot; value&#x3D;&quot;&quot;&#123;1&#125;&quot;&quot; &#x2F;&gt;&quot;,
+                    <span class="string">@&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;[&#123;1&#125;].&#123;2&#125;&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;</span>,
                     htmlFieldNameWithPrefix,
                     guid,
                     ExpressionHelper.GetExpressionText(indexResolverExpression));
             &#125;
  
-            return new MvcHtmlString(htmlBuilder.ToString());
+            <span class="keyword">return</span> <span class="keyword">new</span> MvcHtmlString(htmlBuilder.ToString());
         &#125;
     &#125;
 &#125;</code></pre>
 
 <h2 id="2-2-JavaScript-Code"><a href="#2-2-JavaScript-Code" class="headerlink" title="2.2. JavaScript Code"></a>2.2. JavaScript Code</h2><p><a id="markdown-javascript-code" name="javascript-code"></a></p>
 <p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">function GenerateGuid() &#123;
-    function s4() &#123;
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
+<pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">GenerateGuid</span>(<span class="params"></span>) &#123;
+    <span class="keyword">function</span> <span class="title function_">s4</span>(<span class="params"></span>) &#123;
+        <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">floor</span>((<span class="number">1</span> + <span class="title class_">Math</span>.<span class="title function_">random</span>()) * <span class="number">0x10000</span>)
+            .<span class="title function_">toString</span>(<span class="number">16</span>)
+            .<span class="title function_">substring</span>(<span class="number">1</span>);
     &#125;
  
-    return s4() + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + &quot;-&quot; + s4() + s4() + s4();
+    <span class="keyword">return</span> <span class="title function_">s4</span>() + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="title function_">s4</span>() + <span class="title function_">s4</span>();
 &#125;
  
-function AssignAddMoreButton() &#123;
-    $(&quot;.add-more-button&quot;).click(function (event) &#123;
-        event.preventDefault();
-        debugger;
-        var id &#x3D; &quot;#&quot; + $(this).data(&quot;class&quot;);
-        var clone &#x3D; $(id).children().last().clone();
-        var guid &#x3D; clone.children().first().val();
-        var regex &#x3D; new RegExp(guid, &quot;g&quot;);
-        var newHtml &#x3D; clone.html(function (i, oldHtml) &#123;
-            return oldHtml.replace(regex, GenerateGuid());
+<span class="keyword">function</span> <span class="title function_">AssignAddMoreButton</span>(<span class="params"></span>) &#123;
+    $(<span class="string">&quot;.add-more-button&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params">event</span>) &#123;
+        event.<span class="title function_">preventDefault</span>();
+        <span class="keyword">debugger</span>;
+        <span class="keyword">var</span> id = <span class="string">&quot;#&quot;</span> + $(<span class="variable language_">this</span>).<span class="title function_">data</span>(<span class="string">&quot;class&quot;</span>);
+        <span class="keyword">var</span> clone = $(id).<span class="title function_">children</span>().<span class="title function_">last</span>().<span class="title function_">clone</span>();
+        <span class="keyword">var</span> guid = clone.<span class="title function_">children</span>().<span class="title function_">first</span>().<span class="title function_">val</span>();
+        <span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="title class_">RegExp</span>(guid, <span class="string">&quot;g&quot;</span>);
+        <span class="keyword">var</span> newHtml = clone.<span class="title function_">html</span>(<span class="keyword">function</span> (<span class="params">i, oldHtml</span>) &#123;
+            <span class="keyword">return</span> oldHtml.<span class="title function_">replace</span>(regex, <span class="title class_">GenerateGuid</span>());
         &#125;);
-        $(id).append(newHtml);
+        $(id).<span class="title function_">append</span>(newHtml);
     &#125;);
 &#125;</code></pre>
 
@@ -516,25 +516,25 @@ function AssignAddMoreButton() &#123;
 <h2 id="3-1-Chuan-bi-model"><a href="#3-1-Chuan-bi-model" class="headerlink" title="3.1. Chuẩn bị model"></a>3.1. Chuẩn bị model</h2><p><a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B-model" name="chu%E1%BA%A9n-b%E1%BB%8B-model"></a></p>
 <p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
 <p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class Model
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Model</span>
 &#123;
-    &#x2F;&#x2F; Your normal, already existed properties
+    <span class="comment">// Your normal, already existed properties</span>
  
-    &#x2F;&#x2F; set to false if you don&#39;t want to generate a HTML input tag
-    &#x2F;&#x2F; for it when using with editorfor control
-    [ScaffoldColumn(false)]
-    public string Index &#123; get; set; &#125;
+    <span class="comment">// set to false if you don&#x27;t want to generate a HTML input tag</span>
+    <span class="comment">// for it when using with editorfor control</span>
+    [<span class="meta">ScaffoldColumn(false)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> Index &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
 &#125;</code></pre>
 
 <h2 id="3-2-Razor-code"><a href="#3-2-Razor-code" class="headerlink" title="3.2. Razor code"></a>3.2. Razor code</h2><p><a id="markdown-razor-code" name="razor-code"></a></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">@using(Html.BeginForm(&quot;ActionName&quot;,&quot;ControllerName&quot;,FormMethod.Post, new &#123;@class&#x3D;&quot;CssClassName&quot;&#125;))
+<pre><code class="highlight cs">@using(Html.BeginForm(<span class="string">&quot;ActionName&quot;</span>,<span class="string">&quot;ControllerName&quot;</span>,FormMethod.Post, <span class="keyword">new</span> &#123;@class=<span class="string">&quot;CssClassName&quot;</span>&#125;))
 &#123;
-    &#x2F;&#x2F; the last parameter &quot;true&quot; is to generate a default item
-    @Html.EditorForMany(x &#x3D;&gt; x.Model, x &#x3D;&gt; x.Index, true)
+    <span class="comment">// the last parameter &quot;true&quot; is to generate a default item</span>
+    @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, <span class="literal">true</span>)
 &#125;
  
  
-    &#x2F;&#x2F; include the javascript code file above
+    <span class="comment">// include the javascript code file above</span>
     AssignAddMoreButton();</code></pre>
 
 <p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
@@ -551,9 +551,9 @@ function AssignAddMoreButton() &#123;
 <li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
 <li>Dựng code HTML</li>
 </ol>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
-    &lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;
-&lt;&#x2F;div&gt;</code></pre>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span>
+    <span class="comment">&lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
 
 <h2 id="5-2-Tai-sao-lai-can-Index"><a href="#5-2-Tai-sao-lai-can-Index" class="headerlink" title="5.2. Tại sao lại cần Index"></a>5.2. Tại sao lại cần Index</h2><p><a id="markdown-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index" name="t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index"></a></p>
 <p>Có 2 cách để send một list data tới controller</p>
@@ -565,8 +565,8 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[0].Data&quot;&#x2F;&gt;
-&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[1].Data&quot;&#x2F;&gt;</code></pre>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[0].Data&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[1].Data&quot;</span>/&gt;</span></code></pre>
 
 <ul>
 <li>dùng mảng có index dạng string<ul>
@@ -575,11 +575,11 @@ function AssignAddMoreButton() &#123;
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;YourList.Index&quot; value&#x3D;&quot;radomGuid1&quot;&#x2F;&gt;
-&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[randomGuid1].Data&quot;&#x2F;&gt;
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList.Index&quot;</span> <span class="attr">value</span>=<span class="string">&quot;radomGuid1&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[randomGuid1].Data&quot;</span>/&gt;</span>
  
-&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;YourList.Index&quot; value&#x3D;&quot;anotherGuid2&quot;&#x2F;&gt;
-&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;YourList[anotherGuid2].Data&quot;&#x2F;&gt;</code></pre>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList.Index&quot;</span> <span class="attr">value</span>=<span class="string">&quot;anotherGuid2&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[anotherGuid2].Data&quot;</span>/&gt;</span></code></pre>
 
 <p>Như bạn cũng thấy, giá trị của hidden input tag có thể là bất cứ gì, miễn là giá trị trong ngoặc vuông giống với nó.</p>
 <p>Bước 1 bước xa hơn, đoạn code javascript bên trên sẽ tạo ra index dạng GUID, cho nên bạn sẽ không phải lo về vấn đề trùng lặp index. Tuy nhiên, nó ko phải là GUID thiệt, vì để generate GUID thiệt sẽ hơi phức tạp, và làm cho app nặng lên, giống như xài tên lửa đi giết ruồi, cho nên để cho đơn giản, đoạn code đó chỉ sinh ra “fake” GUID, nhưng theo cách code thì khó mà trùng được</p>
@@ -706,7 +706,7 @@ function AssignAddMoreButton() &#123;
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

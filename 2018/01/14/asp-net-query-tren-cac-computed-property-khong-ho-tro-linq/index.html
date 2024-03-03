@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng:  LINQ và Entity Framework không hỗ trợ query trên các property được tính toán dựa trên các field khác  Vậy giờ ta phải làm sao? May mắ">
 <meta property="og:type" content="article">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="Trong một project gần đây ở công ty, tôi bàng hoàng nhận ra rằng:  LINQ và Entity Framework không hỗ trợ query trên các property được tính toán dựa trên các field khác  Vậy giờ ta phải làm sao? May mắ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-01-14T16:18:05.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="Computed Property">
 <meta property="article:tag" content="LINQ">
@@ -47,7 +47,7 @@
 <title>[asp.net] - Query trên các computed property không hỗ trợ LINQ | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -248,7 +248,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -311,45 +311,45 @@
 
 <h1 id="1-Computed-Property"><a href="#1-Computed-Property" class="headerlink" title="1. Computed Property"></a>1. Computed Property</h1><p><a id="markdown-computed-property" name="computed-property"></a></p>
 <p>Là một property chỉ có hàm get, và trong get đó, giá trị trả về được tính toán dựa trên các property khác</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TestViewModel
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestViewModel</span>
 &#123;
-    [Required]
-    [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
-    public string FirstName &#123; get; set; &#125;
+    [<span class="meta">Required</span>]
+    [<span class="meta">MaxLength(10, ErrorMessage = <span class="string">&quot;Length must fewer than &#123;1&#125;&quot;</span>)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> FirstName &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
  
-    [Required]
-    [StringLength(10)]
-    public string LastName &#123; get; set; &#125;
+    [<span class="meta">Required</span>]
+    [<span class="meta">StringLength(10)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> LastName &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
  
-    &#x2F;&#x2F; Computed Property
-    [NotMapped]
-    public string FullName &#x3D;&gt; FirstName + LastName;
+    <span class="comment">// Computed Property</span>
+    [<span class="meta">NotMapped</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> FullName =&gt; FirstName + LastName;
 &#125;</code></pre>
 
 <p>Theo các chuẩn thiết kế database, một column phải chứa dữ liệu mà không thể được suy ra từ các dữ liệu khác. Đoạn Attribute <code>[NotMapped]</code> phục vụ cho việc đó. EF sẽ không sinh ra code generate column <code>FullName</code> nếu bạn dùng code first, không cố gắng tìm column <code>FullName</code> trong table nếu bạn dùng database first</p>
 <h1 id="2-Simple-LINQ"><a href="#2-Simple-LINQ" class="headerlink" title="2. Simple LINQ"></a>2. Simple LINQ</h1><p><a id="markdown-simple-linq" name="simple-linq"></a></p>
 <p>Để query một giá trị nào đó trong Database dùng Entity Framework, bạn có thể dùng LINQ rất đơn giản như sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; TableNameWithS is your table name in plural
+<pre><code class="highlight cs"><span class="comment">// TableNameWithS is your table name in plural</span>
  
-var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FirstName.Contains(&quot;test&quot;));</code></pre>
+<span class="keyword">var</span> names = dbContext.TableNameWithS.Where(x =&gt; x.FirstName.Contains(<span class="string">&quot;test&quot;</span>));</code></pre>
 
 <p>Nhưng cũng đoạn code đó sẽ gây lỗi nếu bạn cố gắn dùng nó với Property <code>FullName</code></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; BUG BUG BUG
+<pre><code class="highlight cs"><span class="comment">// BUG BUG BUG</span>
 
-var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
+<span class="keyword">var</span> names = dbContext.TableNameWithS.Where(x =&gt; x.FullName.Contains(<span class="string">&quot;test&quot;</span>));</code></pre>
 
 <h1 id="3-Solution"><a href="#3-Solution" class="headerlink" title="3. Solution"></a>3. Solution</h1><p><a id="markdown-solution" name="solution"></a></p>
 <blockquote>
 <p>TL;DR: <a href="#4-the-best-solution">The best solution</a></p>
 </blockquote>
 <h2 id="3-1-Slow-performance-Goi-ToList"><a href="#3-1-Slow-performance-Goi-ToList" class="headerlink" title="3.1. [Slow performance] Gọi ToList"></a>3.1. [Slow performance] Gọi ToList</h2><p><a id="markdown-%5Bslow-performance%5D-g%E1%BB%8Di-tolist" name="%5Bslow-performance%5D-g%E1%BB%8Di-tolist"></a></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS.ToList().Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;));</code></pre>
+<pre><code class="highlight cs"><span class="keyword">var</span> names = dbContext.TableNameWithS.ToList().Where(x =&gt; x.FullName.Contains(<span class="string">&quot;test&quot;</span>));</code></pre>
 
 <p>Gọi ToList sẽ làm Entity Framework gọi tới database, thực thi bất kỳ đoạn query nào trước đó, rồi mới thực thi tới đoạn LINQ có computed property của bạn</p>
 <p>Nhược điểm của nó là EF sẽ query ra kết quả nhiều hơn so với cần thiết, làm giảm performance của ứng dụng</p>
 <h2 id="3-2-DRY-Principle-violated-Viet-bieu-thuc"><a href="#3-2-DRY-Principle-violated-Viet-bieu-thuc" class="headerlink" title="3.2. [DRY Principle violated] Viết biểu thức"></a>3.2. [DRY Principle violated] Viết biểu thức</h2><p><a id="markdown-%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c" name="%5Bdry-principle-violated%5D-vi%E1%BA%BFt-bi%E1%BB%83u-th%E1%BB%A9c"></a></p>
 <p>Một cách khác là thay vì sử dụng computed property, ta có thể viết thẳng biểu thức của property đó vào câu query</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; (x.FirstName + x.LastName).Contains(&quot;test&quot;));</code></pre>
+<pre><code class="highlight cs"><span class="keyword">var</span> names = dbContext.TableNameWithS.Where(x =&gt; (x.FirstName + x.LastName).Contains(<span class="string">&quot;test&quot;</span>));</code></pre>
 
 <p>Nhược điểm của cách này là bạn đã vi phạm nguyên tắc “DRY” - Don’t repeat yourself. Một biểu thức mà phải code tới 2 lần. Nếu sau này bạn thay đổi biểu thức đó ở 1 chỗ, thì ở chỗ còn lại bạn cũng sẽ phải đổi theo. Nếu bạn quên -&gt; BUG ngay và luôn</p>
 <blockquote>
@@ -361,29 +361,29 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <p>Nhược điểm của nó là nó không thể dịch được khi bạn sử dụng các method, class mà bạn tự định nghĩa, không nằm trong .NET Framework</p>
 <p>Sử dụng nó thì không còn gì dễ hơn</p>
 <p>Bước 1: Cài đặt nuget DelegateDecompiler</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">Install-Package DelegateDecompiler</code></pre>
+<pre><code class="highlight s">Install-Package DelegateDecompiler</code></pre>
 
 <p>Bước 2: Trang trí property với attribute <code>[Computed]</code></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class TestViewModel
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestViewModel</span>
 &#123;
-    [Required]
-    [MaxLength(10, ErrorMessage &#x3D; &quot;Length must fewer than &#123;1&#125;&quot;)]
-    public string FirstName &#123; get; set; &#125;
+    [<span class="meta">Required</span>]
+    [<span class="meta">MaxLength(10, ErrorMessage = <span class="string">&quot;Length must fewer than &#123;1&#125;&quot;</span>)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> FirstName &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
  
-    [Required]
-    [StringLength(10)]
-    public string LastName &#123; get; set; &#125;
+    [<span class="meta">Required</span>]
+    [<span class="meta">StringLength(10)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> LastName &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
  
-    &#x2F;&#x2F; Computed Property
-    [NotMapped]
-    [Computed]
-    public string FullName &#x3D;&gt; FirstName + LastName;
+    <span class="comment">// Computed Property</span>
+    [<span class="meta">NotMapped</span>]
+    [<span class="meta">Computed</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> FullName =&gt; FirstName + LastName;
 &#125;</code></pre>
 
 <p>Bước 3: Gọi method Decompile</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">var names &#x3D; dbContext.TableNameWithS
+<pre><code class="highlight cs"><span class="keyword">var</span> names = dbContext.TableNameWithS
                      .ToList()
-                     .Where(x &#x3D;&gt; x.FullName.Contains(&quot;test&quot;)).Decompile();
+                     .Where(x =&gt; x.FullName.Contains(<span class="string">&quot;test&quot;</span>)).Decompile();
 </code></pre>
 
 <blockquote>
@@ -392,18 +392,18 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 <h1 id="5-Make-life-easier"><a href="#5-Make-life-easier" class="headerlink" title="5. Make life easier"></a>5. Make life easier</h1><p><a id="markdown-make-life-easier" name="make-life-easier"></a></p>
 <p>Bạn cũng có thể cấu hình cho asp tự xử lý các property có [NotMapped]</p>
 <p>Tạo một class <code>Configuration</code></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class DelegateDecompilerConfiguration : DefaultConfiguration
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DelegateDecompilerConfiguration</span> : <span class="title">DefaultConfiguration</span>
 &#123;
-    public override bool ShouldDecompile(MemberInfo memberInfo)
+    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> <span class="title">ShouldDecompile</span>(<span class="params">MemberInfo memberInfo</span>)</span>
     &#123;
-        &#x2F;&#x2F; Automatically decompile all NotMapped members
-        return base.ShouldDecompile(memberInfo) || memberInfo.GetCustomAttributes(typeof(NotMappedAttribute), true).Length &gt; 0;
+        <span class="comment">// Automatically decompile all NotMapped members</span>
+        <span class="keyword">return</span> <span class="keyword">base</span>.ShouldDecompile(memberInfo) || memberInfo.GetCustomAttributes(<span class="keyword">typeof</span>(NotMappedAttribute), <span class="literal">true</span>).Length &gt; <span class="number">0</span>;
     &#125;
 &#125;</code></pre>
 
 <p>Rồi đăng ký nó trong method Startup như sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">DelegateDecompiler.Configuration
-                  .Configure(new DelegateDecompilerConfiguration());</code></pre>
+<pre><code class="highlight cs">DelegateDecompiler.Configuration
+                  .Configure(<span class="keyword">new</span> DelegateDecompilerConfiguration());</code></pre>
     </div>
 
     
@@ -524,7 +524,7 @@ var names &#x3D; dbContext.TableNameWithS.Where(x &#x3D;&gt; x.FullName.Contains
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

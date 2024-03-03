@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Ở phần trước bạn đã có một khái niệm cơ bản về mô hình MVC. Dựa vào đó, chúng ta sẽ tiếp tục tìm hiểu thêm về database những vấn đề liên quan nhé.">
 <meta property="og:type" content="article">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/4782/40705936652_1e3d6b551d_o.png">
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/4779/25877724937_7bfed1c8d7_o.png">
 <meta property="article:published_time" content="2018-03-11T16:11:47.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.546Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="core">
 <meta property="article:tag" content="database">
@@ -52,7 +52,7 @@
 <title>[ASP.NET for Beginner] - Part 2 - Connect Database and Model Binding | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -253,7 +253,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -352,16 +352,16 @@
 <p>Cài nuget package</p>
 <p>Mở project mvcbasic bằng vscode</p>
 <p>Lần lượt gõ các lệnh sau trong terminal</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+<pre><code class="highlight s">dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 
 <p>Sau đó, mở file mvcbasic.csproj và thêm dòng sau</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;ItemGroup&gt;
-  &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version&#x3D;&quot;2.0.0&quot; &#x2F;&gt;
-&lt;&#x2F;ItemGroup&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">DotNetCliToolReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.0&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span></code></pre>
 
 <p>tiếp tục gõ trong terminal</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet restore</code></pre>
+<pre><code class="highlight s">dotnet restore</code></pre>
 
 <h1 id="3-Tao-Model-va-Database"><a href="#3-Tao-Model-va-Database" class="headerlink" title="3. Tạo Model và Database"></a>3. Tạo Model và Database</h1><p><a id="markdown-t%E1%BA%A1o-model-v%C3%A0-database" name="t%E1%BA%A1o-model-v%C3%A0-database"></a></p>
 <p>Có 2 cách để bắt đầu làm việc với database trong asp.net core là Code first và Database first.</p>
@@ -369,12 +369,12 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Bạn có thể tham khảo thêm ở đây: <a target="_blank" rel="noopener" href="https://huntertran.ca/2017/01/06/asp-net-mvc-code-first-vs-database-first/">Code first vs Database first</a></p>
 <h2 id="3-1-Tao-model-Phone"><a href="#3-1-Tao-model-Phone" class="headerlink" title="3.1. Tạo model Phone"></a>3.1. Tạo model Phone</h2><p><a id="markdown-t%E1%BA%A1o-model-phone" name="t%E1%BA%A1o-model-phone"></a></p>
 <p>chuột phải vào folder Models &gt; new file &gt; Phone.cs</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace mvcbasic.Models
+<pre><code class="highlight cs"><span class="keyword">namespace</span> <span class="title">mvcbasic.Models</span>
 &#123;
-    public class Phone
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Phone</span>
     &#123;
-        public int Id &#123; get; set; &#125;
-        public string Name &#123; get; set; &#125;
+        <span class="keyword">public</span> <span class="built_in">int</span> Id &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
+        <span class="keyword">public</span> <span class="built_in">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
     &#125;
 &#125;</code></pre>
 
@@ -382,25 +382,25 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Database Context có thể hiểu như một công cụ cho phép ứng dụng của bạn kết nối tới Database và thực hiện các tác vụ thêm xóa sửa.</p>
 <p>Tạo 1 folder mới ở thư mục gốc với tên ‘Data’</p>
 <p>Chuột phải vào folder Data &gt; new file &gt; MvcBasicDbContext.cs</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">namespace mvcbasic.Data
+<pre><code class="highlight cs"><span class="keyword">namespace</span> <span class="title">mvcbasic.Data</span>
 &#123;
-    using Models;
-    using Microsoft.EntityFrameworkCore;
+    <span class="keyword">using</span> Models;
+    <span class="keyword">using</span> Microsoft.EntityFrameworkCore;
  
-    public class MvcBasicDbContext : DbContext
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MvcBasicDbContext</span> : <span class="title">DbContext</span>
     &#123;
-        public MvcBasicDbContext(DbContextOptions&lt;MvcBasicDbContext&gt; options) : base(options)
+        <span class="function"><span class="keyword">public</span> <span class="title">MvcBasicDbContext</span>(<span class="params">DbContextOptions&lt;MvcBasicDbContext&gt; options</span>) : <span class="title">base</span>(<span class="params">options</span>)</span>
         &#123;
         &#125;
  
-        public DbSet&lt;Phone&gt; Phones &#123; get; set; &#125;
+        <span class="keyword">public</span> DbSet&lt;Phone&gt; Phones &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
     &#125;
 &#125;</code></pre>
 
 <h2 id="3-3-Cai-dat-Connection-String"><a href="#3-3-Cai-dat-Connection-String" class="headerlink" title="3.3. Cài đặt Connection String"></a>3.3. Cài đặt Connection String</h2><p><a id="markdown-c%C3%A0i-%C4%91%E1%BA%B7t-connection-string" name="c%C3%A0i-%C4%91%E1%BA%B7t-connection-string"></a></p>
 <p>Để kết nối tới database, thì Entity Framework sẽ cần có các thông tin như username, password, tên database, server đang host cái database này. Tất cả thông số đó đều gộp chung lại thành 1 đoạn string, và giang hồ gọi nó là <code>connection string</code></p>
 <p>Mở file appsettings.json và thêm vào đoạn json sau</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json">&quot;ConnectionStrings&quot; : &#123; &quot;PhoneDbConnectionString&quot;: &quot;Server&#x3D;(localdb)\\\\mssqllocaldb;Database&#x3D;PhoneDb;Trusted\_Connection&#x3D;True;&quot; &#125;</code></pre>
+<pre><code class="highlight json"><span class="attr">&quot;ConnectionStrings&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;PhoneDbConnectionString&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Server=(localdb)\\\\mssqllocaldb;Database=PhoneDb;Trusted\_Connection=True;&quot;</span> <span class="punctuation">&#125;</span></code></pre>
 
 <blockquote>
 <p>Đoạn connection string trên có ý nghĩa như sau Server: LocalDb (là một dạng database local có trên các phiên bản mới của SQL Server) Database: PhoneDb Connection tới database dùng Windows Authentication</p>
@@ -408,21 +408,21 @@ dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design</code></pre>
 <p>Bạn có thể sẽ phải config lại đoạn connection string này cho đúng với môi trường làm việc của bạn</p>
 <h2 id="3-4-Cai-dat-ket-noi"><a href="#3-4-Cai-dat-ket-noi" class="headerlink" title="3.4. Cài đặt kết nối"></a>3.4. Cài đặt kết nối</h2><p><a id="markdown-c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i" name="c%C3%A0i-%C4%91%E1%BA%B7t-k%E1%BA%BFt-n%E1%BB%91i"></a></p>
 <p>Mở file Startup.cs, tìm method <code>ConfigureServices</code> và thêm vào dòng sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">services.AddDbContext&lt;MvcBasicDbContext&gt;(options &#x3D;&gt; options.UseSqlServer(Configuration.GetConnectionString(&quot;PhoneDbConnectionString&quot;)));</code></pre>
+<pre><code class="highlight cs">services.AddDbContext&lt;MvcBasicDbContext&gt;(options =&gt; options.UseSqlServer(Configuration.GetConnectionString(<span class="string">&quot;PhoneDbConnectionString&quot;</span>)));</code></pre>
 
 <p>và nhớ add thêm 2 dòng using</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">using Microsoft.EntityFrameworkCore;
-using mvcbasic.Data;</code></pre>
+<pre><code class="highlight cs"><span class="keyword">using</span> Microsoft.EntityFrameworkCore;
+<span class="keyword">using</span> mvcbasic.Data;</code></pre>
 
 <h2 id="3-5-Tao-Migration-dau-tien"><a href="#3-5-Tao-Migration-dau-tien" class="headerlink" title="3.5. Tạo Migration đầu tiên"></a>3.5. Tạo Migration đầu tiên</h2><p><a id="markdown-t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn" name="t%E1%BA%A1o-migration-%C4%91%E1%BA%A7u-ti%C3%AAn"></a></p>
 <p>Sau khi tất cả các thao tác chuẩn bị đã hoàn tất, đã tới lúc bạn tạo migration đầu tiên của mình</p>
 <p>Trong terminal, gõ</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef migrations add InitialCreate</code></pre>
+<pre><code class="highlight s">dotnet ef migrations add InitialCreate</code></pre>
 
 <p>VSCode sẽ tự động tạo ra một thư mục tên Migrations, và thêm cơ số file vào đấy</p>
 <p><a href="/images/flickr/4784/40748059781_d2b5740095_o.png">new files</a></p>
 <p>Tiếp tục, gõ</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet ef database update</code></pre>
+<pre><code class="highlight s">dotnet ef database update</code></pre>
 
 <p>thì những migration này sẽ được thực thi, và database sẽ được tạo ra</p>
 <p><img src="/images/flickr/4774/38937566770_e203e7c169_o.png" alt="database created"></p>
@@ -454,36 +454,36 @@ using mvcbasic.Data;</code></pre>
 <h2 id="4-2-Cac-nuget-can-thiet"><a href="#4-2-Cac-nuget-can-thiet" class="headerlink" title="4.2. Các nuget cần thiết"></a>4.2. Các nuget cần thiết</h2><p><a id="markdown-c%C3%A1c-nuget-c%E1%BA%A7n-thi%E1%BA%BFt" name="c%C3%A1c-nuget-c%E1%BA%A7n-thi%E1%BA%BFt"></a></p>
 <p>Để có thể tạo controller, bạn sẽ cần thêm một số tool nữa</p>
 <p>Mở mvcbasic.csproj và thêm các dòng sau</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">...
-&lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
+<pre><code class="highlight xml">...
+<span class="tag">&lt;<span class="name">PackageReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.2&quot;</span> /&gt;</span>
 ...
-&lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
+<span class="tag">&lt;<span class="name">DotNetCliToolReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.2&quot;</span> /&gt;</span>
 ...</code></pre>
 
 <p>Tổng quan, file csproj sẽ giống như sau</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Project Sdk&#x3D;&quot;Microsoft.NET.Sdk.Web&quot;&gt;
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Project</span> <span class="attr">Sdk</span>=<span class="string">&quot;Microsoft.NET.Sdk.Web&quot;</span>&gt;</span>
  
-  &lt;PropertyGroup&gt;
-    &lt;TargetFramework&gt;netcoreapp2.0&lt;&#x2F;TargetFramework&gt;
-  &lt;&#x2F;PropertyGroup&gt;
+  <span class="tag">&lt;<span class="name">PropertyGroup</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">TargetFramework</span>&gt;</span>netcoreapp2.0<span class="tag">&lt;/<span class="name">TargetFramework</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">PropertyGroup</span>&gt;</span>
  
-  &lt;ItemGroup&gt;
-    &lt;PackageReference Include&#x3D;&quot;Microsoft.AspNetCore.All&quot; Version&#x3D;&quot;2.0.5&quot; &#x2F;&gt;
-    &lt;PackageReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.SqlServer&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
-    &lt;PackageReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.SqlServer.Design&quot; Version&#x3D;&quot;1.1.5&quot; &#x2F;&gt;
-    &lt;PackageReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
-  &lt;&#x2F;ItemGroup&gt;
+  <span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">PackageReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.AspNetCore.All&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.5&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">PackageReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.EntityFrameworkCore.SqlServer&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.1&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">PackageReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.EntityFrameworkCore.SqlServer.Design&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;1.1.5&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">PackageReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Design&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.2&quot;</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span>
  
-  &lt;ItemGroup&gt;
-    &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version&#x3D;&quot;2.0.1&quot; &#x2F;&gt;
-    &lt;DotNetCliToolReference Include&#x3D;&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot; Version&#x3D;&quot;2.0.2&quot; &#x2F;&gt;
-  &lt;&#x2F;ItemGroup&gt;
+  <span class="tag">&lt;<span class="name">ItemGroup</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">DotNetCliToolReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.1&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">DotNetCliToolReference</span> <span class="attr">Include</span>=<span class="string">&quot;Microsoft.VisualStudio.Web.CodeGeneration.Tools&quot;</span> <span class="attr">Version</span>=<span class="string">&quot;2.0.2&quot;</span> /&gt;</span>
+  <span class="tag">&lt;/<span class="name">ItemGroup</span>&gt;</span>
  
-&lt;&#x2F;Project&gt;</code></pre>
+<span class="tag">&lt;/<span class="name">Project</span>&gt;</span></code></pre>
 
 <h2 id="4-3-Scaffolding"><a href="#4-3-Scaffolding" class="headerlink" title="4.3. Scaffolding"></a>4.3. Scaffolding</h2><p><a id="markdown-scaffolding" name="scaffolding"></a></p>
 <p>Mở terminal, và gõ lệnh sau</p>
-<pre class="line-numbers language-s" data-language="s"><code class="language-s">dotnet restore
+<pre><code class="highlight s">dotnet restore
 dotnet build
  
 dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBasicDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries</code></pre>
@@ -497,65 +497,65 @@ dotnet aspnet-codegenerator controller -name PhoneController -m Phone -dc MvcBas
 <h1 id="5-Model-Binding"><a href="#5-Model-Binding" class="headerlink" title="5. Model Binding"></a>5. Model Binding</h1><p><a id="markdown-model-binding" name="model-binding"></a></p>
 <p>Mở file PhoneController ra, bạn sẽ thấy có sẵn code trong đấy rồi, tuy ko đẹp lắm, nhưng nhìn chung là nó chạy tốt</p>
 <p>Hãy nhìn vào method Details</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; GET: Phone&#x2F;Details&#x2F;5
-public async Task&lt;IActionResult&gt; Details(int? id)
+<pre><code class="highlight cs"><span class="comment">// GET: Phone/Details/5</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;IActionResult&gt; <span class="title">Details</span>(<span class="params"><span class="built_in">int</span>? id</span>)</span>
 &#123;
-    if (id &#x3D;&#x3D; null)
+    <span class="keyword">if</span> (id == <span class="literal">null</span>)
     &#123;
-        return NotFound();
+        <span class="keyword">return</span> NotFound();
     &#125;
  
-    var phone &#x3D; await _context.Phones
-                              .SingleOrDefaultAsync(m &#x3D;&gt; m.Id &#x3D;&#x3D; id);
-    if (phone &#x3D;&#x3D; null)
+    <span class="keyword">var</span> phone = <span class="keyword">await</span> _context.Phones
+                              .SingleOrDefaultAsync(m =&gt; m.Id == id);
+    <span class="keyword">if</span> (phone == <span class="literal">null</span>)
     &#123;
-        return NotFound();
+        <span class="keyword">return</span> NotFound();
     &#125;
  
-    return View(phone);
+    <span class="keyword">return</span> View(phone);
 &#125;</code></pre>
 
 <p>Method này nhận một tham số là nullable int có tên là id, khi bạn gọi tới url Phone&#x2F;Details&#x2F;5 (như dòng comment ở bên trên), thì số 5 đó sẽ được hiểu là Id. Đó chính là model binding</p>
 <p>Tiếp tục, nhìn vào class Create có attribute <code>[HttpPost]</code></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">&#x2F;&#x2F; POST: Phone&#x2F;Create
-&#x2F;&#x2F; To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-&#x2F;&#x2F; more details see http:&#x2F;&#x2F;go.microsoft.com&#x2F;fwlink&#x2F;?LinkId&#x3D;317598.
-[HttpPost]
-[ValidateAntiForgeryToken]
-public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone phone)
+<pre><code class="highlight cs"><span class="comment">// POST: Phone/Create</span>
+<span class="comment">// To protect from overposting attacks, please enable the specific properties you want to bind to, for </span>
+<span class="comment">// more details see http://go.microsoft.com/fwlink/?LinkId=317598.</span>
+[<span class="meta">HttpPost</span>]
+[<span class="meta">ValidateAntiForgeryToken</span>]
+<span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;IActionResult&gt; <span class="title">Create</span>(<span class="params">[Bind(<span class="string">&quot;Id,Name&quot;</span></span>)] Phone phone)</span>
 &#123;
-    if (ModelState.IsValid)
+    <span class="keyword">if</span> (ModelState.IsValid)
     &#123;
         _context.Add(phone);
-        await _context.SaveChangesAsync();
-        return RedirectToAction(nameof(Index));
+        <span class="keyword">await</span> _context.SaveChangesAsync();
+        <span class="keyword">return</span> RedirectToAction(<span class="keyword">nameof</span>(Index));
     &#125;
-    return View(phone);
+    <span class="keyword">return</span> View(phone);
 &#125;</code></pre>
 
 <p>Model binding còn vi diệu ở chỗ, nếu bạn dùng hẳn 1 class làm parameter, thì ASP.NET sẽ tự hiểu các property trong class đó, và gắn đúng từng giá trị một</p>
 <p>Bạn có thể xóa <code>[Bind(&quot;Id,Name&quot;)]</code> đi và code vẫn chạy tốt, nhưng như Microsoft đã cảnh báo, để bảo vệ bạn khỏi chuyện orver posting attack, thì bạn phải chỉ định luôn là property nào sẽ được gắn</p>
 <p>Method này tương ứng với Views &gt; Phone &gt; Create.cshtml</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;!--dòng 17--&gt;
-&lt;input asp-for&#x3D;&quot;Name&quot; class&#x3D;&quot;form-control&quot; &#x2F;&gt;</code></pre>
+<pre><code class="highlight html"><span class="comment">&lt;!--dòng 17--&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">asp-for</span>=<span class="string">&quot;Name&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> /&gt;</span></code></pre>
 
 <p>từ khóa <code>asp-for</code> thông báo rằng Name là property sẽ được truyền lên server, và server sẽ “gắn” nó vào model phone của method Create</p>
 <blockquote>
 <p>Tại sao lại ko có Id? Vì Id mặc định được coi như Key của bảng Phone, và key thì ko cần phải có khi tạo mới, vì database sẽ tự sinh ra nó</p>
 </blockquote>
 <p>Tiếp tục, mở Views &gt; Phone &gt; Index.cshtml bạn sẽ thấy đoạn code sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">@foreach (var item in Model)
+<pre><code class="highlight cs">@foreach (<span class="keyword">var</span> item <span class="keyword">in</span> Model)
 &#123;
     &lt;tr&gt;
         &lt;td&gt;
-            @Html.DisplayFor(modelItem &#x3D;&gt; item.Name)
-        &lt;&#x2F;td&gt;
+            @Html.DisplayFor(modelItem =&gt; item.Name)
+        &lt;/td&gt;
         &lt;td&gt;
-            &lt;a asp-action&#x3D;&quot;Edit&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Edit&lt;&#x2F;a&gt; |
-            &lt;a asp-action&#x3D;&quot;Details&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Details&lt;&#x2F;a&gt; |
-            &lt;a asp-action&#x3D;&quot;Delete&quot; asp-route-id&#x3D;&quot;@item.Id&quot;&gt;Delete&lt;&#x2F;a&gt;
-        &lt;&#x2F;td&gt;
-    &lt;&#x2F;tr&gt;
+            &lt;a asp-action=<span class="string">&quot;Edit&quot;</span> asp-route-id=<span class="string">&quot;@item.Id&quot;</span>&gt;Edit&lt;/a&gt; |
+            &lt;a asp-action=<span class="string">&quot;Details&quot;</span> asp-route-id=<span class="string">&quot;@item.Id&quot;</span>&gt;Details&lt;/a&gt; |
+            &lt;a asp-action=<span class="string">&quot;Delete&quot;</span> asp-route-id=<span class="string">&quot;@item.Id&quot;</span>&gt;Delete&lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
 &#125;</code></pre>
 
 <blockquote>
@@ -690,7 +690,7 @@ public async Task&lt;IActionResult&gt; Create([Bind(&quot;Id,Name&quot;)] Phone 
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Bạn có một app thặc là tuyệt zời ông mặt trời, tính năng độc đáo, hấp dẫn. Người dùng không thể nào rời mắt khỏi app của bạn. Và bạn quyết định kiếm tiền từ nó. Thế là bạn tìm hiểu cách implement tính">
 <meta property="og:type" content="article">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/1616/23825747414_ddb694db19_o.png">
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/1461/23829331723_6f852496b8_o.png">
 <meta property="article:published_time" content="2016-01-18T10:05:10.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.701Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="windows 10">
 <meta property="article:tag" content="iap">
@@ -54,7 +54,7 @@
 <title>[Windows] Implement In-App Purchase for Windows 10 | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -366,52 +366,52 @@
 <p>Và đây sẽ là cách. Lưu ý làm theo đúng thứ tự được trình bày trong blog này</p>
 <h3 id="3-3-1-Su-dung-CurrentAppSimulator"><a href="#3-3-1-Su-dung-CurrentAppSimulator" class="headerlink" title="3.3.1. Sử dụng CurrentAppSimulator"></a>3.3.1. Sử dụng CurrentAppSimulator</h3><p><a id="markdown-s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator" name="s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator"></a></p>
 <p>Trong method khởi tạo hoặc load data cho app của bạn, đặt các dòng code sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">StaticData.license &#x3D; CurrentAppSimulator.LicenseInformation; StaticData.listings &#x3D; await CurrentAppSimulator.LoadListingInformationAsync();</code></pre>
+<pre><code class="highlight csharp">StaticData.license = CurrentAppSimulator.LicenseInformation; StaticData.listings = <span class="keyword">await</span> CurrentAppSimulator.LoadListingInformationAsync();</code></pre>
 
 <p>StaticData là một class chứa các biến Static, có thể truy cập ở mọi class khác Ngay sau khi chạy đoạn code này, Visual Studio sẽ tạo ra 1 file XML giả ở C:UsersAppDataLocalPackagesLocalStateMicrosoftWindows StoreApiDataWindowsStoreProxy.xml</p>
 <p>Bạn mở nó lên, và sửa các giá trị sau</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;App&gt;
- &lt;IsActive&gt;true&lt;&#x2F;IsActive&gt;
- &lt;IsTrial&gt;false&lt;&#x2F;IsTrial&gt;
-&lt;&#x2F;App&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">App</span>&gt;</span>
+ <span class="tag">&lt;<span class="name">IsActive</span>&gt;</span>true<span class="tag">&lt;/<span class="name">IsActive</span>&gt;</span>
+ <span class="tag">&lt;<span class="name">IsTrial</span>&gt;</span>false<span class="tag">&lt;/<span class="name">IsTrial</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">App</span>&gt;</span></code></pre>
 
 <p>Mục Product ID, sửa lại cho trùng với Product ID bạn đã đặt trên Dev Center</p>
 <h3 id="3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham"><a href="#3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham" class="headerlink" title="3.3.2. Hiện giá (và các thông tin khác) của sản phẩm"></a>3.3.2. Hiện giá (và các thông tin khác) của sản phẩm</h3><p><a id="markdown-hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m" name="hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m"></a></p>
 <p>Như bạn đã thấy rõ, StaticData.listings chứa toàn bộ In-App Purchase của bạn. Mọi sản phẩm đều có mặt trong này. Như vậy, để gắn giá lên một sản phẩm nào đó, ngoài việc có template, model ra, bạn sẽ cần phải chạy một vòng lặp</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">foreach(KeyValuePair&lt;string, ProductListing&gt; productListing in StaticData.listings.ProductListings)
+<pre><code class="highlight csharp"><span class="keyword">foreach</span>(KeyValuePair&lt;<span class="built_in">string</span>, ProductListing&gt; productListing <span class="keyword">in</span> StaticData.listings.ProductListings)
 &#123;
-  if (productListing.Key.TrimStart(&#39;0&#39;) &#x3D;&#x3D; issue.id)
+  <span class="keyword">if</span> (productListing.Key.TrimStart(<span class="string">&#x27;0&#x27;</span>) == issue.id)
   &#123;
-    issue.billing.price &#x3D; productListing.Value.FormattedPrice;
+    issue.billing.price = productListing.Value.FormattedPrice;
   &#125;
 &#125;</code></pre>
 
 <p>Trong đoạn code trên, Product ID của mình là 0154, và issue.id là “154” FormattedPrice sẽ bao gồm cả đơn vị tiền tệ mà hệ thống đang sử dụng. Bạn cũng có thể đọc các thông tin khác như Description, Tag, vân vân và vân vân</p>
 <h3 id="3-3-3-Mua-In-App-Purchase"><a href="#3-3-3-Mua-In-App-Purchase" class="headerlink" title="3.3.3. Mua In-App Purchase"></a>3.3.3. Mua In-App Purchase</h3><p><a id="markdown-mua-in-app-purchase" name="mua-in-app-purchase"></a></p>
 <p>Nhờ sự giúp đỡ của CurrentAppSimulator, bạn có thể test mua thoải mái. Chỉ cần chỉnh sửa các giá trị trong file WindowsStoreProxy.xml để test đi test lại Về cơ bản, đoạn code mua một vật phẩm bằng In-App Purchase sẽ như sau</p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">if (!StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
+<pre><code class="highlight csharp"><span class="keyword">if</span> (!StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
 &#123;
-  try
+  <span class="keyword">try</span>
   &#123;
-    &#x2F;&#x2F; Người dùng chưa từng mua cái này 
-    &#x2F;&#x2F; Hiện hộp thoại mua
-    await CurrentAppSimulator.RequestProductPurchaseAsync(_selectedIssue.billing.iapKey);
+    <span class="comment">// Người dùng chưa từng mua cái này </span>
+    <span class="comment">// Hiện hộp thoại mua</span>
+    <span class="keyword">await</span> CurrentAppSimulator.RequestProductPurchaseAsync(_selectedIssue.billing.iapKey);
 
-    &#x2F;&#x2F;Kiểm tra lại xem đã mua thành công chưa 
-    if (StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
+    <span class="comment">//Kiểm tra lại xem đã mua thành công chưa </span>
+    <span class="keyword">if</span> (StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
     &#123;
-      &#x2F;&#x2F; Nếu mua thành công thì làm trò mèo gì đó 
+      <span class="comment">// Nếu mua thành công thì làm trò mèo gì đó </span>
     &#125;
   &#125;
-  catch(Exception)
+  <span class="keyword">catch</span>(Exception)
   &#123;
-    &#x2F;&#x2F; Mua bị lỗi 
-    &#x2F;&#x2F; an error occurred. 
+    <span class="comment">// Mua bị lỗi </span>
+    <span class="comment">// an error occurred. </span>
   &#125;
 &#125;
-else
+<span class="keyword">else</span>
 &#123;
-  &#x2F;&#x2F; Đã mua cái này rồi, tiếp tục trò mèo 
+  <span class="comment">// Đã mua cái này rồi, tiếp tục trò mèo </span>
 &#125;</code></pre>
 
 <p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật</p>
@@ -545,7 +545,7 @@ else
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

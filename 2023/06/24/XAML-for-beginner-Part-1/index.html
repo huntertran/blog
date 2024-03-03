@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML.  In this post, I will introduce the most basic">
 <meta property="og:type" content="article">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://huntertran.github.io/images/2023/06/5.png">
 <meta property="og:image" content="https://huntertran.github.io/images/2023/06/6.png">
 <meta property="article:published_time" content="2023-06-24T21:46:07.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.546Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="XAML">
 <meta property="article:tag" content="Windows Store App">
@@ -54,7 +54,7 @@
 <title>XAML for beginner - Part 1 | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -319,38 +319,38 @@
 </tbody></table>
 <p>Let’s start with a sample WPF application.</p>
 <p>Open the file <code>Window.xaml</code> in your Visual Studio. Inside the outer <code>Grid</code>, add two <code>TextBlock</code> as follow:</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Window x:Class&#x3D;&quot;WpfApp1.Window1&quot;
-        xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&#x2F;presentation&quot;
-        xmlns:x&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;winfx&#x2F;2006&#x2F;xaml&quot;
-        xmlns:d&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;expression&#x2F;blend&#x2F;2008&quot;
-        xmlns:mc&#x3D;&quot;http:&#x2F;&#x2F;schemas.openxmlformats.org&#x2F;markup-compatibility&#x2F;2006&quot;
-        xmlns:local&#x3D;&quot;clr-namespace:WpfApp1&quot;
-        mc:Ignorable&#x3D;&quot;d&quot;
-        Title&#x3D;&quot;Window1&quot; Height&#x3D;&quot;800&quot; Width&#x3D;&quot;480&quot;&gt;
-    &lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-        &lt;TextBlock Text&#x3D;&quot;Hello world&quot; FontSize&#x3D;&quot;50&quot;&#x2F;&gt;
-        &lt;TextBlock Text&#x3D;&quot;Hello WPF&quot;  FontSize&#x3D;&quot;80&quot;&#x2F;&gt; 
-    &lt;&#x2F;Grid&gt;
-&lt;&#x2F;Window&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">x:Class</span>=<span class="string">&quot;WpfApp1.Window1&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:d</span>=<span class="string">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:mc</span>=<span class="string">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:local</span>=<span class="string">&quot;clr-namespace:WpfApp1&quot;</span></span>
+<span class="tag">        <span class="attr">mc:Ignorable</span>=<span class="string">&quot;d&quot;</span></span>
+<span class="tag">        <span class="attr">Title</span>=<span class="string">&quot;Window1&quot;</span> <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span> <span class="attr">Width</span>=<span class="string">&quot;480&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span>/&gt;</span>
+        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span>  <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span>/&gt;</span> 
+    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Window</span>&gt;</span></code></pre>
 
 <p>You will receive a layout with overlapped texts like this</p>
 <p><img src="/images/2023/06/ieNDg54OjR.png" alt="overlap text"></p>
 <p>Overlapping contents allow you to design more sophisticated&#x2F;beautiful app, for example:</p>
 <p><img src="/images/2013/11/112213_0144_windowsphon6.png" alt="advanced layout"></p>
 <h2 id="2-1-Grid’s-column-and-row"><a href="#2-1-Grid’s-column-and-row" class="headerlink" title="2.1. Grid’s column and row"></a>2.1. Grid’s column and row</h2><p><code>Grid</code> allows you to arrange the content into columns and row. You can declare column definitions and row definitions. After that, for each child control, you can set column or row property.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;Grid.RowDefinitions&gt;
-        &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;80&quot; &#x2F;&gt;
-    &lt;&#x2F;Grid.RowDefinitions&gt;
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;80&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
 
-    &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-               FontSize&#x3D;&quot;50&quot;
-               Text&#x3D;&quot;Hello world&quot; &#x2F;&gt;
-    &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
-               FontSize&#x3D;&quot;80&quot;
-               Text&#x3D;&quot;Hello WPF&quot; &#x2F;&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
 
 <p>The textblocks are now arranged to rows accordingly</p>
 <p><img src="/images/2023/06/4kJL6V84m0.png" alt="rows"></p>
@@ -364,65 +364,65 @@
 <li>Number with star: Act as percentage. Useful for scaling</li>
 </ul>
 <p>Let’s see them in action. The following code will give this layout</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;Grid.RowDefinitions&gt;
-        &lt;RowDefinition Height&#x3D;&quot;Auto&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;60&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;3*&quot; &#x2F;&gt;
-        &lt;RowDefinition Height&#x3D;&quot;7*&quot; &#x2F;&gt;
-    &lt;&#x2F;Grid.RowDefinitions&gt;
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;3*&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;7*&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
 
-    &lt;TextBlock Grid.Row&#x3D;&quot;0&quot;
-               FontSize&#x3D;&quot;15&quot;
-               Text&#x3D;&quot;Hello world&quot; &#x2F;&gt;
-    &lt;TextBlock Grid.Row&#x3D;&quot;1&quot;
-               FontSize&#x3D;&quot;80&quot;
-               Text&#x3D;&quot;Hello WPF&quot; &#x2F;&gt;
-    &lt;Grid Grid.Row&#x3D;&quot;2&quot;
-          Background&#x3D;&quot;Green&quot; &#x2F;&gt;
-    &lt;Grid Grid.Row&#x3D;&quot;3&quot;
-          Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;15&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;2&quot;</span></span>
+<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;3&quot;</span></span>
+<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
 
 <p><img src="/images/2023/06/3.png" alt="size styles"></p>
 <blockquote>
 <p>Obviously, you can nest multiple <code>Grid</code> in a parent <code>Grid</code></p>
 </blockquote>
 <h1 id="3-Basic-control-StackPanel"><a href="#3-Basic-control-StackPanel" class="headerlink" title="3. Basic control - StackPanel"></a>3. Basic control - <code>StackPanel</code></h1><p><code>StackPanel</code>, as the name of the control, stack the content horizontally or vertically.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;StackPanel Margin&#x3D;&quot;16&quot;&gt;
-        &lt;Grid Width&#x3D;&quot;80&quot;
-              Height&#x3D;&quot;40&quot;
-              Background&#x3D;&quot;Red&quot; &#x2F;&gt;
-        &lt;Grid Width&#x3D;&quot;160&quot;
-              Height&#x3D;&quot;40&quot;
-              Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-    &lt;&#x2F;StackPanel&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">&quot;16&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
 
 <p>By default, <code>StackPanel</code> is vertical</p>
 <p><img src="/images/2023/06/4.png" alt="StackPanel vertical"></p>
 <p>You can make it Horizontal by set the <code>Orientation=&quot;Horizontal&quot;</code></p>
 <p><img src="/images/2023/06/5.png" alt="StackPanel horizontal"></p>
 <h1 id="4-Basic-control-ScrollViewer"><a href="#4-Basic-control-ScrollViewer" class="headerlink" title="4. Basic control - ScrollViewer"></a>4. Basic control - <code>ScrollViewer</code></h1><p><code>ScrollViewer</code> allow you to scroll the content that overflow the screensize. This apply to both horizontal and vertical size</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;Grid Background&#x3D;&quot;Transparent&quot;&gt;
-    &lt;ScrollViewer&gt;
-        &lt;StackPanel&gt;
-            &lt;Grid Width&#x3D;&quot;80&quot;
-                  Height&#x3D;&quot;40&quot;
-                  Background&#x3D;&quot;Red&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;40&quot;
-                  Background&#x3D;&quot;Blue&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;400&quot;
-                  Background&#x3D;&quot;Green&quot; &#x2F;&gt;
-            &lt;Grid Width&#x3D;&quot;160&quot;
-                  Height&#x3D;&quot;800&quot;
-                  Background&#x3D;&quot;Violet&quot; &#x2F;&gt;
-        &lt;&#x2F;StackPanel&gt;
-    &lt;&#x2F;ScrollViewer&gt;
-&lt;&#x2F;Grid&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">ScrollViewer</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">StackPanel</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;400&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Violet&quot;</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">ScrollViewer</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
 
 <p><img src="/images/2023/06/6.png" alt="ScrollViewer"></p>
 
@@ -545,7 +545,7 @@
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

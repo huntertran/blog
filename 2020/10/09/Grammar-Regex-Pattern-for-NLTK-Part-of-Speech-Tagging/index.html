@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="NLTK has a function called regexpparser to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.">
 <meta property="og:type" content="article">
@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/NMl56Bk.png">
 <meta property="article:published_time" content="2020-10-09T01:26:02.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.546Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="nlp">
@@ -50,7 +50,7 @@
 <title>Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,104 +313,104 @@
 <p>This action simply <em><strong>tag</strong></em> your tokenized words with the word type, for example, verb, noun, adjective, etc.</p>
 <h2 id="1-1-The-tags-and-explanations"><a href="#1-1-The-tags-and-explanations" class="headerlink" title="1.1. The tags and explanations"></a>1.1. The tags and explanations</h2><p><a id="markdown-the-tags-and-explanations" name="the-tags-and-explanations"></a></p>
 <p>The complete list of tags can be shown when running the command</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">nltk.help.upenn_tagset()</code></pre>
+<pre><code class="highlight py">nltk.<span class="built_in">help</span>.upenn_tagset()</code></pre>
 
 <p>For the complete list of explanations, scroll to the bottom of this post.</p>
 <h2 id="1-2-Tagging-them"><a href="#1-2-Tagging-them" class="headerlink" title="1.2. Tagging them"></a>1.2. Tagging them</h2><p><a id="markdown-tagging-them" name="tagging-them"></a></p>
 <p>For example, when you have the sentence:</p>
-<pre class="line-numbers language-none"><code class="language-none">The quick brown fox jumps over the lazy dog</code></pre>
+<pre><code class="highlight plaintext">The quick brown fox jumps over the lazy dog</code></pre>
 
 <p>The process should be something like this</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
-tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
-tags &#x3D; nltk.pos_tag(tokens)
+<pre><code class="highlight py">sentence = <span class="string">&#x27;The quick brown fox jumps over the lazy dog&#x27;</span>
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
 
-# result of &#39;tags&#39;
-# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]</code></pre>
+<span class="comment"># result of &#x27;tags&#x27;</span>
+<span class="comment"># [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;), (&#x27;jumps&#x27;, &#x27;VBZ&#x27;), (&#x27;over&#x27;, &#x27;IN&#x27;), (&#x27;the&#x27;, &#x27;DT&#x27;), (&#x27;lazy&#x27;, &#x27;JJ&#x27;), (&#x27;dog&#x27;, &#x27;NN&#x27;)]</span></code></pre>
 
 <h1 id="2-Regular-Expression-regex-grammar"><a href="#2-Regular-Expression-regex-grammar" class="headerlink" title="2. Regular Expression (regex) grammar"></a>2. Regular Expression (regex) grammar</h1><p><a id="markdown-regular-expression-regex-grammar" name="regular-expression-regex-grammar"></a></p>
 <p>The regular expression with nltk tokens is quite different from standard text. The grammar treats each token as a string of text and applies the regex pattern on that string matched to the position of the token in the sentence.</p>
 <p>Below I will present a list of grammar, from the most simple to the more complex one, using the same sentence above</p>
 <h2 id="2-1-Exact-match"><a href="#2-1-Exact-match" class="headerlink" title="2.1. Exact match"></a>2.1. Exact match</h2><p><a id="markdown-exact-match" name="exact-match"></a></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
-tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
-tags &#x3D; nltk.pos_tag(tokens)
+<pre><code class="highlight py">sentence = <span class="string">&#x27;The quick brown fox jumps over the lazy dog&#x27;</span>
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
 
-# result of &#39;tags&#39;
-# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+<span class="comment"># result of &#x27;tags&#x27;</span>
+<span class="comment"># [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;), (&#x27;jumps&#x27;, &#x27;VBZ&#x27;), (&#x27;over&#x27;, &#x27;IN&#x27;), (&#x27;the&#x27;, &#x27;DT&#x27;), (&#x27;lazy&#x27;, &#x27;JJ&#x27;), (&#x27;dog&#x27;, &#x27;NN&#x27;)]</span>
 
-grammar &#x3D; &#39;exact: &#123;&lt;DT&gt;&lt;JJ&gt;&lt;NN&gt;&lt;NN&gt;&#125;&#39;
-parser &#x3D; nltk.RegexpParser(grammar)
-result &#x3D; parser.parse(tags)
+grammar = <span class="string">&#x27;exact: &#123;&lt;DT&gt;&lt;JJ&gt;&lt;NN&gt;&lt;NN&gt;&#125;&#x27;</span>
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
 
-# parsed result
-# Tree
-# (&#39;S&#39;, [Tree(&#39;exact&#39;, [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;)]), 
-# (&#39;jumps&#39;, &#39;VBZ&#39;),
-# (&#39;over&#39;, &#39;IN&#39;),
-# (&#39;the&#39;, &#39;DT&#39;),
-# (&#39;lazy&#39;, &#39;JJ&#39;),
-# (&#39;dog&#39;, &#39;NN&#39;)])</code></pre>
+<span class="comment"># parsed result</span>
+<span class="comment"># Tree</span>
+<span class="comment"># (&#x27;S&#x27;, [Tree(&#x27;exact&#x27;, [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;)]), </span>
+<span class="comment"># (&#x27;jumps&#x27;, &#x27;VBZ&#x27;),</span>
+<span class="comment"># (&#x27;over&#x27;, &#x27;IN&#x27;),</span>
+<span class="comment"># (&#x27;the&#x27;, &#x27;DT&#x27;),</span>
+<span class="comment"># (&#x27;lazy&#x27;, &#x27;JJ&#x27;),</span>
+<span class="comment"># (&#x27;dog&#x27;, &#x27;NN&#x27;)])</span></code></pre>
 
 <h2 id="2-2-Skip-some-tags"><a href="#2-2-Skip-some-tags" class="headerlink" title="2.2. Skip some tags"></a>2.2. Skip some tags</h2><p><a id="markdown-skip-some-tags" name="skip-some-tags"></a></p>
 <p>We will skip all tags between <code>The</code> and <code>fox</code> (between DT and NN tags)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
-tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
-tags &#x3D; nltk.pos_tag(tokens)
+<pre><code class="highlight py">sentence = <span class="string">&#x27;The quick brown fox jumps over the lazy dog&#x27;</span>
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
 
-# result of &#39;tags&#39;
-# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+<span class="comment"># result of &#x27;tags&#x27;</span>
+<span class="comment"># [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;), (&#x27;jumps&#x27;, &#x27;VBZ&#x27;), (&#x27;over&#x27;, &#x27;IN&#x27;), (&#x27;the&#x27;, &#x27;DT&#x27;), (&#x27;lazy&#x27;, &#x27;JJ&#x27;), (&#x27;dog&#x27;, &#x27;NN&#x27;)]</span>
 
-grammar &#x3D; &#39;exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#39;
-parser &#x3D; nltk.RegexpParser(grammar)
-result &#x3D; parser.parse(tags)
+grammar = <span class="string">&#x27;exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#x27;</span>
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
 
-# parsed result
-# Tree
-# (&#39;S&#39;, [Tree(&#39;exact&#39;, [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;)]), 
-# (&#39;over&#39;, &#39;IN&#39;), 
-# (&#39;the&#39;, &#39;DT&#39;), 
-# (&#39;lazy&#39;, &#39;JJ&#39;), 
-# (&#39;dog&#39;, &#39;NN&#39;)])</code></pre>
+<span class="comment"># parsed result</span>
+<span class="comment"># Tree</span>
+<span class="comment"># (&#x27;S&#x27;, [Tree(&#x27;exact&#x27;, [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;), (&#x27;jumps&#x27;, &#x27;VBZ&#x27;)]), </span>
+<span class="comment"># (&#x27;over&#x27;, &#x27;IN&#x27;), </span>
+<span class="comment"># (&#x27;the&#x27;, &#x27;DT&#x27;), </span>
+<span class="comment"># (&#x27;lazy&#x27;, &#x27;JJ&#x27;), </span>
+<span class="comment"># (&#x27;dog&#x27;, &#x27;NN&#x27;)])</span></code></pre>
 
 <p>Explanation:</p>
 <p><code>&lt;.*&gt;</code> means match every tag. The dot (.) mean match every character (of the tag). The asterisk (*) means repeat match from 0 to unlimited time.</p>
 <p>The next asterisk (*) right behind it means repeat the matching tags from 0 to unlimited time.</p>
 <h2 id="2-3-Match-all-tags-start-with-a-character"><a href="#2-3-Match-all-tags-start-with-a-character" class="headerlink" title="2.3. Match all tags start with a character"></a>2.3. Match all tags start with a character</h2><p><a id="markdown-match-all-tags-start-with-a-character" name="match-all-tags-start-with-a-character"></a></p>
 <p>We will match all tag starting with ‘N’, this is including ‘NN’, ‘NNP’, ‘NNPS’, ‘NNS’ tags</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">sentence &#x3D; &#39;The quick brown fox jumps over the lazy dog&#39;
-tokens &#x3D; nltk.tokenize.word_tokenize(sentence)
-tags &#x3D; nltk.pos_tag(tokens)
+<pre><code class="highlight py">sentence = <span class="string">&#x27;The quick brown fox jumps over the lazy dog&#x27;</span>
+tokens = nltk.tokenize.word_tokenize(sentence)
+tags = nltk.pos_tag(tokens)
 
-# result of &#39;tags&#39;
-# [(&#39;The&#39;, &#39;DT&#39;), (&#39;quick&#39;, &#39;JJ&#39;), (&#39;brown&#39;, &#39;NN&#39;), (&#39;fox&#39;, &#39;NN&#39;), (&#39;jumps&#39;, &#39;VBZ&#39;), (&#39;over&#39;, &#39;IN&#39;), (&#39;the&#39;, &#39;DT&#39;), (&#39;lazy&#39;, &#39;JJ&#39;), (&#39;dog&#39;, &#39;NN&#39;)]
+<span class="comment"># result of &#x27;tags&#x27;</span>
+<span class="comment"># [(&#x27;The&#x27;, &#x27;DT&#x27;), (&#x27;quick&#x27;, &#x27;JJ&#x27;), (&#x27;brown&#x27;, &#x27;NN&#x27;), (&#x27;fox&#x27;, &#x27;NN&#x27;), (&#x27;jumps&#x27;, &#x27;VBZ&#x27;), (&#x27;over&#x27;, &#x27;IN&#x27;), (&#x27;the&#x27;, &#x27;DT&#x27;), (&#x27;lazy&#x27;, &#x27;JJ&#x27;), (&#x27;dog&#x27;, &#x27;NN&#x27;)]</span>
 
-grammar &#x3D; &#39;exact: &#123;&lt;N.*&gt;&#125;&#39;
-parser &#x3D; nltk.RegexpParser(grammar)
-result &#x3D; parser.parse(tags)
+grammar = <span class="string">&#x27;exact: &#123;&lt;N.*&gt;&#125;&#x27;</span>
+parser = nltk.RegexpParser(grammar)
+result = parser.parse(tags)
 
-# parsed result
-# Tree
-# (&#39;S&#39;, [(&#39;The&#39;, &#39;DT&#39;), 
-# (&#39;quick&#39;, &#39;JJ&#39;), 
-# Tree(&#39;exact&#39;, [(&#39;brown&#39;, &#39;NN&#39;)]), 
-# Tree(&#39;exact&#39;, [(&#39;fox&#39;, &#39;NN&#39;)]), 
-# (&#39;jumps&#39;, &#39;VBZ&#39;), 
-# (&#39;over&#39;, &#39;IN&#39;), 
-# (&#39;the&#39;, &#39;DT&#39;), 
-# (&#39;lazy&#39;, &#39;JJ&#39;), 
-# Tree(&#39;exact&#39;, 
-# [(&#39;dog&#39;, &#39;NN&#39;)])])</code></pre>
+<span class="comment"># parsed result</span>
+<span class="comment"># Tree</span>
+<span class="comment"># (&#x27;S&#x27;, [(&#x27;The&#x27;, &#x27;DT&#x27;), </span>
+<span class="comment"># (&#x27;quick&#x27;, &#x27;JJ&#x27;), </span>
+<span class="comment"># Tree(&#x27;exact&#x27;, [(&#x27;brown&#x27;, &#x27;NN&#x27;)]), </span>
+<span class="comment"># Tree(&#x27;exact&#x27;, [(&#x27;fox&#x27;, &#x27;NN&#x27;)]), </span>
+<span class="comment"># (&#x27;jumps&#x27;, &#x27;VBZ&#x27;), </span>
+<span class="comment"># (&#x27;over&#x27;, &#x27;IN&#x27;), </span>
+<span class="comment"># (&#x27;the&#x27;, &#x27;DT&#x27;), </span>
+<span class="comment"># (&#x27;lazy&#x27;, &#x27;JJ&#x27;), </span>
+<span class="comment"># Tree(&#x27;exact&#x27;, </span>
+<span class="comment"># [(&#x27;dog&#x27;, &#x27;NN&#x27;)])])</span></code></pre>
 
 <h1 id="3-Match-multiple-grammars"><a href="#3-Match-multiple-grammars" class="headerlink" title="3. Match multiple grammars"></a>3. Match multiple grammars</h1><p><a id="markdown-match-multiple-grammars" name="match-multiple-grammars"></a></p>
 <p>To use multiple grammars to scan your text, simply combine them with newline character <code>\n</code></p>
 <p>For example:</p>
 <p>Single pattern grammar</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammar &#x3D; &#39;exact: &#123;&lt;N.*&gt;&#125;&#39;</code></pre>
+<pre><code class="highlight python">grammar = <span class="string">&#x27;exact: &#123;&lt;N.*&gt;&#125;&#x27;</span></code></pre>
 
 <p>Multiple patterns grammar</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">grammars &#x3D; &#39;n_tags: &#123;&lt;N.*&gt;&#125;
-            skip_tags: exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#39;</code></pre>
+<pre><code class="highlight python">grammars = <span class="string">&#x27;n_tags: &#123;&lt;N.*&gt;&#125;</span>
+<span class="string">            skip_tags: exact: &#123;&lt;DT&gt;&lt;.*&gt;*&lt;VBZ&gt;&#125;&#x27;</span></code></pre>
 
 <h1 id="4-Full-list-of-tags"><a href="#4-Full-list-of-tags" class="headerlink" title="4. Full list of tags"></a>4. Full list of tags</h1><p><a id="markdown-full-list-of-tags" name="full-list-of-tags"></a></p>
 <p>Here is the full list of tags to save you some time:</p>
@@ -1024,7 +1024,7 @@ result &#x3D; parser.parse(tags)
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

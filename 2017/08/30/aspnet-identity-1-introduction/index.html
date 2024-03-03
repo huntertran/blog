@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Một trong những thứ bí ẩn nhất khi làm web bằng ASP.NET là hệ thống ASP.NET Identity cũng do Microsoft phát triển. Với khá nhiều hardcode, kèm với nhiều yêu cầu phức tạp về users và roles, Identity ph">
 <meta property="og:type" content="article">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/4337/36631439311_5da8d15c1a_o.png">
 <meta property="og:image" content="https://huntertran.github.io/images/flickr/4381/35961946823_1e233cd9ef_o.png">
 <meta property="article:published_time" content="2017-08-30T02:54:40.000Z">
-<meta property="article:modified_time" content="2023-12-02T02:48:49.542Z">
+<meta property="article:modified_time" content="2024-03-03T19:04:36.705Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="identity">
 <meta name="twitter:card" content="summary">
@@ -50,7 +50,7 @@
 <title>[ASP.NET Identity] - 1 - Introduction | Hunter Tran's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
-  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false}</script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
   <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-12-01 21:48:49" itemprop="dateModified" datetime="2023-12-01T21:48:49-05:00">2023-12-01</time>
+      <time title="Modified: 2024-03-03 14:04:36" itemprop="dateModified" datetime="2024-03-03T14:04:36-05:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -357,24 +357,24 @@
 <h2 id="3-1-Database"><a href="#3-1-Database" class="headerlink" title="3.1. Database"></a>3.1. Database</h2><p><a id="markdown-database" name="database"></a></p>
 <h3 id="3-1-1-Ket-noi-toi-database"><a href="#3-1-1-Ket-noi-toi-database" class="headerlink" title="3.1.1. Kết nối tới database"></a>3.1.1. Kết nối tới database</h3><p><a id="markdown-k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database" name="k%E1%BA%BFt-n%E1%BB%91i-t%E1%BB%9Bi-database"></a></p>
 <p>Mặc định, Identity dùng connection string có tên “DefaultConnection” Mở <code>Models/IdentityModels</code></p>
-<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">public class ApplicationDbContext : IdentityDbContext&lt;ApplicationUser&gt;
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ApplicationDbContext</span> : <span class="title">IdentityDbContext</span>&lt;<span class="title">ApplicationUser</span>&gt;
 &#123; 
-    public ApplicationDbContext() : base(&quot;DefaultConnection&quot;, throwIfV1Schema: false)
+    <span class="function"><span class="keyword">public</span> <span class="title">ApplicationDbContext</span>() : <span class="title">base</span>(<span class="params"><span class="string">&quot;DefaultConnection&quot;</span>, throwIfV1Schema: <span class="literal">false</span></span>)</span>
     &#123;
     &#125;
 
-    public static ApplicationDbContext Create()
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ApplicationDbContext <span class="title">Create</span>()</span>
     &#123;
-        return new ApplicationDbContext();
+        <span class="keyword">return</span> <span class="keyword">new</span> ApplicationDbContext();
     &#125;
 &#125;</code></pre>
 
 <p>Mở Web.config, kiếm <code>DefaultConnection</code>, bạn sẽ thấy connection string của nó nối tới Database</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;connectionStrings&gt;
-  &lt;add name&#x3D;&quot;DefaultConnection&quot;
-       connectionString&#x3D;&quot;Data Source&#x3D;(LocalDb)\\MSSQLLocalDB;AttachDbFilename&#x3D;|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog&#x3D;aspnet-LearnIdentity2-20170824112720;Integrated Security&#x3D;True&quot;
-       providerName&#x3D;&quot;System.Data.SqlClient&quot; &#x2F;&gt;
-&lt;&#x2F;connectionStrings&gt;</code></pre>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">connectionStrings</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">&quot;DefaultConnection&quot;</span></span>
+<span class="tag">       <span class="attr">connectionString</span>=<span class="string">&quot;Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\aspnet-LearnIdentity2-20170824112720.mdf;Initial Catalog=aspnet-LearnIdentity2-20170824112720;Integrated Security=True&quot;</span></span>
+<span class="tag">       <span class="attr">providerName</span>=<span class="string">&quot;System.Data.SqlClient&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">connectionStrings</span>&gt;</span></code></pre>
 
 <p>Như vậy, Identity, tùy theo framework bạn sử dụng, sẽ dùng LocalDb hoặc SQL Server Dùng SQL Server Management Studio connect tới db này, bạn sẽ thấy nó đang nằm chình ình trong đó</p>
 <p><img src="/images/flickr/4337/36631439311_5da8d15c1a_o.png" alt="Database trong LocalDb"></p>
@@ -540,7 +540,7 @@
 
   <div class="copyright">
     &copy; 2011 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
