@@ -30,9 +30,6 @@ jobs:
       run: |
         node --version
         npm --version
-        sudo rm -rf .deploy_git
-        npm install hexo-cli -g
-        hexo clean 
         npm rebuild node-sass
         npm install
     
