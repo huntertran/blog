@@ -13,5 +13,7 @@
         "uncategorized",
         "Uncheck"
     ],
-    "explorer.sortOrder": "modified"
+    "explorer.sortOrder": "modified",
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true
 }
