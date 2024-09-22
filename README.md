@@ -35,3 +35,11 @@ hexo new post
 # run the local server
 hexo serve
 ```
+
+# Create a symbolic link to support resources folders
+
+For example, when writing new post, you can refer the the symbolic `images` folder
+
+```s
+New-Item -ItemType SymbolicLink -Path "images" -Target "source/images"
+```

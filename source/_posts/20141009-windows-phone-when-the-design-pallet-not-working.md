@@ -25,7 +25,9 @@ Phải rồi, câu nói nổi tiếng của Apple Supporter: "Have you tried tur
 
 Mở notepad, copy paste đoạn code sau:
 
+```s
 taskkill /f /im XDesProc.exe
+```
 
 Lưu lại với đuôi .bat
 

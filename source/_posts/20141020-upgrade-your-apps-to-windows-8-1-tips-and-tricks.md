@@ -96,7 +96,30 @@ Chuột phải DetermineVisualState > Go to Definition
 
 Sửa lại như sau
 
-`protected virtual string DetermineVisualState() { string visualState = "FullScreenLandscape"; var windowWidth = Window.Current.Bounds.Width; var windowHeight = Window.Current.Bounds.Height; if( windowWidth <= 500 ) { visualState = "Snapped" + "_Detail"; } else if( windowWidth <= 1366 ) { if( windowWidth < windowHeight ) { visualState = "FullScreenPortrait" + "_Detail"; } else { visualState = "FilledOrNarrow"; } } return visualState; }`
+```csharp
+protected virtual string DetermineVisualState()
+{
+    string visualState = "FullScreenLandscape";
+    var windowWidth = Window.Current.Bounds.Width;
+    var windowHeight = Window.Current.Bounds.Height;
+    if (windowWidth <= 500)
+    {
+        visualState = "Snapped" + "_Detail";
+    }
+    else if (windowWidth <= 1366)
+    {
+        if (windowWidth < windowHeight)
+        {
+            visualState = "FullScreenPortrait" + "_Detail";
+        }
+        else
+        {
+            visualState = "FilledOrNarrow";
+        }
+    }
+    return visualState;
+}
+```
 
 Sau đó, thay thế method này với method cũ. Lưu ý method này không có tham số
 
