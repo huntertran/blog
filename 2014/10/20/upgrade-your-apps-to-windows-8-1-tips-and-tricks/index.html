@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://farm6.staticflickr.com/5611/15394171128_99a5fc56b2_o.png">
 <meta property="og:image" content="https://farm6.staticflickr.com/5607/15394693500_050c985474_o.png">
 <meta property="article:published_time" content="2014-10-20T05:09:29.000Z">
-<meta property="article:modified_time" content="2024-06-26T04:22:05.598Z">
+<meta property="article:modified_time" content="2024-09-22T18:13:14.172Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="retarget">
@@ -262,7 +262,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-06-26 00:22:05" itemprop="dateModified" datetime="2024-06-26T00:22:05-04:00">2024-06-26</time>
+      <time title="Modified: 2024-09-22 14:13:14" itemprop="dateModified" datetime="2024-09-22T14:13:14-04:00">2024-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -338,7 +338,29 @@
 <p>Sửa bằng cách ta sẽ sửa method DetermineVisualState</p>
 <p>Chuột phải DetermineVisualState &gt; Go to Definition</p>
 <p>Sửa lại như sau</p>
-<p><code>protected virtual string DetermineVisualState() &#123; string visualState = &quot;FullScreenLandscape&quot;; var windowWidth = Window.Current.Bounds.Width; var windowHeight = Window.Current.Bounds.Height; if( windowWidth &lt;= 500 ) &#123; visualState = &quot;Snapped&quot; + &quot;_Detail&quot;; &#125; else if( windowWidth &lt;= 1366 ) &#123; if( windowWidth &lt; windowHeight ) &#123; visualState = &quot;FullScreenPortrait&quot; + &quot;_Detail&quot;; &#125; else &#123; visualState = &quot;FilledOrNarrow&quot;; &#125; &#125; return visualState; &#125;</code></p>
+<pre><code class="highlight csharp"><span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="built_in">string</span> <span class="title">DetermineVisualState</span>()</span>
+&#123;
+    <span class="built_in">string</span> visualState = <span class="string">&quot;FullScreenLandscape&quot;</span>;
+    <span class="keyword">var</span> windowWidth = Window.Current.Bounds.Width;
+    <span class="keyword">var</span> windowHeight = Window.Current.Bounds.Height;
+    <span class="keyword">if</span> (windowWidth &lt;= <span class="number">500</span>)
+    &#123;
+        visualState = <span class="string">&quot;Snapped&quot;</span> + <span class="string">&quot;_Detail&quot;</span>;
+    &#125;
+    <span class="keyword">else</span> <span class="keyword">if</span> (windowWidth &lt;= <span class="number">1366</span>)
+    &#123;
+        <span class="keyword">if</span> (windowWidth &lt; windowHeight)
+        &#123;
+            visualState = <span class="string">&quot;FullScreenPortrait&quot;</span> + <span class="string">&quot;_Detail&quot;</span>;
+        &#125;
+        <span class="keyword">else</span>
+        &#123;
+            visualState = <span class="string">&quot;FilledOrNarrow&quot;</span>;
+        &#125;
+    &#125;
+    <span class="keyword">return</span> visualState;
+&#125;</code></pre>
+
 <p>Sau đó, thay thế method này với method cũ. Lưu ý method này không có tham số</p>
 <p>Vậy là xong. Build lại, bạn sẽ thấy không còn lỗi nào :yay:</p>
 

@@ -1060,7 +1060,7 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
     <url>/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</url>
     <content><![CDATA[<p>Trong thời gian qua, nhất là khi Nokia tổ chức nhiều cuộc thi với giải thưởng là những cái điện thoại hấp dẫn, rất nhiều bạn đã PM mình để hỏi một số vấn đề cơ bản về các control hiển thị giao diện trong Windows Phone.</p>
 <p>Bài viết này sẽ giúp các bạn có một khái niệm chung về giao diện và biết cách sử dụng nó trong lập trình Windows Phone nhé</p>
-<p><img src="/images/flickr/819/40941396061_a7abc65129_o.png" alt="xaml"></p>
+<p><img src="/images/2013/11/xaml_icon.png" alt="xaml"></p>
 <p>Trong phạm vi bài viết này, tôi sẽ giới thiệu cho các bạn những điều cơ bản nhất về giao diện trong XAML</p>
 <span id="more"></span>
 
@@ -1333,6 +1333,121 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       </tags>
   </entry>
   <entry>
+    <title>[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it</title>
+    <url>/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</url>
+    <content><![CDATA[<p><img src="http://farm4.staticflickr.com/3740/12789845873_f26035990e_o.png%22"> Chào các bạn,</p>
+<p>Sau đợt nghỉ lễ dài, hôm nay mình giới thiệu phần 3 của loạt bài viết [Basic for Absolute Beginner]</p>
+<p>Phần 1 nói về các control cơ bản là Grid và StackPanel: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Windows Phone–Silverlight] Layout with XAML–Basic for Absolute Beginner – Part 1</a></p>
+<p>Phần 2 nói về thiết kế giao diện với XAML: <a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Windows Phone – Silverlight] Layout with XAML – Basic for Absolute Beginner – Part 2</a></p>
+<p>Tại sao tôi lại nói 2 phần này trước cả App’s Structure. Các control là điều cơ bản nhất, cho dù sau này Structure một project có thể sẽ thay đổi, nhưng bạn sẽ tìm ra cách hiểu chúng nhanh thôi. Khi mới tạo một project Windows Phone, Visual Studio đã mở sẵn cho bạn file Mainpage.xaml để bạn chỉnh sửa.</p>
+<p>Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu trúc một ứng dụng trong Windows Phone nhé</p>
+<span id="more"></span>
+
+<h1 id="Trong-cung-series"><a href="#Trong-cung-series" class="headerlink" title="Trong cùng series:"></a>Trong cùng series:</h1><p><a href="https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML 1</a></p>
+<p><a href="https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML 2</a> </p>
+<p><a href="https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how to customize it</a></p>
+<p><a href="https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
+<p><a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
+<p><a href="https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] - [Part 6] - Source Control</a></p>
+<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><ul>
+<li><p><a href="#1-c%C3%A1ch-th%E1%BB%A9c-%E1%BB%A9ng-d%E1%BB%A5ng-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-tr%C3%AAn-thi%E1%BA%BFt-b%E1%BB%8B"><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></a></p>
+</li>
+<li><p><a href="#2-c%E1%BA%A5u-tr%C3%BAc-c%E1%BB%A7a-%E1%BB%A9ng-d%E1%BB%A5ng"><strong>2. Cấu trúc của ứng dụng</strong></a></p>
+<ul>
+<li><p><a href="#21-c%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n"><strong>2.1 Các thành phần</strong></a></p>
+<ul>
+<li><a href="#211-giao-di%E1%BB%87n-ch%C3%ADnh"><strong>2.1.1 Giao diện chính</strong></a></li>
+<li><a href="#212-properties"><strong>2.1.2 Properties</strong></a></li>
+<li><a href="#213-references"><strong>2.1.3 References</strong></a></li>
+<li><a href="#214-assets"><strong>2.1.4 Assets</strong></a></li>
+<li><a href="#215-resource"><strong>2.1.5 Resource</strong></a></li>
+<li><a href="#216-appxaml-v%C3%A0-appxamlcs"><strong>2.1.6 App.xaml và App.xaml.cs</strong></a></li>
+<li><a href="#217-localizedstringcs"><strong>2.1.7 LocalizedString.cs</strong></a></li>
+<li><a href="#218-mainpagexaml-v%C3%A0-mainpagexamlcs"><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi"><a href="#1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi" class="headerlink" title="1. Cách thức ứng dụng hoạt động trên thiết bị"></a><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></h1><p>Khi cài ứng dụng lên thiết bị, bạn sẽ có một mô hình như sau:</p>
+<p>Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1</p>
+<p><img src="http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png"></p>
+<p>Các mũi tên màu vàng biểu thị cho khả năng truy xuất</p>
+<p>Nhìn hình trên, bạn sẽ thấy Ứng dụng của bạn chỉ được phép truy cập vào Isolated Storage của chính nó mà thôi (Cái tên Isolated tức là “Cô lập”)</p>
+<p>Ngoài ra, nếu muốn truy cập vào thẻ nhớ, ứng dụng của bạn bắt buộc phải thông qua API của hệ điều hành. Hiện tại thì Windows Phone chỉ mới cho phép đọc ghi các file media (nhạc, hình, video) lên thẻ nhớ mà thôi.</p>
+<h1 id="2-Cau-truc-cua-ung-dung"><a href="#2-Cau-truc-cua-ung-dung" class="headerlink" title="2. Cấu trúc của ứng dụng"></a><strong>2. Cấu trúc của ứng dụng</strong></h1><p>Mở Visual Studio 2013 lên, bạn sẽ thấy giao diện như sau:</p>
+<p><img src="http://farm6.staticflickr.com/5497/12791385094_05d22bf96d_o.png%22"></p>
+<p>Bấm chọn New Project, chọn Windows Phone &gt; Windows Phone App</p>
+<p><img src="http://farm8.staticflickr.com/7351/12790972835_528e1f2515_o.png%22"></p>
+<p>Một số loại Project khác bạn sẽ có cơ hội thực tập với nó sau</p>
+<p>Ở bên dưới, có 2 tùy chọn khá vui</p>
+<p><img src="http://farm4.staticflickr.com/3810/12791424864_1cb8e8fe4a_o.png%22"></p>
+<ul>
+<li>Create directory for Solution: Solution của bạn sẽ được đặt trong một folder “mẹ”, và Project sẽ được đặt trong folder “con”</li>
+</ul>
+<p>Nói thêm một chút về các thể loại Project của Visual Studio: Khi tạo mới, bạn sẽ tạo một Solution (đuôi file .sln). Và toàn bộ Project của bạn sẽ nằm trong Solution đó. Một Solution có thể chứa nhiều Project.</p>
+<p>Vậy tại sao bạn lại cần nhiều Project trong 1 Solution? Vì mỗi Project sẽ tạo ra một module khác nhau của hệ thống. Có thể Project chính của bạn là một ứng dụng nghe nhạc, và Project phụ sẽ là một module cho phép cập nhật ngầm, tự động thông tin bài nhạc, hình album vân vân</p>
+<ul>
+<li>Add to source control: Source Control là một thuật ngữ cho một loại công cụ giúp bạn quản lý code của mình được hiệu quả. Microsoft có một công cụ Source Control là Team Foundation Server. Các bài viết sau sẽ nói về nó nhé</li>
+</ul>
+<p>Nhấn Ok để tạo Project</p>
+<p><img src="http://farm3.staticflickr.com/2812/12792547075_8aaa4aa9d4_o.png%22"></p>
+<p>Trên đây là giao diện sau khi tạo (của bạn có thể không giống lắm)</p>
+<h2 id="2-1-Cac-thanh-phan"><a href="#2-1-Cac-thanh-phan" class="headerlink" title="2.1 Các thành phần"></a><strong>2.1 Các thành phần</strong></h2><h3 id="2-1-1-Giao-dien-chinh"><a href="#2-1-1-Giao-dien-chinh" class="headerlink" title="2.1.1 Giao diện chính"></a><strong>2.1.1 Giao diện chính</strong></h3><p><img src="http://farm3.staticflickr.com/2842/12792570385_36061d5837_o.png%22"></p>
+<p>Đây là designer, hiển thị trực quan những gì bạn code trong file XAML</p>
+<p><img src="http://farm8.staticflickr.com/7427/12793026714_6bcf6ec07b_o.png%22"></p>
+<p>XAML, code định nghĩa giao diện của bạn. Cột bên phải là thanh cuộn cải tiến có từ Visual 2012</p>
+<p><img src="http://farm4.staticflickr.com/3673/12792616615_8cea25525e_o.png%22"></p>
+<p>3 nút này có chức năng thay đổi cách bố cục. Nhấn thử và bạn sẽ biết</p>
+<p><img src="http://farm8.staticflickr.com/7301/12792644865_d7f85b1efd_o.png%22"></p>
+<p>Còn đây là Solution Explorer, chứa cấu trúc tập tin trong Project của bạn</p>
+<h3 id="2-1-2-Properties"><a href="#2-1-2-Properties" class="headerlink" title="2.1.2 Properties"></a><strong>2.1.2 Properties</strong></h3><p>Mở Properties ra, bạn sẽ thấy có 3 file</p>
+<p><img src="http://farm8.staticflickr.com/7292/12793106684_21d1a2cd0f_o.png%22"></p>
+<p>Đối với người mới bắt đầu, bạn chỉ cần quan tâm tới “WMAppManifest.xml” là được. Double click vào nó để mở ra</p>
+<p>Mục Application UI định nghĩa cho tên gọi, các Icon của ứng dụng</p>
+<p><img src="http://farm4.staticflickr.com/3783/12792710505_cd2f45bfd7_o.png%22"></p>
+<p>Mục Capabilities định nghĩa những tài nguyên mà ứng dụng sử dụng như Camera, thư viện nhạc, hình, video, các loại cảm biến, mạng Internet, etc.</p>
+<p><img src="http://farm4.staticflickr.com/3810/12793179894_6ec2e78465_o.png%22"></p>
+<p>Ứng dụng của bạn cần sử dụng cái gì thì tick chọn cái đó. Đừng tick dư</p>
+<p>Requirement là những tài nguyên mà ứng dụng bạn “đòi” để có thể chạy được, ví dụ như NFC, Gyroscope</p>
+<p><img src="http://farm4.staticflickr.com/3681/12792917443_60e514fc62_o.png%22"></p>
+<p>Tại sao vậy? Vì không hẳn tất cả các máy Windows Phone đều như nhau. Có máy có camera trước, có máy không có, blah blah blah. Nếu ứng dụng của bạn nhất thiết phải đòi có những tài nguyên đó, bạn hãy tick vào các ô này. Trên Windows Phone Store, tất cả các máy có cấu hình không đáp ứng được đòi hỏi của bạn sẽ không thể tải được.</p>
+<p>Và cái cuối cùng dành cho việc đóng gói và hỗ trợ đa ngôn ngữ. Hiện thời bạn chưa cần quan tâm tới nó</p>
+<p><img src="http://farm8.staticflickr.com/7379/12792874415_005fd92688_o.png%22"></p>
+<h3 id="2-1-3-References"><a href="#2-1-3-References" class="headerlink" title="2.1.3 References"></a><strong>2.1.3 References</strong></h3><p>References là thư mục chứa các thư viện mà ứng dụng của bạn sẽ sử dụng</p>
+<p><img src="http://farm6.staticflickr.com/5528/12792993413_7876c769c3_o.png%22"></p>
+<p>Đa phần các thư viện này có thể cài đặt bằng NuGet</p>
+<p>Tham khảo bài viết sau: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/11/visual-studio-nuget-the-magician/">[Visual Studio] NUGET the Magician</a></p>
+<p>Double click vào một thư viện sẽ cho bạn xem toàn bộ các class và method có trong thư viện đó (máy bạn nào yếu không nên bấm vào, treo máy đấy)</p>
+<p>Tính năng này được gọi là Object Explorer, đã có từ lâu rồi</p>
+<p><img src="http://farm8.staticflickr.com/7422/12793098413_e19c21cbe5_o.png%22"></p>
+<h3 id="2-1-4-Assets"><a href="#2-1-4-Assets" class="headerlink" title="2.1.4 Assets"></a><strong>2.1.4 Assets</strong></h3><p>Thư mục Assets chứa các tập tin hình ảnh, icon, âm thanh, video mà ứng dụng bạn sẽ sử dụng. Thực ra bạn không bị bắt buộc phải để cá tập tin đó vào thư mục này, nhưng cứ làm vậy cho nó có hệ thống</p>
+<p>Nhấn chuột phải vào một tập tin nào đó và nhấn Property, bạn sẽ thấy thuộc tính của tập tin này. Thuộc tính quan trọng nhất là Build Action và Copy to output folder</p>
+<p><img src="http://farm4.staticflickr.com/3818/12793481294_7d345a6ec2_o.png%22"></p>
+<p>Tham khảo bài viết sau để hiểu rõ về chúng: <a href="http://cuoilennaocacban2.wordpress.com/2013/09/07/wp-sl-khac-nhau-resource-content/">[Windows Phone – Silverlight] - Khác nhau giữa “resource” và “content”</a></p>
+<p>Để thêm một tập tin nào đó vào thư mục này, chỉ đơn giản là nhấn phải &gt; Add &gt; Existing Item…</p>
+<h3 id="2-1-5-Resource"><a href="#2-1-5-Resource" class="headerlink" title="2.1.5 Resource"></a><strong>2.1.5 Resource</strong></h3><p>Thư mục Resource chứa file Resource của ứng dụng.</p>
+<p>File Resource thường được dùng để lưu các thông số, thuộc tính vân vân của ứng dụng. Tuy nhiên công dụng lớn nhất của nó là dùng để chuyển đổi ứng dụng của bạn thành ứng dụng đa ngôn ngữ. Ta sẽ nói về nó sau</p>
+<h3 id="2-1-6-App-xaml-va-App-xaml-cs"><a href="#2-1-6-App-xaml-va-App-xaml-cs" class="headerlink" title="2.1.6 App.xaml và App.xaml.cs"></a><strong>2.1.6 App.xaml và App.xaml.cs</strong></h3><p>Đối với mỗi một file XAML sẽ có một file XAML.CS đi kèm.</p>
+<p>File XAML định nghĩa giao diện, còn CS sẽ định nghĩa cách thức hoạt động</p>
+<p>File App.xaml và App.xaml.cs sẽ định nghĩa việc khởi tạo ứng dụng của bạn, khi mở lên như thế nào, đóng ứng dụng thì như thế nào, vân vân.</p>
+<p>Bạn sẽ cần tới nó trong một số trường hợp sau này. Bạn có thể mở nó lên để xem thử</p>
+<h3 id="2-1-7-LocalizedString-cs"><a href="#2-1-7-LocalizedString-cs" class="headerlink" title="2.1.7 LocalizedString.cs"></a><strong>2.1.7 LocalizedString.cs</strong></h3><p>File này cho phép ứng dụng hỗ trợ đa ngôn ngữ. Code trong file này do Visual Studio tự sinh ra, bạn không cần phải chỉnh sửa nó</p>
+<h3 id="2-1-8-MainPage-xaml-va-MainPage-xaml-cs"><a href="#2-1-8-MainPage-xaml-va-MainPage-xaml-cs" class="headerlink" title="2.1.8 MainPage.xaml và MainPage.xaml.cs"></a><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></h3><p>Cuối cùng, đây là trang giao diện đầu tiên của ứng dụng. File MainPage.xaml sẽ được mở sẵn sau khi tạo mới ứng dụng</p>
+<p>Như vậy, bạn đã hiểu rõ các thành phần cấu tạo nên một ứng dụng Windows Phone, áp dụng bài viết số 1 và số 2, hãy bắt tay vào thiết kế ngay cho bạn một ứng dụng Windows Phone hữu ích nào đó nhé</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows Phone</category>
+      </categories>
+      <tags>
+        <tag>windows phone</tag>
+        <tag>app</tag>
+        <tag>beginner</tag>
+        <tag>structure</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Basic for Absolute Beginner] - [Part 2] - Layout with XAML</title>
     <url>/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</url>
     <content><![CDATA[<p>Đây là phần 2 của loạt bài viết Layout with XAML – Basic for Absolute Beginner</p>
@@ -1577,118 +1692,116 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       </tags>
   </entry>
   <entry>
-    <title>[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it</title>
-    <url>/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</url>
-    <content><![CDATA[<p><img src="http://farm4.staticflickr.com/3740/12789845873_f26035990e_o.png%22"> Chào các bạn,</p>
-<p>Sau đợt nghỉ lễ dài, hôm nay mình giới thiệu phần 3 của loạt bài viết [Basic for Absolute Beginner]</p>
-<p>Phần 1 nói về các control cơ bản là Grid và StackPanel: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Windows Phone–Silverlight] Layout with XAML–Basic for Absolute Beginner – Part 1</a></p>
-<p>Phần 2 nói về thiết kế giao diện với XAML: <a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Windows Phone – Silverlight] Layout with XAML – Basic for Absolute Beginner – Part 2</a></p>
-<p>Tại sao tôi lại nói 2 phần này trước cả App’s Structure. Các control là điều cơ bản nhất, cho dù sau này Structure một project có thể sẽ thay đổi, nhưng bạn sẽ tìm ra cách hiểu chúng nhanh thôi. Khi mới tạo một project Windows Phone, Visual Studio đã mở sẵn cho bạn file Mainpage.xaml để bạn chỉnh sửa.</p>
-<p>Bây giờ, làm một cú lội ngược dòng, bạn sẽ học về cấu trúc một ứng dụng trong Windows Phone nhé</p>
+    <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</title>
+    <url>/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
+    <content><![CDATA[<p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
+<p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
+<p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
+<p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
 <span id="more"></span>
 
-<h1 id="Trong-cung-series"><a href="#Trong-cung-series" class="headerlink" title="Trong cùng series:"></a>Trong cùng series:</h1><p><a href="https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML 1</a></p>
+<h1 id="Trong-cung-series"><a href="#Trong-cung-series" class="headerlink" title="Trong cùng series:"></a>Trong cùng series:</h1><p><a id="markdown-trong-c%C3%B9ng-series%3A" name="trong-c%C3%B9ng-series%3A"></a></p>
+<p><a href="https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML 1</a></p>
 <p><a href="https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML 2</a> </p>
 <p><a href="https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how to customize it</a></p>
 <p><a href="https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
 <p><a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
 <p><a href="https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] - [Part 6] - Source Control</a></p>
-<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><ul>
-<li><p><a href="#1-c%C3%A1ch-th%E1%BB%A9c-%E1%BB%A9ng-d%E1%BB%A5ng-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-tr%C3%AAn-thi%E1%BA%BFt-b%E1%BB%8B"><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></a></p>
-</li>
-<li><p><a href="#2-c%E1%BA%A5u-tr%C3%BAc-c%E1%BB%A7a-%E1%BB%A9ng-d%E1%BB%A5ng"><strong>2. Cấu trúc của ứng dụng</strong></a></p>
+<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><p><a id="markdown-m%E1%BB%A5c-l%E1%BB%A5c" name="m%E1%BB%A5c-l%E1%BB%A5c"></a></p>
+<!-- TOC -->
+
 <ul>
-<li><p><a href="#21-c%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n"><strong>2.1 Các thành phần</strong></a></p>
-<ul>
-<li><a href="#211-giao-di%E1%BB%87n-ch%C3%ADnh"><strong>2.1.1 Giao diện chính</strong></a></li>
-<li><a href="#212-properties"><strong>2.1.2 Properties</strong></a></li>
-<li><a href="#213-references"><strong>2.1.3 References</strong></a></li>
-<li><a href="#214-assets"><strong>2.1.4 Assets</strong></a></li>
-<li><a href="#215-resource"><strong>2.1.5 Resource</strong></a></li>
-<li><a href="#216-appxaml-v%C3%A0-appxamlcs"><strong>2.1.6 App.xaml và App.xaml.cs</strong></a></li>
-<li><a href="#217-localizedstringcs"><strong>2.1.7 LocalizedString.cs</strong></a></li>
-<li><a href="#218-mainpagexaml-v%C3%A0-mainpagexamlcs"><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></a></li>
+<li><a href="#1-trong-c%C3%B9ng-series">1. Trong cùng series:</a></li>
+<li><a href="#2-m%E1%BB%A5c-l%E1%BB%A5c">2. Mục lục</a></li>
+<li><a href="#3-tr%C3%AAn-project">3. Trên Project</a><ul>
+<li><a href="#31-c%C3%A0i-sdk">3.1. Cài SDK</a></li>
+<li><a href="#32-khai-b%C3%A1o-th%C3%B4ng-tin">3.2. Khai báo thông tin</a></li>
 </ul>
 </li>
+<li><a href="#4-tr%C3%AAn-google-analytics">4. Trên Google Analytics</a></li>
+<li><a href="#5-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">5. Thiết lập theo dõi</a><ul>
+<li><a href="#51-coding">5.1. Coding</a></li>
 </ul>
 </li>
+<li><a href="#6-xem-analytics">6. Xem Analytics</a></li>
 </ul>
-<h1 id="1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi"><a href="#1-Cach-thuc-ung-dung-hoat-dong-tren-thiet-bi" class="headerlink" title="1. Cách thức ứng dụng hoạt động trên thiết bị"></a><strong>1. Cách thức ứng dụng hoạt động trên thiết bị</strong></h1><p>Khi cài ứng dụng lên thiết bị, bạn sẽ có một mô hình như sau:</p>
-<p>Áp dụng cho Windows Phone 7 và Windows Phone 8. Hứa hẹn sẽ có thay đổi lớn trong Windows Phone 8.1</p>
-<p><img src="http://farm4.staticflickr.com/3834/12789771723_b7d84196a3_o.png"></p>
-<p>Các mũi tên màu vàng biểu thị cho khả năng truy xuất</p>
-<p>Nhìn hình trên, bạn sẽ thấy Ứng dụng của bạn chỉ được phép truy cập vào Isolated Storage của chính nó mà thôi (Cái tên Isolated tức là “Cô lập”)</p>
-<p>Ngoài ra, nếu muốn truy cập vào thẻ nhớ, ứng dụng của bạn bắt buộc phải thông qua API của hệ điều hành. Hiện tại thì Windows Phone chỉ mới cho phép đọc ghi các file media (nhạc, hình, video) lên thẻ nhớ mà thôi.</p>
-<h1 id="2-Cau-truc-cua-ung-dung"><a href="#2-Cau-truc-cua-ung-dung" class="headerlink" title="2. Cấu trúc của ứng dụng"></a><strong>2. Cấu trúc của ứng dụng</strong></h1><p>Mở Visual Studio 2013 lên, bạn sẽ thấy giao diện như sau:</p>
-<p><img src="http://farm6.staticflickr.com/5497/12791385094_05d22bf96d_o.png%22"></p>
-<p>Bấm chọn New Project, chọn Windows Phone &gt; Windows Phone App</p>
-<p><img src="http://farm8.staticflickr.com/7351/12790972835_528e1f2515_o.png%22"></p>
-<p>Một số loại Project khác bạn sẽ có cơ hội thực tập với nó sau</p>
-<p>Ở bên dưới, có 2 tùy chọn khá vui</p>
-<p><img src="http://farm4.staticflickr.com/3810/12791424864_1cb8e8fe4a_o.png%22"></p>
+<!-- /TOC -->
+
+<h1 id="1-Tren-Project"><a href="#1-Tren-Project" class="headerlink" title="1. Trên Project"></a>1. Trên Project</h1><p><a id="markdown-tr%C3%AAn-project" name="tr%C3%AAn-project"></a></p>
+<h2 id="1-1-Cai-SDK"><a href="#1-1-Cai-SDK" class="headerlink" title="1.1. Cài SDK"></a>1.1. Cài SDK</h2><p><a id="markdown-c%C3%A0i-sdk" name="c%C3%A0i-sdk"></a></p>
+<p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
+<p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
+<p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
+<pre><code class="highlight shell">Install-Package GoogleAnalyticsSDK</code></pre>
+
+<p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
+<p>Chờ một chút cho nó chạy</p>
+<h2 id="1-2-Khai-bao-thong-tin"><a href="#1-2-Khai-bao-thong-tin" class="headerlink" title="1.2. Khai báo thông tin"></a>1.2. Khai báo thông tin</h2><p><a id="markdown-khai-b%C3%A1o-th%C3%B4ng-tin" name="khai-b%C3%A1o-th%C3%B4ng-tin"></a></p>
+<p>Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới</p>
+<p>File analytics.xml</p>
+<p>File này chứa các thông số cần thiết để Google Analytics theo dõi ứng dụng của bạn.</p>
+<p>Trong file này có các dòng comment vô cùng đầy đủ, bạn có thể Comment out nó và tự điền các thông số mong muốn</p>
+<p><img src="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png"></p>
+<p>File analytics.xsd</p>
+<p>Là file compiled của file trên, bạn không cần quan tâm tới file này</p>
+<h1 id="2-Tren-Google-Analytics"><a href="#2-Tren-Google-Analytics" class="headerlink" title="2. Trên Google Analytics"></a>2. Trên Google Analytics</h1><p><a id="markdown-tr%C3%AAn-google-analytics" name="tr%C3%AAn-google-analytics"></a></p>
+<p>vào link này: <a href="http://google.com/analytics">Google Analytics Account</a></p>
+<p>Nhấn nút Đăng nhập</p>
+<p><img src="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png"></p>
+<p>Chọn tab Quản trị</p>
+<p><img src="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png"></p>
+<p>Tạo thuộc tính mới</p>
+<p><img src="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png"></p>
+<p>Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi điều gì”, chọn Ứng dụng di động nhé</p>
+<p><img src="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png"></p>
+<p>Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn</p>
+<h1 id="3-Thiet-lap-theo-doi"><a href="#3-Thiet-lap-theo-doi" class="headerlink" title="3. Thiết lập theo dõi"></a>3. Thiết lập theo dõi</h1><p><a id="markdown-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i" name="thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i"></a></p>
+<p>Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:</p>
 <ul>
-<li>Create directory for Solution: Solution của bạn sẽ được đặt trong một folder “mẹ”, và Project sẽ được đặt trong folder “con”</li>
+<li>Màn hình ứng dụng: màn hình nào người dùng sử dụng nhiều</li>
+<li>Event: Nút nào được click nhiều, sự kiện nào xảy ra nhiều</li>
+<li>Exception: Lỗi nào bị bắt nhiều nhất</li>
+<li>Transaction: Thanh toán, mua đồ, In-app Purchase</li>
+<li>Social: Chia sẻ trong mạng xã hội</li>
+<li>Timing: thời gian mà ứng dụng chạy một task nào đó</li>
 </ul>
-<p>Nói thêm một chút về các thể loại Project của Visual Studio: Khi tạo mới, bạn sẽ tạo một Solution (đuôi file .sln). Và toàn bộ Project của bạn sẽ nằm trong Solution đó. Một Solution có thể chứa nhiều Project.</p>
-<p>Vậy tại sao bạn lại cần nhiều Project trong 1 Solution? Vì mỗi Project sẽ tạo ra một module khác nhau của hệ thống. Có thể Project chính của bạn là một ứng dụng nghe nhạc, và Project phụ sẽ là một module cho phép cập nhật ngầm, tự động thông tin bài nhạc, hình album vân vân</p>
+<p>Và tất nhiên, bạn sẽ có các con số sau đây:</p>
 <ul>
-<li>Add to source control: Source Control là một thuật ngữ cho một loại công cụ giúp bạn quản lý code của mình được hiệu quả. Microsoft có một công cụ Source Control là Team Foundation Server. Các bài viết sau sẽ nói về nó nhé</li>
+<li>Số lượng người dùng</li>
+<li>Người dùng mới cài đặt trong ngày</li>
+<li>Người dùng đang sử dụng app hiện tại (Realtime)</li>
+<li>Mức độ trung thành</li>
+<li>Tỷ lệ thoát ứng dụng</li>
+<li>Phiên bản ứng dụng (cái này phải cài đặt trong file XML)</li>
 </ul>
-<p>Nhấn Ok để tạo Project</p>
-<p><img src="http://farm3.staticflickr.com/2812/12792547075_8aaa4aa9d4_o.png%22"></p>
-<p>Trên đây là giao diện sau khi tạo (của bạn có thể không giống lắm)</p>
-<h2 id="2-1-Cac-thanh-phan"><a href="#2-1-Cac-thanh-phan" class="headerlink" title="2.1 Các thành phần"></a><strong>2.1 Các thành phần</strong></h2><h3 id="2-1-1-Giao-dien-chinh"><a href="#2-1-1-Giao-dien-chinh" class="headerlink" title="2.1.1 Giao diện chính"></a><strong>2.1.1 Giao diện chính</strong></h3><p><img src="http://farm3.staticflickr.com/2842/12792570385_36061d5837_o.png%22"></p>
-<p>Đây là designer, hiển thị trực quan những gì bạn code trong file XAML</p>
-<p><img src="http://farm8.staticflickr.com/7427/12793026714_6bcf6ec07b_o.png%22"></p>
-<p>XAML, code định nghĩa giao diện của bạn. Cột bên phải là thanh cuộn cải tiến có từ Visual 2012</p>
-<p><img src="http://farm4.staticflickr.com/3673/12792616615_8cea25525e_o.png%22"></p>
-<p>3 nút này có chức năng thay đổi cách bố cục. Nhấn thử và bạn sẽ biết</p>
-<p><img src="http://farm8.staticflickr.com/7301/12792644865_d7f85b1efd_o.png%22"></p>
-<p>Còn đây là Solution Explorer, chứa cấu trúc tập tin trong Project của bạn</p>
-<h3 id="2-1-2-Properties"><a href="#2-1-2-Properties" class="headerlink" title="2.1.2 Properties"></a><strong>2.1.2 Properties</strong></h3><p>Mở Properties ra, bạn sẽ thấy có 3 file</p>
-<p><img src="http://farm8.staticflickr.com/7292/12793106684_21d1a2cd0f_o.png%22"></p>
-<p>Đối với người mới bắt đầu, bạn chỉ cần quan tâm tới “WMAppManifest.xml” là được. Double click vào nó để mở ra</p>
-<p>Mục Application UI định nghĩa cho tên gọi, các Icon của ứng dụng</p>
-<p><img src="http://farm4.staticflickr.com/3783/12792710505_cd2f45bfd7_o.png%22"></p>
-<p>Mục Capabilities định nghĩa những tài nguyên mà ứng dụng sử dụng như Camera, thư viện nhạc, hình, video, các loại cảm biến, mạng Internet, etc.</p>
-<p><img src="http://farm4.staticflickr.com/3810/12793179894_6ec2e78465_o.png%22"></p>
-<p>Ứng dụng của bạn cần sử dụng cái gì thì tick chọn cái đó. Đừng tick dư</p>
-<p>Requirement là những tài nguyên mà ứng dụng bạn “đòi” để có thể chạy được, ví dụ như NFC, Gyroscope</p>
-<p><img src="http://farm4.staticflickr.com/3681/12792917443_60e514fc62_o.png%22"></p>
-<p>Tại sao vậy? Vì không hẳn tất cả các máy Windows Phone đều như nhau. Có máy có camera trước, có máy không có, blah blah blah. Nếu ứng dụng của bạn nhất thiết phải đòi có những tài nguyên đó, bạn hãy tick vào các ô này. Trên Windows Phone Store, tất cả các máy có cấu hình không đáp ứng được đòi hỏi của bạn sẽ không thể tải được.</p>
-<p>Và cái cuối cùng dành cho việc đóng gói và hỗ trợ đa ngôn ngữ. Hiện thời bạn chưa cần quan tâm tới nó</p>
-<p><img src="http://farm8.staticflickr.com/7379/12792874415_005fd92688_o.png%22"></p>
-<h3 id="2-1-3-References"><a href="#2-1-3-References" class="headerlink" title="2.1.3 References"></a><strong>2.1.3 References</strong></h3><p>References là thư mục chứa các thư viện mà ứng dụng của bạn sẽ sử dụng</p>
-<p><img src="http://farm6.staticflickr.com/5528/12792993413_7876c769c3_o.png%22"></p>
-<p>Đa phần các thư viện này có thể cài đặt bằng NuGet</p>
-<p>Tham khảo bài viết sau: <a href="http://cuoilennaocacban2.wordpress.com/2013/11/11/visual-studio-nuget-the-magician/">[Visual Studio] NUGET the Magician</a></p>
-<p>Double click vào một thư viện sẽ cho bạn xem toàn bộ các class và method có trong thư viện đó (máy bạn nào yếu không nên bấm vào, treo máy đấy)</p>
-<p>Tính năng này được gọi là Object Explorer, đã có từ lâu rồi</p>
-<p><img src="http://farm8.staticflickr.com/7422/12793098413_e19c21cbe5_o.png%22"></p>
-<h3 id="2-1-4-Assets"><a href="#2-1-4-Assets" class="headerlink" title="2.1.4 Assets"></a><strong>2.1.4 Assets</strong></h3><p>Thư mục Assets chứa các tập tin hình ảnh, icon, âm thanh, video mà ứng dụng bạn sẽ sử dụng. Thực ra bạn không bị bắt buộc phải để cá tập tin đó vào thư mục này, nhưng cứ làm vậy cho nó có hệ thống</p>
-<p>Nhấn chuột phải vào một tập tin nào đó và nhấn Property, bạn sẽ thấy thuộc tính của tập tin này. Thuộc tính quan trọng nhất là Build Action và Copy to output folder</p>
-<p><img src="http://farm4.staticflickr.com/3818/12793481294_7d345a6ec2_o.png%22"></p>
-<p>Tham khảo bài viết sau để hiểu rõ về chúng: <a href="http://cuoilennaocacban2.wordpress.com/2013/09/07/wp-sl-khac-nhau-resource-content/">[Windows Phone – Silverlight] - Khác nhau giữa “resource” và “content”</a></p>
-<p>Để thêm một tập tin nào đó vào thư mục này, chỉ đơn giản là nhấn phải &gt; Add &gt; Existing Item…</p>
-<h3 id="2-1-5-Resource"><a href="#2-1-5-Resource" class="headerlink" title="2.1.5 Resource"></a><strong>2.1.5 Resource</strong></h3><p>Thư mục Resource chứa file Resource của ứng dụng.</p>
-<p>File Resource thường được dùng để lưu các thông số, thuộc tính vân vân của ứng dụng. Tuy nhiên công dụng lớn nhất của nó là dùng để chuyển đổi ứng dụng của bạn thành ứng dụng đa ngôn ngữ. Ta sẽ nói về nó sau</p>
-<h3 id="2-1-6-App-xaml-va-App-xaml-cs"><a href="#2-1-6-App-xaml-va-App-xaml-cs" class="headerlink" title="2.1.6 App.xaml và App.xaml.cs"></a><strong>2.1.6 App.xaml và App.xaml.cs</strong></h3><p>Đối với mỗi một file XAML sẽ có một file XAML.CS đi kèm.</p>
-<p>File XAML định nghĩa giao diện, còn CS sẽ định nghĩa cách thức hoạt động</p>
-<p>File App.xaml và App.xaml.cs sẽ định nghĩa việc khởi tạo ứng dụng của bạn, khi mở lên như thế nào, đóng ứng dụng thì như thế nào, vân vân.</p>
-<p>Bạn sẽ cần tới nó trong một số trường hợp sau này. Bạn có thể mở nó lên để xem thử</p>
-<h3 id="2-1-7-LocalizedString-cs"><a href="#2-1-7-LocalizedString-cs" class="headerlink" title="2.1.7 LocalizedString.cs"></a><strong>2.1.7 LocalizedString.cs</strong></h3><p>File này cho phép ứng dụng hỗ trợ đa ngôn ngữ. Code trong file này do Visual Studio tự sinh ra, bạn không cần phải chỉnh sửa nó</p>
-<h3 id="2-1-8-MainPage-xaml-va-MainPage-xaml-cs"><a href="#2-1-8-MainPage-xaml-va-MainPage-xaml-cs" class="headerlink" title="2.1.8 MainPage.xaml và MainPage.xaml.cs"></a><strong>2.1.8 MainPage.xaml và MainPage.xaml.cs</strong></h3><p>Cuối cùng, đây là trang giao diện đầu tiên của ứng dụng. File MainPage.xaml sẽ được mở sẵn sau khi tạo mới ứng dụng</p>
-<p>Như vậy, bạn đã hiểu rõ các thành phần cấu tạo nên một ứng dụng Windows Phone, áp dụng bài viết số 1 và số 2, hãy bắt tay vào thiết kế ngay cho bạn một ứng dụng Windows Phone hữu ích nào đó nhé</p>
+<h2 id="3-1-Coding"><a href="#3-1-Coding" class="headerlink" title="3.1. Coding"></a>3.1. Coding</h2><p><a id="markdown-coding" name="coding"></a></p>
+<p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
+<pre><code class="highlight csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, <span class="literal">false</span>);</code></pre>
+
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
+<p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
+<pre><code class="highlight csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, <span class="literal">false</span>);</code></pre>
+
+<p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
+<p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
+<p><code>csharp // Track Navigation RootFrame.Navigated += RootFrame_Navigated; </code></p>
+<p>Trong Event Handler, thêm đoạn code sau:</p>
+<p><code>csharp if (e.Content != null) &#123; GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); &#125; </code></p>
+<h1 id="4-Xem-Analytics"><a href="#4-Xem-Analytics" class="headerlink" title="4. Xem Analytics"></a>4. Xem Analytics</h1><p><a id="markdown-xem-analytics" name="xem-analytics"></a></p>
+<p>Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app</p>
+<p><img src="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png"></p>
+<p>Bạn có thể khám phá thêm trong trang Google Analytics của mình.</p>
+<p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
 ]]></content>
       <categories>
         <category>CSharp</category>
         <category>Windows Phone</category>
+        <category>Windows Store App</category>
       </categories>
       <tags>
         <tag>windows phone</tag>
-        <tag>app</tag>
-        <tag>beginner</tag>
-        <tag>structure</tag>
+        <tag>analytics</tag>
+        <tag>windows store</tag>
       </tags>
   </entry>
   <entry>
@@ -1804,119 +1917,6 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       <tags>
         <tag>windows phone</tag>
         <tag>windows store</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</title>
-    <url>/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</url>
-    <content><![CDATA[<p>Phân tích hành vi người dùng là một điều hết sức cần thiết và quan trọng trong việc cải thiện chất lượng ứng dụng của bạn.</p>
-<p>Và lần này, ta sẽ dựa và công cụ phân tích và theo dõi người dùng kinh khủng nhất thế giới: Google Analytics</p>
-<p><img src="https://farm8.staticflickr.com/7322/13573942035_b413d8924a_o.png"></p>
-<p>Đúng rồi, Windows Phone và Windows 8, sử dụng dịch vụ Analytics của “đối thủ”. Nghe lạ chưa :3</p>
-<span id="more"></span>
-
-<h1 id="Trong-cung-series"><a href="#Trong-cung-series" class="headerlink" title="Trong cùng series:"></a>Trong cùng series:</h1><p><a id="markdown-trong-c%C3%B9ng-series%3A" name="trong-c%C3%B9ng-series%3A"></a></p>
-<p><a href="https://huntertran.ca/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML 1</a></p>
-<p><a href="https://huntertran.ca/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML 2</a> </p>
-<p><a href="https://huntertran.ca/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how to customize it</a></p>
-<p><a href="https://huntertran.ca/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
-<p><a href="https://huntertran.ca/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
-<p><a href="https://huntertran.ca/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] - [Part 6] - Source Control</a></p>
-<h1 id="Muc-luc"><a href="#Muc-luc" class="headerlink" title="Mục lục"></a>Mục lục</h1><p><a id="markdown-m%E1%BB%A5c-l%E1%BB%A5c" name="m%E1%BB%A5c-l%E1%BB%A5c"></a></p>
-<!-- TOC -->
-
-<ul>
-<li><a href="#1-trong-c%C3%B9ng-series">1. Trong cùng series:</a></li>
-<li><a href="#2-m%E1%BB%A5c-l%E1%BB%A5c">2. Mục lục</a></li>
-<li><a href="#3-tr%C3%AAn-project">3. Trên Project</a><ul>
-<li><a href="#31-c%C3%A0i-sdk">3.1. Cài SDK</a></li>
-<li><a href="#32-khai-b%C3%A1o-th%C3%B4ng-tin">3.2. Khai báo thông tin</a></li>
-</ul>
-</li>
-<li><a href="#4-tr%C3%AAn-google-analytics">4. Trên Google Analytics</a></li>
-<li><a href="#5-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i">5. Thiết lập theo dõi</a><ul>
-<li><a href="#51-coding">5.1. Coding</a></li>
-</ul>
-</li>
-<li><a href="#6-xem-analytics">6. Xem Analytics</a></li>
-</ul>
-<!-- /TOC -->
-
-<h1 id="1-Tren-Project"><a href="#1-Tren-Project" class="headerlink" title="1. Trên Project"></a>1. Trên Project</h1><p><a id="markdown-tr%C3%AAn-project" name="tr%C3%AAn-project"></a></p>
-<h2 id="1-1-Cai-SDK"><a href="#1-1-Cai-SDK" class="headerlink" title="1.1. Cài SDK"></a>1.1. Cài SDK</h2><p><a id="markdown-c%C3%A0i-sdk" name="c%C3%A0i-sdk"></a></p>
-<p>Mở project của bạn lên, vào Tools &gt; NuGet Package Manager &gt; Package Manager Console</p>
-<p><img src="http://farm8.staticflickr.com/7070/13574117965_55d85b93db_o.png"></p>
-<p>Một ô nho nhỏ xinh xinh hiện ra, gõ dòng lệnh sau</p>
-<pre><code class="highlight shell">Install-Package GoogleAnalyticsSDK</code></pre>
-
-<p><img src="http://farm3.staticflickr.com/2835/13574223523_c343351607_o.png"></p>
-<p>Chờ một chút cho nó chạy</p>
-<h2 id="1-2-Khai-bao-thong-tin"><a href="#1-2-Khai-bao-thong-tin" class="headerlink" title="1.2. Khai báo thông tin"></a>1.2. Khai báo thông tin</h2><p><a id="markdown-khai-b%C3%A1o-th%C3%B4ng-tin" name="khai-b%C3%A1o-th%C3%B4ng-tin"></a></p>
-<p>Sau khi chạy xong, Project của bạn sẽ có thêm một số thứ mới</p>
-<p>File analytics.xml</p>
-<p>File này chứa các thông số cần thiết để Google Analytics theo dõi ứng dụng của bạn.</p>
-<p>Trong file này có các dòng comment vô cùng đầy đủ, bạn có thể Comment out nó và tự điền các thông số mong muốn</p>
-<p><img src="http://farm8.staticflickr.com/7185/13574595064_28071ab5ae_o.png"></p>
-<p>File analytics.xsd</p>
-<p>Là file compiled của file trên, bạn không cần quan tâm tới file này</p>
-<h1 id="2-Tren-Google-Analytics"><a href="#2-Tren-Google-Analytics" class="headerlink" title="2. Trên Google Analytics"></a>2. Trên Google Analytics</h1><p><a id="markdown-tr%C3%AAn-google-analytics" name="tr%C3%AAn-google-analytics"></a></p>
-<p>vào link này: <a href="http://google.com/analytics">Google Analytics Account</a></p>
-<p>Nhấn nút Đăng nhập</p>
-<p><img src="http://farm8.staticflickr.com/7316/13574390013_fc95019363_o.png"></p>
-<p>Chọn tab Quản trị</p>
-<p><img src="http://farm8.staticflickr.com/7026/13574407623_8c32c154eb_o.png"></p>
-<p>Tạo thuộc tính mới</p>
-<p><img src="http://farm4.staticflickr.com/3781/13574432883_7b8b91df2f_o.png"></p>
-<p>Chọn các thông số phù hợp. Lưu ý, ở mục “Bạn muốn theo dõi điều gì”, chọn Ứng dụng di động nhé</p>
-<p><img src="http://farm4.staticflickr.com/3819/13574765814_c96d25bb44_o.png"></p>
-<p>Sau đó, bạn sẽ có 1 ID theo dõi dạng UA-#######-##, copy chuỗi này và paste vào bên trong file analytics.xml trong project của bạn</p>
-<h1 id="3-Thiet-lap-theo-doi"><a href="#3-Thiet-lap-theo-doi" class="headerlink" title="3. Thiết lập theo dõi"></a>3. Thiết lập theo dõi</h1><p><a id="markdown-thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i" name="thi%E1%BA%BFt-l%E1%BA%ADp-theo-d%C3%B5i"></a></p>
-<p>Về cơ bản, bạn có thể theo dõi rất nhiều thứ, bao gồm:</p>
-<ul>
-<li>Màn hình ứng dụng: màn hình nào người dùng sử dụng nhiều</li>
-<li>Event: Nút nào được click nhiều, sự kiện nào xảy ra nhiều</li>
-<li>Exception: Lỗi nào bị bắt nhiều nhất</li>
-<li>Transaction: Thanh toán, mua đồ, In-app Purchase</li>
-<li>Social: Chia sẻ trong mạng xã hội</li>
-<li>Timing: thời gian mà ứng dụng chạy một task nào đó</li>
-</ul>
-<p>Và tất nhiên, bạn sẽ có các con số sau đây:</p>
-<ul>
-<li>Số lượng người dùng</li>
-<li>Người dùng mới cài đặt trong ngày</li>
-<li>Người dùng đang sử dụng app hiện tại (Realtime)</li>
-<li>Mức độ trung thành</li>
-<li>Tỷ lệ thoát ứng dụng</li>
-<li>Phiên bản ứng dụng (cái này phải cài đặt trong file XML)</li>
-</ul>
-<h2 id="3-1-Coding"><a href="#3-1-Coding" class="headerlink" title="3.1. Coding"></a>3.1. Coding</h2><p><a id="markdown-coding" name="coding"></a></p>
-<p>Trong sự kiện <code>RootFrame_NavigationFailed</code>, thêm đoạn code sau</p>
-<pre><code class="highlight csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.Exception.Message, <span class="literal">false</span>);</code></pre>
-
-<p>Đoạn code này có nhiệm vụ theo dõi các Exception khi lỗi chuyển trang</p>
-<p>Trong sự kiện <code>Application_UnhandledException</code>, thêm đoạn code sau:</p>
-<pre><code class="highlight csharp">GoogleAnalytics.EasyTracker.GetTracker().SendException(e.ExceptionObject.Message, <span class="literal">false</span>);</code></pre>
-
-<p>Đoạn code này có nhiệm vụ theo dõi các Exception cho tất cả các lỗi khác</p>
-<p>Trong method <code>InitializePhoneApplication()</code>, khai báo một Event Handler:</p>
-<p><code>csharp // Track Navigation RootFrame.Navigated += RootFrame_Navigated; </code></p>
-<p>Trong Event Handler, thêm đoạn code sau:</p>
-<p><code>csharp if (e.Content != null) &#123; GoogleAnalytics.EasyTracker.GetTracker().SendView(e.Content.ToString()); &#125; </code></p>
-<h1 id="4-Xem-Analytics"><a href="#4-Xem-Analytics" class="headerlink" title="4. Xem Analytics"></a>4. Xem Analytics</h1><p><a id="markdown-xem-analytics" name="xem-analytics"></a></p>
-<p>Xem kết quả Analytics khá thú vị ở chỗ nó cho phép bạn xem rất nhiều thông tin, mà cái hay nhất có lẽ là số người dùng hiện tại đang sử dụng app</p>
-<p><img src="http://farm4.staticflickr.com/3726/13575637933_a49df7e626_o.png"></p>
-<p>Bạn có thể khám phá thêm trong trang Google Analytics của mình.</p>
-<p>Lưu ý là ứng dụng nhiều người dùng, sử dụng mạng thì mới xem được Analytics nhé.</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows Phone</category>
-        <category>Windows Store App</category>
-      </categories>
-      <tags>
-        <tag>windows phone</tag>
-        <tag>windows store</tag>
-        <tag>analytics</tag>
       </tags>
   </entry>
   <entry>
@@ -2246,7 +2246,8 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
 <h1 id="OLD-WAY-Restart-your-Visual-Studio"><a href="#OLD-WAY-Restart-your-Visual-Studio" class="headerlink" title="OLD WAY: Restart your Visual Studio"></a>OLD WAY: Restart your Visual Studio</h1><p>Phải rồi, câu nói nổi tiếng của Apple Supporter: “Have you tried turn it off and on again?” Tắt đi bật lại Visual Studio chắc chắn sẽ giải quyết vấn đề cho bạn. Nhưng tiếp tục đọc tiếp bài blog này nhé</p>
 <h1 id="NEW-WAY-Run-a-piece-of-code"><a href="#NEW-WAY-Run-a-piece-of-code" class="headerlink" title="NEW WAY: Run a piece of code"></a>NEW WAY: Run a piece of code</h1><p>Đoạn code sau sẽ cho phép bạn kill designer task bên trong Visual Studio. Chạy đoạn code này xong, vào Visual Studio, bấm đường link “Click here to reload Designer”, thế là xong.</p>
 <p>Mở notepad, copy paste đoạn code sau:</p>
-<p>taskkill &#x2F;f &#x2F;im XDesProc.exe</p>
+<pre><code class="highlight s">taskkill /f /im XDesProc.exe</code></pre>
+
 <p>Lưu lại với đuôi .bat</p>
 <p>Vậy là xong. Mỗi lần bị lỗi không thể edit trong khung property của Visual Studio, bạn chỉ cần double click file này là xong.</p>
 <h1 id="More-details-What-does-Microsoft-say"><a href="#More-details-What-does-Microsoft-say" class="headerlink" title="More details: What does Microsoft say?"></a>More details: What does Microsoft say?</h1><p>Các kỹ sư của Microsoft đã biết đến sự tồn tại của lỗi này. Và họ đã “wánh” nó là Won-fix in this version. Tức là trừ phi có phiên bản Visual Studio mới hơn, lỗi này sẽ không được sửa trong phiên bản 2012, 2013.</p>
@@ -2301,7 +2302,29 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
 <p>Sửa bằng cách ta sẽ sửa method DetermineVisualState</p>
 <p>Chuột phải DetermineVisualState &gt; Go to Definition</p>
 <p>Sửa lại như sau</p>
-<p><code>protected virtual string DetermineVisualState() &#123; string visualState = &quot;FullScreenLandscape&quot;; var windowWidth = Window.Current.Bounds.Width; var windowHeight = Window.Current.Bounds.Height; if( windowWidth &lt;= 500 ) &#123; visualState = &quot;Snapped&quot; + &quot;_Detail&quot;; &#125; else if( windowWidth &lt;= 1366 ) &#123; if( windowWidth &lt; windowHeight ) &#123; visualState = &quot;FullScreenPortrait&quot; + &quot;_Detail&quot;; &#125; else &#123; visualState = &quot;FilledOrNarrow&quot;; &#125; &#125; return visualState; &#125;</code></p>
+<pre><code class="highlight csharp"><span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="built_in">string</span> <span class="title">DetermineVisualState</span>()</span>
+&#123;
+    <span class="built_in">string</span> visualState = <span class="string">&quot;FullScreenLandscape&quot;</span>;
+    <span class="keyword">var</span> windowWidth = Window.Current.Bounds.Width;
+    <span class="keyword">var</span> windowHeight = Window.Current.Bounds.Height;
+    <span class="keyword">if</span> (windowWidth &lt;= <span class="number">500</span>)
+    &#123;
+        visualState = <span class="string">&quot;Snapped&quot;</span> + <span class="string">&quot;_Detail&quot;</span>;
+    &#125;
+    <span class="keyword">else</span> <span class="keyword">if</span> (windowWidth &lt;= <span class="number">1366</span>)
+    &#123;
+        <span class="keyword">if</span> (windowWidth &lt; windowHeight)
+        &#123;
+            visualState = <span class="string">&quot;FullScreenPortrait&quot;</span> + <span class="string">&quot;_Detail&quot;</span>;
+        &#125;
+        <span class="keyword">else</span>
+        &#123;
+            visualState = <span class="string">&quot;FilledOrNarrow&quot;</span>;
+        &#125;
+    &#125;
+    <span class="keyword">return</span> visualState;
+&#125;</code></pre>
+
 <p>Sau đó, thay thế method này với method cũ. Lưu ý method này không có tham số</p>
 <p>Vậy là xong. Build lại, bạn sẽ thấy không còn lỗi nào :yay:</p>
 ]]></content>
@@ -2341,40 +2364,6 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       </tags>
   </entry>
   <entry>
-    <title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it</title>
-    <url>/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</url>
-    <content><![CDATA[<p>Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam.</p>
-<p>Và 1 dịch vụ rất hay của Azure đó là máy ảo. Bạn được phép tạo một cái máy ảo như máy thật, chạy Windows Server 2012 hoặc 2014, thậm chí là tạo một cái máy ảo chạy thử Windows 10 Technical Preview cũng vẫn được.</p>
-<span id="more"></span>
-<h1 id="Tao-may-ao"><a href="#Tao-may-ao" class="headerlink" title="Tạo máy ảo"></a>Tạo máy ảo</h1><p>Đăng nhập vào portal của azure, tạo Storage Account. Bước này có thể làm tự động, nhưng tạo tay sẽ cho phép bạn đặt cho nó một cái tên ý nghĩa: <a href="https://manage.windowsazure.com/" title="https://manage.windowsazure.com">https://manage.windowsazure.com</a></p>
-<p>Tiếp theo, tạo một Virtual Machine từ Gallery</p>
-<p><img src="https://farm8.staticflickr.com/7490/15316844594_6ea298d7d3_o.png"></p>
-<p>Ở đây, bạn có thể chọn từ rất nhiều Image, có cả các image có sẵn Visual Studio 2013, và có cả Windows 10 Enterprise Technical Preview</p>
-<p><img src="https://farm8.staticflickr.com/7555/15938450692_9b8b964e62_o.png"></p>
-<p>Đặt một cái tên mang tính gợi nhớ cho bạn. Ví dụ như Windows81VM hay gì đó đại loại vậy</p>
-<p>Chọn cấu hình cho máy bạn. Nếu bạn chọn những Image có cài sẵn nhiều thứ, thì nên chọn cấu hình cao cao một chút. Lưu ý là cấu hình càng cao thì càng tốn tiền</p>
-<p>Tạo username và password cho bạn. Phải nhớ username và password này</p>
-<p><img src="https://farm8.staticflickr.com/7487/15938466492_dfc0b4d6f0_o.png"></p>
-<p>Availability tức là VM của bạn sẽ được backup ở một số nơi khác ngoài nơi bạn tạo chính. Tất nhiên là sẽ tốn phí</p>
-<p><img src="https://farm8.staticflickr.com/7554/15751845320_971cdc5574_o.png"></p>
-<p>Xong hết rồi thì bấm Create. Chờ nó phân vùng, tạo máy ảo, đăng ký, khởi động, blah blah blah rất là lâu.</p>
-<h1 id="Dang-nhap"><a href="#Dang-nhap" class="headerlink" title="Đăng nhập"></a>Đăng nhập</h1><p>Tạo xong thì phải đăng nhập. Và bạn sẽ đăng nhập bằng Remote Desktop của Windows</p>
-<p>Sau khi máy ảo đã khởi động xong, bạn nhấn vào nút connect để tải về một file .RDP. Nút connect chỉ xuất hiện ở dashboard của Virtual Machine mà bạn tạo</p>
-<p><img src="https://farm9.staticflickr.com/8668/15319517683_95abc6ee6a_o.png"></p>
-<p>Double click file này để chạy, bạn sẽ thấy một khung đăng nhập. Bây giờ tới phần éo le</p>
-<p>Select “Other Account”. Ở ô username, bạn nhập theo cú pháp “hostname\username”. Hostname lấy trong phần dashboard của virtual machine trong Azure. Password bạn nhập đúng password lúc tạo máy ảo</p>
-<p><img src="https://farm9.staticflickr.com/8646/15938501022_5b036859a4_o.png"></p>
-<p>Bạn sẽ gặp phải một vài cảnh báo về chứng chỉ. Cứ việc cho phép nó. Đến bây giờ bạn đã có thể đăng nhập vào máy ảo.</p>
-]]></content>
-      <categories>
-        <category>Azure</category>
-      </categories>
-      <tags>
-        <tag>azure</tag>
-        <tag>virtual machine</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>XAML Styler – Bug and fixes</title>
     <url>/2014/11/17/xaml-styler-bug-and-fixes/</url>
     <content><![CDATA[<p>Dành cho bạn nào chưa biết, XAML Styler là một extension nho nhỏ dành cho Visual Studio, dùng để format lại file thiết kế giao diện xaml cho đẹp.</p>
@@ -2410,6 +2399,40 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       <tags>
         <tag>Visual Studio</tag>
         <tag>extension</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Virtual Machine in Azure Part 1: Create virtual machine and connect to it</title>
+    <url>/2014/12/03/virtual-machine-in-azure-part-1-create-virtual-machine-and-connect-to-it/</url>
+    <content><![CDATA[<p>Chào các bạn, vậy là azure đã cho đăng ký chính thức ở Việt Nam.</p>
+<p>Và 1 dịch vụ rất hay của Azure đó là máy ảo. Bạn được phép tạo một cái máy ảo như máy thật, chạy Windows Server 2012 hoặc 2014, thậm chí là tạo một cái máy ảo chạy thử Windows 10 Technical Preview cũng vẫn được.</p>
+<span id="more"></span>
+<h1 id="Tao-may-ao"><a href="#Tao-may-ao" class="headerlink" title="Tạo máy ảo"></a>Tạo máy ảo</h1><p>Đăng nhập vào portal của azure, tạo Storage Account. Bước này có thể làm tự động, nhưng tạo tay sẽ cho phép bạn đặt cho nó một cái tên ý nghĩa: <a href="https://manage.windowsazure.com/" title="https://manage.windowsazure.com">https://manage.windowsazure.com</a></p>
+<p>Tiếp theo, tạo một Virtual Machine từ Gallery</p>
+<p><img src="https://farm8.staticflickr.com/7490/15316844594_6ea298d7d3_o.png"></p>
+<p>Ở đây, bạn có thể chọn từ rất nhiều Image, có cả các image có sẵn Visual Studio 2013, và có cả Windows 10 Enterprise Technical Preview</p>
+<p><img src="https://farm8.staticflickr.com/7555/15938450692_9b8b964e62_o.png"></p>
+<p>Đặt một cái tên mang tính gợi nhớ cho bạn. Ví dụ như Windows81VM hay gì đó đại loại vậy</p>
+<p>Chọn cấu hình cho máy bạn. Nếu bạn chọn những Image có cài sẵn nhiều thứ, thì nên chọn cấu hình cao cao một chút. Lưu ý là cấu hình càng cao thì càng tốn tiền</p>
+<p>Tạo username và password cho bạn. Phải nhớ username và password này</p>
+<p><img src="https://farm8.staticflickr.com/7487/15938466492_dfc0b4d6f0_o.png"></p>
+<p>Availability tức là VM của bạn sẽ được backup ở một số nơi khác ngoài nơi bạn tạo chính. Tất nhiên là sẽ tốn phí</p>
+<p><img src="https://farm8.staticflickr.com/7554/15751845320_971cdc5574_o.png"></p>
+<p>Xong hết rồi thì bấm Create. Chờ nó phân vùng, tạo máy ảo, đăng ký, khởi động, blah blah blah rất là lâu.</p>
+<h1 id="Dang-nhap"><a href="#Dang-nhap" class="headerlink" title="Đăng nhập"></a>Đăng nhập</h1><p>Tạo xong thì phải đăng nhập. Và bạn sẽ đăng nhập bằng Remote Desktop của Windows</p>
+<p>Sau khi máy ảo đã khởi động xong, bạn nhấn vào nút connect để tải về một file .RDP. Nút connect chỉ xuất hiện ở dashboard của Virtual Machine mà bạn tạo</p>
+<p><img src="https://farm9.staticflickr.com/8668/15319517683_95abc6ee6a_o.png"></p>
+<p>Double click file này để chạy, bạn sẽ thấy một khung đăng nhập. Bây giờ tới phần éo le</p>
+<p>Select “Other Account”. Ở ô username, bạn nhập theo cú pháp “hostname\username”. Hostname lấy trong phần dashboard của virtual machine trong Azure. Password bạn nhập đúng password lúc tạo máy ảo</p>
+<p><img src="https://farm9.staticflickr.com/8646/15938501022_5b036859a4_o.png"></p>
+<p>Bạn sẽ gặp phải một vài cảnh báo về chứng chỉ. Cứ việc cho phép nó. Đến bây giờ bạn đã có thể đăng nhập vào máy ảo.</p>
+]]></content>
+      <categories>
+        <category>Azure</category>
+      </categories>
+      <tags>
+        <tag>azure</tag>
+        <tag>virtual machine</tag>
       </tags>
   </entry>
   <entry>
@@ -2566,6 +2589,85 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       </categories>
   </entry>
   <entry>
+    <title>[MSP] MSP Asia – Pacific Newsletter – Jan 2015</title>
+    <url>/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</url>
+    <content><![CDATA[<p><strong>MSP Asia-Pacific Newsletter</strong></p>
+<p>Vol.2 Dec-Jan 2014-2015</p>
+<p><strong>Contents:</strong></p>
+<p><strong>1.MAIN TOPIC</strong></p>
+<p>Japan, New Zealand, Philippines, Thailand, Vietnam</p>
+<p><strong>2.Super MSP</strong></p>
+<p>Vishesh Oberoi (New Zealand), Supatporn Posoknistakul(Thailand)</p>
+<p><strong>3.Highlights &amp; Upcoming Events</strong></p>
+<p>Japan, New Zealand, Philippines, Singapore, Thailand, Vietnam</p>
+<span id="more"></span>
+<h1 id="1-MAIN-TOPIC"><a href="#1-MAIN-TOPIC" class="headerlink" title="1. MAIN TOPIC"></a>1. MAIN TOPIC</h1><p>Today’s Main Topic is Hour of Code!</p>
+<h2 id="Japan-MSP-Japan-joined-Hour-of-Code"><a href="#Japan-MSP-Japan-joined-Hour-of-Code" class="headerlink" title="Japan: MSP Japan joined Hour of Code"></a>Japan: MSP Japan joined Hour of Code</h2><p> On Dec 12th, 2014, one of the events for the <a href="http://hourofcode.com/jp">Hour of Code</a> by MSPs was carried out with 36 young students who ranged from 15 to 18 of ages at an all girls’ high school in Tokyo. In collaboration with Life is Tech! Microsoft Japan provided the technologies and MSPs helped students write codes as a mentor. Through the event, students learned and developed the programming skills so fast to make an app on time and no one gave up, which made us surprised. From this experience, we now believe the importance for any learner, especially for beginners, to let them have easy access to the first steps with fun and excitement.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia1.jpg"></p>
+<p><em>“MSP Japan Niki Matsumura”</em></p>
+<h2 id="New-Zealand-The-Microsoft-Student-Accelerator-Initiative"><a href="#New-Zealand-The-Microsoft-Student-Accelerator-Initiative" class="headerlink" title="New Zealand: The Microsoft Student Accelerator Initiative"></a>New Zealand: The Microsoft Student Accelerator Initiative</h2><p> 2014 has been a hectic but rewarding year for MSP New Zealand! The MSPs, along with Ryan Tarak (BDE, DX, Microsoft New Zealand), launched a brand new initiative called the Microsoft Student Accelerator (MSA). The MSA program aims to train students from all around the country on Microsoft technologies and better prepare them for the tech industry of today. The biggest benefit of the program is the placement of qualifying students with New Zealand’s biggest employers in the tech industry so they can gain work experience over the summer.</p>
+<p>While 600 students trained in the first phase of the program, around 200 students moved on to complete phase 2 and finally, 94 students were placed with employers after rigorous individual and group assessments. A total of 35 employers participated in the program, including the University of Auckland (largest university in New Zealand), Coca-Cola, Lazyworm Apps (developers of MetroTube), Datacom and a few government organizations.  For more information, check out <a href="http://aka.ms/MSAInfograph">http://aka.ms/MSAInfograph</a>.</p>
+<h2 id="Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards"><a href="#Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards" class="headerlink" title="Philippines: one of the top countries in the “Hour of Code” global leaderboards"></a>Philippines: one of the top countries in the “Hour of Code” global leaderboards</h2><p>In the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines is one of the top countries in the  Hour of Code Global Leaderboards for having one of the highest participation rates in Hour of Code activities, with a total of  112 events as of today, January 11, 2015.</p>
+<p>Though some of the events were rescheduled due to impending Typhoon Hagupit, that didn’t stop the teams from accomplishing their goal of teaching K-12 students and others from non-tech colleges how to code.</p>
+<p>Read the rest of the article here: <a href="http://bit.ly/1sKnUkr">http://bit.ly/1sKnUkr</a></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia2.jpg"></p>
+<h2 id="Thailand-Hour-of-Code-Thailand"><a href="#Thailand-Hour-of-Code-Thailand" class="headerlink" title="Thailand: Hour of Code Thailand"></a>Thailand: Hour of Code Thailand</h2><p> With the cooperation of Microsoft Student Partners from Mae Fah Luang University and Chiang Mai University, MSP Thailand organized Microsoft Hour of Code: Northern Thailand workshop to provide Windows AppStudio training for high-school students in northern Thailand. This event gathered 100 students who joined the workshop to learn how to develop universal application on Windows platform.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia3.jpg"></p>
+<h2 id="Vietnam-Hour-of-Code-in-Vietnam"><a href="#Vietnam-Hour-of-Code-in-Vietnam" class="headerlink" title="Vietnam: Hour of Code in Vietnam"></a>Vietnam: Hour of Code in Vietnam</h2><p>The Hour of Code in Vietnam was held successfully after attracting about 200 secondary school students. Approximately, per session was attended by around 20 students. As an addition, this year saw the introduction of ‘App Studio’ which created interest among the participants.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia4.jpg"><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia5.jpg"></p>
+<h1 id="2-Super-MSP"><a href="#2-Super-MSP" class="headerlink" title="2. Super MSP"></a>2. Super MSP</h1><h2 id="・New-Zealand"><a href="#・New-Zealand" class="headerlink" title="・New Zealand"></a>・New Zealand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia6.jpg"></p>
+<p> <strong>Vishesh Oberoi:</strong> Vishesh has been a key player in making the MSA program a success. Equipped with his experience and strong technical knowledge in Azure, he organized and executed many of the MSP run workshops during the program. The workshops were very well received and the students found them very useful. Great work Vishesh!</p>
+<h2 id="・Thailand"><a href="#・Thailand" class="headerlink" title="・Thailand"></a>・Thailand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg"> </p>
+<p> <strong>Supatporn Posoknistakul:</strong> Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.</p>
+<h1 id="3-Highlights-Upcoming-Events"><a href="#3-Highlights-Upcoming-Events" class="headerlink" title="3. Highlights &amp; Upcoming Events"></a>3. Highlights &amp; Upcoming Events</h1><h2 id="Japan"><a href="#Japan" class="headerlink" title="Japan"></a>Japan</h2><h3 id="・Regular-Meeting-and-Presentation-Workshop"><a href="#・Regular-Meeting-and-Presentation-Workshop" class="headerlink" title="・Regular Meeting and Presentation Workshop"></a>・Regular Meeting and Presentation Workshop</h3><p>Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: “I’d like to appeal about…” After the presentation, they were able to receive feedback on how to be more effective in their presentation.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg"> </p>
+<h3 id="・Imagine-Cup-2015-Kick-off"><a href="#・Imagine-Cup-2015-Kick-off" class="headerlink" title="・Imagine Cup 2015 Kick-off"></a>・Imagine Cup 2015 Kick-off</h3><p> On Jan 18th, 2015, we introduced Imagine Cup to approximately 30 students as part of our Top Gun project. The aim was to motivate them create great apps and to challenge the world competition.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia10.jpg"></p>
+<h3 id="・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan"><a href="#・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan" class="headerlink" title="・MSPs from Indonesia and Nepal visit Microsoft Japan"></a>・MSPs from Indonesia and Nepal visit Microsoft Japan</h3><p> As 2014 ended, MSPs from Indonesia and Nepal visited Japan and had lunch with MSPs from Japan on Christmas Eve. The guests were also treated to a tour of Microsoft Japan. It was then followed by a dialogue of the participants, sharing the different activities and interesting styles of each country.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia11.jpg"></p>
+<h2 id="New-Zealand"><a href="#New-Zealand" class="headerlink" title="New Zealand"></a>New Zealand</h2><h3 id="・Future-of-MSA"><a href="#・Future-of-MSA" class="headerlink" title="・Future of MSA"></a>・Future of MSA</h3><p> Due to the success of the program, the program will be bigger and better in 2015. The MSA program will be the umbrella of all student activities for the year. To reach out to high schools, the program will start earlier in March as opposed to June.  For updated information, visit <a href="http://www.microsoft.co.nz/msa">http://www.microsoft.co.nz/msa</a> !</p>
+<h3 id="・New-MSPs"><a href="#・New-MSPs" class="headerlink" title="・New MSPs"></a>・New MSPs</h3><p> In search for new MSPs, a recruitment round at the end of 2014 was held and after tough interviews and assessments, a strong team of new MSPs were selected. Many of the selected applicants came from the MSA program. Everybody is very excited to have the new MSPs on board and wait to hear all the fresh ideas they bring. Welcome to the family!</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia12.jpg"></p>
+<h3 id="・Farewell-Message-to-all-graduating-MSPs"><a href="#・Farewell-Message-to-all-graduating-MSPs" class="headerlink" title="・Farewell Message to all graduating MSPs:"></a>・Farewell Message to all graduating MSPs:</h3><p> In search for new MSPs, a recruitment round at the end of 2014 was held and after tough interviews and assessments, a strong team of new MSPs were selected. Many of the selected applicants came from the MSA program. Everybody is very excited to have the new MSPs on board and wait to hear all the fresh ideas they bring. Welcome to the family!</p>
+<h2 id="Philippines"><a href="#Philippines" class="headerlink" title="Philippines"></a>Philippines</h2><h3 id="・Project-Sing-From-The-Philippines-Clinches-Honorable-Mention-In-The-2015-Pitch-Video-Challenge"><a href="#・Project-Sing-From-The-Philippines-Clinches-Honorable-Mention-In-The-2015-Pitch-Video-Challenge" class="headerlink" title="・Project Sing! From The Philippines Clinches Honorable Mention In The 2015 Pitch Video Challenge"></a>・Project Sing! From The Philippines Clinches Honorable Mention In The 2015 Pitch Video Challenge</h3><p>After the judges have watched all the videos, reviewed the judging criteria, and made their decision, a Filipino team, <strong>Project Sing!</strong> made it to the honorable mention list for their project in the World Citizenship category. The competition was extremely fierce this year, with many high-quality pitch videos submitted in all three categories. In some cases, the scoring was almost too close to call. Members of the <strong>Project Sing!</strong> are from Ateneo de Manila University and are active members of the Microsoft Philippines Academic Team.  Meet the winners here: <a href="http://bit.ly/1ueyN9Q">http://bit.ly/1ueyN9Q</a></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia13.jpg"></p>
+<h2 id="Singapore"><a href="#Singapore" class="headerlink" title="Singapore"></a>Singapore</h2><h3 id="・Singapore-MSPs-celebrate-a-fantastic-2014-outlook-for-2015-very-positive"><a href="#・Singapore-MSPs-celebrate-a-fantastic-2014-outlook-for-2015-very-positive" class="headerlink" title="・Singapore MSPs celebrate a fantastic 2014; outlook for 2015 very positive"></a>・Singapore MSPs celebrate a fantastic 2014; outlook for 2015 very positive</h3><p> On 20th of December 2014, Microsoft Student Partners from Singapore celebrated the holidays and a great end to 2014 with a Christmas Party which included some unique coding challenges and games! Everyone had lots of fun over lunch and exchanging gifts! MSP Singapore had a great year in reaching more students throughout the country and teaching them how to code. All of the MSPs look forward to new ways to contribute and grow in 2015. Happy New Year from the MSP Singapore team!</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia14.jpg"></p>
+<h2 id="Thailand"><a href="#Thailand" class="headerlink" title="Thailand"></a>Thailand</h2><h3 id="・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn"><a href="#・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn" class="headerlink" title="・Audience with H.R.H Princess Maha Chakri Sirindhorn"></a>・Audience with H.R.H Princess Maha Chakri Sirindhorn</h3><p> Representative of MSP Thailand team had an audience with H.R.H Princess Maha Chakri Sirindhorn of Thailand to show applications on Windows Platform to students who joined the workshop at Chitralada Vocational School. The workshop at Chitralada Vocational School is a part of project that MSP in Thailand focusing on development of high school students to improve their computer science skills for a career in the future.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia15.jpg"></p>
+<h3 id="・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop"><a href="#・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop" class="headerlink" title="・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop"></a>・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop</h3><p> MSP Thailand team from Chulalongkorn University, Mahidol University and King Mongkut’s Institute of Technology Ladkrabang teamed-up to organize Microsoft Technology Roadshow and DreamSpark&#x2F;Office365 workshop at their universities to update and educate students and lecturers about Microsoft Technology, DreamSpark Premium and Office 365 for Education. These group of events drew more than 500 students.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia16.jpg"></p>
+<h3 id="・ImagineCup-2015-BootCamp-in-Thailand"><a href="#・ImagineCup-2015-BootCamp-in-Thailand" class="headerlink" title="・ImagineCup 2015 BootCamp in Thailand"></a>・ImagineCup 2015 BootCamp in Thailand</h3><p> On 10 Jan 2015, Microsoft Thailand held the ImagineCup Thailand 2015 BootCamp for students who are interested in joining the ImagineCup competition this year. The objective of the event was to promote and explain about ImagineCup’s local round and global round information. Aside from that, students were also given the chance to discuss with international organizations like USAID (United States Agency for International Development) to find the stories or inspiration for their project.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia17.jpg"></p>
+<h3 id="–Upcoming-Events—"><a href="#–Upcoming-Events—" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Hour-of-Code-Central-of-Thailand"><a href="#・Hour-of-Code-Central-of-Thailand" class="headerlink" title="・Hour of Code: Central of Thailand"></a>・Hour of Code: Central of Thailand</h4><p> From January to March 2015, MSPs in the central area of Thailand are planning to organize the Hour of Code event for high school students. This 2015, Microsoft Thailand has special category for high school students called the “Windows AppStudio Jr. Challenge.” Hour of Code training from MSP will help high school students learn how to develop Windows platform application together with their preparation for the ImagineCup special category in Thailand. </p>
+<h4 id="・MSP-Quarterly-Meeting-and-New-Year-Party"><a href="#・MSP-Quarterly-Meeting-and-New-Year-Party" class="headerlink" title="・MSP Quarterly Meeting and New Year Party"></a>・MSP Quarterly Meeting and New Year Party</h4><p> Microsoft Thailand is planning to have the quarterly meeting and New Year Party on 30th of January 2015 for MSP from each university. This meeting will give everyone a chance to share their experiences and exchange information about activities they have done in Q2 and their plans for Q3. </p>
+<h2 id="Vietnam"><a href="#Vietnam" class="headerlink" title="Vietnam"></a>Vietnam</h2><h3 id="・New-MSP-Recruitment"><a href="#・New-MSP-Recruitment" class="headerlink" title="・New MSP Recruitment"></a>・New MSP Recruitment</h3><p> To expand the activities of MSPs in Vietnam, more MSPs are being recruited. The recruitment attracted the cream of the crop from the best universities in the country. Undoubtedly, this will be a successful FY year for MSPs in Vietnam.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg"> </p>
+<p><em>The interview</em></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia20.jpg"></p>
+<p><em>Welcoming the new MSPs</em></p>
+<h3 id="・-MSP-Internal-Training"><a href="#・-MSP-Internal-Training" class="headerlink" title="・ MSP Internal Training"></a>・ MSP Internal Training</h3><p> The objective of the Internal Training was how to use Windows and Office Online in the most useful way. Moreover, many tips and tricks were shared during the training. Most of the participants installed Windows 10 Preview after.</p>
+<p>Later that day, the participants were introduced to the Microsoft YouthSpark Program. Everyone got very excited upon learning about the program.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg"></p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg"> </p>
+<h3 id="・”Special-Christmas-for-You”-Contest"><a href="#・”Special-Christmas-for-You”-Contest" class="headerlink" title="・”Special Christmas for You” Contest"></a>・”Special Christmas for You” Contest</h3><p> Hundreds of students have started to learn how to use App Studio to make apps. Many IT students signed up for the MVA to learn how to code. This resulted to the publication of hundreds of apps in the store. Each one of them have been tested. Good apps (quantified by the number of downloads and rating) will be rewarded with Lumia, T-shirt and bags.</p>
+<p> </p>
+<h3 id="–Upcoming-Events—-1"><a href="#–Upcoming-Events—-1" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Microsoft-Imagine-Camp"><a href="#・Microsoft-Imagine-Camp" class="headerlink" title="・Microsoft Imagine Camp"></a>・Microsoft Imagine Camp</h4><p> January of every year, the Imagine Camp is held to help teams and students get started with their projects for Imagine Cup. For this event, participants are supported on which technology they should use, how to improve their ideas, and so on.</p>
+<h4 id="・App-Studio-Training"><a href="#・App-Studio-Training" class="headerlink" title="・App Studio Training"></a>・App Studio Training</h4><p> App Studio is updating. More and more features have been added every week. The goal is for every student to know how easy it is to make an app for their own need.</p>
+<h4 id="・App-Studio-Hackathon"><a href="#・App-Studio-Hackathon" class="headerlink" title="・App Studio Hackathon"></a>・App Studio Hackathon</h4><p> In the next few weeks, a Hackathon on App Studio will be held. This event will be more complex than the usual App Studio. The prize will be a Lumia for the champion and T-shirt for all participants.</p>
+<p>Thank you for reading!</p>
+<p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
+<p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#83;&#104;&#x75;&#x6e;&#46;&#79;&#x6b;&#117;&#98;&#111;&#64;&#115;&#x74;&#117;&#x64;&#101;&#110;&#116;&#112;&#97;&#x72;&#x74;&#110;&#x65;&#x72;&#46;&#99;&#x6f;&#109;">&#83;&#104;&#x75;&#x6e;&#46;&#79;&#x6b;&#117;&#98;&#111;&#64;&#115;&#x74;&#117;&#x64;&#101;&#110;&#116;&#112;&#97;&#x72;&#x74;&#110;&#x65;&#x72;&#46;&#99;&#x6f;&#109;</a></strong>.</p>
+<p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+  </entry>
+  <entry>
     <title>[Computer Tips] Remove Skype Ads Quick and Easy</title>
     <url>/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</url>
     <content><![CDATA[<p>Xài Skype, chắc ai cũng khó chịu với mấy cái quảng cáo lặp đi lặp lại chán phèo của Skype nhỉ</p>
@@ -2648,85 +2750,6 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
         <tag>proxy</tag>
         <tag>đứt cáp</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>[MSP] MSP Asia – Pacific Newsletter – Jan 2015</title>
-    <url>/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</url>
-    <content><![CDATA[<p><strong>MSP Asia-Pacific Newsletter</strong></p>
-<p>Vol.2 Dec-Jan 2014-2015</p>
-<p><strong>Contents:</strong></p>
-<p><strong>1.MAIN TOPIC</strong></p>
-<p>Japan, New Zealand, Philippines, Thailand, Vietnam</p>
-<p><strong>2.Super MSP</strong></p>
-<p>Vishesh Oberoi (New Zealand), Supatporn Posoknistakul(Thailand)</p>
-<p><strong>3.Highlights &amp; Upcoming Events</strong></p>
-<p>Japan, New Zealand, Philippines, Singapore, Thailand, Vietnam</p>
-<span id="more"></span>
-<h1 id="1-MAIN-TOPIC"><a href="#1-MAIN-TOPIC" class="headerlink" title="1. MAIN TOPIC"></a>1. MAIN TOPIC</h1><p>Today’s Main Topic is Hour of Code!</p>
-<h2 id="Japan-MSP-Japan-joined-Hour-of-Code"><a href="#Japan-MSP-Japan-joined-Hour-of-Code" class="headerlink" title="Japan: MSP Japan joined Hour of Code"></a>Japan: MSP Japan joined Hour of Code</h2><p> On Dec 12th, 2014, one of the events for the <a href="http://hourofcode.com/jp">Hour of Code</a> by MSPs was carried out with 36 young students who ranged from 15 to 18 of ages at an all girls’ high school in Tokyo. In collaboration with Life is Tech! Microsoft Japan provided the technologies and MSPs helped students write codes as a mentor. Through the event, students learned and developed the programming skills so fast to make an app on time and no one gave up, which made us surprised. From this experience, we now believe the importance for any learner, especially for beginners, to let them have easy access to the first steps with fun and excitement.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia1.jpg"></p>
-<p><em>“MSP Japan Niki Matsumura”</em></p>
-<h2 id="New-Zealand-The-Microsoft-Student-Accelerator-Initiative"><a href="#New-Zealand-The-Microsoft-Student-Accelerator-Initiative" class="headerlink" title="New Zealand: The Microsoft Student Accelerator Initiative"></a>New Zealand: The Microsoft Student Accelerator Initiative</h2><p> 2014 has been a hectic but rewarding year for MSP New Zealand! The MSPs, along with Ryan Tarak (BDE, DX, Microsoft New Zealand), launched a brand new initiative called the Microsoft Student Accelerator (MSA). The MSA program aims to train students from all around the country on Microsoft technologies and better prepare them for the tech industry of today. The biggest benefit of the program is the placement of qualifying students with New Zealand’s biggest employers in the tech industry so they can gain work experience over the summer.</p>
-<p>While 600 students trained in the first phase of the program, around 200 students moved on to complete phase 2 and finally, 94 students were placed with employers after rigorous individual and group assessments. A total of 35 employers participated in the program, including the University of Auckland (largest university in New Zealand), Coca-Cola, Lazyworm Apps (developers of MetroTube), Datacom and a few government organizations.  For more information, check out <a href="http://aka.ms/MSAInfograph">http://aka.ms/MSAInfograph</a>.</p>
-<h2 id="Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards"><a href="#Philippines-one-of-the-top-countries-in-the-“Hour-of-Code”-global-leaderboards" class="headerlink" title="Philippines: one of the top countries in the “Hour of Code” global leaderboards"></a>Philippines: one of the top countries in the “Hour of Code” global leaderboards</h2><p>In the celebration of the 2014  Computer Science Education Week (December 8-14), though Hour of Code is not a competition, the  Philippines is one of the top countries in the  Hour of Code Global Leaderboards for having one of the highest participation rates in Hour of Code activities, with a total of  112 events as of today, January 11, 2015.</p>
-<p>Though some of the events were rescheduled due to impending Typhoon Hagupit, that didn’t stop the teams from accomplishing their goal of teaching K-12 students and others from non-tech colleges how to code.</p>
-<p>Read the rest of the article here: <a href="http://bit.ly/1sKnUkr">http://bit.ly/1sKnUkr</a></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia2.jpg"></p>
-<h2 id="Thailand-Hour-of-Code-Thailand"><a href="#Thailand-Hour-of-Code-Thailand" class="headerlink" title="Thailand: Hour of Code Thailand"></a>Thailand: Hour of Code Thailand</h2><p> With the cooperation of Microsoft Student Partners from Mae Fah Luang University and Chiang Mai University, MSP Thailand organized Microsoft Hour of Code: Northern Thailand workshop to provide Windows AppStudio training for high-school students in northern Thailand. This event gathered 100 students who joined the workshop to learn how to develop universal application on Windows platform.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia3.jpg"></p>
-<h2 id="Vietnam-Hour-of-Code-in-Vietnam"><a href="#Vietnam-Hour-of-Code-in-Vietnam" class="headerlink" title="Vietnam: Hour of Code in Vietnam"></a>Vietnam: Hour of Code in Vietnam</h2><p>The Hour of Code in Vietnam was held successfully after attracting about 200 secondary school students. Approximately, per session was attended by around 20 students. As an addition, this year saw the introduction of ‘App Studio’ which created interest among the participants.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia4.jpg"><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia5.jpg"></p>
-<h1 id="2-Super-MSP"><a href="#2-Super-MSP" class="headerlink" title="2. Super MSP"></a>2. Super MSP</h1><h2 id="・New-Zealand"><a href="#・New-Zealand" class="headerlink" title="・New Zealand"></a>・New Zealand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia6.jpg"></p>
-<p> <strong>Vishesh Oberoi:</strong> Vishesh has been a key player in making the MSA program a success. Equipped with his experience and strong technical knowledge in Azure, he organized and executed many of the MSP run workshops during the program. The workshops were very well received and the students found them very useful. Great work Vishesh!</p>
-<h2 id="・Thailand"><a href="#・Thailand" class="headerlink" title="・Thailand"></a>・Thailand</h2><p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia7.jpg"> </p>
-<p> <strong>Supatporn Posoknistakul:</strong> Supatporn has been working as a Microsoft Student Partner since FY15. Her expertise is in design and marketing aspect and she takes part in both leadership and designer role. As a participant in the Imagine Cup Thailand 2014, she showed her competitiveness and friendliness which earned her the most popular award. To expand her technical knowledge, she is currently studying in the Faculty of Engineering at Chulalongkorn University. Aside from this, she loves to discover new innovation sin designing and marketing by herself through relevant work experience.</p>
-<h1 id="3-Highlights-Upcoming-Events"><a href="#3-Highlights-Upcoming-Events" class="headerlink" title="3. Highlights &amp; Upcoming Events"></a>3. Highlights &amp; Upcoming Events</h1><h2 id="Japan"><a href="#Japan" class="headerlink" title="Japan"></a>Japan</h2><h3 id="・Regular-Meeting-and-Presentation-Workshop"><a href="#・Regular-Meeting-and-Presentation-Workshop" class="headerlink" title="・Regular Meeting and Presentation Workshop"></a>・Regular Meeting and Presentation Workshop</h3><p>Two MSP Japan regular meetings were held last Dec 3rd, 2014 and Jan 14th, 2015. The former meeting was attended by 26 participants (9 participants online) and the latter by 15 participants (6 participants online). After the December regular meeting, a presentation workshop followed and 5 MSPs spoke about the topic: “I’d like to appeal about…” After the presentation, they were able to receive feedback on how to be more effective in their presentation.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia8.jpg"></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia9.jpg"> </p>
-<h3 id="・Imagine-Cup-2015-Kick-off"><a href="#・Imagine-Cup-2015-Kick-off" class="headerlink" title="・Imagine Cup 2015 Kick-off"></a>・Imagine Cup 2015 Kick-off</h3><p> On Jan 18th, 2015, we introduced Imagine Cup to approximately 30 students as part of our Top Gun project. The aim was to motivate them create great apps and to challenge the world competition.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia10.jpg"></p>
-<h3 id="・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan"><a href="#・MSPs-from-Indonesia-and-Nepal-visit-Microsoft-Japan" class="headerlink" title="・MSPs from Indonesia and Nepal visit Microsoft Japan"></a>・MSPs from Indonesia and Nepal visit Microsoft Japan</h3><p> As 2014 ended, MSPs from Indonesia and Nepal visited Japan and had lunch with MSPs from Japan on Christmas Eve. The guests were also treated to a tour of Microsoft Japan. It was then followed by a dialogue of the participants, sharing the different activities and interesting styles of each country.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia11.jpg"></p>
-<h2 id="New-Zealand"><a href="#New-Zealand" class="headerlink" title="New Zealand"></a>New Zealand</h2><h3 id="・Future-of-MSA"><a href="#・Future-of-MSA" class="headerlink" title="・Future of MSA"></a>・Future of MSA</h3><p> Due to the success of the program, the program will be bigger and better in 2015. The MSA program will be the umbrella of all student activities for the year. To reach out to high schools, the program will start earlier in March as opposed to June.  For updated information, visit <a href="http://www.microsoft.co.nz/msa">http://www.microsoft.co.nz/msa</a> !</p>
-<h3 id="・New-MSPs"><a href="#・New-MSPs" class="headerlink" title="・New MSPs"></a>・New MSPs</h3><p> In search for new MSPs, a recruitment round at the end of 2014 was held and after tough interviews and assessments, a strong team of new MSPs were selected. Many of the selected applicants came from the MSA program. Everybody is very excited to have the new MSPs on board and wait to hear all the fresh ideas they bring. Welcome to the family!</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia12.jpg"></p>
-<h3 id="・Farewell-Message-to-all-graduating-MSPs"><a href="#・Farewell-Message-to-all-graduating-MSPs" class="headerlink" title="・Farewell Message to all graduating MSPs:"></a>・Farewell Message to all graduating MSPs:</h3><p> In search for new MSPs, a recruitment round at the end of 2014 was held and after tough interviews and assessments, a strong team of new MSPs were selected. Many of the selected applicants came from the MSA program. Everybody is very excited to have the new MSPs on board and wait to hear all the fresh ideas they bring. Welcome to the family!</p>
-<h2 id="Philippines"><a href="#Philippines" class="headerlink" title="Philippines"></a>Philippines</h2><h3 id="・Project-Sing-From-The-Philippines-Clinches-Honorable-Mention-In-The-2015-Pitch-Video-Challenge"><a href="#・Project-Sing-From-The-Philippines-Clinches-Honorable-Mention-In-The-2015-Pitch-Video-Challenge" class="headerlink" title="・Project Sing! From The Philippines Clinches Honorable Mention In The 2015 Pitch Video Challenge"></a>・Project Sing! From The Philippines Clinches Honorable Mention In The 2015 Pitch Video Challenge</h3><p>After the judges have watched all the videos, reviewed the judging criteria, and made their decision, a Filipino team, <strong>Project Sing!</strong> made it to the honorable mention list for their project in the World Citizenship category. The competition was extremely fierce this year, with many high-quality pitch videos submitted in all three categories. In some cases, the scoring was almost too close to call. Members of the <strong>Project Sing!</strong> are from Ateneo de Manila University and are active members of the Microsoft Philippines Academic Team.  Meet the winners here: <a href="http://bit.ly/1ueyN9Q">http://bit.ly/1ueyN9Q</a></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia13.jpg"></p>
-<h2 id="Singapore"><a href="#Singapore" class="headerlink" title="Singapore"></a>Singapore</h2><h3 id="・Singapore-MSPs-celebrate-a-fantastic-2014-outlook-for-2015-very-positive"><a href="#・Singapore-MSPs-celebrate-a-fantastic-2014-outlook-for-2015-very-positive" class="headerlink" title="・Singapore MSPs celebrate a fantastic 2014; outlook for 2015 very positive"></a>・Singapore MSPs celebrate a fantastic 2014; outlook for 2015 very positive</h3><p> On 20th of December 2014, Microsoft Student Partners from Singapore celebrated the holidays and a great end to 2014 with a Christmas Party which included some unique coding challenges and games! Everyone had lots of fun over lunch and exchanging gifts! MSP Singapore had a great year in reaching more students throughout the country and teaching them how to code. All of the MSPs look forward to new ways to contribute and grow in 2015. Happy New Year from the MSP Singapore team!</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia14.jpg"></p>
-<h2 id="Thailand"><a href="#Thailand" class="headerlink" title="Thailand"></a>Thailand</h2><h3 id="・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn"><a href="#・Audience-with-H-R-H-Princess-Maha-Chakri-Sirindhorn" class="headerlink" title="・Audience with H.R.H Princess Maha Chakri Sirindhorn"></a>・Audience with H.R.H Princess Maha Chakri Sirindhorn</h3><p> Representative of MSP Thailand team had an audience with H.R.H Princess Maha Chakri Sirindhorn of Thailand to show applications on Windows Platform to students who joined the workshop at Chitralada Vocational School. The workshop at Chitralada Vocational School is a part of project that MSP in Thailand focusing on development of high school students to improve their computer science skills for a career in the future.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia15.jpg"></p>
-<h3 id="・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop"><a href="#・Microsoft-Technology-Roadshow-and-Dream-Spark-Office365-Workshop" class="headerlink" title="・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop"></a>・Microsoft Technology Roadshow and Dream Spark &#x2F; Office365 Workshop</h3><p> MSP Thailand team from Chulalongkorn University, Mahidol University and King Mongkut’s Institute of Technology Ladkrabang teamed-up to organize Microsoft Technology Roadshow and DreamSpark&#x2F;Office365 workshop at their universities to update and educate students and lecturers about Microsoft Technology, DreamSpark Premium and Office 365 for Education. These group of events drew more than 500 students.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia16.jpg"></p>
-<h3 id="・ImagineCup-2015-BootCamp-in-Thailand"><a href="#・ImagineCup-2015-BootCamp-in-Thailand" class="headerlink" title="・ImagineCup 2015 BootCamp in Thailand"></a>・ImagineCup 2015 BootCamp in Thailand</h3><p> On 10 Jan 2015, Microsoft Thailand held the ImagineCup Thailand 2015 BootCamp for students who are interested in joining the ImagineCup competition this year. The objective of the event was to promote and explain about ImagineCup’s local round and global round information. Aside from that, students were also given the chance to discuss with international organizations like USAID (United States Agency for International Development) to find the stories or inspiration for their project.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia17.jpg"></p>
-<h3 id="–Upcoming-Events—"><a href="#–Upcoming-Events—" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Hour-of-Code-Central-of-Thailand"><a href="#・Hour-of-Code-Central-of-Thailand" class="headerlink" title="・Hour of Code: Central of Thailand"></a>・Hour of Code: Central of Thailand</h4><p> From January to March 2015, MSPs in the central area of Thailand are planning to organize the Hour of Code event for high school students. This 2015, Microsoft Thailand has special category for high school students called the “Windows AppStudio Jr. Challenge.” Hour of Code training from MSP will help high school students learn how to develop Windows platform application together with their preparation for the ImagineCup special category in Thailand. </p>
-<h4 id="・MSP-Quarterly-Meeting-and-New-Year-Party"><a href="#・MSP-Quarterly-Meeting-and-New-Year-Party" class="headerlink" title="・MSP Quarterly Meeting and New Year Party"></a>・MSP Quarterly Meeting and New Year Party</h4><p> Microsoft Thailand is planning to have the quarterly meeting and New Year Party on 30th of January 2015 for MSP from each university. This meeting will give everyone a chance to share their experiences and exchange information about activities they have done in Q2 and their plans for Q3. </p>
-<h2 id="Vietnam"><a href="#Vietnam" class="headerlink" title="Vietnam"></a>Vietnam</h2><h3 id="・New-MSP-Recruitment"><a href="#・New-MSP-Recruitment" class="headerlink" title="・New MSP Recruitment"></a>・New MSP Recruitment</h3><p> To expand the activities of MSPs in Vietnam, more MSPs are being recruited. The recruitment attracted the cream of the crop from the best universities in the country. Undoubtedly, this will be a successful FY year for MSPs in Vietnam.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia18.jpg"></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia19.jpg"> </p>
-<p><em>The interview</em></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia20.jpg"></p>
-<p><em>Welcoming the new MSPs</em></p>
-<h3 id="・-MSP-Internal-Training"><a href="#・-MSP-Internal-Training" class="headerlink" title="・ MSP Internal Training"></a>・ MSP Internal Training</h3><p> The objective of the Internal Training was how to use Windows and Office Online in the most useful way. Moreover, many tips and tricks were shared during the training. Most of the participants installed Windows 10 Preview after.</p>
-<p>Later that day, the participants were introduced to the Microsoft YouthSpark Program. Everyone got very excited upon learning about the program.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia21.jpg"></p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/01/013115_1311_mspmspasia22.jpg"> </p>
-<h3 id="・”Special-Christmas-for-You”-Contest"><a href="#・”Special-Christmas-for-You”-Contest" class="headerlink" title="・”Special Christmas for You” Contest"></a>・”Special Christmas for You” Contest</h3><p> Hundreds of students have started to learn how to use App Studio to make apps. Many IT students signed up for the MVA to learn how to code. This resulted to the publication of hundreds of apps in the store. Each one of them have been tested. Good apps (quantified by the number of downloads and rating) will be rewarded with Lumia, T-shirt and bags.</p>
-<p> </p>
-<h3 id="–Upcoming-Events—-1"><a href="#–Upcoming-Events—-1" class="headerlink" title="-–Upcoming Events—"></a>-–Upcoming Events—</h3><h4 id="・Microsoft-Imagine-Camp"><a href="#・Microsoft-Imagine-Camp" class="headerlink" title="・Microsoft Imagine Camp"></a>・Microsoft Imagine Camp</h4><p> January of every year, the Imagine Camp is held to help teams and students get started with their projects for Imagine Cup. For this event, participants are supported on which technology they should use, how to improve their ideas, and so on.</p>
-<h4 id="・App-Studio-Training"><a href="#・App-Studio-Training" class="headerlink" title="・App Studio Training"></a>・App Studio Training</h4><p> App Studio is updating. More and more features have been added every week. The goal is for every student to know how easy it is to make an app for their own need.</p>
-<h4 id="・App-Studio-Hackathon"><a href="#・App-Studio-Hackathon" class="headerlink" title="・App Studio Hackathon"></a>・App Studio Hackathon</h4><p> In the next few weeks, a Hackathon on App Studio will be held. This event will be more complex than the usual App Studio. The prize will be a Lumia for the champion and T-shirt for all participants.</p>
-<p>Thank you for reading!</p>
-<p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
-<p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#104;&#x75;&#x6e;&#46;&#x4f;&#107;&#117;&#x62;&#x6f;&#x40;&#115;&#x74;&#117;&#100;&#101;&#x6e;&#x74;&#x70;&#x61;&#x72;&#x74;&#110;&#x65;&#x72;&#x2e;&#99;&#111;&#x6d;">&#x53;&#104;&#x75;&#x6e;&#46;&#x4f;&#107;&#117;&#x62;&#x6f;&#x40;&#115;&#x74;&#117;&#100;&#101;&#x6e;&#x74;&#x70;&#x61;&#x72;&#x74;&#110;&#x65;&#x72;&#x2e;&#99;&#111;&#x6d;</a></strong>.</p>
-<p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
   </entry>
   <entry>
     <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
@@ -3012,8 +3035,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 <li><p>Gõ about:config trên trình duyệt, tìm noscript.untrusted để xem toàn bộ các script đang bị blacklist. Bạn có thể copy danh sách này và paste nó cho bạn bè của mình. Của mình là</p>
 </li>
 </ul>
-<pre><code class="highlight plaintext">
-&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
+<pre><code class="highlight plaintext">&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
 
 <h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><table>
 <thead>
@@ -3086,16 +3108,17 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 </ul>
 <p>Qua đến Silverlight, sau này Windows RT trên Windows 8.1 và Windows Phone 8.1, thuộc tính hidden đã bị bỏ, nhưng do vẫn dùng chung nhân Windows NT nên Microsoft không chỉnh sửa giá trị nó thành bool mà vẫn giữ 2 giá trị cũ</p>
 <h1 id="Cach-khac-phuc"><a href="#Cach-khac-phuc" class="headerlink" title="Cách khắc phục"></a>Cách khắc phục</h1><p>Đây là một class nhỏ giúp bạn thêm một thuộc tính gọi là “IsVisible” vào UIElements và truyền cho nó giá trị true hoặc false</p>
-<pre><code class="highlight csharp"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Extension</span>: <span class="title">DependencyObject</span>
+<pre><code class="highlight csharp"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Extension</span> : <span class="title">DependencyObject</span>
 &#123;
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached(<span class="string">&quot;IsVisible&quot;</span>,
-                                                                                                      <span class="keyword">typeof</span>(<span class="built_in">bool</span>),
-                                                                                                      <span class="keyword">typeof</span>(Extension),
-                                                                                                      <span class="keyword">new</span> PropertyMetadata(<span class="literal">true</span>, IsVisibleCallback));
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> DependencyProperty IsVisibleProperty =
+        DependencyProperty.RegisterAttached(<span class="string">&quot;IsVisible&quot;</span>,
+                                            <span class="keyword">typeof</span>(<span class="built_in">bool</span>),
+                                            <span class="keyword">typeof</span>(Extension),
+                                            <span class="keyword">new</span> PropertyMetadata(<span class="literal">true</span>, IsVisibleCallback));
 
     <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">IsVisibleCallback</span>(<span class="params">DependencyObject d, DependencyPropertyChangedEventArgs e</span>)</span>
     &#123;
-        ((UIElement) d).Visibility = (<span class="built_in">bool</span>) e.NewValue ? Visibility.Visible : Visibility.Collapsed;
+        ((UIElement)d).Visibility = (<span class="built_in">bool</span>)e.NewValue ? Visibility.Visible : Visibility.Collapsed;
     &#125;
 
     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">SetIsVisible</span>(<span class="params">UIElement element, <span class="built_in">bool</span> <span class="keyword">value</span></span>)</span>
@@ -3105,7 +3128,7 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
 
     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">GetIsVisible</span>(<span class="params">UIElement element</span>)</span>
     &#123;
-        <span class="keyword">return</span> (<span class="built_in">bool</span>) element.GetValue(IsVisibleProperty);
+        <span class="keyword">return</span> (<span class="built_in">bool</span>)element.GetValue(IsVisibleProperty);
     &#125;
 &#125;</code></pre>
 
@@ -3306,7 +3329,6 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
 <ul>
 <li>Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo</li>
 </ul>
-<h2 id="1-2-Neu-ban-khong-con-la-sinh-vien"><a href="#1-2-Neu-ban-khong-con-la-sinh-vien" class="headerlink" title="1.2. Nếu bạn không còn là sinh viên"></a>1.2. Nếu bạn không còn là sinh viên</h2><p>Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)</p>
 <h2 id="1-3-Cai-dat"><a href="#1-3-Cai-dat" class="headerlink" title="1.3. Cài đặt"></a>1.3. Cài đặt</h2><p>Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.</p>
 <p>Sau khi cài xong, mở Visual Studio lên, và bạn sẽ thấy có nhiều khác biệt</p>
 <h2 id="1-4-Cac-tinh-nang-tuyet-zoi"><a href="#1-4-Cac-tinh-nang-tuyet-zoi" class="headerlink" title="1.4. Các tính năng tuyệt zời"></a>1.4. Các tính năng tuyệt zời</h2><h3 id="1-4-1-Phan-tich-code"><a href="#1-4-1-Phan-tich-code" class="headerlink" title="1.4.1. Phân tích code"></a>1.4.1. Phân tích code</h3><p>Khi mở một file .cs lên, ReSharper sẽ tự động phân tích code có trong file này và đưa ra các đề xuất hợp lý.</p>
@@ -3432,46 +3454,6 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       </tags>
   </entry>
   <entry>
-    <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [vi-vn]</title>
-    <url>/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</url>
-    <content><![CDATA[<p>Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là “Live Visual Tree” và “Live Property Explorer”. Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy [insert hình há mỏ kinh ngạc]</p>
-<span id="more"></span>
-
-<h1 id="1-Live-Visual-Tree"><a href="#1-Live-Visual-Tree" class="headerlink" title="1. Live Visual Tree"></a>1. Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
-<p>Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy một cục toolbar nhỏ gọi là “Live Visual Tree”. Nhấn zô nó để mở ra</p>
-<p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
-<p>Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
-<p>Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
-<p>Click một phát, và Live Visual Tree sẽ nhảy tới vị trí chính xác của element đó</p>
-<p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
-<p>Bạn cũng có thể click vào các elements khác trong Live Visual Tree, và cái khung chấm đỏ sẽ nhảy tới element trên app đang chạy của bạn. Bằng cách này, bạn có thể hiểu chính xác những element nào được vẽ trên app của bạn.</p>
-<p>Bạn cũng có thể search một element bằng tên hoặc loại của nó</p>
-<p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
-<h1 id="2-Live-Property-Explorer"><a href="#2-Live-Property-Explorer" class="headerlink" title="2. Live Property Explorer"></a>2. Live Property Explorer</h1><p>Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy “Live Property Explorer”, click vô nó để mở ra, rùi click cái ghim để đó dính zô đó</p>
-<p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
-<p>Ủa mà sao có ít propery hơn bình thường nhỉ. Đừng lo, mở rộng cái group “Default” ra và bạn sẽ thấy mấy property còn lại”</p>
-<p>Một điều hay của Live Property Explorer là bạn có thể thay đổi các giá trị trong các property, và xem sự thay đổi đó ngay lập tức trên app đang chạy của bạn.</p>
-<p>Mình sẽ thử đổi Height thành 100, và xem chuyện gì sẽ xảy ra trong app</p>
-<p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
-<p>Giờ tới cái app</p>
-<p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
-<p>Quá kinh khủng phải ko? Bạn có thể thay đổi hầu như mọi thứ, ngoại trừ một số property bị khóa (màu xám xịt) trong Live Property Explorer</p>
-<p>Quá đã. Thế là bây giờ bạn đã biết sử dụng Live Visual Tree để dò code XAML của bạn được render như thế nào trên app, và dùng Live Property Explorer để thay đổi giá trị của các Property, và xem sự thay đổi đó ngay lập tức, ngay trên app đang chạy mà không cần phải build lại.</p>
-<p>Hẹn gặp lại bạn trong những bài post tiếp theo về những tính năng cực khủng của Visual Studio 2015 nhé</p>
-]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-      <tags>
-        <tag>Visual Studio</tag>
-        <tag>live visual tree</tag>
-        <tag>on the fly</tag>
-        <tag>property</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Visual Studio] Performance, performance, performance (with the help of Visual Studio “PerfTips”)</title>
     <url>/2015/10/22/visual-studio-performance-performance-performance-with-the-help-of-visual-studio-perftips/</url>
     <content><![CDATA[<p>For Visual Studio 2015</p>
@@ -3521,6 +3503,46 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
         <tag>performance</tag>
         <tag>perftips</tag>
         <tag>stopwatch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [vi-vn]</title>
+    <url>/2015/10/07/visual-studio-xaml-element-inspector-with-visual-studio-2015-vi-vn/</url>
+    <content><![CDATA[<p>Trong phiên bản mới nhất của Visual Studio (aka Visual Studio 2015), Microsoft đã giới thiệu 2 tính năng cực khủng gọi là “Live Visual Tree” và “Live Property Explorer”. Sử dụng 2 tính năng này, bạn có thể dễ dàng xem và sửa code XAML khi app đang chạy [insert hình há mỏ kinh ngạc]</p>
+<span id="more"></span>
+
+<h1 id="1-Live-Visual-Tree"><a href="#1-Live-Visual-Tree" class="headerlink" title="1. Live Visual Tree"></a>1. Live Visual Tree</h1><p>Để sử dụng Live Visual Tree, mở bất kỳ project nào có code XAML. Nó có thể là App Windows 8, 8.1, Windows Universal App, hoặc Universal Windows Platform (UWP, aka App phát triển cho Windows 10)</p>
+<p>Build và chạy thử app, sau đó quay lại Visual Studio, bạn sẽ thấy một cục toolbar nhỏ gọi là “Live Visual Tree”. Nhấn zô nó để mở ra</p>
+<p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
+<p>Nhấn vô nút hình cái ghim nhỏ nhỏ để dính nó zô đó, dễ xài hơn</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
+<p>Trong cửa sổ này, click vào biểu tượng hình tam giác trỏ trỏ vô cái hình chữ nhật nho nhỏ. Đó chính là Inspector, rất giống với Element Inspector của Google Chrome. Quay lại app đang chạy, bạn sẽ thấy con trỏ đi tới đâu, một cái khối hộp chữ nhật viền chấm đỏ bao xung quanh element bên dưới con trỏ.</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
+<p>Click một phát, và Live Visual Tree sẽ nhảy tới vị trí chính xác của element đó</p>
+<p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
+<p>Bạn cũng có thể click vào các elements khác trong Live Visual Tree, và cái khung chấm đỏ sẽ nhảy tới element trên app đang chạy của bạn. Bằng cách này, bạn có thể hiểu chính xác những element nào được vẽ trên app của bạn.</p>
+<p>Bạn cũng có thể search một element bằng tên hoặc loại của nó</p>
+<p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
+<h1 id="2-Live-Property-Explorer"><a href="#2-Live-Property-Explorer" class="headerlink" title="2. Live Property Explorer"></a>2. Live Property Explorer</h1><p>Với một element bất kỳ được chọn trong Live Visual Tree, nhìn wa bên phải của Visual Studio, bạn sẽ thấy “Live Property Explorer”, click vô nó để mở ra, rùi click cái ghim để đó dính zô đó</p>
+<p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
+<p>Ủa mà sao có ít propery hơn bình thường nhỉ. Đừng lo, mở rộng cái group “Default” ra và bạn sẽ thấy mấy property còn lại”</p>
+<p>Một điều hay của Live Property Explorer là bạn có thể thay đổi các giá trị trong các property, và xem sự thay đổi đó ngay lập tức trên app đang chạy của bạn.</p>
+<p>Mình sẽ thử đổi Height thành 100, và xem chuyện gì sẽ xảy ra trong app</p>
+<p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
+<p>Giờ tới cái app</p>
+<p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
+<p>Quá kinh khủng phải ko? Bạn có thể thay đổi hầu như mọi thứ, ngoại trừ một số property bị khóa (màu xám xịt) trong Live Property Explorer</p>
+<p>Quá đã. Thế là bây giờ bạn đã biết sử dụng Live Visual Tree để dò code XAML của bạn được render như thế nào trên app, và dùng Live Property Explorer để thay đổi giá trị của các Property, và xem sự thay đổi đó ngay lập tức, ngay trên app đang chạy mà không cần phải build lại.</p>
+<p>Hẹn gặp lại bạn trong những bài post tiếp theo về những tính năng cực khủng của Visual Studio 2015 nhé</p>
+]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
+      <tags>
+        <tag>Visual Studio</tag>
+        <tag>live visual tree</tag>
+        <tag>on the fly</tag>
+        <tag>property</tag>
       </tags>
   </entry>
   <entry>
@@ -3720,7 +3742,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#x75;&#x64;&#121;&#x2e;&#x6e;&#x67;&#x6f;&#99;&#x74;&#x69;&#x65;&#110;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">&#x73;&#x74;&#x75;&#x64;&#121;&#x2e;&#x6e;&#x67;&#x6f;&#99;&#x74;&#x69;&#x65;&#110;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#117;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#x63;&#x74;&#x69;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#115;&#x74;&#117;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#x63;&#x74;&#x69;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#x74;&#117;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#115;&#x74;&#117;&#100;&#x79;&#x2e;&#x6e;&#103;&#x6f;&#99;&#116;&#x69;&#x65;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#116;&#117;&#100;&#121;&#46;&#110;&#x67;&#111;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#116;&#117;&#100;&#121;&#46;&#110;&#x67;&#111;&#99;&#116;&#x69;&#x65;&#110;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3729,25 +3751,10 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#x68;&#x6f;&#97;&#x74;&#x72;&#117;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#107;&#x68;&#x6f;&#97;&#x74;&#x72;&#117;&#111;&#110;&#x67;&#x62;&#97;&#99;&#x68;&#x40;&#x6c;&#x69;&#118;&#x65;&#x2e;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#x6b;&#104;&#x6f;&#x61;&#x74;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#99;&#x68;&#x40;&#x6c;&#105;&#x76;&#101;&#46;&#99;&#111;&#x6d;">&#x6b;&#104;&#x6f;&#x61;&#x74;&#114;&#x75;&#111;&#x6e;&#103;&#98;&#97;&#99;&#x68;&#x40;&#x6c;&#105;&#x76;&#101;&#46;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#104;&#x6f;&#97;&#116;&#114;&#117;&#111;&#110;&#103;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#118;&#101;&#46;&#99;&#x6f;&#x6d;">&#x6b;&#104;&#x6f;&#97;&#116;&#114;&#117;&#111;&#110;&#103;&#x62;&#x61;&#x63;&#x68;&#64;&#x6c;&#105;&#118;&#101;&#46;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#x6b;&#104;&#111;&#97;&#116;&#x72;&#x75;&#111;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#x6c;&#x69;&#118;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#x6b;&#104;&#111;&#97;&#116;&#x72;&#x75;&#111;&#x6e;&#103;&#x62;&#x61;&#99;&#104;&#x40;&#x6c;&#x69;&#118;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2015 in review</title>
-    <url>/2015/12/30/2015-in-review/</url>
-    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2015 annual report for this blog.</p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
-<p>Here’s an excerpt:</p>
-<blockquote>
-<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>13,000</strong> times in 2015. If it were a concert at Sydney Opera House, it would take about 5 sold-out performances for that many people to see it.</p>
-</blockquote>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/">Click here to see the complete report.</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
       </categories>
   </entry>
   <entry>
@@ -3783,6 +3790,21 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
         <tag>blog</tag>
         <tag>tách</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2015 in review</title>
+    <url>/2015/12/30/2015-in-review/</url>
+    <content><![CDATA[<p>The WordPress.com stats helper monkeys prepared a 2015 annual report for this blog.</p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/"><img src="//s0.wp.com/wp-content/mu-plugins/annual-reports/img/2014-emailteaser.png"></a></p>
+<p>Here’s an excerpt:</p>
+<blockquote>
+<p>The concert hall at the Sydney Opera House holds 2,700 people. This blog was viewed about <strong>13,000</strong> times in 2015. If it were a concert at Sydney Opera House, it would take about 5 sold-out performances for that many people to see it.</p>
+</blockquote>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2015/annual-report/">Click here to see the complete report.</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
   </entry>
   <entry>
     <title>[Visual Studio Online] TFS love Slack, and vice versa</title>
@@ -3975,15 +3997,6 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       </tags>
   </entry>
   <entry>
-    <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
-    <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;">&#x61;&#120;&#x63;&#115;&#57;&#48;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
-]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-  </entry>
-  <entry>
     <title>[Windows 10] Prevent your app from being hidden on Windows Store</title>
     <url>/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/</url>
     <content><![CDATA[<p>Trong những tháng vừa rồi, Window Store đang tiến hành thanh lọc Store, bỏ các app rác, đẩy các app tốt lên feature. Tuy nhiên, theo phản ánh của khá nhiều developer tại Việt Nam, Store đang tiến hành xử trảm khá nhiều app tốt của dev VN và các nước khác. Vậy phải làm thế nào?</p>
@@ -4023,6 +4036,15 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
         <tag>search</tag>
         <tag>windows</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
+    <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#120;&#99;&#x73;&#x39;&#x30;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#120;&#x63;&#115;&#x39;&#48;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#97;&#120;&#x63;&#115;&#x39;&#48;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+]]></content>
+      <categories>
+        <category>uncategorized</category>
+      </categories>
   </entry>
   <entry>
     <title>[ASP.NET CORE] – My road trip to ASP.NET core – Getting Started</title>
@@ -4596,7 +4618,7 @@ services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#x6f;&#110;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#108;&#x75;&#x6f;&#110;&#103;&#97;&#x6e;&#x68;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#117;&#x6f;&#110;&#103;&#x61;&#x6e;&#104;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#108;&#117;&#x6f;&#110;&#103;&#x61;&#x6e;&#104;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#110;&#x68;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x6c;&#117;&#x6f;&#x6e;&#103;&#x61;&#110;&#x68;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#x75;&#x6f;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#x75;&#x6f;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -6983,6 +7005,95 @@ HTML: HTML5</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>[ASP.NET] - Project Structure &amp; Package Manager</title>
+    <url>/2018/05/09/asp-net-project-structure-package-manager/</url>
+    <content><![CDATA[<p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
+<p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
+<span id="more"></span>
+<ul>
+<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
+<ul>
+<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
+<ul>
+<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
+<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
+<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
+<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
+</ul>
+</li>
+<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
+</li>
+</ul>
+</li>
+<li><p><a href="#2-package-manager">2. Package Manager</a></p>
+<ul>
+<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
+</li>
+<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
+<ul>
+<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
+<li><a href="#222-sources">2.2.2. Sources</a></li>
+<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
+<p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
+<p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
+<h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
+<h3 id="1-1-1-Dung-lai"><a href="#1-1-1-Dung-lai" class="headerlink" title="1.1.1. Dùng lại"></a>1.1.1. Dùng lại</h3><p>Khi một số code có chức năng riêng biệt nào đó được bạn tách ra thành 1 project riêng, thì nó sẽ rất dễ dàng để dùng lại nó vào những dự án khác.</p>
+<p>Giả sử bạn có 1 số helpers và class giúp việc kết nối tới database rất nhanh chóng và gọn lẹ. Khi nó ở 1 project riêng, bạn có thể dễ dàng up nó lên git, rồi các project khác cứ thế mà clone về xài thôi. Khi bạn update project trên git đó, toàn bộ các clone của nó sẽ đều được update theo.</p>
+<h3 id="1-1-2-Phan-phoi"><a href="#1-1-2-Phan-phoi" class="headerlink" title="1.1.2. Phân phối"></a>1.1.2. Phân phối</h3><p>Cũng ví dụ trên, project của bạn đã nằm ở mức library, tức là một thư viện rồi. Bạn có thể dụ bạn bè mình xài nó, phát triển thêm, đóng góp cho nó, pack nó lại thành nuget package, blah blah blah và blah blah blah</p>
+<h3 id="1-1-3-Trien-khai"><a href="#1-1-3-Trien-khai" class="headerlink" title="1.1.3. Triển khai"></a>1.1.3. Triển khai</h3><p>1 công ty nọ thấy lib version 1.0 của bạn quá hay, họ quyết định tải zìa và xài trong dự án cực khủng của họ. 10 năm sau, bạn cập nhật cái lib của mình lên version 2.0, dùng lại toàn bộ các method và hàm sẵn có, chẳng qua là thay đổi thuật toán cho nó chạy nhanh lên thôi. Công ty chỉ cần bỏ ra 1 chi phí tối thiểu để clone cái lib của bạn về, build và replace cái lib đang chạy trên production của họ. Thế là xong. Không cần phải build lại cả project, không cần phải deploy lại.</p>
+<h3 id="1-1-4-You-name-it"><a href="#1-1-4-You-name-it" class="headerlink" title="1.1.4. You name it"></a>1.1.4. You name it</h3><p>Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát hiện ra càng nhiều lợi ích khác của việc chia tách này.</p>
+<h2 id="1-2-Phan-chia-projects"><a href="#1-2-Phan-chia-projects" class="headerlink" title="1.2. Phân chia projects"></a>1.2. Phân chia projects</h2><p>Ở mô hình MVC, cả Model-View-ViewModel đều gắn liền với nhau, nên chúng ta không tách</p>
+<blockquote>
+<p>Tuy nhiên, có một số công ty tách cái Model ra một project riêng. Điều này giúp bạn dễ quản lý code hơn. Đôi khi cũng tách luôn cái Controller thành 1 project</p>
+</blockquote>
+<p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
+<ul>
+<li>Unit Test -&gt; <strong>Tách</strong></li>
+<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
+<li>Encryption &#x2F; Decryption -&gt; <strong>Tách</strong></li>
+<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
+</ul>
+<h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
+<h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
+<p>Nó sẽ triệt tiêu luôn cái vấn đề tương thích platform với lib (lib build cho x64 chỉ chạy được trên x64 và tương tự cho x86)</p>
+<h2 id="2-2-For-front-end-Yarn"><a href="#2-2-For-front-end-Yarn" class="headerlink" title="2.2. For front-end - Yarn"></a>2.2. For front-end - Yarn</h2><blockquote>
+<p>Bower đã bị ngừng hỗ trợ</p>
+</blockquote>
+<p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
+<p><strong>đúng rồi, NHƯNG</strong></p>
+<ul>
+<li>nguồn không thống nhất</li>
+<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
+<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
+</ul>
+<p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
+<p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
+<h3 id="2-2-1-Tinh-phu-thuoc"><a href="#2-2-1-Tinh-phu-thuoc" class="headerlink" title="2.2.1. Tính phụ thuộc"></a>2.2.1. Tính phụ thuộc</h3><p><code>JQuery</code> là một lib rất phổ biến, và ty tỷ lib khác được xây dựng mà cần tới nó. Nhưng JQuery có cũng kha khá phiên bản khác nhau, và các lib khác nhau lại dùng các version khác nhau của JQuery.</p>
+<p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
+<h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
+<h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
+<p><img src="/images/flickr/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
+<p>Thế nhé bạn ;)</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>ASP.NET</category>
+      </categories>
+      <tags>
+        <tag>project</tag>
+        <tag>structure</tag>
+        <tag>architech</tag>
+        <tag>manager</tag>
+        <tag>package</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation</title>
     <url>/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</url>
     <content><![CDATA[<p>Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: CRUD</p>
@@ -7232,95 +7343,6 @@ _context.SaveChanges();</code></pre>
         <category>Others</category>
         <category>ASP.NET</category>
       </categories>
-  </entry>
-  <entry>
-    <title>[ASP.NET] - Project Structure &amp; Package Manager</title>
-    <url>/2018/05/09/asp-net-project-structure-package-manager/</url>
-    <content><![CDATA[<p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
-<p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
-<span id="more"></span>
-<ul>
-<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
-<ul>
-<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
-<ul>
-<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
-<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
-<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
-<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
-</ul>
-</li>
-<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
-</li>
-</ul>
-</li>
-<li><p><a href="#2-package-manager">2. Package Manager</a></p>
-<ul>
-<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
-</li>
-<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
-<ul>
-<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
-<li><a href="#222-sources">2.2.2. Sources</a></li>
-<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
-<p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
-<p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
-<h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
-<h3 id="1-1-1-Dung-lai"><a href="#1-1-1-Dung-lai" class="headerlink" title="1.1.1. Dùng lại"></a>1.1.1. Dùng lại</h3><p>Khi một số code có chức năng riêng biệt nào đó được bạn tách ra thành 1 project riêng, thì nó sẽ rất dễ dàng để dùng lại nó vào những dự án khác.</p>
-<p>Giả sử bạn có 1 số helpers và class giúp việc kết nối tới database rất nhanh chóng và gọn lẹ. Khi nó ở 1 project riêng, bạn có thể dễ dàng up nó lên git, rồi các project khác cứ thế mà clone về xài thôi. Khi bạn update project trên git đó, toàn bộ các clone của nó sẽ đều được update theo.</p>
-<h3 id="1-1-2-Phan-phoi"><a href="#1-1-2-Phan-phoi" class="headerlink" title="1.1.2. Phân phối"></a>1.1.2. Phân phối</h3><p>Cũng ví dụ trên, project của bạn đã nằm ở mức library, tức là một thư viện rồi. Bạn có thể dụ bạn bè mình xài nó, phát triển thêm, đóng góp cho nó, pack nó lại thành nuget package, blah blah blah và blah blah blah</p>
-<h3 id="1-1-3-Trien-khai"><a href="#1-1-3-Trien-khai" class="headerlink" title="1.1.3. Triển khai"></a>1.1.3. Triển khai</h3><p>1 công ty nọ thấy lib version 1.0 của bạn quá hay, họ quyết định tải zìa và xài trong dự án cực khủng của họ. 10 năm sau, bạn cập nhật cái lib của mình lên version 2.0, dùng lại toàn bộ các method và hàm sẵn có, chẳng qua là thay đổi thuật toán cho nó chạy nhanh lên thôi. Công ty chỉ cần bỏ ra 1 chi phí tối thiểu để clone cái lib của bạn về, build và replace cái lib đang chạy trên production của họ. Thế là xong. Không cần phải build lại cả project, không cần phải deploy lại.</p>
-<h3 id="1-1-4-You-name-it"><a href="#1-1-4-You-name-it" class="headerlink" title="1.1.4. You name it"></a>1.1.4. You name it</h3><p>Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát hiện ra càng nhiều lợi ích khác của việc chia tách này.</p>
-<h2 id="1-2-Phan-chia-projects"><a href="#1-2-Phan-chia-projects" class="headerlink" title="1.2. Phân chia projects"></a>1.2. Phân chia projects</h2><p>Ở mô hình MVC, cả Model-View-ViewModel đều gắn liền với nhau, nên chúng ta không tách</p>
-<blockquote>
-<p>Tuy nhiên, có một số công ty tách cái Model ra một project riêng. Điều này giúp bạn dễ quản lý code hơn. Đôi khi cũng tách luôn cái Controller thành 1 project</p>
-</blockquote>
-<p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
-<ul>
-<li>Unit Test -&gt; <strong>Tách</strong></li>
-<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
-<li>Encryption &#x2F; Decryption -&gt; <strong>Tách</strong></li>
-<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
-</ul>
-<h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
-<h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
-<p>Nó sẽ triệt tiêu luôn cái vấn đề tương thích platform với lib (lib build cho x64 chỉ chạy được trên x64 và tương tự cho x86)</p>
-<h2 id="2-2-For-front-end-Yarn"><a href="#2-2-For-front-end-Yarn" class="headerlink" title="2.2. For front-end - Yarn"></a>2.2. For front-end - Yarn</h2><blockquote>
-<p>Bower đã bị ngừng hỗ trợ</p>
-</blockquote>
-<p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
-<p><strong>đúng rồi, NHƯNG</strong></p>
-<ul>
-<li>nguồn không thống nhất</li>
-<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
-<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
-</ul>
-<p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
-<p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
-<h3 id="2-2-1-Tinh-phu-thuoc"><a href="#2-2-1-Tinh-phu-thuoc" class="headerlink" title="2.2.1. Tính phụ thuộc"></a>2.2.1. Tính phụ thuộc</h3><p><code>JQuery</code> là một lib rất phổ biến, và ty tỷ lib khác được xây dựng mà cần tới nó. Nhưng JQuery có cũng kha khá phiên bản khác nhau, và các lib khác nhau lại dùng các version khác nhau của JQuery.</p>
-<p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
-<h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
-<h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
-<p><img src="/images/flickr/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
-<p>Thế nhé bạn ;)</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>ASP.NET</category>
-      </categories>
-      <tags>
-        <tag>project</tag>
-        <tag>structure</tag>
-        <tag>architech</tag>
-        <tag>manager</tag>
-        <tag>package</tag>
-      </tags>
   </entry>
   <entry>
     <title>[ASPNET Core 2] – Middleware</title>
@@ -7660,6 +7682,66 @@ _context.SaveChanges();</code></pre>
         <tag>ASP.NET</tag>
         <tag>dependency injection</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Machine Learning - 1.1 - Introduction</title>
+    <url>/2018/09/14/machine-learning-introduction/</url>
+    <content><![CDATA[<p>Bài viết mở đầu cho chuỗi tự học Machine Learning. Các khái niệm cơ bản sẽ được giới thiệu trong bài viết này.</p>
+<span id="more"></span>
+<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><a href="#1-machine-learning-l%C3%A0-g%C3%AC">1. Machine learning là gì</a></li>
+<li><a href="#2-ph%C3%A2n-lo%E1%BA%A1i">2. Phân loại</a><ul>
+<li><a href="#21-supervised-learning">2.1. Supervised Learning</a><ul>
+<li><a href="#211-regression">2.1.1. Regression</a></li>
+<li><a href="#212-classification">2.1.2. Classification</a></li>
+</ul>
+</li>
+<li><a href="#22-unsupervised-learning">2.2. Unsupervised Learning</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Machine-learning-la-gi"><a href="#1-Machine-learning-la-gi" class="headerlink" title="1. Machine learning là gì"></a>1. Machine learning là gì</h1><p>Có 2 định nghĩa về machine learning:</p>
+<blockquote>
+<p>The field of study that gives computers the ability to learn without being explicitly programmed.</p>
+<p><em>Arthur Samuel</em></p>
+</blockquote>
+<p>Định nghĩa thứ 2:</p>
+<blockquote>
+<p>A computer program is said to learn from experience <strong>E</strong> with respect to some class of tasks <strong>T</strong> and performance measure <strong>P</strong>, if its performance at tasks in <strong>T</strong>, as measured by <strong>P</strong>, improves with experience <strong>E</strong>.</p>
+<p><em>Tom Mitchell</em></p>
+</blockquote>
+<p>Đọc thì có vẻ dài dòng, nhưng đưa nó vào một ví dụ là dễ hiểu ngay:</p>
+<p><strong>Chơi cờ</strong></p>
+<ul>
+<li><strong>E</strong>(xperience): kinh nghiệm chơi cờ (càng chơi càng giỏi).</li>
+<li><strong>T</strong>(ask): nhiệm vụ là chơi cờ.</li>
+<li><strong>P</strong>(robability): Khả năng mà máy tính sẽ thắng trong ván tiếp theo.</li>
+</ul>
+<h1 id="2-Phan-loai"><a href="#2-Phan-loai" class="headerlink" title="2. Phân loại"></a>2. Phân loại</h1><p>Mọi chương trình Machine learning đều có thể chia thành 2 loại:</p>
+<ol>
+<li>Supervised Learning</li>
+<li>Unsupervised Learning</li>
+</ol>
+<h2 id="2-1-Supervised-Learning"><a href="#2-1-Supervised-Learning" class="headerlink" title="2.1. Supervised Learning"></a>2.1. Supervised Learning</h2><p>Trong loại này, ta biết trước dữ liệu đầu vào và kết quả. Hãy tưởng tượng nó như một dạng biểu đồ.</p>
+<p>Dựa vào biểu đồ này, ta có thể dự đoán mối quan hệ giữa input và output. Khi đó, khi đưa một input bất kỳ, ta có thể tính ra được output.</p>
+<p>Supervised learning được chia làm 2 loại là <strong>regression</strong> và <strong>classification</strong>.</p>
+<h3 id="2-1-1-Regression"><a href="#2-1-1-Regression" class="headerlink" title="2.1.1. Regression"></a>2.1.1. Regression</h3><p>Dựa vào mối liên hệ giữa input và output, ta dự đoán được kết quả</p>
+<p><img src="/images/flickr/1856/42867061930_e41c2f94c0_o.png" alt="bieu do"></p>
+<h3 id="2-1-2-Classification"><a href="#2-1-2-Classification" class="headerlink" title="2.1.2. Classification"></a>2.1.2. Classification</h3><p>Dựa vào đặc điểm của input, ta đặt được nó vào một loại cụ thể</p>
+<p><img src="/images/flickr/1879/43958802164_a713ef73dc_o.png" alt="classification"></p>
+<h2 id="2-2-Unsupervised-Learning"><a href="#2-2-Unsupervised-Learning" class="headerlink" title="2.2. Unsupervised Learning"></a>2.2. Unsupervised Learning</h2><p>Trong “thể loại” machine learning này, ta hoàn toàn ko biết trước được kết quả sẽ như thế nào.</p>
+<p>Ví dụ:</p>
+<ol>
+<li>Trong 1 triệu bức ảnh, tìm cách nhóm các bức ảnh có cùng 1 chủ đề lại với nhau (nhà cửa, xe cộ, con người).</li>
+<li>Tìm và lọc ra tiếng người nói chuyện và tiếng nhạc trong 1 buổi tiệc ồn ào với nhiều loại âm thanh (<a href="https://en.wikipedia.org/wiki/Cocktail_party_effect">Cocktail Party Algorithm</a>).</li>
+</ol>
+<p>Trên đây là những khái niệm mở đầu cho Machine Learning, càng về những bài viết sau, bạn sẽ càng phải tự mình nghiên cứu và đào sâu vào các khái niệm phức tạp và thú vị hơn.</p>
+<p>Hẹn gặp lại ở các bài viết sau nhé!</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
   </entry>
   <entry>
     <title>Repository và Unit of Work Pattern</title>
@@ -8033,143 +8115,6 @@ unitOfWork.Dispose();</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Machine Learning - 1.1 - Introduction</title>
-    <url>/2018/09/14/machine-learning-introduction/</url>
-    <content><![CDATA[<p>Bài viết mở đầu cho chuỗi tự học Machine Learning. Các khái niệm cơ bản sẽ được giới thiệu trong bài viết này.</p>
-<span id="more"></span>
-<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
-<ul>
-<li><a href="#1-machine-learning-l%C3%A0-g%C3%AC">1. Machine learning là gì</a></li>
-<li><a href="#2-ph%C3%A2n-lo%E1%BA%A1i">2. Phân loại</a><ul>
-<li><a href="#21-supervised-learning">2.1. Supervised Learning</a><ul>
-<li><a href="#211-regression">2.1.1. Regression</a></li>
-<li><a href="#212-classification">2.1.2. Classification</a></li>
-</ul>
-</li>
-<li><a href="#22-unsupervised-learning">2.2. Unsupervised Learning</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="1-Machine-learning-la-gi"><a href="#1-Machine-learning-la-gi" class="headerlink" title="1. Machine learning là gì"></a>1. Machine learning là gì</h1><p>Có 2 định nghĩa về machine learning:</p>
-<blockquote>
-<p>The field of study that gives computers the ability to learn without being explicitly programmed.</p>
-<p><em>Arthur Samuel</em></p>
-</blockquote>
-<p>Định nghĩa thứ 2:</p>
-<blockquote>
-<p>A computer program is said to learn from experience <strong>E</strong> with respect to some class of tasks <strong>T</strong> and performance measure <strong>P</strong>, if its performance at tasks in <strong>T</strong>, as measured by <strong>P</strong>, improves with experience <strong>E</strong>.</p>
-<p><em>Tom Mitchell</em></p>
-</blockquote>
-<p>Đọc thì có vẻ dài dòng, nhưng đưa nó vào một ví dụ là dễ hiểu ngay:</p>
-<p><strong>Chơi cờ</strong></p>
-<ul>
-<li><strong>E</strong>(xperience): kinh nghiệm chơi cờ (càng chơi càng giỏi).</li>
-<li><strong>T</strong>(ask): nhiệm vụ là chơi cờ.</li>
-<li><strong>P</strong>(robability): Khả năng mà máy tính sẽ thắng trong ván tiếp theo.</li>
-</ul>
-<h1 id="2-Phan-loai"><a href="#2-Phan-loai" class="headerlink" title="2. Phân loại"></a>2. Phân loại</h1><p>Mọi chương trình Machine learning đều có thể chia thành 2 loại:</p>
-<ol>
-<li>Supervised Learning</li>
-<li>Unsupervised Learning</li>
-</ol>
-<h2 id="2-1-Supervised-Learning"><a href="#2-1-Supervised-Learning" class="headerlink" title="2.1. Supervised Learning"></a>2.1. Supervised Learning</h2><p>Trong loại này, ta biết trước dữ liệu đầu vào và kết quả. Hãy tưởng tượng nó như một dạng biểu đồ.</p>
-<p>Dựa vào biểu đồ này, ta có thể dự đoán mối quan hệ giữa input và output. Khi đó, khi đưa một input bất kỳ, ta có thể tính ra được output.</p>
-<p>Supervised learning được chia làm 2 loại là <strong>regression</strong> và <strong>classification</strong>.</p>
-<h3 id="2-1-1-Regression"><a href="#2-1-1-Regression" class="headerlink" title="2.1.1. Regression"></a>2.1.1. Regression</h3><p>Dựa vào mối liên hệ giữa input và output, ta dự đoán được kết quả</p>
-<p><img src="/images/flickr/1856/42867061930_e41c2f94c0_o.png" alt="bieu do"></p>
-<h3 id="2-1-2-Classification"><a href="#2-1-2-Classification" class="headerlink" title="2.1.2. Classification"></a>2.1.2. Classification</h3><p>Dựa vào đặc điểm của input, ta đặt được nó vào một loại cụ thể</p>
-<p><img src="/images/flickr/1879/43958802164_a713ef73dc_o.png" alt="classification"></p>
-<h2 id="2-2-Unsupervised-Learning"><a href="#2-2-Unsupervised-Learning" class="headerlink" title="2.2. Unsupervised Learning"></a>2.2. Unsupervised Learning</h2><p>Trong “thể loại” machine learning này, ta hoàn toàn ko biết trước được kết quả sẽ như thế nào.</p>
-<p>Ví dụ:</p>
-<ol>
-<li>Trong 1 triệu bức ảnh, tìm cách nhóm các bức ảnh có cùng 1 chủ đề lại với nhau (nhà cửa, xe cộ, con người).</li>
-<li>Tìm và lọc ra tiếng người nói chuyện và tiếng nhạc trong 1 buổi tiệc ồn ào với nhiều loại âm thanh (<a href="https://en.wikipedia.org/wiki/Cocktail_party_effect">Cocktail Party Algorithm</a>).</li>
-</ol>
-<p>Trên đây là những khái niệm mở đầu cho Machine Learning, càng về những bài viết sau, bạn sẽ càng phải tự mình nghiên cứu và đào sâu vào các khái niệm phức tạp và thú vị hơn.</p>
-<p>Hẹn gặp lại ở các bài viết sau nhé!</p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Machine Learning - 1.3 - Parameter Learning</title>
-    <url>/2018/09/27/machine-learning-parameter-learning/</url>
-    <content><![CDATA[<p>Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.</p>
-<p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis.</p>
-<span id="more"></span>
-<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
-<ul>
-<li><a href="#1-gradient-descent">1. Gradient Descent</a><ul>
-<li><a href="#11-bi%E1%BB%83u-di%E1%BB%85n-%C4%91%E1%BB%93-th%E1%BB%8B">1.1. Biểu diễn đồ thị</a></li>
-<li><a href="#12-m%C3%B4-t%E1%BA%A3-thu%E1%BA%ADt-to%C3%A1n">1.2. Mô tả thuật toán</a></li>
-<li><a href="#13-x%C3%A2y-d%E1%BB%B1ng">1.3. Xây dựng</a></li>
-</ul>
-</li>
-<li><a href="#2-gradient-descent-cho-linear-regression">2. Gradient Descent cho Linear Regression</a></li>
-</ul>
-<h1 id="1-Gradient-Descent"><a href="#1-Gradient-Descent" class="headerlink" title="1. Gradient Descent"></a>1. Gradient Descent</h1><p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis, và đó là nhiệm vụ của <code>Gradient Descent</code>.</p>
-<p>Để đơn giản, trong phần này, ta sẽ xét các hàm hypothesis có 2 tham số là $latex \theta_{0}$ và $latex \theta_{1}$. Đối với các trường hợp có nhiều hơn 2 tham số, cách thực hiện là tương tự.</p>
-<h2 id="1-1-Bieu-dien-do-thi"><a href="#1-1-Bieu-dien-do-thi" class="headerlink" title="1.1. Biểu diễn đồ thị"></a>1.1. Biểu diễn đồ thị</h2><p>Gọi $latex J(\theta_{0},\theta_{1})$ là kết quả của cost function. Ta biểu diễn các tham số lên một đồ thị có 3 trục x, y và z như sau:</p>
-<ul>
-<li>$latex \theta_{0}$ là trục x.</li>
-<li>$latex \theta_{1}$ là trục y.</li>
-<li>$latex J(\theta_{0},\theta_{1})$ là trục z.</li>
-</ul>
-<p><img src="/images/flickr/1899/44863403391_91a4cf87aa_o.png" alt="gradient descent graph"></p>
-<p>Các mũi tên đỏ chỉ những điểm thấp nhất của đồ thị này, đó là các điểm mà ta tìm kiếm (nhằm mục đích tối thiểu giá trị của cost function).</p>
-<h2 id="1-2-Mo-ta-thuat-toan"><a href="#1-2-Mo-ta-thuat-toan" class="headerlink" title="1.2. Mô tả thuật toán"></a>1.2. Mô tả thuật toán</h2><p>Chọn 1 điểm bất kỳ, sau đó di chuyển từng bước nhỏ về vùng trũng nhất của đồ thị.</p>
-<p>Cách làm là lấy đạo hàm của cost function. Đối với một hàm số, đạo hàm của nó chính là đường tiếp tuyến của nó. Độ dốc của đường tiếp tuyến tại một điểm chính là giá trị của hàm đạo hàm tại điểm đó. Độ dốc này cho ta biết hướng đi để chọn điểm tiếp theo.</p>
-<p>Độ dài của mỗi step được xác định bởi tham số $latex \alpha$, gọi là <code>learning rate</code>.</p>
-<p>Điểm ban đầu được chọn khác nhau sẽ cho ra các kết quả rất khác nhau. Hình bên trên có 2 điểm ban đầu khác nhau, và sẽ cho ra 2 điểm thấp nhất là 2 mũi tên đỏ.</p>
-<p>Như vậy, thuật toán Gradient Descent sẽ là:</p>
-<p>lặp lại cho tới khi hội tụ:</p>
-<p>$latex \theta_{j} :&#x3D; \theta_{j} - \alpha \frac{\partial}{\partial\theta_{j}}J(\theta_{0},\theta_{1})$</p>
-<p>với:</p>
-<p>$latex j&#x3D;0,1,2,…,m$, đại diện cho index</p>
-<p>Với mỗi lần lặp, cả $latex \theta_{0}$ và $latex \theta_{1}$ phải được tính đồng thời.</p>
-<h2 id="1-3-Xay-dung"><a href="#1-3-Xay-dung" class="headerlink" title="1.3. Xây dựng"></a>1.3. Xây dựng</h2><p>Để cho đơn giản, ta sẽ dùng hàm số chỉ có 1 biến $latex \theta_{1}$ và từng bước xây dựng công thức cho <code>Gradient Descent</code>.</p>
-<p>Vậy công thức của ta còn:</p>
-<p>Lặp lại cho tới khi hội tụ:</p>
-<p>$latex \theta_{1} :&#x3D; \theta_{1} - \alpha \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$</p>
-<p>với</p>
-<ul>
-<li>$latex \alpha$ là learning rate</li>
-<li>$latex \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$ là độ dốc của đường tiếp tuyến (slope) tại $latex \theta_{1}$</li>
-</ul>
-<p><img src="https://i.imgur.com/G01t68o.png" alt="plot"></p>
-<p>Nhìn vào đồ thị trên, khi slope nằm bên trái của điểm hội tụ, thì giá trị $latex \theta_{1}$ tăng, và ngược lại khi nó nằm bên phải của điểm hội tụ.</p>
-<blockquote>
-<p>Tham số $latex \alpha$ nên được điều chỉnh hợp lý sao cho thuật toán gradient descent hội tụ trong 1 khoảng thời gian phù hợp.</p>
-<p>Khi $latex \alpha$ quá nhỏ, thời gian tìm đến điểm hội tụ sẽ lâu. Khi quá lớn, thuật toán rất có thể sẽ không tìm thấy điểm hội tụ.</p>
-</blockquote>
-<p>Với một tham số $latex \alpha$ hợp lý, càng về gần điểm hội tụ, độ dốc của tiếp tuyến sẽ càng nhỏ, do đó, thuật toán gradient descent sẽ có bước đi nhỏ hơn, và sẽ bằng 0 khi tới điểm hội tụ.</p>
-<p>Trong trường hợp điểm xuất phát chính là điểm hội tụ, thì thuật toán gradient descent sẽ cho ra $latex \theta_{1}$ không đổi với $latex \alpha$ bất kỳ, vì đạo hàm của nó là 0.</p>
-<h1 id="2-Gradient-Descent-cho-Linear-Regression"><a href="#2-Gradient-Descent-cho-Linear-Regression" class="headerlink" title="2. Gradient Descent cho Linear Regression"></a>2. Gradient Descent cho Linear Regression</h1><p>Khi áp dụng thuật toán Gradient Descent vào hàm số Hypothesis của ta trong các bài viết trước, ta có thể tìm được 2 tham số $latex \theta_{0}$ và $latex \theta_{1}$:</p>
-<p>Lặp lại cho tới khi hội tụ:</p>
-<p>$latex \theta_0 :&#x3D; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m}(h_\theta(x_{i}) - y_{i})$</p>
-<p>$latex \theta_1 :&#x3D; \theta_1 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right)$</p>
-<p>với:</p>
-<ul>
-<li>m là tổng số training example.</li>
-<li>$latex \theta_0$ tham số sẽ thay đổi đồng thời với $latex theta_1$ và $latex x_{i}$.</li>
-<li>$latex y_{i}$ là các giá trị được cho bởi bộ training example.</li>
-</ul>
-<p>Như vậy, số 2 dưới mẫu trong công thức của bài kỳ trước đã bị triệt tiêu vì đạo hàm</p>
-<blockquote>
-<p>Gradient Descent trong bài toán này thường được gọi là <code>Batch Gradient Descent</code>, vì nó tính tổng của tất cả các giá trị</p>
-<p>Hàm hypothesis của bài toán Linear Regression có hình dạng như một cái tô, và chỉ có 1 điểm hội tụ duy nhất.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-      <tags>
-        <tag>gradient descent</tag>
-        <tag>hypothesis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Machine Learning - 1.2 - Model and Cost Function</title>
     <url>/2018/09/22/ml-model-and-cost-function/</url>
     <content><![CDATA[<p>Bài thứ 2 trong chuỗi bài viết tự học Machine Learning Trong bài này, ta sẽ tìm hiểu về cost function, một function nhằm dự đoán giá trị output với một bộ các giá trị input&#x2F;output cho trước.</p>
@@ -8279,6 +8224,83 @@ unitOfWork.Dispose();</code></pre>
       </categories>
       <tags>
         <tag>cost function</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Machine Learning - 1.3 - Parameter Learning</title>
+    <url>/2018/09/27/machine-learning-parameter-learning/</url>
+    <content><![CDATA[<p>Bài thứ 3 trong chuỗi bài viết tự học Machine Learning.</p>
+<p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis.</p>
+<span id="more"></span>
+<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><a href="#1-gradient-descent">1. Gradient Descent</a><ul>
+<li><a href="#11-bi%E1%BB%83u-di%E1%BB%85n-%C4%91%E1%BB%93-th%E1%BB%8B">1.1. Biểu diễn đồ thị</a></li>
+<li><a href="#12-m%C3%B4-t%E1%BA%A3-thu%E1%BA%ADt-to%C3%A1n">1.2. Mô tả thuật toán</a></li>
+<li><a href="#13-x%C3%A2y-d%E1%BB%B1ng">1.3. Xây dựng</a></li>
+</ul>
+</li>
+<li><a href="#2-gradient-descent-cho-linear-regression">2. Gradient Descent cho Linear Regression</a></li>
+</ul>
+<h1 id="1-Gradient-Descent"><a href="#1-Gradient-Descent" class="headerlink" title="1. Gradient Descent"></a>1. Gradient Descent</h1><p>Ở 2 bài trước, chúng ta đã có hàm hypothesis và cách để biết hàm đó có phù hợp với bộ training example của chúng ta hay ko. Bây giờ chúng ta sẽ tìm cách tìm ra các tham số cho hàm hypothesis, và đó là nhiệm vụ của <code>Gradient Descent</code>.</p>
+<p>Để đơn giản, trong phần này, ta sẽ xét các hàm hypothesis có 2 tham số là $latex \theta_{0}$ và $latex \theta_{1}$. Đối với các trường hợp có nhiều hơn 2 tham số, cách thực hiện là tương tự.</p>
+<h2 id="1-1-Bieu-dien-do-thi"><a href="#1-1-Bieu-dien-do-thi" class="headerlink" title="1.1. Biểu diễn đồ thị"></a>1.1. Biểu diễn đồ thị</h2><p>Gọi $latex J(\theta_{0},\theta_{1})$ là kết quả của cost function. Ta biểu diễn các tham số lên một đồ thị có 3 trục x, y và z như sau:</p>
+<ul>
+<li>$latex \theta_{0}$ là trục x.</li>
+<li>$latex \theta_{1}$ là trục y.</li>
+<li>$latex J(\theta_{0},\theta_{1})$ là trục z.</li>
+</ul>
+<p><img src="/images/flickr/1899/44863403391_91a4cf87aa_o.png" alt="gradient descent graph"></p>
+<p>Các mũi tên đỏ chỉ những điểm thấp nhất của đồ thị này, đó là các điểm mà ta tìm kiếm (nhằm mục đích tối thiểu giá trị của cost function).</p>
+<h2 id="1-2-Mo-ta-thuat-toan"><a href="#1-2-Mo-ta-thuat-toan" class="headerlink" title="1.2. Mô tả thuật toán"></a>1.2. Mô tả thuật toán</h2><p>Chọn 1 điểm bất kỳ, sau đó di chuyển từng bước nhỏ về vùng trũng nhất của đồ thị.</p>
+<p>Cách làm là lấy đạo hàm của cost function. Đối với một hàm số, đạo hàm của nó chính là đường tiếp tuyến của nó. Độ dốc của đường tiếp tuyến tại một điểm chính là giá trị của hàm đạo hàm tại điểm đó. Độ dốc này cho ta biết hướng đi để chọn điểm tiếp theo.</p>
+<p>Độ dài của mỗi step được xác định bởi tham số $latex \alpha$, gọi là <code>learning rate</code>.</p>
+<p>Điểm ban đầu được chọn khác nhau sẽ cho ra các kết quả rất khác nhau. Hình bên trên có 2 điểm ban đầu khác nhau, và sẽ cho ra 2 điểm thấp nhất là 2 mũi tên đỏ.</p>
+<p>Như vậy, thuật toán Gradient Descent sẽ là:</p>
+<p>lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_{j} :&#x3D; \theta_{j} - \alpha \frac{\partial}{\partial\theta_{j}}J(\theta_{0},\theta_{1})$</p>
+<p>với:</p>
+<p>$latex j&#x3D;0,1,2,…,m$, đại diện cho index</p>
+<p>Với mỗi lần lặp, cả $latex \theta_{0}$ và $latex \theta_{1}$ phải được tính đồng thời.</p>
+<h2 id="1-3-Xay-dung"><a href="#1-3-Xay-dung" class="headerlink" title="1.3. Xây dựng"></a>1.3. Xây dựng</h2><p>Để cho đơn giản, ta sẽ dùng hàm số chỉ có 1 biến $latex \theta_{1}$ và từng bước xây dựng công thức cho <code>Gradient Descent</code>.</p>
+<p>Vậy công thức của ta còn:</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_{1} :&#x3D; \theta_{1} - \alpha \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$</p>
+<p>với</p>
+<ul>
+<li>$latex \alpha$ là learning rate</li>
+<li>$latex \frac{\partial}{\partial\theta_{1}}J(\theta_{1})$ là độ dốc của đường tiếp tuyến (slope) tại $latex \theta_{1}$</li>
+</ul>
+<p><img src="https://i.imgur.com/G01t68o.png" alt="plot"></p>
+<p>Nhìn vào đồ thị trên, khi slope nằm bên trái của điểm hội tụ, thì giá trị $latex \theta_{1}$ tăng, và ngược lại khi nó nằm bên phải của điểm hội tụ.</p>
+<blockquote>
+<p>Tham số $latex \alpha$ nên được điều chỉnh hợp lý sao cho thuật toán gradient descent hội tụ trong 1 khoảng thời gian phù hợp.</p>
+<p>Khi $latex \alpha$ quá nhỏ, thời gian tìm đến điểm hội tụ sẽ lâu. Khi quá lớn, thuật toán rất có thể sẽ không tìm thấy điểm hội tụ.</p>
+</blockquote>
+<p>Với một tham số $latex \alpha$ hợp lý, càng về gần điểm hội tụ, độ dốc của tiếp tuyến sẽ càng nhỏ, do đó, thuật toán gradient descent sẽ có bước đi nhỏ hơn, và sẽ bằng 0 khi tới điểm hội tụ.</p>
+<p>Trong trường hợp điểm xuất phát chính là điểm hội tụ, thì thuật toán gradient descent sẽ cho ra $latex \theta_{1}$ không đổi với $latex \alpha$ bất kỳ, vì đạo hàm của nó là 0.</p>
+<h1 id="2-Gradient-Descent-cho-Linear-Regression"><a href="#2-Gradient-Descent-cho-Linear-Regression" class="headerlink" title="2. Gradient Descent cho Linear Regression"></a>2. Gradient Descent cho Linear Regression</h1><p>Khi áp dụng thuật toán Gradient Descent vào hàm số Hypothesis của ta trong các bài viết trước, ta có thể tìm được 2 tham số $latex \theta_{0}$ và $latex \theta_{1}$:</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_0 :&#x3D; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m}(h_\theta(x_{i}) - y_{i})$</p>
+<p>$latex \theta_1 :&#x3D; \theta_1 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right)$</p>
+<p>với:</p>
+<ul>
+<li>m là tổng số training example.</li>
+<li>$latex \theta_0$ tham số sẽ thay đổi đồng thời với $latex theta_1$ và $latex x_{i}$.</li>
+<li>$latex y_{i}$ là các giá trị được cho bởi bộ training example.</li>
+</ul>
+<p>Như vậy, số 2 dưới mẫu trong công thức của bài kỳ trước đã bị triệt tiêu vì đạo hàm</p>
+<blockquote>
+<p>Gradient Descent trong bài toán này thường được gọi là <code>Batch Gradient Descent</code>, vì nó tính tổng của tất cả các giá trị</p>
+<p>Hàm hypothesis của bài toán Linear Regression có hình dạng như một cái tô, và chỉ có 1 điểm hội tụ duy nhất.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+      <tags>
+        <tag>gradient descent</tag>
+        <tag>hypothesis</tag>
       </tags>
   </entry>
   <entry>
@@ -8720,47 +8742,6 @@ end</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>[Machine Learning] - 3.1 - Classification and Representation</title>
-    <url>/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
-    <content><![CDATA[<p>Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.</p>
-<span id="more"></span>
-<ul>
-<li><a href="#1-classification-and-representation">1. Classification and Representation</a><ul>
-<li><a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
-<li><a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
-</ul>
-</li>
-<li><a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
-</ul>
-<h1 id="1-Classification-and-Representation"><a href="#1-Classification-and-Representation" class="headerlink" title="1. Classification and Representation"></a><strong>1. Classification and Representation</strong></h1><h2 id="1-1-Sigmoid-Function-or-Logistic-Function"><a href="#1-1-Sigmoid-Function-or-Logistic-Function" class="headerlink" title="1.1. Sigmoid Function or Logistic Function"></a><strong>1.1. Sigmoid Function or Logistic Function</strong></h2><p>Trong bài toán phân loại (classification), mặc dù ta có thể tiếp cận nó bằng các thuật toán linear regression đã biết bằng cách tạm thời quên đi giá trị của y chỉ có thể là 0 hoặc 1.Cách tiếp cận này có vẻ không được tốt cho lắm. Giá trị của $latex h_0(x)$ phải nằm trong khoảng từ 0 tới 1.</p>
-<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;&#x3D;h_\theta(x)&lt;&#x3D;1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
-<p>$latex h_\theta (x) &#x3D; g ( \theta^T x )$<br>$latex z &#x3D; \theta^T x$<br>$latex g(z) &#x3D; \dfrac{1}{1 + e^{-z}}$ </p>
-<p>biểu thức trên có biểu diễn đồ thị như sau:</p>
-<p><img src="https://i.imgur.com/9IHlEt9.png"></p>
-<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả &#x3D; 1. Ví dụ như nếu $latex h_\theta(x) &#x3D; 0.7$ có nghĩa là xác suất kết quả &#x3D; 1 là 70%. Ngược lại, xác xuất kết quả &#x3D; 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
-<p>$latex h_\theta(x) &#x3D; P(y&#x3D;1 | x ; \theta) &#x3D; 1 - P(y&#x3D;0 | x ; \theta)$<br>$latex P(y &#x3D; 0 | x;\theta) + P(y &#x3D; 1 | x ; \theta) &#x3D; 1$ </p>
-<h2 id="1-2-Decision-Boundary"><a href="#1-2-Decision-Boundary" class="headerlink" title="1.2. Decision Boundary"></a><strong>1.2. Decision Boundary</strong></h2><p>Dựa vào Logistic function ở trên, ta có thể `biến đổi` hàm hypothesis của ta lại thành như sau:</p>
-<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y &#x3D; 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y &#x3D; 0$ </p>
-<p>Function g(z) hoạt động như sau:</p>
-<p>$latex g(z) \geq 0.5$<br>when<br>$latex z \geq 0$ </p>
-<p>Nhớ rằng:</p>
-<p>$latex z&#x3D;0, e^{0}&#x3D;1 \Rightarrow g(z)&#x3D;1&#x2F;2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)&#x3D;1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)&#x3D;0$ </p>
-<p>Như vậy, ta có thể viết:</p>
-<p>$latex h_\theta(x) &#x3D; g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
-<p>Từ những phát biểu trên, ta có thể viết</p>
-<p>$latex \theta^T x \geq 0 \Rightarrow y &#x3D; 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y &#x3D; 0$ </p>
-<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y &#x3D; 0 và vùng y &#x3D; 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
-<h1 id="2-Vi-du"><a href="#2-Vi-du" class="headerlink" title="2. Ví dụ"></a><strong>2. Ví dụ</strong></h1><p>Ta có ví dụ sau:</p>
-<p>$latex \theta &#x3D; \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y &#x3D; 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
-<p>vậy đồ thị của chúng ta sẽ giống như sau</p>
-<p><img src="https://i.imgur.com/VNSdsHL.png"></p>
-<p>Lưu ý rằng tùy vào hàm hypothesis và các tham số theta, hình dáng boudary line có thể thay đổi tương ứng</p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-  </entry>
-  <entry>
     <title>[Travel] - Transportation in Europe</title>
     <url>/2019/05/01/transportation-in-europe/</url>
     <content><![CDATA[<p>Nếu bạn có dư dả thời gian và nguồn kinh phí eo hẹp, thì cách tốt nhất để dạo vòng quanh các nước EU chính là các phương tiện công cộng.</p>
@@ -8855,6 +8836,47 @@ end</code></pre>
         <tag>train</tag>
         <tag>travel</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>[Machine Learning] - 3.1 - Classification and Representation</title>
+    <url>/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
+    <content><![CDATA[<p>Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.</p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-classification-and-representation">1. Classification and Representation</a><ul>
+<li><a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
+<li><a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
+</ul>
+</li>
+<li><a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
+</ul>
+<h1 id="1-Classification-and-Representation"><a href="#1-Classification-and-Representation" class="headerlink" title="1. Classification and Representation"></a><strong>1. Classification and Representation</strong></h1><h2 id="1-1-Sigmoid-Function-or-Logistic-Function"><a href="#1-1-Sigmoid-Function-or-Logistic-Function" class="headerlink" title="1.1. Sigmoid Function or Logistic Function"></a><strong>1.1. Sigmoid Function or Logistic Function</strong></h2><p>Trong bài toán phân loại (classification), mặc dù ta có thể tiếp cận nó bằng các thuật toán linear regression đã biết bằng cách tạm thời quên đi giá trị của y chỉ có thể là 0 hoặc 1.Cách tiếp cận này có vẻ không được tốt cho lắm. Giá trị của $latex h_0(x)$ phải nằm trong khoảng từ 0 tới 1.</p>
+<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;&#x3D;h_\theta(x)&lt;&#x3D;1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
+<p>$latex h_\theta (x) &#x3D; g ( \theta^T x )$<br>$latex z &#x3D; \theta^T x$<br>$latex g(z) &#x3D; \dfrac{1}{1 + e^{-z}}$ </p>
+<p>biểu thức trên có biểu diễn đồ thị như sau:</p>
+<p><img src="https://i.imgur.com/9IHlEt9.png"></p>
+<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả &#x3D; 1. Ví dụ như nếu $latex h_\theta(x) &#x3D; 0.7$ có nghĩa là xác suất kết quả &#x3D; 1 là 70%. Ngược lại, xác xuất kết quả &#x3D; 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
+<p>$latex h_\theta(x) &#x3D; P(y&#x3D;1 | x ; \theta) &#x3D; 1 - P(y&#x3D;0 | x ; \theta)$<br>$latex P(y &#x3D; 0 | x;\theta) + P(y &#x3D; 1 | x ; \theta) &#x3D; 1$ </p>
+<h2 id="1-2-Decision-Boundary"><a href="#1-2-Decision-Boundary" class="headerlink" title="1.2. Decision Boundary"></a><strong>1.2. Decision Boundary</strong></h2><p>Dựa vào Logistic function ở trên, ta có thể `biến đổi` hàm hypothesis của ta lại thành như sau:</p>
+<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y &#x3D; 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y &#x3D; 0$ </p>
+<p>Function g(z) hoạt động như sau:</p>
+<p>$latex g(z) \geq 0.5$<br>when<br>$latex z \geq 0$ </p>
+<p>Nhớ rằng:</p>
+<p>$latex z&#x3D;0, e^{0}&#x3D;1 \Rightarrow g(z)&#x3D;1&#x2F;2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)&#x3D;1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)&#x3D;0$ </p>
+<p>Như vậy, ta có thể viết:</p>
+<p>$latex h_\theta(x) &#x3D; g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
+<p>Từ những phát biểu trên, ta có thể viết</p>
+<p>$latex \theta^T x \geq 0 \Rightarrow y &#x3D; 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y &#x3D; 0$ </p>
+<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y &#x3D; 0 và vùng y &#x3D; 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
+<h1 id="2-Vi-du"><a href="#2-Vi-du" class="headerlink" title="2. Ví dụ"></a><strong>2. Ví dụ</strong></h1><p>Ta có ví dụ sau:</p>
+<p>$latex \theta &#x3D; \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y &#x3D; 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
+<p>vậy đồ thị của chúng ta sẽ giống như sau</p>
+<p><img src="https://i.imgur.com/VNSdsHL.png"></p>
+<p>Lưu ý rằng tùy vào hàm hypothesis và các tham số theta, hình dáng boudary line có thể thay đổi tương ứng</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
   </entry>
   <entry>
     <title>[Research] - Gecko Dom Logging system</title>
@@ -9811,6 +9833,76 @@ $ ssh-add ~/.ssh/id_rsa</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>How to download Windows 10 ISO</title>
+    <url>/2020/10/17/How-to-download-Windows-10-ISO/</url>
+    <content><![CDATA[<p>Step-by-step instructions on how to download Windows 10 ISO.</p>
+<span id="more"></span>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-solution-1---official---using-media-creation-tool">1. Solution 1 - Official - Using Media Creation Tool</a><ul>
+<li><a href="#11-step-1-download-media-creation-tool">1.1. Step 1: Download Media Creation Tool</a></li>
+<li><a href="#12-step-2-run-the-tool">1.2. Step 2: Run the tool</a></li>
+</ul>
+</li>
+<li><a href="#2-solution-2---if-youre-using-mac-linux-or-cant-download-using-solution-1">2. Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-Solution-1-Official-Using-Media-Creation-Tool"><a href="#1-Solution-1-Official-Using-Media-Creation-Tool" class="headerlink" title="1. Solution 1 - Official - Using Media Creation Tool"></a>1. Solution 1 - Official - Using Media Creation Tool</h1><p><a id="markdown-solution-1---official---using-media-creation-tool" name="solution-1---official---using-media-creation-tool"></a></p>
+<h2 id="1-1-Step-1-Download-Media-Creation-Tool"><a href="#1-1-Step-1-Download-Media-Creation-Tool" class="headerlink" title="1.1. Step 1: Download Media Creation Tool"></a>1.1. Step 1: Download Media Creation Tool</h2><p><a id="markdown-step-1%3A-download-media-creation-tool" name="step-1%3A-download-media-creation-tool"></a></p>
+<p>Download the media creation tool at this <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">link</a></p>
+<p><img src="https://i.imgur.com/TegGnSZ.png" alt="download the media creation tool"></p>
+<h2 id="1-2-Step-2-Run-the-tool"><a href="#1-2-Step-2-Run-the-tool" class="headerlink" title="1.2. Step 2: Run the tool"></a>1.2. Step 2: Run the tool</h2><p><a id="markdown-step-2%3A-run-the-tool" name="step-2%3A-run-the-tool"></a></p>
+<p>When running, Windows will ask for administrator permission. Allow it to run.</p>
+<p>Accept the license</p>
+<p><a href="https://i.imgur.com/KBRa54o.png">license</a></p>
+<p>The screen switched to “Getting a few things ready”. Wait for it</p>
+<p>Choose “Create installation media for another PC (USB flash drive, DVD or ISO file)”, then click Next</p>
+<p><img src="https://i.imgur.com/owBYw6J.png" alt="choose iso"></p>
+<p>Click “Use recommended options for this PC”, then click Next</p>
+<p><img src="https://i.imgur.com/c0DoUeO.png" alt="options"></p>
+<blockquote>
+<p>Note: You can choose other options (languages, editions, architectures) as well, ONLY IF you know what these options are. Otherwise, just choose the default options:</p>
+<p>Language: English (United States)</p>
+<p>Edition: Windows 10</p>
+<p>Architecture: 64 bit (x64)</p>
+</blockquote>
+<p>Select ISO file, then click next</p>
+<p><img src="https://i.imgur.com/Or8CwmY.png" alt="iso file"></p>
+<p>Select the folder to save the ISO file</p>
+<p><img src="https://i.imgur.com/BNBZHwB.png" alt="folder"></p>
+<p>Then the download progress will begin. Wait for it to complete.</p>
+<p><img src="https://i.imgur.com/vkRkxn0.png" alt="download"></p>
+<h1 id="Solution-2-If-you’re-using-Mac-Linux-or-can’t-download-using-solution-1"><a href="#Solution-2-If-you’re-using-Mac-Linux-or-can’t-download-using-solution-1" class="headerlink" title="Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1"></a>Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1</h1><p><a id="markdown-solution-2---if-you're-using-mac%2C-linux%2C-or-can't-download-using-solution-1" name="solution-2---if-you're-using-mac%2C-linux%2C-or-can't-download-using-solution-1"></a></p>
+<p>For Mac, Linux user, download the ISO here: <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">https://www.microsoft.com/en-us/software-download/windows10ISO</a></p>
+<p>For Windows Users, follow this instruction. It worked on both Google Chrome and Edge Chromium</p>
+<p>Step 1: Open Google Chrome or Edge Chromium, then head to the site: <a href="https://www.microsoft.com/en-us/software-download/windows10">https://www.microsoft.com/en-us/software-download/windows10</a></p>
+<p>Step 2: Enable Developer Tools by open the settings menu (3 little dots) &gt; More Tools &gt; Developer Tools</p>
+<p><img src="https://i.imgur.com/chIvGdc.png" alt="developer"></p>
+<p>Step 3: Enable the Network conditions menu by clicking the three little dots INSIDE the developer tools &gt; More tools &gt; Network Conditions</p>
+<p><img src="https://i.imgur.com/pR7KwsU.png" alt="network conditions"></p>
+<p>Step 4: Under User agent, uncheck “Select automatically”, then choose Safari - Mac in the list right below the checkbox</p>
+<p><img src="https://i.imgur.com/g7DjnEH.png" alt="uncheck"></p>
+<p>Step 5: Keep the developer tools open, click refresh to reload the download page. This time, when it loads, you’ll see a drop-down menu where you can select the edition of the Windows 10 ISO you want to download.</p>
+<p>Choose Windows 10 in the drop-down list, click confirm to validate your request, then choose the language and click confirm.</p>
+<p><img src="https://i.imgur.com/Qs2ZaVQ.png" alt="download"></p>
+<p>Step 6: After validation, two buttons appeared. Click the 64-bit button to download the 64-bit version of Windows 10</p>
+<p><img src="https://i.imgur.com/AdUkNdO.png" alt="actual download"></p>
+<blockquote>
+<p>The link is valid for your machine only. You cannot share it to other users.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Computer Tips</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>iso</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging</title>
     <url>/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</url>
     <content><![CDATA[<p>NLTK has a function called <code>regexpparser</code> to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.</p>
@@ -10441,76 +10533,6 @@ result = parser.parse(tags)
       </tags>
   </entry>
   <entry>
-    <title>How to download Windows 10 ISO</title>
-    <url>/2020/10/17/How-to-download-Windows-10-ISO/</url>
-    <content><![CDATA[<p>Step-by-step instructions on how to download Windows 10 ISO.</p>
-<span id="more"></span>
-
-<!-- TOC -->
-
-<ul>
-<li><a href="#1-solution-1---official---using-media-creation-tool">1. Solution 1 - Official - Using Media Creation Tool</a><ul>
-<li><a href="#11-step-1-download-media-creation-tool">1.1. Step 1: Download Media Creation Tool</a></li>
-<li><a href="#12-step-2-run-the-tool">1.2. Step 2: Run the tool</a></li>
-</ul>
-</li>
-<li><a href="#2-solution-2---if-youre-using-mac-linux-or-cant-download-using-solution-1">2. Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1</a></li>
-</ul>
-<!-- /TOC -->
-
-<h1 id="1-Solution-1-Official-Using-Media-Creation-Tool"><a href="#1-Solution-1-Official-Using-Media-Creation-Tool" class="headerlink" title="1. Solution 1 - Official - Using Media Creation Tool"></a>1. Solution 1 - Official - Using Media Creation Tool</h1><p><a id="markdown-solution-1---official---using-media-creation-tool" name="solution-1---official---using-media-creation-tool"></a></p>
-<h2 id="1-1-Step-1-Download-Media-Creation-Tool"><a href="#1-1-Step-1-Download-Media-Creation-Tool" class="headerlink" title="1.1. Step 1: Download Media Creation Tool"></a>1.1. Step 1: Download Media Creation Tool</h2><p><a id="markdown-step-1%3A-download-media-creation-tool" name="step-1%3A-download-media-creation-tool"></a></p>
-<p>Download the media creation tool at this <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">link</a></p>
-<p><img src="https://i.imgur.com/TegGnSZ.png" alt="download the media creation tool"></p>
-<h2 id="1-2-Step-2-Run-the-tool"><a href="#1-2-Step-2-Run-the-tool" class="headerlink" title="1.2. Step 2: Run the tool"></a>1.2. Step 2: Run the tool</h2><p><a id="markdown-step-2%3A-run-the-tool" name="step-2%3A-run-the-tool"></a></p>
-<p>When running, Windows will ask for administrator permission. Allow it to run.</p>
-<p>Accept the license</p>
-<p><a href="https://i.imgur.com/KBRa54o.png">license</a></p>
-<p>The screen switched to “Getting a few things ready”. Wait for it</p>
-<p>Choose “Create installation media for another PC (USB flash drive, DVD or ISO file)”, then click Next</p>
-<p><img src="https://i.imgur.com/owBYw6J.png" alt="choose iso"></p>
-<p>Click “Use recommended options for this PC”, then click Next</p>
-<p><img src="https://i.imgur.com/c0DoUeO.png" alt="options"></p>
-<blockquote>
-<p>Note: You can choose other options (languages, editions, architectures) as well, ONLY IF you know what these options are. Otherwise, just choose the default options:</p>
-<p>Language: English (United States)</p>
-<p>Edition: Windows 10</p>
-<p>Architecture: 64 bit (x64)</p>
-</blockquote>
-<p>Select ISO file, then click next</p>
-<p><img src="https://i.imgur.com/Or8CwmY.png" alt="iso file"></p>
-<p>Select the folder to save the ISO file</p>
-<p><img src="https://i.imgur.com/BNBZHwB.png" alt="folder"></p>
-<p>Then the download progress will begin. Wait for it to complete.</p>
-<p><img src="https://i.imgur.com/vkRkxn0.png" alt="download"></p>
-<h1 id="Solution-2-If-you’re-using-Mac-Linux-or-can’t-download-using-solution-1"><a href="#Solution-2-If-you’re-using-Mac-Linux-or-can’t-download-using-solution-1" class="headerlink" title="Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1"></a>Solution 2 - If you’re using Mac, Linux, or can’t download using solution 1</h1><p><a id="markdown-solution-2---if-you're-using-mac%2C-linux%2C-or-can't-download-using-solution-1" name="solution-2---if-you're-using-mac%2C-linux%2C-or-can't-download-using-solution-1"></a></p>
-<p>For Mac, Linux user, download the ISO here: <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">https://www.microsoft.com/en-us/software-download/windows10ISO</a></p>
-<p>For Windows Users, follow this instruction. It worked on both Google Chrome and Edge Chromium</p>
-<p>Step 1: Open Google Chrome or Edge Chromium, then head to the site: <a href="https://www.microsoft.com/en-us/software-download/windows10">https://www.microsoft.com/en-us/software-download/windows10</a></p>
-<p>Step 2: Enable Developer Tools by open the settings menu (3 little dots) &gt; More Tools &gt; Developer Tools</p>
-<p><img src="https://i.imgur.com/chIvGdc.png" alt="developer"></p>
-<p>Step 3: Enable the Network conditions menu by clicking the three little dots INSIDE the developer tools &gt; More tools &gt; Network Conditions</p>
-<p><img src="https://i.imgur.com/pR7KwsU.png" alt="network conditions"></p>
-<p>Step 4: Under User agent, uncheck “Select automatically”, then choose Safari - Mac in the list right below the checkbox</p>
-<p><img src="https://i.imgur.com/g7DjnEH.png" alt="uncheck"></p>
-<p>Step 5: Keep the developer tools open, click refresh to reload the download page. This time, when it loads, you’ll see a drop-down menu where you can select the edition of the Windows 10 ISO you want to download.</p>
-<p>Choose Windows 10 in the drop-down list, click confirm to validate your request, then choose the language and click confirm.</p>
-<p><img src="https://i.imgur.com/Qs2ZaVQ.png" alt="download"></p>
-<p>Step 6: After validation, two buttons appeared. Click the 64-bit button to download the 64-bit version of Windows 10</p>
-<p><img src="https://i.imgur.com/AdUkNdO.png" alt="actual download"></p>
-<blockquote>
-<p>The link is valid for your machine only. You cannot share it to other users.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Computer Tips</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>iso</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Coding Game: Shadow of the Knight - Episode 1</title>
     <url>/2020/11/11/Coding-Game-Shadow-of-the-Knight/</url>
     <content><![CDATA[<p>Difficulty: Medium</p>
@@ -10658,6 +10680,24 @@ max_y = h
       </tags>
   </entry>
   <entry>
+    <title>install quick assist in Windows 10</title>
+    <url>/2020/12/09/install-quick-assist-in-Windows-10/</url>
+    <content><![CDATA[<p>Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.</p>
+<span id="more"></span>
+
+<p><img src="https://i.imgur.com/8o1jX1U.png" alt="search for optional feature"></p>
+<p><img src="https://i.imgur.com/DLKIkya.png" alt="install new"></p>
+<p><img src="https://i.imgur.com/NvEuu5j.png" alt="install"></p>
+<p><img src="https://i.imgur.com/1TXVUQc.png" alt="wait"></p>
+]]></content>
+      <categories>
+        <category>Computer Tips</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>reset network in Windows 10</title>
     <url>/2020/11/25/reset-network-in-Windows-10/</url>
     <content><![CDATA[<p>How to reset network settings in Windows 10</p>
@@ -10672,24 +10712,6 @@ max_y = h
 <p>Step 2: On the Network reset screen, select Reset now &gt; Yes to confirm.</p>
 <p><img src="https://i.imgur.com/g090t8h.png" alt="reset now"></p>
 <p><img src="https://i.imgur.com/CI6pTAM.png" alt="click yes"></p>
-]]></content>
-      <categories>
-        <category>Computer Tips</category>
-      </categories>
-      <tags>
-        <tag>tips</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>install quick assist in Windows 10</title>
-    <url>/2020/12/09/install-quick-assist-in-Windows-10/</url>
-    <content><![CDATA[<p>Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.</p>
-<span id="more"></span>
-
-<p><img src="https://i.imgur.com/8o1jX1U.png" alt="search for optional feature"></p>
-<p><img src="https://i.imgur.com/DLKIkya.png" alt="install new"></p>
-<p><img src="https://i.imgur.com/NvEuu5j.png" alt="install"></p>
-<p><img src="https://i.imgur.com/1TXVUQc.png" alt="wait"></p>
 ]]></content>
       <categories>
         <category>Computer Tips</category>

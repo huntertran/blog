@@ -29,7 +29,7 @@
 <meta property="og:description" content="Khi làm việc với Visual Studio 2012, VS2013 trở lên, nhất là với việc thiết kế giao diện bằng ngôn ngữ XAML, bạn rất có thể sẽ bắt gặp một điều bất tiện: Sau một thời gian hoạt động ổn định, bạn không">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2014-10-10T02:39:52.000Z">
-<meta property="article:modified_time" content="2024-06-26T04:22:05.598Z">
+<meta property="article:modified_time" content="2024-09-22T18:13:14.172Z">
 <meta property="article:author" content="Hunter Tran">
 <meta property="article:tag" content="Visual Studio">
 <meta property="article:tag" content="windows phone">
@@ -247,7 +247,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-06-26 00:22:05" itemprop="dateModified" datetime="2024-06-26T00:22:05-04:00">2024-06-26</time>
+      <time title="Modified: 2024-09-22 14:13:14" itemprop="dateModified" datetime="2024-09-22T14:13:14-04:00">2024-09-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,7 +296,8 @@
 <h1 id="OLD-WAY-Restart-your-Visual-Studio"><a href="#OLD-WAY-Restart-your-Visual-Studio" class="headerlink" title="OLD WAY: Restart your Visual Studio"></a>OLD WAY: Restart your Visual Studio</h1><p>Phải rồi, câu nói nổi tiếng của Apple Supporter: “Have you tried turn it off and on again?” Tắt đi bật lại Visual Studio chắc chắn sẽ giải quyết vấn đề cho bạn. Nhưng tiếp tục đọc tiếp bài blog này nhé</p>
 <h1 id="NEW-WAY-Run-a-piece-of-code"><a href="#NEW-WAY-Run-a-piece-of-code" class="headerlink" title="NEW WAY: Run a piece of code"></a>NEW WAY: Run a piece of code</h1><p>Đoạn code sau sẽ cho phép bạn kill designer task bên trong Visual Studio. Chạy đoạn code này xong, vào Visual Studio, bấm đường link “Click here to reload Designer”, thế là xong.</p>
 <p>Mở notepad, copy paste đoạn code sau:</p>
-<p>taskkill &#x2F;f &#x2F;im XDesProc.exe</p>
+<pre><code class="highlight s">taskkill /f /im XDesProc.exe</code></pre>
+
 <p>Lưu lại với đuôi .bat</p>
 <p>Vậy là xong. Mỗi lần bị lỗi không thể edit trong khung property của Visual Studio, bạn chỉ cần double click file này là xong.</p>
 <h1 id="More-details-What-does-Microsoft-say"><a href="#More-details-What-does-Microsoft-say" class="headerlink" title="More details: What does Microsoft say?"></a>More details: What does Microsoft say?</h1><p>Các kỹ sư của Microsoft đã biết đến sự tồn tại của lỗi này. Và họ đã “wánh” nó là Won-fix in this version. Tức là trừ phi có phiên bản Visual Studio mới hơn, lỗi này sẽ không được sửa trong phiên bản 2012, 2013.</p>
