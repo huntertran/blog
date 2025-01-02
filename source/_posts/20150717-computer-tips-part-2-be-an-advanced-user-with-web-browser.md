@@ -104,7 +104,6 @@ Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau c
     
 
 ```
-
 "admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com"
 ```
 

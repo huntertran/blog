@@ -26,16 +26,17 @@ Qua đến Silverlight, sau này Windows RT trên Windows 8.1 và Windows Phone 
 Đây là một class nhỏ giúp bạn thêm một thuộc tính gọi là "IsVisible" vào UIElements và truyền cho nó giá trị true hoặc false
 
 ```csharp
-public class Extension: DependencyObject
+public class Extension : DependencyObject
 {
-    public static readonly DependencyProperty IsVisibleProperty = DependencyProperty.RegisterAttached("IsVisible",
-                                                                                                      typeof(bool),
-                                                                                                      typeof(Extension),
-                                                                                                      new PropertyMetadata(true, IsVisibleCallback));
+    public static readonly DependencyProperty IsVisibleProperty =
+        DependencyProperty.RegisterAttached("IsVisible",
+                                            typeof(bool),
+                                            typeof(Extension),
+                                            new PropertyMetadata(true, IsVisibleCallback));
 
     private static void IsVisibleCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
-        ((UIElement) d).Visibility = (bool) e.NewValue ? Visibility.Visible : Visibility.Collapsed;
+        ((UIElement)d).Visibility = (bool)e.NewValue ? Visibility.Visible : Visibility.Collapsed;
     }
 
     public static void SetIsVisible(UIElement element, bool value)
@@ -45,7 +46,7 @@ public class Extension: DependencyObject
 
     public static bool GetIsVisible(UIElement element)
     {
-        return (bool) element.GetValue(IsVisibleProperty);
+        return (bool)element.GetValue(IsVisibleProperty);
     }
 }
 ```

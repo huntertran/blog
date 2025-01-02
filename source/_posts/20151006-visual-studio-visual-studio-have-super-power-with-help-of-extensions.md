@@ -38,10 +38,6 @@ JetBrains ReSharper miễn phí cho sinh viên (họ còn miễn phí toàn bộ
     
 *   Một email gửi tới cho bạn, hướng dẫn cách thực hiện tiếp theo
 
-## 1.2. Nếu bạn không còn là sinh viên
-
-Chia buồn với bạn, bạn sẽ phải mua bộ công cụ này nếu muốn sử dụng (có cờ rắc, nhưng ko khuyến khích)
-
 ## 1.3. Cài đặt
 
 Sau khi đã có license, bạn tiến hành cài đặt nó. File cài đặt khoảng hơn 100 MB. Tắt Visual Studio trước khi cài.
