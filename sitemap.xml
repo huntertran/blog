@@ -65,6 +65,96 @@
   </url>
   
   <url>
+    <loc>https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/about/cancel</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/about/thankyou</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/about/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/azure/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.github.io/blog/categories/</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -84,6 +174,78 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/csharp/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2019/10/19/refactoring-clones-type-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -119,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/</loc>
+    <loc>https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -128,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/</loc>
+    <loc>https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -173,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/</loc>
+    <loc>https://huntertran.github.io/blog/2018/09/27/machine-learning-parameter-learning/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -182,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/</loc>
+    <loc>https://huntertran.github.io/blog/2018/10/01/machine-learning-matrices-and-vectors/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -191,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/</loc>
+    <loc>https://huntertran.github.io/blog/2018/10/03/machine-learning-2-1-multiple-features/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -200,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/</loc>
+    <loc>https://huntertran.github.io/blog/2018/10/09/machine-learning-2-2-normal-equation/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -209,52 +371,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/about/cancel</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/about/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/about/thankyou</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/azure/</loc>
+    <loc>https://huntertran.github.io/blog/2018/10/18/machine-learning-2-3-exercise/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -299,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
+    <loc>https://huntertran.github.io/blog/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -308,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2019/06/15/machine-learning-3-2-logistic-regression-model/</loc>
+    <loc>https://huntertran.github.io/blog/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -344,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2019/10/19/refactoring-clones-type-2/</loc>
+    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -353,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</loc>
+    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -362,52 +479,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2020/08/05/French-My-journey-of-studying-French-begin/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/</loc>
+    <loc>https://huntertran.github.io/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -434,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/</loc>
+    <loc>https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -443,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</loc>
+    <loc>https://huntertran.github.io/blog/2018/05/09/asp-net-project-structure-package-manager/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -497,43 +569,7 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2018/09/27/machine-learning-parameter-learning/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/10/03/machine-learning-2-1-multiple-features/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/10/01/machine-learning-matrices-and-vectors/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/10/09/machine-learning-2-2-normal-equation/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/10/18/machine-learning-2-3-exercise/</loc>
+    <loc>https://huntertran.github.io/blog/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -660,42 +696,6 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/2018/02/17/moving-to-open-source-softwares/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-auto-anti-forgery-token/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/03/asp-net-core-razor-page-lets-think-straight/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2018/03/04/asp-net-for-beginner-part-1-mvc/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -848,7 +848,169 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/2017/01/04/asp-net-tips-and-tricks-using-prompt-attribute-as-placeholder-for-mvc5/</loc>
+    <loc>https://huntertran.github.io/blog/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2015/10/06/visual-studio-visual-studio-have-super-power-with-help-of-extensions/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/06/27/not-so-basic-solve-your-problems/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -912,303 +1074,6 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/2014/12/30/2014-in-review/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/12/29/virtual-machine-in-azure-part-2-configure-to-login-with-microsoft-account-make-it-ftp-server/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/01/27/browser-test-new-spartans-engine-on-ie-11-technical-preview/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/01/31/msp-msp-asia-pacific-newsletter-jan-2015-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/03/31/computer-tips-remove-skype-ads-quick-and-easy/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/07/19/windows-how-to-add-isvisible-property-to-all-winrt-uielement/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/11/11/visual-studio-nuget-the-magician/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/12/14/beginning-with-imagine-cup-2014/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/04/13/windows-store-universal-apps-across-all-windows-devices/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/06/27/not-so-basic-solve-your-problems/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2011/12/31/dang-ky-imagine-cup-2012/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2012/01/14/ic03/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2012/01/31/ic04/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2012/03/08/ic05/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/09/02/windows-phone-7-chooser/</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1281,6 +1146,141 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/2013/10/07/windows-phone-textblock-tip-and-trick-part-1/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/10/13/windows-phone-textblock-and-textbox-tips-and-tricks-part-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/11/02/windows-phone-where-to-put-load-data-method/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/11/03/xach-laptop-len-va-san-lumia/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/11/11/visual-studio-nuget-the-magician/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/11/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/12/14/beginning-with-imagine-cup-2014/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2014/01/21/imagine-cup-2014-brain-game-january-quiz-1-now-open-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2011/12/31/dang-ky-imagine-cup-2012/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2012/01/14/ic03/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2012/01/31/ic04/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2012/03/08/ic05/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/08/29/microsoft-student-partner-msp-for-life-2/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/09/02/windows-phone-7-chooser/</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1718,20 +1718,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/tags/problem/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/solve/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.github.io/blog/tags/source-control/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1740,6 +1726,20 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/Team-foundation/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/problem/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/solve/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2691,20 +2691,6 @@
   </url>
   
   <url>
-    <loc>https://huntertran.github.io/blog/tags/clone/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/tags/refactor/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://huntertran.github.io/blog/tags/component/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2727,6 +2713,20 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/tags/vuejs/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/clone/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huntertran.github.io/blog/tags/refactor/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3085,6 +3085,13 @@
   </url>
   
   <url>
+    <loc>https://huntertran.github.io/blog/categories/reports/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://huntertran.github.io/blog/categories/VSCode/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -3093,13 +3100,6 @@
   
   <url>
     <loc>https://huntertran.github.io/blog/categories/JavaScript-and-TypeScript/</loc>
-    <lastmod>2025-01-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huntertran.github.io/blog/categories/reports/</loc>
     <lastmod>2025-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

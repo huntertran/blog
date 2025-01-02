@@ -2046,52 +2046,6 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       </tags>
   </entry>
   <entry>
-    <title>[Not so Basic] – Solve your problems</title>
-    <url>/2014/06/27/not-so-basic-solve-your-problems/</url>
-    <content><![CDATA[<p>Okie, bạn đã có trong tay hầu như mọi thứ cần thiết để tạo ra ứng dụng của mình:</p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML</a></p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML</a></p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it</a></p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
-<p><a href="http://cuoilennaocacban2.wordpress.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] – [Part 6] – Source Control</a></p>
-<p>Và trong lúc làm, bạn gặp phải một vấn đề gì đó. Làm thế nào để giải quyết nó?</p>
-<p>Đây sẽ là bài viết cuối cùng trước khi thi của mình</p>
-<h1 id="Van-de-cua-ban-la-gi"><a href="#Van-de-cua-ban-la-gi" class="headerlink" title="Vấn đề của bạn là gì?"></a>Vấn đề của bạn là gì?</h1><p>Bạn đang làm một ứng dụng xem tin tức. Và bạn muốn những tin mà người đọc xem rồi sẽ không xuất hiện lại nữa.</p>
-<p>Bạn muốn sắp xếp theo thứ tự một mảng dài 500 000 phần tử.</p>
-<p>Bạn muốn tìm kiếm một phần tử trong mảng 1 triệu phần tử.</p>
-<p>Vân vân và vân vân.</p>
-<p>Đây là loại vấn đề mà bạn cần phải giải quyết trước khi tiếp tục xây dựng ứng dụng của mình</p>
-<p><img src="https://farm6.staticflickr.com/5536/14517912312_3f2977f5e1_o.jpg"></p>
-<span id="more"></span>
-<h1 id="Giai-quyet-van-de-cua-ban"><a href="#Giai-quyet-van-de-cua-ban" class="headerlink" title="Giải quyết vấn đề của bạn"></a>Giải quyết vấn đề của bạn</h1><p>Bước đầu tiên, một phương pháp ultimate để giải quyết rất nhiều vấn đề, từ ngớ ngẩn đến phức tạp. Google nó.</p>
-<h2 id="Search-Google"><a href="#Search-Google" class="headerlink" title="Search Google"></a>Search Google</h2><h3 id="Search-bang-tieng-anh-cho-van-de-cua-ban"><a href="#Search-bang-tieng-anh-cho-van-de-cua-ban" class="headerlink" title="Search bằng tiếng anh cho vấn đề của bạn."></a>Search bằng tiếng anh cho vấn đề của bạn.</h3><p>Cái này chỉ là kinh nghiệm cá nhân. Bạn sẽ dễ dàng bắt gặp vấn đề của mình hơn, và khả năng cao là đã có người giải quyết được. Tuy nhiên, cái này đỏi hỏi bạn phải có khả năng tiếng anh tốt</p>
-<h3 id="Tham-khao-cac-doan-code-mau-tu-cac-nguon-uy-tin"><a href="#Tham-khao-cac-doan-code-mau-tu-cac-nguon-uy-tin" class="headerlink" title="Tham khảo các đoạn code mẫu từ các nguồn uy tín"></a>Tham khảo các đoạn code mẫu từ các nguồn uy tín</h3><p>Một trang diễn đàn không tên tuổi sẽ không thể nào đánh bại một câu trả lời được đánh dấu và bình chọn trong StackOverflow. Một đoạn code nằm lưng chừng không thể nào bằng một bài viết trong Nokia Developer.</p>
-<p>Và uy tín hơn hết tất cả các thứ trên cộng lại, đó chính là thư viện tham khảo MSDN. Tuy nhiên thư viện này chỉ là một bộ tài liệu khổng lồ cho Microsoft Technologies. Hoạt động không khác gì một quyển từ điển. Bạn có thể tra cứu định nghĩa hàm, chức năng, tham số, giá trị. Vân vân và vân vân.</p>
-<h3 id="Tu-khoa-tu-khoa-tu-khoa"><a href="#Tu-khoa-tu-khoa-tu-khoa" class="headerlink" title="Từ khóa, từ khóa, từ khóa"></a>Từ khóa, từ khóa, từ khóa</h3><p>Từ khóa đóng một vai trò quan trọng khi tìm kiếm vấn đề của bạn.</p>
-<p>Ví dụ như cùng một vấn đề, trên Windows có thể sẽ dùng thuật toán này, nhưng Windows Phone sẽ dùng thuật toán khác. Vì Windows Phone có nguồn tài nguyên giới hạn hơn rất nhiều lần so với Windows. Vì vậy hãy thêm từ khóa: Windows Phone vào</p>
-<p>Mà khoan. Các công nghệ .NET của Microsoft phát triển liên tục. Vì vậy bạn phải kèm theo luôn số phiên bản của nền tảng bạn đang lập trình.</p>
-<p>Ví dụ: Querry SQL database in Windows Phone 8.1</p>
-<h2 id="Ask"><a href="#Ask" class="headerlink" title="Ask"></a>Ask</h2><p>Khi bạn gặp một vấn đề về kỹ thuật, mà chỉ có người tạo ra kỹ thuật đó mới có thể giài quyết, cách tốt nhất là “hỏi”.</p>
-<p>Tuy nhiên, hỏi ở đây không có nghĩa là bạn bắt tay vào hỏi liền tại chỗ. Kiểu này rất hay gặp đối với sinh viên Việt Nam. Bạ đâu cũng hỏi. Hỏi cũng cần phải có văn hóa riêng.</p>
-<p>Giả sử như bạn đang gặp một vấn đề về kết nối mạng. Bạn mới thử chừng 1-2 cách nhưng chưa cách nào thành công. Bạn liền kiếm ngay một đàn anh, một chiên za, ít ra cũng là một người có hiểu biết về vấn đề này để hỏi. Nếu họ lịch sự, họ sẽ trả lời. Nếu không, họ sẽ im lặng, và bạn đánh giá họ là “không nhiệt tình”.</p>
-<h3 id="Why-You-asked"><a href="#Why-You-asked" class="headerlink" title="Why? You asked?"></a>Why? You asked?</h3><p>Vì mục tiêu chính của bạn không phải là học hỏi. Mà là lợi dụng sự hiểu biết của họ để giải quyết vấn đề cho mình. Có hẳn một công việc trả lương cho nó, đó là “Tư vấn”. Đặc biệt là tư vấn kỹ thuật giá rất mắc, mà bạn đang muốn miễn phí ư? No way.</p>
-<p>Ít ra bạn cũng phải cho họ biết tường tận vấn đề của mình, bạn đã thử những cách nào, kết quả ra sao, chuẩn đoán của bạn là gì (phải thử chừng 10 cách rồi hẵng hỏi), và đừng bắt họ phải trả lời ngay. Rất có thể trong những cách mà bạn thử nghiệm, có nhiều cách hay ho mới lạ sẽ mở đường cho một hướng đi mới, một công nghệ mới, hoặc sẽ là bình minh của cả một ngành khoa học mới. Và người được hỏi sẽ rất có hứng thú trả lời câu hỏi của bạn, thậm chí mời bạn tới trao đổi thêm.</p>
-<p>Bạn có biết một nhà khoa học khi cố gắng chứng minh một tiên đề Euclid, ông ấy đã thử một cách mà trở thành một ngành toán học mới, gọi là “Hình học phi Euclid”. Nhà khoa học đó tên là Lobachevsky.</p>
-<p>Và điều tối quan trọng là <strong>“Search trước khi hỏi”.</strong> Vấn đề đối với bạn là lạ hoắc, nhưng đối với những người khác thì vô cùng cơ bản, và đã có câu trả lời nằm chình ình ở một chỗ nào đó.</p>
-<h2 id="Brainstorm"><a href="#Brainstorm" class="headerlink" title="Brainstorm"></a>Brainstorm</h2><p>Đối với các vấn đề mà chỉ có mình bạn giải quyết được. Thì Brainstorm là giải pháp duy nhất.</p>
-<p>Tại sao chỉ có mình bạn giải quyết được nó? Vì bạn là người duy nhất suy nghĩ về nó. Hãy thử 40 phương pháp sáng tạo (google it). Hãy thử đảo ngược vấn đề, hãy thử suy nghĩ theo một hướng khác.</p>
-<h2 id="Share-your-idea"><a href="#Share-your-idea" class="headerlink" title="Share your idea"></a>Share your idea</h2><p>Chia sẻ vấn đề của bạn, ý tưởng của bạn, và bạn sẽ có những cải tiến đáng giá, ít ra là những khuyết điểm mà bạn không hề nhận thức rằng nó tồn tại. Đối với các loại vấn đề, bạn có thể sẽ gặp những cách giải quyết vô cùng sáng tạo. Tuy nhiên, hãy đề phòng nạn “đạo ý tưởng”, xảy ra ở khắp mọi nơi trên thế giới. Vì vậy, chỉ chia sẻ cho những người mà bạn biết rằng họ sẽ không ăn cắp ý tưởng của mình, trừ phi bạn có đăng ký bảo hộ ý tưởng đó :3</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-      </categories>
-      <tags>
-        <tag>problem</tag>
-        <tag>solve</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Basic for Absolute Beginner] – [Part 6] – Source Control</title>
     <url>/2014/05/02/basic-for-absolute-beginner-part-6-source-control/</url>
     <content><![CDATA[<p>Hãy thử tưởng tượng, bạn đã làm xong một thành phần nào đó trong ứng dụng của mình. Bạn tiếp tục làm thêm một thứ gì đó, và nhấn Run. Và đột nhiên, mọi thứ báo lỗi, bug xuất hiện khắp nơi, bạn xóa những đoạn code mới thêm vào, nhưng lỗi vẫn còn, và hình như bạn còn thiếu gì đó?</p>
@@ -2195,6 +2149,52 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       <tags>
         <tag>source control</tag>
         <tag>Team foundation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Not so Basic] – Solve your problems</title>
+    <url>/2014/06/27/not-so-basic-solve-your-problems/</url>
+    <content><![CDATA[<p>Okie, bạn đã có trong tay hầu như mọi thứ cần thiết để tạo ra ứng dụng của mình:</p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2013/11/22/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner/">[Basic for Absolute Beginner] – [Part 1] – Layout with XAML</a></p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/01/21/windows-phone-silverlight-layout-with-xaml-basic-for-absolute-beginner-part-2/">[Basic for Absolute Beginner] – [Part 2] – Layout with XAML</a></p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/02/26/basic-for-absolute-beginner-part-3-apps-structure-and-how-customized-it/">[Basic for Absolute Beginner] – [Part 3] – App’s Structure and how customized it</a></p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/03/31/basic-for-absolute-beginner-part-4-basic-steps-for-a-new-app/">[Basic for Absolute Beginner] – [Part 4] – Basic Steps for a new app</a></p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/04/04/basic-for-absolute-beginner-part-5-analytics-for-your-apps/">[Basic for Absolute Beginner] – [Part 5] – Analytics for your apps</a></p>
+<p><a href="http://cuoilennaocacban2.wordpress.com/2014/05/02/basic-for-absolute-beginner-part-6-source-control/">[Basic for Absolute Beginner] – [Part 6] – Source Control</a></p>
+<p>Và trong lúc làm, bạn gặp phải một vấn đề gì đó. Làm thế nào để giải quyết nó?</p>
+<p>Đây sẽ là bài viết cuối cùng trước khi thi của mình</p>
+<h1 id="Van-de-cua-ban-la-gi"><a href="#Van-de-cua-ban-la-gi" class="headerlink" title="Vấn đề của bạn là gì?"></a>Vấn đề của bạn là gì?</h1><p>Bạn đang làm một ứng dụng xem tin tức. Và bạn muốn những tin mà người đọc xem rồi sẽ không xuất hiện lại nữa.</p>
+<p>Bạn muốn sắp xếp theo thứ tự một mảng dài 500 000 phần tử.</p>
+<p>Bạn muốn tìm kiếm một phần tử trong mảng 1 triệu phần tử.</p>
+<p>Vân vân và vân vân.</p>
+<p>Đây là loại vấn đề mà bạn cần phải giải quyết trước khi tiếp tục xây dựng ứng dụng của mình</p>
+<p><img src="https://farm6.staticflickr.com/5536/14517912312_3f2977f5e1_o.jpg"></p>
+<span id="more"></span>
+<h1 id="Giai-quyet-van-de-cua-ban"><a href="#Giai-quyet-van-de-cua-ban" class="headerlink" title="Giải quyết vấn đề của bạn"></a>Giải quyết vấn đề của bạn</h1><p>Bước đầu tiên, một phương pháp ultimate để giải quyết rất nhiều vấn đề, từ ngớ ngẩn đến phức tạp. Google nó.</p>
+<h2 id="Search-Google"><a href="#Search-Google" class="headerlink" title="Search Google"></a>Search Google</h2><h3 id="Search-bang-tieng-anh-cho-van-de-cua-ban"><a href="#Search-bang-tieng-anh-cho-van-de-cua-ban" class="headerlink" title="Search bằng tiếng anh cho vấn đề của bạn."></a>Search bằng tiếng anh cho vấn đề của bạn.</h3><p>Cái này chỉ là kinh nghiệm cá nhân. Bạn sẽ dễ dàng bắt gặp vấn đề của mình hơn, và khả năng cao là đã có người giải quyết được. Tuy nhiên, cái này đỏi hỏi bạn phải có khả năng tiếng anh tốt</p>
+<h3 id="Tham-khao-cac-doan-code-mau-tu-cac-nguon-uy-tin"><a href="#Tham-khao-cac-doan-code-mau-tu-cac-nguon-uy-tin" class="headerlink" title="Tham khảo các đoạn code mẫu từ các nguồn uy tín"></a>Tham khảo các đoạn code mẫu từ các nguồn uy tín</h3><p>Một trang diễn đàn không tên tuổi sẽ không thể nào đánh bại một câu trả lời được đánh dấu và bình chọn trong StackOverflow. Một đoạn code nằm lưng chừng không thể nào bằng một bài viết trong Nokia Developer.</p>
+<p>Và uy tín hơn hết tất cả các thứ trên cộng lại, đó chính là thư viện tham khảo MSDN. Tuy nhiên thư viện này chỉ là một bộ tài liệu khổng lồ cho Microsoft Technologies. Hoạt động không khác gì một quyển từ điển. Bạn có thể tra cứu định nghĩa hàm, chức năng, tham số, giá trị. Vân vân và vân vân.</p>
+<h3 id="Tu-khoa-tu-khoa-tu-khoa"><a href="#Tu-khoa-tu-khoa-tu-khoa" class="headerlink" title="Từ khóa, từ khóa, từ khóa"></a>Từ khóa, từ khóa, từ khóa</h3><p>Từ khóa đóng một vai trò quan trọng khi tìm kiếm vấn đề của bạn.</p>
+<p>Ví dụ như cùng một vấn đề, trên Windows có thể sẽ dùng thuật toán này, nhưng Windows Phone sẽ dùng thuật toán khác. Vì Windows Phone có nguồn tài nguyên giới hạn hơn rất nhiều lần so với Windows. Vì vậy hãy thêm từ khóa: Windows Phone vào</p>
+<p>Mà khoan. Các công nghệ .NET của Microsoft phát triển liên tục. Vì vậy bạn phải kèm theo luôn số phiên bản của nền tảng bạn đang lập trình.</p>
+<p>Ví dụ: Querry SQL database in Windows Phone 8.1</p>
+<h2 id="Ask"><a href="#Ask" class="headerlink" title="Ask"></a>Ask</h2><p>Khi bạn gặp một vấn đề về kỹ thuật, mà chỉ có người tạo ra kỹ thuật đó mới có thể giài quyết, cách tốt nhất là “hỏi”.</p>
+<p>Tuy nhiên, hỏi ở đây không có nghĩa là bạn bắt tay vào hỏi liền tại chỗ. Kiểu này rất hay gặp đối với sinh viên Việt Nam. Bạ đâu cũng hỏi. Hỏi cũng cần phải có văn hóa riêng.</p>
+<p>Giả sử như bạn đang gặp một vấn đề về kết nối mạng. Bạn mới thử chừng 1-2 cách nhưng chưa cách nào thành công. Bạn liền kiếm ngay một đàn anh, một chiên za, ít ra cũng là một người có hiểu biết về vấn đề này để hỏi. Nếu họ lịch sự, họ sẽ trả lời. Nếu không, họ sẽ im lặng, và bạn đánh giá họ là “không nhiệt tình”.</p>
+<h3 id="Why-You-asked"><a href="#Why-You-asked" class="headerlink" title="Why? You asked?"></a>Why? You asked?</h3><p>Vì mục tiêu chính của bạn không phải là học hỏi. Mà là lợi dụng sự hiểu biết của họ để giải quyết vấn đề cho mình. Có hẳn một công việc trả lương cho nó, đó là “Tư vấn”. Đặc biệt là tư vấn kỹ thuật giá rất mắc, mà bạn đang muốn miễn phí ư? No way.</p>
+<p>Ít ra bạn cũng phải cho họ biết tường tận vấn đề của mình, bạn đã thử những cách nào, kết quả ra sao, chuẩn đoán của bạn là gì (phải thử chừng 10 cách rồi hẵng hỏi), và đừng bắt họ phải trả lời ngay. Rất có thể trong những cách mà bạn thử nghiệm, có nhiều cách hay ho mới lạ sẽ mở đường cho một hướng đi mới, một công nghệ mới, hoặc sẽ là bình minh của cả một ngành khoa học mới. Và người được hỏi sẽ rất có hứng thú trả lời câu hỏi của bạn, thậm chí mời bạn tới trao đổi thêm.</p>
+<p>Bạn có biết một nhà khoa học khi cố gắng chứng minh một tiên đề Euclid, ông ấy đã thử một cách mà trở thành một ngành toán học mới, gọi là “Hình học phi Euclid”. Nhà khoa học đó tên là Lobachevsky.</p>
+<p>Và điều tối quan trọng là <strong>“Search trước khi hỏi”.</strong> Vấn đề đối với bạn là lạ hoắc, nhưng đối với những người khác thì vô cùng cơ bản, và đã có câu trả lời nằm chình ình ở một chỗ nào đó.</p>
+<h2 id="Brainstorm"><a href="#Brainstorm" class="headerlink" title="Brainstorm"></a>Brainstorm</h2><p>Đối với các vấn đề mà chỉ có mình bạn giải quyết được. Thì Brainstorm là giải pháp duy nhất.</p>
+<p>Tại sao chỉ có mình bạn giải quyết được nó? Vì bạn là người duy nhất suy nghĩ về nó. Hãy thử 40 phương pháp sáng tạo (google it). Hãy thử đảo ngược vấn đề, hãy thử suy nghĩ theo một hướng khác.</p>
+<h2 id="Share-your-idea"><a href="#Share-your-idea" class="headerlink" title="Share your idea"></a>Share your idea</h2><p>Chia sẻ vấn đề của bạn, ý tưởng của bạn, và bạn sẽ có những cải tiến đáng giá, ít ra là những khuyết điểm mà bạn không hề nhận thức rằng nó tồn tại. Đối với các loại vấn đề, bạn có thể sẽ gặp những cách giải quyết vô cùng sáng tạo. Tuy nhiên, hãy đề phòng nạn “đạo ý tưởng”, xảy ra ở khắp mọi nơi trên thế giới. Vì vậy, chỉ chia sẻ cho những người mà bạn biết rằng họ sẽ không ăn cắp ý tưởng của mình, trừ phi bạn có đăng ký bảo hộ ý tưởng đó :3</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+      </categories>
+      <tags>
+        <tag>problem</tag>
+        <tag>solve</tag>
       </tags>
   </entry>
   <entry>
@@ -2660,7 +2660,7 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#x53;&#104;&#x75;&#110;&#46;&#x4f;&#x6b;&#x75;&#x62;&#x6f;&#x40;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#x74;&#112;&#97;&#x72;&#x74;&#110;&#101;&#x72;&#x2e;&#x63;&#x6f;&#109;">&#x53;&#104;&#x75;&#110;&#46;&#x4f;&#x6b;&#x75;&#x62;&#x6f;&#x40;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#x74;&#112;&#97;&#x72;&#x74;&#110;&#101;&#x72;&#x2e;&#x63;&#x6f;&#109;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#83;&#x68;&#117;&#x6e;&#x2e;&#79;&#107;&#x75;&#98;&#x6f;&#64;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#x74;&#112;&#97;&#x72;&#x74;&#x6e;&#101;&#x72;&#46;&#x63;&#111;&#x6d;">&#83;&#x68;&#117;&#x6e;&#x2e;&#79;&#107;&#x75;&#98;&#x6f;&#64;&#115;&#x74;&#x75;&#x64;&#x65;&#x6e;&#x74;&#112;&#97;&#x72;&#x74;&#x6e;&#101;&#x72;&#46;&#x63;&#111;&#x6d;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2684,6 +2684,59 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       <tags>
         <tag>tips</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
+    <url>/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
+    <content><![CDATA[<p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
+<p>Làm thế nào để bắt chước cách thiết kế này?</p>
+<span id="more"></span>
+<h1 id="SplitView-Control"><a href="#SplitView-Control" class="headerlink" title="SplitView Control"></a>SplitView Control</h1><p>Microsoft đã xây dựng riêng một control cho việc đó và gọi nó là SplitView Control</p>
+<p>Cơ bản, nó sẽ có 2 phần: Pane và Content</p>
+<p>Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.</p>
+<p><img src="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800"></p>
+<p>Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản</p>
+<p>Tạo một Project mới sử dụng Universal Application Platform (UAP) từ Visual Studio</p>
+<p>Trong MainPage, paste dòng sau vào</p>
+<p><img src="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png"></p>
+<p>Trong cấu trúc trên, bạn có thể thấy Pane là một thuộc tính của SplitView. Hãy coi Pane như một control mẹ và thêm các control khác vào bên trong nó</p>
+<p>CompactPaneLength là chiều rộng của SplitView khi người dùng thu gọn nó lại</p>
+<p>DisplayMode là cách thức hiển thị của SplitView. Có 4 kiểu:</p>
+<ul>
+<li>CompactInline: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ đẩy phần Content sang một bên</li>
+<li>CompactOvelay: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ ĐÈ LÊN phàn Content</li>
+<li>Inline: Giống CompactInline, như khi thu gọn sẽ biết mất khỏi màn hình</li>
+<li>Overlay: Giống Overlay, nhưng khi thu gọn sẽ biết mất khỏi màn hình</li>
+</ul>
+<h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
+<p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
+<p>Code của cái trên rất đơn giản:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">SplitView</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">SplitView.Pane</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;\*&quot;</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">ListView</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">SplitView.Pane</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">SplitView</span>&gt;</span></code></pre>
+
+<h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
+<p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">&quot;HamburgerButton&quot;</span> <span class="attr">FontFamily</span>=<span class="string">&quot;Segoe MDL2 Assets&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></code></pre>
+
+<p>Mục Content sẽ là đoạn code trong bảng mã sau: <a href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
+<p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
+<p>Thế là xong. Chúc bạn thành công</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows 10</category>
+      </categories>
   </entry>
   <entry>
     <title>[Azure] - Update - Create Proxy Server on Azure to survive the internet blackout or the broken cable</title>
@@ -2750,59 +2803,6 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
         <tag>proxy</tag>
         <tag>đứt cáp</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
-    <url>/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
-    <content><![CDATA[<p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
-<p>Làm thế nào để bắt chước cách thiết kế này?</p>
-<span id="more"></span>
-<h1 id="SplitView-Control"><a href="#SplitView-Control" class="headerlink" title="SplitView Control"></a>SplitView Control</h1><p>Microsoft đã xây dựng riêng một control cho việc đó và gọi nó là SplitView Control</p>
-<p>Cơ bản, nó sẽ có 2 phần: Pane và Content</p>
-<p>Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.</p>
-<p><img src="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800"></p>
-<p>Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản</p>
-<p>Tạo một Project mới sử dụng Universal Application Platform (UAP) từ Visual Studio</p>
-<p>Trong MainPage, paste dòng sau vào</p>
-<p><img src="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png"></p>
-<p>Trong cấu trúc trên, bạn có thể thấy Pane là một thuộc tính của SplitView. Hãy coi Pane như một control mẹ và thêm các control khác vào bên trong nó</p>
-<p>CompactPaneLength là chiều rộng của SplitView khi người dùng thu gọn nó lại</p>
-<p>DisplayMode là cách thức hiển thị của SplitView. Có 4 kiểu:</p>
-<ul>
-<li>CompactInline: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ đẩy phần Content sang một bên</li>
-<li>CompactOvelay: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ ĐÈ LÊN phàn Content</li>
-<li>Inline: Giống CompactInline, như khi thu gọn sẽ biết mất khỏi màn hình</li>
-<li>Overlay: Giống Overlay, nhưng khi thu gọn sẽ biết mất khỏi màn hình</li>
-</ul>
-<h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
-<p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
-<p>Code của cái trên rất đơn giản:</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">SplitView</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">SplitView.Pane</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">Grid</span>&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
-                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
-                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;\*&quot;</span> /&gt;</span>
-            <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
-            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> /&gt;</span>
-            <span class="tag">&lt;<span class="name">ListView</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">SplitView.Pane</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid</span> /&gt;</span>
-<span class="tag">&lt;/<span class="name">SplitView</span>&gt;</span></code></pre>
-
-<h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
-<p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">&quot;HamburgerButton&quot;</span> <span class="attr">FontFamily</span>=<span class="string">&quot;Segoe MDL2 Assets&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></code></pre>
-
-<p>Mục Content sẽ là đoạn code trong bảng mã sau: <a href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
-<p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
-<p>Thế là xong. Chúc bạn thành công</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows 10</category>
-      </categories>
   </entry>
   <entry>
     <title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser</title>
@@ -3177,6 +3177,47 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       </categories>
   </entry>
   <entry>
+    <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [en-US]</title>
+    <url>/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</url>
+    <content><![CDATA[<p>Chào các bạn, kể từ bài blog này, mình sẽ viết bằng tiếng Anh nhé. Bạn có thể dùng Google Translate hoặc Bing Translate để dịch sang tiếng Việt nhé :3</p>
+<p>Các bài viết trước mình cũng sẽ viết lại bằng tiếng Anh.</p>
+<p>Hello guys, from this post forward, I will write in English. You can use “Google Translate” or “Bing Translate” to read it in Vietnamese</p>
+<p>In the latest release of Visual Studio (aka Visual Studio 2015), Microsoft has introduced some cutting-edge features called “Live Visual Tree” and “Live Property Explorer.” You can easily inspect and edit your XAML element on the fly using these features.</p>
+<span id="more"></span>
+<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>For using Live Visual Tree, open any XAML project. It could be Windows 8, 8.1 App, Windows Universal App, or Universal Application Platform (UAP, aka App, developed for Windows 10)</p>
+<p>Press Build (F5) to compile and deploy the app. Then come back to Visual Studio. You will see a new small toolbar called “Live Visual Tree.” Click on it to expand</p>
+<p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
+<p>Now click on the small docking icon to make it stick there, make it easier to use</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
+<p>Now, click on the small icon that has the small triangle pointed to a rectangle in this window. This is the Inspector, just like Google Chrome element inspector. Comeback to running app, you will see wherever the pointer is, there will be a dotted box around it, cover the element under the pointer</p>
+<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
+<p>Click once, and the Live Visual Tree will jump to the same element.</p>
+<p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
+<p>You can click on other elements in the Live Visual Tree, and the red dotted box will jump to that element on your running app. In this way, you can see exactly how the element is drawn on your app.</p>
+<p>You can also search for an element by its name or by type.</p>
+<p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
+<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>With the element selected in Live Visual Tree, look on the right side of Visual Studio. You will see “Live Property Explorer.” Click on it to expand and click the “dock” button to make it stick there</p>
+<p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
+<p>Now it has a lot fewer properties than usual, right? Expand the “Default” group, and you will see the rest.</p>
+<p>The good thing about this Live Property Explorer is, you can actually change the value and observe the change in your running app</p>
+<p>I will try to change the Height to 100 and see what happened on the app</p>
+<p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
+<p>And now the app</p>
+<p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
+<p>Incredible, isn’t it? You can change almost everything, except some grey-out property in the Live Property Explorer.</p>
+<p>That’s it. Now you know how to use the Live Visual Tree to inspect the XAML element on your apps, and Live Property Explorer to change the value of that element, and watch the change happen on the fly.</p>
+<p>Stay tune for other cool features of the new Visual Studio 2015</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows 10</category>
+      </categories>
+      <tags>
+        <tag>Visual Studio</tag>
+        <tag>xaml</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Azure] [Vietnamese] Đăng ký Azure - Hướng dẫn từng bước</title>
     <url>/2015/08/13/azure-vietnamese-dang-ky-azure-huong-dan-tung-buoc/</url>
     <content><![CDATA[<p>Azure đã tới Việt Nam, và bạn đang phân vân không biết phải đăng ký như thế nào để sử dụng nó, hoàn toàn miễn phí?</p>
@@ -3266,47 +3307,6 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       <tags>
         <tag>azure</tag>
         <tag>tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Visual Studio] XAML Element Inspector with Visual Studio 2015 [en-US]</title>
-    <url>/2015/08/02/windows-xaml-element-inspector-with-visual-studio-2015/</url>
-    <content><![CDATA[<p>Chào các bạn, kể từ bài blog này, mình sẽ viết bằng tiếng Anh nhé. Bạn có thể dùng Google Translate hoặc Bing Translate để dịch sang tiếng Việt nhé :3</p>
-<p>Các bài viết trước mình cũng sẽ viết lại bằng tiếng Anh.</p>
-<p>Hello guys, from this post forward, I will write in English. You can use “Google Translate” or “Bing Translate” to read it in Vietnamese</p>
-<p>In the latest release of Visual Studio (aka Visual Studio 2015), Microsoft has introduced some cutting-edge features called “Live Visual Tree” and “Live Property Explorer.” You can easily inspect and edit your XAML element on the fly using these features.</p>
-<span id="more"></span>
-<h1 id="Live-Visual-Tree"><a href="#Live-Visual-Tree" class="headerlink" title="Live Visual Tree"></a>Live Visual Tree</h1><p>For using Live Visual Tree, open any XAML project. It could be Windows 8, 8.1 App, Windows Universal App, or Universal Application Platform (UAP, aka App, developed for Windows 10)</p>
-<p>Press Build (F5) to compile and deploy the app. Then come back to Visual Studio. You will see a new small toolbar called “Live Visual Tree.” Click on it to expand</p>
-<p><img src="https://farm1.staticflickr.com/543/20216853242_f1655e2c2e_o.png"></p>
-<p>Now click on the small docking icon to make it stick there, make it easier to use</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml1.png"></p>
-<p>Now, click on the small icon that has the small triangle pointed to a rectangle in this window. This is the Inspector, just like Google Chrome element inspector. Comeback to running app, you will see wherever the pointer is, there will be a dotted box around it, cover the element under the pointer</p>
-<p><img src="http://cuoilennaocacban2.files.wordpress.com/2015/08/080215_1141_windowsxaml2.png"></p>
-<p>Click once, and the Live Visual Tree will jump to the same element.</p>
-<p><img src="https://farm1.staticflickr.com/528/19602618384_1423c50319_o.png"></p>
-<p>You can click on other elements in the Live Visual Tree, and the red dotted box will jump to that element on your running app. In this way, you can see exactly how the element is drawn on your app.</p>
-<p>You can also search for an element by its name or by type.</p>
-<p><img src="https://farm1.staticflickr.com/438/20038725589_1b8097c624_o.png"></p>
-<h1 id="Live-Property-Explorer"><a href="#Live-Property-Explorer" class="headerlink" title="Live Property Explorer"></a>Live Property Explorer</h1><p>With the element selected in Live Visual Tree, look on the right side of Visual Studio. You will see “Live Property Explorer.” Click on it to expand and click the “dock” button to make it stick there</p>
-<p><img src="https://farm1.staticflickr.com/425/20037363128_c89bbbe6d5_o.png"></p>
-<p>Now it has a lot fewer properties than usual, right? Expand the “Default” group, and you will see the rest.</p>
-<p>The good thing about this Live Property Explorer is, you can actually change the value and observe the change in your running app</p>
-<p>I will try to change the Height to 100 and see what happened on the app</p>
-<p><img src="https://farm1.staticflickr.com/504/20199163156_3fc683e0c9_o.png"></p>
-<p>And now the app</p>
-<p><img src="https://farm1.staticflickr.com/555/20231217491_5d41f98c4f_o.png"></p>
-<p>Incredible, isn’t it? You can change almost everything, except some grey-out property in the Live Property Explorer.</p>
-<p>That’s it. Now you know how to use the Live Visual Tree to inspect the XAML element on your apps, and Live Property Explorer to change the value of that element, and watch the change happen on the fly.</p>
-<p>Stay tune for other cool features of the new Visual Studio 2015</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows 10</category>
-      </categories>
-      <tags>
-        <tag>Visual Studio</tag>
-        <tag>xaml</tag>
       </tags>
   </entry>
   <entry>
@@ -3742,7 +3742,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#x74;&#x75;&#100;&#121;&#46;&#110;&#103;&#111;&#99;&#x74;&#105;&#101;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#115;&#x74;&#x75;&#100;&#121;&#46;&#110;&#103;&#111;&#99;&#x74;&#105;&#101;&#x6e;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#x67;&#x6f;&#x63;&#x74;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x73;&#116;&#117;&#100;&#x79;&#46;&#x6e;&#x67;&#x6f;&#x63;&#x74;&#x69;&#x65;&#110;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#x74;&#x75;&#100;&#121;&#x2e;&#x6e;&#x67;&#111;&#99;&#x74;&#105;&#101;&#110;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x74;&#x75;&#100;&#121;&#x2e;&#x6e;&#x67;&#111;&#99;&#x74;&#105;&#101;&#110;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#117;&#x64;&#x79;&#x2e;&#110;&#x67;&#111;&#99;&#116;&#105;&#101;&#x6e;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#115;&#x74;&#117;&#x64;&#x79;&#x2e;&#110;&#x67;&#111;&#99;&#116;&#105;&#101;&#x6e;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3751,7 +3751,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#x68;&#x6f;&#97;&#116;&#x72;&#x75;&#111;&#110;&#103;&#98;&#x61;&#99;&#104;&#64;&#x6c;&#105;&#x76;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#107;&#x68;&#x6f;&#97;&#116;&#x72;&#x75;&#111;&#110;&#103;&#98;&#x61;&#99;&#104;&#64;&#x6c;&#105;&#x76;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#x6b;&#104;&#x6f;&#97;&#116;&#x72;&#x75;&#x6f;&#110;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x6b;&#104;&#x6f;&#97;&#116;&#x72;&#x75;&#x6f;&#110;&#103;&#x62;&#97;&#99;&#x68;&#x40;&#108;&#105;&#118;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#x6b;&#104;&#111;&#97;&#x74;&#114;&#117;&#111;&#110;&#x67;&#98;&#97;&#x63;&#x68;&#x40;&#x6c;&#x69;&#118;&#101;&#46;&#x63;&#x6f;&#109;">&#x6b;&#104;&#111;&#97;&#x74;&#114;&#117;&#111;&#110;&#x67;&#98;&#97;&#x63;&#x68;&#x40;&#x6c;&#x69;&#118;&#101;&#46;&#x63;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#x68;&#111;&#x61;&#x74;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#x2e;&#x63;&#111;&#x6d;">&#107;&#x68;&#111;&#x61;&#x74;&#x72;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#x68;&#x40;&#108;&#105;&#x76;&#101;&#x2e;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4040,7 +4040,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#97;&#120;&#x63;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#97;&#120;&#x63;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#120;&#99;&#115;&#57;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#97;&#120;&#99;&#115;&#57;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#x78;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x61;&#x78;&#x63;&#115;&#57;&#48;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#x78;&#x63;&#115;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#97;&#x78;&#x63;&#115;&#57;&#48;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4586,7 +4586,7 @@ services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#x75;&#111;&#110;&#x67;&#x61;&#x6e;&#104;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x6c;&#x75;&#111;&#110;&#x67;&#x61;&#x6e;&#104;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#117;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#108;&#117;&#111;&#x6e;&#x67;&#97;&#110;&#104;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#x6c;&#x75;&#111;&#110;&#x67;&#97;&#x6e;&#x68;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x6c;&#x75;&#111;&#110;&#x67;&#97;&#x6e;&#x68;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#x6c;&#x75;&#111;&#x6e;&#103;&#97;&#110;&#104;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x6c;&#x75;&#111;&#x6e;&#103;&#97;&#110;&#104;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -7005,95 +7005,6 @@ HTML: HTML5</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[ASP.NET] - Project Structure &amp; Package Manager</title>
-    <url>/2018/05/09/asp-net-project-structure-package-manager/</url>
-    <content><![CDATA[<p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
-<p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
-<span id="more"></span>
-<ul>
-<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
-<ul>
-<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
-<ul>
-<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
-<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
-<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
-<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
-</ul>
-</li>
-<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
-</li>
-</ul>
-</li>
-<li><p><a href="#2-package-manager">2. Package Manager</a></p>
-<ul>
-<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
-</li>
-<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
-<ul>
-<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
-<li><a href="#222-sources">2.2.2. Sources</a></li>
-<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
-<p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
-<p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
-<h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
-<h3 id="1-1-1-Dung-lai"><a href="#1-1-1-Dung-lai" class="headerlink" title="1.1.1. Dùng lại"></a>1.1.1. Dùng lại</h3><p>Khi một số code có chức năng riêng biệt nào đó được bạn tách ra thành 1 project riêng, thì nó sẽ rất dễ dàng để dùng lại nó vào những dự án khác.</p>
-<p>Giả sử bạn có 1 số helpers và class giúp việc kết nối tới database rất nhanh chóng và gọn lẹ. Khi nó ở 1 project riêng, bạn có thể dễ dàng up nó lên git, rồi các project khác cứ thế mà clone về xài thôi. Khi bạn update project trên git đó, toàn bộ các clone của nó sẽ đều được update theo.</p>
-<h3 id="1-1-2-Phan-phoi"><a href="#1-1-2-Phan-phoi" class="headerlink" title="1.1.2. Phân phối"></a>1.1.2. Phân phối</h3><p>Cũng ví dụ trên, project của bạn đã nằm ở mức library, tức là một thư viện rồi. Bạn có thể dụ bạn bè mình xài nó, phát triển thêm, đóng góp cho nó, pack nó lại thành nuget package, blah blah blah và blah blah blah</p>
-<h3 id="1-1-3-Trien-khai"><a href="#1-1-3-Trien-khai" class="headerlink" title="1.1.3. Triển khai"></a>1.1.3. Triển khai</h3><p>1 công ty nọ thấy lib version 1.0 của bạn quá hay, họ quyết định tải zìa và xài trong dự án cực khủng của họ. 10 năm sau, bạn cập nhật cái lib của mình lên version 2.0, dùng lại toàn bộ các method và hàm sẵn có, chẳng qua là thay đổi thuật toán cho nó chạy nhanh lên thôi. Công ty chỉ cần bỏ ra 1 chi phí tối thiểu để clone cái lib của bạn về, build và replace cái lib đang chạy trên production của họ. Thế là xong. Không cần phải build lại cả project, không cần phải deploy lại.</p>
-<h3 id="1-1-4-You-name-it"><a href="#1-1-4-You-name-it" class="headerlink" title="1.1.4. You name it"></a>1.1.4. You name it</h3><p>Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát hiện ra càng nhiều lợi ích khác của việc chia tách này.</p>
-<h2 id="1-2-Phan-chia-projects"><a href="#1-2-Phan-chia-projects" class="headerlink" title="1.2. Phân chia projects"></a>1.2. Phân chia projects</h2><p>Ở mô hình MVC, cả Model-View-ViewModel đều gắn liền với nhau, nên chúng ta không tách</p>
-<blockquote>
-<p>Tuy nhiên, có một số công ty tách cái Model ra một project riêng. Điều này giúp bạn dễ quản lý code hơn. Đôi khi cũng tách luôn cái Controller thành 1 project</p>
-</blockquote>
-<p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
-<ul>
-<li>Unit Test -&gt; <strong>Tách</strong></li>
-<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
-<li>Encryption &#x2F; Decryption -&gt; <strong>Tách</strong></li>
-<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
-</ul>
-<h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
-<h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
-<p>Nó sẽ triệt tiêu luôn cái vấn đề tương thích platform với lib (lib build cho x64 chỉ chạy được trên x64 và tương tự cho x86)</p>
-<h2 id="2-2-For-front-end-Yarn"><a href="#2-2-For-front-end-Yarn" class="headerlink" title="2.2. For front-end - Yarn"></a>2.2. For front-end - Yarn</h2><blockquote>
-<p>Bower đã bị ngừng hỗ trợ</p>
-</blockquote>
-<p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
-<p><strong>đúng rồi, NHƯNG</strong></p>
-<ul>
-<li>nguồn không thống nhất</li>
-<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
-<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
-</ul>
-<p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
-<p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
-<h3 id="2-2-1-Tinh-phu-thuoc"><a href="#2-2-1-Tinh-phu-thuoc" class="headerlink" title="2.2.1. Tính phụ thuộc"></a>2.2.1. Tính phụ thuộc</h3><p><code>JQuery</code> là một lib rất phổ biến, và ty tỷ lib khác được xây dựng mà cần tới nó. Nhưng JQuery có cũng kha khá phiên bản khác nhau, và các lib khác nhau lại dùng các version khác nhau của JQuery.</p>
-<p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
-<h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
-<h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
-<p><img src="/images/flickr/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
-<p>Thế nhé bạn ;)</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>ASP.NET</category>
-      </categories>
-      <tags>
-        <tag>project</tag>
-        <tag>structure</tag>
-        <tag>architech</tag>
-        <tag>manager</tag>
-        <tag>package</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation</title>
     <url>/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</url>
     <content><![CDATA[<p>Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: CRUD</p>
@@ -7343,6 +7254,95 @@ _context.SaveChanges();</code></pre>
         <category>Others</category>
         <category>ASP.NET</category>
       </categories>
+  </entry>
+  <entry>
+    <title>[ASP.NET] - Project Structure &amp; Package Manager</title>
+    <url>/2018/05/09/asp-net-project-structure-package-manager/</url>
+    <content><![CDATA[<p>Bạn tổ chức thư mục, tập tin như thế nào? Có nên tách ra thành nhiều project con? Có nên dùng package manager?</p>
+<p>Trong phần này, mình sẽ trình bày kinh nghiệm cá nhân về các tổ chức và quản lý projects, và dùng package manger nhóe</p>
+<span id="more"></span>
+<ul>
+<li><p><a href="#1-project--solution">1. Project &amp; Solution</a></p>
+<ul>
+<li><p><a href="#11-l%C3%BD-do">1.1. Lý do</a></p>
+<ul>
+<li><a href="#111-d%C3%B9ng-l%E1%BA%A1i">1.1.1. Dùng lại</a></li>
+<li><a href="#112-ph%C3%A2n-ph%E1%BB%91i">1.1.2. Phân phối</a></li>
+<li><a href="#113-tri%E1%BB%83n-khai">1.1.3. Triển khai</a></li>
+<li><a href="#114-you-name-it">1.1.4. You name it</a></li>
+</ul>
+</li>
+<li><p><a href="#12-ph%C3%A2n-chia-projects">1.2. Phân chia projects</a></p>
+</li>
+</ul>
+</li>
+<li><p><a href="#2-package-manager">2. Package Manager</a></p>
+<ul>
+<li><p><a href="#21-for-backend---nuget">2.1. For backend - NUGET</a></p>
+</li>
+<li><p><a href="#22-for-front-end---yarn">2.2. For front-end - Yarn</a></p>
+<ul>
+<li><a href="#221-t%C3%ADnh-ph%E1%BB%A5-thu%E1%BB%99c">2.2.1. Tính phụ thuộc</a></li>
+<li><a href="#222-sources">2.2.2. Sources</a></li>
+<li><a href="#223-t%C3%A1i-t%E1%BA%A1o">2.2.3. Tái tạo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Project-Solution"><a href="#1-Project-Solution" class="headerlink" title="1. Project &amp; Solution"></a>1. Project &amp; Solution</h1><p>Cách dễ nhất, cũng như đơn giản nhất, là chỉ bao gồm 1 project mà thôi. Ở Part 1, bạn cũng đã có “kinh nghiệm” gõ lệnh tạo project.</p>
+<p>Visual Studio thì lại không như vậy, nó ép bạn phải xài một khái niệm gọi là “Solution”. Theo đó, một hoặc nhiều project sẽ nằm trong 1 solution. Khi bạn mở project được tạo bởi dòng lệnh <code>dotnet new *</code> trong Visual Studio, nó cũng sẽ tạo ra một cái Solution ất ơ nào đấy rồi nhét cái project của bạn vào.</p>
+<p>Sẽ là một thói quen tốt khi bạn tạo nhiều project ứng với các mục đích khác nhau, phục vụ cho dự án phần mềm của bạn nói chung và ASP.NET nói riêng</p>
+<h2 id="1-1-Ly-do"><a href="#1-1-Ly-do" class="headerlink" title="1.1. Lý do"></a>1.1. Lý do</h2><p>Bạn thắc mắc là tại sao mình lại phải chia nhiều project như vậy? Để chung luôn thì có đỡ công include thư viện biết bao nhiêu không?</p>
+<h3 id="1-1-1-Dung-lai"><a href="#1-1-1-Dung-lai" class="headerlink" title="1.1.1. Dùng lại"></a>1.1.1. Dùng lại</h3><p>Khi một số code có chức năng riêng biệt nào đó được bạn tách ra thành 1 project riêng, thì nó sẽ rất dễ dàng để dùng lại nó vào những dự án khác.</p>
+<p>Giả sử bạn có 1 số helpers và class giúp việc kết nối tới database rất nhanh chóng và gọn lẹ. Khi nó ở 1 project riêng, bạn có thể dễ dàng up nó lên git, rồi các project khác cứ thế mà clone về xài thôi. Khi bạn update project trên git đó, toàn bộ các clone của nó sẽ đều được update theo.</p>
+<h3 id="1-1-2-Phan-phoi"><a href="#1-1-2-Phan-phoi" class="headerlink" title="1.1.2. Phân phối"></a>1.1.2. Phân phối</h3><p>Cũng ví dụ trên, project của bạn đã nằm ở mức library, tức là một thư viện rồi. Bạn có thể dụ bạn bè mình xài nó, phát triển thêm, đóng góp cho nó, pack nó lại thành nuget package, blah blah blah và blah blah blah</p>
+<h3 id="1-1-3-Trien-khai"><a href="#1-1-3-Trien-khai" class="headerlink" title="1.1.3. Triển khai"></a>1.1.3. Triển khai</h3><p>1 công ty nọ thấy lib version 1.0 của bạn quá hay, họ quyết định tải zìa và xài trong dự án cực khủng của họ. 10 năm sau, bạn cập nhật cái lib của mình lên version 2.0, dùng lại toàn bộ các method và hàm sẵn có, chẳng qua là thay đổi thuật toán cho nó chạy nhanh lên thôi. Công ty chỉ cần bỏ ra 1 chi phí tối thiểu để clone cái lib của bạn về, build và replace cái lib đang chạy trên production của họ. Thế là xong. Không cần phải build lại cả project, không cần phải deploy lại.</p>
+<h3 id="1-1-4-You-name-it"><a href="#1-1-4-You-name-it" class="headerlink" title="1.1.4. You name it"></a>1.1.4. You name it</h3><p>Khi bạn đã dấn thân vào nghiệp code càng lâu năm, bạn sẽ phát hiện ra càng nhiều lợi ích khác của việc chia tách này.</p>
+<h2 id="1-2-Phan-chia-projects"><a href="#1-2-Phan-chia-projects" class="headerlink" title="1.2. Phân chia projects"></a>1.2. Phân chia projects</h2><p>Ở mô hình MVC, cả Model-View-ViewModel đều gắn liền với nhau, nên chúng ta không tách</p>
+<blockquote>
+<p>Tuy nhiên, có một số công ty tách cái Model ra một project riêng. Điều này giúp bạn dễ quản lý code hơn. Đôi khi cũng tách luôn cái Controller thành 1 project</p>
+</blockquote>
+<p>1 nguyên tắc mình hay dùng để tách project là dựa trên tính năng của nó. Ví dụ:</p>
+<ul>
+<li>Unit Test -&gt; <strong>Tách</strong></li>
+<li>Data Connection Layer -&gt; <strong>Tách</strong></li>
+<li>Encryption &#x2F; Decryption -&gt; <strong>Tách</strong></li>
+<li>Encryption <em>đứng riêng</em> -&gt; <strong>KHÔNG tách</strong></li>
+</ul>
+<h1 id="2-Package-Manager"><a href="#2-Package-Manager" class="headerlink" title="2. Package Manager"></a>2. Package Manager</h1><p>Làm web có 2 phần, front-end và back-end. Và cả 2 phần này đều có package manager (với ASP.NET)</p>
+<h2 id="2-1-For-backend-NUGET"><a href="#2-1-For-backend-NUGET" class="headerlink" title="2.1. For backend - NUGET"></a>2.1. For backend - NUGET</h2><p>Về phía backend, thì lợi ích của việc sử dụng package manager (nuget) là quá rõ ràng. Bạn chỉ cần “<strong>search &amp; install</strong>“, không còn cảnh đêm hôm khuya khoắt ngồi lọ mọ crack IDM để download một cái lib nào đấy có đuôi .dll, rồi mò mẫm trong đống file đã download để import nó vào project.</p>
+<p>Nó sẽ triệt tiêu luôn cái vấn đề tương thích platform với lib (lib build cho x64 chỉ chạy được trên x64 và tương tự cho x86)</p>
+<h2 id="2-2-For-front-end-Yarn"><a href="#2-2-For-front-end-Yarn" class="headerlink" title="2.2. For front-end - Yarn"></a>2.2. For front-end - Yarn</h2><blockquote>
+<p>Bower đã bị ngừng hỗ trợ</p>
+</blockquote>
+<p>Về phía front-end thì sao? Chẳng phải chỉ cần thêm file .css và .js vào là web chạy ngon lành sao</p>
+<p><strong>đúng rồi, NHƯNG</strong></p>
+<ul>
+<li>nguồn không thống nhất</li>
+<li>lib này phụ thuộc lib kia, lib kia phụ thuộc lib nọ</li>
+<li>nó có chạy trên máy tui mà sao không chạy được trên máy khác</li>
+</ul>
+<p>và front-end package manager được tạo ra để giải quyết mấy vấn đề này</p>
+<p>Vậy đó, nếu ASP.NET chỉ có 1 (vài) package manager như Nuget, thì trong thế giới front-emd ta có cả chục. Mình sẽ giới thiệu sơ qua về 1 tân binh mới nổi, và đang rất hot - YARN</p>
+<h3 id="2-2-1-Tinh-phu-thuoc"><a href="#2-2-1-Tinh-phu-thuoc" class="headerlink" title="2.2.1. Tính phụ thuộc"></a>2.2.1. Tính phụ thuộc</h3><p><code>JQuery</code> là một lib rất phổ biến, và ty tỷ lib khác được xây dựng mà cần tới nó. Nhưng JQuery có cũng kha khá phiên bản khác nhau, và các lib khác nhau lại dùng các version khác nhau của JQuery.</p>
+<p>Yarn sẽ giúp bạn loại bỏ vấn đề này. Khi JQuery được cài đặt qua Yarn, sẽ chỉ có 1 version duy nhất, và tất cả package khác đều sẽ dựa trên version này.</p>
+<h3 id="2-2-2-Sources"><a href="#2-2-2-Sources" class="headerlink" title="2.2.2. Sources"></a>2.2.2. Sources</h3><p>Toàn bộ package được host trên yarn, thì bạn chỉ cần lên Yarn lấy về là xong, không cần phải vào từng website của từng lib, rồi kiếm cái nút download nữa.</p>
+<h3 id="2-2-3-Tai-tao"><a href="#2-2-3-Tai-tao" class="headerlink" title="2.2.3. Tái tạo"></a>2.2.3. Tái tạo</h3><p>Yarn sử dụng một file package.json để lưu trữ thông tin các package đã được cài đặt. Dùng file này, trên bất kỳ máy nào, nó sẽ tạo ra chính xác các file cần thiết để project của bạn có thể chạy ngon lành y như lúc dev vậy</p>
+<p><img src="/images/flickr/966/27130244167_1f468f1efa_o.png" alt="worked on my machine"></p>
+<p>Thế nhé bạn ;)</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>ASP.NET</category>
+      </categories>
+      <tags>
+        <tag>project</tag>
+        <tag>structure</tag>
+        <tag>architech</tag>
+        <tag>manager</tag>
+        <tag>package</tag>
+      </tags>
   </entry>
   <entry>
     <title>[ASPNET Core 2] – Middleware</title>
@@ -8304,102 +8304,6 @@ unitOfWork.Dispose();</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Machine Learning - 2.1 - Multiple Features</title>
-    <url>/2018/10/03/machine-learning-2-1-multiple-features/</url>
-    <content><![CDATA[<p>Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành <code>multiple input features</code>, và những best practices để thực hiện linear regression.</p>
-<span id="more"></span>
-<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
-<ul>
-<li><p><a href="#1-mutiple-features">1. Mutiple Features</a></p>
-<ul>
-<li><a href="#11-k%C3%BD-hi%E1%BB%87u">1.1. Ký hiệu</a></li>
-<li><a href="#12-hypothesis">1.2. Hypothesis</a></li>
-<li><a href="#13-trick">1.3. Trick</a></li>
-</ul>
-</li>
-<li><p><a href="#2-gradient-descent-cho-multiple-variables">2. Gradient Descent cho Multiple Variables</a></p>
-</li>
-<li><p><a href="#3-gradient-descent-in-practice">3. Gradient Descent in Practice</a></p>
-<ul>
-<li><a href="#31-feature-scaling-v%C3%A0-mean-normalization">3.1. Feature Scaling và Mean Normalization</a></li>
-<li><a href="#32-learning-rate">3.2. Learning Rate</a></li>
-</ul>
-</li>
-<li><p><a href="#4-features-v%C3%A0-polynomial-regression">4. Features và Polynomial Regression</a></p>
-</li>
-</ul>
-<h1 id="1-Mutiple-Features"><a href="#1-Mutiple-Features" class="headerlink" title="1. Mutiple Features"></a>1. Mutiple Features</h1><p>Linear Regression với <code>multiple features</code> còn được biết đến với cái tên <code>multivariate linear regression</code>.</p>
-<h2 id="1-1-Ky-hieu"><a href="#1-1-Ky-hieu" class="headerlink" title="1.1. Ký hiệu"></a>1.1. Ký hiệu</h2><ul>
-<li>$latex x^{(i)}_j$ &#x3D; giá trị của feature <code>j</code> trong training example thứ <code>i</code>.</li>
-<li>$latex x^{(i)}$ &#x3D; input (feature) thứ <code>i</code> của training example.</li>
-<li>m &#x3D; số training example</li>
-<li>n &#x3D; số features</li>
-</ul>
-<h2 id="1-2-Hypothesis"><a href="#1-2-Hypothesis" class="headerlink" title="1.2. Hypothesis"></a>1.2. Hypothesis</h2><p>Như vậy, hàm hypothesis của chúng ta được viết lại như sau:</p>
-<p>$latex h_0(x) &#x3D; \theta_0x_0 + \theta_1x_1 + … + \theta_nx_n$</p>
-<p>với $latex x_0 &#x3D; 1$.</p>
-<h2 id="1-3-Trick"><a href="#1-3-Trick" class="headerlink" title="1.3. Trick"></a>1.3. Trick</h2><p>Áp dụng các kiến thức về phép nhân matrix đã học ở bài trước, ta có như sau</p>
-<p>$latex h_0(x) &#x3D; \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; … &amp; \theta_n \end{bmatrix} \begin{bmatrix} x_0 \\ x_1 \\ … \\ x_n \end{bmatrix} &#x3D; \theta^Tx$</p>
-<p>Trên đây là công thức của hàm hypothesis được rút gọn thành phép nhân matrix với vector.</p>
-<h1 id="2-Gradient-Descent-cho-Multiple-Variables"><a href="#2-Gradient-Descent-cho-Multiple-Variables" class="headerlink" title="2. Gradient Descent cho Multiple Variables"></a>2. Gradient Descent cho Multiple Variables</h1><p>Công thức cho thuật toán Gradient Descent thì y hệt như cũ. Ta chỉ lặp lại nó cho <code>n</code> features mà thôi.</p>
-<p>Lặp lại cho tới khi hội tụ:</p>
-<p>$latex \theta_0 :&#x3D; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)} \\ \theta_1 :&#x3D; \theta_1 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \\ \theta_2 :&#x3D; \theta_2 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} \\ …$</p>
-<p>hoặc diễn giải theo một cách khác:</p>
-<p>$latex \theta_j :&#x3D; \theta_j - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
-<p>với j:&#x3D; 0…n</p>
-<blockquote>
-<p>Đối với $latex \theta_0$, $latex x^i_0 &#x3D; 1$</p>
-</blockquote>
-<h1 id="3-Gradient-Descent-in-Practice"><a href="#3-Gradient-Descent-in-Practice" class="headerlink" title="3. Gradient Descent in Practice"></a>3. Gradient Descent in Practice</h1><h2 id="3-1-Feature-Scaling-va-Mean-Normalization"><a href="#3-1-Feature-Scaling-va-Mean-Normalization" class="headerlink" title="3.1. Feature Scaling và Mean Normalization"></a>3.1. Feature Scaling và Mean Normalization</h2><p>Khi các features có giá trị giao động trong các khoảng cách xa nhau, thì thuật toán Gradient Descent thường tốn nhiều thơi gian để tìm ra kết quả.</p>
-<p>Ví dụ ta có 2 feature là <code>diện tích nhà</code> và <code>số phòng ngủ</code>:</p>
-<p>[code lang&#x3D;text] 200 &lt; Diện tích nhà &lt; 2000 1 &lt; Số phòng ngủ &lt; 5 [&#x2F;code]</p>
-<p>Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.</p>
-<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"></p>
-<p><em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
-<p>Ta có thể tăng tốc gradient descent bằng cách <code>biến đổi</code> các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.</p>
-<p>Nhìn chung, ta sẽ biến đổi sao cho:</p>
-<p>$latex -1 \leq x_{(i)} \leq 1$</p>
-<p>hoặc</p>
-<p>$latex -0.5 \leq x_{(i)} \leq 0.5$</p>
-<p>Trên đây chỉ là ví dụ, mục tiêu là làm cho vùng giá trị của các feature càng gần nhau càng tốt.</p>
-<p>2 kỹ thuật để làm chuyện này là <code>Feature Scaling</code> và <code>Mean Normalization</code>.</p>
-<blockquote>
-<p>Feature Scaling là chia input với khoảng giá trị (max - min). Mean Normalization là input - giá trị trung bình của input.</p>
-</blockquote>
-<p>$latex x_i :&#x3D; \frac{x_i - \mu_i}{\delta_i}$</p>
-<p>với:</p>
-<ul>
-<li>$latex \mu_i$: trung bình của feature i</li>
-<li>$latex \delta_i$: Max - min hoặc độ lệch chuẩn</li>
-</ul>
-<blockquote>
-<p>Max - min sẽ cho ra kết quả rất khác với độ lệch chuẩn.</p>
-</blockquote>
-<h2 id="3-2-Learning-Rate"><a href="#3-2-Learning-Rate" class="headerlink" title="3.2. Learning Rate"></a>3.2. Learning Rate</h2><p>Để xác định tham số $latex \alpha$, ta có thể áp dụng 1 số kỹ thuật:</p>
-<ul>
-<li>Vẽ đồ thị với trục x &#x3D; số bước lặp của gradient descent, trục y &#x3D; giá trị của $latex J(\theta)$. Nếu $latex J(\theta)$ tăng, thì bạn phải giảm giá trị $latex \alpha$ xuống và làm lại từ đầu.</li>
-<li>Automatic convergence test: Xác định điểm hội tụ khi giá trị $latex J(\theta)$ không vượt quá E trong một lần lặp, với E là một giá trị rất nhỏ nào đó. Tuy nhiên trong thực tế, thường rất khó xác định giá trị E này.</li>
-</ul>
-<p>Người ta đã chứng minh được rằng, nếu learning rate $latex \alpha$ đủ nhỏ, thì giá trị $latex J(\theta)$ sẽ giảm sau mỗi lần lặp.</p>
-<p>Túm lại: * Nếu $latex \alpha$ quá nhỏ: gradient descent chạy lâu. * Nếu $latex \alpha$ quá lớn: $latex J(\theta)$ có thể sẽ không giảm sau mỗi lần lặp -&gt; không hội tụ.</p>
-<h1 id="4-Features-va-Polynomial-Regression"><a href="#4-Features-va-Polynomial-Regression" class="headerlink" title="4. Features và Polynomial Regression"></a>4. Features và Polynomial Regression</h1><p>Ta có thể cải thiện features và dạng của hàm hypothesis bằng nhiều cách.</p>
-<p>Một trong số những cách đó là <strong>kết hợp</strong> các feature lại với nhau. Ví dụ như khi ta có 2 feature là <code>dài</code> và <code>rộng</code>, ta có thể kết hợp chúng thành <code>diện tích = dài * rộng</code>.</p>
-<p>Ngoài ra, không phải lúc nào ta cũng có thể sử dụng được hàm hypothesis là một đường thẳng, nhất là khi nó không “vừa” với bộ data. Lúc này, có thể biến đổi nó một chút, hoặc bẻ cong nó bằng cách nâng lũy thừa, hoặc lấy căn của các features (hoặc bất cứ dạng nào khác đều được).</p>
-<p>Ví dụ:</p>
-<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1$</p>
-<p>Ta có thể thêm 1 feature mới bằng cách lũy thừa x lên:</p>
-<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1 + \theta_2x_1^2$</p>
-<p>hoặc lấy căn của nó:</p>
-<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1 + \theta_2\sqrt{x_1}$</p>
-<blockquote>
-<p>Một điều quan trọng là khi bạn biến đổi các feature như thế này, vùng giá trị của nó sẽ trở nên cách biệt so với feature gốc. Lúc này, bạn sẽ phải áp dụng những cách tối ưu như <code>Feature Scaling</code> và <code>Mean Normalization</code> đã nói ở trên để tối ưu thuật toán Gradient Descent.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Machine Learning - 1.4 - Matrices and Vectors</title>
     <url>/2018/10/01/machine-learning-matrices-and-vectors/</url>
     <content><![CDATA[<p>Bài viết thứ 4 trong loạt bài tự học Machine Learning trên Coursera của giáo sư Andrew Ng.</p>
@@ -8524,6 +8428,102 @@ unitOfWork.Dispose();</code></pre>
         <tag>matrix</tag>
         <tag>vector</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Machine Learning - 2.1 - Multiple Features</title>
+    <url>/2018/10/03/machine-learning-2-1-multiple-features/</url>
+    <content><![CDATA[<p>Tuần 2 trong course Machine Learning của giáo sư Andrew Ng trên Coursera. Trong phần này, bạn sẽ thấy linear regression được mở rộng thành <code>multiple input features</code>, và những best practices để thực hiện linear regression.</p>
+<span id="more"></span>
+<p>Xem các bài viết khác tại <a href="https://huntertran.ca/machine-learning-course/">Machine Learning Course Structure</a></p>
+<ul>
+<li><p><a href="#1-mutiple-features">1. Mutiple Features</a></p>
+<ul>
+<li><a href="#11-k%C3%BD-hi%E1%BB%87u">1.1. Ký hiệu</a></li>
+<li><a href="#12-hypothesis">1.2. Hypothesis</a></li>
+<li><a href="#13-trick">1.3. Trick</a></li>
+</ul>
+</li>
+<li><p><a href="#2-gradient-descent-cho-multiple-variables">2. Gradient Descent cho Multiple Variables</a></p>
+</li>
+<li><p><a href="#3-gradient-descent-in-practice">3. Gradient Descent in Practice</a></p>
+<ul>
+<li><a href="#31-feature-scaling-v%C3%A0-mean-normalization">3.1. Feature Scaling và Mean Normalization</a></li>
+<li><a href="#32-learning-rate">3.2. Learning Rate</a></li>
+</ul>
+</li>
+<li><p><a href="#4-features-v%C3%A0-polynomial-regression">4. Features và Polynomial Regression</a></p>
+</li>
+</ul>
+<h1 id="1-Mutiple-Features"><a href="#1-Mutiple-Features" class="headerlink" title="1. Mutiple Features"></a>1. Mutiple Features</h1><p>Linear Regression với <code>multiple features</code> còn được biết đến với cái tên <code>multivariate linear regression</code>.</p>
+<h2 id="1-1-Ky-hieu"><a href="#1-1-Ky-hieu" class="headerlink" title="1.1. Ký hiệu"></a>1.1. Ký hiệu</h2><ul>
+<li>$latex x^{(i)}_j$ &#x3D; giá trị của feature <code>j</code> trong training example thứ <code>i</code>.</li>
+<li>$latex x^{(i)}$ &#x3D; input (feature) thứ <code>i</code> của training example.</li>
+<li>m &#x3D; số training example</li>
+<li>n &#x3D; số features</li>
+</ul>
+<h2 id="1-2-Hypothesis"><a href="#1-2-Hypothesis" class="headerlink" title="1.2. Hypothesis"></a>1.2. Hypothesis</h2><p>Như vậy, hàm hypothesis của chúng ta được viết lại như sau:</p>
+<p>$latex h_0(x) &#x3D; \theta_0x_0 + \theta_1x_1 + … + \theta_nx_n$</p>
+<p>với $latex x_0 &#x3D; 1$.</p>
+<h2 id="1-3-Trick"><a href="#1-3-Trick" class="headerlink" title="1.3. Trick"></a>1.3. Trick</h2><p>Áp dụng các kiến thức về phép nhân matrix đã học ở bài trước, ta có như sau</p>
+<p>$latex h_0(x) &#x3D; \begin{bmatrix} \theta_0 &amp; \theta_1 &amp; … &amp; \theta_n \end{bmatrix} \begin{bmatrix} x_0 \\ x_1 \\ … \\ x_n \end{bmatrix} &#x3D; \theta^Tx$</p>
+<p>Trên đây là công thức của hàm hypothesis được rút gọn thành phép nhân matrix với vector.</p>
+<h1 id="2-Gradient-Descent-cho-Multiple-Variables"><a href="#2-Gradient-Descent-cho-Multiple-Variables" class="headerlink" title="2. Gradient Descent cho Multiple Variables"></a>2. Gradient Descent cho Multiple Variables</h1><p>Công thức cho thuật toán Gradient Descent thì y hệt như cũ. Ta chỉ lặp lại nó cho <code>n</code> features mà thôi.</p>
+<p>Lặp lại cho tới khi hội tụ:</p>
+<p>$latex \theta_0 :&#x3D; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)} \\ \theta_1 :&#x3D; \theta_1 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \\ \theta_2 :&#x3D; \theta_2 - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} \\ …$</p>
+<p>hoặc diễn giải theo một cách khác:</p>
+<p>$latex \theta_j :&#x3D; \theta_j - \alpha \frac{1}{m} \sum\limits_{i&#x3D;1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)}$</p>
+<p>với j:&#x3D; 0…n</p>
+<blockquote>
+<p>Đối với $latex \theta_0$, $latex x^i_0 &#x3D; 1$</p>
+</blockquote>
+<h1 id="3-Gradient-Descent-in-Practice"><a href="#3-Gradient-Descent-in-Practice" class="headerlink" title="3. Gradient Descent in Practice"></a>3. Gradient Descent in Practice</h1><h2 id="3-1-Feature-Scaling-va-Mean-Normalization"><a href="#3-1-Feature-Scaling-va-Mean-Normalization" class="headerlink" title="3.1. Feature Scaling và Mean Normalization"></a>3.1. Feature Scaling và Mean Normalization</h2><p>Khi các features có giá trị giao động trong các khoảng cách xa nhau, thì thuật toán Gradient Descent thường tốn nhiều thơi gian để tìm ra kết quả.</p>
+<p>Ví dụ ta có 2 feature là <code>diện tích nhà</code> và <code>số phòng ngủ</code>:</p>
+<p>[code lang&#x3D;text] 200 &lt; Diện tích nhà &lt; 2000 1 &lt; Số phòng ngủ &lt; 5 [&#x2F;code]</p>
+<p>Nếu vẽ đồ thị cho hàm hypothesis dự đoán giá nhà, bạn sẽ thấy nó là một dạng đồ thị hình cái tô với đáy rất nhọn, nhưng dẹp. Điều này làm cho mỗi step của gradient descent trải dài về bề ngang, nhưng không đi nhanh về điểm hội tụ, làm tổng thời gian chạy thuật toán gradient descent tăng lên.</p>
+<p><img src="https://i.imgur.com/DA49vil.png" alt="plot"></p>
+<p><em>hình ảnh chỉ mang tính chất minh họa ;)</em></p>
+<p>Ta có thể tăng tốc gradient descent bằng cách <code>biến đổi</code> các giá trị của feature cho nó nằm trong một khoảng gần giống nhau. Lý do là $latex \theta$ sẽ di chuyển nhanh hơn trong vùng bé hơn và ngược lại, chậm hơn trong vùng lớn hơn.</p>
+<p>Nhìn chung, ta sẽ biến đổi sao cho:</p>
+<p>$latex -1 \leq x_{(i)} \leq 1$</p>
+<p>hoặc</p>
+<p>$latex -0.5 \leq x_{(i)} \leq 0.5$</p>
+<p>Trên đây chỉ là ví dụ, mục tiêu là làm cho vùng giá trị của các feature càng gần nhau càng tốt.</p>
+<p>2 kỹ thuật để làm chuyện này là <code>Feature Scaling</code> và <code>Mean Normalization</code>.</p>
+<blockquote>
+<p>Feature Scaling là chia input với khoảng giá trị (max - min). Mean Normalization là input - giá trị trung bình của input.</p>
+</blockquote>
+<p>$latex x_i :&#x3D; \frac{x_i - \mu_i}{\delta_i}$</p>
+<p>với:</p>
+<ul>
+<li>$latex \mu_i$: trung bình của feature i</li>
+<li>$latex \delta_i$: Max - min hoặc độ lệch chuẩn</li>
+</ul>
+<blockquote>
+<p>Max - min sẽ cho ra kết quả rất khác với độ lệch chuẩn.</p>
+</blockquote>
+<h2 id="3-2-Learning-Rate"><a href="#3-2-Learning-Rate" class="headerlink" title="3.2. Learning Rate"></a>3.2. Learning Rate</h2><p>Để xác định tham số $latex \alpha$, ta có thể áp dụng 1 số kỹ thuật:</p>
+<ul>
+<li>Vẽ đồ thị với trục x &#x3D; số bước lặp của gradient descent, trục y &#x3D; giá trị của $latex J(\theta)$. Nếu $latex J(\theta)$ tăng, thì bạn phải giảm giá trị $latex \alpha$ xuống và làm lại từ đầu.</li>
+<li>Automatic convergence test: Xác định điểm hội tụ khi giá trị $latex J(\theta)$ không vượt quá E trong một lần lặp, với E là một giá trị rất nhỏ nào đó. Tuy nhiên trong thực tế, thường rất khó xác định giá trị E này.</li>
+</ul>
+<p>Người ta đã chứng minh được rằng, nếu learning rate $latex \alpha$ đủ nhỏ, thì giá trị $latex J(\theta)$ sẽ giảm sau mỗi lần lặp.</p>
+<p>Túm lại: * Nếu $latex \alpha$ quá nhỏ: gradient descent chạy lâu. * Nếu $latex \alpha$ quá lớn: $latex J(\theta)$ có thể sẽ không giảm sau mỗi lần lặp -&gt; không hội tụ.</p>
+<h1 id="4-Features-va-Polynomial-Regression"><a href="#4-Features-va-Polynomial-Regression" class="headerlink" title="4. Features và Polynomial Regression"></a>4. Features và Polynomial Regression</h1><p>Ta có thể cải thiện features và dạng của hàm hypothesis bằng nhiều cách.</p>
+<p>Một trong số những cách đó là <strong>kết hợp</strong> các feature lại với nhau. Ví dụ như khi ta có 2 feature là <code>dài</code> và <code>rộng</code>, ta có thể kết hợp chúng thành <code>diện tích = dài * rộng</code>.</p>
+<p>Ngoài ra, không phải lúc nào ta cũng có thể sử dụng được hàm hypothesis là một đường thẳng, nhất là khi nó không “vừa” với bộ data. Lúc này, có thể biến đổi nó một chút, hoặc bẻ cong nó bằng cách nâng lũy thừa, hoặc lấy căn của các features (hoặc bất cứ dạng nào khác đều được).</p>
+<p>Ví dụ:</p>
+<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1$</p>
+<p>Ta có thể thêm 1 feature mới bằng cách lũy thừa x lên:</p>
+<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1 + \theta_2x_1^2$</p>
+<p>hoặc lấy căn của nó:</p>
+<p>$latex h_{\theta}(x) &#x3D; \theta_0 + \theta_1x_1 + \theta_2\sqrt{x_1}$</p>
+<blockquote>
+<p>Một điều quan trọng là khi bạn biến đổi các feature như thế này, vùng giá trị của nó sẽ trở nên cách biệt so với feature gốc. Lúc này, bạn sẽ phải áp dụng những cách tối ưu như <code>Feature Scaling</code> và <code>Mean Normalization</code> đã nói ở trên để tối ưu thuật toán Gradient Descent.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
   </entry>
   <entry>
     <title>Machine Learning - 2.2 - Normal Equation</title>
@@ -9039,50 +9039,6 @@ string getName();
       </tags>
   </entry>
   <entry>
-    <title>[Life] - Fighting with unauthorized copies of your content</title>
-    <url>/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
-    <content><![CDATA[<p>Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.</p>
-<p>The point is, they are copying content from my blog, without my authorization. It’s time to tackle this problem.</p>
-<span id="more"></span>
-<ul>
-<li><a href="#1-search-for-all-other-sites">1. Search for all other sites</a></li>
-<li><a href="#2-is-the-site-tolerable">2. Is the site tolerable?</a></li>
-<li><a href="#3-file-a-dmca-report">3. File a DMCA report</a></li>
-<li><a href="#4-what-happened-after-a-link-is-approved">4. What happened after a link is approved</a></li>
-</ul>
-<h1 id="1-Search-for-all-other-sites"><a href="#1-Search-for-all-other-sites" class="headerlink" title="1. Search for all other sites"></a>1. Search for all other sites</h1><p>I thought this would be easy. Turn out it the most difficult step to take. The violated sites are managed by ‘master’ of Search Engine Optimization. They know how to optimize their site for better place in Google search result. They also know how to change your post just a little bit to deceive the Google algorithm to find duplication.</p>
-<ol>
-<li><strong>Search for the title</strong>. This search is easy. Copy your post title (maybe you have to remove all the special character like <code>[]</code> or <code>&#123;&#125;</code>). Sometime, when your title is written in English, you can translate it to your mother tongue language.</li>
-<li><strong>Search for a sentence</strong>. Choose short sentence with your writing style that cannot be meet elsewhere is the best option. A short sentence for this search to work would have more than 10 or 15 words.</li>
-<li><strong>Search by Image</strong>. This is the last search that I have made. The result is not useful but try anyway.</li>
-</ol>
-<h1 id="2-Is-the-site-tolerable"><a href="#2-Is-the-site-tolerable" class="headerlink" title="2. Is the site tolerable?"></a>2. Is the site tolerable?</h1><p>In Vietnam, it’s a tacit agreement when you copy the whole post published by someone else, then re-post it on your site and have a link back to the original content (at the end or beginning of the post). I know this is not legal in many countries. Instead, you are only allowed to “quote” a segment, a sentence from that original post with appropriate citing.</p>
-<p>That’s why your next job is to determine that the violated site worthy to use your hard work and research, time and money for free.</p>
-<p>I suggest no.</p>
-<h1 id="3-File-a-DMCA-report"><a href="#3-File-a-DMCA-report" class="headerlink" title="3. File a DMCA report"></a>3. File a DMCA report</h1><p>This will be the easiest step. You will need your Google account, and</p>
-<ul>
-<li>Link to your original content.</li>
-<li>Link to violated content (must be a link to specific post)</li>
-<li>Time</li>
-</ul>
-<p>Go to <a href="https://support.google.com/legal">Google Legal page</a> and select accordingly</p>
-<p><img src="https://i.imgur.com/MdLhEw9.png" alt="Click this link"></p>
-<p>The result should look like this</p>
-<p><img src="https://i.imgur.com/YeNk9JQ.png" alt="result"></p>
-<h1 id="4-What-happened-after-a-link-is-approved"><a href="#4-What-happened-after-a-link-is-approved" class="headerlink" title="4. What happened after a link is approved"></a>4. What happened after a link is approved</h1><p>The certain outcome is that the link will be removed from Google search result (including all other search tool using Google search engine).</p>
-<p>Another possible outcome is that the violated site (with enough DMCA report), will be remove completely from google search result.</p>
-<p>Cheers :D</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>DMCA</tag>
-        <tag>original</tag>
-        <tag>violation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Machine Learning] - 3.2 - Logistic Regression Model</title>
     <url>/2019/06/15/machine-learning-3-2-logistic-regression-model/</url>
     <content><![CDATA[<p>Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng</p>
@@ -9149,6 +9105,50 @@ string getName();
       <categories>
         <category>Others</category>
       </categories>
+  </entry>
+  <entry>
+    <title>[Life] - Fighting with unauthorized copies of your content</title>
+    <url>/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
+    <content><![CDATA[<p>Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.</p>
+<p>The point is, they are copying content from my blog, without my authorization. It’s time to tackle this problem.</p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-search-for-all-other-sites">1. Search for all other sites</a></li>
+<li><a href="#2-is-the-site-tolerable">2. Is the site tolerable?</a></li>
+<li><a href="#3-file-a-dmca-report">3. File a DMCA report</a></li>
+<li><a href="#4-what-happened-after-a-link-is-approved">4. What happened after a link is approved</a></li>
+</ul>
+<h1 id="1-Search-for-all-other-sites"><a href="#1-Search-for-all-other-sites" class="headerlink" title="1. Search for all other sites"></a>1. Search for all other sites</h1><p>I thought this would be easy. Turn out it the most difficult step to take. The violated sites are managed by ‘master’ of Search Engine Optimization. They know how to optimize their site for better place in Google search result. They also know how to change your post just a little bit to deceive the Google algorithm to find duplication.</p>
+<ol>
+<li><strong>Search for the title</strong>. This search is easy. Copy your post title (maybe you have to remove all the special character like <code>[]</code> or <code>&#123;&#125;</code>). Sometime, when your title is written in English, you can translate it to your mother tongue language.</li>
+<li><strong>Search for a sentence</strong>. Choose short sentence with your writing style that cannot be meet elsewhere is the best option. A short sentence for this search to work would have more than 10 or 15 words.</li>
+<li><strong>Search by Image</strong>. This is the last search that I have made. The result is not useful but try anyway.</li>
+</ol>
+<h1 id="2-Is-the-site-tolerable"><a href="#2-Is-the-site-tolerable" class="headerlink" title="2. Is the site tolerable?"></a>2. Is the site tolerable?</h1><p>In Vietnam, it’s a tacit agreement when you copy the whole post published by someone else, then re-post it on your site and have a link back to the original content (at the end or beginning of the post). I know this is not legal in many countries. Instead, you are only allowed to “quote” a segment, a sentence from that original post with appropriate citing.</p>
+<p>That’s why your next job is to determine that the violated site worthy to use your hard work and research, time and money for free.</p>
+<p>I suggest no.</p>
+<h1 id="3-File-a-DMCA-report"><a href="#3-File-a-DMCA-report" class="headerlink" title="3. File a DMCA report"></a>3. File a DMCA report</h1><p>This will be the easiest step. You will need your Google account, and</p>
+<ul>
+<li>Link to your original content.</li>
+<li>Link to violated content (must be a link to specific post)</li>
+<li>Time</li>
+</ul>
+<p>Go to <a href="https://support.google.com/legal">Google Legal page</a> and select accordingly</p>
+<p><img src="https://i.imgur.com/MdLhEw9.png" alt="Click this link"></p>
+<p>The result should look like this</p>
+<p><img src="https://i.imgur.com/YeNk9JQ.png" alt="result"></p>
+<h1 id="4-What-happened-after-a-link-is-approved"><a href="#4-What-happened-after-a-link-is-approved" class="headerlink" title="4. What happened after a link is approved"></a>4. What happened after a link is approved</h1><p>The certain outcome is that the link will be removed from Google search result (including all other search tool using Google search engine).</p>
+<p>Another possible outcome is that the violated site (with enough DMCA report), will be remove completely from google search result.</p>
+<p>Cheers :D</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>DMCA</tag>
+        <tag>original</tag>
+        <tag>violation</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java for Beginner - 1 - Introduction to Java from a .NET guy</title>
@@ -9462,87 +9462,6 @@ public int getWeight() &#123;
       </tags>
   </entry>
   <entry>
-    <title>[java] Refactoring Clones type 2</title>
-    <url>/2019/10/19/refactoring-clones-type-2/</url>
-    <content><![CDATA[<p>Removing clones in code maybe is the most challenging type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#</p>
-<span id="more"></span>
-
-<h1 id="Type-of-clones"><a href="#Type-of-clones" class="headerlink" title="Type of clones"></a>Type of clones</h1><p>There are 4 types of clones:</p>
-<blockquote>
-<p><em><strong>Type 1:</strong></em> The codes cloned are identical, except the name of variables, add or remove of comment.</p>
-<p><em><strong>Type 2:</strong></em> code fragments are structurally and syntactically identical except for variations in identifiers, literals, types, in addition to Type I differences.</p>
-<p><em><strong>Type 3:</strong></em> code fragments are copies with further modifications. Statements can be changed, added, or removed in addition to Type II differences.</p>
-<p><em><strong>Type 4:</strong></em> two or more code fragments perform the exact computation but are implemented through different syntactic variants.</p>
-<p>S. Bellon, R. Koschke, G. Antoniol, J. Krinke and E. Merlo, Comparison and Evaluation of Clone DetectionTools, Transactions on Software Engineering, 33(9):577-591 (2007)</p>
-</blockquote>
-<h1 id="Removing-clones"><a href="#Removing-clones" class="headerlink" title="Removing clones"></a>Removing clones</h1><p>Type 1: just remove the second fragment of code and use the first one</p>
-<p>Type 3: Based on the function of the code fragment (usually clone codes are in methods), you can perform other refactors like break the method into smaller ones (<code>extract method</code>), then consider if you can transform type 3 clone into type 2.</p>
-<p>Type 4: This one is the most difficult to detect. To eliminate it is easy, just use one of them.</p>
-<p>I believe to detect this kind of clone, you can inspect the before and after the condition of the questioned methods. If they are the same (use the same set of parameters, return the same result, verified by unit tests), then the function of these methods is identical.</p>
-<p>For type 2 clone, we will try to transform it to type 1, then introduce the parameter in a new common method by using a language-specific feature called <code>FunctionalInterface</code> in Java and <code>delegate</code> in C#</p>
-<h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><p>Consider these lines of code:</p>
-<pre><code class="highlight csharp"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawVerticalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
-    DrawOptions drawOptions = currentView.getVerticalOptions();
-    currentView.draw(length, drawOptions);
-&#125;
-
-<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawHorizontalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
-    DrawOptions drawOptions = currentView.getHorizontalOptions();
-    currentView.draw(length, drawOptions);
-&#125;</code></pre>
-
-<p>In the 2 methods above, both draw a line to screen; the difference is the <code>drawOptions</code> variable.</p>
-<p>To introduce parameters to “transform” this type of clone to type 1, we can do as follow:</p>
-<p>&#x2F;* For JAVA *&#x2F;</p>
-<pre><code class="highlight java"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawVerticalLine</span><span class="params">(<span class="type">int</span> length, View currentView)</span>&#123;
-    drawLine(length, currentView, () -&gt; currentView.getVerticalOption());
-&#125;
-
-<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawHorizontalLine</span><span class="params">(<span class="type">int</span> length, View currentView)</span>&#123;
-    drawLine(length, currentView, () -&gt; currentView.getHorizontalOption());
-&#125;
-
-<span class="meta">@FunctionalInterface</span>
-<span class="keyword">private</span> <span class="keyword">interface</span> <span class="title class_">DrawOption</span> &#123;
-    <span class="type">int</span> <span class="title function_">getDrawOption</span><span class="params">()</span>;
-&#125;
-
-<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawLine</span><span class="params">(<span class="type">int</span> length, View currentView, DrawOption drawOption)</span>&#123;
-    <span class="type">int</span> <span class="variable">options</span> <span class="operator">=</span> drawOption.getDrawOption();
-    currentView.draw(length, options)
-&#125;</code></pre>
-
-<p>and for C#</p>
-<pre><code class="highlight csharp"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawVerticalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
-    drawLine(length, currentView, () =&gt; currentView.getVerticalOption());
-&#125;
-
-<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawHorizontalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
-    drawLine(length, currentView, () =&gt; currentView.getHorizontalOption());
-&#125;
-
-<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView, Func&lt;<span class="built_in">int</span>&gt; drawOption</span>)</span>&#123;
-    <span class="built_in">int</span> option = drawOption();
-    currentView.draw(length, option);
-&#125;</code></pre>
-
-<h2 id="Using-a-tool"><a href="#Using-a-tool" class="headerlink" title="Using a tool"></a>Using a tool</h2><p>If you are using Eclipse, <a href="https://github.com/tsantalis/JDeodorant">JDeodorant</a> plug-in by <a href="https://users.encs.concordia.ca/~nikolaos/">Associate Professor Nikos Tsantalis</a> can automatically <code>extract</code> the clone into common method for you.</p>
-<ol>
-<li>Identify the cloned methods</li>
-<li>Select the method in Eclipse, right-click and choose <code>Refactor duplicate code...</code></li>
-</ol>
-<p><img src="https://i.imgur.com/ndLJ8Iz.png"></p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>clone</tag>
-        <tag>refactor</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[vuejs] - Publish your vue component to npmjs using vue-cli 3</title>
     <url>/2019/08/18/vuejs-publish-your-vue-component-to-npmjs-using-vue-cli-3/</url>
     <content><![CDATA[<p>Using Vuejs, sometime you need to publish your awesome <code>component</code> with the world. Sure you can share the <code>.vue</code> file, but how can you publish it to <code>npmjs</code>, for the ease of installation and usage of others?</p>
@@ -9645,6 +9564,87 @@ public int getWeight() &#123;
         <tag>vue</tag>
         <tag>vue-cli</tag>
         <tag>vuejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[java] Refactoring Clones type 2</title>
+    <url>/2019/10/19/refactoring-clones-type-2/</url>
+    <content><![CDATA[<p>Removing clones in code maybe is the most challenging type of refactoring action. In this post, I will show you how to refactor a clone type 2 using Functional Interface in Java and delegate in C#</p>
+<span id="more"></span>
+
+<h1 id="Type-of-clones"><a href="#Type-of-clones" class="headerlink" title="Type of clones"></a>Type of clones</h1><p>There are 4 types of clones:</p>
+<blockquote>
+<p><em><strong>Type 1:</strong></em> The codes cloned are identical, except the name of variables, add or remove of comment.</p>
+<p><em><strong>Type 2:</strong></em> code fragments are structurally and syntactically identical except for variations in identifiers, literals, types, in addition to Type I differences.</p>
+<p><em><strong>Type 3:</strong></em> code fragments are copies with further modifications. Statements can be changed, added, or removed in addition to Type II differences.</p>
+<p><em><strong>Type 4:</strong></em> two or more code fragments perform the exact computation but are implemented through different syntactic variants.</p>
+<p>S. Bellon, R. Koschke, G. Antoniol, J. Krinke and E. Merlo, Comparison and Evaluation of Clone DetectionTools, Transactions on Software Engineering, 33(9):577-591 (2007)</p>
+</blockquote>
+<h1 id="Removing-clones"><a href="#Removing-clones" class="headerlink" title="Removing clones"></a>Removing clones</h1><p>Type 1: just remove the second fragment of code and use the first one</p>
+<p>Type 3: Based on the function of the code fragment (usually clone codes are in methods), you can perform other refactors like break the method into smaller ones (<code>extract method</code>), then consider if you can transform type 3 clone into type 2.</p>
+<p>Type 4: This one is the most difficult to detect. To eliminate it is easy, just use one of them.</p>
+<p>I believe to detect this kind of clone, you can inspect the before and after the condition of the questioned methods. If they are the same (use the same set of parameters, return the same result, verified by unit tests), then the function of these methods is identical.</p>
+<p>For type 2 clone, we will try to transform it to type 1, then introduce the parameter in a new common method by using a language-specific feature called <code>FunctionalInterface</code> in Java and <code>delegate</code> in C#</p>
+<h1 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h1><p>Consider these lines of code:</p>
+<pre><code class="highlight csharp"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawVerticalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
+    DrawOptions drawOptions = currentView.getVerticalOptions();
+    currentView.draw(length, drawOptions);
+&#125;
+
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawHorizontalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
+    DrawOptions drawOptions = currentView.getHorizontalOptions();
+    currentView.draw(length, drawOptions);
+&#125;</code></pre>
+
+<p>In the 2 methods above, both draw a line to screen; the difference is the <code>drawOptions</code> variable.</p>
+<p>To introduce parameters to “transform” this type of clone to type 1, we can do as follow:</p>
+<p>&#x2F;* For JAVA *&#x2F;</p>
+<pre><code class="highlight java"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawVerticalLine</span><span class="params">(<span class="type">int</span> length, View currentView)</span>&#123;
+    drawLine(length, currentView, () -&gt; currentView.getVerticalOption());
+&#125;
+
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawHorizontalLine</span><span class="params">(<span class="type">int</span> length, View currentView)</span>&#123;
+    drawLine(length, currentView, () -&gt; currentView.getHorizontalOption());
+&#125;
+
+<span class="meta">@FunctionalInterface</span>
+<span class="keyword">private</span> <span class="keyword">interface</span> <span class="title class_">DrawOption</span> &#123;
+    <span class="type">int</span> <span class="title function_">getDrawOption</span><span class="params">()</span>;
+&#125;
+
+<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawLine</span><span class="params">(<span class="type">int</span> length, View currentView, DrawOption drawOption)</span>&#123;
+    <span class="type">int</span> <span class="variable">options</span> <span class="operator">=</span> drawOption.getDrawOption();
+    currentView.draw(length, options)
+&#125;</code></pre>
+
+<p>and for C#</p>
+<pre><code class="highlight csharp"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawVerticalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
+    drawLine(length, currentView, () =&gt; currentView.getVerticalOption());
+&#125;
+
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawHorizontalLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView</span>)</span>&#123;
+    drawLine(length, currentView, () =&gt; currentView.getHorizontalOption());
+&#125;
+
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">drawLine</span>(<span class="params"><span class="built_in">int</span> length, View currentView, Func&lt;<span class="built_in">int</span>&gt; drawOption</span>)</span>&#123;
+    <span class="built_in">int</span> option = drawOption();
+    currentView.draw(length, option);
+&#125;</code></pre>
+
+<h2 id="Using-a-tool"><a href="#Using-a-tool" class="headerlink" title="Using a tool"></a>Using a tool</h2><p>If you are using Eclipse, <a href="https://github.com/tsantalis/JDeodorant">JDeodorant</a> plug-in by <a href="https://users.encs.concordia.ca/~nikolaos/">Associate Professor Nikos Tsantalis</a> can automatically <code>extract</code> the clone into common method for you.</p>
+<ol>
+<li>Identify the cloned methods</li>
+<li>Select the method in Eclipse, right-click and choose <code>Refactor duplicate code...</code></li>
+</ol>
+<p><img src="https://i.imgur.com/ndLJ8Iz.png"></p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>clone</tag>
+        <tag>refactor</tag>
       </tags>
   </entry>
   <entry>
@@ -10680,24 +10680,6 @@ max_y = h
       </tags>
   </entry>
   <entry>
-    <title>install quick assist in Windows 10</title>
-    <url>/2020/12/09/install-quick-assist-in-Windows-10/</url>
-    <content><![CDATA[<p>Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.</p>
-<span id="more"></span>
-
-<p><img src="https://i.imgur.com/8o1jX1U.png" alt="search for optional feature"></p>
-<p><img src="https://i.imgur.com/DLKIkya.png" alt="install new"></p>
-<p><img src="https://i.imgur.com/NvEuu5j.png" alt="install"></p>
-<p><img src="https://i.imgur.com/1TXVUQc.png" alt="wait"></p>
-]]></content>
-      <categories>
-        <category>Computer Tips</category>
-      </categories>
-      <tags>
-        <tag>tips</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>reset network in Windows 10</title>
     <url>/2020/11/25/reset-network-in-Windows-10/</url>
     <content><![CDATA[<p>How to reset network settings in Windows 10</p>
@@ -10712,6 +10694,24 @@ max_y = h
 <p>Step 2: On the Network reset screen, select Reset now &gt; Yes to confirm.</p>
 <p><img src="https://i.imgur.com/g090t8h.png" alt="reset now"></p>
 <p><img src="https://i.imgur.com/CI6pTAM.png" alt="click yes"></p>
+]]></content>
+      <categories>
+        <category>Computer Tips</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>install quick assist in Windows 10</title>
+    <url>/2020/12/09/install-quick-assist-in-Windows-10/</url>
+    <content><![CDATA[<p>Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.</p>
+<span id="more"></span>
+
+<p><img src="https://i.imgur.com/8o1jX1U.png" alt="search for optional feature"></p>
+<p><img src="https://i.imgur.com/DLKIkya.png" alt="install new"></p>
+<p><img src="https://i.imgur.com/NvEuu5j.png" alt="install"></p>
+<p><img src="https://i.imgur.com/1TXVUQc.png" alt="wait"></p>
 ]]></content>
       <categories>
         <category>Computer Tips</category>
@@ -11409,6 +11409,87 @@ HasOven      = <span class="number">100</span></code></pre>
       </tags>
   </entry>
   <entry>
+    <title>The problem with Select All option</title>
+    <url>/2023/09/04/The-problem-with-Select-All-option/</url>
+    <content><![CDATA[<p>In a list of checkbox, it’s convenient to have a <code>Select all</code> option at the top. But this option is not as simple as it seems. Let’s walk through the ideas, and the logic behind it.</p>
+<span id="more"></span>
+
+<h1 id="1-The-idea-of-Select-All"><a href="#1-The-idea-of-Select-All" class="headerlink" title="1. The idea of Select All"></a>1. The idea of Select All</h1><p>You’ve got an email. It is a spam mail from an online store that you’ve never heard of. The other 50 mails in your inbox is the same. You want to delete all of them. Selecting each of these email is taking too much time.</p>
+<p>Luckily, we all familiar with that <code>Select all</code> checkbox on top</p>
+<p><img src="/images/2023/09/001.png" alt="Select all checkbox"></p>
+<h1 id="2-The-complication-behind-Select-All"><a href="#2-The-complication-behind-Select-All" class="headerlink" title="2. The complication behind Select All"></a>2. The complication behind Select All</h1><p>How can something as simple as a select all option can get complicated? Because we didn’t know what is the expectation of the users. Everyone has their own ideas and expectation on how a certain function works.</p>
+<p>So what are the expectation of <code>Select All</code> function?</p>
+<ul>
+<li>Does the <code>Select All</code> has 3 states? Checked - Unchecked - Intermediate (between checked and unchecked)</li>
+<li>If there are multiple pages of item, does the item on other pages affected too?</li>
+<li>If there are only 1 item in the list, do you need to show the <code>select all</code> option?</li>
+</ul>
+<p>Also, there is some other expectations, from the point of view of a developer</p>
+<ul>
+<li>Is <code>Select All</code> option an option from the data?<ul>
+<li>If it is a special option and not present in the data, should it be styled the same way as other option?</li>
+</ul>
+</li>
+<li>Should you put the <code>Select All</code> option on the top of the list</li>
+</ul>
+<blockquote>
+<p>Obviously, the below implementation of select all in Angular doesn’t looks good</p>
+<p><img src="/images/2023/09/002.png" alt="Select all as a special option"></p>
+<p>From this <a href="https://stackblitz.com/edit/angular-material-select-all-checkbox?file=src/app/app.component.html">StackBlitz</a></p>
+</blockquote>
+<p>Each of these expectation add some complication to the existing code. For some points, you would need to change the model of the data as well to support it.</p>
+<h1 id="3-What-user-expected-from-Select-All"><a href="#3-What-user-expected-from-Select-All" class="headerlink" title="3. What user expected from Select All"></a>3. What user expected from <code>Select All</code></h1><p>As a developer, I would like to give my users an adequate amount of information, not too little (so they would need to infer), not too much (so they would lost in all the non-necessary information). Here is my list</p>
+<ol>
+<li>Has 3 states<ol>
+<li>If all items selected: Checked</li>
+<li>If some items selected: Intermediate</li>
+<li>If no items selected: Unchecked</li>
+</ol>
+</li>
+<li>Only affect the current page<ol>
+<li>Will notify user that only items of the current page are selected.</li>
+<li>Provide a way to select all item</li>
+</ol>
+</li>
+<li>Hide if there is only <code>n</code> items in the list. <code>n</code> could be 1, 2, or 5</li>
+<li>On top of the list, and sticky too</li>
+</ol>
+<h1 id="4-Implementation-logic"><a href="#4-Implementation-logic" class="headerlink" title="4. Implementation logic"></a>4. Implementation logic</h1><h2 id="4-1-Approach-1-Select-All-as-an-option-in-data"><a href="#4-1-Approach-1-Select-All-as-an-option-in-data" class="headerlink" title="4.1. Approach 1: Select All as an option in data"></a>4.1. Approach 1: Select All as an option in data</h2><p>Meaning that you have a list, let’s say <code>Steak</code>, <code>Pizza</code>, and <code>Tacos</code>. The <code>Select All</code> would be an item in that list too.</p>
+<p>Pros:</p>
+<ul>
+<li>Implementation once, reuse as many as you like (if your language of choice support inheritance)</li>
+<li>No need to special care on styling. The option is rendered just like a regular item</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Show&#x2F;Hide it could be a problem</li>
+<li>Extra noise&#x2F;pollution in the model class</li>
+<li>May not be able to use the built-in interation to loop through items</li>
+</ul>
+<h2 id="4-2-Approach-2-Select-All-as-an-special-option-in-the-view"><a href="#4-2-Approach-2-Select-All-as-an-special-option-in-the-view" class="headerlink" title="4.2. Approach 2: Select All as an special option in the view"></a>4.2. Approach 2: Select All as an special option in the view</h2><p>Meaning that when render the view, you “inject” the <code>select all</code> option and it’s logic</p>
+<p>Pros:</p>
+<ul>
+<li>Pure data model</li>
+<li>You can customize the behavior</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>You need to style the option to match with other item (could not be a problem if you use the default style)</li>
+<li>Need to re-implement for each list (could be a lot of work)</li>
+<li>May hit on performance (the state of the <code>Select all</code> checkbox depend on the state of all other items)</li>
+</ul>
+<p>I’m sure that there are other hidden problem with each approach, depending on the frontend framework you’re using, the data you’re handling, and a bunch of other things that not in the picture yet.</p>
+<p>Choose wisely, my fellow developers</p>
+<p><img src="/images/2023/09/003.webp" alt="Choose wisely"></p>
+]]></content>
+      <categories>
+        <category>UI</category>
+      </categories>
+      <tags>
+        <tag>ui</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>XAML for beginner - Part 2</title>
     <url>/2023/06/25/XAML-for-beginner-Part-2/</url>
     <content><![CDATA[<p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>
@@ -11533,87 +11614,6 @@ HasOven      = <span class="number">100</span></code></pre>
       <tags>
         <tag>XAML</tag>
         <tag>Windows Store App</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The problem with Select All option</title>
-    <url>/2023/09/04/The-problem-with-Select-All-option/</url>
-    <content><![CDATA[<p>In a list of checkbox, it’s convenient to have a <code>Select all</code> option at the top. But this option is not as simple as it seems. Let’s walk through the ideas, and the logic behind it.</p>
-<span id="more"></span>
-
-<h1 id="1-The-idea-of-Select-All"><a href="#1-The-idea-of-Select-All" class="headerlink" title="1. The idea of Select All"></a>1. The idea of Select All</h1><p>You’ve got an email. It is a spam mail from an online store that you’ve never heard of. The other 50 mails in your inbox is the same. You want to delete all of them. Selecting each of these email is taking too much time.</p>
-<p>Luckily, we all familiar with that <code>Select all</code> checkbox on top</p>
-<p><img src="/images/2023/09/001.png" alt="Select all checkbox"></p>
-<h1 id="2-The-complication-behind-Select-All"><a href="#2-The-complication-behind-Select-All" class="headerlink" title="2. The complication behind Select All"></a>2. The complication behind Select All</h1><p>How can something as simple as a select all option can get complicated? Because we didn’t know what is the expectation of the users. Everyone has their own ideas and expectation on how a certain function works.</p>
-<p>So what are the expectation of <code>Select All</code> function?</p>
-<ul>
-<li>Does the <code>Select All</code> has 3 states? Checked - Unchecked - Intermediate (between checked and unchecked)</li>
-<li>If there are multiple pages of item, does the item on other pages affected too?</li>
-<li>If there are only 1 item in the list, do you need to show the <code>select all</code> option?</li>
-</ul>
-<p>Also, there is some other expectations, from the point of view of a developer</p>
-<ul>
-<li>Is <code>Select All</code> option an option from the data?<ul>
-<li>If it is a special option and not present in the data, should it be styled the same way as other option?</li>
-</ul>
-</li>
-<li>Should you put the <code>Select All</code> option on the top of the list</li>
-</ul>
-<blockquote>
-<p>Obviously, the below implementation of select all in Angular doesn’t looks good</p>
-<p><img src="/images/2023/09/002.png" alt="Select all as a special option"></p>
-<p>From this <a href="https://stackblitz.com/edit/angular-material-select-all-checkbox?file=src/app/app.component.html">StackBlitz</a></p>
-</blockquote>
-<p>Each of these expectation add some complication to the existing code. For some points, you would need to change the model of the data as well to support it.</p>
-<h1 id="3-What-user-expected-from-Select-All"><a href="#3-What-user-expected-from-Select-All" class="headerlink" title="3. What user expected from Select All"></a>3. What user expected from <code>Select All</code></h1><p>As a developer, I would like to give my users an adequate amount of information, not too little (so they would need to infer), not too much (so they would lost in all the non-necessary information). Here is my list</p>
-<ol>
-<li>Has 3 states<ol>
-<li>If all items selected: Checked</li>
-<li>If some items selected: Intermediate</li>
-<li>If no items selected: Unchecked</li>
-</ol>
-</li>
-<li>Only affect the current page<ol>
-<li>Will notify user that only items of the current page are selected.</li>
-<li>Provide a way to select all item</li>
-</ol>
-</li>
-<li>Hide if there is only <code>n</code> items in the list. <code>n</code> could be 1, 2, or 5</li>
-<li>On top of the list, and sticky too</li>
-</ol>
-<h1 id="4-Implementation-logic"><a href="#4-Implementation-logic" class="headerlink" title="4. Implementation logic"></a>4. Implementation logic</h1><h2 id="4-1-Approach-1-Select-All-as-an-option-in-data"><a href="#4-1-Approach-1-Select-All-as-an-option-in-data" class="headerlink" title="4.1. Approach 1: Select All as an option in data"></a>4.1. Approach 1: Select All as an option in data</h2><p>Meaning that you have a list, let’s say <code>Steak</code>, <code>Pizza</code>, and <code>Tacos</code>. The <code>Select All</code> would be an item in that list too.</p>
-<p>Pros:</p>
-<ul>
-<li>Implementation once, reuse as many as you like (if your language of choice support inheritance)</li>
-<li>No need to special care on styling. The option is rendered just like a regular item</li>
-</ul>
-<p>Cons:</p>
-<ul>
-<li>Show&#x2F;Hide it could be a problem</li>
-<li>Extra noise&#x2F;pollution in the model class</li>
-<li>May not be able to use the built-in interation to loop through items</li>
-</ul>
-<h2 id="4-2-Approach-2-Select-All-as-an-special-option-in-the-view"><a href="#4-2-Approach-2-Select-All-as-an-special-option-in-the-view" class="headerlink" title="4.2. Approach 2: Select All as an special option in the view"></a>4.2. Approach 2: Select All as an special option in the view</h2><p>Meaning that when render the view, you “inject” the <code>select all</code> option and it’s logic</p>
-<p>Pros:</p>
-<ul>
-<li>Pure data model</li>
-<li>You can customize the behavior</li>
-</ul>
-<p>Cons:</p>
-<ul>
-<li>You need to style the option to match with other item (could not be a problem if you use the default style)</li>
-<li>Need to re-implement for each list (could be a lot of work)</li>
-<li>May hit on performance (the state of the <code>Select all</code> checkbox depend on the state of all other items)</li>
-</ul>
-<p>I’m sure that there are other hidden problem with each approach, depending on the frontend framework you’re using, the data you’re handling, and a bunch of other things that not in the picture yet.</p>
-<p>Choose wisely, my fellow developers</p>
-<p><img src="/images/2023/09/003.webp" alt="Choose wisely"></p>
-]]></content>
-      <categories>
-        <category>UI</category>
-      </categories>
-      <tags>
-        <tag>ui</tag>
       </tags>
   </entry>
   <entry>
