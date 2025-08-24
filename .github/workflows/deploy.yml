@@ -1,0 +1,71 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: A job to deploy blog.
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node 20
+      uses: actions/setup-node@v3
+      with:
+          node-version: '20'
+      # with:
+      #   submodules: false # Checkout private submodules(themes or something else).
+    
+    # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
+    # - name: Cache node modules
+    #   uses: actions/cache@v1
+    #   id: cache
+    #   with:
+    #     path: node_modules
+    #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-node-
+    - name: Install Dependencies
+      # if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        node --version
+        npm --version
+        npm rebuild node-sass
+        npm install
+    
+    # Deploy hexo blog website.
+    - name: Deploy
+      id: deploy
+      uses: huntertran/hexo-action@master
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+        # user_name: your github username  # (or delete this input setting to use bot account)
+        # user_email: your github useremail  # (or delete this input setting to use bot account)
+        # commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
+    # Use the output from the `deploy` step(use for test action)
+    - name: Dispatch to update profile
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.PAT_TOKEN }}
+        script: |
+          await github.rest.actions.createWorkflowDispatch({
+            owner: 'huntertran',
+            repo: 'huntertran',
+            workflow_id: 'blog-post-workflow.yml',
+            ref: 'master'
+          })
+    - name: Get the output
+      run: |
+        echo "${{ steps.deploy.outputs.notify }}"
+  # dispatch:
+  #   runs-on: ubuntu-latest
+  #   - uses: actions/github-script@v6
+  #     with:
+  #       github-token: ${{ secrets.PAT_TOKEN }}
+  #       script: |
+  #         await github.rest.actions.createWorkflowDispatch({
+  #           owner: 'huntertran',
+  #           repo: 'huntertran',
+  #           workflow_id: 'blog-post-workflow.yml',
+  #           ref: 'master'
+  #         })
