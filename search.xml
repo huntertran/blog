@@ -261,33 +261,6 @@ using <span class="built_in">std</span>::<span class="built_in">endl</span>;</co
       </tags>
   </entry>
   <entry>
-    <title>Windows Phone 7 Chooser</title>
-    <url>/2013/09/02/windows-phone-7-chooser/</url>
-    <content><![CDATA[<p>Windows Phone có nhiều tài nguyên để bạn tận dụng, carmera này, danh bạ này, hình ảnh này, blah blah blah. Làm sao để sử dụng những tài nguyên này trong ứng dụng Windows Phone của bạn?</p>
-<span id="more"></span>
-<p>Có một cách: Windows Phone Chooser API. Nó sẽ giúp cho bạn truy cập các tài nguyên này một cách đơn giản và hiệu quả</p>
-<p>Đây là danh sách các chooser của WP</p>
-<ul>
-<li>CameraCaptureTask – kích hoạt camera để chụp hình, trả về hình (tất nhiên)</li>
-<li>EmailAddressChooserTask – kích hoạt ‘Contacts’, trả về địa chỉ email của contact đã chọn</li>
-<li>PhoneNumberChooserTask – như trên, nhưng trả về số điện thoại</li>
-<li>PhotoChooserTask – kích hoạt Photo, trả về hình đã chọn</li>
-<li>SaveEmailAddressTask - Kích hoạt ‘Contact’ và cho phép bạn gắn địa chỉ email vào một contact nào đó. Trả về giá trị xác định có thành công hay ko.</li>
-<li>SavePhoneNumberTask – Như trên, nhưng mà cho phép bạn gắn số điện thoại :3</li>
-</ul>
-<p>Xài làm sao?</p>
-<p>Tùy vào từng Task sẽ có từng cách xài riêng, bạn tự google nhé. Hiện tại chưa kịp viết :3 Sẽ edit bài này sau</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows Phone</category>
-      </categories>
-      <tags>
-        <tag>chooser</tag>
-        <tag>windows phone</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[04-09-2013] Dreamspark - Cách gia hạn tài khoản hoặc lấy Registration Code</title>
     <url>/2013/09/04/dreamspark-gia-han-ti-khoan-hoac-lay-registration-code/</url>
     <content><![CDATA[<p>Nếu bạn chưa có tài khoản Windows Store Dev hoặc Windows Phone Dev, bạn có thể đăng ký 1 cái</p>
@@ -333,6 +306,33 @@ using <span class="built_in">std</span>::<span class="built_in">endl</span>;</co
         <tag>account</tag>
         <tag>dev center</tag>
         <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows Phone 7 Chooser</title>
+    <url>/2013/09/02/windows-phone-7-chooser/</url>
+    <content><![CDATA[<p>Windows Phone có nhiều tài nguyên để bạn tận dụng, carmera này, danh bạ này, hình ảnh này, blah blah blah. Làm sao để sử dụng những tài nguyên này trong ứng dụng Windows Phone của bạn?</p>
+<span id="more"></span>
+<p>Có một cách: Windows Phone Chooser API. Nó sẽ giúp cho bạn truy cập các tài nguyên này một cách đơn giản và hiệu quả</p>
+<p>Đây là danh sách các chooser của WP</p>
+<ul>
+<li>CameraCaptureTask – kích hoạt camera để chụp hình, trả về hình (tất nhiên)</li>
+<li>EmailAddressChooserTask – kích hoạt ‘Contacts’, trả về địa chỉ email của contact đã chọn</li>
+<li>PhoneNumberChooserTask – như trên, nhưng trả về số điện thoại</li>
+<li>PhotoChooserTask – kích hoạt Photo, trả về hình đã chọn</li>
+<li>SaveEmailAddressTask - Kích hoạt ‘Contact’ và cho phép bạn gắn địa chỉ email vào một contact nào đó. Trả về giá trị xác định có thành công hay ko.</li>
+<li>SavePhoneNumberTask – Như trên, nhưng mà cho phép bạn gắn số điện thoại :3</li>
+</ul>
+<p>Xài làm sao?</p>
+<p>Tùy vào từng Task sẽ có từng cách xài riêng, bạn tự google nhé. Hiện tại chưa kịp viết :3 Sẽ edit bài này sau</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows Phone</category>
+      </categories>
+      <tags>
+        <tag>chooser</tag>
+        <tag>windows phone</tag>
       </tags>
   </entry>
   <entry>
@@ -2660,7 +2660,7 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
 <p>Thank you for reading!</p>
 <p>If you have news and updates from your country, we’ll be happy to share it with everyone!</p>
 <p>This newsletter is managed by MSP Japan Global team in collaboration with MSP newsletter representatives from each Asia Pacific countries.</p>
-<p>If there is any business, please email to <strong><a href="mailto:&#83;&#x68;&#x75;&#x6e;&#x2e;&#79;&#x6b;&#117;&#x62;&#x6f;&#x40;&#x73;&#x74;&#117;&#100;&#101;&#110;&#x74;&#112;&#97;&#114;&#116;&#x6e;&#x65;&#114;&#x2e;&#x63;&#x6f;&#109;">&#83;&#x68;&#x75;&#x6e;&#x2e;&#79;&#x6b;&#117;&#x62;&#x6f;&#x40;&#x73;&#x74;&#117;&#100;&#101;&#110;&#x74;&#112;&#97;&#114;&#116;&#x6e;&#x65;&#114;&#x2e;&#x63;&#x6f;&#109;</a></strong>.</p>
+<p>If there is any business, please email to <strong><a href="mailto:&#83;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#x6b;&#117;&#x62;&#x6f;&#x40;&#115;&#116;&#x75;&#x64;&#101;&#110;&#x74;&#x70;&#97;&#114;&#116;&#x6e;&#101;&#x72;&#x2e;&#99;&#111;&#109;">&#83;&#x68;&#117;&#x6e;&#x2e;&#x4f;&#x6b;&#117;&#x62;&#x6f;&#x40;&#115;&#116;&#x75;&#x64;&#101;&#110;&#x74;&#x70;&#97;&#114;&#116;&#x6e;&#101;&#x72;&#x2e;&#99;&#111;&#109;</a></strong>.</p>
 <p>Microsoft Student Partners <a href="https://www.microsoftstudentpartners.com/">https://www.microsoftstudentpartners.com</a></p>
 ]]></content>
       <categories>
@@ -2684,6 +2684,59 @@ BitmapImage imgSource = <span class="keyword">new</span> BitmapImage(uri);</code
       <tags>
         <tag>tips</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
+    <url>/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
+    <content><![CDATA[<p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
+<p>Làm thế nào để bắt chước cách thiết kế này?</p>
+<span id="more"></span>
+<h1 id="SplitView-Control"><a href="#SplitView-Control" class="headerlink" title="SplitView Control"></a>SplitView Control</h1><p>Microsoft đã xây dựng riêng một control cho việc đó và gọi nó là SplitView Control</p>
+<p>Cơ bản, nó sẽ có 2 phần: Pane và Content</p>
+<p>Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.</p>
+<p><img src="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800"></p>
+<p>Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản</p>
+<p>Tạo một Project mới sử dụng Universal Application Platform (UAP) từ Visual Studio</p>
+<p>Trong MainPage, paste dòng sau vào</p>
+<p><img src="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png"></p>
+<p>Trong cấu trúc trên, bạn có thể thấy Pane là một thuộc tính của SplitView. Hãy coi Pane như một control mẹ và thêm các control khác vào bên trong nó</p>
+<p>CompactPaneLength là chiều rộng của SplitView khi người dùng thu gọn nó lại</p>
+<p>DisplayMode là cách thức hiển thị của SplitView. Có 4 kiểu:</p>
+<ul>
+<li>CompactInline: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ đẩy phần Content sang một bên</li>
+<li>CompactOvelay: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ ĐÈ LÊN phàn Content</li>
+<li>Inline: Giống CompactInline, như khi thu gọn sẽ biết mất khỏi màn hình</li>
+<li>Overlay: Giống Overlay, nhưng khi thu gọn sẽ biết mất khỏi màn hình</li>
+</ul>
+<h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
+<p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
+<p>Code của cái trên rất đơn giản:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">SplitView</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">SplitView.Pane</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;\*&quot;</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">ListView</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">SplitView.Pane</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">SplitView</span>&gt;</span></code></pre>
+
+<h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
+<p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">&quot;HamburgerButton&quot;</span> <span class="attr">FontFamily</span>=<span class="string">&quot;Segoe MDL2 Assets&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></code></pre>
+
+<p>Mục Content sẽ là đoạn code trong bảng mã sau: <a href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
+<p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
+<p>Thế là xong. Chúc bạn thành công</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows 10</category>
+      </categories>
   </entry>
   <entry>
     <title>[Azure] - Update - Create Proxy Server on Azure to survive the internet blackout or the broken cable</title>
@@ -2752,57 +2805,125 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>[Windows 10] SplitView Control (the sidebar on many apps)</title>
-    <url>/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</url>
-    <content><![CDATA[<p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
-<p>Làm thế nào để bắt chước cách thiết kế này?</p>
+    <title>[Computer Tips] [Part 2] Be an Advanced user with Web Browser</title>
+    <url>/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
+    <content><![CDATA[<p>Part 1 ở đây: <a href="https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">Phần 1</a></p>
+<p>Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: “Còn gì hay ho nữa không”</p>
+<p>Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.</p>
+<p>Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa</p>
+<p>Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng.</p>
+<p>Có một số add-on chỉ có Firefox mới có, và ngược lại</p>
 <span id="more"></span>
-<h1 id="SplitView-Control"><a href="#SplitView-Control" class="headerlink" title="SplitView Control"></a>SplitView Control</h1><p>Microsoft đã xây dựng riêng một control cho việc đó và gọi nó là SplitView Control</p>
-<p>Cơ bản, nó sẽ có 2 phần: Pane và Content</p>
-<p>Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.</p>
-<p><img src="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800"></p>
-<p>Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản</p>
-<p>Tạo một Project mới sử dụng Universal Application Platform (UAP) từ Visual Studio</p>
-<p>Trong MainPage, paste dòng sau vào</p>
-<p><img src="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png"></p>
-<p>Trong cấu trúc trên, bạn có thể thấy Pane là một thuộc tính của SplitView. Hãy coi Pane như một control mẹ và thêm các control khác vào bên trong nó</p>
-<p>CompactPaneLength là chiều rộng của SplitView khi người dùng thu gọn nó lại</p>
-<p>DisplayMode là cách thức hiển thị của SplitView. Có 4 kiểu:</p>
 <ul>
-<li>CompactInline: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ đẩy phần Content sang một bên</li>
-<li>CompactOvelay: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ ĐÈ LÊN phàn Content</li>
-<li>Inline: Giống CompactInline, như khi thu gọn sẽ biết mất khỏi màn hình</li>
-<li>Overlay: Giống Overlay, nhưng khi thu gọn sẽ biết mất khỏi màn hình</li>
+<li><a href="#c%C3%A1c-addon-n%C3%A2ng-cao">Các addon nâng cao</a><ul>
+<li><a href="#noscript--firefox-only">NoScript – Firefox only</a><ul>
+<li><a href="#thi%E1%BA%BFt-l%E1%BA%ADp">Thiết lập</a></li>
+<li><a href="#s%E1%BB%AD-d%E1%BB%A5ng">Sử dụng</a></li>
+<li><a href="#blacklist-m%E1%BB%99t-%C4%91o%E1%BA%A1n-script">Blacklist một đoạn Script</a></li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a></li>
+<li><a href="#l%E1%BB%A3i-v%C3%A0-h%E1%BA%A1i">Lợi và hại</a></li>
 </ul>
-<h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
-<p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
-<p>Code của cái trên rất đơn giản:</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">SplitView</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">SplitView.Pane</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">Grid</span>&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
-                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
-                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;\*&quot;</span> /&gt;</span>
-            <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
-            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> /&gt;</span>
-            <span class="tag">&lt;<span class="name">ListView</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">SplitView.Pane</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid</span> /&gt;</span>
-<span class="tag">&lt;/<span class="name">SplitView</span>&gt;</span></code></pre>
+</li>
+<li><a href="#ublock--firefox-v%C3%A0-chrome">uBlock – Firefox và Chrome</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko?</p>
+<p><img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
+<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option</p>
+<p><img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"></p>
+<p>Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên</p>
+<p><img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"></p>
+<p>Vậy là xong bước thiết lập</p>
+<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích</p>
+<p><img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"></p>
+<p>Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript</p>
+<p><img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"></p>
+<p>Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại</p>
+<p><img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"></p>
+<p>Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử</p>
+<p><img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"></p>
+<p>Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt</p>
+<p><img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"></p>
+<p>Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì?</p>
+<p><img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"></p>
+<p>Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt</p>
+<p><img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"></p>
+<p>Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
+<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist</p>
+<p><img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"></p>
+<p>Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này</p>
+<p><img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
+<h3 id="Tips-and-Tricks"><a href="#Tips-and-Tricks" class="headerlink" title="Tips and Tricks"></a>Tips and Tricks</h3><ul>
+<li><p>Để tạm thời cho phép toàn bộ script của một trang, bạn có thể chọn Temporarily allow all on this page</p>
+</li>
+<li><p>Trong một số trường hợp, trang web bị redirect (aka: chuyển qua một trang khác) quá nhanh trước khi bạn kịp “Allow” một đoạn script của trang đó, bạn có thể sử dụng tính năng “Recently Blocked Script” để cho phép các đoạn script bị block gần đây.</p>
+</li>
+<li><p>Bạn có thể Export &#x2F; Import toàn bộ thiết lập của NoScript trong option của nó</p>
+</li>
+<li><p>Một số trang web không cho bạn blacklist các JavaScript của nó bằng một thủ thuật tinh vi là steal focus, làm cho bạn không thể nào click được Untrust. Bấm F12, chọn thẻ Debugging &gt; Bấm vào nút pause (có hình 2 cái vạch giống vầy || ), là bạn có thể untrust các đoạn script của nó</p>
+</li>
+<li><p>Gõ about:config trên trình duyệt, tìm noscript.untrusted để xem toàn bộ các script đang bị blacklist. Bạn có thể copy danh sách này và paste nó cho bạn bè của mình. Của mình là</p>
+</li>
+</ul>
+<pre><code class="highlight plaintext">&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
 
-<h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
-<p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">&quot;HamburgerButton&quot;</span> <span class="attr">FontFamily</span>=<span class="string">&quot;Segoe MDL2 Assets&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></code></pre>
-
-<p>Mục Content sẽ là đoạn code trong bảng mã sau: <a href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
-<p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
-<p>Thế là xong. Chúc bạn thành công</p>
+<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><table>
+<thead>
+<tr>
+<th>Lợi</th>
+<th>Hại</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Thời gian load trang nhanh hơn</td>
+<td>Thiết lập phức tạp</td>
+</tr>
+<tr>
+<td>Trang web đỡ rối mắt hơn</td>
+<td>Phải thiết lập cho từng trang web một</td>
+</tr>
+<tr>
+<td>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</td>
+<td></td>
+</tr>
+<tr>
+<td>Web chạy mượt mà hơn</td>
+<td></td>
+</tr>
+<tr>
+<td>Loại bỏ theo dõi hành vi người dùng của các website</td>
+<td></td>
+</tr>
+<tr>
+<td>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</td>
+<td></td>
+</tr>
+<tr>
+<td>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="uBlock-–-Firefox-va-Chrome"><a href="#uBlock-–-Firefox-va-Chrome" class="headerlink" title="uBlock – Firefox và Chrome"></a>uBlock – Firefox và Chrome</h2><p>Không khuyến khích sử dụng Add-on này, vì nó sẽ chặn quảng cáo, là cần câu cơm của các trang web Bạn có bao giờ khó chịu khi mở một website lên mà quảng cáo tràn ngập, không thấy nội dung đâu hết? Các pop up hiện ra liên tục với cường độ cao, các bẫy click mà khi click vào thì quảng cáo nhảy xổ ra tràn ngập màn hình? Đã đến lúc chấm dứt cơn ác mộng đấy, bằng một add-on gọi là uBlock Tải tại đây:</p>
+<ul>
+<li>Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
+<li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></li>
+</ul>
+<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật &#x2F; tắt cái nút xanh to đùng để bật &#x2F; tắt quảng cáo Trước khi cài &#x2F; khi bật quảng cáo</p>
+<p><img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"></p>
+<p>Sau khi cài &#x2F; Khi tắt quảng cáo bằng cách kích hoạt uBlock</p>
+<p><img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"></p>
+<p>Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a></p>
+<p>Happy surfing the Internet</p>
 ]]></content>
       <categories>
-        <category>CSharp</category>
-        <category>Windows 10</category>
+        <category>Computer Tips</category>
       </categories>
+      <tags>
+        <tag>add-on</tag>
+        <tag>noscript</tag>
+        <tag>ublock</tag>
+      </tags>
   </entry>
   <entry>
     <title>[Computer Tips] [Part 1] Be an Advanced User of Web Browser</title>
@@ -2971,127 +3092,6 @@ dns_nameservers 208.67.222.222 208.67.220.220 8.8.8.8 8.8.4.4</code></pre>
         <tag>chrome</tag>
         <tag>firefox</tag>
         <tag>web browser</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Computer Tips] [Part 2] Be an Advanced user with Web Browser</title>
-    <url>/2015/07/17/computer-tips-part-2-be-an-advanced-user-with-web-browser/</url>
-    <content><![CDATA[<p>Part 1 ở đây: <a href="https://cuoilennaocacban2.wordpress.com/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/">Phần 1</a></p>
-<p>Sau khi đã có một trình duyệt web sạch sẽ, cùng các addon hữu ích, chắc bạn sẽ tự hỏi: “Còn gì hay ho nữa không”</p>
-<p>Cộng đồng phát triển add-on cho Firefox và Chrome là vô cùng bự, và bạn sẽ tìm thấy kha khá những add-on phù hợp với mình.</p>
-<p>Bài viết này sẽ hướng dẫn cách sử dụng một số addon kỳ quái khác, giúp trải nghiệm duyệt web của bạn đã hơn nữa</p>
-<p>Việc sử dụng không đúng cách các Addon này sẽ khiến trang web không hiển thị được, hoặc thiếu tính năng.</p>
-<p>Có một số add-on chỉ có Firefox mới có, và ngược lại</p>
-<span id="more"></span>
-<ul>
-<li><a href="#c%C3%A1c-addon-n%C3%A2ng-cao">Các addon nâng cao</a><ul>
-<li><a href="#noscript--firefox-only">NoScript – Firefox only</a><ul>
-<li><a href="#thi%E1%BA%BFt-l%E1%BA%ADp">Thiết lập</a></li>
-<li><a href="#s%E1%BB%AD-d%E1%BB%A5ng">Sử dụng</a></li>
-<li><a href="#blacklist-m%E1%BB%99t-%C4%91o%E1%BA%A1n-script">Blacklist một đoạn Script</a></li>
-<li><a href="#tips-and-tricks">Tips and Tricks</a></li>
-<li><a href="#l%E1%BB%A3i-v%C3%A0-h%E1%BA%A1i">Lợi và hại</a></li>
-</ul>
-</li>
-<li><a href="#ublock--firefox-v%C3%A0-chrome">uBlock – Firefox và Chrome</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="Cac-addon-nang-cao"><a href="#Cac-addon-nang-cao" class="headerlink" title="Các addon nâng cao"></a>Các addon nâng cao</h1><h2 id="NoScript-–-Firefox-only"><a href="#NoScript-–-Firefox-only" class="headerlink" title="NoScript – Firefox only"></a>NoScript – Firefox only</h2><p>Một website được hiển thị trên màn hình của bạn dựa trên 3 yếu tố: HTML, CSS và JavaScript. HTML sẽ chứa nội dung, CSS sẽ định dạng cho nội dung đó (canh chỉnh lề, màu sắc, kích thước) và JavaScript sẽ chịu trách nhiệm tính toán, hiệu ứng, tất tần tật mọi thứ khác. Vấn đề nằm ở chỗ, khi load một website, không phải đoạn Script nào cũng cần thiết để web hoạt động, có các đoạn Script hoàn toàn không liên quan như theo dõi hành vi người dùng, tải quảng cáo, phân tích dữ liệu cho các bộ máy tìm kiếm. Đó là lý do NoScript ra đời Theo mặc định, NoScript sẽ chặn tất cả, và chỉ chừa lại các đoạn Script bạn cho nó chạy mà thôi. Tải tại đây: <a href="https://addons.mozilla.org/en-us/firefox/addon/noscript/">https://addons.mozilla.org/en-us/firefox/addon/noscript/</a> Sau khi cài đặt, đây sẽ là hình ảnh các bạn nhận được khi mở bất kỳ trang web nào, khá khó chịu phải ko?</p>
-<p><img src="https://farm1.staticflickr.com/264/19575563008_f13b274796_o.png"></p>
-<h3 id="Thiet-lap"><a href="#Thiet-lap" class="headerlink" title="Thiết lập"></a>Thiết lập</h3><p>Để thiết lập cho NoScript, click chuột vào nó và chọn Option</p>
-<p><img src="https://farm1.staticflickr.com/436/19763863685_538c579046_o.png"></p>
-<p>Chọn thẻ Notification để bỏ dòng thông báo xuất hiện bên dưới trình duyệt Bỏ chọn các dòng được đánh dấu bằng mũi tên</p>
-<p><img src="https://farm1.staticflickr.com/481/19768621411_6022b4cf6a_o.png"></p>
-<p>Vậy là xong bước thiết lập</p>
-<h3 id="Su-dung"><a href="#Su-dung" class="headerlink" title="Sử dụng"></a>Sử dụng</h3><p>Quay trở lại google, khi vào google, bạn sẽ không còn thấy thanh thông báo script đã bị chặn nữa. Thử tìm kiếm một từ khóa nào đó, bạn sẽ thấy có nhiều hiện tượng lạ khác với google bình thường Đầu tiên là google quay trở về cái giao diện cổ xưa cũ rích</p>
-<p><img src="https://farm1.staticflickr.com/511/19577369119_a5df6cf9d9_o.png"></p>
-<p>Tính năng Instant Search cũng mất luôn. Chuyện gì đang xảy ra? Đơn giản là bạn đang chặn toàn bộ JavaScript của google, và đây là tất cả những gì mà Google có thể làm được khi thiếu JavaScript Để cho phép JavaScript của google hoạt động, rê chuột lên biểu tượng của NoScript</p>
-<p><img src="https://farm1.staticflickr.com/527/19141449444_642fd3f5ce_o.png"></p>
-<p>Và chọn Allow google.com Thế là google tự động reload, và giao diện quen thuộc đã quay trở lại</p>
-<p><img src="https://farm1.staticflickr.com/407/19141472164_c0f391e0fb_o.png"></p>
-<p>Biểu tượng NoScript giờ biến thành chữ S, nhưng vẫn có một dấu chặn đỏ nho nhỏ bên dưới. Đó là vì vẫn còn Script bị chặn, bạn nên rê chuột lên để kiểm tra thử</p>
-<p><img src="https://farm1.staticflickr.com/539/19577487129_8a934d4edc_o.png"></p>
-<p>Vẫn còn 1 Script là gstatic.com đang bị chặn. Bạn có muốn cho phép nó hay ko là tùy bạn. Nên nhớ, một số đoạn Script cần thiết phải cho phép để website hoạt động đúng như những gì nó được sinh ra để làm Một ví dụ khác. Trang <a href="http://news.zing.vn/">http://news.zing.vn/</a> Ở trang này, lúc đầu cũng như google, tuy nhiên, khi rê chuột lên icon noscript, bạn sẽ thấy điều khác biệt</p>
-<p><img src="https://farm1.staticflickr.com/357/19764202055_ea391aa0ce_o.png"></p>
-<p>Đoạn Script gì đây? Adtimaserver.vn là gì? Đầu tiên hãy cho phép zing.vn Trang news.zing.vn hiện ra đẹp đẽ, nhưng nhìn có vẻ hơi trống trải. Bạn tự hỏi những chỗ trống đó là gì?</p>
-<p><img src="https://farm1.staticflickr.com/525/19757017192_23fab3b91b_o.png"></p>
-<p>Bây giờ hãy tiếp tục cho phép adtimaserverv.vn và cảm nhận điều khác biệt</p>
-<p><img src="https://farm1.staticflickr.com/260/19141748024_f1c4f57d76_o.png"></p>
-<p>Bắt đầu lag, quảng cáo tràn ngập khắp mọi nơi. Và đó chính là chức năng của đoạn Script đó. Nếu bạn để ý, sẽ thấy ngoài 2 script ban đầu, còn rất nhiều script khác được chêm vô. Điều đó không có gì ngạc nhiên, một đoạn JavaScript có thể gọi thêm nhiều đoạn JavaScript khác hỗ trợ cho nó. Như vậy, quyết định cho đoạn Script nào chạy, đoạn nào không là ở bạn.</p>
-<h3 id="Blacklist-mot-doan-Script"><a href="#Blacklist-mot-doan-Script" class="headerlink" title="Blacklist một đoạn Script"></a>Blacklist một đoạn Script</h3><p>Sau khi biết chắc một đoạn script nào đấy chỉ dành cho quảng cáo, hoặc chỉ dùng để theo dõi người dùng, bạn có thể đưa nó vào blacklist ngay và luôn để từ lần sau, NoScript sẽ chặn nó mà không hỏi ý kiến bạn nữa Đưa chuột vào Icon NoScript, chọn Untrusted &gt; chọn đoạn script muốn blacklist</p>
-<p><img src="https://farm1.staticflickr.com/308/19577587378_2f862f7a44_o.png"></p>
-<p>Cẩn thận không blacklist nhầm các đoạn script quan trọng nhé Sau cùng, khi toàn bộ script trên một trang web đã được xử lý (cho phép hoặc bị đưa vào blacklist), biểu tượng NoScript sẽ biến thành như này</p>
-<p><img src="https://farm1.staticflickr.com/433/19758359822_686a2ecf41_o.png"></p>
-<h3 id="Tips-and-Tricks"><a href="#Tips-and-Tricks" class="headerlink" title="Tips and Tricks"></a>Tips and Tricks</h3><ul>
-<li><p>Để tạm thời cho phép toàn bộ script của một trang, bạn có thể chọn Temporarily allow all on this page</p>
-</li>
-<li><p>Trong một số trường hợp, trang web bị redirect (aka: chuyển qua một trang khác) quá nhanh trước khi bạn kịp “Allow” một đoạn script của trang đó, bạn có thể sử dụng tính năng “Recently Blocked Script” để cho phép các đoạn script bị block gần đây.</p>
-</li>
-<li><p>Bạn có thể Export &#x2F; Import toàn bộ thiết lập của NoScript trong option của nó</p>
-</li>
-<li><p>Một số trang web không cho bạn blacklist các JavaScript của nó bằng một thủ thuật tinh vi là steal focus, làm cho bạn không thể nào click được Untrust. Bấm F12, chọn thẻ Debugging &gt; Bấm vào nút pause (có hình 2 cái vạch giống vầy || ), là bạn có thể untrust các đoạn script của nó</p>
-</li>
-<li><p>Gõ about:config trên trình duyệt, tìm noscript.untrusted để xem toàn bộ các script đang bị blacklist. Bạn có thể copy danh sách này và paste nó cho bạn bè của mình. Của mình là</p>
-</li>
-</ul>
-<pre><code class="highlight plaintext">&quot;admicro.vn adtimaserver.vn doubleclick.net google-analytics.com googlesyndication.com googletagmanager.com googletagservices.com microad.net scorecardresearch.com http://admicro.vn http://adtimaserver.vn http://doubleclick.net http://google-analytics.com http://googlesyndication.com http://googletagmanager.com http://googletagservices.com http://microad.net http://scorecardresearch.com https://admicro.vn https://adtimaserver.vn https://doubleclick.net https://google-analytics.com https://googlesyndication.com https://googletagmanager.com https://googletagservices.com https://microad.net https://scorecardresearch.com&quot;</code></pre>
-
-<h3 id="Loi-va-hai"><a href="#Loi-va-hai" class="headerlink" title="Lợi và hại"></a>Lợi và hại</h3><table>
-<thead>
-<tr>
-<th>Lợi</th>
-<th>Hại</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Thời gian load trang nhanh hơn</td>
-<td>Thiết lập phức tạp</td>
-</tr>
-<tr>
-<td>Trang web đỡ rối mắt hơn</td>
-<td>Phải thiết lập cho từng trang web một</td>
-</tr>
-<tr>
-<td>Đỡ tốn tiền Internet (nếu bạn dùng gói xài nhiu trả nhiu)</td>
-<td></td>
-</tr>
-<tr>
-<td>Web chạy mượt mà hơn</td>
-<td></td>
-</tr>
-<tr>
-<td>Loại bỏ theo dõi hành vi người dùng của các website</td>
-<td></td>
-</tr>
-<tr>
-<td>Ngăn ngừa các nguy cơ bảo mật kiểu “Click vào đây để nhận quà”, click vào thì dính virus</td>
-<td></td>
-</tr>
-<tr>
-<td>Chặn luôn các thủ thuật câu like của các trang web (nút like ẩn dưới các chức năng bẫy người dùng click vô)</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="uBlock-–-Firefox-va-Chrome"><a href="#uBlock-–-Firefox-va-Chrome" class="headerlink" title="uBlock – Firefox và Chrome"></a>uBlock – Firefox và Chrome</h2><p>Không khuyến khích sử dụng Add-on này, vì nó sẽ chặn quảng cáo, là cần câu cơm của các trang web Bạn có bao giờ khó chịu khi mở một website lên mà quảng cáo tràn ngập, không thấy nội dung đâu hết? Các pop up hiện ra liên tục với cường độ cao, các bẫy click mà khi click vào thì quảng cáo nhảy xổ ra tràn ngập màn hình? Đã đến lúc chấm dứt cơn ác mộng đấy, bằng một add-on gọi là uBlock Tải tại đây:</p>
-<ul>
-<li>Chrome: <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm</a></li>
-<li>Firefox: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></li>
-</ul>
-<p>Trước khi sử dụng nó, khuyến cáo bạn nên gỡ tất cả các add-on chặn quảng cáo khác Cách sử dụng rất đơn giản, bấm vào biểu tượng của nó &gt; bật &#x2F; tắt cái nút xanh to đùng để bật &#x2F; tắt quảng cáo Trước khi cài &#x2F; khi bật quảng cáo</p>
-<p><img src="https://farm1.staticflickr.com/544/19143668994_c079ef0d7a_o.png"></p>
-<p>Sau khi cài &#x2F; Khi tắt quảng cáo bằng cách kích hoạt uBlock</p>
-<p><img src="https://farm1.staticflickr.com/548/19578291190_af7efd9481_o.png"></p>
-<p>Bạn có thể đọc thêm về hướng dẫn sử dụng tại đây <a href="https://github.com/gorhill/uBlock#documentation">https://github.com/gorhill/uBlock#documentation</a></p>
-<p>Happy surfing the Internet</p>
-]]></content>
-      <categories>
-        <category>Computer Tips</category>
-      </categories>
-      <tags>
-        <tag>add-on</tag>
-        <tag>noscript</tag>
-        <tag>ublock</tag>
       </tags>
   </entry>
   <entry>
@@ -3611,52 +3611,6 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       </tags>
   </entry>
   <entry>
-    <title>[UWP] Create image assets for your apps</title>
-    <url>/2015/10/26/uwp-create-image-assets-for-your-apps/</url>
-    <content><![CDATA[<p>Windows 10 apps (aka Universal Windows App) yêu cầu rất nhiều kích thước hình ảnh khác nhau trong project của nó (hiện tại là 39 kích thước khác nhau). Làm thế nào để tạo ra các hình ảnh này? Mở Photoshop hay GIMP lên để crop, resize, save, rồi lập lại 39 lần hẻ? Hôm nay, bạn đã có thể làm nó dễ dàng chỉ với 1 (vài) click. Thậm chí tạo ra kích thước custom được luôn.</p>
-<span id="more"></span>
-
-<h1 id="1-The-App"><a href="#1-The-App" class="headerlink" title="1. The App"></a>1. The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
-<p>Link: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a></p>
-<p>Nhìn vô biết xài liền, nhưng mà dù sao cũng hướng dẫn bạn một tí nhóe.</p>
-<h1 id="2-Using-it"><a href="#2-Using-it" class="headerlink" title="2. Using it"></a>2. Using it</h1><p><img src="/images/flickr/1528/25014426576_2bb0afed82_o.png"></p>
-<p>Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịch với các slider, nút này nọ để hiểu rõ hơn về app nhóe</p>
-<h1 id="3-Add-custom-size-and-scale"><a href="#3-Add-custom-size-and-scale" class="headerlink" title="3. Add custom size and scale"></a>3. Add custom size and scale</h1><p>Nhấn cái nút dấu + nhỏ nhỏ</p>
-<p><img src="/images/flickr/5627/22493108391_1a6c030571_o.png"></p>
-<p>Trong trang này, bạn có thể thêm các size mới của riêng mình</p>
-<p><img src="/images/flickr/1536/25014463126_d77238d3c3_o.png"></p>
-<p>Platform name is the name of your custom collection. By this way, you can create many platforms that match your need, and choose to generate images for these custom platform or not.</p>
-<p>Platform name là tên của danh sách những cái kích thước khác nhau của bạn. Bằng cách này, bạn có thể tạo bao nhiêu platforms cũng được. Nên đặt tên khác nhau cho dễ nhớ.</p>
-<p>Cái text box bự bự bên dưới là chỗ bạn nhập các thông số kích thước.</p>
-<p>Giải thích cú pháp:</p>
-<p>Mỗi thông số cách nhau bởi dấu “:”. Đầu tiên là tên, rồi rộng, rồi cao. Dễ ẹt mà.</p>
-<p>Khi bạn đang gõ, nếu đúng, nó sẽ preview trước cho bạn xem cái kích thước sẽ được add vào platform đó</p>
-<p>Làm xong rồi thì nhấn Add, cái kích thước đó sẽ nằm trong platform, và platform mới sẽ được thêm vào danh sách các platform.</p>
-<p>Cái hay ho nhứt là, dần dần, danh sách các platform do bạn tạo ra sẽ được đồng bộ hóa giữa tất cả thiết bị mà bạn login bằng cùng tài khoản Microsoft Account. Kiểu như trên công ty tạo ra xài xong, về nhà mở máy lên là đã có sẵn để xài tiếp.</p>
-<h1 id="4-Settings"><a href="#4-Settings" class="headerlink" title="4. Settings"></a>4. Settings</h1><p>Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là “Update Database”</p>
-<p><img src="/images/flickr/1590/24922870222_cf003efd5f_o.png"></p>
-<p>Bình thường, app sẽ update database tự động. Nhưng vì lý do nào đó (kiểu như bạn đang xài dữ liệu 3g, hay PC đang connect tới mạng chập chờn chả hạn), bạn có thể check update bằng tay. Cái này chỉ update cái danh sách platform default, không phải cái custom do bạn tự tạo, nên hok sao âu.</p>
-<h1 id="5-Rate-for-me-please-and-feedback"><a href="#5-Rate-for-me-please-and-feedback" class="headerlink" title="5. Rate for me, please, and feedback"></a>5. Rate for me, please, and feedback</h1><p>Cuối cùng, nếu bạn thấy app này hữu ích, rate cho nó nhá. Nếu bạn gặp lỗi hay vấn đề gì, có thể gửi email cho mềnh tại <a href="mailto:cuoilennaocacban@hotmail.com">cuoilennaocacban@hotmail.com</a></p>
-<p>Hẹn gặp lại các bạn ở những bài blog khác.</p>
-]]></content>
-      <categories>
-        <category>CSharp</category>
-        <category>Windows 10</category>
-      </categories>
-      <tags>
-        <tag>store</tag>
-        <tag>app</tag>
-        <tag>uwp</tag>
-        <tag>windows 10</tag>
-        <tag>assets</tag>
-        <tag>automatically</tag>
-        <tag>generate</tag>
-        <tag>images</tag>
-        <tag>logo</tag>
-        <tag>maker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Visual Studio] Fighting with Bugs and Exceptions</title>
     <url>/2015/11/05/visual-studio-fighting-with-bugs-and-exception/</url>
     <content><![CDATA[<p>Lập trình bằng Visual Studio, tới một thời điểm nào đó ai cũng sẽ gặp bug và Exception. Đối với một số exception, Visual Studio sẽ bôi vàng đoạn code gây ra exception, nhưng đối với một số exception khác, Visual Studio lại nhảy hẳn ra ngoài. Vì sao vậy? Tại sao không cho tôi biết code chỗ nào bị lỗi.</p>
@@ -3740,9 +3694,55 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
       </tags>
   </entry>
   <entry>
+    <title>[UWP] Create image assets for your apps</title>
+    <url>/2015/10/26/uwp-create-image-assets-for-your-apps/</url>
+    <content><![CDATA[<p>Windows 10 apps (aka Universal Windows App) yêu cầu rất nhiều kích thước hình ảnh khác nhau trong project của nó (hiện tại là 39 kích thước khác nhau). Làm thế nào để tạo ra các hình ảnh này? Mở Photoshop hay GIMP lên để crop, resize, save, rồi lập lại 39 lần hẻ? Hôm nay, bạn đã có thể làm nó dễ dàng chỉ với 1 (vài) click. Thậm chí tạo ra kích thước custom được luôn.</p>
+<span id="more"></span>
+
+<h1 id="1-The-App"><a href="#1-The-App" class="headerlink" title="1. The App"></a>1. The App</h1><p>Có một ứng dụng mang tên “Universal Logo Maker for Windows” trên Windows Store. Nó có thể tạo ra tất cả hình ảnh bạn cần, đặc biệt là cho Windows 10 package.</p>
+<p>Link: <a href="https://www.microsoft.com/store/apps/9nblggh5zchk">https://www.microsoft.com/store/apps/9nblggh5zchk</a></p>
+<p>Nhìn vô biết xài liền, nhưng mà dù sao cũng hướng dẫn bạn một tí nhóe.</p>
+<h1 id="2-Using-it"><a href="#2-Using-it" class="headerlink" title="2. Using it"></a>2. Using it</h1><p><img src="/images/flickr/1528/25014426576_2bb0afed82_o.png"></p>
+<p>Nhìn hình trên là biết xài ngay phải hem. Bạn cũng có thể nghịch với các slider, nút này nọ để hiểu rõ hơn về app nhóe</p>
+<h1 id="3-Add-custom-size-and-scale"><a href="#3-Add-custom-size-and-scale" class="headerlink" title="3. Add custom size and scale"></a>3. Add custom size and scale</h1><p>Nhấn cái nút dấu + nhỏ nhỏ</p>
+<p><img src="/images/flickr/5627/22493108391_1a6c030571_o.png"></p>
+<p>Trong trang này, bạn có thể thêm các size mới của riêng mình</p>
+<p><img src="/images/flickr/1536/25014463126_d77238d3c3_o.png"></p>
+<p>Platform name is the name of your custom collection. By this way, you can create many platforms that match your need, and choose to generate images for these custom platform or not.</p>
+<p>Platform name là tên của danh sách những cái kích thước khác nhau của bạn. Bằng cách này, bạn có thể tạo bao nhiêu platforms cũng được. Nên đặt tên khác nhau cho dễ nhớ.</p>
+<p>Cái text box bự bự bên dưới là chỗ bạn nhập các thông số kích thước.</p>
+<p>Giải thích cú pháp:</p>
+<p>Mỗi thông số cách nhau bởi dấu “:”. Đầu tiên là tên, rồi rộng, rồi cao. Dễ ẹt mà.</p>
+<p>Khi bạn đang gõ, nếu đúng, nó sẽ preview trước cho bạn xem cái kích thước sẽ được add vào platform đó</p>
+<p>Làm xong rồi thì nhấn Add, cái kích thước đó sẽ nằm trong platform, và platform mới sẽ được thêm vào danh sách các platform.</p>
+<p>Cái hay ho nhứt là, dần dần, danh sách các platform do bạn tạo ra sẽ được đồng bộ hóa giữa tất cả thiết bị mà bạn login bằng cùng tài khoản Microsoft Account. Kiểu như trên công ty tạo ra xài xong, về nhà mở máy lên là đã có sẵn để xài tiếp.</p>
+<h1 id="4-Settings"><a href="#4-Settings" class="headerlink" title="4. Settings"></a>4. Settings</h1><p>Trong setting, có cũng nhìu tùy chọn. Chọn chỗ lưu, về app này, feedback, blah blah blah. Cái hay nhất là “Update Database”</p>
+<p><img src="/images/flickr/1590/24922870222_cf003efd5f_o.png"></p>
+<p>Bình thường, app sẽ update database tự động. Nhưng vì lý do nào đó (kiểu như bạn đang xài dữ liệu 3g, hay PC đang connect tới mạng chập chờn chả hạn), bạn có thể check update bằng tay. Cái này chỉ update cái danh sách platform default, không phải cái custom do bạn tự tạo, nên hok sao âu.</p>
+<h1 id="5-Rate-for-me-please-and-feedback"><a href="#5-Rate-for-me-please-and-feedback" class="headerlink" title="5. Rate for me, please, and feedback"></a>5. Rate for me, please, and feedback</h1><p>Cuối cùng, nếu bạn thấy app này hữu ích, rate cho nó nhá. Nếu bạn gặp lỗi hay vấn đề gì, có thể gửi email cho mềnh tại <a href="mailto:cuoilennaocacban@hotmail.com">cuoilennaocacban@hotmail.com</a></p>
+<p>Hẹn gặp lại các bạn ở những bài blog khác.</p>
+]]></content>
+      <categories>
+        <category>CSharp</category>
+        <category>Windows 10</category>
+      </categories>
+      <tags>
+        <tag>store</tag>
+        <tag>app</tag>
+        <tag>uwp</tag>
+        <tag>windows 10</tag>
+        <tag>assets</tag>
+        <tag>automatically</tag>
+        <tag>generate</tag>
+        <tag>images</tag>
+        <tag>logo</tag>
+        <tag>maker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nguyễn Ngọc Tiến - 2015-11-13 15:03:02</title>
     <url>/2015/11/13/3b32afebb58ae7f1f05a25abbe5a3552/</url>
-    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#x73;&#116;&#117;&#x64;&#x79;&#x2e;&#110;&#103;&#x6f;&#99;&#116;&#105;&#x65;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x73;&#116;&#117;&#x64;&#x79;&#x2e;&#110;&#103;&#x6f;&#99;&#116;&#105;&#x65;&#x6e;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#115;&#x74;&#117;&#x64;&#x79;&#46;&#x6e;&#103;&#111;&#x63;&#x74;&#x69;&#x65;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#115;&#x74;&#117;&#x64;&#x79;&#46;&#x6e;&#103;&#111;&#x63;&#x74;&#x69;&#x65;&#x6e;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
+    <content><![CDATA[<p>Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. AUTHOR: Nguyễn Ngọc Tiến AUTHOR EMAIL: <a href="mailto:&#115;&#x74;&#x75;&#x64;&#121;&#46;&#110;&#x67;&#111;&#x63;&#116;&#x69;&#x65;&#110;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#115;&#x74;&#x75;&#x64;&#121;&#46;&#110;&#x67;&#111;&#x63;&#116;&#x69;&#x65;&#110;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 118.69.125.122 Array ( [1_Name] &#x3D;&gt; Nguyễn Ngọc Tiến [2_Email] &#x3D;&gt; <a href="mailto:&#x73;&#x74;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#111;&#99;&#116;&#x69;&#x65;&#110;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#x73;&#x74;&#117;&#100;&#x79;&#46;&#x6e;&#103;&#111;&#99;&#116;&#x69;&#x65;&#110;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; ko có [4_Comment] &#x3D;&gt; Mình là sinh viên đã tốt nghiệp trường Hutech, hiện tại đang làm việc bên FIS-Erp oracle nhưng vẩn đam mê với ngôn ngữ .net, không muốn quên mất hoặc phung phí kiến thức .net, nếu bạn có project hay dự án nào cần cộng tác viên thì có thể liên hệ mình, mình ko phải master cũng ko thể gọi là rành rọt tất cả nhưng mình chắc chắn sẽ cố gắng hết mình vì đam mê. Mình đã làm việc với C#,PHP,ASP.net, Java có nhưng chưa sau…. Hi vọng nhận được reply từ bạn. Thân. )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -3751,7 +3751,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Khoa - 2015-12-09 20:06:09</title>
     <url>/2015/12/09/3bb3067b6f31fc538f0af35214931b05/</url>
-    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#104;&#x6f;&#x61;&#116;&#x72;&#x75;&#111;&#110;&#x67;&#98;&#x61;&#99;&#104;&#64;&#108;&#105;&#x76;&#101;&#x2e;&#x63;&#111;&#x6d;">&#107;&#104;&#x6f;&#x61;&#116;&#x72;&#x75;&#111;&#110;&#x67;&#98;&#x61;&#99;&#104;&#64;&#108;&#105;&#x76;&#101;&#x2e;&#x63;&#111;&#x6d;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#107;&#104;&#111;&#x61;&#x74;&#114;&#117;&#111;&#x6e;&#103;&#x62;&#97;&#99;&#104;&#64;&#108;&#x69;&#x76;&#x65;&#46;&#x63;&#x6f;&#109;">&#107;&#104;&#111;&#x61;&#x74;&#114;&#117;&#111;&#x6e;&#103;&#x62;&#97;&#99;&#104;&#64;&#108;&#x69;&#x76;&#x65;&#46;&#x63;&#x6f;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
+    <content><![CDATA[<p>Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều AUTHOR: Khoa AUTHOR EMAIL: <a href="mailto:&#107;&#x68;&#x6f;&#97;&#116;&#114;&#117;&#111;&#110;&#103;&#x62;&#x61;&#x63;&#104;&#x40;&#x6c;&#105;&#x76;&#101;&#x2e;&#99;&#111;&#109;">&#107;&#x68;&#x6f;&#97;&#116;&#114;&#117;&#111;&#110;&#103;&#x62;&#x61;&#x63;&#104;&#x40;&#x6c;&#105;&#x76;&#101;&#x2e;&#99;&#111;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 42.115.184.142 Array ( [1_Name] &#x3D;&gt; Khoa [2_Email] &#x3D;&gt; <a href="mailto:&#x6b;&#x68;&#x6f;&#x61;&#116;&#114;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#104;&#64;&#108;&#x69;&#x76;&#x65;&#x2e;&#x63;&#111;&#109;">&#x6b;&#x68;&#x6f;&#x61;&#116;&#114;&#117;&#x6f;&#110;&#x67;&#98;&#97;&#99;&#104;&#64;&#108;&#x69;&#x76;&#x65;&#x2e;&#x63;&#111;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Như mình tìm hiểu thi ứng dụng Windows 10&#x2F;Windows 8.1 chạy trên PC sẽ nằm ở thư mục C:\Program Files\WindowsApps. Bất kì ai cũng có thể truy cập vào thư mục này để lấy các file assets của projects, thậm chi là Decompile code. Bạn có cách nào có thể ngăn chặn điều này không. Cảm ơn bạn rất nhiều )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4040,7 +4040,7 @@ Extension.SetIsVisible(Rectangle,<span class="literal">true</span>);</code></pre
   <entry>
     <title>Alexandre Carvalho - 2016-03-24 08:34:27</title>
     <url>/2016/03/24/896ee3ee6c6ca8ca682b74cc17b88126/</url>
-    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#99;&#115;&#x39;&#x30;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x61;&#120;&#99;&#115;&#x39;&#x30;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#97;&#120;&#x63;&#x73;&#x39;&#48;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#97;&#120;&#x63;&#x73;&#x39;&#48;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
+    <content><![CDATA[<p>Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio AUTHOR: Alexandre Carvalho AUTHOR EMAIL: <a href="mailto:&#x61;&#120;&#99;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x61;&#120;&#99;&#115;&#x39;&#48;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a> AUTHOR URL: SUBJECT: [Tuan Tran’s Blog] About me IP: 188.80.201.175 Array ( [1_Name] &#x3D;&gt; Alexandre Carvalho [2_Email] &#x3D;&gt; <a href="mailto:&#x61;&#x78;&#99;&#115;&#x39;&#x30;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x61;&#x78;&#99;&#115;&#x39;&#x30;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a> [3_Website] &#x3D;&gt; [4_Comment] &#x3D;&gt; Hi,good work please can provide me the project “30-WP8.1-Glance-Battery” I found very interesting, but when I try to open the project gives error to be associated with your online account Visual studio )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -4586,7 +4586,7 @@ services.AddSingleton&lt;ITodoRepository, TodoRepository&gt;();</code></pre>
   <entry>
     <title>Luong Anh - 2017-01-17 22:19:01</title>
     <url>/2017/01/17/159ed254b7a4692a166335dc1f20f50b/</url>
-    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#x75;&#x6f;&#110;&#x67;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#108;&#x75;&#x6f;&#110;&#x67;&#x61;&#x6e;&#x68;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#x75;&#111;&#110;&#103;&#x61;&#110;&#104;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#108;&#x75;&#111;&#110;&#103;&#x61;&#110;&#104;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
+    <content><![CDATA[<p>Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… AUTHOR: Luong Anh AUTHOR EMAIL: <a href="mailto:&#108;&#117;&#111;&#x6e;&#x67;&#x61;&#x6e;&#104;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#108;&#117;&#111;&#x6e;&#x67;&#x61;&#x6e;&#104;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a> AUTHOR URL: <a href="http://remductrung.com/">http://remductrung.com</a> SUBJECT: [Tuan Tran’s Blog] About me IP: 183.81.94.111 Array ( [1_Name] &#x3D;&gt; Luong Anh [2_Email] &#x3D;&gt; <a href="mailto:&#108;&#117;&#111;&#x6e;&#103;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#108;&#117;&#111;&#x6e;&#103;&#x61;&#110;&#x68;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a> [3_Website] &#x3D;&gt; <a href="http://remductrung.com/">http://remductrung.com</a> [4_Comment] &#x3D;&gt; Chào Tuấn, mình đang vướng mắc phải 1 vấn đề mà hiện tại mình ko tìm ra cách giải quyết, khá bế tắc (về lập trình web asp.net mvc), hy vọng Tuấn có thể giúp mình. MÌnh thật sự đang rất cần 1 sự trợ giúp. Mong hồi âm… )</p>
 ]]></content>
       <categories>
         <category>uncategorized</category>
@@ -8742,6 +8742,47 @@ end</code></pre>
       </categories>
   </entry>
   <entry>
+    <title>[Machine Learning] - 3.1 - Classification and Representation</title>
+    <url>/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
+    <content><![CDATA[<p>Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.</p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-classification-and-representation">1. Classification and Representation</a><ul>
+<li><a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
+<li><a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
+</ul>
+</li>
+<li><a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
+</ul>
+<h1 id="1-Classification-and-Representation"><a href="#1-Classification-and-Representation" class="headerlink" title="1. Classification and Representation"></a><strong>1. Classification and Representation</strong></h1><h2 id="1-1-Sigmoid-Function-or-Logistic-Function"><a href="#1-1-Sigmoid-Function-or-Logistic-Function" class="headerlink" title="1.1. Sigmoid Function or Logistic Function"></a><strong>1.1. Sigmoid Function or Logistic Function</strong></h2><p>Trong bài toán phân loại (classification), mặc dù ta có thể tiếp cận nó bằng các thuật toán linear regression đã biết bằng cách tạm thời quên đi giá trị của y chỉ có thể là 0 hoặc 1.Cách tiếp cận này có vẻ không được tốt cho lắm. Giá trị của $latex h_0(x)$ phải nằm trong khoảng từ 0 tới 1.</p>
+<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;&#x3D;h_\theta(x)&lt;&#x3D;1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
+<p>$latex h_\theta (x) &#x3D; g ( \theta^T x )$<br>$latex z &#x3D; \theta^T x$<br>$latex g(z) &#x3D; \dfrac{1}{1 + e^{-z}}$ </p>
+<p>biểu thức trên có biểu diễn đồ thị như sau:</p>
+<p><img src="https://i.imgur.com/9IHlEt9.png"></p>
+<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả &#x3D; 1. Ví dụ như nếu $latex h_\theta(x) &#x3D; 0.7$ có nghĩa là xác suất kết quả &#x3D; 1 là 70%. Ngược lại, xác xuất kết quả &#x3D; 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
+<p>$latex h_\theta(x) &#x3D; P(y&#x3D;1 | x ; \theta) &#x3D; 1 - P(y&#x3D;0 | x ; \theta)$<br>$latex P(y &#x3D; 0 | x;\theta) + P(y &#x3D; 1 | x ; \theta) &#x3D; 1$ </p>
+<h2 id="1-2-Decision-Boundary"><a href="#1-2-Decision-Boundary" class="headerlink" title="1.2. Decision Boundary"></a><strong>1.2. Decision Boundary</strong></h2><p>Dựa vào Logistic function ở trên, ta có thể `biến đổi` hàm hypothesis của ta lại thành như sau:</p>
+<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y &#x3D; 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y &#x3D; 0$ </p>
+<p>Function g(z) hoạt động như sau:</p>
+<p>$latex g(z) \geq 0.5$<br>when<br>$latex z \geq 0$ </p>
+<p>Nhớ rằng:</p>
+<p>$latex z&#x3D;0, e^{0}&#x3D;1 \Rightarrow g(z)&#x3D;1&#x2F;2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)&#x3D;1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)&#x3D;0$ </p>
+<p>Như vậy, ta có thể viết:</p>
+<p>$latex h_\theta(x) &#x3D; g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
+<p>Từ những phát biểu trên, ta có thể viết</p>
+<p>$latex \theta^T x \geq 0 \Rightarrow y &#x3D; 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y &#x3D; 0$ </p>
+<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y &#x3D; 0 và vùng y &#x3D; 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
+<h1 id="2-Vi-du"><a href="#2-Vi-du" class="headerlink" title="2. Ví dụ"></a><strong>2. Ví dụ</strong></h1><p>Ta có ví dụ sau:</p>
+<p>$latex \theta &#x3D; \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y &#x3D; 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
+<p>vậy đồ thị của chúng ta sẽ giống như sau</p>
+<p><img src="https://i.imgur.com/VNSdsHL.png"></p>
+<p>Lưu ý rằng tùy vào hàm hypothesis và các tham số theta, hình dáng boudary line có thể thay đổi tương ứng</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+  </entry>
+  <entry>
     <title>[Travel] - Transportation in Europe</title>
     <url>/2019/05/01/transportation-in-europe/</url>
     <content><![CDATA[<p>Nếu bạn có dư dả thời gian và nguồn kinh phí eo hẹp, thì cách tốt nhất để dạo vòng quanh các nước EU chính là các phương tiện công cộng.</p>
@@ -8836,47 +8877,6 @@ end</code></pre>
         <tag>train</tag>
         <tag>travel</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>[Machine Learning] - 3.1 - Classification and Representation</title>
-    <url>/2019/05/14/machine-learning-1-3-classification-and-representation/</url>
-    <content><![CDATA[<p>Tuần 3 trong course Machine Learning của giáo sư Andrew Ng trên Coursera.</p>
-<span id="more"></span>
-<ul>
-<li><a href="#1-classification-and-representation">1. Classification and Representation</a><ul>
-<li><a href="#11-sigmoid-function-or-logistic-function">1.1. Sigmoid Function or Logistic Function</a></li>
-<li><a href="#12-decision-boundary">1.2. Decision Boundary</a></li>
-</ul>
-</li>
-<li><a href="#2-v%C3%AD-d%E1%BB%A5">2. Ví dụ</a></li>
-</ul>
-<h1 id="1-Classification-and-Representation"><a href="#1-Classification-and-Representation" class="headerlink" title="1. Classification and Representation"></a><strong>1. Classification and Representation</strong></h1><h2 id="1-1-Sigmoid-Function-or-Logistic-Function"><a href="#1-1-Sigmoid-Function-or-Logistic-Function" class="headerlink" title="1.1. Sigmoid Function or Logistic Function"></a><strong>1.1. Sigmoid Function or Logistic Function</strong></h2><p>Trong bài toán phân loại (classification), mặc dù ta có thể tiếp cận nó bằng các thuật toán linear regression đã biết bằng cách tạm thời quên đi giá trị của y chỉ có thể là 0 hoặc 1.Cách tiếp cận này có vẻ không được tốt cho lắm. Giá trị của $latex h_0(x)$ phải nằm trong khoảng từ 0 tới 1.</p>
-<p>Để giải quyết vấn đề này, ta sẽ biến đổi hàm hypotheses $latex h_0(x)$ để thỏa điều kiện $latex 0&lt;&#x3D;h_\theta(x)&lt;&#x3D;1$.Ta sẽ <em>nhét</em> $latex \theta^Tx$ vào Logistic Function:</p>
-<p>$latex h_\theta (x) &#x3D; g ( \theta^T x )$<br>$latex z &#x3D; \theta^T x$<br>$latex g(z) &#x3D; \dfrac{1}{1 + e^{-z}}$ </p>
-<p>biểu thức trên có biểu diễn đồ thị như sau:</p>
-<p><img src="https://i.imgur.com/9IHlEt9.png"></p>
-<p>Function g(z) có thể biểu diễn bất kỳ số thực nào nằm trong khoảng từ 0 đến 1.$latex h_\theta(x)$ cho chúng ta xác suất kết quả &#x3D; 1. Ví dụ như nếu $latex h_\theta(x) &#x3D; 0.7$ có nghĩa là xác suất kết quả &#x3D; 1 là 70%. Ngược lại, xác xuất kết quả &#x3D; 0 là 30% (vì output chỉ có thể có 2 giá trị là 0 và 1).</p>
-<p>$latex h_\theta(x) &#x3D; P(y&#x3D;1 | x ; \theta) &#x3D; 1 - P(y&#x3D;0 | x ; \theta)$<br>$latex P(y &#x3D; 0 | x;\theta) + P(y &#x3D; 1 | x ; \theta) &#x3D; 1$ </p>
-<h2 id="1-2-Decision-Boundary"><a href="#1-2-Decision-Boundary" class="headerlink" title="1.2. Decision Boundary"></a><strong>1.2. Decision Boundary</strong></h2><p>Dựa vào Logistic function ở trên, ta có thể `biến đổi` hàm hypothesis của ta lại thành như sau:</p>
-<p> $latex h_\theta(x) \geq 0.5 \Rightarrow y &#x3D; 1$<br> $latex h_\theta(x) &lt; 0.5 \Rightarrow y &#x3D; 0$ </p>
-<p>Function g(z) hoạt động như sau:</p>
-<p>$latex g(z) \geq 0.5$<br>when<br>$latex z \geq 0$ </p>
-<p>Nhớ rằng:</p>
-<p>$latex z&#x3D;0, e^{0}&#x3D;1 \Rightarrow g(z)&#x3D;1&#x2F;2$<br>$latex z \to \infty, e^{-\infty} \to 0 \Rightarrow g(z)&#x3D;1$<br>$latex z \to -\infty, e^{\infty}\to \infty \Rightarrow g(z)&#x3D;0$ </p>
-<p>Như vậy, ta có thể viết:</p>
-<p>$latex h_\theta(x) &#x3D; g(\theta^T x) \geq 0.5$<br>when<br>$latex \theta^T x \geq 0$ </p>
-<p>Từ những phát biểu trên, ta có thể viết</p>
-<p>$latex \theta^T x \geq 0 \Rightarrow y &#x3D; 1$<br>$latex \theta^T x &lt; 0 \Rightarrow y &#x3D; 0$ </p>
-<p><strong>Decision Boundary</strong> chính là đường phân chia vùng y &#x3D; 0 và vùng y &#x3D; 1, được tạo ra bởi hàm hypothesis của chúng ta</p>
-<h1 id="2-Vi-du"><a href="#2-Vi-du" class="headerlink" title="2. Ví dụ"></a><strong>2. Ví dụ</strong></h1><p>Ta có ví dụ sau:</p>
-<p>$latex \theta &#x3D; \begin{bmatrix}5\\ -1\\ 0\end{bmatrix}$<br>$latex y &#x3D; 1 \; if \; 5 + (-1) x_1 + 0 x_2 \geq 0$<br>$latex 5 - x_1 \geq 0$<br>$latex - x_1 \geq -5$<br>$latex x_1 \leq 5$ </p>
-<p>vậy đồ thị của chúng ta sẽ giống như sau</p>
-<p><img src="https://i.imgur.com/VNSdsHL.png"></p>
-<p>Lưu ý rằng tùy vào hàm hypothesis và các tham số theta, hình dáng boudary line có thể thay đổi tương ứng</p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
   </entry>
   <entry>
     <title>[Research] - Gecko Dom Logging system</title>
@@ -9039,6 +9039,50 @@ string getName();
       </tags>
   </entry>
   <entry>
+    <title>[Life] - Fighting with unauthorized copies of your content</title>
+    <url>/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
+    <content><![CDATA[<p>Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.</p>
+<p>The point is, they are copying content from my blog, without my authorization. It’s time to tackle this problem.</p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-search-for-all-other-sites">1. Search for all other sites</a></li>
+<li><a href="#2-is-the-site-tolerable">2. Is the site tolerable?</a></li>
+<li><a href="#3-file-a-dmca-report">3. File a DMCA report</a></li>
+<li><a href="#4-what-happened-after-a-link-is-approved">4. What happened after a link is approved</a></li>
+</ul>
+<h1 id="1-Search-for-all-other-sites"><a href="#1-Search-for-all-other-sites" class="headerlink" title="1. Search for all other sites"></a>1. Search for all other sites</h1><p>I thought this would be easy. Turn out it the most difficult step to take. The violated sites are managed by ‘master’ of Search Engine Optimization. They know how to optimize their site for better place in Google search result. They also know how to change your post just a little bit to deceive the Google algorithm to find duplication.</p>
+<ol>
+<li><strong>Search for the title</strong>. This search is easy. Copy your post title (maybe you have to remove all the special character like <code>[]</code> or <code>&#123;&#125;</code>). Sometime, when your title is written in English, you can translate it to your mother tongue language.</li>
+<li><strong>Search for a sentence</strong>. Choose short sentence with your writing style that cannot be meet elsewhere is the best option. A short sentence for this search to work would have more than 10 or 15 words.</li>
+<li><strong>Search by Image</strong>. This is the last search that I have made. The result is not useful but try anyway.</li>
+</ol>
+<h1 id="2-Is-the-site-tolerable"><a href="#2-Is-the-site-tolerable" class="headerlink" title="2. Is the site tolerable?"></a>2. Is the site tolerable?</h1><p>In Vietnam, it’s a tacit agreement when you copy the whole post published by someone else, then re-post it on your site and have a link back to the original content (at the end or beginning of the post). I know this is not legal in many countries. Instead, you are only allowed to “quote” a segment, a sentence from that original post with appropriate citing.</p>
+<p>That’s why your next job is to determine that the violated site worthy to use your hard work and research, time and money for free.</p>
+<p>I suggest no.</p>
+<h1 id="3-File-a-DMCA-report"><a href="#3-File-a-DMCA-report" class="headerlink" title="3. File a DMCA report"></a>3. File a DMCA report</h1><p>This will be the easiest step. You will need your Google account, and</p>
+<ul>
+<li>Link to your original content.</li>
+<li>Link to violated content (must be a link to specific post)</li>
+<li>Time</li>
+</ul>
+<p>Go to <a href="https://support.google.com/legal">Google Legal page</a> and select accordingly</p>
+<p><img src="https://i.imgur.com/MdLhEw9.png" alt="Click this link"></p>
+<p>The result should look like this</p>
+<p><img src="https://i.imgur.com/YeNk9JQ.png" alt="result"></p>
+<h1 id="4-What-happened-after-a-link-is-approved"><a href="#4-What-happened-after-a-link-is-approved" class="headerlink" title="4. What happened after a link is approved"></a>4. What happened after a link is approved</h1><p>The certain outcome is that the link will be removed from Google search result (including all other search tool using Google search engine).</p>
+<p>Another possible outcome is that the violated site (with enough DMCA report), will be remove completely from google search result.</p>
+<p>Cheers :D</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>DMCA</tag>
+        <tag>original</tag>
+        <tag>violation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Machine Learning] - 3.2 - Logistic Regression Model</title>
     <url>/2019/06/15/machine-learning-3-2-logistic-regression-model/</url>
     <content><![CDATA[<p>Bài thứ 2 trong tuần 3 của khóa học Machine Learning của giáo sư Andrew Ng</p>
@@ -9166,50 +9210,6 @@ string getName();
       </categories>
       <tags>
         <tag>java for beginner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Life] - Fighting with unauthorized copies of your content</title>
-    <url>/2019/06/16/fighting-with-unauthorized-copies-of-your-content/</url>
-    <content><![CDATA[<p>Last Friday, while looking through the stats from my blog, I notice something strange. A hyperlink that lead to my blog is not “right”. I clicked on that link (a web search result page actually), a search tool appeared with my original post listed as page 2. Curios, I click on page 1 of the search result, and voila, some sites with tricky SEO technique take the few first result.</p>
-<p>The point is, they are copying content from my blog, without my authorization. It’s time to tackle this problem.</p>
-<span id="more"></span>
-<ul>
-<li><a href="#1-search-for-all-other-sites">1. Search for all other sites</a></li>
-<li><a href="#2-is-the-site-tolerable">2. Is the site tolerable?</a></li>
-<li><a href="#3-file-a-dmca-report">3. File a DMCA report</a></li>
-<li><a href="#4-what-happened-after-a-link-is-approved">4. What happened after a link is approved</a></li>
-</ul>
-<h1 id="1-Search-for-all-other-sites"><a href="#1-Search-for-all-other-sites" class="headerlink" title="1. Search for all other sites"></a>1. Search for all other sites</h1><p>I thought this would be easy. Turn out it the most difficult step to take. The violated sites are managed by ‘master’ of Search Engine Optimization. They know how to optimize their site for better place in Google search result. They also know how to change your post just a little bit to deceive the Google algorithm to find duplication.</p>
-<ol>
-<li><strong>Search for the title</strong>. This search is easy. Copy your post title (maybe you have to remove all the special character like <code>[]</code> or <code>&#123;&#125;</code>). Sometime, when your title is written in English, you can translate it to your mother tongue language.</li>
-<li><strong>Search for a sentence</strong>. Choose short sentence with your writing style that cannot be meet elsewhere is the best option. A short sentence for this search to work would have more than 10 or 15 words.</li>
-<li><strong>Search by Image</strong>. This is the last search that I have made. The result is not useful but try anyway.</li>
-</ol>
-<h1 id="2-Is-the-site-tolerable"><a href="#2-Is-the-site-tolerable" class="headerlink" title="2. Is the site tolerable?"></a>2. Is the site tolerable?</h1><p>In Vietnam, it’s a tacit agreement when you copy the whole post published by someone else, then re-post it on your site and have a link back to the original content (at the end or beginning of the post). I know this is not legal in many countries. Instead, you are only allowed to “quote” a segment, a sentence from that original post with appropriate citing.</p>
-<p>That’s why your next job is to determine that the violated site worthy to use your hard work and research, time and money for free.</p>
-<p>I suggest no.</p>
-<h1 id="3-File-a-DMCA-report"><a href="#3-File-a-DMCA-report" class="headerlink" title="3. File a DMCA report"></a>3. File a DMCA report</h1><p>This will be the easiest step. You will need your Google account, and</p>
-<ul>
-<li>Link to your original content.</li>
-<li>Link to violated content (must be a link to specific post)</li>
-<li>Time</li>
-</ul>
-<p>Go to <a href="https://support.google.com/legal">Google Legal page</a> and select accordingly</p>
-<p><img src="https://i.imgur.com/MdLhEw9.png" alt="Click this link"></p>
-<p>The result should look like this</p>
-<p><img src="https://i.imgur.com/YeNk9JQ.png" alt="result"></p>
-<h1 id="4-What-happened-after-a-link-is-approved"><a href="#4-What-happened-after-a-link-is-approved" class="headerlink" title="4. What happened after a link is approved"></a>4. What happened after a link is approved</h1><p>The certain outcome is that the link will be removed from Google search result (including all other search tool using Google search engine).</p>
-<p>Another possible outcome is that the violated site (with enough DMCA report), will be remove completely from google search result.</p>
-<p>Cheers :D</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>DMCA</tag>
-        <tag>original</tag>
-        <tag>violation</tag>
       </tags>
   </entry>
   <entry>
@@ -9556,8 +9556,8 @@ public int getWeight() &#123;
       <categories>
         <category>CSharp</category>
         <category>ASP.NET</category>
-        <category>JavaScript and TypeScript</category>
         <category>VSCode</category>
+        <category>JavaScript and TypeScript</category>
       </categories>
       <tags>
         <tag>component</tag>
@@ -11262,6 +11262,153 @@ HasOven      = <span class="number">100</span></code></pre>
       </tags>
   </entry>
   <entry>
+    <title>XAML for beginner - Part 1</title>
+    <url>/2023/06/24/XAML-for-beginner-Part-1/</url>
+    <content><![CDATA[<p>A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. </p>
+<p>In this post, I will introduce the most basic concept of XAML layout, as well as how to use them in your personal project.</p>
+<span id="more"></span>
+
+<h1 id="1-Two-lines-on-History-of-XAML"><a href="#1-Two-lines-on-History-of-XAML" class="headerlink" title="1. Two lines on History of XAML"></a>1. Two lines on History of XAML</h1><p>XAML, aka Extensible Application Markup Language, was a nice replacement for Windows Form. Later, it was used for Windows Phone, Universal Windows Platform apps (the apps that run on Windows 8 and above).</p>
+<h1 id="2-Basic-controls-Grid"><a href="#2-Basic-controls-Grid" class="headerlink" title="2. Basic controls - Grid"></a>2. Basic controls - <code>Grid</code></h1><p>In XAML, there are some basic controls that was use as a container for other controls, which is <code>Grid</code>, <code>StackPanel</code>, and <code>ScrollViewer</code>. I will cover the <code>ScrollViewer</code> at the end of this post.</p>
+<p>A comparison as follow:</p>
+<table>
+<thead>
+<tr>
+<th>Grid</th>
+<th>StackPanel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The inner controls can overlap with each other</td>
+<td>Inner controls stack horizontally or vertically</td>
+</tr>
+<tr>
+<td>Inner controls can be arranged based on row and columns</td>
+<td>N&#x2F;A</td>
+</tr>
+<tr>
+<td>The grid can be expanded to parent control</td>
+<td>The StackPanel expands based on the inner content&#x2F;controls</td>
+</tr>
+</tbody></table>
+<p>Let’s start with a sample WPF application.</p>
+<p>Open the file <code>Window.xaml</code> in your Visual Studio. Inside the outer <code>Grid</code>, add two <code>TextBlock</code> as follow:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">x:Class</span>=<span class="string">&quot;WpfApp1.Window1&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:d</span>=<span class="string">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:mc</span>=<span class="string">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span></span>
+<span class="tag">        <span class="attr">xmlns:local</span>=<span class="string">&quot;clr-namespace:WpfApp1&quot;</span></span>
+<span class="tag">        <span class="attr">mc:Ignorable</span>=<span class="string">&quot;d&quot;</span></span>
+<span class="tag">        <span class="attr">Title</span>=<span class="string">&quot;Window1&quot;</span> <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span> <span class="attr">Width</span>=<span class="string">&quot;480&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span>/&gt;</span>
+        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span>  <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span>/&gt;</span> 
+    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Window</span>&gt;</span></code></pre>
+
+<p>You will receive a layout with overlapped texts like this</p>
+<p><img src="/images/2023/06/ieNDg54OjR.png" alt="overlap text"></p>
+<p>Overlapping contents allow you to design more sophisticated&#x2F;beautiful app, for example:</p>
+<p><img src="/images/2013/11/112213_0144_windowsphon6.png" alt="advanced layout"></p>
+<h2 id="2-1-Grid’s-column-and-row"><a href="#2-1-Grid’s-column-and-row" class="headerlink" title="2.1. Grid’s column and row"></a>2.1. Grid’s column and row</h2><p><code>Grid</code> allows you to arrange the content into columns and row. You can declare column definitions and row definitions. After that, for each child control, you can set column or row property.</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;80&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
+
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
+
+<p>The textblocks are now arranged to rows accordingly</p>
+<p><img src="/images/2023/06/4kJL6V84m0.png" alt="rows"></p>
+<p>You can do the same for columns, or combine the rows and columns to have a table like layout</p>
+<h2 id="2-2-Row-and-column-size"><a href="#2-2-Row-and-column-size" class="headerlink" title="2.2. Row and column size"></a>2.2. Row and column size</h2><p>If you’re a web developers, at some point, you would need to scratch your head on how to make this <code>div</code> take up the whole space, or make it fit the contents, etc. TBH, it was never an easy task, consider that you might have a dozen of nested elements acts as the containers for the <code>div</code> element that you want to display on the screen.</p>
+<p>Luckily, <code>XAML</code> solved this problem by 3 simple concept for height of rows and width of columns:</p>
+<ul>
+<li>Fixed size: The width&#x2F;height is exactly what you declared</li>
+<li>Auto: The width&#x2F;height is equal to the width&#x2F;height of the content inside it</li>
+<li>Star: The width&#x2F;height is expand to fit the remaining space of the parent control</li>
+<li>Number with star: Act as percentage. Useful for scaling</li>
+</ul>
+<p>Let’s see them in action. The following code will give this layout</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;3*&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;7*&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
+
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;15&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
+<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;2&quot;</span></span>
+<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;3&quot;</span></span>
+<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
+
+<p><img src="/images/2023/06/3.png" alt="size styles"></p>
+<blockquote>
+<p>Obviously, you can nest multiple <code>Grid</code> in a parent <code>Grid</code></p>
+</blockquote>
+<h1 id="3-Basic-control-StackPanel"><a href="#3-Basic-control-StackPanel" class="headerlink" title="3. Basic control - StackPanel"></a>3. Basic control - <code>StackPanel</code></h1><p><code>StackPanel</code>, as the name of the control, stack the content horizontally or vertically.</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">&quot;16&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+    <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
+
+<p>By default, <code>StackPanel</code> is vertical</p>
+<p><img src="/images/2023/06/4.png" alt="StackPanel vertical"></p>
+<p>You can make it Horizontal by set the <code>Orientation=&quot;Horizontal&quot;</code></p>
+<p><img src="/images/2023/06/5.png" alt="StackPanel horizontal"></p>
+<h1 id="4-Basic-control-ScrollViewer"><a href="#4-Basic-control-ScrollViewer" class="headerlink" title="4. Basic control - ScrollViewer"></a>4. Basic control - <code>ScrollViewer</code></h1><p><code>ScrollViewer</code> allow you to scroll the content that overflow the screensize. This apply to both horizontal and vertical size</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">ScrollViewer</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">StackPanel</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;400&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
+<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span></span>
+<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Violet&quot;</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">ScrollViewer</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
+
+<p><img src="/images/2023/06/6.png" alt="ScrollViewer"></p>
+]]></content>
+      <categories>
+        <category>XAML</category>
+      </categories>
+      <tags>
+        <tag>XAML</tag>
+        <tag>Windows Store App</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>XAML for beginner - Part 2</title>
     <url>/2023/06/25/XAML-for-beginner-Part-2/</url>
     <content><![CDATA[<p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>
@@ -11470,170 +11617,6 @@ HasOven      = <span class="number">100</span></code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Canada Express Entry Summary</title>
-    <url>/2023/10/07/Canada-Express-Entry-Summary/</url>
-    <content><![CDATA[<p>A glimpse to the Express Entry program by Immigration, Refugees and Citizenship Canada</p>
-<iframe title="Report Section" width="1024" height="612" src="https://huntertran.github.io/eedraws/" frameborder="0" allowFullScreen="true"></iframe>
-
-<p>There is also an old PowerBI app <a href="https://app.powerbi.com/view?r=eyJrIjoiZGQxYWQyNDUtMzUzOS00ZjdjLWJkY2EtNDc4NzRhMDBmYjQxIiwidCI6IjJiZDdmMTE1LTFjMmMtNDdhMC05YzdlLTY1ODAxNGZiODE0YyIsImMiOjEwfQ==&pageName=ReportSection">here</a></p>
-]]></content>
-      <categories>
-        <category>reports</category>
-      </categories>
-      <tags>
-        <tag>data</tag>
-        <tag>powerbi</tag>
-        <tag>reports</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XAML for beginner - Part 1</title>
-    <url>/2023/06/24/XAML-for-beginner-Part-1/</url>
-    <content><![CDATA[<p>A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. </p>
-<p>In this post, I will introduce the most basic concept of XAML layout, as well as how to use them in your personal project.</p>
-<span id="more"></span>
-
-<h1 id="1-Two-lines-on-History-of-XAML"><a href="#1-Two-lines-on-History-of-XAML" class="headerlink" title="1. Two lines on History of XAML"></a>1. Two lines on History of XAML</h1><p>XAML, aka Extensible Application Markup Language, was a nice replacement for Windows Form. Later, it was used for Windows Phone, Universal Windows Platform apps (the apps that run on Windows 8 and above).</p>
-<h1 id="2-Basic-controls-Grid"><a href="#2-Basic-controls-Grid" class="headerlink" title="2. Basic controls - Grid"></a>2. Basic controls - <code>Grid</code></h1><p>In XAML, there are some basic controls that was use as a container for other controls, which is <code>Grid</code>, <code>StackPanel</code>, and <code>ScrollViewer</code>. I will cover the <code>ScrollViewer</code> at the end of this post.</p>
-<p>A comparison as follow:</p>
-<table>
-<thead>
-<tr>
-<th>Grid</th>
-<th>StackPanel</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>The inner controls can overlap with each other</td>
-<td>Inner controls stack horizontally or vertically</td>
-</tr>
-<tr>
-<td>Inner controls can be arranged based on row and columns</td>
-<td>N&#x2F;A</td>
-</tr>
-<tr>
-<td>The grid can be expanded to parent control</td>
-<td>The StackPanel expands based on the inner content&#x2F;controls</td>
-</tr>
-</tbody></table>
-<p>Let’s start with a sample WPF application.</p>
-<p>Open the file <code>Window.xaml</code> in your Visual Studio. Inside the outer <code>Grid</code>, add two <code>TextBlock</code> as follow:</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Window</span> <span class="attr">x:Class</span>=<span class="string">&quot;WpfApp1.Window1&quot;</span></span>
-<span class="tag">        <span class="attr">xmlns</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span></span>
-<span class="tag">        <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span></span>
-<span class="tag">        <span class="attr">xmlns:d</span>=<span class="string">&quot;http://schemas.microsoft.com/expression/blend/2008&quot;</span></span>
-<span class="tag">        <span class="attr">xmlns:mc</span>=<span class="string">&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;</span></span>
-<span class="tag">        <span class="attr">xmlns:local</span>=<span class="string">&quot;clr-namespace:WpfApp1&quot;</span></span>
-<span class="tag">        <span class="attr">mc:Ignorable</span>=<span class="string">&quot;d&quot;</span></span>
-<span class="tag">        <span class="attr">Title</span>=<span class="string">&quot;Window1&quot;</span> <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span> <span class="attr">Width</span>=<span class="string">&quot;480&quot;</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span>/&gt;</span>
-        <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span>  <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span>/&gt;</span> 
-    <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">Window</span>&gt;</span></code></pre>
-
-<p>You will receive a layout with overlapped texts like this</p>
-<p><img src="/images/2023/06/ieNDg54OjR.png" alt="overlap text"></p>
-<p>Overlapping contents allow you to design more sophisticated&#x2F;beautiful app, for example:</p>
-<p><img src="/images/2013/11/112213_0144_windowsphon6.png" alt="advanced layout"></p>
-<h2 id="2-1-Grid’s-column-and-row"><a href="#2-1-Grid’s-column-and-row" class="headerlink" title="2.1. Grid’s column and row"></a>2.1. Grid’s column and row</h2><p><code>Grid</code> allows you to arrange the content into columns and row. You can declare column definitions and row definitions. After that, for each child control, you can set column or row property.</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;80&quot;</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
-
-    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
-<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;50&quot;</span></span>
-<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
-    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
-<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
-<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
-<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
-
-<p>The textblocks are now arranged to rows accordingly</p>
-<p><img src="/images/2023/06/4kJL6V84m0.png" alt="rows"></p>
-<p>You can do the same for columns, or combine the rows and columns to have a table like layout</p>
-<h2 id="2-2-Row-and-column-size"><a href="#2-2-Row-and-column-size" class="headerlink" title="2.2. Row and column size"></a>2.2. Row and column size</h2><p>If you’re a web developers, at some point, you would need to scratch your head on how to make this <code>div</code> take up the whole space, or make it fit the contents, etc. TBH, it was never an easy task, consider that you might have a dozen of nested elements acts as the containers for the <code>div</code> element that you want to display on the screen.</p>
-<p>Luckily, <code>XAML</code> solved this problem by 3 simple concept for height of rows and width of columns:</p>
-<ul>
-<li>Fixed size: The width&#x2F;height is exactly what you declared</li>
-<li>Auto: The width&#x2F;height is equal to the width&#x2F;height of the content inside it</li>
-<li>Star: The width&#x2F;height is expand to fit the remaining space of the parent control</li>
-<li>Number with star: Act as percentage. Useful for scaling</li>
-</ul>
-<p>Let’s see them in action. The following code will give this layout</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;60&quot;</span> /&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;3*&quot;</span> /&gt;</span>
-        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;7*&quot;</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
-
-    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span></span>
-<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;15&quot;</span></span>
-<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello world&quot;</span> /&gt;</span>
-    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span></span>
-<span class="tag">               <span class="attr">FontSize</span>=<span class="string">&quot;80&quot;</span></span>
-<span class="tag">               <span class="attr">Text</span>=<span class="string">&quot;Hello WPF&quot;</span> /&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;2&quot;</span></span>
-<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
-    <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;3&quot;</span></span>
-<span class="tag">          <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
-<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
-
-<p><img src="/images/2023/06/3.png" alt="size styles"></p>
-<blockquote>
-<p>Obviously, you can nest multiple <code>Grid</code> in a parent <code>Grid</code></p>
-</blockquote>
-<h1 id="3-Basic-control-StackPanel"><a href="#3-Basic-control-StackPanel" class="headerlink" title="3. Basic control - StackPanel"></a>3. Basic control - <code>StackPanel</code></h1><p><code>StackPanel</code>, as the name of the control, stack the content horizontally or vertically.</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">&quot;16&quot;</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
-<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
-<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
-        <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
-<span class="tag">              <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
-<span class="tag">              <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
-    <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
-
-<p>By default, <code>StackPanel</code> is vertical</p>
-<p><img src="/images/2023/06/4.png" alt="StackPanel vertical"></p>
-<p>You can make it Horizontal by set the <code>Orientation=&quot;Horizontal&quot;</code></p>
-<p><img src="/images/2023/06/5.png" alt="StackPanel horizontal"></p>
-<h1 id="4-Basic-control-ScrollViewer"><a href="#4-Basic-control-ScrollViewer" class="headerlink" title="4. Basic control - ScrollViewer"></a>4. Basic control - <code>ScrollViewer</code></h1><p><code>ScrollViewer</code> allow you to scroll the content that overflow the screensize. This apply to both horizontal and vertical size</p>
-<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Background</span>=<span class="string">&quot;Transparent&quot;</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">ScrollViewer</span>&gt;</span>
-        <span class="tag">&lt;<span class="name">StackPanel</span>&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;80&quot;</span></span>
-<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
-<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Red&quot;</span> /&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
-<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;40&quot;</span></span>
-<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Blue&quot;</span> /&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
-<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;400&quot;</span></span>
-<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Green&quot;</span> /&gt;</span>
-            <span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Width</span>=<span class="string">&quot;160&quot;</span></span>
-<span class="tag">                  <span class="attr">Height</span>=<span class="string">&quot;800&quot;</span></span>
-<span class="tag">                  <span class="attr">Background</span>=<span class="string">&quot;Violet&quot;</span> /&gt;</span>
-        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span>
-    <span class="tag">&lt;/<span class="name">ScrollViewer</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></code></pre>
-
-<p><img src="/images/2023/06/6.png" alt="ScrollViewer"></p>
-]]></content>
-      <categories>
-        <category>XAML</category>
-      </categories>
-      <tags>
-        <tag>XAML</tag>
-        <tag>Windows Store App</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The Enum pattern</title>
     <url>/2025/01/01/The-Enum-pattern/</url>
     <content><![CDATA[<p>An enum (short for “Enumeration”) is a value type that represents a set of named constants. This type allow you to define a set of named values that have underlying values, usually numeric ones.</p>
@@ -11680,6 +11663,23 @@ HasOven      = <span class="number">100</span></code></pre>
       </categories>
       <tags>
         <tag>Angular</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Canada Express Entry Summary</title>
+    <url>/2023/10/07/Canada-Express-Entry-Summary/</url>
+    <content><![CDATA[<p>A glimpse to the Express Entry program by Immigration, Refugees and Citizenship Canada</p>
+<iframe title="Report Section" width="1024" height="612" src="https://huntertran.github.io/eedraws/" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>There is also an old PowerBI app <a href="https://app.powerbi.com/view?r=eyJrIjoiZGQxYWQyNDUtMzUzOS00ZjdjLWJkY2EtNDc4NzRhMDBmYjQxIiwidCI6IjJiZDdmMTE1LTFjMmMtNDdhMC05YzdlLTY1ODAxNGZiODE0YyIsImMiOjEwfQ==&pageName=ReportSection">here</a></p>
+]]></content>
+      <categories>
+        <category>reports</category>
+      </categories>
+      <tags>
+        <tag>data</tag>
+        <tag>powerbi</tag>
+        <tag>reports</tag>
       </tags>
   </entry>
 </search>
