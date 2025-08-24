@@ -131,4 +131,5 @@ dist
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node
-/source/_drafts/*.*
+source/_drafts/*
+/source/_drafts/
