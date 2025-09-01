@@ -6,7 +6,7 @@
   <link href="https://huntertran.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://huntertran.github.io/blog/"/>
-  <updated>2025-08-31T21:04:20.570Z</updated>
+  <updated>2025-09-01T01:36:08.914Z</updated>
   <id>https://huntertran.github.io/blog/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Grocery stores Price per Unit add-on</title>
+    <title>Grocery stores Price per Unit extension</title>
     <link href="https://huntertran.github.io/blog/2025/08/31/Grocery-stores-Price-per-Unit-add-on/"/>
     <id>https://huntertran.github.io/blog/2025/08/31/Grocery-stores-Price-per-Unit-add-on/</id>
     <published>2025-08-31T04:00:00.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Privacy-Policy-🛡️&quot;&gt;&lt;a href=&quot;#Privacy-Policy-🛡️&quot; class=&quot;headerlink&quot; title=&quot;Privacy Policy 🛡️&quot;&gt;&lt;/a&gt;Privacy Policy</summary>
+    <summary type="html">&lt;p&gt;Homepage for the &lt;a</summary>
         
       
     
@@ -46,7 +46,7 @@
     <link href="https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/"/>
     <id>https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/</id>
     <published>2025-01-01T21:08:01.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;An enum (short for “Enumeration”) is a value type that represents a set of named constants. This type allow you to define a set of named values that have underlying values, usually numeric ones.&lt;/p&gt;
@@ -66,7 +66,7 @@
     <link href="https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/"/>
     <id>https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/</id>
     <published>2023-10-07T20:04:50.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
       
@@ -96,7 +96,7 @@
     <link href="https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/"/>
     <id>https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/</id>
     <published>2023-09-04T20:59:10.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;In a list of checkbox, it’s convenient to have a &lt;code&gt;Select all&lt;/code&gt; option at the top. But this option is not as simple as it seems. Let’s walk through the ideas, and the logic behind it.&lt;/p&gt;</summary>
@@ -115,7 +115,7 @@
     <link href="https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/"/>
     <id>https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/</id>
     <published>2023-06-25T14:31:36.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: &lt;code&gt;ListBox&lt;/code&gt;, &lt;code&gt;GridView&lt;/code&gt;. Also included a super short introduction to MVVM and data binding in XAML.&lt;/p&gt;</summary>
@@ -136,7 +136,7 @@
     <link href="https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/"/>
     <id>https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/</id>
     <published>2023-06-24T21:46:07.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. &lt;/p&gt;
@@ -158,7 +158,7 @@
     <link href="https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/"/>
     <id>https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/</id>
     <published>2022-04-24T00:47:44.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;Boolean data type represents the &lt;code&gt;true&lt;/code&gt;&amp;#x2F;&lt;code&gt;false&lt;/code&gt; value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how to flatten them for display on UI.&lt;/p&gt;</summary>
@@ -183,7 +183,7 @@
     <link href="https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/"/>
     <id>https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</id>
     <published>2022-04-17T23:50:01.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;Learn how you can create a simple count-down timer for a PowerPoint presentation with Visual Basic for Application (VBA).&lt;/p&gt;</summary>
@@ -202,7 +202,7 @@
     <link href="https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/"/>
     <id>https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/</id>
     <published>2022-01-22T07:42:18.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you could utilize these solutions or combine them for a better result.&lt;/p&gt;</summary>
@@ -221,7 +221,7 @@
     <link href="https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/"/>
     <id>https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</id>
     <published>2021-09-19T00:11:32.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;For a long time, my reputation points on StackOverflow (SO) were just around 200. You get 100 by just registering an account. If your reputation score is high, you can brag about it in your CV, or even better, landing your next dream job. In this blog post, I will tell you the story of how I can get +10 reputations EVERY DAY.&lt;/p&gt;</summary>
@@ -240,7 +240,7 @@
     <link href="https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/"/>
     <id>https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/</id>
     <published>2021-05-22T23:51:39.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;When I’m looking for numbers in my recent research, I need reliable surveys&amp;#x2F;market share statistics in computer technologies. So here is a list of them:&lt;/p&gt;</summary>
@@ -259,7 +259,7 @@
     <link href="https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/"/>
     <id>https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/</id>
     <published>2020-12-09T23:22:20.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.&lt;/p&gt;</summary>
@@ -278,7 +278,7 @@
     <link href="https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/"/>
     <id>https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/</id>
     <published>2020-11-25T01:21:29.000Z</published>
-    <updated>2025-08-31T21:04:20.570Z</updated>
+    <updated>2025-09-01T01:36:08.914Z</updated>
     
     
     <summary type="html">&lt;p&gt;How to reset network settings in Windows 10&lt;/p&gt;
@@ -298,7 +298,7 @@
     <link href="https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/"/>
     <id>https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/</id>
     <published>2020-11-15T16:31:16.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instruction on how to:&lt;/p&gt;
@@ -324,7 +324,7 @@
     <link href="https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/"/>
     <id>https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/</id>
     <published>2020-11-11T06:09:15.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;Difficulty: Medium&lt;/p&gt;
@@ -348,7 +348,7 @@
     <link href="https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/"/>
     <id>https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/</id>
     <published>2020-10-17T17:08:02.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;Step-by-step instructions on how to download Windows 10 ISO.&lt;/p&gt;</summary>
@@ -369,7 +369,7 @@
     <link href="https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
     <id>https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
     <published>2020-10-09T01:26:02.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;NLTK has a function called &lt;code&gt;regexpparser&lt;/code&gt; to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.&lt;/p&gt;</summary>
@@ -394,7 +394,7 @@
     <link href="https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
     <id>https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
     <published>2020-09-03T20:02:21.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long-awaited features are in beta, invitation-only, and it is &lt;code&gt;GitHub Codespaces&lt;/code&gt;.&lt;/p&gt;</summary>
@@ -417,7 +417,7 @@
     <link href="https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
     <id>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
     <published>2020-07-30T04:31:02.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;Microsoft acquired GitHub, and everyone has an unlimited number of private repositories. This reason alone makes me want to move all my project and source code to GitHub.&lt;/p&gt;</summary>
@@ -442,7 +442,7 @@
     <link href="https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
     <id>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
     <published>2020-07-20T22:28:46.000Z</published>
-    <updated>2025-08-31T21:04:20.569Z</updated>
+    <updated>2025-09-01T01:36:08.913Z</updated>
     
     
     <summary type="html">&lt;p&gt;I don’t know why Google makes it so challenging to connect to its Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?&lt;/p&gt;
