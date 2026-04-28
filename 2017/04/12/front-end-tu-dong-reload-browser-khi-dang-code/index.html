@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Mỗi lần nói tới CSS, là các front-end developer lại thấy chán nản mệt mỏi các kiểu Thử nghĩ xem, mỗi lần sửa CSS (hoặc SCSS), bạn sẽ phải quay lại web browser, nhấn reload &#x2F; F5 &#x2F; Ctrl + F5 N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Front-end] Tự động reload browser khi đang code">
+<meta property="og:url" content="https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Mỗi lần nói tới CSS, là các front-end developer lại thấy chán nản mệt mỏi các kiểu Thử nghĩ xem, mỗi lần sửa CSS (hoặc SCSS), bạn sẽ phải quay lại web browser, nhấn reload &#x2F; F5 &#x2F; Ctrl + F5 N">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2894/33833478232_a59cce160b_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2814/33234696593_9fcee9f965_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2873/33889703622_3cbc71f1cc_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2885/33234839763_71ffba8cfd_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2829/33662078970_a1aaf77d2c_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/2902/33235009203_a69320020e_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/3703/33662203760_71636d02d3_o.png">
+<meta property="article:published_time" content="2017-04-12T08:56:00.000Z">
+<meta property="article:modified_time" content="2026-04-28T03:40:21.091Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="browsersync">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="live reload">
+<meta property="article:tag" content="visual studio code">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/2894/33833478232_a59cce160b_o.png">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/","path":"2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/","title":"[Front-end] Tự động reload browser khi đang code"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[Front-end] Tự động reload browser khi đang code | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Buoc-1-Cai-dat-moi-truong"><span class="nav-text">Bước 1: Cài đặt môi trường</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Buoc-2-Cai-dat-cac-nodejs-package"><span class="nav-text">Bước 2: Cài đặt các nodejs package</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Buoc-3-Cai-dat-o-local-folder"><span class="nav-text">Bước 3: Cài đặt ở local folder</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Buoc-4-Cai-dat-BrowserSync"><span class="nav-text">Bước 4: Cài đặt BrowserSync</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Buoc-5-Tao-gulp-task"><span class="nav-text">Bước 5: Tạo gulp task</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chay-tasks"><span class="nav-text">Chạy tasks</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[Front-end] Tự động reload browser khi đang code | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Front-end] Tự động reload browser khi đang code<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20170412-front-end-tu-dong-reload-browser-khi-dang-code.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2017-04-12 04:56:00" itemprop="dateCreated datePublished" datetime="2017-04-12T04:56:00-04:00">2017-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-04-27 23:40:21" itemprop="dateModified" datetime="2026-04-27T23:40:21-04:00">2026-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Mỗi lần nói tới CSS, là các front-end developer lại thấy chán nản mệt mỏi các kiểu</p>
+<p>Thử nghĩ xem, mỗi lần sửa CSS (hoặc SCSS), bạn sẽ phải quay lại web browser, nhấn reload &#x2F; F5 &#x2F; Ctrl + F5</p>
+<p>Nếu có cách để browser tự động reload mỗi khi có thay đổi code thì sao nhỉ</p>
+<p>Bài viết này sẽ hướng dẫn các bạn dùng Visual Studio Code kèm với NodeJs để có tự động reload web khi có code thay đổi</p>
+<span id="more"></span>
+<p><strong>Mục lục</strong></p>
+<ul>
+<li><a href="#b%C6%B0%E1%BB%9Bc-1-c%C3%A0i-%C4%91%E1%BA%B7t-m%C3%B4i-tr%C6%B0%E1%BB%9Dng">Bước 1: Cài đặt môi trường</a></li>
+<li><a href="#b%C6%B0%E1%BB%9Bc-2-c%C3%A0i-%C4%91%E1%BA%B7t-c%C3%A1c-nodejs-package">Bước 2: Cài đặt các nodejs package</a></li>
+<li><a href="#b%C6%B0%E1%BB%9Bc-3-c%C3%A0i-%C4%91%E1%BA%B7t-%E1%BB%9F-local-folder">Bước 3: Cài đặt ở local folder</a></li>
+<li><a href="#b%C6%B0%E1%BB%9Bc-4-c%C3%A0i-%C4%91%E1%BA%B7t-browsersync">Bước 4: Cài đặt BrowserSync</a></li>
+<li><a href="#b%C6%B0%E1%BB%9Bc-5-t%E1%BA%A1o-gulp-task">Bước 5: Tạo gulp task</a></li>
+<li><a href="#ch%E1%BA%A1y-tasks">Chạy tasks</a></li>
+</ul>
+<h1 id="Buoc-1-Cai-dat-moi-truong"><a href="#Buoc-1-Cai-dat-moi-truong" class="headerlink" title="Bước 1: Cài đặt môi trường"></a>Bước 1: Cài đặt môi trường</h1><p>Sẽ có một số phần mềm cần bạn cài đặt. Những phần mềm này khá phổ biến</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+</ul>
+<p><em>Bạn có thể chọn bản LTS, viết tắt cho chữ Long term support. Đây thường là phiên bản ổn định, ít lỗi lặt vặt</em></p>
+<p><img src="/images/flickr/2894/33833478232_a59cce160b_o.png" alt="Chọn LTS cho ít lỗi lặt vặt"></p>
+<h1 id="Buoc-2-Cai-dat-cac-nodejs-package"><a href="#Buoc-2-Cai-dat-cac-nodejs-package" class="headerlink" title="Bước 2: Cài đặt các nodejs package"></a>Bước 2: Cài đặt các nodejs package</h1><p><strong>Mở Visual Studio Code</strong></p>
+<p><strong>Mở Terminal Windows</strong></p>
+<p>Bật Terminal Windows trong Visual Studio Code bằng cách nhấn Ctrl + ` hoặc View &gt; Integrated Terminal</p>
+<p><img src="/images/flickr/2814/33234696593_9fcee9f965_o.png"></p>
+<p><strong>Cài đặt trình biên dịch SASS&#x2F;LESS</strong></p>
+<pre><code class="highlight s">npm install -g node-sass less</code></pre>
+
+<p>Tham số -g là để cài đặt trên môi trường global</p>
+<p><img src="/images/flickr/2873/33889703622_3cbc71f1cc_o.png"></p>
+<p><em>Sau khi cài đặt SASS&#x2F;LESS compiler</em></p>
+<p><strong>Cài đặt gulp toolkit</strong></p>
+<p>Cài đặt gulp toolkit để tự động hóa quá trình biên dịch</p>
+<pre><code class="highlight s">npm install -g gulp</code></pre>
+
+<p><img src="/images/flickr/2885/33234839763_71ffba8cfd_o.png"></p>
+<p><em>Bạn có thể bỏ qua các warning khi cài đặt gulp</em></p>
+<p><strong>Initialize Node.Js</strong></p>
+<p>Nếu trước đó, bạn chưa bao giờ cài đặt NodeJs package manager, bạn sẽ gặp lỗi như sau</p>
+<p><img src="/images/flickr/2829/33662078970_a1aaf77d2c_o.png"></p>
+<p>Gõ lệnh</p>
+<pre><code class="highlight s">npm init</code></pre>
+
+<p>để init các tham số cần thiết cho npm và làm theo hướng dẫn trên màn hình.</p>
+<p>Nếu bạn không nhập gì cả và nhấn enter, npm sẽ dùng tham số default</p>
+<p><img src="/images/flickr/2902/33235009203_a69320020e_o.png"></p>
+<h1 id="Buoc-3-Cai-dat-o-local-folder"><a href="#Buoc-3-Cai-dat-o-local-folder" class="headerlink" title="Bước 3: Cài đặt ở local folder"></a>Bước 3: Cài đặt ở local folder</h1><p>Mặc dù bạn đã cài gulp ở global, nhưng bạn vẫn sẽ cần gulp được “copy” vào folder có chứa project của bạn. Lý do là khi gulp global được upgrade, hoặc bị xóa mất, gulp local của bạn vẫn chạy bình thường với một bản sao ổn định trong project folder của bạn Cài đặt gulp local</p>
+<pre><code class="highlight s">npm install gulp --save-dev</code></pre>
+
+<p>Cài đặt gulp plugin</p>
+<pre><code class="highlight s">npm install gulp gulp-sass gulp-less</code></pre>
+
+<h1 id="Buoc-4-Cai-dat-BrowserSync"><a href="#Buoc-4-Cai-dat-BrowserSync" class="headerlink" title="Bước 4: Cài đặt BrowserSync"></a>Bước 4: Cài đặt BrowserSync</h1><p>BrowserSync chính là thứ sẽ giúp chúng ta tự động reload trình duyệt Cũng trong Terminal Windows của Visual Studio, gõ lệnh</p>
+<pre><code class="highlight s">npm install browser-sync gulp --save-dev</code></pre>
+
+<p>Tương tự, bạn cũng có thể bỏ qua các đoạn warning, thông báo</p>
+<p><img src="/images/flickr/3703/33662203760_71636d02d3_o.png"></p>
+<h1 id="Buoc-5-Tao-gulp-task"><a href="#Buoc-5-Tao-gulp-task" class="headerlink" title="Bước 5: Tạo gulp task"></a>Bước 5: Tạo gulp task</h1><p>Gulp task là một file .json có chứa các lệnh, tham số cần thiết để thiết lập cho gulp</p>
+<ul>
+<li>Trong Visual Studio Code, mở folder có chứa project HTML&#x2F;CSS&#x2F;JavaScript của bạn</li>
+</ul>
+<pre><code class="highlight s">File &gt; Open Folder &gt; \[Chọn folder\]</code></pre>
+
+<ul>
+<li>Tạo một file tên “gulpfile.js” trong root folder của project</li>
+<li>Gõ nội dung sau:</li>
+</ul>
+<pre><code class="highlight js"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);
+ 
+<span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">&#x27;gulp-sass&#x27;</span>);
+ 
+<span class="keyword">var</span> browserSync = <span class="built_in">require</span>(<span class="string">&#x27;browser-sync&#x27;</span>);
+ 
+<span class="comment">// compile task</span>
+<span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&#x27;gulp&#x27;</span>);
+<span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">&#x27;gulp-sass&#x27;</span>);
+<span class="keyword">var</span> browserSync = <span class="built_in">require</span>(<span class="string">&#x27;browser-sync&#x27;</span>);
+ 
+<span class="comment">// compile task</span>
+gulp.<span class="title function_">task</span>(<span class="string">&#x27;sass&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;
+    gulp.<span class="title function_">src</span>(<span class="string">&#x27;css/*.scss&#x27;</span>)
+        .<span class="title function_">pipe</span>(<span class="title function_">sass</span>())
+        .<span class="title function_">on</span>(<span class="string">&#x27;error&#x27;</span>, swallowError)
+        .<span class="title function_">pipe</span>(gulp.<span class="title function_">dest</span>(<span class="keyword">function</span> (<span class="params">f</span>) &#123;
+            <span class="keyword">return</span> f.<span class="property">base</span>;
+        &#125;))
+        .<span class="title function_">pipe</span>(browserSync.<span class="title function_">stream</span>());
+&#125;);
+ 
+<span class="comment">// browser sync init</span>
+gulp.<span class="title function_">task</span>(<span class="string">&#x27;browser-sync&#x27;</span>, [<span class="string">&#x27;sass&#x27;</span>], <span class="keyword">function</span> (<span class="params"></span>) &#123;
+    browserSync.<span class="title function_">init</span>(&#123;
+        <span class="attr">server</span>: &#123;
+            <span class="attr">baseDir</span>: <span class="string">&quot;./&quot;</span>
+        &#125;
+    &#125;);
+&#125;);
+ 
+<span class="comment">// watch for changes in html, css, scss</span>
+gulp.<span class="title function_">task</span>(<span class="string">&#x27;default&#x27;</span>, [<span class="string">&#x27;browser-sync&#x27;</span>], <span class="keyword">function</span> (<span class="params"></span>) &#123;
+    gulp.<span class="title function_">watch</span>(<span class="string">&#x27;css/*.scss&#x27;</span>, [<span class="string">&#x27;sass&#x27;</span>]);
+    gulp.<span class="title function_">watch</span>(<span class="string">&#x27;*.html&#x27;</span>)
+        .<span class="title function_">on</span>(<span class="string">&#x27;change&#x27;</span>, browserSync.<span class="property">reload</span>);
+&#125;)
+ 
+<span class="comment">// skip if error occured</span>
+<span class="keyword">function</span> <span class="title function_">swallowError</span>(<span class="params">error</span>) &#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(error.<span class="title function_">toString</span>())
+    <span class="variable language_">this</span>.<span class="title function_">emit</span>(<span class="string">&#x27;end&#x27;</span>)
+&#125;</code></pre>
+
+<ul>
+<li><p>Tạo tasks.json tasks.json giúp cho Visual Studio code biết cách chạy task gulp khi được ra lệnh</p>
+<ul>
+<li>Nhấn Ctrl + Shift + P và gõ “Configure Task Runner” rồi nhấn enter</li>
+<li>Chọn Others trong danh sách</li>
+<li>Gõ vào đoạn code sau</li>
+</ul>
+</li>
+</ul>
+<pre><code class="highlight json"><span class="punctuation">&#123;</span>
+  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.1.0&quot;</span><span class="punctuation">,</span>
+  <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gulp&quot;</span><span class="punctuation">,</span>
+  <span class="attr">&quot;isShellCommand&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span>
+  <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>
+      <span class="punctuation">&#123;</span>
+          <span class="attr">&quot;taskName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;default&quot;</span><span class="punctuation">,</span>
+          <span class="attr">&quot;isBuildCommand&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span>
+          <span class="attr">&quot;showOutput&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span>
+          <span class="attr">&quot;isBackground&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span>
+      <span class="punctuation">&#125;</span>
+  <span class="punctuation">]</span>
+<span class="punctuation">&#125;</span></code></pre>
+
+<h1 id="Chay-tasks"><a href="#Chay-tasks" class="headerlink" title="Chạy tasks"></a>Chạy tasks</h1><ul>
+<li>Tạo file “index.html” trong thư mục gốc. Mặc định BrowserSync sẽ theo dõi file này</li>
+<li>Trong Visual Studio Code, nhấn <strong>Ctrl + Shift + B</strong> để bắt đầu chạy tasks</li>
+<li>Bật tính năng Autosave cho Visual Studio Code</li>
+</ul>
+<pre><code class="highlight s">File &gt; Autosave</code></pre>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/" title="[Front-end] Tự động reload browser khi đang code">https://huntertran.github.io/blog/2017/04/12/front-end-tu-dong-reload-browser-khi-dang-code/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/browsersync/" rel="tag"># browsersync</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/live-reload/" rel="tag"># live reload</a>
+              <a href="/tags/visual-studio-code/" rel="tag"># visual studio code</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/02/07/asp-net-mvc-debug-route-config/" rel="prev" title="[ASP.NET MVC] Debug Route Config">
+                  <i class="fa fa-angle-left"></i> [ASP.NET MVC] Debug Route Config
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/04/20/asp-net-mo-rong-editorfor/" rel="next" title="[ASP.NET] Mở rộng EditorFor">
+                  [ASP.NET] Mở rộng EditorFor <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

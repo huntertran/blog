@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Tưởng tượng bạn có list các item trong ViewModel Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao? Đọc xong bài này, bạn sẽ biết cách làm nhóe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[ASPNET] Editor for với List và thêm mới item dùng AJAX">
+<meta property="og:url" content="https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Tưởng tượng bạn có list các item trong ViewModel Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao? Đọc xong bài này, bạn sẽ biết cách làm nhóe">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4169/34124808091_f4c2130fd2_o.jpg">
+<meta property="article:published_time" content="2017-04-25T07:32:39.000Z">
+<meta property="article:modified_time" content="2026-04-28T03:40:21.091Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="ajax">
+<meta property="article:tag" content="editorfor">
+<meta property="article:tag" content="editorformany">
+<meta property="article:tag" content="list">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/4169/34124808091_f4c2130fd2_o.jpg">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/","path":"2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/","title":"[ASPNET] Editor for với List và thêm mới item dùng AJAX"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[ASPNET] Editor for với List và thêm mới item dùng AJAX | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-EditorFor-Control"><span class="nav-text">1. EditorFor Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Class"><span class="nav-text">2. Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-C-code"><span class="nav-text">2.1. C# code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-JavaScript-Code"><span class="nav-text">2.2. JavaScript Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Cach-xai"><span class="nav-text">3. Cách xài</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Chuan-bi-model"><span class="nav-text">3.1. Chuẩn bị model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Razor-code"><span class="nav-text">3.2. Razor code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Ket-qua"><span class="nav-text">4. Kết quả</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Cach-hoat-dong"><span class="nav-text">5. Cách hoạt động</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Cac-buoc"><span class="nav-text">5.1. Các bước</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-Tai-sao-lai-can-Index"><span class="nav-text">5.2. Tại sao lại cần Index</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASPNET] Editor for với List và thêm mới item dùng AJAX | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [ASPNET] Editor for với List và thêm mới item dùng AJAX<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20170425-aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2017-04-25 03:32:39" itemprop="dateCreated datePublished" datetime="2017-04-25T03:32:39-04:00">2017-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-04-27 23:40:21" itemprop="dateModified" datetime="2026-04-27T23:40:21-04:00">2026-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Tưởng tượng bạn có list các item trong ViewModel</p>
+<p>Nếu bạn muốn cho phép user thêm mới 1 item, hoặc edit bất kỳ item nào trong list thì làm sao?</p>
+<p>Đọc xong bài này, bạn sẽ biết cách làm nhóe</p>
+<span id="more"></span>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-editorfor-control">1. EditorFor Control</a></li>
+<li><a href="#2-class">2. Class</a><ul>
+<li><a href="#21-c-code">2.1. C# code</a></li>
+<li><a href="#22-javascript-code">2.2. JavaScript Code</a></li>
+</ul>
+</li>
+<li><a href="#3-c%C3%A1ch-x%C3%A0i">3. Cách xài</a><ul>
+<li><a href="#31-chu%E1%BA%A9n-b%E1%BB%8B-model">3.1. Chuẩn bị model</a></li>
+<li><a href="#32-razor-code">3.2. Razor code</a></li>
+</ul>
+</li>
+<li><a href="#4-k%E1%BA%BFt-qu%E1%BA%A3">4. Kết quả</a></li>
+<li><a href="#5-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng">5. Cách hoạt động</a><ul>
+<li><a href="#51-c%C3%A1c-b%C6%B0%E1%BB%9Bc">5.1. Các bước</a></li>
+<li><a href="#52-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index">5.2. Tại sao lại cần Index</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-EditorFor-Control"><a href="#1-EditorFor-Control" class="headerlink" title="1. EditorFor Control"></a>1. EditorFor Control</h1><p><a id="markdown-editorfor-control" name="editorfor-control"></a></p>
+<p>Trong <a target="_blank" rel="noopener" href="https://huntertran.ca/2017/04/20/asp-net-mo-rong-editorfor/">bài kỳ trước</a>, bạn đã biết cách xài EditorFor và EditorForModel control.</p>
+<p>Một điểm hạn chế của 2 thằng này là chúng không tạo ra input cho các class tùy biến của bạn</p>
+<p>Còn 1 list các item thì lại càng không có.</p>
+<p>Hiển thị một list thì dễ, một vòng lặp for (hoặc foreach) là xong</p>
+<p>Nhưng một “Editor” cho cả một list thì ko được support, nên bạn phải tự tạo thôi</p>
+<p>Từ một bài viết thú vị từ Matt Lunn <a target="_blank" rel="noopener" href="https://www.mattlunn.me.uk/blog/2014/08/how-to-dynamically-via-ajax-add-new-items-to-a-bound-list-model-in-asp-mvc-net/">ở đây</a>, chúng ta sẽ thay đổi một tí cho dễ xài và phù hợp với yêu cầu hơn nhóe</p>
+<h1 id="2-Class"><a href="#2-Class" class="headerlink" title="2. Class"></a>2. Class</h1><p><a id="markdown-class" name="class"></a></p>
+<h2 id="2-1-C-code"><a href="#2-1-C-code" class="headerlink" title="2.1. C# code"></a>2.1. C# code</h2><p><a id="markdown-c%23-code" name="c%23-code"></a></p>
+<pre><code class="highlight cs"><span class="keyword">namespace</span> <span class="title">Yournamespace.Utilities</span>
+&#123;
+    <span class="keyword">using</span> System;
+    <span class="keyword">using</span> System.Collections.Generic;
+    <span class="keyword">using</span> System.Linq;
+    <span class="keyword">using</span> System.Linq.Expressions;
+    <span class="keyword">using</span> System.Text;
+    <span class="keyword">using</span> System.Web.Mvc;
+    <span class="keyword">using</span> System.Web.Mvc.Html;
+ 
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">HtmlHelperExtensions</span>
+    &#123;
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> Generate appropriate control for a list of data</span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;TModel&quot;&gt;</span>The Model contain the list<span class="doctag">&lt;/typeparam&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name=&quot;TValue&quot;&gt;</span>The Model of list of items<span class="doctag">&lt;/typeparam&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;html&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;propertyExpression&quot;&gt;</span>Which property<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;indexResolverExpression&quot;&gt;</span>Select the property to be the index<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;isIncludeNewItem&quot;&gt;</span>Set to true to include a default new item<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;includeIndexField&quot;&gt;</span>Set to true to include Index in values sent to server<span class="doctag">&lt;/param&gt;</span></span>
+        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>HTML codes of editorfor a list of items<span class="doctag">&lt;/returns&gt;</span></span>
+        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MvcHtmlString <span class="title">EditorForMany</span>&lt;<span class="title">TModel</span>, <span class="title">TValue</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            <span class="keyword">this</span> HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, IEnumerable&lt;TValue&gt;&gt;&gt; propertyExpression,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression = <span class="literal">null</span>,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> isIncludeNewItem = <span class="literal">false</span>,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> includeIndexField = <span class="literal">true</span></span>)</span>
+<span class="function">            <span class="keyword">where</span> TModel </span>
+<span class="function">                : <span class="keyword">class</span> <span class="keyword">where</span> TValue </span>
+<span class="function">                : <span class="keyword">new</span>()</span>
+        &#123;
+            <span class="keyword">var</span> items = propertyExpression.Compile()(html.ViewData.Model);
+            <span class="keyword">var</span> htmlBuilder = <span class="keyword">new</span> StringBuilder();
+            <span class="keyword">var</span> htmlFieldName = ExpressionHelper.GetExpressionText(propertyExpression);
+            <span class="keyword">var</span> htmlFieldNameWithPrefix = html.ViewData.TemplateInfo.GetFullHtmlFieldName(htmlFieldName);
+            <span class="keyword">var</span> indexResolver = GetIndexResolver(indexResolverExpression);
+            items = AddDefaultNewItem(isIncludeNewItem, items);
+ 
+            <span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> items)
+            &#123;
+                <span class="keyword">var</span> dummy = <span class="keyword">new</span>
+                &#123;
+                    Item = item
+                &#125;;
+ 
+                <span class="keyword">var</span> guid = indexResolver(item);
+ 
+                <span class="keyword">var</span> memberExp = Expression.MakeMemberAccess(
+                    Expression.Constant(dummy),
+                    dummy.GetType().GetProperty(<span class="string">&quot;Item&quot;</span>));
+ 
+                <span class="keyword">var</span> singleItemExp = Expression.Lambda&lt;Func&lt;TModel, TValue&gt;&gt;(memberExp, propertyExpression.Parameters);
+ 
+                guid = <span class="built_in">string</span>.IsNullOrEmpty(guid) ? Guid.NewGuid().ToString() : html.AttributeEncode(guid);
+                BuildHtmlString(html, indexResolverExpression, includeIndexField, htmlBuilder, htmlFieldName, htmlFieldNameWithPrefix, guid, singleItemExp);
+            &#125;
+ 
+            <span class="keyword">return</span> <span class="keyword">new</span> MvcHtmlString(htmlBuilder.ToString());
+        &#125;
+ 
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">BuildHtmlString</span>&lt;<span class="title">TModel</span>, <span class="title">TValue</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression,</span></span>
+<span class="params"><span class="function">            <span class="built_in">bool</span> includeIndexField,</span></span>
+<span class="params"><span class="function">            StringBuilder htmlBuilder,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> htmlFieldName,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> htmlFieldNameWithPrefix,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> guid,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, TValue&gt;&gt; singleItemExp</span>)</span>
+<span class="function">            <span class="keyword">where</span> TModel : <span class="keyword">class</span></span>
+<span class="function">            <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
+        &#123;
+            htmlBuilder.Append(<span class="string">@&quot;&lt;div&gt;&quot;</span>);
+ 
+            <span class="keyword">if</span> (includeIndexField)
+            &#123;
+                htmlBuilder.Append(_EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression));
+            &#125;
+ 
+            htmlBuilder.Append(html.EditorFor(singleItemExp, <span class="literal">null</span>, <span class="string">$&quot;<span class="subst">&#123;htmlFieldName&#125;</span>[<span class="subst">&#123;guid&#125;</span>]&quot;</span>));
+ 
+            htmlBuilder.Append(<span class="string">@&quot;&lt;/div&gt;&quot;</span>);
+        &#125;
+ 
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">IEnumerable</span>&lt;<span class="title">TValue</span>&gt; <span class="title">AddDefaultNewItem</span>&lt;<span class="title">TValue</span>&gt;(<span class="params"><span class="built_in">bool</span> isIncludeNewItem, IEnumerable&lt;TValue&gt; items</span>) <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
+        &#123;
+            <span class="keyword">if</span> (isIncludeNewItem)
+            &#123;
+                items = items.Concat(<span class="keyword">new</span>[]
+                &#123;
+                    <span class="keyword">new</span> TValue()
+                &#125;);
+            &#125;
+ 
+            <span class="keyword">return</span> items;
+        &#125;
+ 
+        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="title">Func</span>&lt;<span class="title">TValue</span>, <span class="title">string</span>&gt; <span class="title">GetIndexResolver</span>&lt;<span class="title">TValue</span>&gt;(<span class="params">Expression&lt;Func&lt;TValue, <span class="built_in">string</span>&gt;&gt; indexResolverExpression</span>) <span class="keyword">where</span> TValue : <span class="keyword">new</span>()</span>
+        &#123;
+            Func&lt;TValue, <span class="built_in">string</span>&gt; indexResolver;
+            <span class="keyword">if</span> (indexResolverExpression == <span class="literal">null</span>)
+            &#123;
+                indexResolver = x =&gt; <span class="literal">null</span>;
+            &#125;
+            <span class="keyword">else</span>
+            &#123;
+                indexResolver = indexResolverExpression.Compile();
+            &#125;
+ 
+            <span class="keyword">return</span> indexResolver;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> MvcHtmlString <span class="title">EditorForManyIndexField</span>&lt;<span class="title">TModel</span>&gt;(<span class="params"></span></span>
+<span class="params"><span class="function">            <span class="keyword">this</span> HtmlHelper&lt;TModel&gt; html,</span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TModel, <span class="built_in">string</span>&gt;&gt; indexResolverExpression = <span class="literal">null</span></span>)</span>
+        &#123;
+            <span class="keyword">var</span> htmlPrefix = html.ViewData.TemplateInfo.HtmlFieldPrefix;
+            <span class="keyword">var</span> first = htmlPrefix.LastIndexOf(<span class="string">&#x27;[&#x27;</span>);
+            <span class="keyword">var</span> last = htmlPrefix.IndexOf(<span class="string">&#x27;]&#x27;</span>, first + <span class="number">1</span>);
+ 
+            <span class="keyword">if</span> (first == <span class="number">-1</span> || last == <span class="number">-1</span>)
+            &#123;
+                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="string">&quot;EditorForManyIndexField called when not in a EditorForMany context&quot;</span>);
+            &#125;
+ 
+            <span class="keyword">var</span> htmlFieldNameWithPrefix = htmlPrefix.Substring(<span class="number">0</span>, first);
+            <span class="keyword">var</span> guid = htmlPrefix.Substring(first + <span class="number">1</span>, last - first - <span class="number">1</span>);
+ 
+            <span class="keyword">return</span> _EditorForManyIndexField(htmlFieldNameWithPrefix, guid, indexResolverExpression);
+        &#125;
+ 
+        <span class="keyword">private</span> <span class="keyword">static</span> MvcHtmlString _EditorForManyIndexField&lt;TModel&gt;(
+            <span class="built_in">string</span> htmlFieldNameWithPrefix,
+            <span class="built_in">string</span> guid,
+            Expression&lt;Func&lt;TModel, <span class="built_in">string</span>&gt;&gt; indexResolverExpression)
+        &#123;
+            <span class="keyword">var</span> htmlBuilder = <span class="keyword">new</span> StringBuilder();
+            htmlBuilder.AppendFormat(
+                <span class="string">@&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;.Index&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;</span>,
+                htmlFieldNameWithPrefix,
+                guid);
+ 
+            <span class="keyword">if</span> (indexResolverExpression != <span class="literal">null</span>)
+            &#123;
+                htmlBuilder.AppendFormat(
+                    <span class="string">@&quot;&lt;input type=&quot;&quot;hidden&quot;&quot; name=&quot;&quot;&#123;0&#125;[&#123;1&#125;].&#123;2&#125;&quot;&quot; value=&quot;&quot;&#123;1&#125;&quot;&quot; /&gt;&quot;</span>,
+                    htmlFieldNameWithPrefix,
+                    guid,
+                    ExpressionHelper.GetExpressionText(indexResolverExpression));
+            &#125;
+ 
+            <span class="keyword">return</span> <span class="keyword">new</span> MvcHtmlString(htmlBuilder.ToString());
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<h2 id="2-2-JavaScript-Code"><a href="#2-2-JavaScript-Code" class="headerlink" title="2.2. JavaScript Code"></a>2.2. JavaScript Code</h2><p><a id="markdown-javascript-code" name="javascript-code"></a></p>
+<p>Đoạn code dưới dây dùng JQuery, nhưng bạn có thể convert nó sang JavaScript thuần cũng vẫn được nhóe</p>
+<pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">GenerateGuid</span>(<span class="params"></span>) &#123;
+    <span class="keyword">function</span> <span class="title function_">s4</span>(<span class="params"></span>) &#123;
+        <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">floor</span>((<span class="number">1</span> + <span class="title class_">Math</span>.<span class="title function_">random</span>()) * <span class="number">0x10000</span>)
+            .<span class="title function_">toString</span>(<span class="number">16</span>)
+            .<span class="title function_">substring</span>(<span class="number">1</span>);
+    &#125;
+ 
+    <span class="keyword">return</span> <span class="title function_">s4</span>() + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="string">&quot;-&quot;</span> + <span class="title function_">s4</span>() + <span class="title function_">s4</span>() + <span class="title function_">s4</span>();
+&#125;
+ 
+<span class="keyword">function</span> <span class="title function_">AssignAddMoreButton</span>(<span class="params"></span>) &#123;
+    $(<span class="string">&quot;.add-more-button&quot;</span>).<span class="title function_">click</span>(<span class="keyword">function</span> (<span class="params">event</span>) &#123;
+        event.<span class="title function_">preventDefault</span>();
+        <span class="keyword">debugger</span>;
+        <span class="keyword">var</span> id = <span class="string">&quot;#&quot;</span> + $(<span class="variable language_">this</span>).<span class="title function_">data</span>(<span class="string">&quot;class&quot;</span>);
+        <span class="keyword">var</span> clone = $(id).<span class="title function_">children</span>().<span class="title function_">last</span>().<span class="title function_">clone</span>();
+        <span class="keyword">var</span> guid = clone.<span class="title function_">children</span>().<span class="title function_">first</span>().<span class="title function_">val</span>();
+        <span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="title class_">RegExp</span>(guid, <span class="string">&quot;g&quot;</span>);
+        <span class="keyword">var</span> newHtml = clone.<span class="title function_">html</span>(<span class="keyword">function</span> (<span class="params">i, oldHtml</span>) &#123;
+            <span class="keyword">return</span> oldHtml.<span class="title function_">replace</span>(regex, <span class="title class_">GenerateGuid</span>());
+        &#125;);
+        $(id).<span class="title function_">append</span>(newHtml);
+    &#125;);
+&#125;</code></pre>
+
+<h1 id="3-Cach-xai"><a href="#3-Cach-xai" class="headerlink" title="3. Cách xài"></a>3. Cách xài</h1><p><a id="markdown-c%C3%A1ch-x%C3%A0i" name="c%C3%A1ch-x%C3%A0i"></a></p>
+<h2 id="3-1-Chuan-bi-model"><a href="#3-1-Chuan-bi-model" class="headerlink" title="3.1. Chuẩn bị model"></a>3.1. Chuẩn bị model</h2><p><a id="markdown-chu%E1%BA%A9n-b%E1%BB%8B-model" name="chu%E1%BA%A9n-b%E1%BB%8B-model"></a></p>
+<p>Cái model mà bạn muốn dùng với cái control EditorForMany này, bạn phải thêm một property là Index vô nữa</p>
+<p>Ví dụ, nếu tui có một cái class tên là Model luôn</p>
+<pre><code class="highlight cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Model</span>
+&#123;
+    <span class="comment">// Your normal, already existed properties</span>
+ 
+    <span class="comment">// set to false if you don&#x27;t want to generate a HTML input tag</span>
+    <span class="comment">// for it when using with editorfor control</span>
+    [<span class="meta">ScaffoldColumn(false)</span>]
+    <span class="keyword">public</span> <span class="built_in">string</span> Index &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
+&#125;</code></pre>
+
+<h2 id="3-2-Razor-code"><a href="#3-2-Razor-code" class="headerlink" title="3.2. Razor code"></a>3.2. Razor code</h2><p><a id="markdown-razor-code" name="razor-code"></a></p>
+<pre><code class="highlight cs">@using(Html.BeginForm(<span class="string">&quot;ActionName&quot;</span>,<span class="string">&quot;ControllerName&quot;</span>,FormMethod.Post, <span class="keyword">new</span> &#123;@class=<span class="string">&quot;CssClassName&quot;</span>&#125;))
+&#123;
+    <span class="comment">// the last parameter &quot;true&quot; is to generate a default item</span>
+    @Html.EditorForMany(x =&gt; x.Model, x =&gt; x.Index, <span class="literal">true</span>)
+&#125;
+ 
+ 
+    <span class="comment">// include the javascript code file above</span>
+    AssignAddMoreButton();</code></pre>
+
+<p>Nếu bạn muốn đặt toàn bộ code javascript vào một file .js, nhớ gọi function AssignAddMoreButton sau khi “document ready” nhóe</p>
+<h1 id="4-Ket-qua"><a href="#4-Ket-qua" class="headerlink" title="4. Kết quả"></a>4. Kết quả</h1><p><a id="markdown-k%E1%BA%BFt-qu%E1%BA%A3" name="k%E1%BA%BFt-qu%E1%BA%A3"></a></p>
+<p>Kết quả nó sẽ giống vầy (có thêm style của bootstrap nữa nha)</p>
+<p><img src="/images/flickr/4169/34124808091_f4c2130fd2_o.jpg" alt="demo image"></p>
+<h1 id="5-Cach-hoat-dong"><a href="#5-Cach-hoat-dong" class="headerlink" title="5. Cách hoạt động"></a>5. Cách hoạt động</h1><p><a id="markdown-c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng" name="c%C3%A1ch-ho%E1%BA%A1t-%C4%91%E1%BB%99ng"></a></p>
+<p>HtmlHelperExtensions chính là chỗ mà điều kỳ diệu xảy ra. Keyword Extensions sẽ “đăng ký” nó thành một extension của HtmlHelper</p>
+<h2 id="5-1-Cac-buoc"><a href="#5-1-Cac-buoc" class="headerlink" title="5.1. Các bước"></a>5.1. Các bước</h2><p><a id="markdown-c%C3%A1c-b%C6%B0%E1%BB%9Bc" name="c%C3%A1c-b%C6%B0%E1%BB%9Bc"></a></p>
+<p>Về cơ bản, nó sẽ làm những bước sau</p>
+<ol>
+<li>Lấy danh sách Items</li>
+<li>Lấy Index property (nếu bạn có khai báo index)</li>
+<li>Generate một item default mới (nếu bạn kêu nó làm thế)</li>
+<li>Dựng code HTML</li>
+</ol>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span>
+    <span class="comment">&lt;!-- List of your html input tag generated by editorfor and extended templates --&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre>
+
+<h2 id="5-2-Tai-sao-lai-can-Index"><a href="#5-2-Tai-sao-lai-can-Index" class="headerlink" title="5.2. Tại sao lại cần Index"></a>5.2. Tại sao lại cần Index</h2><p><a id="markdown-t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index" name="t%E1%BA%A1i-sao-l%E1%BA%A1i-c%E1%BA%A7n-index"></a></p>
+<p>Có 2 cách để send một list data tới controller</p>
+<ul>
+<li><p>dùng một mảng có đánh số</p>
+<ul>
+<li>xóa 1 item sẽ làm lộn xộn cả list, controller chỉ nhận mảng liên tục</li>
+<li>thêm mới 1 item thì cần phải biết index cuối cùng là bao nhiêu</li>
+</ul>
+</li>
+</ul>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[0].Data&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[1].Data&quot;</span>/&gt;</span></code></pre>
+
+<ul>
+<li>dùng mảng có index dạng string<ul>
+<li>yêu cầu thêm một tag input ẩn để chứa index</li>
+<li>dễ thêm, xóa, sửa item</li>
+</ul>
+</li>
+</ul>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList.Index&quot;</span> <span class="attr">value</span>=<span class="string">&quot;radomGuid1&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[randomGuid1].Data&quot;</span>/&gt;</span>
+ 
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList.Index&quot;</span> <span class="attr">value</span>=<span class="string">&quot;anotherGuid2&quot;</span>/&gt;</span>
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;YourList[anotherGuid2].Data&quot;</span>/&gt;</span></code></pre>
+
+<p>Như bạn cũng thấy, giá trị của hidden input tag có thể là bất cứ gì, miễn là giá trị trong ngoặc vuông giống với nó.</p>
+<p>Bước 1 bước xa hơn, đoạn code javascript bên trên sẽ tạo ra index dạng GUID, cho nên bạn sẽ không phải lo về vấn đề trùng lặp index. Tuy nhiên, nó ko phải là GUID thiệt, vì để generate GUID thiệt sẽ hơi phức tạp, và làm cho app nặng lên, giống như xài tên lửa đi giết ruồi, cho nên để cho đơn giản, đoạn code đó chỉ sinh ra “fake” GUID, nhưng theo cách code thì khó mà trùng được</p>
+<p>Theo bạn, bạn có cách nào cải tiến đoạn code bên trên không?</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/" title="[ASPNET] Editor for với List và thêm mới item dùng AJAX">https://huntertran.github.io/blog/2017/04/25/aspnet-editor-for-voi-list-va-them-moi-item-dung-ajax/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/editorfor/" rel="tag"># editorfor</a>
+              <a href="/tags/ajax/" rel="tag"># ajax</a>
+              <a href="/tags/editorformany/" rel="tag"># editorformany</a>
+              <a href="/tags/list/" rel="tag"># list</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/04/20/asp-net-mo-rong-editorfor/" rel="prev" title="[ASP.NET] Mở rộng EditorFor">
+                  <i class="fa fa-angle-left"></i> [ASP.NET] Mở rộng EditorFor
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/08/02/wordpress-install-wordpress-to-docker-containers-from-windows/" rel="next" title="Wordpress - Install Wordpress to Docker containers from Windows">
+                  Wordpress - Install Wordpress to Docker containers from Windows <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

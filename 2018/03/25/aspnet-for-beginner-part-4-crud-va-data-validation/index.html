@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation">
+<meta property="og:url" content="https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: C">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/4783/41003265721_c53a2103d8_o.png">
+<meta property="article:published_time" content="2018-03-25T10:03:16.000Z">
+<meta property="article:modified_time" content="2026-04-28T03:40:21.092Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="programming, tech, computer tips, .net, c#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/4783/41003265721_c53a2103d8_o.png">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/","path":"2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/","title":"[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-CRUD"><span class="nav-text">1. CRUD</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-DbContext"><span class="nav-text">1.1. DbContext</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Create"><span class="nav-text">1.2. Create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Read"><span class="nav-text">1.3. Read</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Update"><span class="nav-text">1.4. Update</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-The-Simplest-2-trip-to-database"><span class="nav-text">1.4.1. The Simplest - 2 trip to database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-A-more-complicated"><span class="nav-text">1.4.2. A more complicated</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-Track"><span class="nav-text">1.4.3. Track???</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Delete"><span class="nav-text">1.5. Delete</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-DbContext-Mot-cach-code-tot-hon"><span class="nav-text">2. DbContext - Một cách code tốt hơn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Neu-CRUD-failed"><span class="nav-text">2.1. Nếu CRUD failed?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-await-hay-khong"><span class="nav-text">2.2. await hay không?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Model-Validation"><span class="nav-text">3. Model Validation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-DataAnnotation"><span class="nav-text">3.1. DataAnnotation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Client-side-validation"><span class="nav-text">3.2. Client side validation</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">128</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [ASP.NET for Beginner] - Part 4 - CRUD và Data Validation<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180325-aspnet-for-beginner-part-4-crud-va-data-validation.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-03-25 06:03:16" itemprop="dateCreated datePublished" datetime="2018-03-25T06:03:16-04:00">2018-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-04-27 23:40:21" itemprop="dateModified" datetime="2026-04-27T23:40:21-04:00">2026-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Others/" itemprop="url" rel="index"><span itemprop="name">Others</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Vậy là bạn đã có một khái niệm cơ bản về MVC, cách kết nối tới database, lựa chọn cho mình một front end phù hợp, đã tới lúc bắt tay vào thực hiện 4 thao tác cơ bản nhất của bất kỳ ứng dụng web nào: CRUD</p>
+<span id="more"></span>
+
+<blockquote>
+<p>Xem các bài viết trong series</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/04/asp-net-for-beginner-part-1-mvc/">Phần 1: Mô hình MVC</a></li>
+<li><a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">Phần 2: Connect Database và Model Binding</a></li>
+<li><a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/">Phần 3: Front end framework nào</a></li>
+<li><a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/">Phần 4: CRUD và Data Validation</a></li>
+</ul>
+</blockquote>
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-crud">1. CRUD</a><ul>
+<li><a href="#11-dbcontext">1.1. DbContext</a></li>
+<li><a href="#12-create">1.2. Create</a></li>
+<li><a href="#13-read">1.3. Read</a></li>
+<li><a href="#14-update">1.4. Update</a><ul>
+<li><a href="#141-the-simplest---2-trip-to-database">1.4.1. The Simplest - 2 trip to database</a></li>
+<li><a href="#142-a-more-complicated">1.4.2. A more complicated</a></li>
+<li><a href="#143-track">1.4.3. Track???</a></li>
+</ul>
+</li>
+<li><a href="#15-delete">1.5. Delete</a></li>
+</ul>
+</li>
+<li><a href="#2-dbcontext---m%E1%BB%99t-c%C3%A1ch-code-t%E1%BB%91t-h%C6%A1n">2. DbContext - Một cách code tốt hơn</a><ul>
+<li><a href="#21-n%E1%BA%BFu-crud-failed">2.1. Nếu CRUD failed?</a></li>
+<li><a href="#22-await-hay-kh%C3%B4ng">2.2. await hay không?</a></li>
+</ul>
+</li>
+<li><a href="#3-model-validation">3. Model Validation</a><ul>
+<li><a href="#31-dataannotation">3.1. DataAnnotation</a></li>
+<li><a href="#32-client-side-validation">3.2. Client side validation</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-CRUD"><a href="#1-CRUD" class="headerlink" title="1. CRUD"></a>1. CRUD</h1><p><a id="markdown-crud" name="crud"></a></p>
+<p>CRUD viết tắt cho 4 hành động liên quan tới database là <code>Create</code>, <code>Read</code>, <code>Update</code> và <code>Delete</code></p>
+<blockquote>
+<p>Bài viết này giả định rằng bạn sử dụng Entity Framework, như đã nói ở <a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">phần 2</a>, và đã có sẵn code trong ví dụ Bạn có thể clone code tại Github ở <a target="_blank" rel="noopener" href="https://github.com/huntertran/mvcbasic/releases/tag/0.2">đây</a></p>
+</blockquote>
+<h2 id="1-1-DbContext"><a href="#1-1-DbContext" class="headerlink" title="1.1. DbContext"></a>1.1. DbContext</h2><p><a id="markdown-dbcontext" name="dbcontext"></a></p>
+<p>Trong ví dụ <code>mvcbasic</code>, <code>MvcBasicDbContext</code> đã được tạo sẵn cho bạn, và được khai báo ở mỗi Controller cần thiết. Ta sẽ sử dụng class này</p>
+<p>Trong class PhoneController đã được tạo sẵn trong ví dụ, bạn có thể thấy cả 4 phương thức này được viết sẵn.</p>
+<h2 id="1-2-Create"><a href="#1-2-Create" class="headerlink" title="1.2. Create"></a>1.2. Create</h2><p><a id="markdown-create" name="create"></a></p>
+<p>Để tạo 1 record trong database, đối với Entity Framework, chuyện rất đơn giản</p>
+<pre><code class="highlight csharp"><span class="keyword">var</span> phone = <span class="keyword">new</span> Phone
+&#123;
+    Name = <span class="string">&quot;Samsung Galaxy A5 (2017)&quot;</span>
+&#125;;
+ 
+_context.Phones.Add(phone);
+_context.SaveChanges();</code></pre>
+
+<p>Trong trường hợp bạn muốn thêm nhiều dòng cùng một lúc, thì Entity Framework hỗ trợ một phương thức khác</p>
+<pre><code class="highlight csharp"><span class="keyword">var</span> phones = <span class="keyword">new</span> List&lt;Phone&gt;();
+ 
+<span class="keyword">var</span> phone = <span class="keyword">new</span> Phone
+&#123;
+    Name = <span class="string">&quot;Phone 1&quot;</span>
+&#125;;
+
+phones.Add(phone);
+ 
+phone = <span class="keyword">new</span> Phone
+&#123;
+    Name = <span class="string">&quot;Phone 2&quot;</span>
+&#125;;
+
+phones.Add(phone);
+ 
+_context.Phones.AddRange(phones);
+_context.SaveChanges();</code></pre>
+
+<h2 id="1-3-Read"><a href="#1-3-Read" class="headerlink" title="1.3. Read"></a>1.3. Read</h2><p><a id="markdown-read" name="read"></a></p>
+<p>Để lấy 1 dòng dữ liệu từ 1 bảng, bạn có thể dùng method <code>Find</code></p>
+<pre><code class="highlight csharp"><span class="keyword">var</span> id = <span class="number">1</span>;
+<span class="keyword">var</span> phone = _context.Phones.Find(id);</code></pre>
+
+<p>Method <code>Find</code> sẽ tìm trong bảng Phone có khóa chính &#x3D; id của bạn. Kết quả trả về null nếu khóa đó không tồn tại</p>
+<p>Để lấy nhiều dòng dữ liệu thỏa một điều kiện nào đó, bạn có thể dùng <code>LINQ</code> để query</p>
+<pre><code class="highlight csharp"><span class="keyword">var</span> searchKey = <span class="string">&quot;samsung&quot;</span>;
+<span class="keyword">var</span> phones = _context.Phones.Where(x =&gt; x.Name.Contains(searchKey));</code></pre>
+
+<p><code>x</code> đại diện cho 1 object Phone trong database</p>
+<p><code>x.Name.Contains(searchKey)</code> nghĩa là Name có chứa string <code>searchKey</code></p>
+<blockquote>
+<p>Hầu như tất cả các query bạn quen thuộc khi viết câu truy vấn bằng SQL đều có thể viết được dưới dạng LINQ. Đây gọi là LINQ to Entities (Dùng Linq để query thông qua các entities trong Entity Framework)</p>
+<p>Bạn có thể tìm các câu lệnh tương ứng trong Linq bằng từ khóa: “How to <em><strong>hành động bạn muốn làm</strong></em> using linq”</p>
+</blockquote>
+<p>Kết quả trả về của một truy vấn là kiểu dữ liệu <code>IQueryable</code>. Bạn có thể tiếp tục lọc, gom nhóm, filter lại, hoặc chuyển đổi thành một kiểu dữ liệu khác như List, Array, etc</p>
+<p>Bạn có thể xem thêm về các câu lệnh Linq được support ở đây: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities#type-methods">Supported and Unsupported LINQ Methods (LINQ to Entities) on docs.microsoft.com</a></p>
+<h2 id="1-4-Update"><a href="#1-4-Update" class="headerlink" title="1.4. Update"></a>1.4. Update</h2><p><a id="markdown-update" name="update"></a></p>
+<p>Không đơn giản như các lệnh khác, update dùng Entity Framework hơi phức tạp (hơi thôi)</p>
+<h3 id="1-4-1-The-Simplest-2-trip-to-database"><a href="#1-4-1-The-Simplest-2-trip-to-database" class="headerlink" title="1.4.1. The Simplest - 2 trip to database"></a>1.4.1. The Simplest - 2 trip to database</h3><p><a id="markdown-the-simplest---2-trip-to-database" name="the-simplest---2-trip-to-database"></a></p>
+<p>Cách đơn giản nhất để update 1 record gồm 3 bước 1. Lấy record đó lên từ database - Truy cập database lần 1 2. Thay đổi 1 thông tin nào đó trong record 3. Update lại record đó trong database - Truy cập database lần 2</p>
+<p>code của nó như sau</p>
+<pre><code class="highlight csharp"><span class="comment">// get the phone object from database</span>
+<span class="keyword">var</span> phone = _context.Phones.Find(phoneId);
+ 
+<span class="comment">// change some info</span>
+phone.Name = <span class="string">&quot;Test&quot;</span>
+ 
+<span class="comment">// update the change to database</span>
+_context.SaveChanges();</code></pre>
+
+<p>Như bạn thấy, cách này bắt buộc bạn phải lấy 1 dữ liệu từ database lên trước khi bạn có thể edit nó</p>
+<h3 id="1-4-2-A-more-complicated"><a href="#1-4-2-A-more-complicated" class="headerlink" title="1.4.2. A more complicated"></a>1.4.2. A more complicated</h3><p><a id="markdown-a-more-complicated" name="a-more-complicated"></a></p>
+<p>Vậy nếu bạn biết trước tất cả các dữ liệu của object thì sao? Trong trường hợp này, query record đó từ database là không cần thiết</p>
+<pre><code class="highlight csharp"><span class="comment">// Create the object from your brain</span>
+<span class="keyword">var</span> phone = <span class="keyword">new</span> Phone
+&#123;
+    Id = <span class="number">1</span>
+&#125;;
+ 
+<span class="comment">// Attach it to DbContext, so the DbContext can &quot;track&quot; the object</span>
+<span class="comment">// Gắn nó vào DbContext, để DbContext có thể &quot;theo dõi&quot; object của bạn</span>
+_context.Phones.Attach(phone);
+ 
+<span class="comment">// Do some change</span>
+phone.Name = <span class="string">&quot;Test&quot;</span>;
+ 
+<span class="comment">// Save the change</span>
+_context.SaveChanges();</code></pre>
+
+<h3 id="1-4-3-Track"><a href="#1-4-3-Track" class="headerlink" title="1.4.3. Track???"></a>1.4.3. Track???</h3><p><a id="markdown-track%3F%3F%3F" name="track%3F%3F%3F"></a></p>
+<p>Entity Framework có 1 cách rất hay (và hơi phức tạp) để có thể tối ưu hóa các phương thức truy xuất&#x2F;cập nhật dữ liệu: Nó sẽ theo dõi các thay đổi của 1 object</p>
+<p>Giả sử, object của bạn có 50 field. Bạn chỉ thay đổi 1 field trong đó, rồi gọi <code>_context.SaveChanges()</code>, EF sẽ biết được rằng chỉ có 1 field bị thay đổi, và nó sẽ cập nhật đúng 1 field duy nhất, tăng hiệu suất của ứng dụng.</p>
+<p>Để làm được điều này, nó sẽ query object đó trước bằng khóa chính, và khi bạn gọi Attach, nó sẽ bắt đầu theo dõi object của bạn.</p>
+<p>Khi bạn thay đổi 1 field, thì trạng thái của field đó từ <code>Unmodified</code> sẽ chuyển thành <code>Modified</code></p>
+<h2 id="1-5-Delete"><a href="#1-5-Delete" class="headerlink" title="1.5. Delete"></a>1.5. Delete</h2><p><a id="markdown-delete" name="delete"></a></p>
+<p>Tương tự như edit, khi muốn delete 1 object, bạn cũng cần “2 chuyến” tới database</p>
+<pre><code class="highlight csharp"><span class="keyword">var</span> phone = _context.Phones.Find(id);
+ 
+_context.Phones.Remove(phone);
+_context.SaveChanges();</code></pre>
+
+<h1 id="2-DbContext-Mot-cach-code-tot-hon"><a href="#2-DbContext-Mot-cach-code-tot-hon" class="headerlink" title="2. DbContext - Một cách code tốt hơn"></a>2. DbContext - Một cách code tốt hơn</h1><p><a id="markdown-dbcontext---m%E1%BB%99t-c%C3%A1ch-code-t%E1%BB%91t-h%C6%A1n" name="dbcontext---m%E1%BB%99t-c%C3%A1ch-code-t%E1%BB%91t-h%C6%A1n"></a></p>
+<h2 id="2-1-Neu-CRUD-failed"><a href="#2-1-Neu-CRUD-failed" class="headerlink" title="2.1. Nếu CRUD failed?"></a>2.1. Nếu CRUD failed?</h2><p><a id="markdown-n%E1%BA%BFu-crud-failed%3F" name="n%E1%BA%BFu-crud-failed%3F"></a></p>
+<p>Sẽ có nhiều trường hợp, khi gọi các câu lệnh crud bằng entity framework, ko có dòng data nào được thêm vào hoặc sửa đổi. Vậy làm sao bạn biết khi nào thành công khi nào không?</p>
+<pre><code class="highlight csharp">_context.SaveChanges();</code></pre>
+
+<p>May mắn là method trên trả về <em><strong>số lượng record có thay đổi</strong></em></p>
+<p>Vì vậy, bạn có thể kiểm tra rất dễ bằng cách</p>
+<pre><code class="highlight csharp"><span class="comment">// your code here to CRUD</span>
+<span class="keyword">var</span> result = _context.SaveChanges();</code></pre>
+
+<p>bằng cách kiểm tra “result &gt; 0”, bạn có thể biết được câu lệnh save changes của mình có thành công hay ko</p>
+<h2 id="2-2-await-hay-khong"><a href="#2-2-await-hay-khong" class="headerlink" title="2.2. await hay không?"></a>2.2. await hay không?</h2><p><a id="markdown-await-hay-kh%C3%B4ng%3F" name="await-hay-kh%C3%B4ng%3F"></a></p>
+<p>Trong code controller được sinh ra bởi asp.net, bạn sẽ thấy các câu lệnh có dùng <code>_context</code> đều có <code>async</code> đằng sau, đằng trước là <code>await</code>, và kiểu dữ liệu của method là <code>Task</code></p>
+<p>Hiểu một cách đơn giản, async - await là một cặp từ khóa giúp đơn giản hóa việc lập trình multi thread.</p>
+<blockquote>
+<p>Nếu bạn chưa nắm vững kỹ thuật async-await, thì mình khuyên bạn là nên… bỏ hẳn và chỉ sử dụng các method trong các phần code bên trên trong bài viết này</p>
+</blockquote>
+<h1 id="3-Model-Validation"><a href="#3-Model-Validation" class="headerlink" title="3. Model Validation"></a>3. Model Validation</h1><p><a id="markdown-model-validation" name="model-validation"></a></p>
+<p>Chắc hẳn bạn đã từng nghe các ràng buộc như</p>
+<pre><code class="highlight plaintext">Tên không được chứa quá 20 ký tự Số điện thoại phải có 10 số</code></pre>
+
+<p>Bạn có tự hỏi “Họ đã làm điều đó như thế nào?”</p>
+<h2 id="3-1-DataAnnotation"><a href="#3-1-DataAnnotation" class="headerlink" title="3.1. DataAnnotation"></a>3.1. DataAnnotation</h2><p><a id="markdown-dataannotation" name="dataannotation"></a></p>
+<p>ASP.NET cho phép bạn ràng buộc dữ liệu thông qua các <code>DataAnnotation</code> được viết thêm trên đầu mỗi property</p>
+<p>Lấy ví dụ với model <code>Phone</code>, mình muốn thêm 1 ràng buộc là tên không được quá 50 ký tự, và báo lỗi khi user nhập quá số lượng</p>
+<pre><code class="highlight csharp"><span class="keyword">namespace</span> <span class="title">mvcbasic.Models</span>
+&#123;
+    <span class="keyword">using</span> System.ComponentModel.DataAnnotations;
+ 
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Phone</span>
+    &#123;
+        <span class="keyword">public</span> <span class="built_in">int</span> Id &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
+ 
+        [<span class="meta">StringLength(50, ErrorMessage = <span class="string">&quot;Name cannot be more than 50 characters&quot;</span>)</span>]
+        <span class="keyword">public</span> <span class="built_in">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;
+    &#125;
+&#125;</code></pre>
+
+<blockquote>
+<p>Bạn có thể tìm hiểu sâu hơn về cách làm 1 câu error message chung cho tất cả các property cùng loại tại đây: <a target="_blank" rel="noopener" href="https://huntertran.ca/2018/01/14/asp-net-mvc-error-message-chung-ma-rieng/">Error Message – chung mà riêng</a></p>
+</blockquote>
+<p>Để check một object có thỏa điều kiện của model ko, bạn có thể dùng <code>ModelState</code>. Ví dụ trong method <code>Create</code></p>
+<pre><code class="highlight csharp"><span class="comment">// POST: Phone/Create</span>
+<span class="comment">// To protect from overposting attacks, please enable the specific properties you want to bind to, for </span>
+<span class="comment">// more details see http://go.microsoft.com/fwlink/?LinkId=317598.</span>
+[<span class="meta">HttpPost</span>]
+[<span class="meta">ValidateAntiForgeryToken</span>]
+<span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;IActionResult&gt; <span class="title">Create</span>(<span class="params">[Bind(<span class="string">&quot;Id,Name&quot;</span></span>)] Phone phone)</span>
+&#123;
+    <span class="comment">// CHECK MODEL STATE HERE</span>
+    <span class="keyword">if</span> (ModelState.IsValid)
+    &#123;
+        _context.Add(phone);
+        <span class="keyword">await</span> _context.SaveChangesAsync();
+ 
+        <span class="keyword">var</span> phone2 = <span class="keyword">new</span> Phone
+        &#123;
+            Name = <span class="string">&quot;Test&quot;</span>
+        &#125;;
+ 
+        <span class="keyword">var</span> phones = <span class="keyword">new</span> List&lt;Phone&gt;();
+ 
+        _context.Phones.AddRange(phones);
+ 
+        <span class="keyword">return</span> RedirectToAction(<span class="keyword">nameof</span>(Index));
+    &#125;
+    <span class="keyword">return</span> View(phone);
+&#125;</code></pre>
+
+<h2 id="3-2-Client-side-validation"><a href="#3-2-Client-side-validation" class="headerlink" title="3.2. Client side validation"></a>3.2. Client side validation</h2><p><a id="markdown-client-side-validation" name="client-side-validation"></a></p>
+<p>Client side validation cho phép user thấy các lỗi dữ liệu ngay khi họ nhập mà chưa cần gửi data lên server của bạn</p>
+<p>Việc bạn cần làm là thêm các dòng sau vào code View của mình</p>
+<pre><code class="highlight html"><span class="comment">&lt;!--dòng này có thể đã nằm trong file View/Shared/_Layout.cshtml của bạn rồi--&gt;</span>
+<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js&quot;</span>&gt;</span>https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
+ 
+<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js&quot;</span>&gt;</span>https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
+<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js&quot;</span>&gt;</span>https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js<span class="tag">&lt;/<span class="name">a</span>&gt;</span></code></pre>
+
+<p>và trong form, bạn thêm đoạn code sau để hiển thị thông báo lỗi (nếu có)</p>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">asp-action</span>=<span class="string">&quot;Create&quot;</span>&gt;</span>
+    <span class="comment">&lt;!--dòng này hiển thị một thông báo tổng hợp tất cả các lỗi--&gt;</span>
+    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text-danger&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span>
+ 
+ 
+        <span class="comment">&lt;!--dòng này hiển thị thông báo lỗi cụ thể cho form--&gt;</span>
+        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;text-danger&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span>
+ 
+    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre>
+
+<p>Lỗi hiển thị như sau</p>
+<p><img src="/images/flickr/4783/41003265721_c53a2103d8_o.png" alt="bug"></p>
+<blockquote>
+<p>Bạn có thể xem toàn bộ các annotation ở đây: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0">Data Annotation on docs.microsoft.com</a></p>
+</blockquote>
+<p>Thế là xong. Các bạn đón chờ phần tiếp theo nhé</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/" title="[ASP.NET for Beginner] - Part 4 - CRUD và Data Validation">https://huntertran.github.io/blog/2018/03/25/aspnet-for-beginner-part-4-crud-va-data-validation/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/03/18/asp-net-for-beginner-part-3-front-end-framework-nao/" rel="prev" title="[ASP.NET for Beginner] - Part 3 - Front end framework nào?">
+                  <i class="fa fa-angle-left"></i> [ASP.NET for Beginner] - Part 3 - Front end framework nào?
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/05/09/asp-net-project-structure-package-manager/" rel="next" title="[ASP.NET] - Project Structure &amp; Package Manager">
+                  [ASP.NET] - Project Structure & Package Manager <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

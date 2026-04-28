@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Hunter Tran</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://huntertran.github.io/blog/icon.png</icon>
+  <id>https://huntertran.github.io/blog/</id>
+  <link href="https://huntertran.github.io/blog/" rel="alternate"/>
+  <link href="https://huntertran.github.io/blog/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Hunter Tran</rights>
+  <subtitle>Share to be shared</subtitle>
+  <title>Hunter Tran's Blog</title>
+  <updated>2026-04-28T03:40:21.094Z</updated>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="computer tips" scheme="https://huntertran.github.io/blog/categories/computer-tips/"/>
+    <category term="computer tips" scheme="https://huntertran.github.io/blog/tags/computer-tips/"/>
+    <id>https://huntertran.github.io/blog/2025/08/31/Grocery-stores-Price-per-Unit-add-on/</id>
+    <link href="https://huntertran.github.io/blog/2025/08/31/Grocery-stores-Price-per-Unit-add-on/"/>
+    <published>2025-08-31T04:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Homepage for the <a href="https://microsoftedge.microsoft.com/addons/detail/walmart-price-per-unit/digjbmmdgmpmnfbiophhcifkhpmhpacc"><code>Walmart Price Per Unit</code></a> extension</p>
+<p>Available for Edge</p>]]>
+    </summary>
+    <title>Grocery stores Price per Unit extension</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="JavaScript and TypeScript" scheme="https://huntertran.github.io/blog/categories/JavaScript-and-TypeScript/"/>
+    <category term="Angular" scheme="https://huntertran.github.io/blog/tags/Angular/"/>
+    <id>https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/</id>
+    <link href="https://huntertran.github.io/blog/2025/01/01/The-Enum-pattern/"/>
+    <published>2025-01-01T21:08:01.000Z</published>
+    <summary>
+      <![CDATA[<p>An enum (short for “Enumeration”) is a value type that represents a set of named constants. This type allow you to define a set of named values that have underlying values, usually numeric ones.</p>
+<p>In this post, we will discuss on how to extent this type to store more data, and use them in a simple Angular select list.</p>]]>
+    </summary>
+    <title>The Enum pattern</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="reports" scheme="https://huntertran.github.io/blog/categories/reports/"/>
+    <category term="data" scheme="https://huntertran.github.io/blog/tags/data/"/>
+    <category term="powerbi" scheme="https://huntertran.github.io/blog/tags/powerbi/"/>
+    <category term="reports" scheme="https://huntertran.github.io/blog/tags/reports/"/>
+    <id>https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/</id>
+    <link href="https://huntertran.github.io/blog/2023/10/07/Canada-Express-Entry-Summary/"/>
+    <published>2023-10-07T20:04:50.000Z</published>
+    <summary>
+      <![CDATA[<p>A glimpse to the Express Entry program by Immigration, Refugees and Citizenship Canada</p>
+<iframe title="Report Section" width="1024"]]>
+    </summary>
+    <title>Canada Express Entry Summary</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="UI" scheme="https://huntertran.github.io/blog/categories/UI/"/>
+    <category term="ui" scheme="https://huntertran.github.io/blog/tags/ui/"/>
+    <id>https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/</id>
+    <link href="https://huntertran.github.io/blog/2023/09/04/The-problem-with-Select-All-option/"/>
+    <published>2023-09-04T20:59:10.000Z</published>
+    <summary>
+      <![CDATA[<p>In a list of checkbox, it’s convenient to have a <code>Select all</code> option at the top. But this option is not as simple as it seems. Let’s walk through the ideas, and the logic behind it.</p>]]>
+    </summary>
+    <title>The problem with Select All option</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/categories/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/tags/XAML/"/>
+    <category term="Windows Store App" scheme="https://huntertran.github.io/blog/tags/Windows-Store-App/"/>
+    <id>https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/</id>
+    <link href="https://huntertran.github.io/blog/2023/06/25/XAML-for-beginner-Part-2/"/>
+    <published>2023-06-25T14:31:36.000Z</published>
+    <summary>
+      <![CDATA[<p>This is part 2 of post “XAML for beginner”. In this part, I will introduce the list control: <code>ListBox</code>, <code>GridView</code>. Also included a super short introduction to MVVM and data binding in XAML.</p>]]>
+    </summary>
+    <title>XAML for beginner - Part 2</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/categories/XAML/"/>
+    <category term="XAML" scheme="https://huntertran.github.io/blog/tags/XAML/"/>
+    <category term="Windows Store App" scheme="https://huntertran.github.io/blog/tags/Windows-Store-App/"/>
+    <id>https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/</id>
+    <link href="https://huntertran.github.io/blog/2023/06/24/XAML-for-beginner-Part-1/"/>
+    <published>2023-06-24T21:46:07.000Z</published>
+    <summary>
+      <![CDATA[<p>A few years back, Microsoft was betting on Windows Phone. Could you guess which language they use to develop apps for these shiny new phones? It’s XAML. </p>
+<p>In this post, I will introduce the most basic concept of XAML layout, as well as how to use them in your personal project.</p>]]>
+    </summary>
+    <title>XAML for beginner - Part 1</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="csharp" scheme="https://huntertran.github.io/blog/tags/csharp/"/>
+    <category term="bool" scheme="https://huntertran.github.io/blog/tags/bool/"/>
+    <category term="boolean" scheme="https://huntertran.github.io/blog/tags/boolean/"/>
+    <category term="bitwise" scheme="https://huntertran.github.io/blog/tags/bitwise/"/>
+    <category term="optimize" scheme="https://huntertran.github.io/blog/tags/optimize/"/>
+    <id>https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/</id>
+    <link href="https://huntertran.github.io/blog/2022/04/24/Optimize-list-of-bool-values-in-C/"/>
+    <published>2022-04-24T00:47:44.000Z</published>
+    <summary>
+      <![CDATA[<p>Boolean data type represents the <code>true</code>&#x2F;<code>false</code> value. If you create a class with multiple booleans, here are some tips and tricks to optimize them. This will include using bitwise operations and how to flatten them for display on UI.</p>]]>
+    </summary>
+    <title>Optimize list of bool values in C#</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Office" scheme="https://huntertran.github.io/blog/categories/Office/"/>
+    <category term="office" scheme="https://huntertran.github.io/blog/tags/office/"/>
+    <id>https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/</id>
+    <link href="https://huntertran.github.io/blog/2022/04/17/Count-down-timer-with-VBA-in-PowerPoint/"/>
+    <published>2022-04-17T23:50:01.000Z</published>
+    <summary>
+      <![CDATA[<p>Learn how you can create a simple count-down timer for a PowerPoint presentation with Visual Basic for Application (VBA).</p>]]>
+    </summary>
+    <title>Count down timer with VBA in PowerPoint</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="system design" scheme="https://huntertran.github.io/blog/categories/system-design/"/>
+    <category term="system design" scheme="https://huntertran.github.io/blog/tags/system-design/"/>
+    <id>https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/</id>
+    <link href="https://huntertran.github.io/blog/2022/01/22/An-introduction-to-web-service-scaling/"/>
+    <published>2022-01-22T07:42:18.000Z</published>
+    <summary>
+      <![CDATA[<p>Designing a system that could serve millions of requests will always be a big challenge. Fortunately, there are multiple solutions to this problem. Depending on how large your system could be, you could utilize these solutions or combine them for a better result.</p>]]>
+    </summary>
+    <title>An introduction to web service scaling</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Life" scheme="https://huntertran.github.io/blog/categories/Life/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
+    <id>https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/</id>
+    <link href="https://huntertran.github.io/blog/2021/09/19/how-do-i-get-10-reputation-on-stackoverflow-everyday/"/>
+    <published>2021-09-19T00:11:32.000Z</published>
+    <summary>
+      <![CDATA[<p>For a long time, my reputation points on StackOverflow (SO) were just around 200. You get 100 by just registering an account. If your reputation score is high, you can brag about it in your CV, or even better, landing your next dream job. In this blog post, I will tell you the story of how I can get +10 reputations EVERY DAY.</p>]]>
+    </summary>
+    <title>How do I get +10 reputations on StackOverflow everyday</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="research" scheme="https://huntertran.github.io/blog/categories/research/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
+    <id>https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/</id>
+    <link href="https://huntertran.github.io/blog/2021/05/22/A-list-of-developer-surveys/"/>
+    <published>2021-05-22T23:51:39.000Z</published>
+    <summary>
+      <![CDATA[<p>When I’m looking for numbers in my recent research, I need reliable surveys&#x2F;market share statistics in computer technologies. So here is a list of them:</p>]]>
+    </summary>
+    <title>A list of developer surveys</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
+    <id>https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/</id>
+    <link href="https://huntertran.github.io/blog/2020/12/09/install-quick-assist-in-Windows-10/"/>
+    <published>2020-12-09T23:22:20.000Z</published>
+    <summary>
+      <![CDATA[<p>Quick assist is a nice feature that allow you connect to other computer, just like TeamViewer.</p>]]>
+    </summary>
+    <title>install quick assist in Windows 10</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
+    <id>https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/25/reset-network-in-Windows-10/"/>
+    <published>2020-11-25T01:21:29.000Z</published>
+    <summary>
+      <![CDATA[<p>How to reset network settings in Windows 10</p>
+<p>This action can help solve connection problems you might have after upgrading from a previous version of Windows to Windows 10. It can also help fix the problem of connecting to the internet but cannot connect to shared network drives. Network reset removes any network adapters you have installed and the settings for them. After your PC restarts, any network adapters are reinstalled, and the settings for them are set to the defaults.</p>]]>
+    </summary>
+    <title>reset network in Windows 10</title>
+    <updated>2026-04-28T03:40:21.094Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="tips" scheme="https://huntertran.github.io/blog/tags/tips/"/>
+    <id>https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/15/troubleshoot-microphone-problems/"/>
+    <published>2020-11-15T16:31:16.000Z</published>
+    <summary>
+      <![CDATA[<p>Step-by-step instruction on how to:</p>
+<ul>
+<li>Enable&#x2F;Disable microphone</li>
+<li>boost your Microphone volume</li>
+<li>listen to your Microphone</li>
+<li>fix Microphone is disabled on a laptop running on battery</li>
+<li>fix weird sounds</li>
+</ul>]]>
+    </summary>
+    <title>Troubleshoot microphone problems</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Coding Challenges" scheme="https://huntertran.github.io/blog/categories/Coding-Challenges/"/>
+    <category term="coding" scheme="https://huntertran.github.io/blog/tags/coding/"/>
+    <category term="challenge" scheme="https://huntertran.github.io/blog/tags/challenge/"/>
+    <id>https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/</id>
+    <link href="https://huntertran.github.io/blog/2020/11/11/Coding-Game-Shadow-of-the-Knight/"/>
+    <published>2020-11-11T06:09:15.000Z</published>
+    <summary>
+      <![CDATA[<p>Difficulty: Medium</p>
+<p>Original link: <a href="https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1">https://www.codingame.com/ide/puzzle/shadows-of-the-knight-episode-1</a></p>
+<p>Language: python</p>
+<h1 id="The-Goal"><a href="#The-Goal" class="headerlink" title="The Goal"></a>The Goal</h1><p>Batman will look for the hostages on a given building by jumping from one window to another using his grapnel gun. Batman’s goal is to jump to the window where the hostages are located to disarm the bombs. Unfortunately, he has a limited number of jumps before the bombs go off…</p>]]>
+    </summary>
+    <title>Coding Game: Shadow of the Knight - Episode 1</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="windows" scheme="https://huntertran.github.io/blog/tags/windows/"/>
+    <category term="iso" scheme="https://huntertran.github.io/blog/tags/iso/"/>
+    <id>https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/</id>
+    <link href="https://huntertran.github.io/blog/2020/10/17/How-to-download-Windows-10-ISO/"/>
+    <published>2020-10-17T17:08:02.000Z</published>
+    <summary>
+      <![CDATA[<p>Step-by-step instructions on how to download Windows 10 ISO.</p>]]>
+    </summary>
+    <title>How to download Windows 10 ISO</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="research" scheme="https://huntertran.github.io/blog/categories/research/"/>
+    <category term="python" scheme="https://huntertran.github.io/blog/tags/python/"/>
+    <category term="nlp" scheme="https://huntertran.github.io/blog/tags/nlp/"/>
+    <category term="nltk" scheme="https://huntertran.github.io/blog/tags/nltk/"/>
+    <category term="research" scheme="https://huntertran.github.io/blog/tags/research/"/>
+    <id>https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/</id>
+    <link href="https://huntertran.github.io/blog/2020/10/09/Grammar-Regex-Pattern-for-NLTK-Part-of-Speech-Tagging/"/>
+    <published>2020-10-09T01:26:02.000Z</published>
+    <summary>
+      <![CDATA[<p>NLTK has a function called <code>regexpparser</code> to parse the Part-of-Speech tagged sentence. I cannot find a good and short explanation for the Regex pattern. So here is one.</p>]]>
+    </summary>
+    <title>Grammar Regex Pattern cheat sheet for NLTK Part-of-Speech Tagging</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
+    <category term="github" scheme="https://huntertran.github.io/blog/tags/github/"/>
+    <category term="vscode" scheme="https://huntertran.github.io/blog/tags/vscode/"/>
+    <id>https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/</id>
+    <link href="https://huntertran.github.io/blog/2020/09/03/GitHub-codespace-write-code-in-web-browser/"/>
+    <published>2020-09-03T20:02:21.000Z</published>
+    <summary>
+      <![CDATA[<p>After coming home with Microsoft, more and more good and free things come to GitHub. This time, a long-awaited features are in beta, invitation-only, and it is <code>GitHub Codespaces</code>.</p>]]>
+    </summary>
+    <title>GitHub codespaces - write code in web browser</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Computer Tips" scheme="https://huntertran.github.io/blog/categories/Computer-Tips/"/>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
+    <category term="git" scheme="https://huntertran.github.io/blog/tags/git/"/>
+    <category term="TFS" scheme="https://huntertran.github.io/blog/tags/TFS/"/>
+    <category term="devops" scheme="https://huntertran.github.io/blog/tags/devops/"/>
+    <id>https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/</id>
+    <link href="https://huntertran.github.io/blog/2020/07/30/migrate-azure-devops-tfs-to-git-reserving-history/"/>
+    <published>2020-07-30T04:31:02.000Z</published>
+    <summary>
+      <![CDATA[<p>Microsoft acquired GitHub, and everyone has an unlimited number of private repositories. This reason alone makes me want to move all my project and source code to GitHub.</p>]]>
+    </summary>
+    <title>Migrate Azure DevOps TFS to Git reserving history</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Hunter Tran</name>
+    </author>
+    <category term="Others" scheme="https://huntertran.github.io/blog/categories/Others/"/>
+    <category term="virtual machine" scheme="https://huntertran.github.io/blog/tags/virtual-machine/"/>
+    <category term="compute engine" scheme="https://huntertran.github.io/blog/tags/compute-engine/"/>
+    <category term="google cloud" scheme="https://huntertran.github.io/blog/tags/google-cloud/"/>
+    <category term="putty" scheme="https://huntertran.github.io/blog/tags/putty/"/>
+    <id>https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/</id>
+    <link href="https://huntertran.github.io/blog/2020/07/20/connect-with-google-cloud-compute-engine-virtual-machine-using-putty/"/>
+    <published>2020-07-20T22:28:46.000Z</published>
+    <summary>
+      <![CDATA[<p>I don’t know why Google makes it so challenging to connect to its Compute Engine cloud service. Even the name is confusing. Why don’t they just call it Virtual Machine?</p>
+<p>Anyway, here is how to connect.</p>]]>
+    </summary>
+    <title>Connect with Google Cloud Compute Engine (Virtual Machine) using PuTTY</title>
+    <updated>2026-04-28T03:40:21.093Z</updated>
+  </entry>
+</feed>
