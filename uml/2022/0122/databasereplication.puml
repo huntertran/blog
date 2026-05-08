@@ -1,0 +1,22 @@
+@startuml database_replication
+
+' skinparam linetype polyline
+
+component servers
+
+database master
+
+database slave1
+database slave2
+database slave3
+
+master <--> slave1 : replication
+master <--> slave2 : replication
+master <--> slave3 : replication
+
+servers --> master : write
+servers --> slave1 : read
+servers --> slave2 : read
+servers --> slave3 : read
+
+@enduml

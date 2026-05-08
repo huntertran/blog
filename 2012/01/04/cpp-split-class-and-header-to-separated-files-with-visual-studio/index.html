@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[C++] Split class and header to separated files with Visual Studio">
+<meta property="og:url" content="https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174418pm.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174544pm.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105758am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105917am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110433am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110805am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111110am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111204am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111253am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111801am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111817am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111838am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111908am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112720am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112847am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112946am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113311am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113208am.png">
+<meta property="og:image" content="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113512am.png">
+<meta property="article:published_time" content="2012-01-04T04:25:00.000Z">
+<meta property="article:modified_time" content="2026-05-08T05:08:51.625Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="Header (computing)">
+<meta property="article:tag" content="Separate class">
+<meta property="article:tag" content="Source">
+<meta property="article:tag" content="Visual Studio">
+<meta property="article:tag" content="class">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/","path":"/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/","title":"[C++] Split class and header to separated files with Visual Studio"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[C++] Split class and header to separated files with Visual Studio | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Khong-nen"><span class="nav-text">1. Không nên</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Nen"><span class="nav-text">2. Nên</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Vi-du"><span class="nav-text">3. Ví dụ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Tach-class-thanh-file-rieng"><span class="nav-text">4. Tách class thành file riêng</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Ve-viec-su-dung-Namespace"><span class="nav-text">5. Về việc sử dụng Namespace</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[C++] Split class and header to separated files with Visual Studio | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [C++] Split class and header to separated files with Visual Studio<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20120103-cpp01.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2012-01-03 23:25:00" itemprop="dateCreated datePublished" datetime="2012-01-03T23:25:00-05:00">2012-01-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-05-08 01:08:51" itemprop="dateModified" datetime="2026-05-08T01:08:51-04:00">2026-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CPlusPlus/" itemprop="url" rel="index"><span itemprop="name">CPlusPlus</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Thói quen của sinh viên là viết Code luôn tuồn trên cùng một file. Khi biên dịch, file đó có kích thước rất lớn, chương trình chạy chậm, dễ phát sinh lỗi, vân vân và vân vân. Vậy làm thế nào để có thể tách các thành phần trong code ra thành những file riêng?</p>
+<span id="more"></span>
+<ul>
+<li><a href="#1-kh%C3%B4ng-n%C3%AAn">1. Không nên</a></li>
+<li><a href="#2-n%C3%AAn">2. Nên</a></li>
+<li><a href="#3-v%C3%AD-d%E1%BB%A5">3. Ví dụ</a></li>
+<li><a href="#4-t%C3%A1ch-class-th%C3%A0nh-file-ri%C3%AAng">4. Tách class thành file riêng</a></li>
+<li><a href="#5-v%E1%BB%81-vi%E1%BB%87c-s%E1%BB%AD-d%E1%BB%A5ng-namespace">5. Về việc sử dụng Namespace</a></li>
+</ul>
+<p>Nếu bạn chưa có nền tảng về lập trình hướng đối tượng bằng C++, hãy quay lại blog này sớm nhất có thể ngay khi bạn đủ khả năng nhé.</p>
+<h1 id="1-Khong-nen"><a href="#1-Khong-nen" class="headerlink" title="1. Không nên"></a>1. Không nên</h1><p>Việc tạo class trong file riêng bắt buộc bạn phải dùng câu lệnh include một thư viện nhiều lần. Trong file riêng và trong chương trình chính</p>
+<pre><code class="highlight c"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdafx.h&quot;</span></span>
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;iostream&quot;</span></span>
+using namespace <span class="built_in">std</span>;</code></pre>
+
+<h1 id="2-Nen"><a href="#2-Nen" class="headerlink" title="2. Nên"></a>2. Nên</h1><p>Không cần phải làm như vậy. Việc include một thư viện trùng lặp sẽ phát sinh lỗi.</p>
+<p>Thay vào đó, trong file header của class, hãy thêm câu lệnh sau:</p>
+<pre><code class="highlight c"><span class="meta">#<span class="keyword">ifndef</span> TÊNCLASS_H</span>
+<span class="meta">#<span class="keyword">define</span> TÊNCLASS_H</span>
+
+các thư viện cần thiết
+
+các dòng lệnh
+
+<span class="meta">#<span class="keyword">endif</span></span></code></pre>
+
+<p>Sau đó, trong hàm main, bạn include thêm file <code>header.h</code> vừa tạo</p>
+<h1 id="3-Vi-du"><a href="#3-Vi-du" class="headerlink" title="3. Ví dụ"></a>3. Ví dụ</h1><p>Để giúp các bạn hình dung rõ hơn, bạn có thể xem một số screen shot</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174149pm.png" alt="04-11-2011 7-41-49 PM" title="04-11-2011 7-41-49 PM"></a></p>
+<p>Khai báo tên class trong <code>PhoneNumber.h</code></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174418pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174418pm.png" alt="04-11-2011 7-44-18 PM" title="04-11-2011 7-44-18 PM"></a></p>
+<p>Sau đó, trong file định nghĩa các hàm thành viên của PhoneNumber, ta include thêm file <code>PhoneNumber.h</code></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174544pm.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2011/11/0411201174544pm.png" alt="04-11-2011 7-45-44 PM" title="04-11-2011 7-45-44 PM"></a></p>
+<p>Sau cùng là Include nó vào hàm Main. Chương trình sẽ chạy trơn tru</p>
+<p>Một cách khác mới hơn, đơn giản hơn (nhưng cũng đòi hỏi trình biên dịch là <a target="_blank" rel="noopener" href="http://www.microsoft.com/visualstudio" title="Microsoft Visual Studio">Visual Studio 2005</a> trở lên)</p>
+<pre><code class="highlight c"><span class="meta">#<span class="keyword">pragma</span> once</span></code></pre>
+
+<p>Thêm dòng này vào đầu của file .h. Nó sẽ thông báo cho trình biên dịch chỉ include các thư viện 1 lần duy nhất.</p>
+<h1 id="4-Tach-class-thanh-file-rieng"><a href="#4-Tach-class-thanh-file-rieng" class="headerlink" title="4. Tách class thành file riêng"></a>4. Tách class thành file riêng</h1><p>Để minh họa, tôi sẽ tạo một class MyInt đơn giản, dùng để biểu diễn số nguyên</p>
+<p>Đầu tiên, khởi động Visual Studio</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105758am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105758am.png" alt="04-01-2012 10-57-58 AM" title="04-01-2012 10-57-58 AM"></a></p>
+<p>Chọn loại Project mong muốn, đặt tên cho nó và nhấn OK</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105917am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012105917am.png" alt="04-01-2012 10-59-17 AM" title="04-01-2012 10-59-17 AM"></a></p>
+<p>Bấm Finish ở Wizard tạo Project</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110433am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110433am.png" alt="04-01-2012 11-04-33 AM" title="04-01-2012 11-04-33 AM"></a></p>
+<p>Sau đó, Visual Studio (VS)</p>
+<p>sẽ tạo một project mới cho bạn, với tên bạn đặt và header đã được biên dịch sẵn là stdadx.h</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110805am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012110805am.png" alt="04-01-2012 11-08-05 AM" title="04-01-2012 11-08-05 AM"></a></p>
+<p>Để thêm mới một class bằng cách thông thường, click phải vào Header Files, chọn Add &gt; New Item…</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111110am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111110am.png" alt="04-01-2012 11-11-10 AM" title="04-01-2012 11-11-10 AM"></a></p>
+<p>Chọn Header File</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111204am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111204am.png" alt="04-01-2012 11-12-04 AM" title="04-01-2012 11-12-04 AM"></a></p>
+<p>Đặt tên cho nó và nhấn Add</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111253am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111253am.png" alt="04-01-2012 11-12-53 AM" title="04-01-2012 11-12-53 AM"></a></p>
+<p>Một file mới hoàn toàn có tên <code>MyInt.h</code> được tạo ra. Đây là file dành cho việc khai báo class MyInt. Bạn cũng có thể định nghĩa class trong file này, nhưng việc đó không được khuyến cáo</p>
+<pre><code class="highlight c"><span class="comment">// MyInt class declaration</span>
+
+<span class="meta">#prama once</span>
+
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdafx.h&quot;</span></span>
+
+<span class="class"><span class="keyword">class</span> <span class="title">MyInt</span></span>
+<span class="class">&#123;</span>
+private:
+    <span class="type">int</span> data;
+
+public:
+    MyInt();
+    MyInt(<span class="type">int</span>);
+&#125;;</code></pre>
+
+<p>Như bạn có thể thấy, chúng ta sử dụng kỹ thuật <code>#pragma once</code> để tránh include quá nhiều thư viện Tương tự, hãy Add một file MyInt.cpp mới trong thư mục Source Files</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111801am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111801am.png" alt="04-01-2012 11-18-01 AM" title="04-01-2012 11-18-01 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111817am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111817am.png" alt="04-01-2012 11-18-17 AM" title="04-01-2012 11-18-17 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111838am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111838am.png" alt="04-01-2012 11-18-38 AM" title="04-01-2012 11-18-38 AM"></a></p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111908am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012111908am.png" alt="04-01-2012 11-19-08 AM" title="04-01-2012 11-19-08 AM"></a></p>
+<p>Sau đó, hãy định nghĩa các thuộc tính và hàm của lớp <code>MyInt</code> trong file <code>MyInt.cpp</code></p>
+<pre><code class="highlight c"><span class="comment">// MyInt class definition</span>
+
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdafx.h&quot;</span></span>
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;iostream&quot;</span></span>
+using <span class="built_in">std</span>::<span class="built_in">cin</span>;
+
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;MyInt.h&quot;</span></span>
+
+MyInt::MyInt()
+    : data(<span class="number">0</span>)
+&#123;
+&#125;
+
+MyInt::MyInt(<span class="type">int</span> re)
+    : data(re)
+&#123;
+&#125;</code></pre>
+
+<p>Ở dòng 7, vì class <code>MyInt</code> được khai báo ở file header <code>MyInt.h</code>, nên bạn phải include nó vào để sử dụng.</p>
+<p>Thế là xong. Có một cách khác để tạo class trong file riêng bằng Wizard của VS. Trong thư mục Header Files, click phải, chọn Add &gt; Class…</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112720am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112720am.png" alt="04-01-2012 11-27-20 AM" title="04-01-2012 11-27-20 AM"></a></p>
+<p>Chọn CPP class rồi bấm Add</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112847am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112847am.png" alt="04-01-2012 11-28-47 AM" title="04-01-2012 11-28-47 AM"></a></p>
+<p>Trong Wizard mới hiện ra, bạn chỉ cần gõ tên class, tên file header và file source sẽ được tạo tự độn</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112946am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012112946am.png" alt="04-01-2012 11-29-46 AM" title="04-01-2012 11-29-46 AM"></a></p>
+<p>Bấm Finish, ngay lập tức, 2 file mới sẽ được tạo, có sẵn code và được phân phối và thư mục tương ứn</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113311am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113311am.png" alt="04-01-2012 11-33-11 AM" title="04-01-2012 11-33-11 AM"></a></p>
+<p>Code tạo sẵn trong file header MyInt2.h</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113208am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113208am.png" alt="04-01-2012 11-32-08 AM" title="04-01-2012 11-32-08 AM"></a></p>
+<p>Code tạo sẵn trong file source MyInt2.cpp</p>
+<p><a target="_blank" rel="noopener" href="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113512am.png"><img src="http://cuoilennaocacban2.files.wordpress.com/2012/01/04012012113512am.png" alt="04-01-2012 11-35-12 AM" title="04-01-2012 11-35-12 AM"></a></p>
+<p>Như vậy, tất cả công việc ta làm bằng tay đều được VS làm tự động, nhưng nó sinh ra một số code dư thừa. Nhiều lập trình viên không thích điều này, họ vẫn thích tự tạo class file cho mình hơn.</p>
+<h1 id="5-Ve-viec-su-dung-Namespace"><a href="#5-Ve-viec-su-dung-Namespace" class="headerlink" title="5. Về việc sử dụng Namespace"></a>5. Về việc sử dụng Namespace</h1><p>Như đã nói ở trên, lập trình hướng đối tượng với VC++ 2010, sinh viên thường <code>#include</code> rất nhiều thư viện dư thừa, rồi sau đó <code>using namespace std;</code> Điều đó không cần thiết. Trong namespace <code>std</code>, tức <code>STANDARD</code>, có rất nhiều hàm xây dựng sẵn mà bạn không cần dùng. Dùng hàm nào, bạn khai báo hàm đó. Ví dụ như hình trên, tôi dùng hàm <code>cout</code>, <code>cin</code>, <code>endl</code> nên chỉ khai báo 3 hàm đó thôi.</p>
+<pre><code class="highlight c"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdafx.h&quot;</span></span>
+<span class="meta">#<span class="keyword">include</span> <span class="string">&quot;iostream&quot;</span></span>
+using <span class="built_in">std</span>::<span class="built_in">cout</span>;
+using <span class="built_in">std</span>::<span class="built_in">cin</span>;
+using <span class="built_in">std</span>::<span class="built_in">endl</span>;</code></pre>
+
+<p>3 hàm này nằm trong thư viện iostream Một số thư viện thường dùng:</p>
+<ul>
+<li><code>stdafx.h</code> – tiêu chuẩn cho VC++ 2010</li>
+<li><code>iostream</code> – chứa các hàm <code>cout</code>, <code>cin</code>, <code>endl</code></li>
+<li><code>string</code> – chứa các hàm xử lý chuỗi</li>
+<li><code>iomanip</code> – chứa hàm định khoảng cho output (<code>setw</code>, <code>serfill</code>)</li>
+<li><code>conio.h</code> – chứa hàm <code>getch()</code>. Hàm này thường được dùng để dừng màn hình. Nhưng không nên sử dụng nó.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/" title="[C++] Split class and header to separated files with Visual Studio">https://huntertran.github.io/blog/2012/01/04/cpp-split-class-and-header-to-separated-files-with-visual-studio/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/class/" rel="tag"># class</a>
+              <a href="/tags/Header-computing/" rel="tag"># Header (computing)</a>
+              <a href="/tags/Separate-class/" rel="tag"># Separate class</a>
+              <a href="/tags/Source/" rel="tag"># Source</a>
+              <a href="/tags/Visual-Studio/" rel="tag"># Visual Studio</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2011/12/31/dang-ky-imagine-cup-2012/" rel="prev" title="Đăng ký Imagine Cup 2012">
+                  <i class="fa fa-angle-left"></i> Đăng ký Imagine Cup 2012
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2012/01/14/ic03/" rel="next" title="[IC03] Tạo tài khoản Imagine Cup 2012">
+                  [IC03] Tạo tài khoản Imagine Cup 2012 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

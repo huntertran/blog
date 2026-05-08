@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Bạn có một app thặc là tuyệt zời ông mặt trời, tính năng độc đáo, hấp dẫn. Người dùng không thể nào rời mắt khỏi app của bạn. Và bạn quyết định kiếm tiền từ nó. Thế là bạn tìm hiểu cách implement tính">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Windows] Implement In-App Purchase for Windows 10">
+<meta property="og:url" content="https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Bạn có một app thặc là tuyệt zời ông mặt trời, tính năng độc đáo, hấp dẫn. Người dùng không thể nào rời mắt khỏi app của bạn. Và bạn quyết định kiếm tiền từ nó. Thế là bạn tìm hiểu cách implement tính">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1479/24372150901_025d567d60_o.jpg">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1563/24454812865_46046851ea_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1538/24087084229_5b67cc60ea_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1616/23825747414_ddb694db19_o.png">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1461/23829331723_6f852496b8_o.png">
+<meta property="article:published_time" content="2016-01-18T10:05:10.000Z">
+<meta property="article:modified_time" content="2026-05-08T05:08:51.627Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="iap">
+<meta property="article:tag" content="in-app purchase">
+<meta property="article:tag" content="monetization">
+<meta property="article:tag" content="windows 10">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/1479/24372150901_025d567d60_o.jpg">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/","path":"2016/01/18/windows-implement-in-app-purchase-for-windows-10/","title":"[Windows] Implement In-App Purchase for Windows 10"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[Windows] Implement In-App Purchase for Windows 10 | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Official-Documents"><span class="nav-text">1. Official Documents</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Keywords"><span class="nav-text">2. Keywords</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-The-Un-official-yet-worked-ways"><span class="nav-text">3. The Un-official (yet worked) ways</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Step-1-Publish-your-app-to-the-Store"><span class="nav-text">3.1. Step 1: Publish your app to the Store</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Step-2-Create-IAP-aka-In-App-Purchase"><span class="nav-text">3.2. Step 2: Create IAP (aka In-App Purchase)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-Step-3-The-tricky"><span class="nav-text">3.3. Step 3: The tricky</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-Su-dung-CurrentAppSimulator"><span class="nav-text">3.3.1. Sử dụng CurrentAppSimulator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham"><span class="nav-text">3.3.2. Hiện giá (và các thông tin khác) của sản phẩm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-Mua-In-App-Purchase"><span class="nav-text">3.3.3. Mua In-App Purchase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-Step-4-Change-the-test-code-to-actual-code"><span class="nav-text">3.4. Step 4: Change the test code to actual code</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[Windows] Implement In-App Purchase for Windows 10 | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Windows] Implement In-App Purchase for Windows 10<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20160118-windows-implement-in-app-purchase-for-windows-10.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2016-01-18 05:05:10" itemprop="dateCreated datePublished" datetime="2016-01-18T05:05:10-05:00">2016-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-05-08 01:08:51" itemprop="dateModified" datetime="2026-05-08T01:08:51-04:00">2026-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-10/" itemprop="url" rel="index"><span itemprop="name">Windows 10</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-10/Windows-Store-App/" itemprop="url" rel="index"><span itemprop="name">Windows Store App</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2016/01/18/windows-implement-in-app-purchase-for-windows-10/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/18/windows-implement-in-app-purchase-for-windows-10/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Bạn có một app thặc là tuyệt zời ông mặt trời, tính năng độc đáo, hấp dẫn. Người dùng không thể nào rời mắt khỏi app của bạn. Và bạn quyết định kiếm tiền từ nó. Thế là bạn tìm hiểu cách implement tính năng In-App Purchase của Windows 10 và nhận ra…nó quá phức tạp. Cùng nhau bơi zô nhé.</p>
+<span id="more"></span>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-official-documents">1. Official Documents</a></li>
+<li><a href="#2-keywords">2. Keywords</a></li>
+<li><a href="#3-the-un-official-yet-worked-ways">3. The Un-official yet worked ways</a><ul>
+<li><a href="#31-step-1-publish-your-app-to-the-store">3.1. Step 1: Publish your app to the Store</a></li>
+<li><a href="#32-step-2-create-iap-aka-in-app-purchase">3.2. Step 2: Create IAP aka In-App Purchase</a></li>
+<li><a href="#33-step-3-the-tricky">3.3. Step 3: The tricky</a><ul>
+<li><a href="#331-s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator">3.3.1. Sử dụng CurrentAppSimulator</a></li>
+<li><a href="#332-hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m">3.3.2. Hiện giá và các thông tin khác của sản phẩm</a></li>
+<li><a href="#333-mua-in-app-purchase">3.3.3. Mua In-App Purchase</a></li>
+</ul>
+</li>
+<li><a href="#34-step-4-change-the-test-code-to-actual-code">3.4. Step 4: Change the test code to actual code</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-Official-Documents"><a href="#1-Official-Documents" class="headerlink" title="1. Official Documents"></a>1. Official Documents</h1><p><a id="markdown-official-documents" name="official-documents"></a></p>
+<p>Microsoft có tài liệu cho vụ này, thậm chí có cả sample code, nhưng nó sẽ không giúp ích được gì cho bạn. Tất cả đều khá chung chung, khơi khơi, mù mờ</p>
+<ul>
+<li>Enable In-App Purchase: <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/apps/mt219684.aspx">https://msdn.microsoft.com/en-us/library/windows/apps/mt219684.aspx</a></li>
+<li>Enable consumable in-app product purchases: <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/apps/mt219683.aspx">https://msdn.microsoft.com/en-us/library/windows/apps/mt219683.aspx</a></li>
+<li>Manage a large catalog of in-app products (Not really): <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/apps/mt219686.aspx">https://msdn.microsoft.com/en-us/library/windows/apps/mt219686.aspx</a></li>
+</ul>
+<p>Đọc từng câu từng chữ trong 3 cái tài liệu trên, tất cả những gì bạn có thể viết trong code là ít vô cùng. Hy vọng rằng trong tương lai điều này sẽ thay đổi. Giờ hãy thử theo cách khác nhóe</p>
+<h1 id="2-Keywords"><a href="#2-Keywords" class="headerlink" title="2. Keywords"></a>2. Keywords</h1><p><a id="markdown-keywords" name="keywords"></a></p>
+<p>Phần này chứa các keywords mà bạn hay nhầm lẫn khi implement tính năng này</p>
+<ul>
+<li>Consumables: User có thể mua loại này bao nhiu tùy thích (tiu bỉu cho thể loại này là tiền trong game, quyền truy cập vào kho sách – nhạc – blah blah blah trong 6 tháng)</li>
+</ul>
+<p><img src="/images/flickr/1479/24372150901_025d567d60_o.jpg"></p>
+<ul>
+<li><p>Durables: User mua thể loại này một lần rồi là sẽ sở hữu nó mãi mãi. Ví dụ như level mới, màn chơi mới, vật phẩm</p>
+</li>
+<li><p>ProductID: chính là ID của product của bạn. Đây sẽ là thông số đầu tiên khi tạo một In-App Purchase mới trên Dev Center</p>
+</li>
+</ul>
+<h1 id="3-The-Un-official-yet-worked-ways"><a href="#3-The-Un-official-yet-worked-ways" class="headerlink" title="3. The Un-official (yet worked) ways"></a>3. The Un-official (yet worked) ways</h1><p><a id="markdown-the-un-official-yet-worked-ways" name="the-un-official-yet-worked-ways"></a></p>
+<h2 id="3-1-Step-1-Publish-your-app-to-the-Store"><a href="#3-1-Step-1-Publish-your-app-to-the-Store" class="headerlink" title="3.1. Step 1: Publish your app to the Store"></a>3.1. Step 1: Publish your app to the Store</h2><p><a id="markdown-step-1%3A-publish-your-app-to-the-store" name="step-1%3A-publish-your-app-to-the-store"></a></p>
+<p>Việc đầu tiên bạn muốn làm sẽ là publish app của bạn lên Store.</p>
+<p>“Nhưng app vẫn đang trong giai đoạn dev, chưa publish được” – “App chưa có gì cả” – “App vẫn chưa hoàn thiện hết các tính năng”</p>
+<p>Không sao cả. Store cho phép bạn publish app của bạn, và ẩn khỏi ô tìm kiếm. Chỉ những ai có deep link (link dẫn trực tiếp tới app của bạn) mới có thể tải về và sử dụng. Như vậy bạn đã có thể ngăn chặn người dùng tìm ra app của bạn và tải nó về, tận hưởng những thứ đáng lẽ ra phải mua bằng Obama.</p>
+<p><img src="/images/flickr/1563/24454812865_46046851ea_o.png"></p>
+<p>Hide this app in the Store</p>
+<h2 id="3-2-Step-2-Create-IAP-aka-In-App-Purchase"><a href="#3-2-Step-2-Create-IAP-aka-In-App-Purchase" class="headerlink" title="3.2. Step 2: Create IAP (aka In-App Purchase)"></a>3.2. Step 2: Create IAP (aka In-App Purchase)</h2><p><a id="markdown-step-2%3A-create-iap-aka-in-app-purchase" name="step-2%3A-create-iap-aka-in-app-purchase"></a></p>
+<p>In-App Purchase hoàn toàn riêng biệt với app của bạn. Và cũng sẽ được xét duyệt như 1 app, nhưng thường chỉ mất khoảng 1 tiếng đồng hồ cho quá trình đó (quá chậm) Các bước tạo In-App Purchase, cũng như publish app, thì mỗi thời mỗi khác. Tóm lại là cứ làm theo hướng dẫn trên màn hình là được</p>
+<p><img src="/images/flickr/1538/24087084229_5b67cc60ea_o.png"></p>
+<p>Tạo một In-App Purchase</p>
+<h2 id="3-3-Step-3-The-tricky"><a href="#3-3-Step-3-The-tricky" class="headerlink" title="3.3. Step 3: The tricky"></a>3.3. Step 3: The tricky</h2><p><a id="markdown-step-3%3A-the-tricky" name="step-3%3A-the-tricky"></a></p>
+<p>In-App Purchase sẽ ko chạy khi bạn có 1 trong các điều kiện sau</p>
+<ul>
+<li>In-App Purchase vừa mới tạo xong, chưa kịp lên đã lật đật đòi test</li>
+<li>Chưa có sản phẩm trên In-App Purchase trong Dev Center</li>
+</ul>
+<p>Bạn sẽ nghĩ: quá đơn giản, chỉ cần tạo sản phẩm trên In-App Purchase, chờ 1 tiếng đồng hồ để nó lên, sau đó vào lại app, chuyển sang chế độ Release là xong. Tuy nhiên</p>
+<ul>
+<li>Đặt Break-point ở các dòng code liên quan tới In-App Purchase sẽ không xem được data</li>
+<li>Dù đã có sản phẩm, nhưng vẫn ko liệt kê ra khi hiển thị lên màn hình (count &#x3D;&#x3D; 0)</li>
+</ul>
+<p>Và đây sẽ là cách. Lưu ý làm theo đúng thứ tự được trình bày trong blog này</p>
+<h3 id="3-3-1-Su-dung-CurrentAppSimulator"><a href="#3-3-1-Su-dung-CurrentAppSimulator" class="headerlink" title="3.3.1. Sử dụng CurrentAppSimulator"></a>3.3.1. Sử dụng CurrentAppSimulator</h3><p><a id="markdown-s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator" name="s%E1%BB%AD-d%E1%BB%A5ng-currentappsimulator"></a></p>
+<p>Trong method khởi tạo hoặc load data cho app của bạn, đặt các dòng code sau</p>
+<pre><code class="highlight csharp">StaticData.license = CurrentAppSimulator.LicenseInformation; StaticData.listings = <span class="keyword">await</span> CurrentAppSimulator.LoadListingInformationAsync();</code></pre>
+
+<p>StaticData là một class chứa các biến Static, có thể truy cập ở mọi class khác Ngay sau khi chạy đoạn code này, Visual Studio sẽ tạo ra 1 file XML giả ở C:UsersAppDataLocalPackagesLocalStateMicrosoftWindows StoreApiDataWindowsStoreProxy.xml</p>
+<p>Bạn mở nó lên, và sửa các giá trị sau</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">App</span>&gt;</span>
+ <span class="tag">&lt;<span class="name">IsActive</span>&gt;</span>true<span class="tag">&lt;/<span class="name">IsActive</span>&gt;</span>
+ <span class="tag">&lt;<span class="name">IsTrial</span>&gt;</span>false<span class="tag">&lt;/<span class="name">IsTrial</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">App</span>&gt;</span></code></pre>
+
+<p>Mục Product ID, sửa lại cho trùng với Product ID bạn đã đặt trên Dev Center</p>
+<h3 id="3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham"><a href="#3-3-2-Hien-gia-va-cac-thong-tin-khac-cua-san-pham" class="headerlink" title="3.3.2. Hiện giá (và các thông tin khác) của sản phẩm"></a>3.3.2. Hiện giá (và các thông tin khác) của sản phẩm</h3><p><a id="markdown-hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m" name="hi%E1%BB%87n-gi%C3%A1-v%C3%A0-c%C3%A1c-th%C3%B4ng-tin-kh%C3%A1c-c%E1%BB%A7a-s%E1%BA%A3n-ph%E1%BA%A9m"></a></p>
+<p>Như bạn đã thấy rõ, StaticData.listings chứa toàn bộ In-App Purchase của bạn. Mọi sản phẩm đều có mặt trong này. Như vậy, để gắn giá lên một sản phẩm nào đó, ngoài việc có template, model ra, bạn sẽ cần phải chạy một vòng lặp</p>
+<pre><code class="highlight csharp"><span class="keyword">foreach</span>(KeyValuePair&lt;<span class="built_in">string</span>, ProductListing&gt; productListing <span class="keyword">in</span> StaticData.listings.ProductListings)
+&#123;
+  <span class="keyword">if</span> (productListing.Key.TrimStart(<span class="string">&#x27;0&#x27;</span>) == issue.id)
+  &#123;
+    issue.billing.price = productListing.Value.FormattedPrice;
+  &#125;
+&#125;</code></pre>
+
+<p>Trong đoạn code trên, Product ID của mình là 0154, và issue.id là “154” FormattedPrice sẽ bao gồm cả đơn vị tiền tệ mà hệ thống đang sử dụng. Bạn cũng có thể đọc các thông tin khác như Description, Tag, vân vân và vân vân</p>
+<h3 id="3-3-3-Mua-In-App-Purchase"><a href="#3-3-3-Mua-In-App-Purchase" class="headerlink" title="3.3.3. Mua In-App Purchase"></a>3.3.3. Mua In-App Purchase</h3><p><a id="markdown-mua-in-app-purchase" name="mua-in-app-purchase"></a></p>
+<p>Nhờ sự giúp đỡ của CurrentAppSimulator, bạn có thể test mua thoải mái. Chỉ cần chỉnh sửa các giá trị trong file WindowsStoreProxy.xml để test đi test lại Về cơ bản, đoạn code mua một vật phẩm bằng In-App Purchase sẽ như sau</p>
+<pre><code class="highlight csharp"><span class="keyword">if</span> (!StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
+&#123;
+  <span class="keyword">try</span>
+  &#123;
+    <span class="comment">// Người dùng chưa từng mua cái này </span>
+    <span class="comment">// Hiện hộp thoại mua</span>
+    <span class="keyword">await</span> CurrentAppSimulator.RequestProductPurchaseAsync(_selectedIssue.billing.iapKey);
+
+    <span class="comment">//Kiểm tra lại xem đã mua thành công chưa </span>
+    <span class="keyword">if</span> (StaticData.license.ProductLicenses[_selectedIssue.billing.iapKey].IsActive)
+    &#123;
+      <span class="comment">// Nếu mua thành công thì làm trò mèo gì đó </span>
+    &#125;
+  &#125;
+  <span class="keyword">catch</span>(Exception)
+  &#123;
+    <span class="comment">// Mua bị lỗi </span>
+    <span class="comment">// an error occurred. </span>
+  &#125;
+&#125;
+<span class="keyword">else</span>
+&#123;
+  <span class="comment">// Đã mua cái này rồi, tiếp tục trò mèo </span>
+&#125;</code></pre>
+
+<p>Và khi test thử, lúc gọi đoạn code này, một hộp thoại nhỏ hiện ra, cho phép bạn giả lập các trường hợp có thể xảy ra khi dùng thật</p>
+<p><img src="/images/flickr/1616/23825747414_ddb694db19_o.png"></p>
+<p>Có vẻ tốt rồi. Tới bước cuối cùng nhé</p>
+<h2 id="3-4-Step-4-Change-the-test-code-to-actual-code"><a href="#3-4-Step-4-Change-the-test-code-to-actual-code" class="headerlink" title="3.4. Step 4: Change the test code to actual code"></a>3.4. Step 4: Change the test code to actual code</h2><p><a id="markdown-step-4%3A-change-the-test-code-to-actual-code" name="step-4%3A-change-the-test-code-to-actual-code"></a></p>
+<p>Step này khá đơn giản, chỉ cẩn thay tất cả những chỗ dùng CurrentAppSimulator thành CurrentApp là được. Và chạy lại app một lần nữa, lần này, khi bấm mua, sẽ có một hộp thoại thật hiện ra đòi bạn nhập mã PIN để tiến hành mua app. Tới bước này coi như là thành công</p>
+<p><img src="/images/flickr/1461/23829331723_6f852496b8_o.png"></p>
+<blockquote>
+<p>Tips: Bạn nên submit In-App Purchase trên Dev Center trước 1-2 ngày để đảm bảo code thực sẽ chạy tốt (mình đã từng submit xong chờ 1 tiếng để nó lên, rồi chạy code thực thì lại báo là không có in-app purchase nào trên dev center &#x3D;.&#x3D;)</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/" title="[Windows] Implement In-App Purchase for Windows 10">https://huntertran.github.io/blog/2016/01/18/windows-implement-in-app-purchase-for-windows-10/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/windows-10/" rel="tag"># windows 10</a>
+              <a href="/tags/iap/" rel="tag"># iap</a>
+              <a href="/tags/in-app-purchase/" rel="tag"># in-app purchase</a>
+              <a href="/tags/monetization/" rel="tag"># monetization</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/01/17/visual-studio-online-tfs-love-slack-and-vice-versa/" rel="prev" title="[Visual Studio Online] TFS love Slack, and vice versa">
+                  <i class="fa fa-angle-left"></i> [Visual Studio Online] TFS love Slack, and vice versa
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2016/02/23/windows-10-prevent-your-app-from-being-hidden-on-windows-store/" rel="next" title="[Windows 10] Prevent your app from being hidden on Windows Store">
+                  [Windows 10] Prevent your app from being hidden on Windows Store <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

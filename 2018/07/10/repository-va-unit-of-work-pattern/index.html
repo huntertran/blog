@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer. Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Repository và Unit of Work Pattern">
+<meta property="og:url" content="https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer. Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan t">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://huntertran.github.io/images/flickr/1724/42213219384_ec3b0b1b3e_o.png">
+<meta property="article:published_time" content="2018-07-10T07:24:23.000Z">
+<meta property="article:modified_time" content="2026-05-08T05:08:51.629Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="repository">
+<meta property="article:tag" content="unit of work">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://huntertran.github.io/images/flickr/1724/42213219384_ec3b0b1b3e_o.png">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/","path":"2018/07/10/repository-va-unit-of-work-pattern/","title":"Repository và Unit of Work Pattern"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Repository và Unit of Work Pattern | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-DbContext-cua-Entity-Framework-Core"><span class="nav-text">1. DbContext của Entity Framework Core</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-DbContext-Tracking"><span class="nav-text">1.1. DbContext Tracking</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Repository"><span class="nav-text">2. Repository</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Ly-do"><span class="nav-text">2.1. Lý do</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Implement"><span class="nav-text">2.2. Implement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Performance-Hit"><span class="nav-text">2.3. Performance Hit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Generic-Repository"><span class="nav-text">3. Generic Repository</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Tao-class-Unit-of-Work"><span class="nav-text">4. Tạo class Unit of Work</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Tong-ket"><span class="nav-text">5. Tổng kết</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Repository và Unit of Work Pattern | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Repository và Unit of Work Pattern<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20180710-repository-va-unit-of-work-pattern.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-10 03:24:23" itemprop="dateCreated datePublished" datetime="2018-07-10T03:24:23-04:00">2018-07-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-05-08 01:08:51" itemprop="dateModified" datetime="2026-05-08T01:08:51-04:00">2026-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/ASP-NET/" itemprop="url" rel="index"><span itemprop="name">ASP.NET</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Design-Pattern/" itemprop="url" rel="index"><span itemprop="name">Design Pattern</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2018/07/10/repository-va-unit-of-work-pattern/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/07/10/repository-va-unit-of-work-pattern/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Repository, hiểu một cách đơn giản, là 1 tầng phân chia giữa Data Access Layer (DAL) và Bussiness Logic Layer.</p>
+<p>Unit of Work là một kỹ thuật để đảm bảo tất cả các request tới database mà có liên quan tới nhau đều được thực hiện trên cùng một DbContext</p>
+<span id="more"></span>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-dbcontext-c%E1%BB%A7a-entity-framework-core">1. DbContext của Entity Framework Core</a><ul>
+<li><a href="#11-dbcontext-tracking">1.1. DbContext Tracking</a></li>
+</ul>
+</li>
+<li><a href="#2-repository">2. Repository</a><ul>
+<li><a href="#21-l%C3%BD-do">2.1. Lý do</a></li>
+<li><a href="#22-implement">2.2. Implement</a></li>
+<li><a href="#23-performance-hit">2.3. Performance Hit</a></li>
+</ul>
+</li>
+<li><a href="#3-generic-repository">3. Generic Repository</a></li>
+<li><a href="#4-t%E1%BA%A1o-class-unit-of-work">4. Tạo class Unit of Work</a></li>
+<li><a href="#5-t%E1%BB%95ng-k%E1%BA%BFt">5. Tổng kết</a></li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="1-DbContext-cua-Entity-Framework-Core"><a href="#1-DbContext-cua-Entity-Framework-Core" class="headerlink" title="1. DbContext của Entity Framework Core"></a>1. DbContext của Entity Framework Core</h1><p><a id="markdown-dbcontext-c%E1%BB%A7a-entity-framework-core" name="dbcontext-c%E1%BB%A7a-entity-framework-core"></a></p>
+<p>“Trước giờ xài mà có để ý <code>DbContext</code> là gì đâu” -&gt; đây chắc là tình trạng chung của kha khá công nghệ liên quan tới .NET, khi mà mọi thứ đã được xây dựng sẵn, và bạn chỉ có nhiệm vụ … xài</p>
+<blockquote>
+<p><code>DbContext</code> là một thực thể đại diện cho một phiên làm việc với database, dùng để query và lưu dữ liệu của bạn</p>
+</blockquote>
+<p>Vì nó chỉ đại diện cho 1 phiên làm việc, trong ASP.NET, mỗi khi có 1 request mới từ browser, 1 <code>DbContext</code> mới sẽ được tạo ra, và sẽ bị dispose khi return response cho browser</p>
+<p>Thông thường, bạn sẽ kế thừa lại từ <code>DbContext</code>, nhét thêm các <code>DbSet</code> vào, từ đó mới query các kiểu được</p>
+<blockquote>
+<p>Bạn có thể tham khảo thêm về cách thiết lập <code>DbContext</code> ở <a target="_blank" rel="noopener" href="https://huntertran.ca/2018/03/11/asp-net-for-beginner-part-2-connect-database-and-model-binding/">đây</a>, mục 3.2</p>
+</blockquote>
+<h2 id="1-1-DbContext-Tracking"><a href="#1-1-DbContext-Tracking" class="headerlink" title="1.1. DbContext Tracking"></a>1.1. DbContext Tracking</h2><p><a id="markdown-dbcontext-tracking" name="dbcontext-tracking"></a></p>
+<p>Để đảm bảo tính toàn vẹn dữ liệu, DbContext dùng 1 cơ chế gọi là <code>tracking</code>.</p>
+<p>Khi bạn thay đổi 1 record (thêm, xóa, sửa), thì thay đổi đó ko được đưa xuống database ngay, mà sẽ còn vương vấn lại. DbContext sẽ theo dõi sự thay đổi này.</p>
+<p>Cho tới khi bạn đã thực hiện tất cả các thay đổi cần thiết, rồi gọi <code>yourDbContext.SaveChanges()</code>, thì lúc này, những thay đổi được track sẽ được <em>ship</em> xuống database.</p>
+<p>Vậy tất cả những điều này liên quan gì tới Repository và Unit of Work? DbContext là một implement của Repository và Unit of Work, chỉ có điều nó nằm sâu trong framework, còn implement của bạn sẽ nằm ở application</p>
+<h1 id="2-Repository"><a href="#2-Repository" class="headerlink" title="2. Repository"></a>2. Repository</h1><p><a id="markdown-repository" name="repository"></a></p>
+<p>Có cái sơ đồ hay ho sau</p>
+<p><img src="/images/flickr/1724/42213219384_ec3b0b1b3e_o.png" alt="repository diagram"></p>
+<p>Bạn có thể đọc thêm về các services được inject tại bài viết <a target="_blank" rel="noopener" href="https://huntertran.ca/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/">Dependency Injection trong ASP.NET Core</a></p>
+<p>Vậy đóa, Repository đóng vai trò là 1 lớp trung gian giữa Bussiness Logic Layer (controllers và services) và Data Access Layer (các DbContext)</p>
+<h2 id="2-1-Ly-do"><a href="#2-1-Ly-do" class="headerlink" title="2.1. Lý do"></a>2.1. Lý do</h2><p><a id="markdown-l%C3%BD-do" name="l%C3%BD-do"></a></p>
+<ul>
+<li><p>Tách việc xử lý logic và việc truy cập database</p>
+<ul>
+<li>Dễ trace bug</li>
+<li>Dễ unit test</li>
+<li>Dễ thay đổi logic hoặc database</li>
+</ul>
+</li>
+<li><p>Gom chung nhìu tác vụ cơ bản về 1 chỗ</p>
+<ul>
+<li>Ko phải viết đi viết lại 1 tác vụ nhiều lần</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-Implement"><a href="#2-2-Implement" class="headerlink" title="2.2. Implement"></a>2.2. Implement</h2><p><a id="markdown-implement" name="implement"></a></p>
+<p>Cụ tỉ, Repository sẽ có các nhiệm vụ: Liệt kê danh sách các record - Lấy 1 record - Thêm - Xóa - Sửa 1 record</p>
+<p>Bài toán: quản lý học sinh</p>
+<p>Tạo interface</p>
+<pre><code class="highlight csharp"><span class="keyword">using</span> System;
+<span class="keyword">using</span> System.Collections.Generic;
+<span class="keyword">using</span> ContosoUniversity.Models;
+ 
+<span class="keyword">namespace</span> <span class="title">ContosoUniversity.DAL</span>
+&#123;
+    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IStudentRepository</span> : <span class="title">IDisposable</span>
+    &#123;
+        <span class="function">IEnumerable&lt;Student&gt; <span class="title">GetStudents</span>()</span>;
+        <span class="function">Student <span class="title">GetStudentByID</span>(<span class="params"><span class="built_in">int</span> studentId</span>)</span>;
+        <span class="function"><span class="keyword">void</span> <span class="title">InsertStudent</span>(<span class="params">Student student</span>)</span>;
+        <span class="function"><span class="keyword">void</span> <span class="title">DeleteStudent</span>(<span class="params"><span class="built_in">int</span> studentID</span>)</span>;
+        <span class="function"><span class="keyword">void</span> <span class="title">UpdateStudent</span>(<span class="params">Student student</span>)</span>;
+        <span class="function"><span class="keyword">void</span> <span class="title">Save</span>()</span>;
+    &#125;
+&#125;</code></pre>
+
+<p>Đoạn code trên khai báo một bộ CRUD (Create - Read - Update - Delete) kinh điển</p>
+<p>Tạo class implement</p>
+<pre><code class="highlight csharp"><span class="keyword">using</span> System;
+<span class="keyword">using</span> System.Collections.Generic;
+<span class="keyword">using</span> System.Linq;
+<span class="keyword">using</span> System.Data;
+<span class="keyword">using</span> ContosoUniversity.Models;
+ 
+<span class="keyword">namespace</span> <span class="title">ContosoUniversity.DAL</span>
+&#123;
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StudentRepository</span> : <span class="title">IStudentRepository</span>, <span class="title">IDisposable</span>
+    &#123;
+        <span class="comment">// SchoolContext kế thừa từ DbContext, và có thêm DbSet&lt;Student&gt;</span>
+        <span class="keyword">private</span> SchoolContext context;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="title">StudentRepository</span>(<span class="params">SchoolContext context</span>)</span>
+        &#123;
+            <span class="keyword">this</span>.context = context;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> IEnumerable&lt;Student&gt; <span class="title">GetStudents</span>()</span>
+        &#123;
+            <span class="keyword">return</span> context.Students.ToList();
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> Student <span class="title">GetStudentByID</span>(<span class="params"><span class="built_in">int</span> id</span>)</span>
+        &#123;
+            <span class="keyword">return</span> context.Students.Find(id);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">InsertStudent</span>(<span class="params">Student student</span>)</span>
+        &#123;
+            context.Students.Add(student);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DeleteStudent</span>(<span class="params"><span class="built_in">int</span> studentID</span>)</span>
+        &#123;
+            Student student = context.Students.Find(studentID);
+            context.Students.Remove(student);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">UpdateStudent</span>(<span class="params">Student student</span>)</span>
+        &#123;
+            context.Entry(student).State = EntityState.Modified;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Save</span>()</span>
+        &#123;
+            context.SaveChanges();
+        &#125;
+ 
+        <span class="keyword">private</span> <span class="built_in">bool</span> disposed = <span class="literal">false</span>;
+ 
+        <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"><span class="built_in">bool</span> disposing</span>)</span>
+        &#123;
+            <span class="keyword">if</span> (!<span class="keyword">this</span>.disposed)
+            &#123;
+                <span class="keyword">if</span> (disposing)
+                &#123;
+                    context.Dispose();
+                &#125;
+            &#125;
+            <span class="keyword">this</span>.disposed = <span class="literal">true</span>;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Dispose</span>()</span>
+        &#123;
+            Dispose(<span class="literal">true</span>);
+            GC.SuppressFinalize(<span class="keyword">this</span>);
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<p>Inject repository này vào Controller hoặc Service (nhớ khai báo nó trong <code>Startup.cs</code> trước nhóe)</p>
+<pre><code class="highlight csharp"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StudentController</span>
+&#123;
+    <span class="keyword">private</span> <span class="keyword">readonly</span> IStudentRepository _studentRepository;
+ 
+    <span class="function"><span class="keyword">public</span> <span class="title">StudentController</span>(<span class="params">IStudentRepository studentRepository</span>)</span>
+    &#123;
+        _studentRepository = studentRepository
+    &#125;
+&#125;</code></pre>
+
+<h2 id="2-3-Performance-Hit"><a href="#2-3-Performance-Hit" class="headerlink" title="2.3. Performance Hit"></a>2.3. Performance Hit</h2><p><a id="markdown-performance-hit" name="performance-hit"></a></p>
+<p>Entity Framework khi query một record hoặc 1 bộ record nào đó trong database, nó sẽ trả về dạng <code>IQueryable</code>. Chỉ khi nào bạn gọi <code>.ToList();</code>, thì câu lệnh SQL mới được sinh ra và gửi tới database.</p>
+<p>Trong StudentRepository ở trên, nếu bạn muốn filter 1 list các student có tên là “ABC”, thì sẽ phải code trong controller như sau</p>
+<pre><code class="highlight csharp"><span class="function"><span class="keyword">public</span> IActionResult <span class="title">GetStudents</span>(<span class="params"><span class="built_in">string</span> name</span>)</span>
+&#123;
+    <span class="comment">// SQL đã được sinh ra, toàn bộ student trong db đã được trả về và lưu trong memory</span>
+    <span class="keyword">var</span> allStudents = _studentRepository.GetStudents();
+ 
+    <span class="comment">// filter này chỉ thực hiện việc filter trên memory</span>
+    <span class="keyword">var</span> filteredStudents = allStudents.Where(x =&gt; x.Name.Contains(name));
+ 
+    <span class="keyword">return</span> View(filteredStudents);
+&#125;</code></pre>
+
+<p>Đây là 1 code rất tệ khi mà student có hàng triệu record, trong khi bạn chỉ cần 1 số ít các record mà thôi.</p>
+<p>Ở phần sau, bạn sẽ biết cách fix cho vấn đề này, đồng thời implement 1 generic repository cho các tác vụ CRUD cơ bản</p>
+<h1 id="3-Generic-Repository"><a href="#3-Generic-Repository" class="headerlink" title="3. Generic Repository"></a>3. Generic Repository</h1><p><a id="markdown-generic-repository" name="generic-repository"></a></p>
+<p>Về cơ bản, ta sẽ dùng kiểu khai báo generic class của C# để implement generic repository</p>
+<pre><code class="highlight csharp"><span class="keyword">using</span> System;
+<span class="keyword">using</span> System.Collections.Generic;
+<span class="keyword">using</span> System.Linq;
+<span class="keyword">using</span> System.Data;
+<span class="keyword">using</span> System.Data.Entity;
+<span class="keyword">using</span> ContosoUniversity.Models;
+<span class="keyword">using</span> System.Linq.Expressions;
+ 
+<span class="keyword">namespace</span> <span class="title">ContosoUniversity.DAL</span>
+&#123;
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GenericRepository</span>&lt;<span class="title">TEntity</span>&gt; <span class="keyword">where</span> <span class="title">TEntity</span> : <span class="keyword">class</span>
+    &#123;
+        <span class="comment">// SchoolContext được kế thừa từ DbContext</span>
+        <span class="keyword">internal</span> SchoolContext context;
+ 
+        <span class="comment">// Generic repository này sẽ hoạt động dựa trên entity được truyền vào khi đăng ký trong Startup.cs</span>
+        <span class="keyword">internal</span> DbSet&lt;TEntity&gt; dbSet;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="title">GenericRepository</span>(<span class="params">SchoolContext context</span>)</span>
+        &#123;
+            <span class="keyword">this</span>.context = context;
+            <span class="keyword">this</span>.dbSet = context.Set&lt;TEntity&gt;();
+        &#125;
+ 
+        <span class="comment">// Expression&lt;Func&lt;TEntity, bool&gt;&gt; filter: cho phép bạn truyền vào một filter expression dạng LINQ</span>
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> IEnumerable&lt;TEntity&gt; <span class="title">Get</span>(<span class="params"></span></span>
+<span class="params"><span class="function">            Expression&lt;Func&lt;TEntity, <span class="built_in">bool</span>&gt;&gt; filter = <span class="literal">null</span>,</span></span>
+<span class="params"><span class="function">            Func&lt;IQueryable&lt;TEntity&gt;, IOrderedQueryable&lt;TEntity&gt;&gt; orderBy = <span class="literal">null</span>,</span></span>
+<span class="params"><span class="function">            <span class="built_in">string</span> includeProperties = <span class="string">&quot;&quot;</span></span>)</span>
+        &#123;
+            IQueryable&lt;TEntity&gt; query = dbSet;
+ 
+            <span class="comment">// Query là 1 dạng IQueryable, chỉ được thực thi khi cần giá trị list</span>
+            <span class="keyword">if</span> (filter != <span class="literal">null</span>)
+            &#123;
+                query = query.Where(filter);
+            &#125;
+ 
+            <span class="comment">// Tiếp theo, nó sẽ kèm theo các property cần thiết khi người dùng chỉ định</span>
+            <span class="keyword">foreach</span> (<span class="keyword">var</span> includeProperty <span class="keyword">in</span> includeProperties.Split
+                (<span class="keyword">new</span> <span class="built_in">char</span>[] &#123; <span class="string">&#x27;,&#x27;</span> &#125;, StringSplitOptions.RemoveEmptyEntries))
+            &#123;
+                query = query.Include(includeProperty);
+            &#125;
+ 
+            <span class="comment">// Sau cùng, nó thực thi bằng cách translate thành câu lệnh SQL và gọi xuống database</span>
+            <span class="keyword">if</span> (orderBy != <span class="literal">null</span>)
+            &#123;
+                <span class="keyword">return</span> orderBy(query).ToList();
+            &#125;
+            <span class="keyword">else</span>
+            &#123;
+                <span class="keyword">return</span> query.ToList();
+            &#125;
+        &#125;
+ 
+        <span class="comment">// trong asp.net, Id cho 1 object có thể là GUID hoặc int</span>
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> TEntity <span class="title">GetByID</span>(<span class="params"><span class="built_in">object</span> id</span>)</span>
+        &#123;
+            <span class="keyword">return</span> dbSet.Find(id);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Insert</span>(<span class="params">TEntity entity</span>)</span>
+        &#123;
+            dbSet.Add(entity);
+        &#125;
+ 
+        <span class="comment">// trong asp.net, Id cho 1 object có thể là GUID hoặc int</span>
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Delete</span>(<span class="params"><span class="built_in">object</span> id</span>)</span>
+        &#123;
+            TEntity entityToDelete = dbSet.Find(id);
+            Delete(entityToDelete);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Delete</span>(<span class="params">TEntity entityToDelete</span>)</span>
+        &#123;
+            <span class="keyword">if</span> (context.Entry(entityToDelete).State == EntityState.Detached)
+            &#123;
+                dbSet.Attach(entityToDelete);
+            &#125;
+            dbSet.Remove(entityToDelete);
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Update</span>(<span class="params">TEntity entityToUpdate</span>)</span>
+        &#123;
+            dbSet.Attach(entityToUpdate);
+            context.Entry(entityToUpdate).State = EntityState.Modified;
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<h1 id="4-Tao-class-Unit-of-Work"><a href="#4-Tao-class-Unit-of-Work" class="headerlink" title="4. Tạo class Unit of Work"></a>4. Tạo class Unit of Work</h1><p><a id="markdown-t%E1%BA%A1o-class-unit-of-work" name="t%E1%BA%A1o-class-unit-of-work"></a></p>
+<p>Unit of Work chỉ có 1 nhiệm vụ duy nhất, đảm bảo tất cả các repository của bạn đều dùng chung một <code>DbContext</code>. Bằng cách này, khi thực hiện xong tất cả các tác vụ thay đổi database, bạn chỉ cần gọi <code>DbContext.SaveChanges()</code> 1 lần duy nhất, và các thay đổi đó sẽ được lưu lại trong database</p>
+<pre><code class="highlight csharp"><span class="keyword">using</span> System;
+<span class="keyword">using</span> ContosoUniversity.Models;
+ 
+<span class="keyword">namespace</span> <span class="title">ContosoUniversity.DAL</span>
+&#123;
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnitOfWork</span> : <span class="title">IDisposable</span>
+    &#123;
+        <span class="keyword">private</span> SchoolContext context = <span class="keyword">new</span> SchoolContext();
+        <span class="keyword">private</span> GenericRepository&lt;Department&gt; departmentRepository;
+        <span class="keyword">private</span> GenericRepository&lt;Course&gt; courseRepository;
+ 
+        <span class="comment">// Kiểm tra xem repository đã được khởi tạo chưa</span>
+        <span class="keyword">public</span> GenericRepository&lt;Department&gt; DepartmentRepository
+        &#123;
+            <span class="keyword">get</span>
+            &#123;
+                <span class="keyword">if</span> (<span class="keyword">this</span>.departmentRepository == <span class="literal">null</span>)
+                &#123;
+                    <span class="keyword">this</span>.departmentRepository = <span class="keyword">new</span> GenericRepository&lt;Department&gt;(context);
+                &#125;
+                <span class="keyword">return</span> departmentRepository;
+            &#125;
+        &#125;
+ 
+        <span class="comment">// Kiểm tra xem repository đã được khởi tạo chưa</span>
+        <span class="keyword">public</span> GenericRepository&lt;Course&gt; CourseRepository
+        &#123;
+            <span class="keyword">get</span>
+            &#123;
+                <span class="keyword">if</span> (<span class="keyword">this</span>.courseRepository == <span class="literal">null</span>)
+                &#123;
+                    <span class="keyword">this</span>.courseRepository = <span class="keyword">new</span> GenericRepository&lt;Course&gt;(context);
+                &#125;
+                <span class="keyword">return</span> courseRepository;
+            &#125;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Save</span>()</span>
+        &#123;
+            context.SaveChanges();
+        &#125;
+ 
+        <span class="keyword">private</span> <span class="built_in">bool</span> disposed = <span class="literal">false</span>;
+ 
+        <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"><span class="built_in">bool</span> disposing</span>)</span>
+        &#123;
+            <span class="keyword">if</span> (!<span class="keyword">this</span>.disposed)
+            &#123;
+                <span class="keyword">if</span> (disposing)
+                &#123;
+                    context.Dispose();
+                &#125;
+            &#125;
+            <span class="keyword">this</span>.disposed = <span class="literal">true</span>;
+        &#125;
+ 
+        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Dispose</span>()</span>
+        &#123;
+            Dispose(<span class="literal">true</span>);
+            GC.SuppressFinalize(<span class="keyword">this</span>);
+        &#125;
+    &#125;
+&#125;</code></pre>
+
+<p>Bước tiếp theo là thay đổi code của controller để sử dụng class UnitOfWork vừa mới khởi tạo</p>
+<pre><code class="highlight csharp"><span class="comment">// Lấy data</span>
+<span class="keyword">var</span> courses = unitOfWork.CourseRepository.Get(includeProperties: <span class="string">&quot;Department&quot;</span>);
+ 
+<span class="comment">// Lấy và order data</span>
+<span class="keyword">var</span> departmentsQuery = unitOfWork.DepartmentRepository.Get(orderBy: q =&gt; q.OrderBy(d =&gt; d.Name));
+ 
+<span class="comment">// Insert</span>
+<span class="keyword">var</span> course = <span class="keyword">new</span> Course();
+course.Name = <span class="string">&quot;Test&quot;</span>;
+...
+unitOfWork.CourseRepository.Insert(course);
+unitOfWork.Save();
+ 
+<span class="comment">// Hủy</span>
+unitOfWork.Dispose();</code></pre>
+
+<h1 id="5-Tong-ket"><a href="#5-Tong-ket" class="headerlink" title="5. Tổng kết"></a>5. Tổng kết</h1><p><a id="markdown-t%E1%BB%95ng-k%E1%BA%BFt" name="t%E1%BB%95ng-k%E1%BA%BFt"></a></p>
+<p>Vậy là bạn đã hiểu khái niệm và cách khai báo Repository và Unit of Work pattern. Bạn cũng đã biết cách sử dụng lambda expression để query các data thỏa điều kiện mong muốn thông qua interface <code>IQueryable</code>. Chúc vui :D</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/" title="Repository và Unit of Work Pattern">https://huntertran.github.io/blog/2018/07/10/repository-va-unit-of-work-pattern/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/repository/" rel="tag"># repository</a>
+              <a href="/tags/unit-of-work/" rel="tag"># unit of work</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/06/20/design-pattern-dependency-injection-trong-asp-net-core/" rel="prev" title="[Design Pattern] - Dependency Injection trong ASP.NET Core">
+                  <i class="fa fa-angle-left"></i> [Design Pattern] - Dependency Injection trong ASP.NET Core
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/09/14/machine-learning-introduction/" rel="next" title="Machine Learning - 1.1 - Introduction">
+                  Machine Learning - 1.1 - Introduction <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>

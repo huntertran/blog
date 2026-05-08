@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/theme/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/theme/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/theme/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/theme/avatar.png" color="#222">
+  <meta name="msvalidate.01" content="1CB8DB019C58E7852A318AAB16B1ABE5">
+  <meta name="yandex-verification" content="92d8d8e521a054f7">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huntertran.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"github-dark"},"prism":{"light":"prism-vsc-dark-plus","dark":"prism-vsc-dark-plus"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":true,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app. Làm thế nào để bắt chước cách thiết kế này?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Windows 10] SplitView Control (the sidebar on many apps)">
+<meta property="og:url" content="https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/">
+<meta property="og:site_name" content="Hunter Tran&#39;s Blog">
+<meta property="og:description" content="Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app. Làm thế nào để bắt chước cách thiết kế này?">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800">
+<meta property="og:image" content="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png">
+<meta property="og:image" content="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png">
+<meta property="article:published_time" content="2015-06-18T09:37:30.000Z">
+<meta property="article:modified_time" content="2026-05-08T05:08:51.626Z">
+<meta property="article:author" content="Hunter Tran">
+<meta property="article:tag" content="programming, tech, computer tips, .net, c#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800">
+
+
+<link rel="canonical" href="https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/","path":"2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/","title":"[Windows 10] SplitView Control (the sidebar on many apps)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>[Windows 10] SplitView Control (the sidebar on many apps) | Hunter Tran's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174401878-1"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-174401878-1","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-core.min.js" integrity="sha256-bKrTFt2ZHyT4AE4LnBnAVctYKf9l6XP77kBvltgbjn4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-AjM0J5XIbiB590BrznLEgZGLnOQWrt62s3BEq65Q/I0=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha256-9cmf7tcLdXpKsPi/2AWE93PbZpTp4M4tqzFk+lWomjU=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/comments.js" defer></script><script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hunter Tran's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hunter Tran's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Share to be shared</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa fa-toolbox fa-fw"></i>Tools</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SplitView-Control"><span class="nav-text">SplitView Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cau-truc"><span class="nav-text">Cấu trúc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hamburger-Button"><span class="nav-text">Hamburger Button</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hunter Tran"
+      src="/images/theme/avatar.png">
+  <p class="site-author-name" itemprop="name">Hunter Tran</p>
+  <div class="site-description" itemprop="description">Programming, technologies, computer tips and life thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">231</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huntertran" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huntertran" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/huntertrantuan" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;huntertrantuan" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/4506315/tuan-tran" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;4506315&#x2F;tuan-tran" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/theme/avatar.png">
+      <meta itemprop="name" content="Hunter Tran">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hunter Tran's Blog">
+      <meta itemprop="description" content="Programming, technologies, computer tips and life thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="[Windows 10] SplitView Control (the sidebar on many apps) | Hunter Tran's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Windows 10] SplitView Control (the sidebar on many apps)<a href="https://github.com/huntertran/blog/edit/master/source/_posts/20150618-windows-10-splitview-control-the-sidebar-on-many-apps.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2015-06-18 05:37:30" itemprop="dateCreated datePublished" datetime="2015-06-18T05:37:30-04:00">2015-06-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-05-08 01:08:51" itemprop="dateModified" datetime="2026-05-08T01:08:51-04:00">2026-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/" itemprop="url" rel="index"><span itemprop="name">CSharp</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSharp/Windows-10/" itemprop="url" rel="index"><span itemprop="name">Windows 10</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Ngôn ngữ thiết kế của Windows 10 đang được làm mới lại, trong đó có một thanh công cụ nằm bên hông của mỗi app.</p>
+<p>Làm thế nào để bắt chước cách thiết kế này?</p>
+<span id="more"></span>
+<h1 id="SplitView-Control"><a href="#SplitView-Control" class="headerlink" title="SplitView Control"></a>SplitView Control</h1><p>Microsoft đã xây dựng riêng một control cho việc đó và gọi nó là SplitView Control</p>
+<p>Cơ bản, nó sẽ có 2 phần: Pane và Content</p>
+<p>Phần Pane sẽ là nơi đặt các Menu, danh mục này nọ, phần Content sẽ thể hiện nội dung chính của ứng dụng.</p>
+<p><img src="http://lh4.ggpht.com/-UgAGBBcqi6I/VS7jhHAJx_I/AAAAAAAAQTY/N1TzXUut-dE/SplitView.gif?imgmax=800"></p>
+<p>Có nhiều kiểu thiết kế cho SplitView này tùy theo bạn chọn. Ở đây mình sẽ hướng dẫn cơ bản</p>
+<p>Tạo một Project mới sử dụng Universal Application Platform (UAP) từ Visual Studio</p>
+<p>Trong MainPage, paste dòng sau vào</p>
+<p><img src="https://farm1.staticflickr.com/529/18912097922_259833232b_o.png"></p>
+<p>Trong cấu trúc trên, bạn có thể thấy Pane là một thuộc tính của SplitView. Hãy coi Pane như một control mẹ và thêm các control khác vào bên trong nó</p>
+<p>CompactPaneLength là chiều rộng của SplitView khi người dùng thu gọn nó lại</p>
+<p>DisplayMode là cách thức hiển thị của SplitView. Có 4 kiểu:</p>
+<ul>
+<li>CompactInline: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ đẩy phần Content sang một bên</li>
+<li>CompactOvelay: Khi thu gọn sẽ quay về hình dạng 1 thanh dài bên hông màn hình, khi mở bung ra sẽ ĐÈ LÊN phàn Content</li>
+<li>Inline: Giống CompactInline, như khi thu gọn sẽ biết mất khỏi màn hình</li>
+<li>Overlay: Giống Overlay, nhưng khi thu gọn sẽ biết mất khỏi màn hình</li>
+</ul>
+<h1 id="Cau-truc"><a href="#Cau-truc" class="headerlink" title="Cấu trúc"></a>Cấu trúc</h1><p>Cấu trúc của SplitView bao gồm Pane và Content. Trong Pane sẽ có Hamburger Button và list các tính năng khác. Theo cấu trúc sau đây:</p>
+<p><img src="https://farm1.staticflickr.com/551/18295463384_027ca53bd8_o.png"></p>
+<p>Code của cái trên rất đơn giản:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">SplitView</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">SplitView.Pane</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">Grid</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;Auto&quot;</span> /&gt;</span>
+                <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">&quot;\*&quot;</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;0&quot;</span> /&gt;</span>
+            <span class="tag">&lt;<span class="name">ListView</span> <span class="attr">Grid.Row</span>=<span class="string">&quot;1&quot;</span> /&gt;</span>
+        <span class="tag">&lt;/<span class="name">Grid</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">SplitView.Pane</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">Grid</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">SplitView</span>&gt;</span></code></pre>
+
+<h1 id="Hamburger-Button"><a href="#Hamburger-Button" class="headerlink" title="Hamburger Button"></a>Hamburger Button</h1><p>Hamburger Button thực ra cũng không khó. Windows 10 có hẳn một font dành riêng cho các biểu tượng:</p>
+<p>Để tạo một button có hình Hamburger, paste dòng code sau:</p>
+<pre><code class="highlight xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">x:Name</span>=<span class="string">&quot;HamburgerButton&quot;</span> <span class="attr">FontFamily</span>=<span class="string">&quot;Segoe MDL2 Assets&quot;</span> <span class="attr">Content</span>=<span class="string">&quot;&quot;</span> /&gt;</span></code></pre>
+
+<p>Mục Content sẽ là đoạn code trong bảng mã sau: <a target="_blank" rel="noopener" href="http://modernicons.io/segoe-mdl2/cheatsheet/">http://modernicons.io/segoe-mdl2/cheatsheet/</a></p>
+<p>Để đóng mở Pane của cái SplitView, bạn set thuộc tính “IsPaneOpen &#x3D; true” hoặc “IsPaneOpen &#x3D; false” trong event click của button nhé.</p>
+<p>Thế là xong. Chúc bạn thành công</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/theme/paypal.png" alt="Hunter Tran PayPal">
+        <span>PayPal</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Hunter Tran
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/" title="[Windows 10] SplitView Control (the sidebar on many apps)">https://huntertran.github.io/blog/2015/06/18/windows-10-splitview-control-the-sidebar-on-many-apps/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/huntertrantuan">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2015/05/10/azure-create-proxy-server-on-azure-to-survive-the-broken-cable-2/" rel="prev" title="[Azure] - Update - Create Proxy Server on Azure to survive the internet blackout or the broken cable">
+                  <i class="fa fa-angle-left"></i> [Azure] - Update - Create Proxy Server on Azure to survive the internet blackout or the broken cable
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2015/07/13/computer-tips-part-1-be-an-advanced-user-of-web-browser/" rel="next" title="[Computer Tips] [Part 1] Be an Advanced User of Web Browser">
+                  [Computer Tips] [Part 1] Be an Advanced User of Web Browser <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-disqus">disqus</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2011 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Hunter Tran</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"huntertran-blog","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/js/third-party/comments/disqus.js" defer></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"huntertran/huntertran-blog-comments","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+<script>
+  document.querySelectorAll('.menu-item a[href="/tools/"]').forEach(function(el) {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+
+</body>
+</html>
