@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunter's Tools</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+
+    <!-- Google / SEO -->
+    <meta name="description" content="A collection of tools by Hunter Tran — housing calculators, life utilities, developer helpers, and more." />
+    <meta name="author" content="Hunter Tran" />
+    <link rel="canonical" href="https://huntertran.github.io/blog/tools/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huntertran.github.io/blog/tools/" />
+    <meta property="og:title" content="Hunter's Tools" />
+    <meta property="og:description" content="A collection of tools by Hunter Tran — housing calculators, life utilities, developer helpers, and more." />
+    <meta property="og:image" content="./og-tools.png" />
+
+    <!-- X (Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://huntertran.github.io/blog/tools/" />
+    <meta name="twitter:title" content="Hunter's Tools" />
+    <meta name="twitter:description" content="A collection of tools by Hunter Tran — housing calculators, life utilities, developer helpers, and more." />
+    <meta name="twitter:image" content="./og-tools.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:        #0b0d1a;
+            --bg-2:      #11132a;
+            --panel:     #161a35;
+            --panel-2:   #1d2247;
+            --text:      #e7f6e7;
+            --dim:       #8a93c9;
+            --line:      #2c3366;
+
+            /* arcade neon */
+            --green:  #39ff14;
+            --cyan:   #00e5ff;
+            --magenta:#ff2e88;
+            --yellow: #ffe600;
+            --orange: #ff8a1e;
+            --purple: #b14bff;
+
+            --shadow: 5px 5px 0 #000;
+
+            --font-pixel: "Press Start 2P", monospace;
+            --font-term:  "VT323", "Courier New", monospace;
+        }
+
+        html { color-scheme: dark; }
+
+        body {
+            font-family: var(--font-term);
+            color: var(--text);
+            background: var(--bg);
+            background-image:
+                linear-gradient(rgba(57, 255, 20, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(57, 255, 20, 0.035) 1px, transparent 1px),
+                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 229, 255, 0.08), transparent 60%),
+                radial-gradient(ellipse 70% 60% at 50% 100%, rgba(177, 75, 255, 0.08), transparent 60%);
+            background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+            min-height: 100vh;
+            padding: 3rem 1.25rem 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            image-rendering: pixelated;
+        }
+
+        /* ── CRT scanlines + flicker ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0) 0px,
+                rgba(0, 0, 0, 0) 2px,
+                rgba(0, 0, 0, 0.22) 3px,
+                rgba(0, 0, 0, 0.22) 4px
+            );
+            animation: scan 8s linear infinite;
+        }
+        /* vignette */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9997;
+            pointer-events: none;
+            box-shadow: inset 0 0 160px 0 rgba(0, 0, 0, 0.6);
+        }
+        @keyframes scan { from { background-position-y: 0; } to { background-position-y: 100px; } }
+
+        /* ── Floating pixel sprites ── */
+        .sprites { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+        .sprites i {
+            position: absolute;
+            width: 8px; height: 8px;
+            background: var(--c, var(--green));
+            box-shadow: 0 0 8px var(--c, var(--green));
+            opacity: 0.5;
+            animation: floatpix linear infinite;
+        }
+        @keyframes floatpix {
+            from { transform: translateY(105vh) translateX(0); }
+            to   { transform: translateY(-10vh) translateX(30px); }
+        }
+
+        /* ── Header / cabinet marquee ── */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            width: 100%;
+            max-width: 760px;
+            animation: dropin 0.5s steps(8) both;
+        }
+
+        .monogram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px; height: 64px;
+            font-family: var(--font-pixel);
+            font-size: 1.1rem;
+            color: var(--bg);
+            background: var(--green);
+            border: 3px solid #000;
+            box-shadow: var(--shadow), 0 0 24px rgba(57, 255, 20, 0.5);
+            margin-bottom: 1.6rem;
+            animation: bob 1.6s steps(4) infinite alternate;
+        }
+        @keyframes bob { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+
+        h1 {
+            font-family: var(--font-pixel);
+            font-size: clamp(1.4rem, 5vw, 2.6rem);
+            line-height: 1.35;
+            color: var(--text);
+            text-shadow:
+                3px 3px 0 var(--magenta),
+                -2px -2px 0 var(--cyan);
+            animation: flicker 4s steps(20) infinite;
+        }
+        h1 .cursor {
+            display: inline-block;
+            width: 0.5em; height: 1em;
+            background: var(--green);
+            margin-left: 0.15em;
+            vertical-align: -0.08em;
+            animation: blink 1s steps(1) infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        @keyframes flicker {
+            0%, 92%, 100% { opacity: 1; }
+            93% { opacity: 0.72; }
+            94% { opacity: 1; }
+            96% { opacity: 0.85; }
+        }
+
+        .tagline {
+            font-size: 1.35rem;
+            color: var(--cyan);
+            letter-spacing: 0.04em;
+            margin-top: 1.4rem;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+        }
+        .press-start {
+            font-family: var(--font-pixel);
+            font-size: 0.62rem;
+            color: var(--yellow);
+            margin-top: 0.9rem;
+            letter-spacing: 0.05em;
+            animation: blink 1.2s steps(1) infinite;
+        }
+
+        /* ── Search / terminal input ── */
+        .search {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            margin: 2.2rem auto 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--panel);
+            border: 3px solid var(--line);
+            box-shadow: var(--shadow);
+            padding: 0.6rem 0.9rem;
+        }
+        .search .prompt { color: var(--green); font-size: 1.5rem; line-height: 1; }
+        .search input {
+            flex: 1;
+            font-family: var(--font-term);
+            font-size: 1.5rem;
+            color: var(--text);
+            background: transparent;
+            border: none;
+            outline: none;
+            caret-color: var(--green);
+        }
+        .search input::placeholder { color: var(--dim); }
+        .search:focus-within { border-color: var(--green); box-shadow: var(--shadow), 0 0 18px rgba(57, 255, 20, 0.35); }
+
+        /* ── Main ── */
+        main {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        section { animation: dropin 0.5s steps(8) both; }
+
+        /* ── Section label ── */
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-pixel);
+            font-size: 0.72rem;
+            color: var(--accent, var(--green));
+            text-shadow: 2px 2px 0 #000;
+            margin-bottom: 1.4rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 3px solid var(--accent, var(--green));
+        }
+        .section-label::before { content: '\25B8'; animation: blink 1s steps(1) infinite; }
+
+        /* ── Grid ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            gap: 1.2rem;
+        }
+
+        /* ── Card ── */
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+            padding: 1.3rem 1.3rem 1.4rem;
+            background: var(--panel);
+            border: 3px solid var(--line);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--text);
+            overflow: hidden;
+            transition: transform 0.08s steps(2), box-shadow 0.08s steps(2),
+                        border-color 0.1s steps(2), background 0.1s steps(2);
+            animation: popin 0.4s steps(5) both;
+            animation-delay: calc(var(--i, 0) * 80ms);
+        }
+        .card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--accent, var(--green));
+            background: var(--panel-2);
+            box-shadow: 8px 8px 0 #000, 0 0 22px color-mix(in srgb, var(--accent, var(--green)) 45%, transparent);
+        }
+        .card:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000; }
+
+        /* top blinking LED strip on hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--accent, var(--green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.15s steps(4);
+        }
+        .card:hover::before { transform: scaleX(1); }
+
+        .card .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px; height: 54px;
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+            background: var(--bg-2);
+            border: 3px solid var(--accent, var(--green));
+            image-rendering: pixelated;
+            transition: transform 0.2s steps(3);
+        }
+        .card svg { width: 30px; height: 30px; }
+        .card:hover .icon { animation: jiggle 0.3s steps(2) infinite; }
+        @keyframes jiggle { 0% { transform: rotate(-6deg); } 100% { transform: rotate(6deg); } }
+
+        .card .label {
+            font-family: var(--font-pixel);
+            font-size: 0.74rem;
+            line-height: 1.5;
+            color: var(--text);
+            width: 100%;
+            padding-right: 1.6rem;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .card:hover .label { color: var(--accent, var(--green)); }
+
+        .card .desc {
+            font-size: 1.18rem;
+            line-height: 1.25;
+            color: var(--dim);
+            margin-top: 0.2rem;
+        }
+
+        /* arrow on link cards */
+        a.card::after {
+            content: '\25B6';
+            position: absolute;
+            top: 1.3rem; right: 1.3rem;
+            font-size: 0.8rem;
+            color: var(--line);
+            transition: color 0.1s steps(2), transform 0.15s steps(3);
+        }
+        a.card:hover::after { color: var(--accent, var(--green)); transform: translateX(3px); }
+
+        /* ── Multi-link card ── */
+        .card.multi { cursor: default; }
+        .card.multi .links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+        .card.multi .links a {
+            font-family: var(--font-pixel);
+            font-size: 0.55rem;
+            padding: 0.45rem 0.7rem;
+            text-decoration: none;
+            color: var(--bg);
+            background: var(--accent, var(--green));
+            border: 2px solid #000;
+            box-shadow: 3px 3px 0 #000;
+            transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
+        }
+        .card.multi .links a:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 #000; }
+        .card.multi .links a:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #000; }
+
+        /* ── Blog popup ── */
+        .card-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            animation: popin 0.4s steps(5) both;
+            animation-delay: calc(var(--i, 0) * 80ms);
+        }
+        .card-wrapper > .card { flex: 1; width: 100%; animation: none; }
+
+        .blog-popup {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background: var(--panel);
+            border: 3px solid var(--accent, var(--green));
+            box-shadow: var(--shadow);
+            padding: 1rem 1.1rem;
+            z-index: 100;
+            pointer-events: none;
+        }
+        .blog-popup::after {
+            content: '';
+            position: absolute;
+            top: 100%; left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: var(--accent, var(--green));
+        }
+        .card-wrapper:hover .blog-popup { display: block; animation: popin 0.2s steps(4) both; }
+
+        .blog-popup-title {
+            font-family: var(--font-pixel);
+            font-size: 0.6rem;
+            color: var(--accent, var(--green));
+            margin-bottom: 0.8rem;
+        }
+        .blog-popup-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+        .blog-popup-list li {
+            font-size: 1.12rem;
+            color: var(--dim);
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .blog-popup-list li::before { content: '\25B8'; position: absolute; left: 0; color: var(--accent, var(--green)); }
+
+        /* ── Filter states ── */
+        section[hidden] { display: none; }
+        .grid > [hidden] { display: none; }
+        .no-results {
+            display: none;
+            text-align: center;
+            font-family: var(--font-pixel);
+            font-size: 0.85rem;
+            color: var(--magenta);
+            text-shadow: 2px 2px 0 #000;
+            padding: 2.5rem 0;
+            animation: blink 0.8s steps(1) infinite;
+        }
+        .no-results.show { display: block; }
+
+        /* ── Animations ── */
+        @keyframes dropin { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes popin  { from { opacity: 0; transform: translateY(18px); }  to { opacity: 1; transform: translateY(0); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 640px) {
+            body { padding: 2.5rem 0.85rem 4rem; }
+            /* lighter vignette so edges don't read as black sidebars */
+            body::after { box-shadow: inset 0 0 90px 0 rgba(0, 0, 0, 0.4); }
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Footer ── */
+        footer {
+            margin-top: 4rem;
+            font-family: var(--font-pixel);
+            font-size: 0.6rem;
+            color: var(--dim);
+            line-height: 1.8;
+            text-align: center;
+            animation: dropin 0.6s 0.3s steps(8) both;
+        }
+        footer a {
+            color: var(--yellow);
+            text-decoration: none;
+            border-bottom: 2px solid var(--yellow);
+        }
+        footer a:hover { color: var(--bg); background: var(--yellow); }
+    </style>
+</head>
+
+<body>
+
+    <div class="sprites" aria-hidden="true"></div>
+
+    <header>
+        <div class="monogram">HT</div>
+        <h1>HUNTER'S TOOLS<span class="cursor"></span></h1>
+        <p class="tagline">// a curated arcade of utilities</p>
+        <p class="press-start">PRESS ANY CARD TO START</p>
+        <div class="search">
+            <span class="prompt">&gt;</span>
+            <input type="search" id="tool-search" placeholder="search tools..."
+                   autocomplete="off" aria-label="Search tools" />
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Housing -->
+        <section style="--accent: var(--orange)">
+            <div class="section-label">HOUSING</div>
+            <div class="grid">
+                <a class="card" style="--i:0"
+                   href="https://huntertran.github.io/property-manager-prod/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🏠</span>
+                    <span class="label">Property Manager</span>
+                    <span class="desc">Manage and track your properties</span>
+                </a>
+                <a class="card" style="--i:1"
+                   href="https://huntertran.github.io/mortgage-calc-prod/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🏦</span>
+                    <span class="label">Mortgage Calculator</span>
+                    <span class="desc">Calculate mortgage payments</span>
+                </a>
+                <a class="card" style="--i:2"
+                   href="https://huntertran.github.io/canada-greenbutton/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🍁</span>
+                    <span class="label">Canada Greenbutton Visualizer</span>
+                    <span class="desc">Visualize Canada Green Button energy data</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Life -->
+        <section style="--accent: var(--green)">
+            <div class="section-label">LIFE</div>
+            <div class="grid">
+                <div class="card multi" style="--i:0">
+                    <span class="icon">🛒</span>
+                    <span class="label">Walmart Price Compare</span>
+                    <span class="desc">Compare price per unit at Walmart</span>
+                    <div class="links">
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/walmart-price-per-unit/digjbmmdgmpmnfbiophhcifkhpmhpacc"
+                           target="_blank" rel="noopener noreferrer">EDGE</a>
+                        <a href="https://addons.mozilla.org/en-CA/firefox/addon/walmart-price-per-unit/"
+                           target="_blank" rel="noopener noreferrer">FIREFOX</a>
+                    </div>
+                </div>
+                <a class="card" style="--i:1"
+                   href="https://huntertran.github.io/eedraws/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2015 -2000 4030 4030">
+                            <title>maple leaf from the flag of Canada</title>
+                            <path fill="#f00" d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z" />
+                        </svg>
+                    </span>
+                    <span class="label">Express Entry Summary</span>
+                    <span class="desc">Canada Immigration EE draw history</span>
+                </a>
+                <a class="card" style="--i:2"
+                   href="https://huntertran.github.io/password-generator/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🔑</span>
+                    <span class="label">Password Generator</span>
+                    <span class="desc">Generate secure passwords</span>
+                </a>
+                <a class="card" style="--i:3"
+                   href="https://huntertran.github.io/canada-crime-map/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🗺️</span>
+                    <span class="label">Canada Crime Map</span>
+                    <span class="desc">Visualize crime statistics across Canada</span>
+                </a>
+                <div class="card multi" style="--i:4">
+                    <span class="icon">🧩</span>
+                    <span class="label">Hunter Utilities</span>
+                    <span class="desc">Browser tweaks for Reddit &amp; voz.vn</span>
+                    <div class="links">
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/hunter-utilities/pgnnhpdmipnahkicckcjefhelhponbgg"
+                           target="_blank" rel="noopener noreferrer">EDGE</a>
+                    </div>
+                </div>
+                <div class="card multi" style="--i:5">
+                    <span class="icon">💰</span>
+                    <span class="label">Under Budget</span>
+                    <span class="desc">Budgeting app with auto-capture from bank notifications</span>
+                    <div class="links">
+                        <a href="https://huntertran.github.io/underbudget"
+                           target="_blank" rel="noopener noreferrer">WEB</a>
+                        <!-- TODO: replace # with the Google Play listing URL once published -->
+                        <a href="#"
+                           target="_blank" rel="noopener noreferrer">PLAY</a>
+                        <a href="https://huntertran.ca/apps/under-budget/privacy/"
+                           target="_blank" rel="noopener noreferrer">PRIVACY</a>
+                    </div>
+                </div>
+                <div class="card-wrapper" style="--i:6" id="blog-card-wrapper">
+                    <a class="card"
+                       href="https://huntertran.github.io/blog"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="icon">✍️</span>
+                        <span class="label">Blog</span>
+                        <span class="desc">Personal blog</span>
+                    </a>
+                    <div class="blog-popup">
+                        <div class="blog-popup-title">RECENT POSTS</div>
+                        <ul class="blog-popup-list" id="blog-popup-list">
+                            <li>Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Developers -->
+        <section style="--accent: var(--cyan)">
+            <div class="section-label">FOR DEVELOPERS</div>
+            <div class="grid">
+                <a class="card" style="--i:0"
+                   href="https://huntertran.github.io/enum-flag-converter/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🚩</span>
+                    <span class="label">Enum Flag Converter</span>
+                    <span class="desc">Convert between enum flag values</span>
+                </a>
+                <a class="card" style="--i:1"
+                   href="https://huntertran.github.io/guid-generator/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🔢</span>
+                    <span class="label">GUID Generator</span>
+                    <span class="desc">Generate GUIDs / UUIDs on demand</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Academic -->
+        <section style="--accent: var(--magenta)">
+            <div class="section-label">ACADEMIC</div>
+            <div class="grid">
+                <a class="card" style="--i:0"
+                   href="https://huntertran.github.io/seco-storms-maker/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">⛈️</span>
+                    <span class="label">SECO Storms Maker</span>
+                    <span class="desc">Generate SECO storms diagrams</span>
+                </a>
+                <a class="card" style="--i:1"
+                   href="https://www.overleaf.com/latex/templates/concordia-university-thesis-template/ngjstfpkgxpk"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="icon">🎓</span>
+                    <span class="label">Concordia Thesis Template</span>
+                    <span class="desc">LaTeX thesis template for Concordia University</span>
+                </a>
+            </div>
+        </section>
+
+        <p class="no-results" id="no-results">!! NO TOOLS FOUND !!</p>
+
+    </main>
+
+    <footer>
+        © <a href="https://huntertran.ca" target="_blank" rel="noopener noreferrer">HUNTER TRAN</a><br />
+        INSERT COIN TO CONTINUE
+    </footer>
+
+    <script>
+        // ── Floating pixel sprites ──
+        (function () {
+            const layer = document.querySelector('.sprites');
+            const colors = ['var(--green)', 'var(--cyan)', 'var(--magenta)', 'var(--yellow)', 'var(--purple)'];
+            for (let i = 0; i < 22; i++) {
+                const p = document.createElement('i');
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.setProperty('--c', colors[i % colors.length]);
+                p.style.animationDuration = (7 + Math.random() * 10) + 's';
+                p.style.animationDelay = (-Math.random() * 12) + 's';
+                const s = 4 + Math.floor(Math.random() * 3) * 2;
+                p.style.width = p.style.height = s + 'px';
+                layer.appendChild(p);
+            }
+        })();
+
+        // ── Tool search filter ──
+        (function () {
+            const input = document.getElementById('tool-search');
+            const sections = Array.from(document.querySelectorAll('main section'));
+            const noResults = document.getElementById('no-results');
+            const items = sections.map(section => ({
+                section,
+                cards: Array.from(section.querySelectorAll('.grid > *')).map(el => ({
+                    el,
+                    text: el.textContent.toLowerCase()
+                }))
+            }));
+
+            input.addEventListener('input', () => {
+                const q = input.value.trim().toLowerCase();
+                let anyVisible = false;
+
+                items.forEach(({ section, cards }) => {
+                    let sectionVisible = false;
+                    cards.forEach(({ el, text }) => {
+                        const match = !q || text.includes(q);
+                        el.hidden = !match;
+                        if (match) sectionVisible = true;
+                    });
+                    section.hidden = !sectionVisible;
+                    if (sectionVisible) anyVisible = true;
+                });
+
+                noResults.classList.toggle('show', !anyVisible);
+            });
+        })();
+
+        let blogPostsLoaded = false;
+
+        document.getElementById('blog-card-wrapper').addEventListener('mouseenter', async () => {
+            if (blogPostsLoaded) return;
+            blogPostsLoaded = true;
+
+            const list = document.getElementById('blog-popup-list');
+            try {
+                const res = await fetch('https://huntertran.ca/atom.xml');
+                const text = await res.text();
+                const doc = new DOMParser().parseFromString(text, 'application/xml');
+                const entries = Array.from(doc.querySelectorAll('entry')).slice(0, 5);
+
+                if (entries.length === 0) {
+                    list.innerHTML = '<li>No posts found</li>';
+                    return;
+                }
+
+                list.innerHTML = entries.map(entry => {
+                    const title = entry.querySelector('title')?.textContent ?? 'Untitled';
+                    const escaped = title
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;');
+                    return `<li title="${escaped}">${escaped}</li>`;
+                }).join('');
+            } catch {
+                list.innerHTML = '<li>Failed to load posts</li>';
+            }
+        });
+    </script>
+
+</body>
+</html>
